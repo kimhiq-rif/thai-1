@@ -42,3 +42,18 @@
 https://script.google.com/macros/s/AKfycbzbr2OfX-0WVpJqPuMgQ_ye-kUCGdyAjGvF3Mv3wCugy_n9_x36x6l6ld6oecD4F7Ru/exec
 
 בדיקה מומלצת: לפתוח את האפליקציה, ללחוץ Sync Upload, לאחר מכן לפתוח במכשיר אחר וללחוץ Sync Download.
+
+
+## v1.3
+- שורות העזר מצוירות עכשיו בתוך ה-canvas עצמו, כדי שיעבדו גם ב-iPhone/Safari ולא ייעלמו בגלל שכבות CSS או Cache.
+- Cache עודכן לגרסה חדשה.
+
+
+## v1.5 — תיקון קבוע לבעיית Cache / Service Worker
+- בוטלה הרשמת Service Worker מהאפליקציה כדי שהדפדפן לא יחזיק גרסה ישנה.
+- נוספה מחיקה אוטומטית של Service Workers ו־Caches ישנים בעת טעינת האפליקציה.
+- נוספו query strings לקבצי `app.js` ו־`styles.css` כדי לשבור cache בפריסה חדשה.
+- תוקן כפתור “נקה כתיבה” כך שישאיר את שורות העזר בלוח.
+
+אחרי העלאה ל־GitHub + Redeploy ב־Vercel, פתחו:
+https://thai-1.vercel.app?v=1.5

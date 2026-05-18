@@ -1,5 +1,7 @@
 'use strict';
 
+const APP_VERSION = '1.6.0-robust-sync';
+
 const TONES = [
   { id:'mid', he:'אמצעי', en:'mid' },
   { id:'low', he:'נמוך', en:'low' },
@@ -112,6 +114,23 @@ const ctx = canvas.getContext('2d');
 function defaultState(){
   return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], syncUrl:'', lastSync:null };
 }
+
+async function disableOldServiceWorkers(){
+  try{
+    if('serviceWorker' in navigator){
+      const regs = await navigator.serviceWorker.getRegistrations();
+      await Promise.all(regs.map(r => r.unregister()));
+    }
+    if('caches' in window){
+      const keys = await caches.keys();
+      await Promise.all(keys.filter(k => k.startsWith('thai-trainer')).map(k => caches.delete(k)));
+    }
+    console.info('Thai Trainer', APP_VERSION, 'old service workers/caches cleared');
+  }catch(err){
+    console.warn('Could not clear old service worker/cache', err);
+  }
+}
+
 function loadState(){
   try { return { ...defaultState(), ...(JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}) }; }
   catch { return defaultState(); }
@@ -123,7 +142,9 @@ function init(){
   if(!state.syncUrl){ state.syncUrl = DEFAULT_SYNC_URL; saveState(); }
   el('syncUrl').value = state.syncUrl || DEFAULT_SYNC_URL;
   updateStats(); newQuestion();
-  if('serviceWorker' in navigator){ navigator.serviceWorker.register('./sw.js').catch(()=>{}); }
+  // v1.5: do NOT register a service worker. It caused stale versions to stay alive in normal browser windows.
+  // We actively unregister old workers and clear old caches once the fresh app loads.
+  disableOldServiceWorkers();
 }
 
 function setupLevels(){
@@ -268,13 +289,55 @@ function updateStats(){
 }
 
 function setupCanvas(){
+  function drawGuideLines(){
+    const rect = canvas.getBoundingClientRect();
+    const w = rect.width;
+    const h = rect.height;
+
+    ctx.save();
+    ctx.setLineDash([]);
+    ctx.lineCap = 'butt';
+    ctx.lineJoin = 'miter';
+
+    // White background
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, w, h);
+
+    // Writing guide lines, drawn INSIDE the canvas so they appear on every browser/device.
+    const lines = [0.18, 0.38, 0.58, 0.78];
+    lines.forEach((pct, idx) => {
+      ctx.beginPath();
+      ctx.moveTo(0, Math.round(h * pct) + 0.5);
+      ctx.lineTo(w, Math.round(h * pct) + 0.5);
+      ctx.strokeStyle = idx === 0 || idx === lines.length - 1 ? 'rgba(15,23,42,0.28)' : 'rgba(15,23,42,0.18)';
+      ctx.lineWidth = idx === 0 || idx === lines.length - 1 ? 1.5 : 1;
+      ctx.stroke();
+    });
+
+    // Light vertical guides
+    ctx.strokeStyle = 'rgba(15,23,42,0.06)';
+    ctx.lineWidth = 1;
+    for(let x = 48; x < w; x += 48){
+      ctx.beginPath();
+      ctx.moveTo(x + 0.5, 0);
+      ctx.lineTo(x + 0.5, h);
+      ctx.stroke();
+    }
+
+    ctx.restore();
+    ctx.lineWidth = 5;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.strokeStyle = '#020617';
+  }
+
   function resizeCanvas(){
     const ratio = Math.max(1, window.devicePixelRatio || 1);
     const rect = canvas.getBoundingClientRect();
     canvas.width = Math.round(rect.width * ratio);
     canvas.height = Math.round(rect.height * ratio);
     ctx.setTransform(ratio,0,0,ratio,0,0);
-    ctx.lineWidth = 5; ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.strokeStyle = '#020617';
+    drawGuideLines();
   }
   window.addEventListener('resize', resizeCanvas);
   resizeCanvas();
@@ -286,26 +349,114 @@ function setupCanvas(){
   canvas.addEventListener('pointermove', e=>{ if(!drawing) return; e.preventDefault(); const p=getPoint(e); ctx.lineTo(p.x,p.y); ctx.stroke(); lastPoint=p; });
   const stop = e=>{ if(!drawing) return; e.preventDefault(); drawing=false; lastPoint=null; };
   canvas.addEventListener('pointerup', stop); canvas.addEventListener('pointercancel', stop); canvas.addEventListener('pointerleave', stop);
+
+  window.__drawGuideLines = drawGuideLines;
+  window.clearCanvas = function(){ drawGuideLines(); };
 }
-function clearCanvas(){ ctx.clearRect(0,0,canvas.width,canvas.height); }
+function clearCanvas(){
+  if(window.__drawGuideLines){ window.__drawGuideLines(); return; }
+  const rect = canvas.getBoundingClientRect();
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(0, 0, rect.width, rect.height);
+}
 
 function saveSyncUrl(){ state.syncUrl = el('syncUrl').value.trim() || DEFAULT_SYNC_URL; el('syncUrl').value = state.syncUrl; saveState(); setSyncStatus('כתובת הסנכרון נשמרה.'); }
+
+function encodePayload(obj){
+  return btoa(unescape(encodeURIComponent(JSON.stringify(obj))));
+}
+function decodePayload(str){
+  return JSON.parse(decodeURIComponent(escape(atob(str))));
+}
+function normalizedSyncUrl(){
+  const url = (state.syncUrl || el('syncUrl').value || DEFAULT_SYNC_URL || '').trim();
+  if(!url) throw new Error('אין כתובת Apps Script');
+  if(!/^https:\/\/script\.google\.com\/macros\/s\/.+\/exec(?:\?.*)?$/.test(url)){
+    throw new Error('כתובת הסקריפט אינה תקינה. צריך URL שמתחיל ב-script.google.com/macros/s ומסתיים ב-/exec');
+  }
+  return url;
+}
+function jsonpRequest(params, timeoutMs=12000){
+  return new Promise((resolve, reject)=>{
+    saveSyncUrl();
+    let url;
+    try{ url = normalizedSyncUrl(); }catch(err){ reject(err); return; }
+    const callbackName = 'thaiSyncCb_' + Date.now() + '_' + Math.floor(Math.random()*100000);
+    const script = document.createElement('script');
+    const cleanup = () => { try{ delete window[callbackName]; }catch{}; script.remove(); clearTimeout(timer); };
+    const timer = setTimeout(()=>{ cleanup(); reject(new Error('timeout')); }, timeoutMs);
+    window[callbackName] = data => { cleanup(); resolve(data); };
+    const qs = new URLSearchParams({...params, callback: callbackName, t: String(Date.now())});
+    script.src = url + (url.includes('?') ? '&' : '?') + qs.toString();
+    script.onerror = () => { cleanup(); reject(new Error('script load failed')); };
+    document.body.appendChild(script);
+  });
+}
+function formPostUpload(params, timeoutMs=15000){
+  return new Promise((resolve, reject)=>{
+    saveSyncUrl();
+    let url;
+    try{ url = normalizedSyncUrl(); }catch(err){ reject(err); return; }
+    const iframeName = 'thaiSyncFrame_' + Date.now() + '_' + Math.floor(Math.random()*100000);
+    const iframe = document.createElement('iframe');
+    iframe.name = iframeName;
+    iframe.style.display = 'none';
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = url;
+    form.target = iframeName;
+    form.style.display = 'none';
+    for(const [key, value] of Object.entries(params)){
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = key;
+      input.value = String(value);
+      form.appendChild(input);
+    }
+    let submitted = false;
+    const cleanup = () => { form.remove(); iframe.remove(); clearTimeout(timer); };
+    const timer = setTimeout(()=>{ cleanup(); reject(new Error('timeout')); }, timeoutMs);
+    iframe.onload = () => {
+      if(!submitted) return;
+      cleanup();
+      resolve({ok:true, method:'form-post'});
+    };
+    iframe.onerror = () => { cleanup(); reject(new Error('iframe upload failed')); };
+    document.body.appendChild(iframe);
+    document.body.appendChild(form);
+    submitted = true;
+    form.submit();
+  });
+}
 async function syncUpload(){
-  saveSyncUrl(); if(!state.syncUrl) return setSyncStatus('אין כתובת Apps Script.');
   try{
-    const res = await fetch(state.syncUrl, {method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'upload',payload:state})});
-    const json = await res.json(); if(!json.ok) throw new Error(json.error || 'sync failed');
-    state.lastSync = Date.now(); saveState(); setSyncStatus('העלאה לענן הצליחה ✅');
+    const safeState = {...state, lastSync: Date.now()};
+    const data = encodePayload(safeState);
+    // First try JSONP, because it gives a real success/error response.
+    try{
+      const json = await jsonpRequest({action:'upload', data});
+      if(!json.ok) throw new Error(json.error || 'sync failed');
+      state.lastSync = Date.now(); saveState(); setSyncStatus('העלאה לענן הצליחה ✅');
+      return;
+    }catch(jsonpErr){
+      // Some browsers/extensions block script.googleusercontent.com as a script.
+      // Fallback: submit a hidden form POST. It avoids CORS and usually bypasses script blockers.
+      await formPostUpload({action:'upload', data});
+      state.lastSync = Date.now(); saveState(); setSyncStatus('העלאה לענן נשלחה בהצלחה ✅');
+    }
   } catch(err){ setSyncStatus('שגיאת העלאה: '+err.message); }
 }
 async function syncDownload(){
-  saveSyncUrl(); if(!state.syncUrl) return setSyncStatus('אין כתובת Apps Script.');
   try{
-    const url = state.syncUrl + (state.syncUrl.includes('?')?'&':'?') + 'action=download';
-    const res = await fetch(url); const json = await res.json(); if(!json.ok) throw new Error(json.error || 'sync failed');
-    if(json.payload){ state = {...defaultState(),...json.payload, syncUrl:state.syncUrl}; saveState(); updateStats(); newQuestion(); }
+    const json = await jsonpRequest({action:'download'});
+    if(!json.ok) throw new Error(json.error || 'sync failed');
+    if(json.data){
+      const cloudState = decodePayload(json.data);
+      state = {...defaultState(),...cloudState, syncUrl:state.syncUrl};
+      saveState(); updateStats(); newQuestion();
+    }
     setSyncStatus('הורדה מהענן הצליחה ✅');
-  } catch(err){ setSyncStatus('שגיאת הורדה: '+err.message); }
+  } catch(err){ setSyncStatus('שגיאת הורדה: '+err.message+' — אם זה עובד בחלון פרטי, הדפדפן חוסם טעינת סקריפט של Google.'); }
 }
 function setSyncStatus(msg){ el('syncStatus').textContent = msg; }
 function escapeHtml(s){ return String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])); }

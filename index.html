@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#07111f" />
   <title>Thai Trainer — תרגול תאית</title>
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="stylesheet" href="styles.css" />
+  <!-- manifest kept for later, but service worker is disabled in v1.5 to prevent stale app versions -->
+  <link rel="stylesheet" href="styles.css?v=1.6.0" />
 </head>
 <body>
   <main class="app" id="app">
     <header class="hero">
       <div>
-        <p class="eyebrow">Thai Trainer 🇹🇭</p>
+        <p class="eyebrow">Thai Trainer 🇹🇭 · v1.6</p>
         <h1>קריאה, כתיבה, טונים ומשמעות</h1>
         <p class="subtitle">כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.</p>
       </div>
@@ -93,6 +93,6 @@
       </details>
     </section>
   </main>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=1.6.0" defer></script>
 </body>
 </html>
