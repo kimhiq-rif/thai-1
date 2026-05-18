@@ -97,6 +97,7 @@ const WORDS = [
 
 const MODES = ['read_meaning','hebrew_write','tone','roman_write'];
 const STORAGE_KEY = 'thaiTrainerStateV3';
+const DEFAULT_SYNC_URL = 'https://script.google.com/macros/s/AKfycbzbr2OfX-0WVpJqPuMgQ_ye-kUCGdyAjGvF3Mv3wCugy_n9_x36x6l6ld6oecD4F7Ru/exec';
 let deferredInstallPrompt = null;
 let state = loadState();
 let current = null;
@@ -119,7 +120,8 @@ function saveState(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); 
 
 function init(){
   setupLevels(); setupCanvas(); setupEvents(); setupPwa(); runQA();
-  el('syncUrl').value = state.syncUrl || '';
+  if(!state.syncUrl){ state.syncUrl = DEFAULT_SYNC_URL; saveState(); }
+  el('syncUrl').value = state.syncUrl || DEFAULT_SYNC_URL;
   updateStats(); newQuestion();
   if('serviceWorker' in navigator){ navigator.serviceWorker.register('./sw.js').catch(()=>{}); }
 }
@@ -266,13 +268,55 @@ function updateStats(){
 }
 
 function setupCanvas(){
+  function drawGuideLines(){
+    const rect = canvas.getBoundingClientRect();
+    const w = rect.width;
+    const h = rect.height;
+
+    ctx.save();
+    ctx.setLineDash([]);
+    ctx.lineCap = 'butt';
+    ctx.lineJoin = 'miter';
+
+    // White background
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, w, h);
+
+    // Writing guide lines, drawn INSIDE the canvas so they appear on every browser/device.
+    const lines = [0.18, 0.38, 0.58, 0.78];
+    lines.forEach((pct, idx) => {
+      ctx.beginPath();
+      ctx.moveTo(0, Math.round(h * pct) + 0.5);
+      ctx.lineTo(w, Math.round(h * pct) + 0.5);
+      ctx.strokeStyle = idx === 0 || idx === lines.length - 1 ? 'rgba(15,23,42,0.28)' : 'rgba(15,23,42,0.18)';
+      ctx.lineWidth = idx === 0 || idx === lines.length - 1 ? 1.5 : 1;
+      ctx.stroke();
+    });
+
+    // Light vertical guides
+    ctx.strokeStyle = 'rgba(15,23,42,0.06)';
+    ctx.lineWidth = 1;
+    for(let x = 48; x < w; x += 48){
+      ctx.beginPath();
+      ctx.moveTo(x + 0.5, 0);
+      ctx.lineTo(x + 0.5, h);
+      ctx.stroke();
+    }
+
+    ctx.restore();
+    ctx.lineWidth = 5;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.strokeStyle = '#020617';
+  }
+
   function resizeCanvas(){
     const ratio = Math.max(1, window.devicePixelRatio || 1);
     const rect = canvas.getBoundingClientRect();
     canvas.width = Math.round(rect.width * ratio);
     canvas.height = Math.round(rect.height * ratio);
     ctx.setTransform(ratio,0,0,ratio,0,0);
-    ctx.lineWidth = 5; ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.strokeStyle = '#020617';
+    drawGuideLines();
   }
   window.addEventListener('resize', resizeCanvas);
   resizeCanvas();
@@ -284,24 +328,57 @@ function setupCanvas(){
   canvas.addEventListener('pointermove', e=>{ if(!drawing) return; e.preventDefault(); const p=getPoint(e); ctx.lineTo(p.x,p.y); ctx.stroke(); lastPoint=p; });
   const stop = e=>{ if(!drawing) return; e.preventDefault(); drawing=false; lastPoint=null; };
   canvas.addEventListener('pointerup', stop); canvas.addEventListener('pointercancel', stop); canvas.addEventListener('pointerleave', stop);
-}
-function clearCanvas(){ ctx.clearRect(0,0,canvas.width,canvas.height); }
 
-function saveSyncUrl(){ state.syncUrl = el('syncUrl').value.trim(); saveState(); setSyncStatus('כתובת הסנכרון נשמרה.'); }
+  window.clearCanvas = function(){ drawGuideLines(); };
+}
+function clearCanvas(){
+  const rect = canvas.getBoundingClientRect();
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(0, 0, rect.width, rect.height);
+}
+
+function saveSyncUrl(){ state.syncUrl = el('syncUrl').value.trim() || DEFAULT_SYNC_URL; el('syncUrl').value = state.syncUrl; saveState(); setSyncStatus('כתובת הסנכרון נשמרה.'); }
+
+function encodePayload(obj){
+  return btoa(unescape(encodeURIComponent(JSON.stringify(obj))));
+}
+function decodePayload(str){
+  return JSON.parse(decodeURIComponent(escape(atob(str))));
+}
+function jsonpRequest(params, timeoutMs=12000){
+  return new Promise((resolve, reject)=>{
+    saveSyncUrl();
+    if(!state.syncUrl) return reject(new Error('אין כתובת Apps Script'));
+    const callbackName = 'thaiSyncCb_' + Date.now() + '_' + Math.floor(Math.random()*100000);
+    const script = document.createElement('script');
+    const cleanup = () => { try{ delete window[callbackName]; }catch{}; script.remove(); clearTimeout(timer); };
+    const timer = setTimeout(()=>{ cleanup(); reject(new Error('timeout')); }, timeoutMs);
+    window[callbackName] = data => { cleanup(); resolve(data); };
+    const qs = new URLSearchParams({...params, callback: callbackName, t: String(Date.now())});
+    script.src = state.syncUrl + (state.syncUrl.includes('?') ? '&' : '?') + qs.toString();
+    script.onerror = () => { cleanup(); reject(new Error('script load failed')); };
+    document.body.appendChild(script);
+  });
+}
 async function syncUpload(){
-  saveSyncUrl(); if(!state.syncUrl) return setSyncStatus('אין כתובת Apps Script.');
   try{
-    const res = await fetch(state.syncUrl, {method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'upload',payload:state})});
-    const json = await res.json(); if(!json.ok) throw new Error(json.error || 'sync failed');
+    const safeState = {...state, lastSync: Date.now()};
+    const data = encodePayload(safeState);
+    if(data.length > 45000) throw new Error('יותר מדי נתוני התקדמות לסנכרון GET');
+    const json = await jsonpRequest({action:'upload', data});
+    if(!json.ok) throw new Error(json.error || 'sync failed');
     state.lastSync = Date.now(); saveState(); setSyncStatus('העלאה לענן הצליחה ✅');
   } catch(err){ setSyncStatus('שגיאת העלאה: '+err.message); }
 }
 async function syncDownload(){
-  saveSyncUrl(); if(!state.syncUrl) return setSyncStatus('אין כתובת Apps Script.');
   try{
-    const url = state.syncUrl + (state.syncUrl.includes('?')?'&':'?') + 'action=download';
-    const res = await fetch(url); const json = await res.json(); if(!json.ok) throw new Error(json.error || 'sync failed');
-    if(json.payload){ state = {...defaultState(),...json.payload, syncUrl:state.syncUrl}; saveState(); updateStats(); newQuestion(); }
+    const json = await jsonpRequest({action:'download'});
+    if(!json.ok) throw new Error(json.error || 'sync failed');
+    if(json.data){
+      const cloudState = decodePayload(json.data);
+      state = {...defaultState(),...cloudState, syncUrl:state.syncUrl};
+      saveState(); updateStats(); newQuestion();
+    }
     setSyncStatus('הורדה מהענן הצליחה ✅');
   } catch(err){ setSyncStatus('שגיאת הורדה: '+err.message); }
 }
