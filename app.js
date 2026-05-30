@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.8.0-vowel-board-writing-user-tabs';
+const APP_VERSION = '1.9.0-writing-vowel-study-themes';
 
 const TONES = [
   { id:'mid', he:'אמצעי', en:'mid' },
@@ -13,7 +13,7 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.8', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.9', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
@@ -23,11 +23,11 @@ const I18N = {
     promptRead:'קרא את המילה וכתוב בעברית את המשמעות + הטון', promptMeaningWrite:'כתוב בתאית את המילה הבאה', promptRoman:'כתוב בתאית לפי התעתיק', promptTone:'מה הטון של המילה / תבנית הטונים?',
     writeHint:'כתוב על הלוח הלבן ואז הצג תשובה', answerThai:'תאית', roman:'תעתיק', meaning:'עברית', tone:'טון', selected:'בחרת', afterAnswer:'עכשיו אפשר לנקות, לכתוב שוב נכון, ואז לסמן צדקתי / טעיתי.',
     soundQuestion:'מה הצליל של הסימן?', nameQuestion:'מה שם הסימן בתאית?', symbolQuestion:'איזה סימן מתאים לשם?', boardWordQuestion:'איזו מילת לוח שייכת לסימן?', shortcutQuestion:'מה התפקיד של הסימן?',
-    sound:'צליל', signName:'שם הסימן', boardWord:'מילת לוח', note:'הערה', emoji:'אימוג׳י', shortcutAnswer:'מקצר תנועה', userLabel:'שם משתמש', userPlaceholder:'לדוגמה: rif', initUserOk:'נוצרה/נמצאה לשונית משתמש ✅', initUserErr:'שגיאת יצירת משתמש: ', saveProgress:'שמור התקדמות', loadProgress:'טען התקדמות', promptVowelWrite:'כתוב על הלוח את התשובה לפי לוח התנועות', vowelAnswer:'תשובת לוח',
+    sound:'צליל', signName:'שם הסימן', boardWord:'מילת לוח', note:'הערה', emoji:'אימוג׳י', shortcutAnswer:'מקצר תנועה', userLabel:'שם משתמש', userPlaceholder:'לדוגמה: rif', initUserOk:'נוצרה/נמצאה לשונית משתמש ✅', initUserErr:'שגיאת יצירת משתמש: ', saveProgress:'שמור התקדמות', loadProgress:'טען התקדמות', promptVowelWrite:'כתוב על הלוח את התשובה לפי לוח התנועות', vowelAnswer:'תשובת לוח', thaiName:'שם תאילנדי', localName:'הסבר בעברית', writingRule:'כלל כתיבה', example:'דוגמה', consonantName:'שם העיצור', theme:'לוק',
     syncSaved:'כתובת הסנכרון נשמרה.', uploadOk:'העלאה לענן הצליחה ✅', uploadSent:'העלאה לענן נשלחה בהצלחה ✅', downloadOk:'הורדה מהענן הצליחה ✅', uploadErr:'שגיאת העלאה: ', downloadErr:'שגיאת הורדה: '
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.8', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.9', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
@@ -37,7 +37,7 @@ const I18N = {
     promptRead:'Read the word and write the meaning + tone in English', promptMeaningWrite:'Write the following word in Thai', promptRoman:'Write Thai from the romanization', promptTone:'What is the tone / tone pattern?',
     writeHint:'Write on the whiteboard, then reveal the answer', answerThai:'Thai', roman:'Romanization', meaning:'English', tone:'Tone', selected:'Selected', afterAnswer:'Now you can clear, rewrite correctly, then mark correct / wrong.',
     soundQuestion:'What sound does this sign make?', nameQuestion:'What is the Thai name of this sign?', symbolQuestion:'Which sign matches this name?', boardWordQuestion:'Which board word belongs to this sign?', shortcutQuestion:'What does this sign do?',
-    sound:'Sound', signName:'Sign name', boardWord:'Board word', note:'Note', emoji:'Emoji', shortcutAnswer:'shortens a vowel', userLabel:'Username', userPlaceholder:'e.g. rif', initUserOk:'User sheet created/found ✅', initUserErr:'User init error: ', saveProgress:'Save progress', loadProgress:'Load progress', promptVowelWrite:'Write the answer on the board from the vowel board', vowelAnswer:'Vowel-board answer',
+    sound:'Sound', signName:'Sign name', boardWord:'Board word', note:'Note', emoji:'Emoji', shortcutAnswer:'shortens a vowel', userLabel:'Username', userPlaceholder:'e.g. rif', initUserOk:'User sheet created/found ✅', initUserErr:'User init error: ', saveProgress:'Save progress', loadProgress:'Load progress', promptVowelWrite:'Write the answer on the board from the vowel board', vowelAnswer:'Vowel-board answer', thaiName:'Thai name', localName:'English explanation', writingRule:'Writing rule', example:'Example', consonantName:'Consonant name', theme:'Theme',
     syncSaved:'Sync URL saved.', uploadOk:'Cloud upload succeeded ✅', uploadSent:'Cloud upload was sent ✅', downloadOk:'Cloud download succeeded ✅', uploadErr:'Upload error: ', downloadErr:'Download error: '
   }
 };
@@ -135,44 +135,67 @@ const WORDS = [
 
 
 const VOWELS = [
-  {id:'v_ak', symbol:'ะ', name:'สระอะ', sound:'a short', he:'a קצר', boardWord:'กระทะ', boardMeaningHe:'מחבת', boardMeaningEn:'pan', emoji:'🍳', noteHe:'תנועה קצרה', noteEn:'short vowel'},
-  {id:'v_aa', symbol:'า', name:'สระอา', sound:'aa long', he:'aa ארוך', boardWord:'ตา', boardMeaningHe:'עין', boardMeaningEn:'eye', emoji:'👁️', noteHe:'תנועה ארוכה', noteEn:'long vowel'},
-  {id:'v_i', symbol:'ิ', name:'สระอิ', sound:'i short', he:'i קצר', boardWord:'คิด', boardMeaningHe:'לחשוב', boardMeaningEn:'to think', emoji:'💭', noteHe:'יושב מעל העיצור', noteEn:'written above the consonant'},
-  {id:'v_ii', symbol:'ี', name:'สระอี', sound:'ii long', he:'ii ארוך', boardWord:'สี', boardMeaningHe:'צבע', boardMeaningEn:'color', emoji:'🎨', noteHe:'כמו ิ אבל ארוך', noteEn:'like ิ, but long'},
-  {id:'v_eu', symbol:'ึ', name:'สระอึ', sound:'eu short', he:'eu קצר', boardWord:'ตึก', boardMeaningHe:'בניין', boardMeaningEn:'building', emoji:'🏢', noteHe:'תנועת eu קצרה', noteEn:'short eu vowel'},
-  {id:'v_euu', symbol:'ื', name:'สระอือ', sound:'euu long', he:'euu ארוך', boardWord:'มือ', boardMeaningHe:'יד', boardMeaningEn:'hand', emoji:'✋', noteHe:'תנועת eu ארוכה; לעיתים עם อ', noteEn:'long eu vowel; often with อ'},
-  {id:'v_u', symbol:'ุ', name:'สระอุ', sound:'u short', he:'u קצר', boardWord:'ถุง', boardMeaningHe:'שקית', boardMeaningEn:'bag', emoji:'🛍️', noteHe:'יושב מתחת לעיצור', noteEn:'written below the consonant'},
-  {id:'v_uu', symbol:'ู', name:'สระอู', sound:'uu long', he:'uu ארוך', boardWord:'งู', boardMeaningHe:'נחש', boardMeaningEn:'snake', emoji:'🐍', noteHe:'כמו ุ אבל ארוך', noteEn:'like ุ, but long'},
-  {id:'v_e_short', symbol:'เ-ะ', name:'สระเอะ', sound:'e short', he:'e קצר', boardWord:'เตะ', boardMeaningHe:'לבעוט', boardMeaningEn:'to kick', emoji:'⚽', noteHe:'קצר; עם עיצור סופי מתקצר לרוב בעזרת ็', noteEn:'short; with a final consonant often shortened using ็'},
-  {id:'v_e_long', symbol:'เ-', name:'สระเอ', sound:'ee / e long', he:'e ארוך', boardWord:'เท', boardMeaningHe:'לשפוך', boardMeaningEn:'to pour', emoji:'🥛', noteHe:'נכתב לפני העיצור', noteEn:'written before the consonant'},
-  {id:'v_ae_short', symbol:'แ-ะ', name:'สระแอะ', sound:'ae short', he:'ae קצר', boardWord:'แกะ', boardMeaningHe:'כבשה / לקלף', boardMeaningEn:'sheep / to peel', emoji:'🐑', noteHe:'קצר; עם עיצור סופי מתקצר לרוב בעזרת ็', noteEn:'short; with a final consonant often shortened using ็'},
-  {id:'v_ae', symbol:'แ-', name:'สระแอ', sound:'ae', he:'ae', boardWord:'แขน', boardMeaningHe:'זרוע', boardMeaningEn:'arm', emoji:'💪', noteHe:'נכתב לפני העיצור', noteEn:'written before the consonant'},
-  {id:'v_o_short', symbol:'โ-ะ', name:'สระโอะ', sound:'o short', he:'o קצר', boardWord:'โต๊ะ', boardMeaningHe:'שולחן', boardMeaningEn:'table', emoji:'🪑', noteHe:'תנועה קצרה; לעיתים נעלמת בכתיב עם עיצור סופי', noteEn:'short vowel; often unwritten with a final consonant'},
-  {id:'v_o', symbol:'โ-', name:'สระโอ', sound:'o / oo', he:'o / oo', boardWord:'โคม', boardMeaningHe:'מנורה', boardMeaningEn:'lamp', emoji:'💡', noteHe:'נכתב לפני העיצור', noteEn:'written before the consonant'},
-  {id:'v_aw_short', symbol:'เ-าะ', name:'สระเอาะ', sound:'aw / ɔ short', he:'aw / ɔ קצר', boardWord:'เงาะ', boardMeaningHe:'רמבוטן', boardMeaningEn:'rambutan', emoji:'🍈', noteHe:'תנועת o פתוחה קצרה', noteEn:'short open-o vowel'},
-  {id:'v_aw_long', symbol:'อ', name:'สระออ', sound:'aw / ɔɔ long', he:'aw / ɔɔ ארוך', boardWord:'หมอ', boardMeaningHe:'רופא', boardMeaningEn:'doctor', emoji:'🧑‍⚕️', noteHe:'תנועת o פתוחה ארוכה; อ יכול להיות גם עיצור נשא', noteEn:'long open-o vowel; อ can also carry vowels'},
-  {id:'v_er_short', symbol:'เ-อะ', name:'สระเออะ', sound:'er short', he:'er קצר', boardWord:'เลอะ', boardMeaningHe:'מלוכלך', boardMeaningEn:'dirty / messy', emoji:'🟤', noteHe:'קצר', noteEn:'short vowel'},
-  {id:'v_er_long', symbol:'เ-อ', name:'สระเออ', sound:'er long', he:'er ארוך', boardWord:'เธอ', boardMeaningHe:'את/היא', boardMeaningEn:'you / she', emoji:'👧', noteHe:'ארוך', noteEn:'long vowel'},
-  {id:'v_ia_short', symbol:'เ-ียะ', name:'สระเอียะ', sound:'ia short', he:'ia קצר', boardWord:'ขนมเปี๊ยะ', boardMeaningHe:'מאפה / עוגייה', boardMeaningEn:'pastry', emoji:'🥮', noteHe:'תנועה מורכבת קצרה', noteEn:'short compound vowel'},
-  {id:'v_ia_long', symbol:'เ-ีย', name:'สระเอีย', sound:'ia long', he:'ia ארוך', boardWord:'เปีย', boardMeaningHe:'צמה', boardMeaningEn:'braid', emoji:'👧', noteHe:'תנועה מורכבת ארוכה', noteEn:'long compound vowel'},
-  {id:'v_uea_short', symbol:'เ-ือะ', name:'สระเอือะ', sound:'uea short', he:'uea קצר', boardWord:'-', boardMeaningHe:'נדיר בלוח', boardMeaningEn:'rare on the board', emoji:'🔤', noteHe:'תנועה מורכבת קצרה נדירה', noteEn:'rare short compound vowel'},
-  {id:'v_uea_long', symbol:'เ-ือ', name:'สระเอือ', sound:'uea long', he:'uea ארוך', boardWord:'เสือ', boardMeaningHe:'נמר', boardMeaningEn:'tiger', emoji:'🐯', noteHe:'תנועה מורכבת ארוכה', noteEn:'long compound vowel'},
-  {id:'v_ua_short', symbol:'-ัวะ', name:'สระอัวะ', sound:'ua short', he:'ua קצר', boardWord:'ยัวะ', boardMeaningHe:'כועס/מעוצבן', boardMeaningEn:'angry / irritated', emoji:'😠', noteHe:'תנועה מורכבת קצרה', noteEn:'short compound vowel'},
-  {id:'v_ua_long', symbol:'-ัว', name:'สระอัว', sound:'ua long', he:'ua ארוך', boardWord:'บัว', boardMeaningHe:'לוטוס', boardMeaningEn:'lotus', emoji:'🪷', noteHe:'תנועה מורכבת ארוכה; לפעמים מתקצרת בכתיב בלי ะ', noteEn:'long compound vowel; spelling can shorten in closed syllables'},
-  {id:'v_am', symbol:'ำ', name:'สระอำ', sound:'am', he:'am', boardWord:'ขำ', boardMeaningHe:'לצחוק / מצחיק', boardMeaningEn:'to laugh / funny', emoji:'😆', noteHe:'תנועה + m מובנה', noteEn:'vowel with built-in m'},
-  {id:'v_ai_mai_muan', symbol:'ใ-', name:'สระใอ', sound:'ai', he:'ai', boardWord:'ใบ', boardMeaningHe:'עלה / דף', boardMeaningEn:'leaf / sheet', emoji:'🍃', noteHe:'אחד משני סימני ai', noteEn:'one of two ai signs'},
-  {id:'v_ai_mai_malai', symbol:'ไ-', name:'สระไอ', sound:'ai', he:'ai', boardWord:'ไก่', boardMeaningHe:'תרנגולת', boardMeaningEn:'chicken', emoji:'🐔', noteHe:'אחד משני סימני ai', noteEn:'one of two ai signs'},
-  {id:'v_ao', symbol:'เ-า', name:'สระเอา', sound:'ao', he:'ao', boardWord:'เขา', boardMeaningHe:'הר / הוא', boardMeaningEn:'mountain / he', emoji:'⛰️', noteHe:'תנועה מורכבת ao', noteEn:'ao compound vowel'},
-  {id:'v_rue', symbol:'ฤ', name:'ฤ', sound:'rue / ri / roe', he:'rue / ri / roe', boardWord:'ฤดู', boardMeaningHe:'עונה', boardMeaningEn:'season', emoji:'🌧️', noteHe:'סימן מיוחד, לא תנועה רגילה', noteEn:'special sign, not a normal vowel'},
-  {id:'v_rue_long', symbol:'ฤา', name:'ฤา', sound:'rue long', he:'rue ארוך', boardWord:'ฤาษี', boardMeaningHe:'נזיר/חכם', boardMeaningEn:'hermit / sage', emoji:'🧙‍♂️', noteHe:'סימן מיוחד נדיר יותר', noteEn:'rarer special sign'},
-  {id:'v_lue', symbol:'ฦ', name:'ฦ', sound:'lue', he:'lue', boardWord:'-', boardMeaningHe:'כמעט לא בשימוש כיום', boardMeaningEn:'almost unused today', emoji:'❌', noteHe:'סימן עתיק/נדיר', noteEn:'archaic/rare sign'},
-  {id:'v_lue_long', symbol:'ฦา', name:'ฦา', sound:'lue long', he:'lue ארוך', boardWord:'-', boardMeaningHe:'כמעט לא בשימוש כיום', boardMeaningEn:'almost unused today', emoji:'❌', noteHe:'סימן עתיק/נדיר', noteEn:'archaic/rare sign'},
-  {id:'v_mai_taikhu', symbol:'็', name:'ไม้ไต่คู้', sound:'shortener', he:'מקצר תנועה', boardWord:'เด็ก / เป็น / แข็ง', boardMeaningHe:'ילד / להיות / קשה', boardMeaningEn:'child / to be / hard', emoji:'✂️', noteHe:'לא טון — מקצר תנועה בכתיב עם עיצור סופי', noteEn:'not a tone mark — it shortens a vowel when there is a final consonant'}
+  {kind:'vowel',id:'v_ak', symbol:'ะ', name:'สระอะ', localHe:'תנועת a קצרה', localEn:'short a vowel', sound:'a short', he:'a קצר', boardWord:'กระทะ', boardMeaningHe:'מחבת', boardMeaningEn:'pan', emoji:'🍳', writingHe:'נכתב אחרי העיצור או בסוף הברה פתוחה כדי לסמן תנועה קצרה.', writingEn:'Written after the consonant or at the end of an open syllable to mark a short vowel.', noteHe:'תנועה קצרה. דוגמה: กะ = ga קצר.', noteEn:'Short vowel. Example: กะ = short ga.'},
+  {kind:'vowel',id:'v_aa', symbol:'า', name:'สระอา', localHe:'תנועת aa ארוכה', localEn:'long aa vowel', sound:'aa long', he:'aa ארוך', boardWord:'ตา', boardMeaningHe:'עין', boardMeaningEn:'eye', emoji:'👁️', writingHe:'נכתב אחרי העיצור ומאריך את הצליל a ל־aa.', writingEn:'Written after the consonant and lengthens a to aa.', noteHe:'לא להתבלבל עם ะ הקצר.', noteEn:'Do not confuse it with short ะ.'},
+  {kind:'vowel',id:'v_i', symbol:'ิ', name:'สระอิ', localHe:'תנועת i קצרה', localEn:'short i vowel', sound:'i short', he:'i קצר', boardWord:'คิด', boardMeaningHe:'לחשוב', boardMeaningEn:'to think', emoji:'💭', writingHe:'יושב מעל העיצור.', writingEn:'Written above the consonant.', noteHe:'קצר: กิ = gi.', noteEn:'Short: กิ = gi.'},
+  {kind:'vowel',id:'v_ii', symbol:'ี', name:'สระอี', localHe:'תנועת ii ארוכה', localEn:'long ii vowel', sound:'ii long', he:'ii ארוך', boardWord:'สี', boardMeaningHe:'צבע', boardMeaningEn:'color', emoji:'🎨', writingHe:'יושב מעל העיצור, דומה ל־ิ אבל עם קו ארוך יותר.', writingEn:'Written above the consonant; like ิ but longer.', noteHe:'ארוך: กี = gii.', noteEn:'Long: กี = gii.'},
+  {kind:'vowel',id:'v_eu', symbol:'ึ', name:'สระอึ', localHe:'תנועת eu קצרה', localEn:'short eu vowel', sound:'eu short', he:'eu קצר', boardWord:'ตึก', boardMeaningHe:'בניין', boardMeaningEn:'building', emoji:'🏢', writingHe:'יושב מעל העיצור: חצי עיגול + קו אחד.', writingEn:'Written above the consonant: small curve + one stroke.', noteHe:'קצר: กึ = geu.', noteEn:'Short: กึ = geu.'},
+  {kind:'vowel',id:'v_euu', symbol:'ื', name:'สระอือ', localHe:'תנועת euu ארוכה', localEn:'long euu vowel', sound:'euu long', he:'euu ארוך', boardWord:'มือ', boardMeaningHe:'יד', boardMeaningEn:'hand', emoji:'✋', writingHe:'יושב מעל העיצור: חצי עיגול + שני קווים. בהברה פתוחה לרוב מוסיפים อ: มือ.', writingEn:'Written above the consonant: curve + two strokes. In open syllables often followed by อ: มือ.', noteHe:'ארוך: กือ = geuu.', noteEn:'Long: กือ = geuu.'},
+  {kind:'vowel',id:'v_u', symbol:'ุ', name:'สระอุ', localHe:'תנועת u קצרה', localEn:'short u vowel', sound:'u short', he:'u קצר', boardWord:'ถุง', boardMeaningHe:'שקית', boardMeaningEn:'bag', emoji:'🛍️', writingHe:'יושב מתחת לעיצור.', writingEn:'Written below the consonant.', noteHe:'קצר: กุ = gu.', noteEn:'Short: กุ = gu.'},
+  {kind:'vowel',id:'v_uu', symbol:'ู', name:'สระอู', localHe:'תנועת uu ארוכה', localEn:'long uu vowel', sound:'uu long', he:'uu ארוך', boardWord:'งู', boardMeaningHe:'נחש', boardMeaningEn:'snake', emoji:'🐍', writingHe:'יושב מתחת לעיצור, דומה ל־ุ אבל ארוך.', writingEn:'Written below the consonant; like ุ but long.', noteHe:'ארוך: กู = guu.', noteEn:'Long: กู = guu.'},
+  {kind:'vowel',id:'v_e_short', symbol:'เ-ะ', name:'สระเอะ', localHe:'תנועת e קצרה', localEn:'short e vowel', sound:'e short', he:'e קצר', boardWord:'เตะ', boardMeaningHe:'לבעוט', boardMeaningEn:'to kick', emoji:'⚽', writingHe:'เ נכתב לפני העיצור ו־ะ אחרי. עם עיצור סופי משתמשים בדרך כלל ב־็ במקום ะ.', writingEn:'เ is written before the consonant and ะ after it. With a final consonant, ็ often replaces ะ.', noteHe:'קיצור כתיב: เ-ะ + סוף → เ-็- כמו เด็ก.', noteEn:'Short spelling: เ-ะ + final → เ-็- as in เด็ก.'},
+  {kind:'vowel',id:'v_e_long', symbol:'เ-', name:'สระเอ', localHe:'תנועת e ארוכה', localEn:'long e vowel', sound:'ee / e long', he:'e ארוך', boardWord:'เท', boardMeaningHe:'לשפוך', boardMeaningEn:'to pour', emoji:'🥛', writingHe:'נכתב לפני העיצור.', writingEn:'Written before the consonant.', noteHe:'ארוך: เก = gee/ge.', noteEn:'Long: เก = gee/ge.'},
+  {kind:'vowel',id:'v_ae_short', symbol:'แ-ะ', name:'สระแอะ', localHe:'תנועת ae קצרה', localEn:'short ae vowel', sound:'ae short', he:'ae קצר', boardWord:'แกะ', boardMeaningHe:'כבשה / לקלף', boardMeaningEn:'sheep / to peel', emoji:'🐑', writingHe:'แ נכתב לפני העיצור ו־ะ אחרי. עם עיצור סופי משתמשים בדרך כלל ב־็.', writingEn:'แ is written before the consonant and ะ after it. With a final consonant, ็ is often used.', noteHe:'קיצור כתיב: แ-ะ + סוף → แ-็- כמו แข็ง.', noteEn:'Short spelling: แ-ะ + final → แ-็- as in แข็ง.'},
+  {kind:'vowel',id:'v_ae', symbol:'แ-', name:'สระแอ', localHe:'תנועת ae ארוכה/רגילה', localEn:'long/regular ae vowel', sound:'ae', he:'ae', boardWord:'แขน', boardMeaningHe:'זרוע', boardMeaningEn:'arm', emoji:'💪', writingHe:'נכתב לפני העיצור.', writingEn:'Written before the consonant.', noteHe:'แก = gae.', noteEn:'แก = gae.'},
+  {kind:'vowel',id:'v_o_short', symbol:'โ-ะ', name:'สระโอะ', localHe:'תנועת o קצרה', localEn:'short o vowel', sound:'o short', he:'o קצר', boardWord:'โต๊ะ', boardMeaningHe:'שולחן', boardMeaningEn:'table', emoji:'🪑', writingHe:'โ נכתב לפני העיצור ו־ะ אחרי. עם עיצור סופי התנועה הקצרה בדרך כלל לא נכתבת.', writingEn:'โ is written before the consonant and ะ after it. With a final consonant, the short o is often unwritten.', noteHe:'קיצור כתיב: โ-ะ + סוף → אין סימן תנועה, כמו คน = khon.', noteEn:'Short spelling: โ-ะ + final → no vowel sign, as in คน = khon.'},
+  {kind:'vowel',id:'v_o', symbol:'โ-', name:'สระโอ', localHe:'תנועת o ארוכה', localEn:'long o vowel', sound:'o / oo', he:'o / oo', boardWord:'โคม', boardMeaningHe:'מנורה', boardMeaningEn:'lamp', emoji:'💡', writingHe:'נכתב לפני העיצור.', writingEn:'Written before the consonant.', noteHe:'โก = go / goo.', noteEn:'โก = go / goo.'},
+  {kind:'vowel',id:'v_aw_short', symbol:'เ-าะ', name:'สระเอาะ', localHe:'תנועת aw/ɔ קצרה', localEn:'short open-o / aw vowel', sound:'aw / ɔ short', he:'aw / ɔ קצר', boardWord:'เงาะ', boardMeaningHe:'רמבוטן', boardMeaningEn:'rambutan', emoji:'🍈', writingHe:'נכתב סביב העיצור: เ לפני, าะ אחרי. זה O פתוח קצר, לא โ.', writingEn:'Written around the consonant: เ before, าะ after. This is short open-o, not โ.', noteHe:'כמו אוֹ פתוח וקצר. דוגמה בלוח: เงาะ.', noteEn:'A short open “aw/ɔ” sound. Board example: เงาะ.'},
+  {kind:'vowel',id:'v_aw_long', symbol:'อ', name:'สระออ', localHe:'תנועת aw/ɔɔ ארוכה', localEn:'long open-o / aw vowel', sound:'aw / ɔɔ long', he:'aw / ɔɔ ארוך', boardWord:'หมอ', boardMeaningHe:'רופא', boardMeaningEn:'doctor', emoji:'🧑‍⚕️', writingHe:'อ כאן מייצג תנועת O פתוחה ארוכה, כמו ב־หมอ. זה לא אותו דבר כמו โ. האות อ יכולה להיות גם עיצור נשא בתחילת מילה.', writingEn:'Here อ marks a long open-o sound, as in หมอ. It is not the same as โ. อ can also be a silent carrier consonant at the start of a word.', noteHe:'דוגמאות: หมอ = רופא, นอน = לישון. זה ה־aw/ɔɔ הארוך.', noteEn:'Examples: หมอ = doctor, นอน = sleep. This is the long aw/ɔɔ sound.'},
+  {kind:'vowel',id:'v_er_short', symbol:'เ-อะ', name:'สระเออะ', localHe:'תנועת er קצרה', localEn:'short er vowel', sound:'er short', he:'er קצר', boardWord:'เลอะ', boardMeaningHe:'מלוכלך', boardMeaningEn:'dirty / messy', emoji:'🟤', writingHe:'เ לפני העיצור ו־อะ אחרי.', writingEn:'เ before the consonant and อะ after it.', noteHe:'תנועה קצרה.', noteEn:'Short vowel.'},
+  {kind:'vowel',id:'v_er_long', symbol:'เ-อ', name:'สระเออ', localHe:'תנועת er ארוכה', localEn:'long er vowel', sound:'er long', he:'er ארוך', boardWord:'เธอ', boardMeaningHe:'את/היא', boardMeaningEn:'you / she', emoji:'👧', writingHe:'เ לפני העיצור ו־อ אחרי.', writingEn:'เ before the consonant and อ after it.', noteHe:'תנועה ארוכה.', noteEn:'Long vowel.'},
+  {kind:'vowel',id:'v_ia_short', symbol:'เ-ียะ', name:'สระเอียะ', localHe:'תנועת ia קצרה', localEn:'short ia compound vowel', sound:'ia short', he:'ia קצר', boardWord:'ขนมเปี๊ยะ', boardMeaningHe:'מאפה / עוגייה', boardMeaningEn:'pastry', emoji:'🥮', writingHe:'תנועה מורכבת סביב העיצור.', writingEn:'Compound vowel written around the consonant.', noteHe:'קצרה ונדירה יחסית.', noteEn:'Short and relatively rare.'},
+  {kind:'vowel',id:'v_ia_long', symbol:'เ-ีย', name:'สระเอีย', localHe:'תנועת ia ארוכה', localEn:'long ia compound vowel', sound:'ia long', he:'ia ארוך', boardWord:'เปีย', boardMeaningHe:'צמה', boardMeaningEn:'braid', emoji:'👧', writingHe:'เ לפני העיצור, ี מעל, ย אחרי.', writingEn:'เ before the consonant, ี above, ย after.', noteHe:'เปีย = צמה.', noteEn:'เปีย = braid.'},
+  {kind:'vowel',id:'v_uea_short', symbol:'เ-ือะ', name:'สระเอือะ', localHe:'תנועת uea קצרה', localEn:'short uea compound vowel', sound:'uea short', he:'uea קצר', boardWord:'-', boardMeaningHe:'נדיר בלוח', boardMeaningEn:'rare on the board', emoji:'🔤', writingHe:'תנועה מורכבת קצרה סביב העיצור.', writingEn:'Short compound vowel written around the consonant.', noteHe:'נדירה יחסית.', noteEn:'Relatively rare.'},
+  {kind:'vowel',id:'v_uea_long', symbol:'เ-ือ', name:'สระเอือ', localHe:'תנועת uea ארוכה', localEn:'long uea compound vowel', sound:'uea long', he:'uea ארוך', boardWord:'เสือ', boardMeaningHe:'נמר', boardMeaningEn:'tiger', emoji:'🐯', writingHe:'เ לפני העיצור, ื מעל, อ אחרי.', writingEn:'เ before the consonant, ื above, อ after.', noteHe:'เสือ = נמר.', noteEn:'เสือ = tiger.'},
+  {kind:'vowel',id:'v_ua_short', symbol:'-ัวะ', name:'สระอัวะ', localHe:'תנועת ua קצרה', localEn:'short ua compound vowel', sound:'ua short', he:'ua קצר', boardWord:'ยัวะ', boardMeaningHe:'כועס/מעוצבן', boardMeaningEn:'angry / irritated', emoji:'😠', writingHe:'ั מעל העיצור, ו־วะ אחרי.', writingEn:'ั above the consonant, then วะ after it.', noteHe:'ua קצר.', noteEn:'Short ua.'},
+  {kind:'vowel',id:'v_ua_long', symbol:'-ัว', name:'สระอัว', localHe:'תנועת ua ארוכה', localEn:'long ua compound vowel', sound:'ua long', he:'ua ארוך', boardWord:'บัว', boardMeaningHe:'לוטוס', boardMeaningEn:'lotus', emoji:'🪷', writingHe:'ั מעל העיצור ו־ว אחרי. במילים סגורות ה־ั עשוי להשתנות/להיעלם לפי הכתיב.', writingEn:'ั above the consonant and ว after it. In closed syllables spelling can change.', noteHe:'בัว = לוטוס; א้วน משתמש במבנה ua עם ว.', noteEn:'บัว = lotus; อ้วน uses the ua/w structure.'},
+  {kind:'vowel',id:'v_am', symbol:'ำ', name:'สระอำ', localHe:'תנועת am', localEn:'am vowel', sound:'am', he:'am', boardWord:'ขำ', boardMeaningHe:'לצחוק / מצחיק', boardMeaningEn:'to laugh / funny', emoji:'😆', writingHe:'סימן אחד שמכיל a + m.', writingEn:'One sign that contains a + m.', noteHe:'ขำ = לצחוק/מצחיק.', noteEn:'ขำ = laugh/funny.'},
+  {kind:'vowel',id:'v_ai_mai_muan', symbol:'ใ-', name:'สระใอ', localHe:'תנועת ai מסוג ใ', localEn:'ai vowel with ใ', sound:'ai', he:'ai', boardWord:'ใบ', boardMeaningHe:'עלה / דף', boardMeaningEn:'leaf / sheet', emoji:'🍃', writingHe:'נכתב לפני העיצור. זה אחד משני סימני ai.', writingEn:'Written before the consonant. One of two ai signs.', noteHe:'יש מעט מילים עם ใ — צריך לזכור אותן.', noteEn:'There are limited words with ใ — memorize them.'},
+  {kind:'vowel',id:'v_ai_mai_malai', symbol:'ไ-', name:'สระไอ', localHe:'תנועת ai מסוג ไ', localEn:'ai vowel with ไ', sound:'ai', he:'ai', boardWord:'ไก่', boardMeaningHe:'תרנגולת', boardMeaningEn:'chicken', emoji:'🐔', writingHe:'נכתב לפני העיצור. זה סימן ai נפוץ מאוד.', writingEn:'Written before the consonant. A very common ai sign.', noteHe:'ไป = ללכת.', noteEn:'ไป = to go.'},
+  {kind:'vowel',id:'v_ao', symbol:'เ-า', name:'สระเอา', localHe:'תנועת ao', localEn:'ao compound vowel', sound:'ao', he:'ao', boardWord:'เขา', boardMeaningHe:'הר / הוא', boardMeaningEn:'mountain / he', emoji:'⛰️', writingHe:'เ לפני העיצור ו־า אחריו.', writingEn:'เ before the consonant and า after it.', noteHe:'เขา = הר/הוא לפי הקשר.', noteEn:'เขา = mountain/he depending on context.'},
+  {kind:'special',id:'v_rue', symbol:'ฤ', name:'ฤ', localHe:'סימן מיוחד rue/ri/roe', localEn:'special rue/ri/roe sign', sound:'rue / ri / roe', he:'rue / ri / roe', boardWord:'ฤดู', boardMeaningHe:'עונה', boardMeaningEn:'season', emoji:'🌧️', writingHe:'סימן מיוחד, לא תנועה רגילה שמתחברת לעיצור.', writingEn:'Special sign, not a regular vowel attached to a consonant.', noteHe:'ฤดู = עונה.', noteEn:'ฤดู = season.'},
+  {kind:'special',id:'v_rue_long', symbol:'ฤา', name:'ฤา', localHe:'סימן מיוחד rue ארוך', localEn:'special long rue sign', sound:'rue long', he:'rue ארוך', boardWord:'ฤาษี', boardMeaningHe:'נזיר/חכם', boardMeaningEn:'hermit / sage', emoji:'🧙‍♂️', writingHe:'סימן מיוחד ונדיר יותר.', writingEn:'Special and rarer sign.', noteHe:'ฤาษี = נזיר/חכם.', noteEn:'ฤาษี = hermit/sage.'},
+  {kind:'special',id:'v_lue', symbol:'ฦ', name:'ฦ', localHe:'סימן עתיק/נדיר lue', localEn:'archaic/rare lue sign', sound:'lue', he:'lue', boardWord:'-', boardMeaningHe:'כמעט לא בשימוש כיום', boardMeaningEn:'almost unused today', emoji:'❌', writingHe:'כמעט לא בשימוש בתאית מודרנית.', writingEn:'Almost unused in modern Thai.', noteHe:'להכיר, לא לתרגל יותר מדי כרגע.', noteEn:'Recognize it, do not over-drill it for now.'},
+  {kind:'special',id:'v_lue_long', symbol:'ฦา', name:'ฦา', localHe:'סימן עתיק/נדיר lue ארוך', localEn:'archaic/rare long lue sign', sound:'lue long', he:'lue ארוך', boardWord:'-', boardMeaningHe:'כמעט לא בשימוש כיום', boardMeaningEn:'almost unused today', emoji:'❌', writingHe:'כמעט לא בשימוש בתאית מודרנית.', writingEn:'Almost unused in modern Thai.', noteHe:'להכיר בלבד.', noteEn:'Recognition only.'},
+  {kind:'special',id:'v_mai_taikhu', symbol:'็', name:'ไม้ไต่คู้', localHe:'סימן קיצור תנועה', localEn:'vowel-shortening mark', sound:'shortener', he:'מקצר תנועה', boardWord:'เด็ก / เป็น / แข็ง', boardMeaningHe:'ילד / להיות / קשה', boardMeaningEn:'child / to be / hard', emoji:'✂️', writingHe:'לא טון. יושב מעל העיצור ומקצר תנועה כשיש עיצור סופי: เ-ะ → เ-็-, แ-ะ → แ-็-.', writingEn:'Not a tone mark. Written above the consonant to shorten a vowel with a final consonant: เ-ะ → เ-็-, แ-ะ → แ-็-.', noteHe:'דוגמאות: เด็ก, เป็น, แข็ง.', noteEn:'Examples: เด็ก, เป็น, แข็ง.'}
 ];
 
+
+const CONSONANTS = [
+  {kind:'consonant',id:'c_gor_gai',symbol:'ก',name:'กอ ไก่',localHe:'עיצור g/k — go gai',localEn:'g/k consonant — go gai',sound:'g / k',he:'g / k',boardWord:'ไก่',boardMeaningHe:'תרנגולת',boardMeaningEn:'chicken',emoji:'🐔',writingHe:'Middle class. משמש כ־g/k בתחילת הברה וכ־k בסוף.',writingEn:'Middle class. g/k at the start; k at the end.',noteHe:'מהעיצורים הבסיסיים ביותר.',noteEn:'One of the core consonants.'},
+  {kind:'consonant',id:'c_jor_jaan',symbol:'จ',name:'จอ จาน',localHe:'עיצור j — jo jaan',localEn:'j consonant — jo jaan',sound:'j',he:'j',boardWord:'จาน',boardMeaningHe:'צלחת',boardMeaningEn:'plate',emoji:'🍽️',writingHe:'Middle class. בתחילת הברה j; בסוף נשמע t.',writingEn:'Middle class. j at the start; t at the end.',noteHe:'จาน = צלחת.',noteEn:'จาน = plate.'},
+  {kind:'consonant',id:'c_dor_dek',symbol:'ด',name:'ดอ เด็ก',localHe:'עיצור d — do dek',localEn:'d consonant — do dek',sound:'d',he:'d',boardWord:'เด็ก',boardMeaningHe:'ילד',boardMeaningEn:'child',emoji:'🧒',writingHe:'Middle class. d בתחילה; t בסוף.',writingEn:'Middle class. d initially; t finally.',noteHe:'דוגמה: ดู = לראות.',noteEn:'Example: ดู = to look.'},
+  {kind:'consonant',id:'c_tor_tao',symbol:'ต',name:'ตอ เต่า',localHe:'עיצור dt/t — dto dtao',localEn:'dt/t consonant — dto dtao',sound:'dt / t',he:'dt / t',boardWord:'เต่า',boardMeaningHe:'צב',boardMeaningEn:'turtle',emoji:'🐢',writingHe:'Middle class. צליל לא מנושף dt/t.',writingEn:'Middle class. Unaspirated dt/t sound.',noteHe:'ตาย = למות.',noteEn:'ตาย = to die.'},
+  {kind:'consonant',id:'c_bor_baimai',symbol:'บ',name:'บอ ใบไม้',localHe:'עיצור b — bo baimai',localEn:'b consonant — bo baimai',sound:'b',he:'b',boardWord:'ใบไม้',boardMeaningHe:'עלה',boardMeaningEn:'leaf',emoji:'🍃',writingHe:'Middle class. b בתחילה; p בסוף.',writingEn:'Middle class. b initially; p finally.',noteHe:'บ้าน מתחיל ב־บ.',noteEn:'บ้าน starts with บ.'},
+  {kind:'consonant',id:'c_bpor_bplaa',symbol:'ป',name:'ปอ ปลา',localHe:'עיצור bp/p — bpo bplaa',localEn:'bp/p consonant — bpo bplaa',sound:'bp / p',he:'bp / p',boardWord:'ปลา',boardMeaningHe:'דג',boardMeaningEn:'fish',emoji:'🐟',writingHe:'Middle class. p לא מנושף / bp.',writingEn:'Middle class. Unaspirated p / bp.',noteHe:'ไป = ללכת.',noteEn:'ไป = to go.'},
+  {kind:'consonant',id:'c_o_ang',symbol:'อ',name:'ออ อ่าง',localHe:'עיצור נשא / o aang',localEn:'silent carrier / o aang',sound:'silent carrier / ɔɔ',he:'עיצור נשא / ɔɔ',boardWord:'อ่าง',boardMeaningHe:'אגן / כיור / גיגית',boardMeaningEn:'basin / tub',emoji:'🛁',writingHe:'יכול לשמש עיצור נשא בתחילת מילה, וגם חלק מתנועת ɔɔ ארוכה.',writingEn:'Can be a silent vowel carrier at the start, and can also mark long ɔɔ.',noteHe:'חשוב מאוד במילים שמתחילות בתנועה.',noteEn:'Very important for vowel-initial words.'},
+  {kind:'consonant',id:'c_ngo_nguu',symbol:'ง',name:'งอ งู',localHe:'עיצור ng — ngo nguu',localEn:'ng consonant — ngo nguu',sound:'ng',he:'ng',boardWord:'งู',boardMeaningHe:'נחש',boardMeaningEn:'snake',emoji:'🐍',writingHe:'יכול להופיע בתחילת הברה או כסוף ng.',writingEn:'Can appear initially or as final ng.',noteHe:'งาน = עבודה.',noteEn:'งาน = work.'},
+  {kind:'consonant',id:'c_yo_yak',symbol:'ย',name:'ยอ ยักษ์',localHe:'עיצור y — yo yaak',localEn:'y consonant — yo yak',sound:'y',he:'y',boardWord:'ยักษ์',boardMeaningHe:'ענק / מפלצת',boardMeaningEn:'giant / ogre',emoji:'👹',writingHe:'y בתחילה או סוף y.',writingEn:'y initially or final y.',noteHe:'ตาย מסתיים ב־ย.',noteEn:'ตาย ends with ย.'},
+  {kind:'consonant',id:'c_wo_waen',symbol:'ว',name:'วอ แหวน',localHe:'עיצור w — wo waen',localEn:'w consonant — wo waen',sound:'w',he:'w',boardWord:'แหวน',boardMeaningHe:'טבעת',boardMeaningEn:'ring',emoji:'💍',writingHe:'w בתחילה או סוף w; משתתף גם בתנועות ua.',writingEn:'w initially or final w; also part of ua vowels.',noteHe:'อ้วน משתמש ב־ว.',noteEn:'อ้วน uses ว.'},
+  {kind:'consonant',id:'c_mo_maa',symbol:'ม',name:'มอ ม้า',localHe:'עיצור m — mo maa',localEn:'m consonant — mo maa',sound:'m',he:'m',boardWord:'ม้า',boardMeaningHe:'סוס',boardMeaningEn:'horse',emoji:'🐴',writingHe:'m בתחילה או סוף m.',writingEn:'m initially or final m.',noteHe:'ตาม מסתיים ב־ม.',noteEn:'ตาม ends with ม.'},
+  {kind:'consonant',id:'c_no_nuu',symbol:'น',name:'นอ หนู',localHe:'עיצור n — no nuu',localEn:'n consonant — no nuu',sound:'n',he:'n',boardWord:'หนู',boardMeaningHe:'עכבר / אני הקטן',boardMeaningEn:'mouse / little me',emoji:'🐭',writingHe:'n בתחילה או סוף n.',writingEn:'n initially or final n.',noteHe:'นอน = לישון.',noteEn:'นอน = to sleep.'}
+];
+const BOARD_ITEMS = VOWELS.concat(CONSONANTS);
 const MODES = ['read_meaning','hebrew_write','tone','roman_write'];
 const MODE_OPTIONS = ['mixed','read_meaning','hebrew_write','tone','roman_write'];
 const STORAGE_KEY = 'thaiTrainerStateV3';
+const THEMES = [
+  {id:'ocean', he:'Ocean Calm 🌊', en:'Ocean Calm 🌊'},
+  {id:'notebook', he:'Thai Notebook ✍️', en:'Thai Notebook ✍️'},
+  {id:'neon', he:'Neon Bangkok 🌃', en:'Neon Bangkok 🌃'},
+  {id:'minimal', he:'Minimal Premium 🧊', en:'Minimal Premium 🧊'},
+  {id:'island', he:'Island Focus 🏝️', en:'Island Focus 🏝️'}
+];
 const DEFAULT_SYNC_URL = 'https://script.google.com/macros/s/AKfycbzbr2OfX-0WVpJqPuMgQ_ye-kUCGdyAjGvF3Mv3wCugy_n9_x36x6l6ld6oecD4F7Ru/exec';
 let deferredInstallPrompt = null;
 let state = loadState();
@@ -187,7 +210,7 @@ const canvas = el('writeCanvas');
 const ctx = canvas.getContext('2d');
 
 function defaultState(){
-  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], syncUrl:'', lastSync:null, lang:'he', userId:'rif' };
+  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], syncUrl:'', lastSync:null, lang:'he', userId:'rif', theme:'ocean' };
 }
 
 async function disableOldServiceWorkers(){
@@ -213,7 +236,7 @@ function loadState(){
 function saveState(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
 
 function init(){
-  setupLevels(); setupModes(); setupCanvas(); setupEvents(); setupPwa(); applyLanguage(); runQA();
+  setupLevels(); setupModes(); setupCanvas(); setupEvents(); setupPwa(); applyTheme(); applyLanguage(); runQA();
   if(!state.syncUrl){ state.syncUrl = DEFAULT_SYNC_URL; saveState(); }
   el('syncUrl').value = state.syncUrl || DEFAULT_SYNC_URL;
   el('userIdInput').value = state.userId || 'rif';
@@ -260,6 +283,7 @@ function setupEvents(){
   el('syncUploadBtn').addEventListener('click', syncUpload);
   el('syncDownloadBtn').addEventListener('click', syncDownload);
   el('langToggle').addEventListener('click', toggleLanguage);
+  el('themeToggle').addEventListener('click', cycleTheme);
   el('userIdInput').addEventListener('keydown', e => { if(e.key === 'Enter'){ e.preventDefault(); initUserSheet(); } });
   el('userIdInput').addEventListener('blur', () => { const v = cleanUserId(el('userIdInput').value); if(v && v !== state.userId){ state.userId=v; saveState(); } });
 }
@@ -268,6 +292,25 @@ function setupPwa(){
   el('installBtn').addEventListener('click', async()=>{ if(deferredInstallPrompt){ deferredInstallPrompt.prompt(); deferredInstallPrompt=null; el('installBtn').hidden=true; }});
 }
 
+function currentTheme(){ return THEMES.find(x=>x.id===state.theme) || THEMES[0]; }
+function applyTheme(){
+  const theme = currentTheme();
+  document.body.classList.remove(...THEMES.map(x=>'theme-'+x.id));
+  document.body.classList.add('theme-'+theme.id);
+  const b = el('themeToggle');
+  if(b) b.textContent = isHebrew() ? theme.he : theme.en;
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if(meta){
+    const colors = {ocean:'#07111f',notebook:'#f3efe6',neon:'#080014',minimal:'#edf7ff',island:'#062f3a'};
+    meta.setAttribute('content', colors[theme.id] || '#07111f');
+  }
+}
+function cycleTheme(){
+  const idx = THEMES.findIndex(x=>x.id===state.theme);
+  state.theme = THEMES[(idx+1+THEMES.length)%THEMES.length].id;
+  saveState();
+  applyTheme();
+}
 function applyLanguage(){
   document.documentElement.lang = lang();
   document.documentElement.dir = isHebrew() ? 'rtl' : 'ltr';
@@ -276,6 +319,7 @@ function applyLanguage(){
   el('mainTitle').textContent = t('title');
   el('subtitleText').textContent = t('subtitle');
   el('langToggle').textContent = t('langButton');
+  applyTheme();
   el('installBtn').textContent = t('install');
   el('levelLabel').textContent = t('levelLabel');
   el('modeLabelText').textContent = t('modeLabel');
@@ -347,31 +391,31 @@ function sampleChoices(correct, all, count=4){
   return [correct, ...unique].sort(()=>Math.random()-0.5);
 }
 function makeVowelQuestion(){
-  const item = VOWELS[Math.floor(Math.random()*VOWELS.length)];
+  const item = BOARD_ITEMS[Math.floor(Math.random()*BOARD_ITEMS.length)];
   const types = ['sound','name','symbol','boardWord'];
   if(item.id === 'v_mai_taikhu') types.push('shortcut');
   const qtype = types[Math.floor(Math.random()*types.length)];
   let prompt, question, correct, choices;
   if(qtype === 'sound'){
     prompt = t('soundQuestion'); question = item.symbol; correct = isHebrew() ? item.he : item.sound;
-    choices = sampleChoices(correct, VOWELS.map(v=>isHebrew()?v.he:v.sound));
+    choices = sampleChoices(correct, BOARD_ITEMS.map(v=>isHebrew()?v.he:v.sound));
   } else if(qtype === 'name'){
     prompt = t('nameQuestion'); question = item.symbol; correct = item.name;
-    choices = sampleChoices(correct, VOWELS.map(v=>v.name));
+    choices = sampleChoices(correct, BOARD_ITEMS.map(v=>v.name));
   } else if(qtype === 'symbol'){
     prompt = t('symbolQuestion'); question = item.name; correct = item.symbol;
-    choices = sampleChoices(correct, VOWELS.map(v=>v.symbol));
+    choices = sampleChoices(correct, BOARD_ITEMS.map(v=>v.symbol));
   } else if(qtype === 'shortcut'){
     prompt = t('shortcutQuestion'); question = item.symbol; correct = t('shortcutAnswer');
     choices = isHebrew() ? ['מקצר תנועה','סימן טון','מאריך תנועה','עיצור סופי'] : ['shortens a vowel','tone mark','lengthens a vowel','final consonant'];
   } else {
     prompt = t('boardWordQuestion'); question = item.symbol; correct = `${item.boardWord} ${item.emoji}`;
-    choices = sampleChoices(correct, VOWELS.map(v=>`${v.boardWord} ${v.emoji}`));
+    choices = sampleChoices(correct, BOARD_ITEMS.map(v=>`${v.boardWord} ${v.emoji}`));
   }
   return { item, mode:'vowel_board', qtype, prompt, question, correct, choices };
 }
 function makeVowelWritingQuestion(){
-  const item = VOWELS[Math.floor(Math.random()*VOWELS.length)];
+  const item = BOARD_ITEMS[Math.floor(Math.random()*BOARD_ITEMS.length)];
   const types = ['symbolFromName','nameFromSymbol','boardWordFromEmoji','boardWordFromSymbol','symbolFromSound'];
   if(item.id === 'v_mai_taikhu') types.push('shortcutSign');
   const qtype = types[Math.floor(Math.random()*types.length)];
@@ -391,6 +435,7 @@ function renderQuestion(){
   el('modeBadge').textContent = modeLabel(mode);
   el('progressBadge').textContent = `${state.stats.total || 0} ${t('questions')}`;
   el('answerBox').hidden = true;
+  renderStudyCard(current);
   el('toneChoices').hidden = !(mode === 'tone' || mode === 'vowel_board');
   el('toneChoices').innerHTML = '';
 
@@ -421,6 +466,31 @@ function renderQuestion(){
     el('questionHint').textContent = item.roman;
     renderToneChoices(item);
   }
+}
+function renderStudyCard(q){
+  const box = el('studyCard');
+  if(!box) return;
+  if(!q || (q.mode !== 'vowel_write' && q.mode !== 'vowel_board')){ box.hidden = true; box.innerHTML=''; return; }
+  const item = q.item;
+  const local = isHebrew() ? item.localHe : item.localEn;
+  const meaning = isHebrew() ? item.boardMeaningHe : item.boardMeaningEn;
+  const writing = isHebrew() ? item.writingHe : item.writingEn;
+  const note = isHebrew() ? item.noteHe : item.noteEn;
+  box.hidden = false;
+  box.innerHTML = `
+    <div class="study-top">
+      <div class="study-symbol">${escapeHtml(item.symbol)}</div>
+      <div>
+        <div class="study-title">${escapeHtml(item.name)} <span>${escapeHtml(item.emoji)}</span></div>
+        <div class="study-subtitle">${escapeHtml(local)}</div>
+      </div>
+    </div>
+    <div class="study-grid">
+      <div><b>${t('sound')}:</b> <span dir="ltr">${escapeHtml(isHebrew()?item.he:item.sound)}</span></div>
+      <div><b>${t('boardWord')}:</b> <span class="thai-inline">${escapeHtml(item.boardWord)}</span> — ${escapeHtml(meaning)}</div>
+      <div><b>${t('writingRule')}:</b> ${escapeHtml(writing)}</div>
+      <div><b>${t('note')}:</b> ${escapeHtml(note)}</div>
+    </div>`;
 }
 function renderVowelChoices(q){
   const wrap = el('toneChoices');
@@ -462,9 +532,11 @@ function showAnswer(){
     el('answerBox').innerHTML = `
       <div class="thai-answer">${escapeHtml(current.expected)}</div>
       <div><b>${t('vowelAnswer')}:</b> <span class="mcq-answer">${escapeHtml(current.expected)}</span></div>
-      <div><b>${t('signName')}:</b> ${escapeHtml(item.name)}</div>
+      <div><b>${t('thaiName')}:</b> ${escapeHtml(item.name)}</div>
+      <div><b>${t('localName')}:</b> ${escapeHtml(isHebrew()?item.localHe:item.localEn)}</div>
       <div><b>${t('sound')}:</b> <span dir="ltr">${escapeHtml(isHebrew()?item.he:item.sound)}</span></div>
       <div><b>${t('boardWord')}:</b> <span class="thai-inline">${escapeHtml(item.boardWord)}</span> ${item.emoji} — ${escapeHtml(isHebrew()?item.boardMeaningHe:item.boardMeaningEn)}</div>
+      <div class="vowel-note"><b>${t('writingRule')}:</b> ${escapeHtml(isHebrew()?item.writingHe:item.writingEn)}</div>
       <div class="vowel-note"><b>${t('note')}:</b> ${escapeHtml(isHebrew()?item.noteHe:item.noteEn)}</div>
       <div class="hint">${t('afterAnswer')}</div>`;
     el('answerBox').hidden = false;
@@ -477,6 +549,7 @@ function showAnswer(){
       <div><b>${t('sound')}:</b> <span dir="ltr">${escapeHtml(isHebrew()?item.he:item.sound)}</span></div>
       <div><b>${t('signName')}:</b> ${escapeHtml(item.name)}</div>
       <div><b>${t('boardWord')}:</b> <span class="thai-inline">${escapeHtml(item.boardWord)}</span> ${item.emoji} — ${escapeHtml(isHebrew()?item.boardMeaningHe:item.boardMeaningEn)}</div>
+      <div class="vowel-note"><b>${t('writingRule')}:</b> ${escapeHtml(isHebrew()?item.writingHe:item.writingEn)}</div>
       <div class="vowel-note"><b>${t('note')}:</b> ${escapeHtml(isHebrew()?item.noteHe:item.noteEn)}</div>
       <div><b>${isHebrew()?'תשובה':'Answer'}:</b> <span class="mcq-answer">${escapeHtml(current.correct)}</span></div>
       ${selected}`;
@@ -719,7 +792,7 @@ function runQA(){
     ids.add(w.id);
     for(const part of w.tone.split('-')){ if(!TONES.some(t=>t.id===part)){ ok=false; lines.push(`ERROR: bad tone ${w.tone} for ${w.id}`); } }
   }
-  lines.push(`Vowel board: ${VOWELS.length} signs × writing question types`);
+  lines.push(`Board level: ${BOARD_ITEMS.length} signs/consonants × writing question types`);
   lines.unshift(ok ? 'QA PASS' : 'QA FAILED');
   el('qaOutput').textContent = lines.join('\n');
 }
