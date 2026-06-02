@@ -13,7 +13,7 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.16', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.17', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
@@ -27,7 +27,7 @@ const I18N = {
     syncSaved:'כתובת הסנכרון נשמרה.', uploadOk:'העלאה לענן הצליחה ✅', uploadSent:'העלאה לענן נשלחה בהצלחה ✅', downloadOk:'הורדה מהענן הצליחה ✅', uploadErr:'שגיאת העלאה: ', downloadErr:'שגיאת הורדה: '
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.16', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.17', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
@@ -679,6 +679,53 @@ function level6WordMeaning(word){ return isHebrew() ? word.hebrew : word.english
 function level6WordRoman(word){ return word.roman || ''; }
 
 
+// Romanization helpers for Level 1.2 board/vowel/consonant answers.
+// Goal: every Thai board word/name shown in the answer includes romanization + Hebrew/English meaning.
+const BOARD_WORD_ROMAN = {
+  'กระทะ':'gra-tha', 'ตา':'dtaa', 'คิด':'khit', 'สี':'sii', 'ตึก':'dtuek', 'มือ':'mue', 'ถุง':'thung', 'งู':'nguu',
+  'เตะ':'dte', 'เท':'thee', 'แกะ':'gae', 'แขน':'khaen', 'โต๊ะ':'dto', 'โคม':'khoom', 'เงาะ':'ngaw', 'หมอ':'maw',
+  'เลอะ':'ler', 'เธอ':'ther', 'ขนมเปี๊ยะ':'khanom pia', 'เปีย':'bpia', 'เสือ':'suea', 'ยัวะ':'yua', 'บัว':'bua',
+  'ขำ':'kham', 'ใบ':'bai', 'ไก่':'gai', 'เขา':'khao', 'ฤดู':'rue-duu', 'ฤาษี':'rue-sii',
+  'เด็ก':'dek', 'เด็ก / เป็น / แข็ง':'dek / bpen / khaeng',
+  'จาน':'jaan', 'เต่า':'dtao', 'ใบไม้':'bai mai', 'ปลา':'bplaa', 'อ่าง':'aang', 'ยักษ์':'yak', 'แหวน':'waen',
+  'ม้า':'maa', 'หนู':'nuu', 'เรือ':'ruea', 'ลิง':'ling', 'ควาย':'khwai', 'ช้าง':'chang', 'ซอ':'saw', 'ทหาร':'tha-haan',
+  'ผึ้ง':'phueng', 'ผู้หญิง':'phuu-ying', 'ฟัน':'fan', 'พาน':'phaan', 'ถุง':'thung'
+};
+const THAI_NAME_ROMAN = {
+  'สระอะ':'sara a', 'สระอา':'sara aa', 'สระอิ':'sara i', 'สระอี':'sara ii / ee', 'สระอึ':'sara eu', 'สระอือ':'sara euu',
+  'สระอุ':'sara u', 'สระอู':'sara uu / oo', 'สระเอะ':'sara e', 'สระเอ':'sara ee / e', 'สระแอะ':'sara ae', 'สระแอ':'sara ae',
+  'สระโอะ':'sara o', 'สระโอ':'sara oo / oh', 'สระเอาะ':'sara aw', 'สระออ':'sara aw / ɔɔ', 'สระเออะ':'sara er', 'สระเออ':'sara er',
+  'สระเอียะ':'sara ia', 'สระเอีย':'sara ia', 'สระเอือะ':'sara eua', 'สระเอือ':'sara eua', 'สระอัวะ':'sara ua', 'สระอัว':'sara ua',
+  'สระอำ':'sara am', 'สระใอ':'sara ai / mai muan', 'สระไอ':'sara ai / mai malai', 'สระเอา':'sara ao',
+  'ฤ':'rue / ri / roe', 'ฤา':'rue long', 'ฦ':'lue', 'ฦา':'lue long', 'ไม้ไต่คู้':'mai taikhuu',
+  'กอ ไก่':'go gai', 'จอ จาน':'jo jaan', 'ดอ เด็ก':'do dek', 'ตอ เต่า':'dto dtao', 'บอ ใบไม้':'bo bai-mai', 'ปอ ปลา':'bpo bplaa',
+  'ออ อ่าง':'o aang', 'งอ งู':'ngo nguu', 'ยอ ยักษ์':'yo yak', 'วอ แหวน':'wo waen', 'มอ ม้า':'mo maa', 'นอ หนู':'no nuu',
+  'รอ เรือ':'ro ruea', 'ลอ ลิง':'lo ling', 'คอ ควาย':'kho khwai', 'ชอ ช้าง':'cho chang', 'ซอ โซ่':'so so', 'ทอ ทหาร':'tho tha-haan',
+  'ผอ ผึ้ง':'pho phueng', 'ญอ หญิง':'yo ying', 'ฟอ ฟัน':'fo fan', 'พอ พาน':'pho phaan'
+};
+function boardRoman(item){
+  if(!item) return '';
+  if(item.boardRoman) return item.boardRoman;
+  if(item.boardWordRoman) return item.boardWordRoman;
+  return BOARD_WORD_ROMAN[item.boardWord] || '';
+}
+function thaiNameRoman(item){
+  if(!item) return '';
+  if(item.nameRoman) return item.nameRoman;
+  return THAI_NAME_ROMAN[item.name] || '';
+}
+function thaiWithRoman(thai, roman){
+  if(!thai) return '';
+  return roman ? `${thai} (${roman})` : thai;
+}
+function boardWordWithRoman(item){
+  return thaiWithRoman(item.boardWord, boardRoman(item));
+}
+function thaiNameWithRoman(item){
+  return thaiWithRoman(item.name, thaiNameRoman(item));
+}
+
+
 // Level 1.2 — paired foundation drill for letters and vowels.
 // Rule: every Thai item displayed in the question/answer is accompanied by romanization or Hebrew/English meaning.
 function level12Pool(){
@@ -687,14 +734,14 @@ function level12Pool(){
 function level12DisplayName(item){
   const meaning = isHebrew() ? item.boardMeaningHe : item.boardMeaningEn;
   const label = isHebrew() ? item.localHe : item.localEn;
-  return `${item.name} — ${label} — ${item.boardWord} = ${meaning}`;
+  return `${thaiNameWithRoman(item)} — ${label} — ${boardWordWithRoman(item)} = ${meaning}`;
 }
 function level12ChoiceBundle(item, type){
   const meaning = isHebrew() ? item.boardMeaningHe : item.boardMeaningEn;
   const label = isHebrew() ? item.localHe : item.localEn;
-  if(type === 'symbol') return `${item.symbol} — ${item.name} — ${label}`;
+  if(type === 'symbol') return `${item.symbol} — ${thaiNameWithRoman(item)} — ${label}`;
   if(type === 'sound') return `${isHebrew()?item.he:item.sound} — ${label}`;
-  if(type === 'board') return `${item.boardWord} — ${meaning}`;
+  if(type === 'board') return `${boardWordWithRoman(item)} — ${meaning}`;
   return level12DisplayName(item);
 }
 function makeLevel12Mcq(item){
@@ -704,20 +751,20 @@ function makeLevel12Mcq(item){
   let question, correct, choices, explanation;
   if(type === 'symbol'){
     question = isHebrew()
-      ? `איזה סימן/אות מתאים ל־${item.name} — ${isHebrew()?item.localHe:item.localEn}?`
-      : `Which sign/letter matches ${item.name} — ${item.localEn}?`;
+      ? `איזה סימן/אות מתאים ל־${thaiNameWithRoman(item)} — ${isHebrew()?item.localHe:item.localEn}?`
+      : `Which sign/letter matches ${thaiNameWithRoman(item)} — ${item.localEn}?`;
     correct = level12ChoiceBundle(item,'symbol');
     choices = sampleChoices(correct, pool.map(x=>level12ChoiceBundle(x,'symbol')), 4);
   } else if(type === 'sound'){
     question = isHebrew()
-      ? `מה הצליל/התפקיד של ${item.symbol} — ${item.name}?`
-      : `What is the sound/function of ${item.symbol} — ${item.name}?`;
+      ? `מה הצליל/התפקיד של ${item.symbol} — ${thaiNameWithRoman(item)}?`
+      : `What is the sound/function of ${item.symbol} — ${thaiNameWithRoman(item)}?`;
     correct = level12ChoiceBundle(item,'sound');
     choices = sampleChoices(correct, pool.map(x=>level12ChoiceBundle(x,'sound')), 4);
   } else if(type === 'board'){
     question = isHebrew()
-      ? `איזו מילת לוח שייכת ל־${item.symbol} — ${item.name}?`
-      : `Which board word belongs to ${item.symbol} — ${item.name}?`;
+      ? `איזו מילת לוח שייכת ל־${item.symbol} — ${thaiNameWithRoman(item)}?`
+      : `Which board word belongs to ${item.symbol} — ${thaiNameWithRoman(item)}?`;
     correct = level12ChoiceBundle(item,'board');
     choices = sampleChoices(correct, pool.map(x=>level12ChoiceBundle(x,'board')), 4);
   } else {
@@ -737,16 +784,16 @@ function makeLevel12WritingTask(item){
   if(useBoardWord){
     return {
       prompt: isHebrew()
-        ? `כתוב בתאית את מילת הלוח של ${item.symbol} — ${item.name}. משמעות: ${meaning}.`
-        : `Write the Thai board word for ${item.symbol} — ${item.name}. Meaning: ${meaning}.`,
+        ? `כתוב בתאית את מילת הלוח של ${item.symbol} — ${thaiNameWithRoman(item)}. משמעות: ${meaning}.`
+        : `Write the Thai board word for ${item.symbol} — ${thaiNameWithRoman(item)}. Meaning: ${meaning}.`,
       expected: item.boardWord,
       hint: isHebrew() ? `מילת לוח / Board word: ${meaning}` : `Board word meaning: ${meaning}`
     };
   }
   return {
     prompt: isHebrew()
-      ? `כתוב את הסימן/האות שמתאים ל־${item.name}. הסבר: ${label}. מילת לוח: ${item.boardWord} = ${meaning}.`
-      : `Write the sign/letter for ${item.name}. Explanation: ${label}. Board word: ${item.boardWord} = ${meaning}.`,
+      ? `כתוב את הסימן/האות שמתאים ל־${thaiNameWithRoman(item)}. הסבר: ${label}. מילת לוח: ${boardWordWithRoman(item)} = ${meaning}.`
+      : `Write the sign/letter for ${thaiNameWithRoman(item)}. Explanation: ${label}. Board word: ${boardWordWithRoman(item)} = ${meaning}.`,
     expected: item.symbol,
     hint: isHebrew() ? `כתוב רק את הסימן/האות התאיים.` : `Write only the Thai sign/letter.`
   };
@@ -1253,13 +1300,13 @@ function renderStudyCard(q){
     <div class="study-top">
       <div class="study-symbol">${escapeHtml(item.symbol)}</div>
       <div>
-        <div class="study-title">${escapeHtml(item.name)} <span>${escapeHtml(item.emoji)}</span></div>
+        <div class="study-title">${escapeHtml(thaiNameWithRoman(item))} <span>${escapeHtml(item.emoji)}</span></div>
         <div class="study-subtitle">${escapeHtml(local)}</div>
       </div>
     </div>
     <div class="study-grid">
       <div><b>${t('sound')}:</b> <span dir="ltr">${escapeHtml(isHebrew()?item.he:item.sound)}</span></div>
-      <div><b>${t('boardWord')}:</b> <span class="thai-inline">${escapeHtml(item.boardWord)}</span> — ${escapeHtml(meaning)}</div>
+      <div><b>${t('boardWord')}:</b> <span class="thai-inline">${escapeHtml(item.boardWord)}</span> <span dir="ltr">(${escapeHtml(boardRoman(item))})</span> — ${escapeHtml(meaning)}</div>
       <div><b>${t('writingRule')}:</b> ${escapeHtml(writing)}</div>
       <div><b>${t('note')}:</b> ${escapeHtml(note)}</div>
     </div>`;
@@ -1305,10 +1352,10 @@ function showAnswer(){
     el('answerBox').innerHTML = `
       ${clickableThaiAnswerHtml(current.expected)}
       <div><b>${t('vowelAnswer')}:</b> <span class="mcq-answer">${escapeHtml(current.expected)}</span></div>
-      <div><b>${t('thaiName')}:</b> ${escapeHtml(item.name)}</div>
+      <div><b>${t('thaiName')}:</b> ${escapeHtml(thaiNameWithRoman(item))}</div>
       <div><b>${t('localName')}:</b> ${escapeHtml(localLabel(item))}</div>
       <div><b>${t('sound')}:</b> <span dir="ltr">${escapeHtml(isHebrew()?item.he:item.sound)}</span></div>
-      <div><b>${t('boardWord')}:</b> <span class="thai-inline">${escapeHtml(item.boardWord)}</span> ${item.emoji} — ${escapeHtml(localMeaning(item))}</div>
+      <div><b>${t('boardWord')}:</b> <span class="thai-inline">${escapeHtml(item.boardWord)}</span> <span dir="ltr">(${escapeHtml(boardRoman(item))})</span> ${item.emoji} — ${escapeHtml(localMeaning(item))}</div>
       <div class="vowel-note"><b>${t('writingRule')}:</b> ${escapeHtml(localWriting(item))}</div>
       <div class="vowel-note"><b>${t('note')}:</b> ${escapeHtml(localNote(item))}</div>
       <div class="hint">${t('afterAnswer')}</div>`;
@@ -1320,10 +1367,10 @@ function showAnswer(){
     el('answerBox').innerHTML = `
       ${clickableThaiAnswerHtml(current.expected)}
       <div><b>${t('vowelAnswer')}:</b> <span class="mcq-answer">${escapeHtml(current.expected)}</span></div>
-      <div><b>${t('thaiName')}:</b> ${escapeHtml(item.name)}</div>
+      <div><b>${t('thaiName')}:</b> ${escapeHtml(thaiNameWithRoman(item))}</div>
       <div><b>${t('localName')}:</b> ${escapeHtml(isHebrew()?item.localHe:item.localEn)}</div>
       <div><b>${t('sound')}:</b> <span dir="ltr">${escapeHtml(isHebrew()?item.he:item.sound)}</span></div>
-      <div><b>${t('boardWord')}:</b> <span class="thai-inline">${escapeHtml(item.boardWord)}</span> ${item.emoji} — ${escapeHtml(isHebrew()?item.boardMeaningHe:item.boardMeaningEn)}</div>
+      <div><b>${t('boardWord')}:</b> <span class="thai-inline">${escapeHtml(item.boardWord)}</span> <span dir="ltr">(${escapeHtml(boardRoman(item))})</span> ${item.emoji} — ${escapeHtml(isHebrew()?item.boardMeaningHe:item.boardMeaningEn)}</div>
       <div class="vowel-note"><b>${t('writingRule')}:</b> ${escapeHtml(isHebrew()?item.writingHe:item.writingEn)}</div>
       <div class="vowel-note"><b>${t('note')}:</b> ${escapeHtml(isHebrew()?item.noteHe:item.noteEn)}</div>
       <div class="hint">${t('afterAnswer')}</div>`;
@@ -1336,8 +1383,8 @@ function showAnswer(){
     el('answerBox').innerHTML = `
       ${clickableThaiAnswerHtml(item.symbol)}
       <div><b>${t('sound')}:</b> <span dir="ltr">${escapeHtml(isHebrew()?item.he:item.sound)}</span></div>
-      <div><b>${t('signName')}:</b> ${escapeHtml(item.name)}</div>
-      <div><b>${t('boardWord')}:</b> <span class="thai-inline">${escapeHtml(item.boardWord)}</span> ${item.emoji} — ${escapeHtml(isHebrew()?item.boardMeaningHe:item.boardMeaningEn)}</div>
+      <div><b>${t('signName')}:</b> ${escapeHtml(thaiNameWithRoman(item))}</div>
+      <div><b>${t('boardWord')}:</b> <span class="thai-inline">${escapeHtml(item.boardWord)}</span> <span dir="ltr">(${escapeHtml(boardRoman(item))})</span> ${item.emoji} — ${escapeHtml(isHebrew()?item.boardMeaningHe:item.boardMeaningEn)}</div>
       <div class="vowel-note"><b>${t('writingRule')}:</b> ${escapeHtml(isHebrew()?item.writingHe:item.writingEn)}</div>
       <div class="vowel-note"><b>${t('note')}:</b> ${escapeHtml(isHebrew()?item.noteHe:item.noteEn)}</div>
       <div><b>${isHebrew()?'תשובה':'Answer'}:</b> <span class="mcq-answer">${escapeHtml(current.correct)}</span></div>
