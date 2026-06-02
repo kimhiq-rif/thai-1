@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.9.0-writing-vowel-study-themes';
+const APP_VERSION = '1.13.0-apkg-vocabulary-expansion';
 
 const TONES = [
   { id:'mid', he:'אמצעי', en:'mid' },
@@ -13,7 +13,7 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.9', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.13', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
@@ -21,13 +21,13 @@ const I18N = {
     saveUrl:'שמור כתובת', ready:'מוכן.', qa:'בדיקת תקינות פנימית', install:'התקנה למסך הבית',
     level:'רמה', vowelLevel:'לוח תנועות', questions:'שאלות', mixed:'מעורב', readMeaning:'תאית → עברית', meaningWrite:'עברית → כתיבה בתאית', toneMode:'תאית → טון', romanWrite:'תעתיק → כתיבה בתאית', vowelBoard:'לוח תנועות — כתיבה',
     promptRead:'קרא את המילה וכתוב בעברית את המשמעות + הטון', promptMeaningWrite:'כתוב בתאית את המילה הבאה', promptRoman:'כתוב בתאית לפי התעתיק', promptTone:'מה הטון של המילה / תבנית הטונים?',
-    writeHint:'כתוב על הלוח הלבן ואז הצג תשובה', answerThai:'תאית', roman:'תעתיק', meaning:'עברית', tone:'טון', selected:'בחרת', afterAnswer:'עכשיו אפשר לנקות, לכתוב שוב נכון, ואז לסמן צדקתי / טעיתי.',
+    writeHint:'כתוב על הלוח הלבן ואז הצג תשובה', answerThai:'תאית', roman:'תעתיק', meaning:'עברית', tone:'טון', selected:'בחרת', afterAnswer:'עכשיו אפשר לנקות, לכתוב שוב נכון, ואז לסמן צדקתי / טעיתי.', clickThaiLetters:'לחץ על אות/סימן בתשובה כדי לראות מידע קצר.',
     soundQuestion:'מה הצליל של הסימן?', nameQuestion:'מה שם הסימן בתאית?', symbolQuestion:'איזה סימן מתאים לשם?', boardWordQuestion:'איזו מילת לוח שייכת לסימן?', shortcutQuestion:'מה התפקיד של הסימן?',
-    sound:'צליל', signName:'שם הסימן', boardWord:'מילת לוח', note:'הערה', emoji:'אימוג׳י', shortcutAnswer:'מקצר תנועה', userLabel:'שם משתמש', userPlaceholder:'לדוגמה: rif', initUserOk:'נוצרה/נמצאה לשונית משתמש ✅', initUserErr:'שגיאת יצירת משתמש: ', saveProgress:'שמור התקדמות', loadProgress:'טען התקדמות', promptVowelWrite:'כתוב על הלוח את התשובה לפי לוח התנועות', vowelAnswer:'תשובת לוח', thaiName:'שם תאילנדי', localName:'הסבר בעברית', writingRule:'כלל כתיבה', example:'דוגמה', consonantName:'שם העיצור', theme:'לוק',
+    sound:'צליל', signName:'שם הסימן', boardWord:'מילת לוח', note:'הערה', emoji:'אימוג׳י', shortcutAnswer:'מקצר תנועה', userLabel:'שם משתמש', userPlaceholder:'לדוגמה: rif', initUserOk:'נוצרה/נמצאה לשונית משתמש ✅', initUserErr:'שגיאת יצירת משתמש: ', saveProgress:'שמור התקדמות', loadProgress:'טען התקדמות', promptVowelWrite:'כתוב על הלוח את התשובה לפי לוח התנועות', level6McqKicker:'שאלה 1 מתוך 2 — הבנה', level6WriteKicker:'שאלה 2 מתוך 2 — כתיבה', level6Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו נושא.', level6WriteLocked:'בחר קודם תשובה אמריקאית כדי לפתוח את שאלת הכתיבה.', level6Correct:'נכון', level6Wrong:'לא נכון', level6WriteIntro:'עכשיו השתמש באותו סימן/עיצור וכתוב את המילה המבוקשת.', vowelAnswer:'תשובת לוח', thaiName:'שם תאילנדי', localName:'הסבר בעברית', writingRule:'כלל כתיבה', example:'דוגמה', consonantName:'שם העיצור', theme:'לוק',
     syncSaved:'כתובת הסנכרון נשמרה.', uploadOk:'העלאה לענן הצליחה ✅', uploadSent:'העלאה לענן נשלחה בהצלחה ✅', downloadOk:'הורדה מהענן הצליחה ✅', uploadErr:'שגיאת העלאה: ', downloadErr:'שגיאת הורדה: '
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.9', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.13', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
@@ -35,9 +35,9 @@ const I18N = {
     saveUrl:'Save URL', ready:'Ready.', qa:'Internal QA check', install:'Install app',
     level:'Level', vowelLevel:'Vowel Board', questions:'questions', mixed:'Mixed', readMeaning:'Thai → English', meaningWrite:'English → Thai writing', toneMode:'Thai → tone', romanWrite:'Romanization → Thai writing', vowelBoard:'Vowel Board — writing',
     promptRead:'Read the word and write the meaning + tone in English', promptMeaningWrite:'Write the following word in Thai', promptRoman:'Write Thai from the romanization', promptTone:'What is the tone / tone pattern?',
-    writeHint:'Write on the whiteboard, then reveal the answer', answerThai:'Thai', roman:'Romanization', meaning:'English', tone:'Tone', selected:'Selected', afterAnswer:'Now you can clear, rewrite correctly, then mark correct / wrong.',
+    writeHint:'Write on the whiteboard, then reveal the answer', answerThai:'Thai', roman:'Romanization', meaning:'English', tone:'Tone', selected:'Selected', afterAnswer:'Now you can clear, rewrite correctly, then mark correct / wrong.', clickThaiLetters:'Tap a Thai letter/sign in the answer to see a short note.',
     soundQuestion:'What sound does this sign make?', nameQuestion:'What is the Thai name of this sign?', symbolQuestion:'Which sign matches this name?', boardWordQuestion:'Which board word belongs to this sign?', shortcutQuestion:'What does this sign do?',
-    sound:'Sound', signName:'Sign name', boardWord:'Board word', note:'Note', emoji:'Emoji', shortcutAnswer:'shortens a vowel', userLabel:'Username', userPlaceholder:'e.g. rif', initUserOk:'User sheet created/found ✅', initUserErr:'User init error: ', saveProgress:'Save progress', loadProgress:'Load progress', promptVowelWrite:'Write the answer on the board from the vowel board', vowelAnswer:'Vowel-board answer', thaiName:'Thai name', localName:'English explanation', writingRule:'Writing rule', example:'Example', consonantName:'Consonant name', theme:'Theme',
+    sound:'Sound', signName:'Sign name', boardWord:'Board word', note:'Note', emoji:'Emoji', shortcutAnswer:'shortens a vowel', userLabel:'Username', userPlaceholder:'e.g. rif', initUserOk:'User sheet created/found ✅', initUserErr:'User init error: ', saveProgress:'Save progress', loadProgress:'Load progress', promptVowelWrite:'Write the answer on the board from the vowel board', level6McqKicker:'Question 1 of 2 — understanding', level6WriteKicker:'Question 2 of 2 — writing', level6Choose:'Choose one answer. After choosing, a writing question about the same topic will open.', level6WriteLocked:'Choose a multiple-choice answer first to unlock the writing task.', level6Correct:'Correct', level6Wrong:'Not correct', level6WriteIntro:'Now use the same sign/consonant and write the requested word.', vowelAnswer:'Vowel-board answer', thaiName:'Thai name', localName:'English explanation', writingRule:'Writing rule', example:'Example', consonantName:'Consonant name', theme:'Theme',
     syncSaved:'Sync URL saved.', uploadOk:'Cloud upload succeeded ✅', uploadSent:'Cloud upload was sent ✅', downloadOk:'Cloud download succeeded ✅', uploadErr:'Upload error: ', downloadErr:'Download error: '
   }
 };
@@ -45,6 +45,15 @@ function lang(){ return state && state.lang ? state.lang : 'he'; }
 function t(key){ return (I18N[lang()] && I18N[lang()][key]) || I18N.he[key] || key; }
 function isHebrew(){ return lang() === 'he'; }
 function itemMeaning(item){ return isHebrew() ? item.hebrew : (item.english || item.hebrew); }
+
+function hasDrillableTone(item){
+  if(!item || !item.tone || item.tone === 'not_drilled') return false;
+  return String(item.tone).split('-').every(part => TONES.some(tt => tt.id === part));
+}
+function displayTone(item){
+  if(hasDrillableTone(item)) return `${toneToHeb(item.tone)} <span dir="ltr">(${escapeHtml(item.tone)})</span>`;
+  return isHebrew() ? 'עדיין לא מתורגל בטונים' : 'tone not drilled yet';
+}
 
 const WORDS = [
   // Level 1 — very short concrete words and classroom-style forms
@@ -130,7 +139,41 @@ const WORDS = [
   {id:'l5_012',level:5,thai:'ไม่เป็นไร',roman:'mai bpen rai',hebrew:'לא נורא / זה בסדר',english:'never mind / it is okay',tone:'falling-mid-mid'},
   {id:'l5_013',level:5,thai:'ขอโทษ',roman:'kho thot',hebrew:'סליחה',english:'sorry',tone:'rising-falling'},
   {id:'l5_014',level:5,thai:'อร่อยมาก',roman:'a roi maak',hebrew:'טעים מאוד',english:'very delicious',tone:'low-low-falling'},
-  {id:'l5_015',level:5,thai:'เจอกัน',roman:'jer gan',hebrew:'נתראה',english:'see you',tone:'mid-mid'}
+  {id:'l5_015',level:5,thai:'เจอกัน',roman:'jer gan',hebrew:'נתראה',english:'see you',tone:'mid-mid'},
+
+  // APKG import — אלמוג 5.apkg. Tone drills are disabled for these until tones are verified.
+  {id:'apkg_001',level:4,thai:'แต่เช้า',roman:'dtae-chao',hebrew:'לפנות בוקר / מוקדם בבוקר',english:'early morning / at dawn',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_002',level:4,thai:'ตอนเช้า',roman:'dton-chao',hebrew:'בבוקר',english:'in the morning',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_003',level:4,thai:'ตอนสาย',roman:'dton-saai',hebrew:'מאוחר בבוקר',english:'late morning',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_004',level:4,thai:'ตอนเที่ยง',roman:'dton-tieng',hebrew:'בצהריים',english:'at noon',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_005',level:4,thai:'ตอนบ่าย',roman:'dton-baai',hebrew:'אחר הצהריים',english:'in the afternoon',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_006',level:4,thai:'ตอนเย็น',roman:'dton-yen',hebrew:'בערב',english:'in the evening',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_007',level:4,thai:'ตอนเที่ยงคืน',roman:'dton-tiang-kheun',hebrew:'בחצות / בלילה',english:'at midnight',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_008',level:4,thai:'ตอนดึก',roman:'dton-deug',hebrew:'מאוחר בלילה',english:'late at night',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_009',level:4,thai:'เห็นด้วย',roman:'hen duai',hebrew:'להסכים / מסכים',english:'to agree / agree',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_010',level:4,thai:'เห็นไหม',roman:'hen mai',hebrew:'רואה? / אתה רואה?',english:'Do you see?',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_011',level:4,thai:'เห็นด้วยไหม',roman:'hen duai mai',hebrew:'האם אתה מסכים?',english:'Do you agree?',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_012',level:4,thai:'ยืน',roman:'yuen',hebrew:'לעמוד',english:'to stand',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_013',level:4,thai:'นั่ง',roman:'nung / nang',hebrew:'לשבת',english:'to sit',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_014',level:4,thai:'เดิน',roman:'doen',hebrew:'ללכת / לצעוד',english:'to walk',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_015',level:4,thai:'วิ่ง',roman:'wing',hebrew:'לרוץ',english:'to run',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_016',level:4,thai:'ข้าม',roman:'khaam',hebrew:'לדלג / לחצות',english:'to skip / to cross',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_017',level:5,thai:'ไม่ไหว',roman:'mai wai',hebrew:'לא יכול / לא מסוגל / לא עומד בזה',english:'cannot / cannot handle it',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_018',level:5,thai:'ไม่ต้องห่วง',roman:'mai dtong huang',hebrew:'אל תדאג / אין מה לדאוג',english:'do not worry',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_019',level:5,thai:'ไม่สนใจ',roman:'mai son jai',hebrew:'לא מעוניין / לא אכפת',english:'not interested / do not care',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_020',level:5,thai:'ไม่มีอะไร',roman:'mai mee a-rai',hebrew:'אין כלום',english:'there is nothing / nothing',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_021',level:5,thai:'ไม่ต้อง',roman:'mai dtong',hebrew:'לא צריך / אין צורך',english:'do not need to',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_022',level:5,thai:'ไม่มีปัญหา',roman:'mai mee pan-haa',hebrew:'אין בעיה',english:'no problem',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_023',level:5,thai:'ไม่มีทาง',roman:'mai mee taang',hebrew:'אין מצב / אין סיכוי',english:'no way / impossible',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_024',level:5,thai:'ว่าไง',roman:'waa ngai',hebrew:'מה קורה? / מה נשמע?',english:'What’s up?',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_025',level:5,thai:'ไม่เก็ทอะ',roman:'mai get a',hebrew:'אני לא מבין / לא קולט',english:'I do not get it',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_026',level:5,thai:'แล้วไง',roman:'laew ngai',hebrew:'אז מה?',english:'so what?',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_027',level:5,thai:'คิดว่า',roman:'khit waa',hebrew:'לחשוב ש...',english:'to think that...',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_028',level:5,thai:'พูดว่า',roman:'phuut waa',hebrew:'לומר ש...',english:'to say that...',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_029',level:5,thai:'บอกว่า',roman:'bok waa',hebrew:'לספר / להגיד ש...',english:'to tell / say that...',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_030',level:5,thai:'รู้สึกว่า',roman:'ruu seuk waa',hebrew:'להרגיש ש...',english:'to feel that...',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_031',level:5,thai:'เพราะว่า',roman:'phroh waa',hebrew:'בגלל ש... / כי',english:'because',tone:'not_drilled',source:'apkg_almog5'},
+  {id:'apkg_032',level:5,thai:'ได้ยินว่า',roman:'daai yin waa',hebrew:'לשמוע ש...',english:'to hear that...',tone:'not_drilled',source:'apkg_almog5'}
 ];
 
 
@@ -186,6 +229,178 @@ const CONSONANTS = [
   {kind:'consonant',id:'c_no_nuu',symbol:'น',name:'นอ หนู',localHe:'עיצור n — no nuu',localEn:'n consonant — no nuu',sound:'n',he:'n',boardWord:'หนู',boardMeaningHe:'עכבר / אני הקטן',boardMeaningEn:'mouse / little me',emoji:'🐭',writingHe:'n בתחילה או סוף n.',writingEn:'n initially or final n.',noteHe:'นอน = לישון.',noteEn:'นอน = to sleep.'}
 ];
 const BOARD_ITEMS = VOWELS.concat(CONSONANTS);
+
+const THAI_CONSONANT_INFO = {
+  'ก': ['กอ ไก่','middle','g/k','k','dead'], 'จ': ['จอ จาน','middle','j','t','dead'], 'ฎ': ['ฎอ ชฎา','middle','d','t','dead'], 'ฏ': ['ฏอ ปฏัก','middle','dt/t','t','dead'], 'ด': ['ดอ เด็ก','middle','d','t','dead'], 'ต': ['ตอ เต่า','middle','dt/t','t','dead'], 'บ': ['บอ ใบไม้','middle','b','p','dead'], 'ป': ['ปอ ปลา','middle','bp/p','p','dead'], 'อ': ['ออ อ่าง','middle','vowel carrier / ɔɔ','—','carrier'],
+  'ข': ['ขอ ไข่','high','kh','k','dead'], 'ฃ': ['ฃอ ขวด','high','kh','k','dead'], 'ฉ': ['ฉอ ฉิ่ง','high','ch','rare','rare'], 'ฐ': ['ฐอ ฐาน','high','th','t','dead'], 'ถ': ['ถอ ถุง','high','th','t','dead'], 'ผ': ['ผอ ผึ้ง','high','ph','rare','rare'], 'ฝ': ['ฝอ ฝา','high','f','rare','rare'], 'ศ': ['ศอ ศาลา','high','s','t','dead'], 'ษ': ['ษอ ฤๅษี','high','s','t','dead'], 'ส': ['สอ เสือ','high','s','t','dead'], 'ห': ['หอ หีบ','high','h','rare','rare'],
+  'ค': ['คอ ควาย','low','kh','k','dead'], 'ฅ': ['ฅอ คน','low','kh','k','dead'], 'ฆ': ['ฆอ ระฆัง','low','kh','k','dead'], 'ช': ['ชอ ช้าง','low','ch','t','dead'], 'ซ': ['ซอ โซ่','low','s','t','dead'], 'ฌ': ['ฌอ เฌอ','low','ch','t','dead'], 'ฑ': ['ฑอ มณโฑ','low','th/d','t','dead'], 'ฒ': ['ฒอ ผู้เฒ่า','low','th','t','dead'], 'ท': ['ทอ ทหาร','low','th','t','dead'], 'ธ': ['ธอ ธง','low','th','t','dead'], 'พ': ['พอ พาน','low','ph','p','dead'], 'ฟ': ['ฟอ ฟัน','low','f','p','dead'], 'ภ': ['ภอ สำเภา','low','ph','p','dead'], 'ฮ': ['ฮอ นกฮูก','low','h','rare','rare'],
+  'ง': ['งอ งู','low','ng','ng','live'], 'ญ': ['ญอ หญิง','low','y','n','live'], 'ณ': ['ณอ เณร','low','n','n','live'], 'น': ['นอ หนู','low','n','n','live'], 'ม': ['มอ ม้า','low','m','m','live'], 'ย': ['ยอ ยักษ์','low','y','y','live'], 'ร': ['รอ เรือ','low','r','n','live'], 'ล': ['ลอ ลิง','low','l','n','live'], 'ว': ['วอ แหวน','low','w','w','live'], 'ฬ': ['ฬอ จุฬา','low','l','n','live']
+};
+
+const THAI_SIGN_INFO = {
+  'ะ': ['สระอะ','short a','vowel','after the consonant; marks a short open syllable'],
+  'า': ['สระอา','long aa','vowel','written after the consonant'],
+  'ิ': ['สระอิ','short i','vowel','written above the consonant'],
+  'ี': ['สระอี','long ii','vowel','written above the consonant'],
+  'ึ': ['สระอึ','short eu','vowel','written above the consonant'],
+  'ื': ['สระอือ','long euu','vowel','written above the consonant; open syllables often add อ'],
+  'ุ': ['สระอุ','short u','vowel','written below the consonant'],
+  'ู': ['สระอู','long uu','vowel','written below the consonant'],
+  'เ': ['สระเอ / part of เ-ะ','e / ee family','leading vowel','written before the consonant'],
+  'แ': ['สระแอ / part of แ-ะ','ae family','leading vowel','written before the consonant'],
+  'โ': ['สระโอ / part of โ-ะ','o / oo family','leading vowel','written before the consonant'],
+  'ใ': ['สระใอ','ai','leading vowel','written before the consonant'],
+  'ไ': ['สระไอ','ai','leading vowel','written before the consonant'],
+  'ำ': ['สระอำ','am','vowel','written above/after the consonant as one vowel sign'],
+  'ั': ['ไม้หันอากาศ','short a / part of ua','vowel mark','written above the consonant'],
+  '็': ['ไม้ไต่คู้','vowel shortener','special mark','not a tone mark; shortens vowels such as เ-ะ / แ-ะ before a final consonant'],
+  '่': ['ไม้เอก','tone mark 1','tone mark','tone result depends on consonant class and syllable type'],
+  '้': ['ไม้โท','tone mark 2','tone mark','tone result depends on consonant class and syllable type'],
+  '๊': ['ไม้ตรี','tone mark 3','tone mark','used mainly with middle-class consonants'],
+  '๋': ['ไม้จัตวา','tone mark 4','tone mark','used mainly with middle-class consonants'],
+  '์': ['การันต์','silent mark','special mark','marks a letter that is not pronounced'],
+  'ๆ': ['ไม้ยมก','repetition mark','special mark','repeats the previous word or phrase']
+};
+
+function consonantClassLabel(cls){
+  const he = {middle:'Middle Class / קבוצה אמצעית', high:'High Class / קבוצה גבוהה', low:'Low Class / קבוצה נמוכה'};
+  const en = {middle:'Middle Class', high:'High Class', low:'Low Class'};
+  return isHebrew() ? (he[cls] || cls) : (en[cls] || cls);
+}
+function finalKindLabel(kind){
+  const he = {dead:'סוף מת: k/t/p — משפיע על חוקי הטון', live:'סוף חי: ng/n/m/y/w — משפיע על חוקי הטון', carrier:'עיצור נשא / תומך תנועה', rare:'כמעט לא מופיע כסוף בסיסי'};
+  const en = {dead:'dead final: k/t/p — affects tone rules', live:'live final: ng/n/m/y/w — affects tone rules', carrier:'silent carrier / vowel support', rare:'rare as a basic final'};
+  return isHebrew() ? (he[kind] || kind) : (en[kind] || kind);
+}
+function signKindLabel(kind){
+  const he = {vowel:'תנועה', 'leading vowel':'תנועה שנכתבת לפני העיצור', 'vowel mark':'סימן תנועה', 'special mark':'סימן מיוחד', 'tone mark':'סימן טון'};
+  const en = {vowel:'vowel', 'leading vowel':'leading vowel', 'vowel mark':'vowel mark', 'special mark':'special mark', 'tone mark':'tone mark'};
+  return isHebrew() ? (he[kind] || kind) : (en[kind] || kind);
+}
+function thaiCharInfoHtml(ch){
+  if(THAI_CONSONANT_INFO[ch]){
+    const [name, cls, initial, final, kind] = THAI_CONSONANT_INFO[ch];
+    if(isHebrew()){
+      return `<div><b>${escapeHtml(ch)} — ${escapeHtml(name)}</b></div><div>קבוצה: ${escapeHtml(consonantClassLabel(cls))}</div><div>תחילה: <span dir="ltr">${escapeHtml(initial)}</span> · סוף: <span dir="ltr">${escapeHtml(final)}</span></div><div>${escapeHtml(finalKindLabel(kind))}</div>`;
+    }
+    return `<div><b>${escapeHtml(ch)} — ${escapeHtml(name)}</b></div><div>Class: ${escapeHtml(consonantClassLabel(cls))}</div><div>Initial: <span dir="ltr">${escapeHtml(initial)}</span> · Final: <span dir="ltr">${escapeHtml(final)}</span></div><div>${escapeHtml(finalKindLabel(kind))}</div>`;
+  }
+  if(THAI_SIGN_INFO[ch]){
+    const [name, sound, kind, rule] = THAI_SIGN_INFO[ch];
+    if(isHebrew()){
+      return `<div><b>${escapeHtml(ch)} — ${escapeHtml(name)}</b></div><div>סוג: ${escapeHtml(signKindLabel(kind))}</div><div>צליל/תפקיד: <span dir="ltr">${escapeHtml(sound)}</span></div><div>${escapeHtml(rule)}</div>`;
+    }
+    return `<div><b>${escapeHtml(ch)} — ${escapeHtml(name)}</b></div><div>Type: ${escapeHtml(signKindLabel(kind))}</div><div>Sound/function: <span dir="ltr">${escapeHtml(sound)}</span></div><div>${escapeHtml(rule)}</div>`;
+  }
+  return `<div><b>${escapeHtml(ch)}</b></div><div>${escapeHtml(isHebrew() ? 'סימן תאילנדי — עדיין אין מידע מפורט עליו במאגר.' : 'Thai sign — no detailed entry in the current bank yet.')}</div>`;
+}
+function splitThaiAnswerTokens(text){
+  const tokens = [];
+  const combining = /[\u0E31\u0E34-\u0E3A\u0E47-\u0E4E]/;
+  for(const ch of String(text)){
+    if(combining.test(ch) && tokens.length && /[\u0E00-\u0E7F]/.test(tokens[tokens.length-1])) tokens[tokens.length-1] += ch;
+    else tokens.push(ch);
+  }
+  return tokens;
+}
+function clickableThaiAnswerHtml(text){
+  const tokenHtml = splitThaiAnswerTokens(text).map(tok => {
+    if(/[\u0E00-\u0E7F]/.test(tok)){
+      return `<button type="button" class="thai-char" data-token="${escapeHtml(tok)}" title="${escapeHtml(t('clickThaiLetters'))}">${escapeHtml(tok)}</button>`;
+    }
+    return escapeHtml(tok);
+  }).join('');
+  return `<div class="thai-answer clickable-thai">${tokenHtml}</div><div class="answer-microhint">${escapeHtml(t('clickThaiLetters'))}</div><div class="thai-letter-info" hidden></div>`;
+}
+function bindThaiAnswerInfo(){
+  const box = el('answerBox');
+  if(!box) return;
+  const info = box.querySelector('.thai-letter-info');
+  if(!info) return;
+  box.querySelectorAll('.thai-char').forEach(btn => {
+    btn.addEventListener('click', () => {
+      box.querySelectorAll('.thai-char').forEach(x => x.classList.remove('active'));
+      btn.classList.add('active');
+      const token = btn.getAttribute('data-token') || '';
+      const chars = [...new Set([...token].filter(ch => /[\u0E00-\u0E7F]/.test(ch)))];
+      info.innerHTML = chars.map(thaiCharInfoHtml).join('<hr>');
+      info.hidden = false;
+    });
+  });
+}
+
+
+// Level 6 writing bank: each focus item gets several writing prompts from the app vocabulary.
+// This prevents Level 6 from only drilling the poster/board word.
+const LEVEL6_WRITING_BANK = {
+  v_aa: ['มา','ตา','ปลา','ปาก','บ้าน','ภาษาไทย','ราคาเท่าไหร่','ข้าว','ห้า','ม้า'],
+  v_i: ['กิน','ปิด','ปกติ','วันนี้','ไม่ค่อย'],
+  v_ii: ['มี','ดี','วันนี้','พรุ่งนี้','อีกที','สวัสดี'],
+  v_eu: ['ตึก'],
+  v_euu: ['มือ','ซื้อ','ดื่มน้ำ','เมื่อวาน'],
+  v_u: ['คุณ','ขอบคุณ','พรุ่งนี้'],
+  v_uu: ['ดู','พูดช้าๆ','พูดอีกที','รู้'],
+  v_e_short: ['เด็ก'],
+  v_e_long: ['เปิด','เท่าไหร่','เก่า'],
+  v_ae_short: ['แข็ง'],
+  v_ae: ['แม่','แมว','แขน'],
+  v_o_short: ['คน','ลม','ปกติ'],
+  v_o: ['โรง'],
+  v_aw_short: ['เงาะ'],
+  v_aw_long: ['นอน','บอก','ออก','ขอโทษ'],
+  v_er_short: ['เลอะ'],
+  v_er_long: ['เจอกัน','เสมอๆ'],
+  v_ia_short: ['ขนมเปี๊ยะ'],
+  v_ia_long: ['เปีย'],
+  v_uea_long: ['เสือ','เมื่อวาน'],
+  v_ua_long: ['อ้วน'],
+  v_am: ['น้ำ'],
+  v_sai: ['ใจ','ใบไม้','เข้าใจ'],
+  v_ai: ['ไป','ไม่','ใหม่','ได้','ให้','ภาษาไทย','เท่าไหร่'],
+  v_ao: ['เก่า','ข่าว','ข้าว','เข้าใจ'],
+  v_mai_taikhu: ['เด็ก','ไม่เป็นไร'],
+
+  c_gor_gai: ['กา','กิน','เก่า','เข้าใจ','เจอกัน'],
+  c_jor_jaan: ['ใจ','จด','เจอกัน'],
+  c_dor_dek: ['ดี','ดู','เด็ก','ดื่มน้ำ','ได้','สวัสดี'],
+  c_tor_tao: ['ตา','ตาย','ปกติ','เท่าไหร่'],
+  c_bor_baimai: ['บอก','บ้าน','บางครั้ง','บ่อยๆ','ใบไม้'],
+  c_bpor_bplaa: ['ปลา','ไป','ปาก','ปิด','เปิด','ป่า','ปกติ'],
+  c_o_ang: ['อ่าน','อาบ','ออก','อันนี้อะไร','อร่อยมาก'],
+  c_ngo_nguu: ['งาน','เงิน','งู'],
+  c_yo_yak: ['ตาย','ยัง','หยอก','ยาง'],
+  c_wo_waen: ['วันนี้','เมื่อวาน','สวัสดี','วาง'],
+  c_mo_maa: ['มา','มี','มือ','ไม่','ใหม่','ม้า','ไม่เป็นไร'],
+  c_no_nuu: ['นอน','นก','น้ำ','วันนี้','พรุ่งนี้','นานๆ ที']
+};
+
+const LEVEL6_EXTRA_WORDS = [
+  {thai:'ตึก', roman:'dtuek', hebrew:'בניין', english:'building'},
+  {thai:'แข็ง', roman:'khaeng', hebrew:'קשה / חזק', english:'hard / strong'},
+  {thai:'แม่', roman:'mae', hebrew:'אמא', english:'mother'},
+  {thai:'แมว', roman:'maew', hebrew:'חתול', english:'cat'},
+  {thai:'แขน', roman:'khaen', hebrew:'זרוע', english:'arm'},
+  {thai:'เงาะ', roman:'ngaw', hebrew:'רמבוטן', english:'rambutan'},
+  {thai:'เลอะ', roman:'ler', hebrew:'מלוכלך / מוכתם', english:'dirty / stained'},
+  {thai:'ขนมเปี๊ยะ', roman:'khanom bpia', hebrew:'מאפה / עוגייה סינית', english:'Chinese pastry'},
+  {thai:'เปีย', roman:'bpia', hebrew:'צמה', english:'braid'},
+  {thai:'เสือ', roman:'suea', hebrew:'נמר', english:'tiger'},
+  {thai:'อ้วน', roman:'uan', hebrew:'שמן / שמנמן', english:'fat / chubby'},
+  {thai:'งาน', roman:'ngaan', hebrew:'עבודה', english:'work'},
+  {thai:'เงิน', roman:'ngoen', hebrew:'כסף', english:'money'},
+  {thai:'งู', roman:'nguu', hebrew:'נחש', english:'snake'},
+  {thai:'ตาย', roman:'dtaai', hebrew:'למות', english:'to die'},
+  {thai:'ยัง', roman:'yang', hebrew:'עדיין / טרם', english:'still / yet'},
+  {thai:'ยาง', roman:'yaang', hebrew:'גומי / צמיג', english:'rubber / tire'},
+  {thai:'วาง', roman:'waang', hebrew:'להניח / לשים', english:'to put down'},
+  {thai:'ใบไม้', roman:'bai mai', hebrew:'עלה', english:'leaf'}
+];
+function level6FindWord(thai){
+  return WORDS.find(w => w.thai === thai) || LEVEL6_EXTRA_WORDS.find(w => w.thai === thai) || null;
+}
+function level6WordMeaning(word){ return isHebrew() ? word.hebrew : word.english; }
+function level6WordRoman(word){ return word.roman || ''; }
+
 const MODES = ['read_meaning','hebrew_write','tone','roman_write'];
 const MODE_OPTIONS = ['mixed','read_meaning','hebrew_write','tone','roman_write'];
 const STORAGE_KEY = 'thaiTrainerStateV3';
@@ -202,6 +417,7 @@ let state = loadState();
 let current = null;
 let selectedTone = null;
 let selectedVowelAnswer = null;
+let level6McqAnswered = false;
 let drawing = false;
 let lastPoint = null;
 
@@ -374,14 +590,21 @@ function weightedPick(items){
 function newQuestion(){
   selectedTone = null;
   selectedVowelAnswer = null;
+  level6McqAnswered = false;
   const level = Number(el('levelSelect').value || 1);
-  const mode = level === 6 ? 'vowel_write' : pickMode();
-  if(mode === 'vowel_write'){
+  const mode = level === 6 ? 'level6_pair' : pickMode();
+  if(mode === 'level6_pair'){
+    current = makeLevel6PairedQuestion();
+  } else if(mode === 'vowel_write'){
     current = makeVowelWritingQuestion();
   } else if(mode === 'vowel_board'){
     current = makeVowelQuestion();
   } else {
-    const items = WORDS.filter(w=>w.level === level);
+    let items = WORDS.filter(w=>w.level === level);
+    if(mode === 'tone'){
+      const toneItems = items.filter(hasDrillableTone);
+      if(toneItems.length) items = toneItems;
+    }
     current = { item: weightedPick(items), mode };
   }
   renderQuestion(); clearCanvas();
@@ -390,6 +613,121 @@ function sampleChoices(correct, all, count=4){
   const unique = [...new Set(all.filter(Boolean))].filter(x => x !== correct).sort(()=>Math.random()-0.5).slice(0, count-1);
   return [correct, ...unique].sort(()=>Math.random()-0.5);
 }
+
+function level6Pool(){
+  return BOARD_ITEMS.filter(x => x.boardWord && x.boardWord !== '-' && x.symbol && x.name);
+}
+function localLabel(item){ return isHebrew() ? item.localHe : item.localEn; }
+function localMeaning(item){ return isHebrew() ? item.boardMeaningHe : item.boardMeaningEn; }
+function localWriting(item){ return isHebrew() ? item.writingHe : item.writingEn; }
+function localNote(item){ return isHebrew() ? item.noteHe : item.noteEn; }
+function mcqChoiceText(item, type){
+  if(type === 'name') return isHebrew() ? `השם התאילנדי הוא ${item.name}` : `The Thai name is ${item.name}`;
+  if(type === 'sound') return isHebrew() ? `הצליל/תפקיד הוא ${item.he}` : `The sound/function is ${item.sound}`;
+  if(type === 'kind') return isHebrew()
+    ? (item.kind === 'consonant' ? 'זה עיצור' : item.kind === 'vowel' ? 'זו תנועה' : 'זה סימן מיוחד')
+    : (item.kind === 'consonant' ? 'It is a consonant' : item.kind === 'vowel' ? 'It is a vowel' : 'It is a special sign');
+  if(type === 'position') return localWriting(item);
+  return `${item.name} — ${isHebrew()?item.he:item.sound}`;
+}
+function makeLevel6Mcq(item){
+  const types = ['name','sound','kind','position'];
+  if(item.id === 'v_mai_taikhu') types.push('shortcut');
+  const type = types[Math.floor(Math.random()*types.length)];
+  let question, correct, choices, explanation;
+  const pool = level6Pool().filter(x => x.id !== item.id);
+  if(type === 'shortcut'){
+    question = isHebrew() ? `מה נכון לגבי הסימן ${item.symbol}?` : `What is true about the sign ${item.symbol}?`;
+    correct = isHebrew() ? 'הוא מקצר תנועה, הוא לא סימן טון' : 'It shortens a vowel; it is not a tone mark';
+    choices = isHebrew()
+      ? [correct,'הוא סימן טון יורד','הוא הופך עיצור לסופי','הוא מאריך את התנועה']
+      : [correct,'It is a falling-tone mark','It turns a consonant into a final consonant','It lengthens the vowel'];
+    explanation = localWriting(item);
+  } else if(type === 'name'){
+    question = isHebrew() ? `איזה שם תאילנדי מתאים לסימן/עיצור ${item.symbol}?` : `Which Thai name matches ${item.symbol}?`;
+    correct = item.name;
+    choices = sampleChoices(correct, pool.map(x=>x.name), 4);
+    explanation = isHebrew() ? `${item.symbol} נקרא ${item.name}.` : `${item.symbol} is called ${item.name}.`;
+  } else if(type === 'sound'){
+    question = isHebrew() ? `מה הצליל או התפקיד של ${item.symbol}?` : `What is the sound/function of ${item.symbol}?`;
+    correct = isHebrew() ? item.he : item.sound;
+    choices = sampleChoices(correct, pool.map(x=>isHebrew()?x.he:x.sound), 4);
+    explanation = isHebrew() ? `הצליל/תפקיד של ${item.symbol} הוא ${item.he}.` : `The sound/function of ${item.symbol} is ${item.sound}.`;
+  } else if(type === 'kind'){
+    question = isHebrew() ? `איזה משפט נכון לגבי ${item.symbol}?` : `Which statement is true about ${item.symbol}?`;
+    correct = mcqChoiceText(item,'kind');
+    choices = isHebrew()
+      ? [correct, item.kind==='consonant'?'זו תנועה':'זה עיצור', 'זה תמיד סימן טון', 'זה מספר תאילנדי']
+      : [correct, item.kind==='consonant'?'It is a vowel':'It is a consonant', 'It is always a tone mark', 'It is a Thai number'];
+    choices = [...new Set(choices)].sort(()=>Math.random()-0.5).slice(0,4);
+    explanation = `${mcqChoiceText(item,'kind')} — ${localLabel(item)}.`;
+  } else {
+    question = isHebrew() ? `איזה כלל כתיבה נכון לגבי ${item.symbol}?` : `Which writing rule is true for ${item.symbol}?`;
+    correct = localWriting(item);
+    choices = sampleChoices(correct, pool.map(x=>isHebrew()?x.writingHe:x.writingEn), 4);
+    explanation = localWriting(item);
+  }
+  return {type, question, correct, choices: choices.sort(()=>Math.random()-0.5), explanation};
+}
+function makeLevel6WritingTask(item){
+  const variants = [];
+  const bank = LEVEL6_WRITING_BANK[item.id] || [];
+  bank.forEach(thai => {
+    const word = level6FindWord(thai);
+    if(!word) return;
+    const meaning = level6WordMeaning(word);
+    const roman = level6WordRoman(word);
+    variants.push({
+      prompt: isHebrew()
+        ? `השתמש ב־${item.symbol} בתוך מילה וכתוב בתאית: ${meaning}`
+        : `Use ${item.symbol} inside a word and write in Thai: ${meaning}`,
+      expected: word.thai,
+      hint: isHebrew()
+        ? `מאוצר המילים. ${roman ? 'תעתיק: ' + roman : ''}`
+        : `From the vocabulary. ${roman ? 'Romanization: ' + roman : ''}`,
+      source: 'vocab'
+    });
+  });
+
+  // For signs that are themselves the learning target, occasionally ask for the sign itself,
+  // but keep it less frequent than vocabulary writing.
+  if(item.kind !== 'consonant'){
+    variants.push({
+      prompt: isHebrew()
+        ? `כתוב רק את הסימן שמתאים לצליל/תפקיד: ${isHebrew()?item.he:item.sound}`
+        : `Write only the sign for this sound/function: ${item.sound}`,
+      expected: item.symbol,
+      hint: isHebrew() ? 'זו שאלת סימן, לא מילת לוח.' : 'This is a sign question, not a board-word question.',
+      source: 'sign'
+    });
+  }
+
+  // Fallback only: if a focus item has no vocabulary entry yet, use the poster word.
+  if(!variants.length){
+    variants.push({
+      prompt: isHebrew()
+        ? `כתוב בתאית לפי המשמעות: ${localMeaning(item)}`
+        : `Write in Thai by meaning: ${localMeaning(item)}`,
+      expected: item.boardWord,
+      hint: isHebrew() ? 'גיבוי זמני ממילת הלוח.' : 'Temporary fallback from the board word.',
+      source: 'fallback'
+    });
+  }
+
+  // Prefer vocabulary tasks; sign/fallback appears only when needed or occasionally.
+  const vocabTasks = variants.filter(v => v.source === 'vocab');
+  if(vocabTasks.length && Math.random() < 0.88){
+    return vocabTasks[Math.floor(Math.random()*vocabTasks.length)];
+  }
+  return variants[Math.floor(Math.random()*variants.length)];
+}
+function makeLevel6PairedQuestion(){
+  const item = weightedPick(level6Pool());
+  const mcq = makeLevel6Mcq(item);
+  const writing = makeLevel6WritingTask(item);
+  return { item, mode:'level6_pair', mcq, writing, expected: writing.expected };
+}
+
 function makeVowelQuestion(){
   const item = BOARD_ITEMS[Math.floor(Math.random()*BOARD_ITEMS.length)];
   const types = ['sound','name','symbol','boardWord'];
@@ -430,14 +768,28 @@ function makeVowelWritingQuestion(){
 }
 function renderQuestion(){
   const {item, mode} = current;
-  const itemLevel = (mode === 'vowel_board' || mode === 'vowel_write') ? 6 : item.level;
+  const itemLevel = (mode === 'vowel_board' || mode === 'vowel_write' || mode === 'level6_pair') ? 6 : item.level;
   el('levelBadge').textContent = itemLevel === 6 ? `${t('level')} 6 — ${t('vowelLevel')}` : `${t('level')} ${itemLevel}`;
   el('modeBadge').textContent = modeLabel(mode);
   el('progressBadge').textContent = `${state.stats.total || 0} ${t('questions')}`;
   el('answerBox').hidden = true;
+  renderLevel6Pair(current);
   renderStudyCard(current);
+  const canvasWrap = document.querySelector('.canvas-wrap');
+  if(canvasWrap) canvasWrap.hidden = (mode === 'level6_pair' && !level6McqAnswered);
+  el('clearBtn').hidden = (mode === 'level6_pair' && !level6McqAnswered);
+  el('showAnswerBtn').hidden = (mode === 'level6_pair' && !level6McqAnswered);
   el('toneChoices').hidden = !(mode === 'tone' || mode === 'vowel_board');
   el('toneChoices').innerHTML = '';
+
+  if(mode === 'level6_pair'){
+    el('promptText').textContent = t('level6Choose');
+    el('questionText').hidden = true;
+    el('questionText').textContent = '';
+    el('questionHint').textContent = level6McqAnswered ? t('level6WriteIntro') : t('level6WriteLocked');
+  } else {
+    el('questionText').hidden = false;
+  }
 
   if(mode === 'vowel_write'){
     el('promptText').textContent = current.prompt;
@@ -467,6 +819,55 @@ function renderQuestion(){
     renderToneChoices(item);
   }
 }
+
+function renderLevel6Pair(q){
+  const box = el('level6Pair');
+  if(!box) return;
+  if(!q || q.mode !== 'level6_pair'){
+    box.hidden = true;
+    box.innerHTML = '';
+    return;
+  }
+  const item = q.item;
+  box.hidden = false;
+  const selected = selectedVowelAnswer;
+  const isCorrect = selected === q.mcq.correct;
+  const feedback = selected ? `
+    <div class="pair-feedback ${isCorrect ? 'ok' : 'bad'}">
+      <span class="feedback-icon">${isCorrect ? '✅' : '❌'}</span>
+      <div><b>${isCorrect ? t('level6Correct') : t('level6Wrong')}:</b> ${escapeHtml(q.mcq.explanation)}</div>
+    </div>` : '';
+  const choiceHtml = q.mcq.choices.map(choice => {
+    const cls = selected ? (choice === q.mcq.correct ? 'correct-choice' : choice === selected ? 'wrong-choice' : '') : '';
+    return `<button type="button" class="level6-choice ${cls}" data-choice="${escapeHtml(choice)}">${escapeHtml(choice)}</button>`;
+  }).join('');
+  box.innerHTML = `
+    <div class="pair-card">
+      <div class="pair-kicker">${escapeHtml(t('level6McqKicker'))}</div>
+      <div class="pair-context">
+        <span class="pair-symbol">${escapeHtml(item.symbol)}</span>
+        <span class="pair-label">${escapeHtml(item.kind === 'consonant' ? (isHebrew() ? 'עיצור' : 'Consonant') : item.kind === 'vowel' ? (isHebrew() ? 'תנועה' : 'Vowel') : (isHebrew() ? 'סימן מיוחד' : 'Special sign'))} ${escapeHtml(item.emoji)}</span>
+      </div>
+      <div class="pair-main">${escapeHtml(q.mcq.question)}</div>
+      <div class="choices level6-choices">${choiceHtml}</div>
+      ${feedback}
+    </div>
+    <div class="pair-card pair-write" ${selected ? '' : 'hidden'}>
+      <div class="pair-kicker">${escapeHtml(t('level6WriteKicker'))}</div>
+      <div class="pair-main">${escapeHtml(q.writing.prompt)}</div>
+      <div class="hint">${escapeHtml(q.writing.hint || '')}</div>
+    </div>`;
+  box.querySelectorAll('.level6-choice').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if(selectedVowelAnswer) return;
+      selectedVowelAnswer = btn.getAttribute('data-choice');
+      level6McqAnswered = true;
+      renderQuestion();
+      clearCanvas();
+    });
+  });
+}
+
 function renderStudyCard(q){
   const box = el('studyCard');
   if(!box) return;
@@ -524,13 +925,29 @@ function makeToneDistractors(tone){
 }
 function toneToHeb(tone){ return tone.split('-').map(part => { const found = TONES.find(tt=>tt.id===part)||{}; return isHebrew() ? (found.he || part) : (found.en || part); }).join(isHebrew() ? '־' : '-'); }
 function modeLabel(mode){
-  return {read_meaning:t('readMeaning'),hebrew_write:t('meaningWrite'),tone:t('toneMode'),roman_write:t('romanWrite'),vowel_board:t('vowelBoard'),vowel_write:t('vowelBoard')}[mode] || t('mixed');
+  return {read_meaning:t('readMeaning'),hebrew_write:t('meaningWrite'),tone:t('toneMode'),roman_write:t('romanWrite'),vowel_board:t('vowelBoard'),vowel_write:t('vowelBoard'),level6_pair:t('vowelBoard')}[mode] || t('mixed');
 }
 function showAnswer(){
   const {item, mode} = current;
+  if(mode === 'level6_pair'){
+    if(!level6McqAnswered){ return; }
+    el('answerBox').innerHTML = `
+      ${clickableThaiAnswerHtml(current.expected)}
+      <div><b>${t('vowelAnswer')}:</b> <span class="mcq-answer">${escapeHtml(current.expected)}</span></div>
+      <div><b>${t('thaiName')}:</b> ${escapeHtml(item.name)}</div>
+      <div><b>${t('localName')}:</b> ${escapeHtml(localLabel(item))}</div>
+      <div><b>${t('sound')}:</b> <span dir="ltr">${escapeHtml(isHebrew()?item.he:item.sound)}</span></div>
+      <div><b>${t('boardWord')}:</b> <span class="thai-inline">${escapeHtml(item.boardWord)}</span> ${item.emoji} — ${escapeHtml(localMeaning(item))}</div>
+      <div class="vowel-note"><b>${t('writingRule')}:</b> ${escapeHtml(localWriting(item))}</div>
+      <div class="vowel-note"><b>${t('note')}:</b> ${escapeHtml(localNote(item))}</div>
+      <div class="hint">${t('afterAnswer')}</div>`;
+    bindThaiAnswerInfo();
+    el('answerBox').hidden = false;
+    return;
+  }
   if(mode === 'vowel_write'){
     el('answerBox').innerHTML = `
-      <div class="thai-answer">${escapeHtml(current.expected)}</div>
+      ${clickableThaiAnswerHtml(current.expected)}
       <div><b>${t('vowelAnswer')}:</b> <span class="mcq-answer">${escapeHtml(current.expected)}</span></div>
       <div><b>${t('thaiName')}:</b> ${escapeHtml(item.name)}</div>
       <div><b>${t('localName')}:</b> ${escapeHtml(isHebrew()?item.localHe:item.localEn)}</div>
@@ -539,13 +956,14 @@ function showAnswer(){
       <div class="vowel-note"><b>${t('writingRule')}:</b> ${escapeHtml(isHebrew()?item.writingHe:item.writingEn)}</div>
       <div class="vowel-note"><b>${t('note')}:</b> ${escapeHtml(isHebrew()?item.noteHe:item.noteEn)}</div>
       <div class="hint">${t('afterAnswer')}</div>`;
+    bindThaiAnswerInfo();
     el('answerBox').hidden = false;
     return;
   }
   if(mode === 'vowel_board'){
     const selected = selectedVowelAnswer ? `<div><b>${t('selected')}:</b> <span class="mcq-answer">${escapeHtml(selectedVowelAnswer)}</span></div>` : '';
     el('answerBox').innerHTML = `
-      <div class="thai-answer">${escapeHtml(item.symbol)}</div>
+      ${clickableThaiAnswerHtml(item.symbol)}
       <div><b>${t('sound')}:</b> <span dir="ltr">${escapeHtml(isHebrew()?item.he:item.sound)}</span></div>
       <div><b>${t('signName')}:</b> ${escapeHtml(item.name)}</div>
       <div><b>${t('boardWord')}:</b> <span class="thai-inline">${escapeHtml(item.boardWord)}</span> ${item.emoji} — ${escapeHtml(isHebrew()?item.boardMeaningHe:item.boardMeaningEn)}</div>
@@ -553,17 +971,19 @@ function showAnswer(){
       <div class="vowel-note"><b>${t('note')}:</b> ${escapeHtml(isHebrew()?item.noteHe:item.noteEn)}</div>
       <div><b>${isHebrew()?'תשובה':'Answer'}:</b> <span class="mcq-answer">${escapeHtml(current.correct)}</span></div>
       ${selected}`;
+    bindThaiAnswerInfo();
     el('answerBox').hidden = false;
     return;
   }
   const autoTone = mode === 'tone' && selectedTone ? `<div><b>${t('selected')}:</b> ${toneToHeb(selectedTone)}</div>` : '';
   el('answerBox').innerHTML = `
-    <div class="thai-answer">${escapeHtml(item.thai)}</div>
+    ${clickableThaiAnswerHtml(item.thai)}
     <div><b>${t('roman')}:</b> <span dir="ltr">${escapeHtml(item.roman)}</span></div>
     <div><b>${t('meaning')}:</b> ${escapeHtml(itemMeaning(item))}</div>
-    <div><b>${t('tone')}:</b> ${escapeHtml(toneToHeb(item.tone))} <span dir="ltr">(${escapeHtml(item.tone)})</span></div>
+    <div><b>${t('tone')}:</b> ${displayTone(item)}</div>
     ${autoTone}
     <div class="hint">${t('afterAnswer')}</div>`;
+  bindThaiAnswerInfo();
   el('answerBox').hidden = false;
 }
 function mark(correct){
