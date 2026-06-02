@@ -117,3 +117,16 @@ canvas{
   -webkit-touch-callout:none;
   user-select:none;
 }
+
+
+.foundation-note{
+  margin: 12px 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(196, 181, 253, .32);
+  border-radius: 14px;
+  background: rgba(139, 92, 246, .10);
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: .98rem;
+}
+.foundation-note b{ color: var(--accent-2); }

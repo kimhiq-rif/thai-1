@@ -1,388 +1,388 @@
-﻿id,thai,transliteration,normalized_transliteration,he,english,confidence,suggested_level,active_for_questions,source_file,sources,original_front,original_back,note
-vocab_0001,สำคัญ,sam¹-kan¹,sam-kan,חשוב,important,medium_normalized_match,3,True,"תומר 1,csv.txt","תומר 1,csv.txt",sam¹-kan¹,חשוב,
-vocab_0002,ขนม,kha-num¹,kha-num,חטיף,snack,medium_normalized_match,3,True,"תומר 1,csv.txt","תומר 1,csv.txt",kha-num¹,חטיף,
-vocab_0003,หวี,wii¹,wii,אשכול בננות,banana bunch / comb (review context),high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",wii¹,אשכול בננות,
-vocab_0004,มาครับ,ma¹-krap,ma-krap,אני כאן,I am here (male polite),medium_normalized_match,3,True,"תומר 1,csv.txt","תומר 1,csv.txt",ma¹-krap,אני כאן,
-vocab_0005,ไหว้,waai³,waai,לחלוק כבוד,wai greeting / pay respect,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",waai³,לחלוק כבוד,מחווה של הצמדת ידיים
-vocab_0006,น้ำ,nam¹,nam,מים,water,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",nam¹,מים,
-vocab_0007,ปากกา,bpaag²-gaa¹,paag-gaa,עט,pen,medium_normalized_match,3,True,"תומר 1,csv.txt","תומר 1,csv.txt",bpaag²-gaa¹,עט,
-vocab_0008,ปาก,bpaag²,paag,פה / מקור,mouth / beak,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",bpaag²,פה / מקור,
-vocab_0009,กา,gaa¹,gaa,עורב,crow,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",gaa¹,עורב,
-vocab_0010,ว่ายน้ำ,waai³-nam¹,waai-nam,לשחות,swim,medium_normalized_match,3,True,"תומר 1,csv.txt","תומר 1,csv.txt",waai³-nam¹,לשחות,
-vocab_0011,ครู,kru¹,kru,מורה,teacher,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",kru¹,מורה,
-vocab_0012,คุณชื่ออะไร,kun¹ cheuu³ a-rai¹?,kun cheuu a-rai?,מה השם שלך?,What is your name?,medium_normalized_match,5,True,"תומר 1,csv.txt","תומר 1,csv.txt",kun¹ cheuu³ a-rai¹?,מה השם שלך?,
-vocab_0013,ผมชื่อ…,pom⁵ cheuu³ (name),pom cheuu name,השם שלי הוא...,My name is… (male),high,4,True,"תומר 1,csv.txt","תומר 1,csv.txt",pom⁵ cheuu³ (name),השם שלי הוא...,לזכר
-vocab_0014,ฉันชื่อ…,chan⁵ cheuu³ (name),chan cheuu name,השם שלי הוא...,My name is… (female),high,4,True,"תומר 1,csv.txt","תומר 1,csv.txt",chan⁵ cheuu³ (name),השם שלי הוא...,לנקבה
-vocab_0015,มา,maa¹,maa,לבוא,come,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",maa¹,לבוא,
-vocab_0016,ไป,bpai¹,pai,ללכת,go,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",bpai¹,ללכת,
-vocab_0017,อยู่,yuu²,yuu,להיות / לגור,be / live / stay,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",yuu²,להיות / לגור,
-vocab_0018,ท้อง,thong³,thong,בטן,belly,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",thong³,בטן,
-vocab_0019,หิน,hin⁵,hin,אבן,stone,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",hin⁵,אבן,
-vocab_0020,กอง,kong¹,kong,ערימה,pile,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",kong¹,ערימה,
-vocab_0021,ผมอยู่…,pom⁵ yuu² (place),pom yuu place,אני גר ב...,I live/stay in…,high,4,True,"תומר 1,csv.txt","תומר 1,csv.txt",pom⁵ yuu² (place),אני גר ב...,
-vocab_0022,หวาน,waan⁵,waan,מתוק,sweet,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",waan⁵,מתוק,
-vocab_0023,ค่าย,kaai³,kaai,מחנה,camp,high_context_disambiguated,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",kaai³,מחנה,
-vocab_0024,ชา,chaa¹,chaa,תה,tea,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",chaa¹,תה,
-vocab_0025,อะไร,a-rai¹,a-rai,מה?,what,medium_normalized_match,5,True,"תומר 1,csv.txt","תומר 1,csv.txt",a-rai¹,מה?,
-vocab_0026,ดื่ม,deuum²,deuum,לשתות,drink,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",deuum²,לשתות,
-vocab_0027,บ้าน,baan³,baan,בית,house / home,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",baan³,בית,
-vocab_0028,ใต้,dtai³,tai,דרום / מתחת,south / under,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",dtai³,דרום / מתחת,
-vocab_0029,ร้อน,rawn¹,rawn,חם,hot,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",rawn¹,חם,
-vocab_0030,ไม่,mai¹?,mai?,מילת שאלה (כן/לא),not / no,high_context_disambiguated,5,True,"תומר 1,csv.txt","תומר 1,csv.txt",mai¹?,מילת שאלה (כן/לא),
-vocab_0031,ใช่ไหม,chai³ mai¹?,chai mai?,נכון?,right? / correct?,high,5,True,"תומר 1,csv.txt","תומר 1,csv.txt",chai³ mai¹?,נכון?,
-vocab_0032,ไม่,mai³,mai,לא / אל,not / no,high_context_disambiguated,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",mai³,לא / אל,
-vocab_0033,สวย,suai⁵,suai,יפה,beautiful,high_context_disambiguated,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",suai⁵,יפה,
-vocab_0034,,sa-baai¹ dii¹ mai¹?,sa-baai dii mai?,מה שלומך?,,needs_review_no_script,review_queue,False,"תומר 1,csv.txt","תומר 1,csv.txt",sa-baai¹ dii¹ mai¹?,מה שלומך?,
-vocab_0035,,sa-baai¹ dii¹,sa-baai dii,הכל טוב / בסדר,,needs_review_no_script,review_queue,False,"תומר 1,csv.txt","תומר 1,csv.txt",sa-baai¹ dii¹,הכל טוב / בסדר,
-vocab_0036,,mai³ sa-baai¹,mai sa-baai,לא מרגיש טוב,,needs_review_no_script,review_queue,False,"תומר 1,csv.txt","תומר 1,csv.txt",mai³ sa-baai¹,לא מרגיש טוב,
-vocab_0037,ตีหมา,dtii¹ maa¹,tii maa,להרביץ לכלב,hit a dog,high,3,True,"תומר 1,csv.txt","תומר 1,csv.txt",dtii¹ maa¹,להרביץ לכלב,
-vocab_0038,ตอบ,dtawb²,tawb,לענות,answer,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt; תומר 7,csv.txt",dtawb²,לענות,
-vocab_0039,งู,nguu¹,nguu,נחש,snake,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",nguu¹,נחש,
-vocab_0040,เงิน,ngoen¹,ngoen,כסף,money,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",ngoen¹,כסף,
-vocab_0041,งาน,ngaan¹,ngaan,עבודה,work / job,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",ngaan¹,עבודה,
-vocab_0042,มี,mii¹,mii,יש,have / there is,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",mii¹,יש,
-vocab_0043,ทำงาน,tam¹-ngaan¹,tam-ngaan,לעבוד,work,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",tam¹-ngaan¹,לעבוד,
-vocab_0044,ทำ,tam¹,tam,לעשות / להכין,do / make,high_context_disambiguated,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",tam¹,לעשות / להכין,
-vocab_0045,หลัง,lang⁵,lang,חזרת,back / behind / after,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",lang⁵,חזרת,
-vocab_0046,อร่อย,a¹-roi²,a-roi,טעים,delicious,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",a¹-roi²,טעים,
-vocab_0047,นิดหน่อย,nit-noi²,nit-noi,קצת,a little,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",nit-noi²,קצת,
-vocab_0048,จะ,ja²,ja,מילת עתיד,future marker / will,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",ja²,מילת עתיד,
-vocab_0049,กินอะไร,gin¹ a¹-rai¹?,gin a-rai?,מה אתה אוכל?,What are you eating?,medium_normalized_match,5,True,"תומר 2,csv.txt","תומר 2,csv.txt",gin¹ a¹-rai¹?,מה אתה אוכל?,
-vocab_0050,ผม/ฉันรักคุณ,pom⁵/chan⁵ rak¹ kun¹,pom/chan rak kun,אני אוהב/ת אותך,I love you,high,4,True,"תומר 2,csv.txt","תומר 2,csv.txt",pom⁵/chan⁵ rak¹ kun¹,אני אוהב/ת אותך,
-vocab_0051,รักผม/ฉันไหม,rak¹ kun¹ pom⁵/chan⁵,rak kun pom/chan,אתה אוהב אותי,Do you love me? (review),high,4,True,"תומר 2,csv.txt","תומר 2,csv.txt",rak¹ kun¹ pom⁵/chan⁵,אתה אוהב אותי,
-vocab_0052,เปิด,bpoed²,poed,להדליק / לפתוח,open / turn on,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",bpoed²,להדליק / לפתוח,
-vocab_0053,ชอบ,chawb³,chawb,לאהוב / לחבב,like,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",chawb³,לאהוב / לחבב,
-vocab_0054,โรงเรียน,rong¹-rian¹,rong-rian,בית ספר,school,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",rong¹-rian¹,בית ספר,
-vocab_0055,เรียน,rian¹,rian,ללמוד,study / learn,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",rian¹,ללמוד,
-vocab_0056,โรง,rong¹,rong,מקום מפגש,building / hall,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",rong¹,מקום מפגש,
-vocab_0057,ขอโทษ,kaw⁵-tohd³,kaw-tohd,סליחה,sorry / excuse me,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",kaw⁵-tohd³,סליחה,
-vocab_0058,คน,khon¹,khon,אנשים,person / people,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",khon¹,אנשים,
-vocab_0059,เขียน,kian⁵,kian,לכתוב,write,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",kian⁵,לכתוב,
-vocab_0060,ข้าวเหนียวมะม่วง,kaaw³-niaw³ ma¹-muang³,kaaw-niaw ma-muang,סטיקי רייס מנגו,mango sticky rice,medium_normalized_match,4,True,"תומר 2,csv.txt","תומר 2,csv.txt",kaaw³-niaw³ ma¹-muang³,סטיקי רייס מנגו,
-vocab_0061,ผัด,pad²,pad,מוקפץ,stir-fried,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",pad²,מוקפץ,
-vocab_0062,ขอ,koh⁵,koh,אפשר לקבל...,request / may I have,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",koh⁵,אפשר לקבל...,בצורה מנומסת
-vocab_0063,เรียกว่าอะไร,riag³ a¹-rai¹?,riag a-rai?,איך קוראים ל...?,What is it called?,medium_normalized_match,5,True,"תומר 2,csv.txt","תומר 2,csv.txt",riag³ a¹-rai¹?,איך קוראים ל...?,
-vocab_0064,คุณล่ะ,kun¹ la²,kun la,ואתה/ואת?,and you?,high,5,True,"תומר 2,csv.txt","תומר 2,csv.txt",kun¹ la²,ואתה/ואת?,
-vocab_0065,เช่นกัน,chen¹-gan¹,chen-gan,אותו הדבר / גם אני,same / likewise,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",chen¹-gan¹,אותו הדבר / גם אני,
-vocab_0066,ยินดี,yin¹-dii¹,yin-dii,ברוך הבא,welcome / pleased,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",yin¹-dii¹,ברוך הבא,
-vocab_0067,รู้,ruu⁴,ruu,לדעת (מידע),know,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",ruu⁴,לדעת (מידע),
-vocab_0068,รู้จัก,ruu⁴-jag²,ruu-jag,להכיר (אנשים/מקומות),know / be acquainted with,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",ruu⁴-jag²,להכיר (אנשים/מקומות),
-vocab_0069,รู้ไหม,ruu⁴ mai¹?,ruu mai?,אתה יודע?,Do you know?,high,5,True,"תומר 2,csv.txt","תומר 2,csv.txt",ruu⁴ mai¹?,אתה יודע?,
-vocab_0070,ไม่รู้,mai³ ruu⁴,mai ruu,לא יודע,do not know,high,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",mai³ ruu⁴,לא יודע,
-vocab_0071,ยังไม่รู้,yang¹ mai³ ruu⁴,yang mai ruu,עדיין לא יודע,do not know yet,high,4,True,"תומר 2,csv.txt","תומר 2,csv.txt",yang¹ mai³ ruu⁴,עדיין לא יודע,
-vocab_0072,นาที,naa-tii¹,naa-tii,דקה,minute,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",naa-tii¹,דקה,
-vocab_0073,หาด,haad²,haad,חוף,beach,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",haad²,חוף,
-vocab_0074,ได้,dai³,dai,יכול,can / able,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",dai³,יכול,
-vocab_0075,พูด,puud³,puud,לדבר,speak,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",puud³,לדבר,
-vocab_0076,พูดไทยได้ไหม,puud³ Thai dai³ mai¹?,puud thai dai mai?,אתה יכול לדבר תאילנדית?,Can you speak Thai?,high,5,True,"תומר 2,csv.txt","תומר 2,csv.txt",puud³ Thai dai³ mai¹?,אתה יכול לדבר תאילנדית?,
-vocab_0077,พริก,prik¹,prik,צ'ילי,chili,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",prik¹,צ'ילי,
-vocab_0078,ไม่ใส่,mai³ sai²,mai sai,בלי / לא לשים,without / do not put,high,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",mai³ sai²,בלי / לא לשים,
-vocab_0079,น้ำตาล,nam¹ dtaan¹,nam taan,סוכר,sugar,high,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",nam¹ dtaan¹,סוכר,
-vocab_0080,เพิ่ม,peum³,peum,להוסיף,add / increase,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",peum³,להוסיף,
-vocab_0081,ที่นี่,tii-nii,tii-nii,פה,here,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",tii-nii,פה,
-vocab_0082,ภาษา,paa-saa,paa-saa,שפה,language,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",paa-saa,שפה,
-vocab_0083,ประเทศ,bpra-ted,pra-ted,מדינה,country,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",bpra-ted,מדינה,
-vocab_0084,ทุกคน,tuk-kon,tuk-kon,כולם,everyone,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",tuk-kon,כולם,
-vocab_0085,ไม่รอไม่ขอ,mai ro mai koh,mai ro mai koh,אל תחכה,"do not wait, do not ask (review)",high,4,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",mai ro mai koh,אל תחכה,
-vocab_0086,พอดี/พอไหม,paw-dii/paw mai,paw-dii/paw mai,מספיק / לא מספיק,enough / is it enough?,medium_normalized_match,4,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",paw-dii/paw mai,מספיק / לא מספיק,
-vocab_0087,ไปไหน,bpai nai?,pai nai?,לאן אתה הולך?,Where are you going?,high,5,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",bpai nai?,לאן אתה הולך?,
-vocab_0088,ทบทวน,tobp-tuan,top-tuan,לחזור (על חומר),review,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",tobp-tuan,לחזור (על חומר),
-vocab_0089,พี่,pii,pii,אח/אחות מבוגר/ת,older sibling / senior,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",pii,אח/אחות מבוגר/ת,
-vocab_0090,ลืม,leuum,leuum,לשכוח,forget,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",leuum,לשכוח,
-vocab_0091,และ,laeh,laeh,ו...,and,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",laeh,ו...,
-vocab_0092,คุณพูดภาษาอะไร,kun puud paasaa a-rai?,kun puud paasaa a-rai?,איזו שפה אתה מדבר?,What language do you speak?,medium_normalized_match,5,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",kun puud paasaa a-rai?,איזו שפה אתה מדבר?,
-vocab_0093,เสร็จ,sed,sed,לסיים,finish / done,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",sed,לסיים,
-vocab_0094,เย็น,yen,yen,קר,cold / evening,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",yen,קר,
-vocab_0095,คุณมาจาก…,kun maa jaag (place),kun maa jaag place,מאיפה אתה?,Where are you from?,high,5,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",kun maa jaag (place),מאיפה אתה?,
-vocab_0096,จาก,jaag,jaag,מ... (מקור),from,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",jaag,מ... (מקור),
-vocab_0097,ไหน/ที่ไหน,nai/tii nai,nai/tii nai,איפה,where,high,4,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",nai/tii nai,איפה,
-vocab_0098,ห้องครัว,hong krua,hong krua,מטבח,kitchen,high,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",hong krua,מטבח,
-vocab_0099,ใจ,jaai,jaai,לב,heart / mind,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",jaai,לב,
-vocab_0100,ใจดี,jaai dii,jaai dii,לב טוב,kind,high,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",jaai dii,לב טוב,
-vocab_0101,ทำไม,tam-mai?,tam-mai?,למה?,why?,medium_normalized_match,5,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt; תומר 5,csv.txt",tam-mai?,למה?,
-vocab_0102,มาก,maag,maag,מאוד,very / much,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",maag,מאוד,
-vocab_0103,สอน,sawn,sawn,ללמד,teach,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",sawn,ללמד,
-vocab_0104,แพง,peang,peang,יקר,expensive,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",peang,יקר,
-vocab_0105,ทุกอย่าง,tug-yaang,tug-yaang,הכל,everything,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",tug-yaang,הכל,
-vocab_0106,แต่,dtae,tae,אבל,but,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",dtae,אבל,
-vocab_0107,ตก,tok,tok,ליפול,fall,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",tok,ליפול,
-vocab_0108,น้ำตก,nam-tok,nam-tok,מפל,waterfall,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",nam-tok,מפל,
-vocab_0109,คิด,kid,kid,לחשוב,think,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",kid,לחשוב,
-vocab_0110,คุณคิดอะไร,kun kid a-rai?,kun kid a-rai?,על מה אתה חושב?,What are you thinking?,medium_normalized_match,5,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",kun kid a-rai?,על מה אתה חושב?,
-vocab_0111,ช่วย,chuai,chuai,לעזור,help,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",chuai,לעזור,
-vocab_0112,ต่อ,dtaw,taw,להמשיך / להאריך,continue / extend,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",dtaw,להמשיך / להאריך,
-vocab_0113,ห้า,haa,haa,לראות / לחפש,five,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",haa,לראות / לחפש,
-vocab_0114,หม้อ,maw³,maw,סיר,pot,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",maw³,סיר,
-vocab_0115,หมอ,maws,maws,רופא,doctor,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",maws,רופא,
-vocab_0116,บวก,buag,buag,פלוס,plus,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",buag,פלוס,
-vocab_0117,ลบ,löb,loeb,מינוס,minus,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",löb,מינוס,
-vocab_0118,เท่ากับ,ta-gab,ta-gab,שווה,equals,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",ta-gab,שווה,
-vocab_0119,เท่า,dtao,tao,סך הכל,equal / total,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",dtao,סך הכל,
-vocab_0120,เท่าไร,tao-rai,tao-rai,כמה (מחיר),how much?,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",tao-rai,כמה (מחיר),
-vocab_0121,แล้วแต่คุณ,laew-dtua kun,laew-tua kun,תלוי בך,up to you,medium_normalized_match,4,True,"תומר4,csv.txt","תומר4,csv.txt",laew-dtua kun,תלוי בך,
-vocab_0122,กี่โมง,gii mong?,gii mong?,איזו שעה?,what time?,high,5,True,"תומר4,csv.txt","תומר4,csv.txt",gii mong?,איזו שעה?,
-vocab_0123,ตอนนี้,dtua-ni,tua-ni,עכשיו,now,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",dtua-ni,עכשיו,
-vocab_0124,วันนี้,wan-nii,wan-nii,היום,today,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",wan-nii,היום,
-vocab_0125,พรุ่งนี้,pru-ngii,pru-ngii,מחר,tomorrow,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",pru-ngii,מחר,
-vocab_0126,เมื่อวาน,meua-wan,meua-wan,אתמול,yesterday,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",meua-wan,אתמול,
-vocab_0127,ตอนเช้า,dtan-chao,tan-chao,בוקר,morning,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",dtan-chao,בוקר,
-vocab_0128,ตอนเที่ยง,dtan-tiang,tan-tiang,צהריים,noon,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",dtan-tiang,צהריים,
-vocab_0129,ตอนเย็น,dtan-yen,tan-yen,ערב,evening,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",dtan-yen,ערב,
-vocab_0130,ตอนกลางคืน,dtan-klang-keun,tan-klang-keun,לילה,night,medium_normalized_match,4,True,"תומר4,csv.txt","תומר4,csv.txt",dtan-klang-keun,לילה,
-vocab_0131,กินข้าว,gin-kaaw,gin-kaaw,לאכול (אורז/ארוחה),eat / have a meal,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",gin-kaaw,לאכול (אורז/ארוחה),
-vocab_0132,หนึ่ง,nueng,nueng,אחד,one,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",nueng,אחד,
-vocab_0133,สอง,song,song,שתיים,two,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",song,שתיים,
-vocab_0134,สาม,saam,saam,שלוש,three,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",saam,שלוש,
-vocab_0135,สี่,sii,sii,ארבע,four,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",sii,ארבע,
-vocab_0136,ห้า,haa,haa,חמש,five,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",haa,חמש,
-vocab_0137,หก,hok,hok,שש,six,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",hok,שש,
-vocab_0138,เจ็ด,jet,jet,שבע,seven,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",jet,שבע,
-vocab_0139,แปด,bpaed,paed,שמונה,eight,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",bpaed,שמונה,
-vocab_0140,เก้า,gao,gao,תשע,nine,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",gao,תשע,
-vocab_0141,สิบ,sip,sip,עשר,ten,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",sip,עשר,
-vocab_0142,สิบเอ็ด,sip-et,sip-et,אחת עשרה,eleven,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",sip-et,אחת עשרה,
-vocab_0143,ยี่สิบ,yii-sip,yii-sip,עשרים,twenty,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",yii-sip,עשרים,
-vocab_0144,ร้อย,roi,roi,מאה,hundred,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",roi,מאה,
-vocab_0145,พัน,pan,pan,אלף,thousand,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",pan,אלף,
-vocab_0146,หมื่น,meun,meun,עשרת אלפים,ten thousand,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",meun,עשרת אלפים,
-vocab_0147,แสน,san,san,מאה אלף,hundred thousand,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",san,מאה אלף,
-vocab_0148,ล้าน,lan,lan,מיליון,million,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",lan,מיליון,
-vocab_0149,หน้า,naa,naa,פנים / עונה / דף,face / season / page,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",naa,פנים / עונה / דף,
-vocab_0150,หน้าร้อน,naa-rawn,naa-rawn,העונה החמה,hot season,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",naa-rawn,העונה החמה,
-vocab_0151,หน้าฝน,naa-fon,naa-fon,עונת הגשמים,rainy season,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",naa-fon,עונת הגשמים,
-vocab_0152,หน้าหนาว,naa-nao,naa-nao,העונה הקרה,cold season,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",naa-nao,העונה הקרה,
-vocab_0153,ใกล้,glai,glai,קרוב (טון נמוך),near,high_context_disambiguated,1,True,"תומר4,csv.txt","תומר4,csv.txt",glai,קרוב (טון נמוך),
-vocab_0154,ไกล,glai,glai,רחוק (טון גבוה),far,high_context_disambiguated,1,True,"תומר4,csv.txt","תומר4,csv.txt",glai,רחוק (טון גבוה),
-vocab_0155,ต้อง,dtong,tong,חייב,must,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",dtong,חייב,
-vocab_0156,กลัว,glua,glua,לפחד,afraid,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",glua,לפחד,
-vocab_0157,ประมาณ,bpra-maan,pra-maan,בערך,about / approximately,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",bpra-maan,בערך,
-vocab_0158,กลับ,glap,glap,לחזור,return,high,1,True,"תומר4,csv.txt","תומר4,csv.txt; תומר 7,csv.txt",glap,לחזור,
-vocab_0159,กลับบ้าน,glap baan,glap baan,לחזור הביתה,return home,high,3,True,"תומר4,csv.txt","תומר4,csv.txt",glap baan,לחזור הביתה,
-vocab_0160,เหงื่อ,heua,heua,זיעה,sweat,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",heua,זיעה,
-vocab_0161,เหงื่อออก,heua-awk,heua-awk,להזיע,sweat / perspire,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",heua-awk,להזיע,
-vocab_0162,เหนื่อย,nuay,nuay,עייף,tired,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",nuay,עייף,
-vocab_0163,หิว,hiu,hiu,רעב,hungry,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",hiu,רעב,
-vocab_0164,หิวน้ำ,hiu-nam,hiu-nam,צמא,thirsty,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",hiu-nam,צמא,
-vocab_0165,อิ่ม,im,im,שבע (מאוכל),full from food,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",im,שבע (מאוכל),
-vocab_0166,เผ็ด,pet,pet,חריף,spicy,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",pet,חריף,
-vocab_0167,เค็ม,kem,kem,מלוח,salty,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",kem,מלוח,
-vocab_0168,เปรี้ยว,bpreaw,preaw,חמוץ,sour,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",bpreaw,חמוץ,
-vocab_0169,ขม,kom,kom,מר,bitter,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",kom,מר,
-vocab_0170,มัน,man,man,שומני,oily / fatty,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",man,שומני,
-vocab_0171,จืด,juad,juad,תפל,bland,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",juad,תפל,
-vocab_0172,ขยะ,ka-ya,ka-ya,זבל,trash,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",ka-ya,זבל,
-vocab_0173,ไม่เป็นไร,mai-pen-rai,mai-pen-rai,לא משנה / אין בעבר,never mind / no problem,medium_normalized_match,4,True,"תומר 5,csv.txt","תומר 5,csv.txt",mai-pen-rai,לא משנה / אין בעבר,
-vocab_0174,โชคดี,cho-dee,cho-dee,בהצלחה,good luck,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",cho-dee,בהצלחה,
-vocab_0175,ลาก่อน,la-gon,la-gon,להתראות,goodbye,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",la-gon,להתראות,
-vocab_0176,ไปก่อนนะ,pai-gon-na,pai-gon-na,אני הולך עכשיו (להתראות),I am going now / bye,medium_normalized_match,4,True,"תומר 5,csv.txt","תומר 5,csv.txt",pai-gon-na,אני הולך עכשיו (להתראות),
-vocab_0177,ไปแล้ว,bpai-leaw,pai-leaw,כבר הלכתי / הלכתי,already went,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",bpai-leaw,כבר הלכתי / הלכתי,
-vocab_0178,เจอกัน,jer-gan,jer-gan,נתראה,see you,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",jer-gan,נתראה,
-vocab_0179,ทุกวัน,tuk-wan,tuk-wan,כל יום,every day,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",tuk-wan,כל יום,
-vocab_0180,,tuk-yaang,tuk-yaang,הכל,,needs_review_no_script,review_queue,False,"תומר 5,csv.txt","תומר 5,csv.txt",tuk-yaang,הכל,
-vocab_0181,บางที,bang-ti,bang-ti,לפעמים,sometimes,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",bang-ti,לפעמים,
-vocab_0182,บางคน,bang-kon,bang-kon,חלק מהאנשים,some people,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",bang-kon,חלק מהאנשים,
-vocab_0183,ไม่เคย,mai-koey,mai-koey,אף פעם לא,never,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",mai-koey,אף פעם לא,
-vocab_0184,เคย,koey,koey,פעם / כבר עשיתי,ever,high_context_disambiguated,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",koey,פעם / כבר עשיתי,
-vocab_0185,เบื่อ,bua,bua,משעמם,bored,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",bua,משעמם,
-vocab_0186,ง่วงนอน,nguang-non,nguang-non,ישנוני,sleepy,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",nguang-non,ישנוני,
-vocab_0187,สนุก,sanook,sanook,כיף,fun,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",sanook,כיף,
-vocab_0188,เป็น,bpen,pen,להיות / לדעת לעשות,be / know how to,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",bpen,להיות / לדעת לעשות,
-vocab_0189,คือ,kue,kue,זה / הוא (להגדרות),is / means,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",kue,זה / הוא (להגדרות),
-vocab_0190,สวัสดี,sa-waat-dee,sa-waat-dee,שלום,hello,medium_normalized_match,4,True,"תומר 5,csv.txt","תומר 5,csv.txt",sa-waat-dee,שלום,
-vocab_0191,ขอบคุณ,kob-kun,kob-kun,תודה,thank you,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",kob-kun,תודה,
-vocab_0192,,yin-dee-tii-dai-ruu-jag,yin-dee-tii-dai-ruu-jag,נעים להכיר,,needs_review_no_script,review_queue,False,"תומר 5,csv.txt","תומר 5,csv.txt",yin-dee-tii-dai-ruu-jag,נעים להכיר,
-vocab_0193,ที่ไหน,tii-nai?,tii-nai?,איפה?,where?,medium_normalized_match,5,True,"תומר 5,csv.txt","תומר 5,csv.txt",tii-nai?,איפה?,
-vocab_0194,เมื่อไร,meua-rai?,meua-rai?,מתי?,when?,medium_normalized_match,5,True,"תומר 5,csv.txt","תומר 5,csv.txt",meua-rai?,מתי?,
-vocab_0195,ยังไง,yang-ngai?,yang-ngai?,איך?,how?,medium_normalized_match,5,True,"תומר 5,csv.txt","תומר 5,csv.txt",yang-ngai?,איך?,
-vocab_0196,เพราะว่า,prow-wa,prow-wa,בגלל ש...,because,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",prow-wa,בגלל ש...,
-vocab_0197,ขนมปัง,ka-nom-bpang,ka-nom-pang,לחם,bread,medium_normalized_match,4,True,"תומר 5,csv.txt","תומר 5,csv.txt",ka-nom-bpang,לחם,
-vocab_0198,เนื้อ,neu-a,neu-a,בשר / בקר,meat / beef,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",neu-a,בשר / בקר,
-vocab_0199,ไก่,gai,gai,עוף,chicken,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",gai,עוף,
-vocab_0200,หมู,moo,moo,חזיר,pork / pig,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",moo,חזיר,
-vocab_0201,ปลา,bpaa,paa,דג,fish,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",bpaa,דג,
-vocab_0202,กุ้ง,goong,goong,שרימפס,shrimp,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",goong,שרימפס,
-vocab_0203,ปู,puu,puu,סרטן,crab,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt; אלמוג 1,CSV.txt",puu,סרטן,
-vocab_0204,ไข่,kai,kai,ביצה,egg,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",kai,ביצה,
-vocab_0205,ไข่ดาว,kai-dao,kai-dao,ביצת עין,fried egg,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",kai-dao,ביצת עין,
-vocab_0206,ไข่เจียว,kai-jeaw,kai-jeaw,חביתה,omelette,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",kai-jeaw,חביתה,
-vocab_0207,ผัก,pak,pak,ירקות,vegetables,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",pak,ירקות,
-vocab_0208,ผลไม้,pon-la-mai,pon-la-mai,פירות,fruit,medium_normalized_match,4,True,"תומר 6,csv.txt","תומר 6,csv.txt",pon-la-mai,פירות,
-vocab_0209,ส้ม,som,som,תפוז,orange,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",som,תפוז,
-vocab_0210,มะม่วง,ma-muang,ma-muang,מנגו,mango,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",ma-muang,מנגו,
-vocab_0211,มะพร้าว,ma-prao,ma-prao,קוקוס,coconut,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",ma-prao,קוקוס,
-vocab_0212,กล้วย,gluay,gluay,בננה,banana,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",gluay,בננה,
-vocab_0213,สับปะรด,sup-pa-rot,sup-pa-rot,אננס,pineapple,medium_normalized_match,4,True,"תומר 6,csv.txt","תומר 6,csv.txt",sup-pa-rot,אננס,
-vocab_0214,แตงโม,dtaeng-mo,taeng-mo,אבטיח,needs English review,original_thai_from_file_needs_english,review_queue,False,"תומר 6,csv.txt","תומר 6,csv.txt",แตงโม (dtaeng-mo),אבטיח,
-vocab_0215,น้ำแข็ง,nam-kaeng,nam-kaeng,קרח,ice,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",nam-kaeng,קרח,
-vocab_0216,น้ำส้ม,nam-som,nam-som,מיץ תפוזים,orange juice,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",nam-som,מיץ תפוזים,
-vocab_0217,กาแฟ,ga-fe,ga-fe,קפה,coffee,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",ga-fe,קפה,
-vocab_0218,นม,nom,nom,חלב,milk,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",nom,חלב,
-vocab_0219,เบียร์,beer,beer,בירה,beer,original_thai_from_file,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",เบียร์ (beer),בירה,
-vocab_0220,เหล้า,lao,lao,אלכוהול / וויסקי,alcohol / whiskey,original_thai_from_file,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",เหล้า (lao),אלכוהול / וויסקי,
-vocab_0221,กับ,gap,gap,עם,with,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",gap,עם,
-vocab_0222,เอา,ao,ao,רוצה / לקחת,want / take,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",ao,רוצה / לקחת,
-vocab_0223,ไม่เอา,mai ao,mai ao,לא רוצה,do not want,high,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",mai ao,לא רוצה,
-vocab_0224,เอาอันนี้,ao-an-nii,ao-an-nii,רוצה את זה,want this one,medium_normalized_match,4,True,"תומר 6,csv.txt","תומר 6,csv.txt",ao-an-nii,רוצה את זה,
-vocab_0225,เรือ,reua,reua,סירה,boat,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",reua,סירה,
-vocab_0226,เรือบิน,reua-bin,reua-bin,מטוס,airplane,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",reua-bin,מטוס,
-vocab_0227,รถ,rot,rot,מכונית,car / vehicle,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",rot,מכונית,
-vocab_0228,รถเมล์,rot-mae,rot-mae,אוטובוס,bus,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",rot-mae,אוטובוס,
-vocab_0229,รถไฟ,rot-fai,rot-fai,רכבת,train,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",rot-fai,רכבת,
-vocab_0230,มอเตอร์ไซค์,mo-dtu-sai,mo-tu-sai,אופנוע,motorbike,medium_normalized_match,4,True,"תומר 6,csv.txt","תומר 6,csv.txt",mo-dtu-sai,אופנוע,
-vocab_0231,,jak-kra-yaan,jak-kra-yaan,אופניים,,needs_review_no_script,review_queue,False,"תומר 6,csv.txt","תומר 6,csv.txt",jak-kra-yaan,אופניים,
-vocab_0232,เดิน,doen,doen,ללכת ברגל,walk,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",doen,ללכת ברגל,
-vocab_0233,วิ่ง,wing,wing,לרוץ,run,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt; אלמוג 5(2).apkg",wing,לרוץ,
-vocab_0234,สวย,suay,suay,יפה,beautiful,high_context_disambiguated,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",suay,יפה,
-vocab_0235,น่ารัก,naa-rak,naa-rak,חמוד,cute,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",naa-rak,חמוד,
-vocab_0236,หล่อ,lor,lor,חתיך,handsome,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",lor,חתיך,
-vocab_0237,เตี้ย,dtia,tia,נמוך,short,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",dtia,נמוך,
-vocab_0238,สูง,soong,soong,גבוה,tall,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",soong,גבוה,
-vocab_0239,อ้วน,u-an,u-an,שמן (גוף),fat / overweight,medium_normalized_match,3,True,"תומר 7,csv.txt","תומר 7,csv.txt",u-an,שמן (גוף),
-vocab_0240,ผอม,pom,pom,רזה,thin,original_thai_from_file,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",ผอม (pom),רזה,
-vocab_0241,ใหญ่,yai,yai,גדול,big,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",yai,גדול,
-vocab_0242,เล็ก,lek,lek,קטן,small,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",lek,קטן,
-vocab_0243,เหงา,ngao,ngao,בודד,lonely,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt; תומר 8,csv.txt",ngao,בודד,
-vocab_0244,เสียใจ,sia-jai,sia-jai,עצוב,sad / sorry,medium_normalized_match,3,True,"תומר 7,csv.txt","תומר 7,csv.txt",sia-jai,עצוב,
-vocab_0245,ดีใจ,dii-jai,dii-jai,שמח,happy,medium_normalized_match,3,True,"תומר 7,csv.txt","תומר 7,csv.txt",dii-jai,שמח,
-vocab_0246,โกรธ,grote,grote,כועס,angry,original_thai_from_file,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",โกรธ (grote),כועס,
-vocab_0247,กลัว,glua,glua,מפחד,afraid,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt; תומר 8,csv.txt",glua,מפחד,
-vocab_0248,ตกใจ,dtok-jai,tok-jai,מופתע / בהלם,shocked / startled,medium_normalized_match,3,True,"תומר 7,csv.txt","תומר 7,csv.txt",dtok-jai,מופתע / בהלם,
-vocab_0249,งง,ngong,ngong,מבולבל,confused,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",ngong,מבולבל,
-vocab_0250,มั่นใจ,man-jai,man-jai,בטוח בעצמי,confident,medium_normalized_match,3,True,"תומר 7,csv.txt","תומר 7,csv.txt",man-jai,בטוח בעצמי,
-vocab_0251,น่าเข้าใจ,naa-kao-jai,naa-kao-jai,מובן,understandable,medium_normalized_match,4,True,"תומר 7,csv.txt","תומר 7,csv.txt",naa-kao-jai,מובן,
-vocab_0252,ไม่เข้าใจ,mai-kao-jai,mai-kao-jai,לא מבין,do not understand,medium_normalized_match,4,True,"תומר 7,csv.txt","תומר 7,csv.txt",mai-kao-jai,לא מבין,
-vocab_0253,เข้าใจไหม,kao-jai mai?,kao-jai mai?,מבין?,Do you understand?,medium_normalized_match,5,True,"תומר 7,csv.txt","תומר 7,csv.txt",kao-jai mai?,מבין?,
-vocab_0254,เข้าใจแล้ว,kao-jai leaw,kao-jai leaw,הבנתי כבר,understood already,medium_normalized_match,4,True,"תומר 7,csv.txt","תומר 7,csv.txt",kao-jai leaw,הבנתי כבר,
-vocab_0255,รัก,rak,rak,אוהב,love,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",rak,אוהב,
-vocab_0256,เกลียด,gliad,gliad,שונא,hate,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",gliad,שונא,
-vocab_0257,เห็นด้วย,hen-duai,hen-duai,מסכים,agree,medium_normalized_match,3,True,"תומר 7,csv.txt","תומר 7,csv.txt",hen-duai,מסכים,
-vocab_0258,ไม่เห็นด้วย,mai-hen-duai,mai-hen-duai,לא מסכים,disagree,medium_normalized_match,4,True,"תומר 7,csv.txt","תומר 7,csv.txt",mai-hen-duai,לא מסכים,
-vocab_0259,จริง ๆ,jing-jing,jing-jing,באמת,really,medium_normalized_match,3,True,"תומר 7,csv.txt","תומר 7,csv.txt",jing-jing,באמת,
-vocab_0260,ลอง,long,long,לנסות,try,high_context_disambiguated,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",long,לנסות,
-vocab_0261,ดู,duu,duu,לראות / להסתכל,look / watch,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",duu,לראות / להסתכל,
-vocab_0262,ฟัง,fang,fang,להקשיב,listen,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",fang,להקשיב,
-vocab_0263,ดม,dom,dom,להריח,smell,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",dom,להריח,
-vocab_0264,ชิม,chim,chim,לטעום,taste,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",chim,לטעום,
-vocab_0265,จำ,jum,jum,לזכור,remember,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",jum,לזכור,
-vocab_0266,เคย,keey,keey,להתרגל / פעם...,ever / used to,high_context_disambiguated,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",keey,להתרגל / פעם...,
-vocab_0267,เที่ยว,teaw,teaw,לטייל / לבלות,travel / hang out,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",teaw,לטייל / לבלות,
-vocab_0268,รอ,raw,raw,לחכות,wait,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",raw,לחכות,
-vocab_0269,ซื้อ,suu,suu,לקנות,buy,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",suu,לקנות,
-vocab_0270,ขาย,kaai,kaai,למכור,sell,high_context_disambiguated,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",kaai,למכור,
-vocab_0271,ให้,hai,hai,לתת / עבור,give / for,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",hai,לתת / עבור,
-vocab_0272,ช่วย,choo-ay,choo-ay,לעזור,help,medium_normalized_match,3,True,"תומר 7,csv.txt","תומר 7,csv.txt",choo-ay,לעזור,
-vocab_0273,บอก,bork,bork,להגיד / לספר,tell,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",bork,להגיד / לספר,
-vocab_0274,ถาม,tam,tam,לשאול,ask,high_context_disambiguated,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",tam,לשאול,
-vocab_0275,ยิ้ม,yim,yim,לחייך,smile,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",yim,לחייך,
-vocab_0276,ร้องไห้,rong¹-hai³,rong-hai,לבכות,cry,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",rong¹-hai³,לבכות,
-vocab_0277,อิจฉา,it²-chaa¹,it-chaa,לקנא,envy / jealous,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",it²-chaa¹,לקנא,
-vocab_0278,โมโห,mo¹-ho¹,mo-ho,עצבני,angry / annoyed,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",mo¹-ho¹,עצבני,
-vocab_0279,รำคาญ,ram¹-kaan¹,ram-kaan,מעצבן,annoyed / annoying,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",ram¹-kaan¹,מעצבן,
-vocab_0280,หวัง,wang¹,wang,לקוות,hope,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",wang¹,לקוות,
-vocab_0281,มั่นใจ,man¹-jai¹,man-jai,בטוח,confident,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",man¹-jai¹,בטוח,
-vocab_0282,น่าสงสาร,naa³-song⁵-saan¹,naa-song-saan,מסכן,pitiful / poor thing,medium_normalized_match,4,True,"תומר 8,csv.txt","תומר 8,csv.txt",naa³-song⁵-saan¹,מסכן,
-vocab_0283,ภูมิใจ,pum¹-jai¹,pum-jai,גאה,proud,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",pum¹-jai¹,גאה,
-vocab_0284,เสียดาย,sia⁵-daai¹,sia-daai,חבל / בזבוז,what a pity / waste,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",sia⁵-daai¹,חבל / בזבוז,
-vocab_0285,,dtun²-dten³,tun-ten,מתרגש,,needs_review_no_script,review_queue,False,"תומר 8,csv.txt","תומר 8,csv.txt",dtun²-dten³,מתרגש,
-vocab_0286,ง่วง,nguang³,nguang,ישנוני,sleepy,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",nguang³,ישנוני,
-vocab_0287,ตกใจ,dtok²-jai¹,tok-jai,מבוהל,shocked / startled,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",dtok²-jai¹,מבוהל,
-vocab_0288,รวม,ruam¹,ruam,ביחד,together / include,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",ruam¹,ביחד,
-vocab_0289,ชื่อจริง,cheuu³-jing¹,cheuu-jing,שם אמיתי,real name,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",cheuu³-jing¹,שם אמיתי,
-vocab_0290,ชื่อเล่น,cheuu³-len³,cheuu-len,כינוי,nickname,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",cheuu³-len³,כינוי,
-vocab_0291,นามสกุล,naam¹-sa¹-kun¹,naam-sa-kun,שם משפחה,surname,medium_normalized_match,4,True,"תומר 8,csv.txt","תומר 8,csv.txt",naam¹-sa¹-kun¹,שם משפחה,
-vocab_0292,คือ,keuu¹,keuu,זה / הוא (הגדרה),is / means,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",keuu¹,זה / הוא (הגדרה),
-vocab_0293,เบื่อ,beaua²,beaua,משעמם,bored,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",beaua²,משעמם,
-vocab_0294,สมอง,sa¹-mawng¹,sa-mawng,מוח,brain,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",sa¹-mawng¹,מוח,
-vocab_0295,สมองไม่ทำงาน,sa¹-mawng¹ mai³ tam¹-ngaan¹,sa-mawng mai tam-ngaan,המוח לא עובד,brain not working,medium_normalized_match,4,True,"תומר 8,csv.txt","תומר 8,csv.txt",sa¹-mawng¹ mai³ tam¹-ngaan¹,המוח לא עובד,
-vocab_0296,บน,bon¹,bon,על (מעל),on / above,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",bon¹,על (מעל),
-vocab_0297,ต่อไป,dtor²-bpai¹,tor-pai,הבא,next,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",dtor²-bpai¹,הבא,
-vocab_0298,เห็น,hen¹,hen,רואה,see,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",hen¹,רואה,
-vocab_0299,หน้าต่าง,naa³-dtang²,naa-tang,חלון,window,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",naa³-dtang²,חלון,
-vocab_0300,ห้อง,hawng³,hawng,חדר,room,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",hawng³,חדר,
-vocab_0301,พ่อแม่,poh³-mae³,poh-mae,הורים,parents,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",poh³-mae³,הורים,
-vocab_0302,กับข้าว,kap²-kaao³,kap-kaao,אוכל (שאוכלים עם אורז),food eaten with rice,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",kap²-kaao³,אוכל (שאוכלים עם אורז),
-vocab_0303,นักเรียน,nag²-rian¹,nag-rian,סטודנט / תלמיד,student,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",nag²-rian¹,סטודנט / תלמיד,
-vocab_0304,ร้านอาหาร,raan³-aa¹-haan⁵,raan-aa-haan,מסעדה,restaurant,medium_normalized_match,4,True,"תומר 8,csv.txt","תומר 8,csv.txt",raan³-aa¹-haan⁵,מסעדה,
-vocab_0305,เจ้าของ,jao³-kawng¹,jao-kawng,הבעלים,owner,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",jao³-kawng¹,הבעלים,
-vocab_0306,แม่,mae³,mae,אמא,mother,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",mae³,אמא,
-vocab_0307,ผู้หญิง,puu³-ying⁵,puu-ying,אישה / נקבה,woman / female,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",puu³-ying⁵,אישה / נקבה,
-vocab_0308,ผู้ชาย,puu³-chaai¹,puu-chaai,גבר / זכר,man / male,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",puu³-chaai¹,גבר / זכר,
-vocab_0309,ในหลวง,nai¹-lu-ang¹,nai-lu-ang,המלך,king,medium_normalized_match,4,True,"תומר 8,csv.txt","תומר 8,csv.txt",nai¹-lu-ang¹,המלך,
-vocab_0310,พระเจ้าอยู่หัว,pra¹-jao³-yuu²-hua¹,pra-jao-yuu-hua,המלך (תואר רשמי),king (formal title),medium_normalized_match,4,True,"תומר 8,csv.txt","תומר 8,csv.txt",pra¹-jao³-yuu²-hua¹,המלך (תואר רשמי),
-vocab_0311,หมู,moo²,moo,קבוצה,pork / pig,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",moo²,קבוצה,
-vocab_0312,ชาวเผ่า,chaao¹-pao¹,chaao-pao,אנשי שבט,tribal people,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",chaao¹-pao¹,אנשי שבט,
-vocab_0313,ดอย,doi¹,doi,הר,mountain,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",doi¹,הר,
-vocab_0314,ภูเขา,puu¹-kao¹,puu-kao,הר,mountain,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",puu¹-kao¹,הר,
-vocab_0315,ปลา,paa³,paa,בד / בגד,fish,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",paa³,בד / בגד,
-vocab_0316,ตลาดนัด,dtalard²-nat¹,talard-nat,שוק,market,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",dtalard²-nat¹,שוק,
-vocab_0317,อีก,iig(2),iig,שוב (Again),again / more,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",iig(2),שוב (Again),
-vocab_0318,พักผ่อน,pag-pawn(2-2),pag-pawn,לנוח,rest,medium_normalized_match,3,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",pag-pawn(2-2),לנוח,
-vocab_0319,ไปเที่ยว,bpai-tiao(1-3),pai-tiao,לטייל / להסתובב בכיף,go out / travel for fun,medium_normalized_match,3,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",bpai-tiao(1-3),לטייל / להסתובב בכיף,
-vocab_0320,เสร็จ,sed(2),sed,סיים / נגמר,finish / done,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",sed(2),סיים / נגמר,
-vocab_0321,หมด,mod(2),mod,הכל נגמר / אזל,finished / used up,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",mod(2),הכל נגמר / אזל,
-vocab_0322,ตื่น,theung(2),theung,להתעורר,wake up,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",theung(2),להתעורר,
-vocab_0323,หลง,long(1),long,ללכת לאיבוד,lost,high_context_disambiguated,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",long(1),ללכת לאיבוד,
-vocab_0324,ความอดทน,kwaam-od-ton(1-2-1),kwaam-od-ton,סבלנות,patience,medium_normalized_match,4,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",kwaam-od-ton(1-2-1),סבלנות,
-vocab_0325,ปลา,bplaa(1),plaa,דג,fish,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",bplaa(1),דג,
-vocab_0326,กุ้ง,gung(3),gung,שרימפס,shrimp,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",gung(3),שרימפס,
-vocab_0327,หอย,hoi(5),hoi,צדפה,shellfish,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",hoi(5),צדפה,
-vocab_0328,,bpla-meuk(1-2),pla-meuk,דיונון,,needs_review_no_script,review_queue,False,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",bpla-meuk(1-2),דיונון,
-vocab_0329,อาหารทะเล,aa-haan-ta-lay(1(1)-5-1-1),aa-haan-ta-lay,פירות ים,seafood,medium_normalized_match,4,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",aa-haan-ta-lay(1(1)-5-1-1),פירות ים,
-vocab_0330,เมื่อไร,meua-rai(3-1),meua-rai,מתי,when?,medium_normalized_match,3,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",meua-rai(3-1),מתי,
-vocab_0331,อย่างไร,yaang-ngai(2-1),yaang-ngai,איך,how,medium_normalized_match,3,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",yaang-ngai(2-1),איך,
-vocab_0332,ใคร,khrai(1),khrai,מי (או מי זה),who,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",khrai(1),מי (או מי זה),
-vocab_0333,วันเกิด,wan-geut(1-2),wan-geut,יום הולדת,birthday,medium_normalized_match,3,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",wan-geut(1-2),יום הולדת,
-vocab_0334,เคย,koey(1),koey,אי פעם,ever,high_context_disambiguated,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",koey(1),אי פעם,
-vocab_0335,สมาชิก,sa-ma-chik(2-1-3),sa-ma-chik,חבר (במועדון / קבוצה),member,medium_normalized_match,4,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",sa-ma-chik(2-1-3),חבר (במועדון / קבוצה),
-vocab_0336,เด็ก,dek(2),dek,ילד,child,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",dek(2),ילד,
-vocab_0337,น้ำมัน,nam-man(1-1),nam-man,שמן / דלק,oil / fuel,medium_normalized_match,3,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",nam-man(1-1),שמן / דלק,
-vocab_0338,ปั๊มน้ำมัน,bpum-nam-man(3-1-1),pum-nam-man,תחנת דלק,gas station,medium_normalized_match,4,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",bpum-nam-man(3-1-1),תחנת דלק,
-vocab_0339,กัน,gan(1),gan,אחד את השני / ביחד,each other / together,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",gan(1),אחד את השני / ביחד,
-vocab_0340,,dtae-chao,tae-chao,לפנות בוקר / מוקדם בבוקר,,needs_review_no_script,review_queue,False,אלמוג 5(2).apkg,אלמוג 5(2).apkg,dtae-chao,לפנות בוקר / מוקדם בבוקר,
-vocab_0341,,dton-chao,ton-chao,בבוקר,,needs_review_no_script,review_queue,False,אלמוג 5(2).apkg,אלמוג 5(2).apkg,dton-chao,בבוקר,
-vocab_0342,,dton-saai,ton-saai,מאוחר בבוקר,,needs_review_no_script,review_queue,False,אלמוג 5(2).apkg,אלמוג 5(2).apkg,dton-saai,מאוחר בבוקר,
-vocab_0343,,dton-tieng,ton-tieng,בצהריים,,needs_review_no_script,review_queue,False,אלמוג 5(2).apkg,אלמוג 5(2).apkg,dton-tieng,בצהריים,
-vocab_0344,,dton-baai,ton-baai,אחר הצהריים,,needs_review_no_script,review_queue,False,אלמוג 5(2).apkg,אלמוג 5(2).apkg,dton-baai,אחר הצהריים,
-vocab_0345,,dton-yen,ton-yen,בערב,,needs_review_no_script,review_queue,False,אלמוג 5(2).apkg,אלמוג 5(2).apkg,dton-yen,בערב,
-vocab_0346,,dton-tiang-kheun,ton-tiang-kheun,בלילה,,needs_review_no_script,review_queue,False,אלמוג 5(2).apkg,אלמוג 5(2).apkg,dton-tiang-kheun,בלילה,
-vocab_0347,,dton-deug,ton-deug,מאוחר בלילה,,needs_review_no_script,review_queue,False,אלמוג 5(2).apkg,אלמוג 5(2).apkg,dton-deug,מאוחר בלילה,
-vocab_0348,,Hen Dubai,hen dubai,להסכים,,needs_review_no_script,review_queue,False,אלמוג 5(2).apkg,אלמוג 5(2).apkg,להסכים,Hen Dubai,
-vocab_0349,,Hen mai?,hen mai?,רואה?,,needs_review_no_script,review_queue,False,אלמוג 5(2).apkg,אלמוג 5(2).apkg,רואה?,Hen mai?,
-vocab_0350,,Hen duai mai,hen duai mai,האם מסכים,,needs_review_no_script,review_queue,False,אלמוג 5(2).apkg,אלמוג 5(2).apkg,האם מסכים,Hen duai mai,
-vocab_0351,ยืน,Yuen,yuen,לעמוד,stand,high,1,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,Yuen,לעמוד,
-vocab_0352,นั่ง,Nung,nung,לשבת,sit,high,1,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,Nung,לשבת,
-vocab_0353,เดิน,Doen,doen,ללכת,walk,high,1,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,Doen,ללכת,
-vocab_0354,ข้าม,Khaam,khaam,לדלג,cross / skip over,high,1,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,Khaam,לדלג,
-vocab_0355,ไม่ไหว,mai wai,mai wai,לא יכול / לא מסוגל / לא עומד בזה,needs English review,original_thai_from_file_needs_english,review_queue,False,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ไม่ไหว mai wai,לא יכול / לא מסוגל / לא עומד בזה,
-vocab_0356,ไม่ต้องห่วง,mai dtong huang,mai tong huang,אל תדאג / אין מה לדאוג,do not worry,original_thai_from_file,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ไม่ต้องห่วง mai dtong huang,אל תדאג / אין מה לדאוג,
-vocab_0357,ไม่สนใจ,mai son jai,mai son jai,לא מעוניין / לא אכפת,not interested / do not care,original_thai_from_file,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ไม่สนใจ mai son jai,לא מעוניין / לא אכפת,
-vocab_0358,ไม่มีอะไร,mai mee a-rai,mai mee a-rai,אין כלום,needs English review,original_thai_from_file_needs_english,review_queue,False,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ไม่มีอะไร mai mee a-rai,אין כלום,
-vocab_0359,ไม่ต้อง,mai dtong,mai tong,לא צריך / אין צורך,do not need,original_thai_from_file,3,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ไม่ต้อง mai dtong,לא צריך / אין צורך,
-vocab_0360,ไม่มีปัญหา,mai mee pan-haa,mai mee pan-haa,אין בעיה,needs English review,original_thai_from_file_needs_english,review_queue,False,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ไม่มีปัญหา mai mee pan-haa,אין בעיה,
-vocab_0361,ไม่มีทาง,mâi mee taang,mai mee taang,אין מצב / אין סיכוי,no way,original_thai_from_file,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ไม่มีทาง (mâi mee taang),אין מצב / אין סיכוי,
-vocab_0362,ว่าไง,wâa ngai,waa ngai,מה קורה? / מה נשמע?,what’s up?,original_thai_from_file,5,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ว่าไง (wâa ngai),מה קורה? / מה נשמע?,
-vocab_0363,ไม่เก็ทอะ,mâi get à,mai get a,אני לא מבין / לא קולט,I do not get it,original_thai_from_file,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ไม่เก็ทอะ (mâi get à),אני לא מבין / לא קולט,
-vocab_0364,แล้วไง,láew ngai,laew ngai,אז מה?,so what?,original_thai_from_file,5,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,แล้วไง (láew ngai),אז מה?,
-vocab_0365,คิดว่า,khít wâa,khit waa,לחשוב ש...,think that,original_thai_from_file,3,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,คิดว่า (khít wâa),לחשוב ש...,
-vocab_0366,พูดว่า,phûut wâa,phut waa,לומר ש...,needs English review,original_thai_from_file_needs_english,review_queue,False,אלמוג 5(2).apkg,אלמוג 5(2).apkg,พูดว่า (phûut wâa),לומר ש...,
-vocab_0367,บอกว่า,bòk wâa,bok waa,לספר / להגיד ש...,tell / say that,original_thai_from_file,3,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,บอกว่า (bòk wâa),לספר / להגיד ש...,
-vocab_0368,รู้สึกว่า,rúu sèuk wâa,ruu seuk waa,להרגיש ש...,feel that,original_thai_from_file,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,รู้สึกว่า (rúu sèuk wâa),להרגיש ש...,
-vocab_0369,เพราะว่า,phróh wâa,phroh waa,בגלל ש...,because,original_thai_from_file,3,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,เพราะว่า (phróh wâa),בגלל ש...,
-vocab_0370,ได้ยินว่า,dâai yin wâa,daai yin waa,לשמוע ש...,needs English review,original_thai_from_file_needs_english,review_queue,False,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ได้ยินว่า (dâai yin wâa),לשמוע ש...,
-vocab_0371,,ton mai,ton mai,צמח עציץ,,needs_review_no_script,review_queue,False,אלמוג 4(1).apkg,אלמוג 4(1).apkg,ton mai,צמח עציץ,
-vocab_0372,บาง,baang,baang,חלק מ..,some / part of,high,1,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,חלק מ..,baang,
-vocab_0373,ด้วยกัน,doi gan,doi gan,יחדיו,together,high,3,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,יחדיו,doi gan,
-vocab_0374,บางที,baang tii,baang tii,יכול להיות,maybe / sometimes,high,3,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,יכול להיות,baang tii,
-vocab_0375,พวกเขา,guwa,guwa,they הם,they (review),high,1,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,they הם,guwa,
-vocab_0376,บางวัน,baang wan,baang wan,חלק מהימים,some days,high,3,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,חלק מהימים,baang wan,
-vocab_0377,ทุกที่,tug tii,tug tii,בכל מקום,everywhere,high,3,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,בכל מקום,tug tii,
-vocab_0378,ออก,oog,oog,"יציאה,החוצה",exit / out,high,1,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,"יציאה,החוצה",oog,
-vocab_0379,อุ่น,oon,oon,"חמים,חם",warm,high,1,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,"חמים,חם",oon,
-vocab_0380,,dton pom deg deg,ton pom deg deg,כשהייתי ילד,,needs_review_no_script,review_queue,False,אלמוג 4(1).apkg,אלמוג 4(1).apkg,כשהייתי ילד,dton pom deg deg,
-vocab_0381,เข้า,kao3,kao3,כניסה היכנס,enter / in,high,1,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,כניסה היכנס,kao3,
-vocab_0382,หน้า,naa3,naa3,"פנים,לפנים,הלאה,עונות",face / forward / season,high,1,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,"פנים,לפנים,הלאה,עונות",naa3,
-vocab_0383,โรงพัก,rong pag,rong pag,תחתנת משטרה,police station,high,3,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,תחתנת משטרה,rong pag,
-vocab_0384,ไม่ได้…,mai dai+v,mai dai+v,לא עשיתי,did not / cannot + verb,high,3,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,לא עשיתי,mai dai+v,
-vocab_0385,ิ่,נחמד לראותך,,dii jai tii dai jer,needs English review,original_thai_from_file_needs_english,review_queue,False,אלמוג 4(1).apkg,אלמוג 4(1).apkg,ิ่נחמד לראותך,dii jai tii dai jer,
-vocab_0386,ผึ้ง,peuang,peuang,"דבורה,רק",bee,high,1,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,"דבורה,רק",peuang,
-vocab_0387,,dtoy,toy,"אגרוף ,עקיצה",,needs_review_no_script,review_queue,False,אלמוג 4(1).apkg,אלמוג 4(1).apkg,"אגרוף ,עקיצה",dtoy,
+id,thai,transliteration,normalized_transliteration,he,english,confidence,suggested_level,active_for_questions,source_file,sources,original_front,original_back,note,validation_status
+vocab_0001,สำคัญ,sam¹-kan¹,sam1-kan1,חשוב,important,medium_normalized_match,3,True,"תומר 1,csv.txt","תומר 1,csv.txt",sam¹-kan¹,חשוב,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0002,ขนม,kha-num¹,kha-num1,חטיף,snack,medium_normalized_match,3,True,"תומר 1,csv.txt","תומר 1,csv.txt",kha-num¹,חטיף,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0003,หวี,wii¹,wii1,אשכול/יחידת בננות; מסרק,banana bunch/classifier; comb,verified_central_context_note,3,True,"תומר 1,csv.txt","תומר 1,csv.txt",wii¹,אשכול בננות,Central Thai; beginner context needs note because หวี also means comb.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0004,มาครับ,ma¹-krap,ma1-krap,באתי / אני בא (זכר מנומס),I came / I am coming (male polite),verified_central_corrected_meaning,3,True,"תומר 1,csv.txt","תומר 1,csv.txt",ma¹-krap,אני כאן,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0005,ไหว้,waai³,waai3,לחלוק כבוד,wai greeting / pay respect,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",waai³,לחלוק כבוד,מחווה של הצמדת ידיים,central_bangkok_ok_for_beginner_or_context_note
+vocab_0006,น้ำ,nam¹,nam1,מים,water,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",nam¹,מים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0007,ปากกา,bpaag²-gaa¹,bpaag2-gaa1,עט,pen,medium_normalized_match,3,True,"תומר 1,csv.txt","תומר 1,csv.txt",bpaag²-gaa¹,עט,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0008,ปาก,bpaag²,bpaag2,פה / מקור,mouth / beak,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",bpaag²,פה / מקור,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0009,กา,gaa¹,gaa1,עורב,crow,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",gaa¹,עורב,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0010,ว่ายน้ำ,waai³-nam¹,waai3-nam1,לשחות,swim,medium_normalized_match,3,True,"תומר 1,csv.txt","תומר 1,csv.txt",waai³-nam¹,לשחות,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0011,ครู,kru¹,kru1,מורה,teacher,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",kru¹,מורה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0012,คุณชื่ออะไร,kun¹ cheuu³ a-rai¹?,kun1-cheuu3-a-rai1?,מה השם שלך?,What is your name?,medium_normalized_match,5,True,"תומר 1,csv.txt","תומר 1,csv.txt",kun¹ cheuu³ a-rai¹?,מה השם שלך?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0013,ผมชื่อ…,pom⁵ cheuu³ (name),pom5-cheuu3-name,השם שלי הוא...,My name is… (male),high,4,True,"תומר 1,csv.txt","תומר 1,csv.txt",pom⁵ cheuu³ (name),השם שלי הוא...,לזכר,central_bangkok_ok_for_beginner_or_context_note
+vocab_0014,ฉันชื่อ…,chan⁵ cheuu³ (name),chan5-cheuu3-name,השם שלי הוא...,My name is… (female),high,4,True,"תומר 1,csv.txt","תומר 1,csv.txt",chan⁵ cheuu³ (name),השם שלי הוא...,לנקבה,central_bangkok_ok_for_beginner_or_context_note
+vocab_0015,มา,maa¹,maa1,לבוא,come,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",maa¹,לבוא,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0016,ไป,bpai¹,bpai1,ללכת,go,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",bpai¹,ללכת,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0017,อยู่,yuu²,yuu2,להיות / לגור,be / live / stay,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",yuu²,להיות / לגור,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0018,ท้อง,thong³,thong3,בטן,belly,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",thong³,בטן,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0019,หิน,hin⁵,hin5,אבן,stone,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",hin⁵,אבן,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0020,กอง,kong¹,kong1,ערימה,pile,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",kong¹,ערימה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0021,ผมอยู่…,pom⁵ yuu² (place),pom5-yuu2-place,אני גר ב...,I live/stay in…,high,4,True,"תומר 1,csv.txt","תומר 1,csv.txt",pom⁵ yuu² (place),אני גר ב...,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0022,หวาน,waan⁵,waan5,מתוק,sweet,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",waan⁵,מתוק,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0023,ค่าย,kaai³,kaai3,מחנה,camp,high_context_disambiguated,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",kaai³,מחנה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0024,ชา,chaa¹,chaa1,תה,tea,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",chaa¹,תה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0025,อะไร,a-rai¹,a-rai1,מה?,what,medium_normalized_match,5,True,"תומר 1,csv.txt","תומר 1,csv.txt",a-rai¹,מה?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0026,ดื่ม,deuum²,deuum2,לשתות,drink,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",deuum²,לשתות,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0027,บ้าน,baan³,baan3,בית,house / home,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",baan³,בית,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0028,ใต้,dtai³,dtai3,דרום / מתחת,south / under,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",dtai³,דרום / מתחת,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0029,ร้อน,rawn¹,rawn1,חם,hot,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",rawn¹,חם,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0030,ไหม,mai¹?,mai1?,מילת שאלה (כן/לא),yes/no question particle,verified_central_corrected_script,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",mai¹?,מילת שאלה (כן/לא),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0031,ใช่ไหม,chai³ mai¹?,chai3-mai1?,נכון?,right? / correct?,high,5,True,"תומר 1,csv.txt","תומר 1,csv.txt",chai³ mai¹?,נכון?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0032,ไม่,mai³,mai3,לא / אל,not / no,high_context_disambiguated,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",mai³,לא / אל,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0033,สวย,suai⁵,suai5,יפה,beautiful,high_context_disambiguated,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",suai⁵,יפה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0034,สบายดีไหม,sa-baai dii mai?,sa-baai-dii-mai?,מה שלומך?,How are you?,verified_central_added_script,5,True,"תומר 1,csv.txt","תומר 1,csv.txt",sa-baai¹ dii¹ mai¹?,מה שלומך?,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0035,สบายดี,sa-baai dii,sa-baai-dii,הכל טוב / בסדר,I am fine / okay,verified_central_added_script,4,True,"תומר 1,csv.txt","תומר 1,csv.txt",sa-baai¹ dii¹,הכל טוב / בסדר,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0036,ไม่สบาย,mai sa-baai,mai-sa-baai,לא מרגיש טוב,not feeling well,verified_central_added_script,4,True,"תומר 1,csv.txt","תומר 1,csv.txt",mai³ sa-baai¹,לא מרגיש טוב,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0037,ตีหมา,dtii¹ maa¹,dtii1-maa1,להרביץ לכלב,hit a dog,high,3,True,"תומר 1,csv.txt","תומר 1,csv.txt",dtii¹ maa¹,להרביץ לכלב,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0038,ตอบ,dtawb²,dtawb2,לענות,answer,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt; תומר 7,csv.txt",dtawb²,לענות,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0039,งู,nguu¹,nguu1,נחש,snake,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",nguu¹,נחש,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0040,เงิน,ngoen¹,ngoen1,כסף,money,high,1,True,"תומר 1,csv.txt","תומר 1,csv.txt",ngoen¹,כסף,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0041,งาน,ngaan¹,ngaan1,עבודה,work / job,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",ngaan¹,עבודה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0042,มี,mii¹,mii1,יש,have / there is,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",mii¹,יש,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0043,ทำงาน,tam¹-ngaan¹,tam1-ngaan1,לעבוד,work,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",tam¹-ngaan¹,לעבוד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0044,ทำ,tam¹,tam1,לעשות / להכין,do / make,high_context_disambiguated,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",tam¹,לעשות / להכין,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0045,หลัง,lang⁵,lang5,גב / מאחור / אחרי,back / behind / after,review_context_mismatch,review_queue,False,"תומר 2,csv.txt","תומר 2,csv.txt",lang⁵,חזרת,"Original Hebrew “חזרת” did not match หลัง. If the target is “returned”, use กลับ.",needs_user_review_or_not_priority
+vocab_0046,อร่อย,a¹-roi²,a1-roi2,טעים,delicious,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",a¹-roi²,טעים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0047,นิดหน่อย,nit-noi²,nit-noi2,קצת,a little,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",nit-noi²,קצת,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0048,จะ,ja²,ja2,מילת עתיד,future marker / will,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",ja²,מילת עתיד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0049,กินอะไร,gin¹ a¹-rai¹?,gin1-a1-rai1?,מה אתה אוכל?,What are you eating?,medium_normalized_match,5,True,"תומר 2,csv.txt","תומר 2,csv.txt",gin¹ a¹-rai¹?,מה אתה אוכל?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0050,ผม/ฉันรักคุณ,pom⁵/chan⁵ rak¹ kun¹,pom5-chan5-rak1-kun1,אני אוהב/ת אותך,I love you,high,4,True,"תומר 2,csv.txt","תומר 2,csv.txt",pom⁵/chan⁵ rak¹ kun¹,אני אוהב/ת אותך,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0051,คุณรักผม/ฉันไหม,khun rak phom/chan mai?,khun-rak-phom-chan-mai?,אתה אוהב אותי?,Do you love me?,verified_central_corrected_phrase,5,True,"תומר 2,csv.txt","תומר 2,csv.txt",rak¹ kun¹ pom⁵/chan⁵,אתה אוהב אותי,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0052,เปิด,bpoed²,bpoed2,להדליק / לפתוח,open / turn on,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",bpoed²,להדליק / לפתוח,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0053,ชอบ,chawb³,chawb3,לאהוב / לחבב,like,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",chawb³,לאהוב / לחבב,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0054,โรงเรียน,rong¹-rian¹,rong1-rian1,בית ספר,school,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",rong¹-rian¹,בית ספר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0055,เรียน,rian¹,rian1,ללמוד,study / learn,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",rian¹,ללמוד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0056,โรง,rong¹,rong1,מקום מפגש,building / hall,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",rong¹,מקום מפגש,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0057,ขอโทษ,kaw⁵-tohd³,kaw5-tohd3,סליחה,sorry / excuse me,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",kaw⁵-tohd³,סליחה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0058,คน,khon¹,khon1,אנשים,person / people,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",khon¹,אנשים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0059,เขียน,kian⁵,kian5,לכתוב,write,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",kian⁵,לכתוב,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0060,ข้าวเหนียวมะม่วง,kaaw³-niaw³ ma¹-muang³,kaaw3-niaw3-ma1-muang3,סטיקי רייס מנגו,mango sticky rice,medium_normalized_match,4,True,"תומר 2,csv.txt","תומר 2,csv.txt",kaaw³-niaw³ ma¹-muang³,סטיקי רייס מנגו,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0061,ผัด,pad²,pad2,מוקפץ,stir-fried,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",pad²,מוקפץ,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0062,ขอ,koh⁵,koh5,אפשר לקבל...,request / may I have,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",koh⁵,אפשר לקבל...,בצורה מנומסת,central_bangkok_ok_for_beginner_or_context_note
+vocab_0063,เรียกว่าอะไร,riag³ a¹-rai¹?,riag3-a1-rai1?,איך קוראים ל...?,What is it called?,medium_normalized_match,5,True,"תומר 2,csv.txt","תומר 2,csv.txt",riag³ a¹-rai¹?,איך קוראים ל...?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0064,คุณล่ะ,kun¹ la²,kun1-la2,ואתה/ואת?,and you?,high,5,True,"תומר 2,csv.txt","תומר 2,csv.txt",kun¹ la²,ואתה/ואת?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0065,เช่นกัน,chen¹-gan¹,chen1-gan1,אותו הדבר / גם אני,same / likewise,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",chen¹-gan¹,אותו הדבר / גם אני,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0066,ยินดี,yin¹-dii¹,yin1-dii1,ברוך הבא,welcome / pleased,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",yin¹-dii¹,ברוך הבא,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0067,รู้,ruu⁴,ruu4,לדעת (מידע),know,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",ruu⁴,לדעת (מידע),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0068,รู้จัก,ruu⁴-jag²,ruu4-jag2,להכיר (אנשים/מקומות),know / be acquainted with,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",ruu⁴-jag²,להכיר (אנשים/מקומות),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0069,รู้ไหม,ruu⁴ mai¹?,ruu4-mai1?,אתה יודע?,Do you know?,high,5,True,"תומר 2,csv.txt","תומר 2,csv.txt",ruu⁴ mai¹?,אתה יודע?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0070,ไม่รู้,mai³ ruu⁴,mai3-ruu4,לא יודע,do not know,high,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",mai³ ruu⁴,לא יודע,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0071,ยังไม่รู้,yang¹ mai³ ruu⁴,yang1-mai3-ruu4,עדיין לא יודע,do not know yet,high,4,True,"תומר 2,csv.txt","תומר 2,csv.txt",yang¹ mai³ ruu⁴,עדיין לא יודע,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0072,นาที,naa-tii¹,naa-tii1,דקה,minute,medium_normalized_match,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",naa-tii¹,דקה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0073,หาด,haad²,haad2,חוף,beach,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",haad²,חוף,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0074,ได้,dai³,dai3,יכול,can / able,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",dai³,יכול,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0075,พูด,puud³,puud3,לדבר,speak,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",puud³,לדבר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0076,พูดไทยได้ไหม,puud³ Thai dai³ mai¹?,puud3-thai-dai3-mai1?,אתה יכול לדבר תאילנדית?,Can you speak Thai?,high,5,True,"תומר 2,csv.txt","תומר 2,csv.txt",puud³ Thai dai³ mai¹?,אתה יכול לדבר תאילנדית?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0077,พริก,prik¹,prik1,צ'ילי,chili,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",prik¹,צ'ילי,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0078,ไม่ใส่,mai³ sai²,mai3-sai2,בלי / לא לשים,without / do not put,high,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",mai³ sai²,בלי / לא לשים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0079,น้ำตาล,nam¹ dtaan¹,nam1-dtaan1,סוכר,sugar,high,3,True,"תומר 2,csv.txt","תומר 2,csv.txt",nam¹ dtaan¹,סוכר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0080,เพิ่ม,peum³,peum3,להוסיף,add / increase,high,1,True,"תומר 2,csv.txt","תומר 2,csv.txt",peum³,להוסיף,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0081,ที่นี่,tii-nii,tii-nii,פה,here,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",tii-nii,פה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0082,ภาษา,paa-saa,paa-saa,שפה,language,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",paa-saa,שפה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0083,ประเทศ,bpra-ted,bpra-ted,מדינה,country,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",bpra-ted,מדינה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0084,ทุกคน,tuk-kon,tuk-kon,כולם,everyone,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",tuk-kon,כולם,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0085,อย่ารอ,yaa ror,yaa-ror,אל תחכה,do not wait,verified_central_corrected_phrase,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",mai ro mai koh,אל תחכה,Replaced unclear ไม่รอไม่ขอ with common central phrase อย่ารอ.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0086,พอไหม,phaw mai?,phaw-mai?,זה מספיק?,Is it enough?,verified_central_corrected_phrase,5,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",paw-dii/paw mai,מספיק / לא מספיק,For “not enough” use ไม่พอ (mai phaw).,central_bangkok_ok_for_beginner_or_context_note
+vocab_0087,ไปไหน,bpai nai?,bpai-nai?,לאן אתה הולך?,Where are you going?,high,5,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",bpai nai?,לאן אתה הולך?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0088,ทบทวน,tobp-tuan,tobp-tuan,לחזור (על חומר),review,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",tobp-tuan,לחזור (על חומר),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0089,พี่,pii,pii,אח/אחות מבוגר/ת,older sibling / senior,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",pii,אח/אחות מבוגר/ת,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0090,ลืม,leuum,leuum,לשכוח,forget,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",leuum,לשכוח,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0091,และ,laeh,laeh,ו...,and,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",laeh,ו...,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0092,คุณพูดภาษาอะไร,kun puud paasaa a-rai?,kun-puud-paasaa-a-rai?,איזו שפה אתה מדבר?,What language do you speak?,medium_normalized_match,5,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",kun puud paasaa a-rai?,איזו שפה אתה מדבר?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0093,เสร็จ,sed,sed,לסיים,finish / done,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",sed,לסיים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0094,เย็น,yen,yen,קר,cold / evening,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",yen,קר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0095,คุณมาจาก…,kun maa jaag (place),kun-maa-jaag-place,מאיפה אתה?,Where are you from?,high,5,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",kun maa jaag (place),מאיפה אתה?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0096,จาก,jaag,jaag,מ... (מקור),from,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",jaag,מ... (מקור),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0097,ไหน/ที่ไหน,nai/tii nai,nai-tii-nai,איפה,where,high,4,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",nai/tii nai,איפה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0098,ห้องครัว,hong krua,hong-krua,מטבח,kitchen,high,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",hong krua,מטבח,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0099,ใจ,jaai,jaai,לב,heart / mind,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",jaai,לב,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0100,ใจดี,jaai dii,jaai-dii,לב טוב,kind,high,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",jaai dii,לב טוב,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0101,ทำไม,tam-mai?,tam-mai?,למה?,why?,medium_normalized_match,5,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt; תומר 5,csv.txt",tam-mai?,למה?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0102,มาก,maag,maag,מאוד,very / much,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",maag,מאוד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0103,สอน,sawn,sawn,ללמד,teach,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",sawn,ללמד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0104,แพง,peang,peang,יקר,expensive,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",peang,יקר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0105,ทุกอย่าง,tug-yaang,tug-yaang,הכל,everything,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",tug-yaang,הכל,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0106,แต่,dtae,dtae,אבל,but,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",dtae,אבל,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0107,ตก,tok,tok,ליפול,fall,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",tok,ליפול,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0108,น้ำตก,nam-tok,nam-tok,מפל,waterfall,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",nam-tok,מפל,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0109,คิด,kid,kid,לחשוב,think,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",kid,לחשוב,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0110,คุณคิดอะไร,kun kid a-rai?,kun-kid-a-rai?,על מה אתה חושב?,What are you thinking?,medium_normalized_match,5,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",kun kid a-rai?,על מה אתה חושב?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0111,ช่วย,chuai,chuai,לעזור,help,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",chuai,לעזור,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0112,ต่อ,dtaw,dtaw,להמשיך / להאריך,continue / extend,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",dtaw,להמשיך / להאריך,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0113,หา,haa,haa,לחפש / למצוא,look for / find,verified_central_corrected_script,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",haa,לראות / לחפש,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0114,หม้อ,maw³,maw3,סיר,pot,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",maw³,סיר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0115,หมอ,maws,maws,רופא,doctor,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",maws,רופא,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0116,บวก,buag,buag,פלוס,plus,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",buag,פלוס,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0117,ลบ,löb,lob,מינוס,minus,high,1,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",löb,מינוס,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0118,เท่ากับ,ta-gab,ta-gab,שווה,equals,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",ta-gab,שווה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0119,เท่า,tao,tao,שווה / באותה מידה,equal / as much as,verified_central_corrected_meaning,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",dtao,סך הכל,For total/sum use รวม or ทั้งหมด depending context.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0120,เท่าไร,tao-rai,tao-rai,כמה (מחיר),how much?,medium_normalized_match,3,True,"תומר 3,csv.txt","תומר 3,csv.txt; תומר4,csv.txt",tao-rai,כמה (מחיר),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0121,แล้วแต่คุณ,laew-dtua kun,laew-dtua-kun,תלוי בך,up to you,medium_normalized_match,4,True,"תומר4,csv.txt","תומר4,csv.txt",laew-dtua kun,תלוי בך,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0122,กี่โมง,gii mong?,gii-mong?,איזו שעה?,what time?,high,5,True,"תומר4,csv.txt","תומר4,csv.txt",gii mong?,איזו שעה?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0123,ตอนนี้,dtua-ni,dtua-ni,עכשיו,now,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",dtua-ni,עכשיו,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0124,วันนี้,wan-nii,wan-nii,היום,today,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",wan-nii,היום,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0125,พรุ่งนี้,pru-ngii,pru-ngii,מחר,tomorrow,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",pru-ngii,מחר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0126,เมื่อวาน,meua-wan,meua-wan,אתמול,yesterday,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",meua-wan,אתמול,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0127,ตอนเช้า,dtan-chao,dtan-chao,בוקר,morning,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",dtan-chao,בוקר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0128,ตอนเที่ยง,dtan-tiang,dtan-tiang,צהריים,noon,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",dtan-tiang,צהריים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0129,ตอนเย็น,dtan-yen,dtan-yen,ערב,evening,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",dtan-yen,ערב,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0130,ตอนกลางคืน,dtan-klang-keun,dtan-klang-keun,לילה,night,medium_normalized_match,4,True,"תומר4,csv.txt","תומר4,csv.txt",dtan-klang-keun,לילה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0131,กินข้าว,gin-kaaw,gin-kaaw,לאכול (אורז/ארוחה),eat / have a meal,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",gin-kaaw,לאכול (אורז/ארוחה),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0132,หนึ่ง,nueng,nueng,אחד,one,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",nueng,אחד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0133,สอง,song,song,שתיים,two,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",song,שתיים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0134,สาม,saam,saam,שלוש,three,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",saam,שלוש,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0135,สี่,sii,sii,ארבע,four,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",sii,ארבע,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0136,ห้า,haa,haa,חמש,five,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",haa,חמש,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0137,หก,hok,hok,שש,six,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",hok,שש,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0138,เจ็ด,jet,jet,שבע,seven,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",jet,שבע,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0139,แปด,bpaed,bpaed,שמונה,eight,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",bpaed,שמונה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0140,เก้า,gao,gao,תשע,nine,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",gao,תשע,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0141,สิบ,sip,sip,עשר,ten,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",sip,עשר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0142,สิบเอ็ด,sip-et,sip-et,אחת עשרה,eleven,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",sip-et,אחת עשרה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0143,ยี่สิบ,yii-sip,yii-sip,עשרים,twenty,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",yii-sip,עשרים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0144,ร้อย,roi,roi,מאה,hundred,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",roi,מאה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0145,พัน,pan,pan,אלף,thousand,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",pan,אלף,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0146,หมื่น,meun,meun,עשרת אלפים,ten thousand,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",meun,עשרת אלפים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0147,แสน,san,san,מאה אלף,hundred thousand,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",san,מאה אלף,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0148,ล้าน,lan,lan,מיליון,million,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",lan,מיליון,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0149,หน้า,naa,naa,פנים / עונה / דף,face / season / page,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",naa,פנים / עונה / דף,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0150,หน้าร้อน,naa-rawn,naa-rawn,העונה החמה,hot season,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",naa-rawn,העונה החמה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0151,หน้าฝน,naa-fon,naa-fon,עונת הגשמים,rainy season,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",naa-fon,עונת הגשמים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0152,หน้าหนาว,naa-nao,naa-nao,העונה הקרה,cold season,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",naa-nao,העונה הקרה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0153,ใกล้,glai,glai,קרוב (טון נמוך),near,high_context_disambiguated,1,True,"תומר4,csv.txt","תומר4,csv.txt",glai,קרוב (טון נמוך),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0154,ไกล,glai,glai,רחוק (טון גבוה),far,high_context_disambiguated,1,True,"תומר4,csv.txt","תומר4,csv.txt",glai,רחוק (טון גבוה),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0155,ต้อง,dtong,dtong,חייב,must,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",dtong,חייב,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0156,กลัว,glua,glua,לפחד,afraid,high,1,True,"תומר4,csv.txt","תומר4,csv.txt",glua,לפחד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0157,ประมาณ,bpra-maan,bpra-maan,בערך,about / approximately,medium_normalized_match,3,True,"תומר4,csv.txt","תומר4,csv.txt",bpra-maan,בערך,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0158,กลับ,glap,glap,לחזור,return,high,1,True,"תומר4,csv.txt","תומר4,csv.txt; תומר 7,csv.txt",glap,לחזור,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0159,กลับบ้าน,glap baan,glap-baan,לחזור הביתה,return home,high,3,True,"תומר4,csv.txt","תומר4,csv.txt",glap baan,לחזור הביתה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0160,เหงื่อ,heua,heua,זיעה,sweat,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",heua,זיעה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0161,เหงื่อออก,heua-awk,heua-awk,להזיע,sweat / perspire,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",heua-awk,להזיע,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0162,เหนื่อย,nuay,nuay,עייף,tired,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",nuay,עייף,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0163,หิว,hiu,hiu,רעב,hungry,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",hiu,רעב,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0164,หิวน้ำ,hiu-nam,hiu-nam,צמא,thirsty,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",hiu-nam,צמא,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0165,อิ่ม,im,im,שבע (מאוכל),full from food,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",im,שבע (מאוכל),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0166,เผ็ด,pet,pet,חריף,spicy,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",pet,חריף,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0167,เค็ม,kem,kem,מלוח,salty,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",kem,מלוח,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0168,เปรี้ยว,bpreaw,bpreaw,חמוץ,sour,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",bpreaw,חמוץ,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0169,ขม,kom,kom,מר,bitter,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",kom,מר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0170,มัน,man,man,שומני,oily / fatty,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",man,שומני,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0171,จืด,juad,juad,תפל,bland,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",juad,תפל,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0172,ขยะ,ka-ya,ka-ya,זבל,trash,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",ka-ya,זבל,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0173,ไม่เป็นไร,mai-pen-rai,mai-pen-rai,לא משנה / אין בעיה,never mind / no problem,verified_central_corrected_meaning,4,True,"תומר 5,csv.txt","תומר 5,csv.txt",mai-pen-rai,לא משנה / אין בעבר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0174,โชคดี,chok-dee,chok-dee,בהצלחה,good luck,verified_central_corrected_romanization,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",cho-dee,בהצלחה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0175,ลาก่อน,la-gon,la-gon,להתראות,goodbye,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",la-gon,להתראות,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0176,ไปก่อนนะ,pai-gon-na,pai-gon-na,אני הולך עכשיו (להתראות),I am going now / bye,medium_normalized_match,4,True,"תומר 5,csv.txt","תומר 5,csv.txt",pai-gon-na,אני הולך עכשיו (להתראות),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0177,ไปแล้ว,bpai-leaw,bpai-leaw,כבר הלכתי / הלכתי,already went,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",bpai-leaw,כבר הלכתי / הלכתי,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0178,เจอกัน,jer-gan,jer-gan,נתראה,see you,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",jer-gan,נתראה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0179,ทุกวัน,tuk-wan,tuk-wan,כל יום,every day,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",tuk-wan,כל יום,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0180,ทุกอย่าง,tuk-yaang,tuk-yaang,הכל,everything,verified_central_added_script,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",tuk-yaang,הכל,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0181,บางที,bang-ti,bang-ti,לפעמים,sometimes,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",bang-ti,לפעמים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0182,บางคน,bang-kon,bang-kon,חלק מהאנשים,some people,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",bang-kon,חלק מהאנשים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0183,ไม่เคย,mai-koey,mai-koey,אף פעם לא,never,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",mai-koey,אף פעם לא,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0184,เคย,koey,koey,פעם / כבר עשיתי,ever,high_context_disambiguated,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",koey,פעם / כבר עשיתי,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0185,เบื่อ,bua,bua,משעמם,bored,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",bua,משעמם,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0186,ง่วงนอน,nguang-non,nguang-non,ישנוני,sleepy,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",nguang-non,ישנוני,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0187,สนุก,sanook,sanook,כיף,fun,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",sanook,כיף,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0188,เป็น,bpen,bpen,להיות / לדעת לעשות,be / know how to,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",bpen,להיות / לדעת לעשות,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0189,คือ,kue,kue,זה / הוא (להגדרות),is / means,high,1,True,"תומר 5,csv.txt","תומר 5,csv.txt",kue,זה / הוא (להגדרות),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0190,สวัสดี,sa-waat-dee,sa-waat-dee,שלום,hello,medium_normalized_match,4,True,"תומר 5,csv.txt","תומר 5,csv.txt",sa-waat-dee,שלום,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0191,ขอบคุณ,kob-kun,kob-kun,תודה,thank you,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",kob-kun,תודה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0192,ยินดีที่ได้รู้จัก,yin-dee tii dai ruu-jak,yin-dee-tii-dai-ruu-jak,נעים להכיר,nice to meet you,verified_central_added_script,5,True,"תומר 5,csv.txt","תומר 5,csv.txt",yin-dee-tii-dai-ruu-jag,נעים להכיר,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0193,ที่ไหน,tii-nai?,tii-nai?,איפה?,where?,medium_normalized_match,5,True,"תומר 5,csv.txt","תומר 5,csv.txt",tii-nai?,איפה?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0194,เมื่อไร,meua-rai?,meua-rai?,מתי?,when?,medium_normalized_match,5,True,"תומר 5,csv.txt","תומר 5,csv.txt",meua-rai?,מתי?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0195,ยังไง,yang-ngai?,yang-ngai?,איך?,how?,medium_normalized_match,5,True,"תומר 5,csv.txt","תומר 5,csv.txt",yang-ngai?,איך?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0196,เพราะว่า,prow-wa,prow-wa,בגלל ש...,because,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",prow-wa,בגלל ש...,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0197,ขนมปัง,ka-nom-bpang,ka-nom-bpang,לחם,bread,medium_normalized_match,4,True,"תומר 5,csv.txt","תומר 5,csv.txt",ka-nom-bpang,לחם,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0198,เนื้อ,neu-a,neu-a,בשר / בקר,meat / beef,medium_normalized_match,3,True,"תומר 5,csv.txt","תומר 5,csv.txt",neu-a,בשר / בקר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0199,ไก่,gai,gai,עוף,chicken,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",gai,עוף,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0200,หมู,moo,moo,חזיר,pork / pig,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",moo,חזיר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0201,ปลา,bpaa,bpaa,דג,fish,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",bpaa,דג,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0202,กุ้ง,goong,goong,שרימפס,shrimp,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",goong,שרימפס,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0203,ปู,puu,puu,סרטן,crab,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt; אלמוג 1,CSV.txt",puu,סרטן,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0204,ไข่,kai,kai,ביצה,egg,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",kai,ביצה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0205,ไข่ดาว,kai-dao,kai-dao,ביצת עין,fried egg,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",kai-dao,ביצת עין,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0206,ไข่เจียว,kai-jeaw,kai-jeaw,חביתה,omelette,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",kai-jeaw,חביתה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0207,ผัก,pak,pak,ירקות,vegetables,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",pak,ירקות,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0208,ผลไม้,pon-la-mai,pon-la-mai,פירות,fruit,medium_normalized_match,4,True,"תומר 6,csv.txt","תומר 6,csv.txt",pon-la-mai,פירות,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0209,ส้ม,som,som,תפוז,orange,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",som,תפוז,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0210,มะม่วง,ma-muang,ma-muang,מנגו,mango,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",ma-muang,מנגו,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0211,มะพร้าว,ma-prao,ma-prao,קוקוס,coconut,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",ma-prao,קוקוס,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0212,กล้วย,gluay,gluay,בננה,banana,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",gluay,בננה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0213,สับปะรด,sup-pa-rot,sup-pa-rot,אננס,pineapple,medium_normalized_match,4,True,"תומר 6,csv.txt","תומר 6,csv.txt",sup-pa-rot,אננס,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0214,แตงโม,dtaeng-mo,dtaeng-mo,אבטיח,watermelon,original_thai_from_file_verified_english,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",แตงโม (dtaeng-mo),אבטיח,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0215,น้ำแข็ง,nam-kaeng,nam-kaeng,קרח,ice,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",nam-kaeng,קרח,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0216,น้ำส้ม,nam-som,nam-som,מיץ תפוזים,orange juice,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",nam-som,מיץ תפוזים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0217,กาแฟ,ga-fe,ga-fe,קפה,coffee,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",ga-fe,קפה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0218,นม,nom,nom,חלב,milk,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",nom,חלב,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0219,เบียร์,beer,beer,בירה,beer,original_thai_from_file,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",เบียร์ (beer),בירה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0220,เหล้า,lao,lao,אלכוהול / וויסקי,alcohol / whiskey,original_thai_from_file,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",เหล้า (lao),אלכוהול / וויסקי,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0221,กับ,gap,gap,עם,with,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",gap,עם,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0222,เอา,ao,ao,רוצה / לקחת,want / take,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",ao,רוצה / לקחת,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0223,ไม่เอา,mai ao,mai-ao,לא רוצה,do not want,high,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",mai ao,לא רוצה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0224,เอาอันนี้,ao-an-nii,ao-an-nii,רוצה את זה,want this one,medium_normalized_match,4,True,"תומר 6,csv.txt","תומר 6,csv.txt",ao-an-nii,רוצה את זה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0225,เรือ,reua,reua,סירה,boat,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",reua,סירה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0226,เรือบิน,reua-bin,reua-bin,מטוס,airplane,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",reua-bin,מטוס,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0227,รถ,rot,rot,מכונית,car / vehicle,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",rot,מכונית,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0228,รถเมล์,rot-mae,rot-mae,אוטובוס,bus,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",rot-mae,אוטובוס,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0229,รถไฟ,rot-fai,rot-fai,רכבת,train,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",rot-fai,רכבת,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0230,มอเตอร์ไซค์,mo-dtu-sai,mo-dtu-sai,אופנוע,motorbike,medium_normalized_match,4,True,"תומר 6,csv.txt","תומר 6,csv.txt",mo-dtu-sai,אופנוע,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0231,จักรยาน,jak-kra-yaan,jak-kra-yaan,אופניים,bicycle,verified_central_added_script,4,True,"תומר 6,csv.txt","תומר 6,csv.txt",jak-kra-yaan,אופניים,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0232,เดิน,doen,doen,ללכת ברגל,walk,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",doen,ללכת ברגל,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0233,วิ่ง,wing,wing,לרוץ,run,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt; אלמוג 5(2).apkg",wing,לרוץ,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0234,สวย,suay,suay,יפה,beautiful,high_context_disambiguated,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",suay,יפה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0235,น่ารัก,naa-rak,naa-rak,חמוד,cute,medium_normalized_match,3,True,"תומר 6,csv.txt","תומר 6,csv.txt",naa-rak,חמוד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0236,หล่อ,lor,lor,חתיך,handsome,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",lor,חתיך,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0237,เตี้ย,dtia,dtia,נמוך,short,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",dtia,נמוך,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0238,สูง,soong,soong,גבוה,tall,high,1,True,"תומר 6,csv.txt","תומר 6,csv.txt",soong,גבוה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0239,อ้วน,u-an,u-an,שמן (גוף),fat / overweight,medium_normalized_match,3,True,"תומר 7,csv.txt","תומר 7,csv.txt",u-an,שמן (גוף),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0240,ผอม,pom,pom,רזה,thin,original_thai_from_file,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",ผอม (pom),רזה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0241,ใหญ่,yai,yai,גדול,big,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",yai,גדול,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0242,เล็ก,lek,lek,קטן,small,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",lek,קטן,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0243,เหงา,ngao,ngao,בודד,lonely,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt; תומר 8,csv.txt",ngao,בודד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0244,เสียใจ,sia-jai,sia-jai,עצוב,sad / sorry,medium_normalized_match,3,True,"תומר 7,csv.txt","תומר 7,csv.txt",sia-jai,עצוב,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0245,ดีใจ,dii-jai,dii-jai,שמח,happy,medium_normalized_match,3,True,"תומר 7,csv.txt","תומר 7,csv.txt",dii-jai,שמח,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0246,โกรธ,grote,grote,כועס,angry,original_thai_from_file,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",โกรธ (grote),כועס,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0247,กลัว,glua,glua,מפחד,afraid,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt; תומר 8,csv.txt",glua,מפחד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0248,ตกใจ,dtok-jai,dtok-jai,מופתע / בהלם,shocked / startled,medium_normalized_match,3,True,"תומר 7,csv.txt","תומר 7,csv.txt",dtok-jai,מופתע / בהלם,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0249,งง,ngong,ngong,מבולבל,confused,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",ngong,מבולבל,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0250,มั่นใจ,man-jai,man-jai,בטוח בעצמי,confident,medium_normalized_match,3,True,"תומר 7,csv.txt","תומר 7,csv.txt",man-jai,בטוח בעצמי,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0251,น่าเข้าใจ,naa-kao-jai,naa-kao-jai,מובן,understandable,medium_normalized_match,4,True,"תומר 7,csv.txt","תומר 7,csv.txt",naa-kao-jai,מובן,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0252,ไม่เข้าใจ,mai-kao-jai,mai-kao-jai,לא מבין,do not understand,medium_normalized_match,4,True,"תומר 7,csv.txt","תומר 7,csv.txt",mai-kao-jai,לא מבין,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0253,เข้าใจไหม,kao-jai mai?,kao-jai-mai?,מבין?,Do you understand?,medium_normalized_match,5,True,"תומר 7,csv.txt","תומר 7,csv.txt",kao-jai mai?,מבין?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0254,เข้าใจแล้ว,kao-jai leaw,kao-jai-leaw,הבנתי כבר,understood already,medium_normalized_match,4,True,"תומר 7,csv.txt","תומר 7,csv.txt",kao-jai leaw,הבנתי כבר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0255,รัก,rak,rak,אוהב,love,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",rak,אוהב,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0256,เกลียด,gliad,gliad,שונא,hate,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",gliad,שונא,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0257,เห็นด้วย,hen-duai,hen-duai,מסכים,agree,medium_normalized_match,3,True,"תומר 7,csv.txt","תומר 7,csv.txt",hen-duai,מסכים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0258,ไม่เห็นด้วย,mai-hen-duai,mai-hen-duai,לא מסכים,disagree,medium_normalized_match,4,True,"תומר 7,csv.txt","תומר 7,csv.txt",mai-hen-duai,לא מסכים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0259,จริง ๆ,jing-jing,jing-jing,באמת,really,medium_normalized_match,3,True,"תומר 7,csv.txt","תומר 7,csv.txt",jing-jing,באמת,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0260,ลอง,long,long,לנסות,try,high_context_disambiguated,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",long,לנסות,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0261,ดู,duu,duu,לראות / להסתכל,look / watch,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",duu,לראות / להסתכל,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0262,ฟัง,fang,fang,להקשיב,listen,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",fang,להקשיב,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0263,ดม,dom,dom,להריח,smell,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",dom,להריח,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0264,ชิม,chim,chim,לטעום,taste,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",chim,לטעום,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0265,จำ,jum,jum,לזכור,remember,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",jum,לזכור,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0266,เคย,keey,keey,להתרגל / פעם...,ever / used to,high_context_disambiguated,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",keey,להתרגל / פעם...,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0267,เที่ยว,teaw,teaw,לטייל / לבלות,travel / hang out,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",teaw,לטייל / לבלות,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0268,รอ,raw,raw,לחכות,wait,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",raw,לחכות,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0269,ซื้อ,suu,suu,לקנות,buy,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",suu,לקנות,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0270,ขาย,kaai,kaai,למכור,sell,high_context_disambiguated,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",kaai,למכור,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0271,ให้,hai,hai,לתת / עבור,give / for,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",hai,לתת / עבור,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0272,ช่วย,choo-ay,choo-ay,לעזור,help,medium_normalized_match,3,True,"תומר 7,csv.txt","תומר 7,csv.txt",choo-ay,לעזור,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0273,บอก,bork,bork,להגיד / לספר,tell,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",bork,להגיד / לספר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0274,ถาม,tam,tam,לשאול,ask,high_context_disambiguated,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",tam,לשאול,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0275,ยิ้ม,yim,yim,לחייך,smile,high,1,True,"תומר 7,csv.txt","תומר 7,csv.txt",yim,לחייך,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0276,ร้องไห้,rong¹-hai³,rong1-hai3,לבכות,cry,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",rong¹-hai³,לבכות,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0277,อิจฉา,it²-chaa¹,it2-chaa1,לקנא,envy / jealous,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",it²-chaa¹,לקנא,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0278,โมโห,mo¹-ho¹,mo1-ho1,עצבני,angry / annoyed,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",mo¹-ho¹,עצבני,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0279,รำคาญ,ram¹-kaan¹,ram1-kaan1,מעצבן,annoyed / annoying,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",ram¹-kaan¹,מעצבן,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0280,หวัง,wang¹,wang1,לקוות,hope,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",wang¹,לקוות,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0281,มั่นใจ,man¹-jai¹,man1-jai1,בטוח,confident,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",man¹-jai¹,בטוח,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0282,น่าสงสาร,naa³-song⁵-saan¹,naa3-song5-saan1,מסכן,pitiful / poor thing,medium_normalized_match,4,True,"תומר 8,csv.txt","תומר 8,csv.txt",naa³-song⁵-saan¹,מסכן,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0283,ภูมิใจ,pum¹-jai¹,pum1-jai1,גאה,proud,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",pum¹-jai¹,גאה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0284,เสียดาย,sia⁵-daai¹,sia5-daai1,חבל / בזבוז,what a pity / waste,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",sia⁵-daai¹,חבל / בזבוז,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0285,ตื่นเต้น,dteun-dten,dteun-dten,מתרגש,excited,verified_central_added_script,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",dtun²-dten³,מתרגש,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0286,ง่วง,nguang³,nguang3,ישנוני,sleepy,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",nguang³,ישנוני,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0287,ตกใจ,dtok²-jai¹,dtok2-jai1,מבוהל,shocked / startled,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",dtok²-jai¹,מבוהל,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0288,รวม,ruam¹,ruam1,ביחד,together / include,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",ruam¹,ביחד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0289,ชื่อจริง,cheuu³-jing¹,cheuu3-jing1,שם אמיתי,real name,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",cheuu³-jing¹,שם אמיתי,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0290,ชื่อเล่น,cheuu³-len³,cheuu3-len3,כינוי,nickname,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",cheuu³-len³,כינוי,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0291,นามสกุล,naam¹-sa¹-kun¹,naam1-sa1-kun1,שם משפחה,surname,medium_normalized_match,4,True,"תומר 8,csv.txt","תומר 8,csv.txt",naam¹-sa¹-kun¹,שם משפחה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0292,คือ,keuu¹,keuu1,זה / הוא (הגדרה),is / means,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",keuu¹,זה / הוא (הגדרה),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0293,เบื่อ,beaua²,beaua2,משעמם,bored,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",beaua²,משעמם,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0294,สมอง,sa¹-mawng¹,sa1-mawng1,מוח,brain,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",sa¹-mawng¹,מוח,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0295,สมองไม่ทำงาน,sa¹-mawng¹ mai³ tam¹-ngaan¹,sa1-mawng1-mai3-tam1-ngaan1,המוח לא עובד,brain not working,medium_normalized_match,4,True,"תומר 8,csv.txt","תומר 8,csv.txt",sa¹-mawng¹ mai³ tam¹-ngaan¹,המוח לא עובד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0296,บน,bon¹,bon1,על (מעל),on / above,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",bon¹,על (מעל),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0297,ต่อไป,dtor²-bpai¹,dtor2-bpai1,הבא,next,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",dtor²-bpai¹,הבא,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0298,เห็น,hen¹,hen1,רואה,see,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",hen¹,רואה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0299,หน้าต่าง,naa³-dtang²,naa3-dtang2,חלון,window,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",naa³-dtang²,חלון,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0300,ห้อง,hawng³,hawng3,חדר,room,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",hawng³,חדר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0301,พ่อแม่,poh³-mae³,poh3-mae3,הורים,parents,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",poh³-mae³,הורים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0302,กับข้าว,kap²-kaao³,kap2-kaao3,אוכל (שאוכלים עם אורז),food eaten with rice,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",kap²-kaao³,אוכל (שאוכלים עם אורז),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0303,นักเรียน,nag²-rian¹,nag2-rian1,סטודנט / תלמיד,student,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",nag²-rian¹,סטודנט / תלמיד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0304,ร้านอาหาร,raan³-aa¹-haan⁵,raan3-aa1-haan5,מסעדה,restaurant,medium_normalized_match,4,True,"תומר 8,csv.txt","תומר 8,csv.txt",raan³-aa¹-haan⁵,מסעדה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0305,เจ้าของ,jao³-kawng¹,jao3-kawng1,הבעלים,owner,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",jao³-kawng¹,הבעלים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0306,แม่,mae³,mae3,אמא,mother,high,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",mae³,אמא,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0307,ผู้หญิง,puu³-ying⁵,puu3-ying5,אישה / נקבה,woman / female,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",puu³-ying⁵,אישה / נקבה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0308,ผู้ชาย,puu³-chaai¹,puu3-chaai1,גבר / זכר,man / male,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",puu³-chaai¹,גבר / זכר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0309,ในหลวง,nai¹-lu-ang¹,nai1-lu-ang1,המלך,king,medium_normalized_match,4,True,"תומר 8,csv.txt","תומר 8,csv.txt",nai¹-lu-ang¹,המלך,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0310,พระเจ้าอยู่หัว,pra¹-jao³-yuu²-hua¹,pra1-jao3-yuu2-hua1,המלך (תואר רשמי),king (formal title),medium_normalized_match,4,True,"תומר 8,csv.txt","תומר 8,csv.txt",pra¹-jao³-yuu²-hua¹,המלך (תואר רשמי),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0311,หมู่,muu,muu,קבוצה / כפר / חבורה,group / village / category,verified_central_corrected_script,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",moo²,קבוצה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0312,ชาวเผ่า,chaao¹-pao¹,chaao1-pao1,אנשי שבט,tribal people,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",chaao¹-pao¹,אנשי שבט,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0313,ดอย,doi¹,doi1,הר,mountain,regional_northern_not_priority,review_queue,False,"תומר 8,csv.txt","תומר 8,csv.txt",doi¹,הר,Prefer ภูเขา for standard Central Thai “mountain”.,needs_user_review_or_not_priority
+vocab_0314,ภูเขา,puu¹-kao¹,puu1-kao1,הר,mountain,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",puu¹-kao¹,הר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0315,ผ้า,paa,paa,בד / בגד,cloth / fabric / clothing,verified_central_corrected_script,1,True,"תומר 8,csv.txt","תומר 8,csv.txt",paa³,בד / בגד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0316,ตลาดนัด,dtalard²-nat¹,dtalard2-nat1,שוק,market,medium_normalized_match,3,True,"תומר 8,csv.txt","תומר 8,csv.txt",dtalard²-nat¹,שוק,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0317,อีก,iig(2),iig-2,שוב (Again),again / more,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",iig(2),שוב (Again),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0318,พักผ่อน,pag-pawn(2-2),pag-pawn-2-2,לנוח,rest,medium_normalized_match,3,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",pag-pawn(2-2),לנוח,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0319,ไปเที่ยว,bpai-tiao(1-3),bpai-tiao-1-3,לטייל / להסתובב בכיף,go out / travel for fun,medium_normalized_match,3,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",bpai-tiao(1-3),לטייל / להסתובב בכיף,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0320,เสร็จ,sed(2),sed-2,סיים / נגמר,finish / done,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",sed(2),סיים / נגמר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0321,หมด,mod(2),mod-2,הכל נגמר / אזל,finished / used up,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",mod(2),הכל נגמר / אזל,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0322,ตื่น,dteun,dteun,להתעורר,wake up,verified_central_corrected_romanization,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",theung(2),להתעורר,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0323,หลง,long(1),long-1,ללכת לאיבוד,lost,high_context_disambiguated,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",long(1),ללכת לאיבוד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0324,ความอดทน,kwaam-od-ton(1-2-1),kwaam-od-ton-1-2-1,סבלנות,patience,medium_normalized_match,4,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",kwaam-od-ton(1-2-1),סבלנות,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0325,ปลา,bplaa(1),bplaa-1,דג,fish,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",bplaa(1),דג,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0326,กุ้ง,gung(3),gung-3,שרימפס,shrimp,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",gung(3),שרימפס,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0327,หอย,hoi(5),hoi-5,צדפה,shellfish,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",hoi(5),צדפה,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0328,ปลาหมึก,bpla-meuk,bpla-meuk,דיונון,squid,verified_central_added_script,3,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",bpla-meuk(1-2),דיונון,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0329,อาหารทะเล,aa-haan-ta-lay(1(1)-5-1-1),aa-haan-ta-lay-1-1-5-1-1,פירות ים,seafood,medium_normalized_match,4,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",aa-haan-ta-lay(1(1)-5-1-1),פירות ים,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0330,เมื่อไร,meua-rai(3-1),meua-rai-3-1,מתי,when?,medium_normalized_match,3,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",meua-rai(3-1),מתי,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0331,ยังไง,yang-ngai,yang-ngai,איך?,how?,verified_bangkok_spoken_preferred,5,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",yaang-ngai(2-1),איך,Spoken Bangkok preference; formal written form is อย่างไร.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0332,ใคร,khrai(1),khrai-1,מי (או מי זה),who,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",khrai(1),מי (או מי זה),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0333,วันเกิด,wan-geut(1-2),wan-geut-1-2,יום הולדת,birthday,medium_normalized_match,3,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",wan-geut(1-2),יום הולדת,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0334,เคย,koey(1),koey-1,אי פעם,ever,high_context_disambiguated,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",koey(1),אי פעם,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0335,สมาชิก,sa-ma-chik(2-1-3),sa-ma-chik-2-1-3,חבר (במועדון / קבוצה),member,medium_normalized_match,4,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",sa-ma-chik(2-1-3),חבר (במועדון / קבוצה),,central_bangkok_ok_for_beginner_or_context_note
+vocab_0336,เด็ก,dek(2),dek-2,ילד,child,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",dek(2),ילד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0337,น้ำมัน,nam-man(1-1),nam-man-1-1,שמן / דלק,oil / fuel,medium_normalized_match,3,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",nam-man(1-1),שמן / דלק,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0338,ปั๊มน้ำมัน,bpum-nam-man(3-1-1),bpum-nam-man-3-1-1,תחנת דלק,gas station,medium_normalized_match,4,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",bpum-nam-man(3-1-1),תחנת דלק,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0339,กัน,gan(1),gan-1,אחד את השני / ביחד,each other / together,high,2,True,"אלמוג 1,CSV.txt","אלמוג 1,CSV.txt",gan(1),אחד את השני / ביחד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0340,แต่เช้า,dtae-chao,dtae-chao,לפנות בוקר / מוקדם בבוקר,early in the morning,verified_central_added_script,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,dtae-chao,לפנות בוקר / מוקדם בבוקר,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0341,ตอนเช้า,dton-chao,dton-chao,בבוקר,morning / in the morning,verified_central_added_script,3,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,dton-chao,בבוקר,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0342,ตอนสาย,dton-saai,dton-saai,מאוחר בבוקר,late morning,verified_central_added_script,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,dton-saai,מאוחר בבוקר,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0343,ตอนเที่ยง,dton-tiang,dton-tiang,בצהריים,noon / midday,verified_central_added_script,3,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,dton-tieng,בצהריים,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0344,ตอนบ่าย,dton-baai,dton-baai,אחר הצהריים,afternoon,verified_central_added_script,3,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,dton-baai,אחר הצהריים,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0345,ตอนเย็น,dton-yen,dton-yen,בערב,evening,verified_central_added_script,3,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,dton-yen,בערב,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0346,ตอนกลางคืน,dton-glaang-kheun,dton-glaang-kheun,בלילה,night / at night,verified_central_added_script,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,dton-tiang-kheun,בלילה,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0347,ตอนดึก,dton-deuk,dton-deuk,מאוחר בלילה,late at night,verified_central_added_script,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,dton-deug,מאוחר בלילה,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0348,เห็นด้วย,hen-duai,hen-duai,להסכים,agree,verified_central_added_script,3,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,להסכים,Hen Dubai,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0349,เห็นไหม,hen mai?,hen-mai?,רואה?,Do you see?,verified_central_added_script,5,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,רואה?,Hen mai?,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0350,เห็นด้วยไหม,hen-duai mai?,hen-duai-mai?,האם אתה מסכים?,Do you agree?,verified_central_added_script,5,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,האם מסכים,Hen duai mai,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0351,ยืน,yuen,yuen,לעמוד,stand,verified_central_corrected_romanization,1,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,Yuen,לעמוד,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0352,นั่ง,nang,nang,לשבת,sit,verified_central_corrected_romanization,1,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,Nung,לשבת,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0353,เดิน,dern,dern,ללכת,walk,verified_central_corrected_romanization,1,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,Doen,ללכת,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0354,ข้าม,khaam,khaam,לדלג,cross / skip over,verified_central_corrected_romanization,1,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,Khaam,לדלג,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0355,ไม่ไหว,mai wai,mai-wai,לא יכול / לא מסוגל / לא עומד בזה,cannot handle it / cannot manage,verified_central_added_script,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ไม่ไหว mai wai,לא יכול / לא מסוגל / לא עומד בזה,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0356,ไม่ต้องห่วง,mai dtong huang,mai-dtong-huang,אל תדאג / אין מה לדאוג,do not worry,original_thai_from_file,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ไม่ต้องห่วง mai dtong huang,אל תדאג / אין מה לדאוג,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0357,ไม่สนใจ,mai son jai,mai-son-jai,לא מעוניין / לא אכפת,not interested / do not care,original_thai_from_file,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ไม่สนใจ mai son jai,לא מעוניין / לא אכפת,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0358,ไม่มีอะไร,mai mee a-rai,mai-mee-a-rai,אין כלום,there is nothing / nothing,verified_central_added_script,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ไม่มีอะไร mai mee a-rai,אין כלום,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0359,ไม่ต้อง,mai dtong,mai-dtong,לא צריך / אין צורך,do not need,original_thai_from_file,3,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ไม่ต้อง mai dtong,לא צריך / אין צורך,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0360,ไม่มีปัญหา,mai mee pan-haa,mai-mee-pan-haa,אין בעיה,no problem,verified_central_added_script,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ไม่มีปัญหา mai mee pan-haa,אין בעיה,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0361,ไม่มีทาง,mâi mee taang,mai-mee-taang,אין מצב / אין סיכוי,no way,original_thai_from_file,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ไม่มีทาง (mâi mee taang),אין מצב / אין סיכוי,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0362,ว่าไง,wâa ngai,waa-ngai,מה קורה? / מה נשמע?,what’s up?,original_thai_from_file,5,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ว่าไง (wâa ngai),מה קורה? / מה נשמע?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0363,ไม่เก็ทอะ,mâi get à,mai-get-a,אני לא מבין / לא קולט,I do not get it,original_thai_from_file,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ไม่เก็ทอะ (mâi get à),אני לא מבין / לא קולט,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0364,แล้วไง,láew ngai,laew-ngai,אז מה?,so what?,original_thai_from_file,5,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,แล้วไง (láew ngai),אז מה?,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0365,คิดว่า,khít wâa,khit-waa,לחשוב ש...,think that,original_thai_from_file,3,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,คิดว่า (khít wâa),לחשוב ש...,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0366,พูดว่า,phuut waa,phuut-waa,לומר ש...,say that...,verified_central_added_script,3,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,พูดว่า (phûut wâa),לומר ש...,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0367,บอกว่า,bòk wâa,bok-waa,לספר / להגיד ש...,tell / say that,original_thai_from_file,3,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,บอกว่า (bòk wâa),לספר / להגיד ש...,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0368,รู้สึกว่า,rúu sèuk wâa,ruu-seuk-waa,להרגיש ש...,feel that,original_thai_from_file,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,รู้สึกว่า (rúu sèuk wâa),להרגיש ש...,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0369,เพราะว่า,phróh wâa,phroh-waa,בגלל ש...,because,original_thai_from_file,3,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,เพราะว่า (phróh wâa),בגלל ש...,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0370,ได้ยินว่า,dai-yin waa,dai-yin-waa,לשמוע ש...,hear that...,verified_central_added_script,4,True,אלמוג 5(2).apkg,אלמוג 5(2).apkg,ได้ยินว่า (dâai yin wâa),לשמוע ש...,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0371,ต้นไม้,ton mai,ton-mai,צמח / עץ,plant / tree,verified_central_added_script,3,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,ton mai,צמח עציץ,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0372,บาง,baang,baang,חלק מ..,some / part of,high,1,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,חלק מ..,baang,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0373,ด้วยกัน,duay gan,duay-gan,יחדיו,together,verified_central_corrected_romanization,3,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,יחדיו,doi gan,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0374,บางที,baang tii,baang-tii,יכול להיות,maybe / sometimes,high,3,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,יכול להיות,baang tii,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0375,พวกเขา,phuak khao,phuak-khao,הם,they / them,verified_central_corrected_romanization,3,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,they הם,guwa,Corrected from erroneous guwa.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0376,บางวัน,baang wan,baang-wan,חלק מהימים,some days,high,3,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,חלק מהימים,baang wan,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0377,ทุกที่,tug tii,tug-tii,בכל מקום,everywhere,high,3,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,בכל מקום,tug tii,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0378,ออก,awk,awk,"יציאה,החוצה",exit / out / go out,verified_central_corrected_romanization,1,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,"יציאה,החוצה",oog,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0379,อุ่น,un,un,"חמים,חם",warm,verified_central_corrected_romanization,1,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,"חמים,חם",oon,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0380,ตอนผมเด็ก ๆ,dton phom dek dek,dton-phom-dek-dek,כשהייתי ילד,when I was a child,verified_central_added_script,5,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,כשהייתי ילד,dton pom deg deg,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0381,เข้า,khao,khao,להיכנס / כניסה,enter / go in,verified_central_corrected_romanization,1,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,כניסה היכנס,kao3,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0382,หน้า,naa,naa,פנים / קדימה / עונה / דף,face / front / season / page,verified_central_corrected_romanization,1,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,"פנים,לפנים,הלאה,עונות",naa3,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0383,โรงพัก,rong pag,rong-pag,תחנת משטרה,police station,verified_central_corrected_meaning,3,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,תחתנת משטרה,rong pag,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0384,ไม่ได้…,mai dai+v,mai-dai-v,לא עשיתי,did not / cannot + verb,high,3,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,לא עשיתי,mai dai+v,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0385,ดีใจที่ได้เจอ,dii-jai tii dai jer,dii-jai-tii-dai-jer,נחמד לראותך,nice to see you,verified_central_added_script,5,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,ิ่נחמד לראותך,dii jai tii dai jer,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
+vocab_0386,ผึ้ง,phueng,phueng,דבורה,bee,verified_central_corrected_romanization,1,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,"דבורה,רק",peuang,,central_bangkok_ok_for_beginner_or_context_note
+vocab_0387,ต่อย,dtoy,dtoy,אגרוף / לעקוץ,to punch / to sting,verified_central_added_script,3,True,אלמוג 4(1).apkg,אלמוג 4(1).apkg,"אגרוף ,עקיצה",dtoy,Verified as modern Standard/Central Thai; added from review queue.,central_bangkok_ok_for_beginner_or_context_note
