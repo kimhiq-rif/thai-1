@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-06-02 06:52:39",
+  "uploaded_files": [
+    "תומר 1,csv.txt",
+    "תומר 2,csv.txt",
+    "תומר 3,csv.txt",
+    "תומר4,csv.txt",
+    "תומר 5,csv.txt",
+    "תומר 6,csv.txt",
+    "תומר 7,csv.txt",
+    "תומר 8,csv.txt",
+    "אלמוג 1,CSV.txt",
+    "אלמוג 5(2).apkg",
+    "אלמוג 4(1).apkg"
+  ],
+  "rules": {
+    "no_untranslated_thai": true,
+    "active_questions_only_for_confident_thai_script": true,
+    "uncertain_items_go_to_review_queue": true,
+    "level_1_2": "letters and vowels only; no tones; paired MCQ + typing",
+    "display": "spacing + frame for Thai choices: 「ม」"
+  },
+  "counts": {
+    "raw_items": 445,
+    "unique_vocab_items": 387,
+    "active_vocab_items": 358,
+    "review_items": 29,
+    "foundation_consonants": 27,
+    "foundation_vowels": 18,
+    "questions": 1164
+  },
+  "version": "v1.16",
+  "level_policy": "Level 1.2 remains special; uploaded vocabulary is integrated into existing levels 1-5 only.",
+  "uploaded_vocab_level_mapping": {
+    "1.3 basic": "levels 1-2",
+    "1.4 compounds": "level 3",
+    "1.5 phrases": "level 4",
+    "1.6 questions/conversation": "level 5"
+  }
+}

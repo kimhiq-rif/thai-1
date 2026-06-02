@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.13.0-apkg-vocabulary-expansion';
+const APP_VERSION = '1.15.0-ipad-air-canvas-fix';
 
 const TONES = [
   { id:'mid', he:'אמצעי', en:'mid' },
@@ -13,31 +13,31 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.13', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.16', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
     syncTitle:'סנכרון Google Sheets', syncDescription:'הדבק כאן את כתובת ה־Web App של Google Apps Script. בלי כתובת — ההתקדמות נשמרת רק במכשיר הזה.',
     saveUrl:'שמור כתובת', ready:'מוכן.', qa:'בדיקת תקינות פנימית', install:'התקנה למסך הבית',
-    level:'רמה', vowelLevel:'לוח תנועות', questions:'שאלות', mixed:'מעורב', readMeaning:'תאית → עברית', meaningWrite:'עברית → כתיבה בתאית', toneMode:'תאית → טון', romanWrite:'תעתיק → כתיבה בתאית', vowelBoard:'לוח תנועות — כתיבה',
+    level:'רמה', vowelLevel:'לוח תנועות', foundationLevel:'רמה 1.2 — יסודות אותיות ותנועות', questions:'שאלות', mixed:'מעורב', readMeaning:'תאית → עברית', meaningWrite:'עברית → כתיבה בתאית', toneMode:'תאית → טון', romanWrite:'תעתיק → כתיבה בתאית', vowelBoard:'לוח תנועות — כתיבה',
     promptRead:'קרא את המילה וכתוב בעברית את המשמעות + הטון', promptMeaningWrite:'כתוב בתאית את המילה הבאה', promptRoman:'כתוב בתאית לפי התעתיק', promptTone:'מה הטון של המילה / תבנית הטונים?',
     writeHint:'כתוב על הלוח הלבן ואז הצג תשובה', answerThai:'תאית', roman:'תעתיק', meaning:'עברית', tone:'טון', selected:'בחרת', afterAnswer:'עכשיו אפשר לנקות, לכתוב שוב נכון, ואז לסמן צדקתי / טעיתי.', clickThaiLetters:'לחץ על אות/סימן בתשובה כדי לראות מידע קצר.',
     soundQuestion:'מה הצליל של הסימן?', nameQuestion:'מה שם הסימן בתאית?', symbolQuestion:'איזה סימן מתאים לשם?', boardWordQuestion:'איזו מילת לוח שייכת לסימן?', shortcutQuestion:'מה התפקיד של הסימן?',
-    sound:'צליל', signName:'שם הסימן', boardWord:'מילת לוח', note:'הערה', emoji:'אימוג׳י', shortcutAnswer:'מקצר תנועה', userLabel:'שם משתמש', userPlaceholder:'לדוגמה: rif', initUserOk:'נוצרה/נמצאה לשונית משתמש ✅', initUserErr:'שגיאת יצירת משתמש: ', saveProgress:'שמור התקדמות', loadProgress:'טען התקדמות', promptVowelWrite:'כתוב על הלוח את התשובה לפי לוח התנועות', level6McqKicker:'שאלה 1 מתוך 2 — הבנה', level6WriteKicker:'שאלה 2 מתוך 2 — כתיבה', level6Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו נושא.', level6WriteLocked:'בחר קודם תשובה אמריקאית כדי לפתוח את שאלת הכתיבה.', level6Correct:'נכון', level6Wrong:'לא נכון', level6WriteIntro:'עכשיו השתמש באותו סימן/עיצור וכתוב את המילה המבוקשת.', vowelAnswer:'תשובת לוח', thaiName:'שם תאילנדי', localName:'הסבר בעברית', writingRule:'כלל כתיבה', example:'דוגמה', consonantName:'שם העיצור', theme:'לוק',
+    sound:'צליל', signName:'שם הסימן', boardWord:'מילת לוח', note:'הערה', emoji:'אימוג׳י', shortcutAnswer:'מקצר תנועה', userLabel:'שם משתמש', userPlaceholder:'לדוגמה: rif', initUserOk:'נוצרה/נמצאה לשונית משתמש ✅', initUserErr:'שגיאת יצירת משתמש: ', saveProgress:'שמור התקדמות', loadProgress:'טען התקדמות', promptVowelWrite:'כתוב על הלוח את התשובה לפי לוח התנועות', level6McqKicker:'שאלה 1 מתוך 2 — הבנה', level6WriteKicker:'שאלה 2 מתוך 2 — כתיבה', level6Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו נושא.', level12Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו סימן/אות.', level12WriteIntro:'עכשיו כתוב את הסימן/האות או מילת הלוח מאותו פריט.', level6WriteLocked:'בחר קודם תשובה אמריקאית כדי לפתוח את שאלת הכתיבה.', level6Correct:'נכון', level6Wrong:'לא נכון', level6WriteIntro:'עכשיו השתמש באותו סימן/עיצור וכתוב את המילה המבוקשת.', vowelAnswer:'תשובת לוח', thaiName:'שם תאילנדי', localName:'הסבר בעברית', writingRule:'כלל כתיבה', example:'דוגמה', consonantName:'שם העיצור', theme:'לוק',
     syncSaved:'כתובת הסנכרון נשמרה.', uploadOk:'העלאה לענן הצליחה ✅', uploadSent:'העלאה לענן נשלחה בהצלחה ✅', downloadOk:'הורדה מהענן הצליחה ✅', uploadErr:'שגיאת העלאה: ', downloadErr:'שגיאת הורדה: '
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.13', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.16', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
     syncTitle:'Google Sheets Sync', syncDescription:'Paste your Google Apps Script Web App URL here. Without a URL, progress is saved only on this device.',
     saveUrl:'Save URL', ready:'Ready.', qa:'Internal QA check', install:'Install app',
-    level:'Level', vowelLevel:'Vowel Board', questions:'questions', mixed:'Mixed', readMeaning:'Thai → English', meaningWrite:'English → Thai writing', toneMode:'Thai → tone', romanWrite:'Romanization → Thai writing', vowelBoard:'Vowel Board — writing',
+    level:'Level', vowelLevel:'Vowel Board', foundationLevel:'Level 1.2 — Letter & Vowel Foundation', questions:'questions', mixed:'Mixed', readMeaning:'Thai → English', meaningWrite:'English → Thai writing', toneMode:'Thai → tone', romanWrite:'Romanization → Thai writing', vowelBoard:'Vowel Board — writing',
     promptRead:'Read the word and write the meaning + tone in English', promptMeaningWrite:'Write the following word in Thai', promptRoman:'Write Thai from the romanization', promptTone:'What is the tone / tone pattern?',
     writeHint:'Write on the whiteboard, then reveal the answer', answerThai:'Thai', roman:'Romanization', meaning:'English', tone:'Tone', selected:'Selected', afterAnswer:'Now you can clear, rewrite correctly, then mark correct / wrong.', clickThaiLetters:'Tap a Thai letter/sign in the answer to see a short note.',
     soundQuestion:'What sound does this sign make?', nameQuestion:'What is the Thai name of this sign?', symbolQuestion:'Which sign matches this name?', boardWordQuestion:'Which board word belongs to this sign?', shortcutQuestion:'What does this sign do?',
-    sound:'Sound', signName:'Sign name', boardWord:'Board word', note:'Note', emoji:'Emoji', shortcutAnswer:'shortens a vowel', userLabel:'Username', userPlaceholder:'e.g. rif', initUserOk:'User sheet created/found ✅', initUserErr:'User init error: ', saveProgress:'Save progress', loadProgress:'Load progress', promptVowelWrite:'Write the answer on the board from the vowel board', level6McqKicker:'Question 1 of 2 — understanding', level6WriteKicker:'Question 2 of 2 — writing', level6Choose:'Choose one answer. After choosing, a writing question about the same topic will open.', level6WriteLocked:'Choose a multiple-choice answer first to unlock the writing task.', level6Correct:'Correct', level6Wrong:'Not correct', level6WriteIntro:'Now use the same sign/consonant and write the requested word.', vowelAnswer:'Vowel-board answer', thaiName:'Thai name', localName:'English explanation', writingRule:'Writing rule', example:'Example', consonantName:'Consonant name', theme:'Theme',
+    sound:'Sound', signName:'Sign name', boardWord:'Board word', note:'Note', emoji:'Emoji', shortcutAnswer:'shortens a vowel', userLabel:'Username', userPlaceholder:'e.g. rif', initUserOk:'User sheet created/found ✅', initUserErr:'User init error: ', saveProgress:'Save progress', loadProgress:'Load progress', promptVowelWrite:'Write the answer on the board from the vowel board', level6McqKicker:'Question 1 of 2 — understanding', level6WriteKicker:'Question 2 of 2 — writing', level6Choose:'Choose one answer. After choosing, a writing question about the same topic will open.', level12Choose:'Choose one answer. After choosing, a writing task about the same sign/letter will open.', level12WriteIntro:'Now write the sign/letter or board word from the same item.', level6WriteLocked:'Choose a multiple-choice answer first to unlock the writing task.', level6Correct:'Correct', level6Wrong:'Not correct', level6WriteIntro:'Now use the same sign/consonant and write the requested word.', vowelAnswer:'Vowel-board answer', thaiName:'Thai name', localName:'English explanation', writingRule:'Writing rule', example:'Example', consonantName:'Consonant name', theme:'Theme',
     syncSaved:'Sync URL saved.', uploadOk:'Cloud upload succeeded ✅', uploadSent:'Cloud upload was sent ✅', downloadOk:'Cloud download succeeded ✅', uploadErr:'Upload error: ', downloadErr:'Download error: '
   }
 };
@@ -173,7 +173,284 @@ const WORDS = [
   {id:'apkg_029',level:5,thai:'บอกว่า',roman:'bok waa',hebrew:'לספר / להגיד ש...',english:'to tell / say that...',tone:'not_drilled',source:'apkg_almog5'},
   {id:'apkg_030',level:5,thai:'รู้สึกว่า',roman:'ruu seuk waa',hebrew:'להרגיש ש...',english:'to feel that...',tone:'not_drilled',source:'apkg_almog5'},
   {id:'apkg_031',level:5,thai:'เพราะว่า',roman:'phroh waa',hebrew:'בגלל ש... / כי',english:'because',tone:'not_drilled',source:'apkg_almog5'},
-  {id:'apkg_032',level:5,thai:'ได้ยินว่า',roman:'daai yin waa',hebrew:'לשמוע ש...',english:'to hear that...',tone:'not_drilled',source:'apkg_almog5'}
+  {id:'apkg_032',level:5,thai:'ได้ยินว่า',roman:'daai yin waa',hebrew:'לשמוע ש...',english:'to hear that...',tone:'not_drilled',source:'apkg_almog5'},
+
+
+  // Uploaded vocabulary expansion — merged into existing Levels 1–5. Tone is intentionally not drilled yet.
+  {id:"uv_0001",level:3,thai:"สำคัญ",roman:"sam¹-kan¹",hebrew:"חשוב",english:"important",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0002",level:3,thai:"ขนม",roman:"kha-num¹",hebrew:"חטיף",english:"snack",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0003",level:1,thai:"หวี",roman:"wii¹",hebrew:"אשכול בננות",english:"banana bunch / comb (review context)",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0004",level:3,thai:"มาครับ",roman:"ma¹-krap",hebrew:"אני כאן",english:"I am here (male polite)",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0005",level:1,thai:"ไหว้",roman:"waai³",hebrew:"לחלוק כבוד",english:"wai greeting / pay respect",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0006",level:3,thai:"ปากกา",roman:"bpaag²-gaa¹",hebrew:"עט",english:"pen",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0007",level:3,thai:"ว่ายน้ำ",roman:"waai³-nam¹",hebrew:"לשחות",english:"swim",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0008",level:1,thai:"ครู",roman:"kru¹",hebrew:"מורה",english:"teacher",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0009",level:5,thai:"คุณชื่ออะไร",roman:"kun¹ cheuu³ a-rai¹?",hebrew:"מה השם שלך?",english:"What is your name?",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0010",level:4,thai:"ผมชื่อ…",roman:"pom⁵ cheuu³ (name)",hebrew:"השם שלי הוא...",english:"My name is… (male)",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0011",level:4,thai:"ฉันชื่อ…",roman:"chan⁵ cheuu³ (name)",hebrew:"השם שלי הוא...",english:"My name is… (female)",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0012",level:1,thai:"อยู่",roman:"yuu²",hebrew:"להיות / לגור",english:"be / live / stay",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0013",level:1,thai:"ท้อง",roman:"thong³",hebrew:"בטן",english:"belly",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0014",level:1,thai:"หิน",roman:"hin⁵",hebrew:"אבן",english:"stone",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0015",level:1,thai:"กอง",roman:"kong¹",hebrew:"ערימה",english:"pile",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0016",level:4,thai:"ผมอยู่…",roman:"pom⁵ yuu² (place)",hebrew:"אני גר ב...",english:"I live/stay in…",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0017",level:1,thai:"หวาน",roman:"waan⁵",hebrew:"מתוק",english:"sweet",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0018",level:1,thai:"ค่าย",roman:"kaai³",hebrew:"מחנה",english:"camp",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0019",level:1,thai:"ชา",roman:"chaa¹",hebrew:"תה",english:"tea",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0020",level:5,thai:"อะไร",roman:"a-rai¹",hebrew:"מה?",english:"what",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0021",level:1,thai:"ดื่ม",roman:"deuum²",hebrew:"לשתות",english:"drink",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0022",level:1,thai:"ใต้",roman:"dtai³",hebrew:"דרום / מתחת",english:"south / under",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0023",level:1,thai:"ร้อน",roman:"rawn¹",hebrew:"חם",english:"hot",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0024",level:5,thai:"ใช่ไหม",roman:"chai³ mai¹?",hebrew:"נכון?",english:"right? / correct?",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0025",level:1,thai:"สวย",roman:"suai⁵",hebrew:"יפה",english:"beautiful",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0026",level:3,thai:"ตีหมา",roman:"dtii¹ maa¹",hebrew:"להרביץ לכלב",english:"hit a dog",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv_0027",level:1,thai:"ตอบ",roman:"dtawb²",hebrew:"לענות",english:"answer",tone:'not_drilled',source:"תומר 1,csv.txt; תומר 7,csv.txt"},
+  {id:"uv_0028",level:3,thai:"ทำงาน",roman:"tam¹-ngaan¹",hebrew:"לעבוד",english:"work",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0029",level:1,thai:"ทำ",roman:"tam¹",hebrew:"לעשות / להכין",english:"do / make",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0030",level:1,thai:"หลัง",roman:"lang⁵",hebrew:"חזרת",english:"back / behind / after",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0031",level:3,thai:"อร่อย",roman:"a¹-roi²",hebrew:"טעים",english:"delicious",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0032",level:3,thai:"นิดหน่อย",roman:"nit-noi²",hebrew:"קצת",english:"a little",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0033",level:1,thai:"จะ",roman:"ja²",hebrew:"מילת עתיד",english:"future marker / will",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0034",level:5,thai:"กินอะไร",roman:"gin¹ a¹-rai¹?",hebrew:"מה אתה אוכל?",english:"What are you eating?",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0035",level:4,thai:"ผม/ฉันรักคุณ",roman:"pom⁵/chan⁵ rak¹ kun¹",hebrew:"אני אוהב/ת אותך",english:"I love you",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0036",level:4,thai:"รักผม/ฉันไหม",roman:"rak¹ kun¹ pom⁵/chan⁵",hebrew:"אתה אוהב אותי",english:"Do you love me? (review)",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0037",level:1,thai:"ชอบ",roman:"chawb³",hebrew:"לאהוב / לחבב",english:"like",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0038",level:3,thai:"โรงเรียน",roman:"rong¹-rian¹",hebrew:"בית ספר",english:"school",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0039",level:1,thai:"เรียน",roman:"rian¹",hebrew:"ללמוד",english:"study / learn",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0040",level:1,thai:"เขียน",roman:"kian⁵",hebrew:"לכתוב",english:"write",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0041",level:4,thai:"ข้าวเหนียวมะม่วง",roman:"kaaw³-niaw³ ma¹-muang³",hebrew:"סטיקי רייס מנגו",english:"mango sticky rice",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0042",level:1,thai:"ผัด",roman:"pad²",hebrew:"מוקפץ",english:"stir-fried",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0043",level:1,thai:"ขอ",roman:"koh⁵",hebrew:"אפשר לקבל...",english:"request / may I have",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0044",level:5,thai:"เรียกว่าอะไร",roman:"riag³ a¹-rai¹?",hebrew:"איך קוראים ל...?",english:"What is it called?",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0045",level:5,thai:"คุณล่ะ",roman:"kun¹ la²",hebrew:"ואתה/ואת?",english:"and you?",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0046",level:3,thai:"เช่นกัน",roman:"chen¹-gan¹",hebrew:"אותו הדבר / גם אני",english:"same / likewise",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0047",level:3,thai:"ยินดี",roman:"yin¹-dii¹",hebrew:"ברוך הבא",english:"welcome / pleased",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0048",level:3,thai:"รู้จัก",roman:"ruu⁴-jag²",hebrew:"להכיר (אנשים/מקומות)",english:"know / be acquainted with",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0049",level:5,thai:"รู้ไหม",roman:"ruu⁴ mai¹?",hebrew:"אתה יודע?",english:"Do you know?",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0050",level:3,thai:"ไม่รู้",roman:"mai³ ruu⁴",hebrew:"לא יודע",english:"do not know",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0051",level:4,thai:"ยังไม่รู้",roman:"yang¹ mai³ ruu⁴",hebrew:"עדיין לא יודע",english:"do not know yet",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0052",level:3,thai:"นาที",roman:"naa-tii¹",hebrew:"דקה",english:"minute",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0053",level:1,thai:"หาด",roman:"haad²",hebrew:"חוף",english:"beach",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0054",level:1,thai:"พูด",roman:"puud³",hebrew:"לדבר",english:"speak",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0055",level:5,thai:"พูดไทยได้ไหม",roman:"puud³ Thai dai³ mai¹?",hebrew:"אתה יכול לדבר תאילנדית?",english:"Can you speak Thai?",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0056",level:1,thai:"พริก",roman:"prik¹",hebrew:"צ'ילי",english:"chili",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0057",level:3,thai:"ไม่ใส่",roman:"mai³ sai²",hebrew:"בלי / לא לשים",english:"without / do not put",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0058",level:3,thai:"น้ำตาล",roman:"nam¹ dtaan¹",hebrew:"סוכר",english:"sugar",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0059",level:1,thai:"เพิ่ม",roman:"peum³",hebrew:"להוסיף",english:"add / increase",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv_0060",level:3,thai:"ที่นี่",roman:"tii-nii",hebrew:"פה",english:"here",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0061",level:3,thai:"ภาษา",roman:"paa-saa",hebrew:"שפה",english:"language",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0062",level:3,thai:"ประเทศ",roman:"bpra-ted",hebrew:"מדינה",english:"country",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0063",level:3,thai:"ทุกคน",roman:"tuk-kon",hebrew:"כולם",english:"everyone",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0064",level:4,thai:"ไม่รอไม่ขอ",roman:"mai ro mai koh",hebrew:"אל תחכה",english:"do not wait, do not ask (review)",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0065",level:4,thai:"พอดี/พอไหม",roman:"paw-dii/paw mai",hebrew:"מספיק / לא מספיק",english:"enough / is it enough?",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0066",level:3,thai:"ทบทวน",roman:"tobp-tuan",hebrew:"לחזור (על חומר)",english:"review",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0067",level:1,thai:"พี่",roman:"pii",hebrew:"אח/אחות מבוגר/ת",english:"older sibling / senior",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0068",level:1,thai:"ลืม",roman:"leuum",hebrew:"לשכוח",english:"forget",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0069",level:1,thai:"และ",roman:"laeh",hebrew:"ו...",english:"and",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0070",level:5,thai:"คุณพูดภาษาอะไร",roman:"kun puud paasaa a-rai?",hebrew:"איזו שפה אתה מדבר?",english:"What language do you speak?",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0071",level:1,thai:"เสร็จ",roman:"sed",hebrew:"לסיים",english:"finish / done",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0072",level:1,thai:"เย็น",roman:"yen",hebrew:"קר",english:"cold / evening",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0073",level:5,thai:"คุณมาจาก…",roman:"kun maa jaag (place)",hebrew:"מאיפה אתה?",english:"Where are you from?",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0074",level:1,thai:"จาก",roman:"jaag",hebrew:"מ... (מקור)",english:"from",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0075",level:4,thai:"ไหน/ที่ไหน",roman:"nai/tii nai",hebrew:"איפה",english:"where",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0076",level:3,thai:"ห้องครัว",roman:"hong krua",hebrew:"מטבח",english:"kitchen",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0077",level:3,thai:"ใจดี",roman:"jaai dii",hebrew:"לב טוב",english:"kind",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0078",level:5,thai:"ทำไม",roman:"tam-mai?",hebrew:"למה?",english:"why?",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt; תומר 5,csv.txt"},
+  {id:"uv_0079",level:1,thai:"มาก",roman:"maag",hebrew:"מאוד",english:"very / much",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0080",level:1,thai:"สอน",roman:"sawn",hebrew:"ללמד",english:"teach",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0081",level:1,thai:"แพง",roman:"peang",hebrew:"יקר",english:"expensive",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0082",level:3,thai:"ทุกอย่าง",roman:"tug-yaang",hebrew:"הכל",english:"everything",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0083",level:1,thai:"แต่",roman:"dtae",hebrew:"אבל",english:"but",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0084",level:1,thai:"ตก",roman:"tok",hebrew:"ליפול",english:"fall",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0085",level:3,thai:"น้ำตก",roman:"nam-tok",hebrew:"מפל",english:"waterfall",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0086",level:1,thai:"คิด",roman:"kid",hebrew:"לחשוב",english:"think",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0087",level:5,thai:"คุณคิดอะไร",roman:"kun kid a-rai?",hebrew:"על מה אתה חושב?",english:"What are you thinking?",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0088",level:1,thai:"ช่วย",roman:"chuai",hebrew:"לעזור",english:"help",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0089",level:1,thai:"ต่อ",roman:"dtaw",hebrew:"להמשיך / להאריך",english:"continue / extend",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0090",level:1,thai:"หม้อ",roman:"maw³",hebrew:"סיר",english:"pot",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0091",level:1,thai:"หมอ",roman:"maws",hebrew:"רופא",english:"doctor",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0092",level:1,thai:"บวก",roman:"buag",hebrew:"פלוס",english:"plus",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0093",level:1,thai:"ลบ",roman:"löb",hebrew:"מינוס",english:"minus",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0094",level:3,thai:"เท่ากับ",roman:"ta-gab",hebrew:"שווה",english:"equals",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0095",level:1,thai:"เท่า",roman:"dtao",hebrew:"סך הכל",english:"equal / total",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0096",level:3,thai:"เท่าไร",roman:"tao-rai",hebrew:"כמה (מחיר)",english:"how much?",tone:'not_drilled',source:"תומר 3,csv.txt; תומר4,csv.txt"},
+  {id:"uv_0097",level:4,thai:"แล้วแต่คุณ",roman:"laew-dtua kun",hebrew:"תלוי בך",english:"up to you",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0098",level:5,thai:"กี่โมง",roman:"gii mong?",hebrew:"איזו שעה?",english:"what time?",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0099",level:3,thai:"ตอนนี้",roman:"dtua-ni",hebrew:"עכשיו",english:"now",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0100",level:4,thai:"ตอนกลางคืน",roman:"dtan-klang-keun",hebrew:"לילה",english:"night",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0101",level:1,thai:"หนึ่ง",roman:"nueng",hebrew:"אחד",english:"one",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0102",level:1,thai:"สอง",roman:"song",hebrew:"שתיים",english:"two",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0103",level:1,thai:"สาม",roman:"saam",hebrew:"שלוש",english:"three",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0104",level:1,thai:"สี่",roman:"sii",hebrew:"ארבע",english:"four",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0105",level:1,thai:"เจ็ด",roman:"jet",hebrew:"שבע",english:"seven",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0106",level:1,thai:"แปด",roman:"bpaed",hebrew:"שמונה",english:"eight",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0107",level:1,thai:"เก้า",roman:"gao",hebrew:"תשע",english:"nine",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0108",level:1,thai:"สิบ",roman:"sip",hebrew:"עשר",english:"ten",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0109",level:3,thai:"สิบเอ็ด",roman:"sip-et",hebrew:"אחת עשרה",english:"eleven",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0110",level:3,thai:"ยี่สิบ",roman:"yii-sip",hebrew:"עשרים",english:"twenty",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0111",level:1,thai:"ร้อย",roman:"roi",hebrew:"מאה",english:"hundred",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0112",level:1,thai:"พัน",roman:"pan",hebrew:"אלף",english:"thousand",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0113",level:1,thai:"หมื่น",roman:"meun",hebrew:"עשרת אלפים",english:"ten thousand",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0114",level:1,thai:"แสน",roman:"san",hebrew:"מאה אלף",english:"hundred thousand",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0115",level:1,thai:"ล้าน",roman:"lan",hebrew:"מיליון",english:"million",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0116",level:1,thai:"หน้า",roman:"naa",hebrew:"פנים / עונה / דף",english:"face / season / page",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0117",level:3,thai:"หน้าร้อน",roman:"naa-rawn",hebrew:"העונה החמה",english:"hot season",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0118",level:3,thai:"หน้าฝน",roman:"naa-fon",hebrew:"עונת הגשמים",english:"rainy season",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0119",level:3,thai:"หน้าหนาว",roman:"naa-nao",hebrew:"העונה הקרה",english:"cold season",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0120",level:1,thai:"ใกล้",roman:"glai",hebrew:"קרוב (טון נמוך)",english:"near",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0121",level:1,thai:"ไกล",roman:"glai",hebrew:"רחוק (טון גבוה)",english:"far",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0122",level:1,thai:"ต้อง",roman:"dtong",hebrew:"חייב",english:"must",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0123",level:1,thai:"กลัว",roman:"glua",hebrew:"לפחד",english:"afraid",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0124",level:3,thai:"ประมาณ",roman:"bpra-maan",hebrew:"בערך",english:"about / approximately",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0125",level:1,thai:"กลับ",roman:"glap",hebrew:"לחזור",english:"return",tone:'not_drilled',source:"תומר4,csv.txt; תומר 7,csv.txt"},
+  {id:"uv_0126",level:3,thai:"กลับบ้าน",roman:"glap baan",hebrew:"לחזור הביתה",english:"return home",tone:'not_drilled',source:"תומר4,csv.txt"},
+  {id:"uv_0127",level:1,thai:"เหงื่อ",roman:"heua",hebrew:"זיעה",english:"sweat",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0128",level:3,thai:"เหงื่อออก",roman:"heua-awk",hebrew:"להזיע",english:"sweat / perspire",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0129",level:1,thai:"เหนื่อย",roman:"nuay",hebrew:"עייף",english:"tired",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0130",level:1,thai:"หิว",roman:"hiu",hebrew:"רעב",english:"hungry",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0131",level:3,thai:"หิวน้ำ",roman:"hiu-nam",hebrew:"צמא",english:"thirsty",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0132",level:1,thai:"อิ่ม",roman:"im",hebrew:"שבע (מאוכל)",english:"full from food",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0133",level:1,thai:"เผ็ด",roman:"pet",hebrew:"חריף",english:"spicy",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0134",level:1,thai:"เค็ม",roman:"kem",hebrew:"מלוח",english:"salty",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0135",level:1,thai:"เปรี้ยว",roman:"bpreaw",hebrew:"חמוץ",english:"sour",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0136",level:1,thai:"ขม",roman:"kom",hebrew:"מר",english:"bitter",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0137",level:1,thai:"มัน",roman:"man",hebrew:"שומני",english:"oily / fatty",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0138",level:1,thai:"จืด",roman:"juad",hebrew:"תפל",english:"bland",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0139",level:3,thai:"ขยะ",roman:"ka-ya",hebrew:"זבל",english:"trash",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0140",level:3,thai:"โชคดี",roman:"cho-dee",hebrew:"בהצלחה",english:"good luck",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0141",level:3,thai:"ลาก่อน",roman:"la-gon",hebrew:"להתראות",english:"goodbye",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0142",level:4,thai:"ไปก่อนนะ",roman:"pai-gon-na",hebrew:"אני הולך עכשיו (להתראות)",english:"I am going now / bye",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0143",level:3,thai:"ไปแล้ว",roman:"bpai-leaw",hebrew:"כבר הלכתי / הלכתי",english:"already went",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0144",level:3,thai:"ทุกวัน",roman:"tuk-wan",hebrew:"כל יום",english:"every day",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0145",level:3,thai:"บางที",roman:"bang-ti",hebrew:"לפעמים",english:"sometimes",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0146",level:3,thai:"บางคน",roman:"bang-kon",hebrew:"חלק מהאנשים",english:"some people",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0147",level:1,thai:"เคย",roman:"koey",hebrew:"פעם / כבר עשיתי",english:"ever",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0148",level:1,thai:"เบื่อ",roman:"bua",hebrew:"משעמם",english:"bored",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0149",level:3,thai:"ง่วงนอน",roman:"nguang-non",hebrew:"ישנוני",english:"sleepy",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0150",level:1,thai:"สนุก",roman:"sanook",hebrew:"כיף",english:"fun",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0151",level:1,thai:"เป็น",roman:"bpen",hebrew:"להיות / לדעת לעשות",english:"be / know how to",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0152",level:1,thai:"คือ",roman:"kue",hebrew:"זה / הוא (להגדרות)",english:"is / means",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0153",level:5,thai:"ที่ไหน",roman:"tii-nai?",hebrew:"איפה?",english:"where?",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0154",level:5,thai:"เมื่อไร",roman:"meua-rai?",hebrew:"מתי?",english:"when?",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0155",level:5,thai:"ยังไง",roman:"yang-ngai?",hebrew:"איך?",english:"how?",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0156",level:4,thai:"ขนมปัง",roman:"ka-nom-bpang",hebrew:"לחם",english:"bread",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0157",level:3,thai:"เนื้อ",roman:"neu-a",hebrew:"בשר / בקר",english:"meat / beef",tone:'not_drilled',source:"תומר 5,csv.txt"},
+  {id:"uv_0158",level:1,thai:"ไก่",roman:"gai",hebrew:"עוף",english:"chicken",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0159",level:1,thai:"หมู",roman:"moo",hebrew:"חזיר",english:"pork / pig",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0160",level:1,thai:"กุ้ง",roman:"goong",hebrew:"שרימפס",english:"shrimp",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0161",level:1,thai:"ปู",roman:"puu",hebrew:"סרטן",english:"crab",tone:'not_drilled',source:"תומר 6,csv.txt; אלמוג 1,CSV.txt"},
+  {id:"uv_0162",level:1,thai:"ไข่",roman:"kai",hebrew:"ביצה",english:"egg",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0163",level:3,thai:"ไข่ดาว",roman:"kai-dao",hebrew:"ביצת עין",english:"fried egg",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0164",level:3,thai:"ไข่เจียว",roman:"kai-jeaw",hebrew:"חביתה",english:"omelette",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0165",level:4,thai:"ผลไม้",roman:"pon-la-mai",hebrew:"פירות",english:"fruit",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0166",level:1,thai:"ส้ม",roman:"som",hebrew:"תפוז",english:"orange",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0167",level:3,thai:"มะม่วง",roman:"ma-muang",hebrew:"מנגו",english:"mango",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0168",level:3,thai:"มะพร้าว",roman:"ma-prao",hebrew:"קוקוס",english:"coconut",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0169",level:1,thai:"กล้วย",roman:"gluay",hebrew:"בננה",english:"banana",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0170",level:4,thai:"สับปะรด",roman:"sup-pa-rot",hebrew:"אננס",english:"pineapple",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0171",level:3,thai:"น้ำแข็ง",roman:"nam-kaeng",hebrew:"קרח",english:"ice",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0172",level:3,thai:"น้ำส้ม",roman:"nam-som",hebrew:"מיץ תפוזים",english:"orange juice",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0173",level:3,thai:"กาแฟ",roman:"ga-fe",hebrew:"קפה",english:"coffee",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0174",level:1,thai:"นม",roman:"nom",hebrew:"חלב",english:"milk",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0175",level:1,thai:"เบียร์",roman:"beer",hebrew:"בירה",english:"beer",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0176",level:1,thai:"เหล้า",roman:"lao",hebrew:"אלכוהול / וויסקי",english:"alcohol / whiskey",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0177",level:1,thai:"กับ",roman:"gap",hebrew:"עם",english:"with",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0178",level:1,thai:"เอา",roman:"ao",hebrew:"רוצה / לקחת",english:"want / take",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0179",level:3,thai:"ไม่เอา",roman:"mai ao",hebrew:"לא רוצה",english:"do not want",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0180",level:4,thai:"เอาอันนี้",roman:"ao-an-nii",hebrew:"רוצה את זה",english:"want this one",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0181",level:1,thai:"เรือ",roman:"reua",hebrew:"סירה",english:"boat",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0182",level:3,thai:"เรือบิน",roman:"reua-bin",hebrew:"מטוס",english:"airplane",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0183",level:3,thai:"รถเมล์",roman:"rot-mae",hebrew:"אוטובוס",english:"bus",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0184",level:3,thai:"รถไฟ",roman:"rot-fai",hebrew:"רכבת",english:"train",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0185",level:4,thai:"มอเตอร์ไซค์",roman:"mo-dtu-sai",hebrew:"אופנוע",english:"motorbike",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0186",level:3,thai:"น่ารัก",roman:"naa-rak",hebrew:"חמוד",english:"cute",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0187",level:1,thai:"หล่อ",roman:"lor",hebrew:"חתיך",english:"handsome",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0188",level:1,thai:"เตี้ย",roman:"dtia",hebrew:"נמוך",english:"short",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0189",level:1,thai:"สูง",roman:"soong",hebrew:"גבוה",english:"tall",tone:'not_drilled',source:"תומר 6,csv.txt"},
+  {id:"uv_0190",level:1,thai:"ผอม",roman:"pom",hebrew:"רזה",english:"thin",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0191",level:1,thai:"ใหญ่",roman:"yai",hebrew:"גדול",english:"big",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0192",level:1,thai:"เล็ก",roman:"lek",hebrew:"קטן",english:"small",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0193",level:1,thai:"เหงา",roman:"ngao",hebrew:"בודד",english:"lonely",tone:'not_drilled',source:"תומר 7,csv.txt; תומר 8,csv.txt"},
+  {id:"uv_0194",level:3,thai:"เสียใจ",roman:"sia-jai",hebrew:"עצוב",english:"sad / sorry",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0195",level:3,thai:"ดีใจ",roman:"dii-jai",hebrew:"שמח",english:"happy",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0196",level:1,thai:"โกรธ",roman:"grote",hebrew:"כועס",english:"angry",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0197",level:3,thai:"ตกใจ",roman:"dtok-jai",hebrew:"מופתע / בהלם",english:"shocked / startled",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0198",level:1,thai:"งง",roman:"ngong",hebrew:"מבולבל",english:"confused",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0199",level:3,thai:"มั่นใจ",roman:"man-jai",hebrew:"בטוח בעצמי",english:"confident",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0200",level:4,thai:"น่าเข้าใจ",roman:"naa-kao-jai",hebrew:"מובן",english:"understandable",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0201",level:5,thai:"เข้าใจไหม",roman:"kao-jai mai?",hebrew:"מבין?",english:"Do you understand?",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0202",level:4,thai:"เข้าใจแล้ว",roman:"kao-jai leaw",hebrew:"הבנתי כבר",english:"understood already",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0203",level:1,thai:"เกลียด",roman:"gliad",hebrew:"שונא",english:"hate",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0204",level:4,thai:"ไม่เห็นด้วย",roman:"mai-hen-duai",hebrew:"לא מסכים",english:"disagree",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0205",level:3,thai:"จริง ๆ",roman:"jing-jing",hebrew:"באמת",english:"really",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0206",level:1,thai:"ลอง",roman:"long",hebrew:"לנסות",english:"try",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0207",level:1,thai:"ฟัง",roman:"fang",hebrew:"להקשיב",english:"listen",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0208",level:1,thai:"ดม",roman:"dom",hebrew:"להריח",english:"smell",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0209",level:1,thai:"ชิม",roman:"chim",hebrew:"לטעום",english:"taste",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0210",level:1,thai:"จำ",roman:"jum",hebrew:"לזכור",english:"remember",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0211",level:1,thai:"เที่ยว",roman:"teaw",hebrew:"לטייל / לבלות",english:"travel / hang out",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0212",level:1,thai:"รอ",roman:"raw",hebrew:"לחכות",english:"wait",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0213",level:1,thai:"ขาย",roman:"kaai",hebrew:"למכור",english:"sell",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0214",level:1,thai:"ถาม",roman:"tam",hebrew:"לשאול",english:"ask",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0215",level:1,thai:"ยิ้ม",roman:"yim",hebrew:"לחייך",english:"smile",tone:'not_drilled',source:"תומר 7,csv.txt"},
+  {id:"uv_0216",level:3,thai:"ร้องไห้",roman:"rong¹-hai³",hebrew:"לבכות",english:"cry",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0217",level:3,thai:"อิจฉา",roman:"it²-chaa¹",hebrew:"לקנא",english:"envy / jealous",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0218",level:3,thai:"โมโห",roman:"mo¹-ho¹",hebrew:"עצבני",english:"angry / annoyed",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0219",level:3,thai:"รำคาญ",roman:"ram¹-kaan¹",hebrew:"מעצבן",english:"annoyed / annoying",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0220",level:1,thai:"หวัง",roman:"wang¹",hebrew:"לקוות",english:"hope",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0221",level:4,thai:"น่าสงสาร",roman:"naa³-song⁵-saan¹",hebrew:"מסכן",english:"pitiful / poor thing",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0222",level:3,thai:"ภูมิใจ",roman:"pum¹-jai¹",hebrew:"גאה",english:"proud",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0223",level:3,thai:"เสียดาย",roman:"sia⁵-daai¹",hebrew:"חבל / בזבוז",english:"what a pity / waste",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0224",level:1,thai:"ง่วง",roman:"nguang³",hebrew:"ישנוני",english:"sleepy",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0225",level:1,thai:"รวม",roman:"ruam¹",hebrew:"ביחד",english:"together / include",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0226",level:3,thai:"ชื่อจริง",roman:"cheuu³-jing¹",hebrew:"שם אמיתי",english:"real name",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0227",level:3,thai:"ชื่อเล่น",roman:"cheuu³-len³",hebrew:"כינוי",english:"nickname",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0228",level:4,thai:"นามสกุล",roman:"naam¹-sa¹-kun¹",hebrew:"שם משפחה",english:"surname",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0229",level:3,thai:"สมอง",roman:"sa¹-mawng¹",hebrew:"מוח",english:"brain",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0230",level:4,thai:"สมองไม่ทำงาน",roman:"sa¹-mawng¹ mai³ tam¹-ngaan¹",hebrew:"המוח לא עובד",english:"brain not working",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0231",level:1,thai:"บน",roman:"bon¹",hebrew:"על (מעל)",english:"on / above",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0232",level:3,thai:"ต่อไป",roman:"dtor²-bpai¹",hebrew:"הבא",english:"next",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0233",level:1,thai:"เห็น",roman:"hen¹",hebrew:"רואה",english:"see",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0234",level:3,thai:"หน้าต่าง",roman:"naa³-dtang²",hebrew:"חלון",english:"window",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0235",level:1,thai:"ห้อง",roman:"hawng³",hebrew:"חדר",english:"room",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0236",level:3,thai:"พ่อแม่",roman:"poh³-mae³",hebrew:"הורים",english:"parents",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0237",level:3,thai:"กับข้าว",roman:"kap²-kaao³",hebrew:"אוכל (שאוכלים עם אורז)",english:"food eaten with rice",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0238",level:3,thai:"นักเรียน",roman:"nag²-rian¹",hebrew:"סטודנט / תלמיד",english:"student",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0239",level:4,thai:"ร้านอาหาร",roman:"raan³-aa¹-haan⁵",hebrew:"מסעדה",english:"restaurant",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0240",level:3,thai:"เจ้าของ",roman:"jao³-kawng¹",hebrew:"הבעלים",english:"owner",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0241",level:3,thai:"ผู้หญิง",roman:"puu³-ying⁵",hebrew:"אישה / נקבה",english:"woman / female",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0242",level:3,thai:"ผู้ชาย",roman:"puu³-chaai¹",hebrew:"גבר / זכר",english:"man / male",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0243",level:4,thai:"ในหลวง",roman:"nai¹-lu-ang¹",hebrew:"המלך",english:"king",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0244",level:4,thai:"พระเจ้าอยู่หัว",roman:"pra¹-jao³-yuu²-hua¹",hebrew:"המלך (תואר רשמי)",english:"king (formal title)",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0245",level:3,thai:"ชาวเผ่า",roman:"chaao¹-pao¹",hebrew:"אנשי שבט",english:"tribal people",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0246",level:1,thai:"ดอย",roman:"doi¹",hebrew:"הר",english:"mountain",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0247",level:3,thai:"ภูเขา",roman:"puu¹-kao¹",hebrew:"הר",english:"mountain",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0248",level:3,thai:"ตลาดนัด",roman:"dtalard²-nat¹",hebrew:"שוק",english:"market",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv_0249",level:2,thai:"อีก",roman:"iig(2)",hebrew:"שוב (Again)",english:"again / more",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv_0250",level:3,thai:"พักผ่อน",roman:"pag-pawn(2-2)",hebrew:"לנוח",english:"rest",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv_0251",level:3,thai:"ไปเที่ยว",roman:"bpai-tiao(1-3)",hebrew:"לטייל / להסתובב בכיף",english:"go out / travel for fun",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv_0252",level:2,thai:"หมด",roman:"mod(2)",hebrew:"הכל נגמר / אזל",english:"finished / used up",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv_0253",level:2,thai:"ตื่น",roman:"theung(2)",hebrew:"להתעורר",english:"wake up",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv_0254",level:2,thai:"หลง",roman:"long(1)",hebrew:"ללכת לאיבוד",english:"lost",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv_0255",level:4,thai:"ความอดทน",roman:"kwaam-od-ton(1-2-1)",hebrew:"סבלנות",english:"patience",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv_0256",level:2,thai:"หอย",roman:"hoi(5)",hebrew:"צדפה",english:"shellfish",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv_0257",level:4,thai:"อาหารทะเล",roman:"aa-haan-ta-lay(1(1)-5-1-1)",hebrew:"פירות ים",english:"seafood",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv_0258",level:3,thai:"อย่างไร",roman:"yaang-ngai(2-1)",hebrew:"איך",english:"how",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv_0259",level:2,thai:"ใคร",roman:"khrai(1)",hebrew:"מי (או מי זה)",english:"who",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv_0260",level:3,thai:"วันเกิด",roman:"wan-geut(1-2)",hebrew:"יום הולדת",english:"birthday",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv_0261",level:4,thai:"สมาชิก",roman:"sa-ma-chik(2-1-3)",hebrew:"חבר (במועדון / קבוצה)",english:"member",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv_0262",level:3,thai:"น้ำมัน",roman:"nam-man(1-1)",hebrew:"שמן / דלק",english:"oil / fuel",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv_0263",level:4,thai:"ปั๊มน้ำมัน",roman:"bpum-nam-man(3-1-1)",hebrew:"תחנת דלק",english:"gas station",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv_0264",level:2,thai:"กัน",roman:"gan(1)",hebrew:"אחד את השני / ביחד",english:"each other / together",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv_0265",level:1,thai:"บาง",roman:"baang",hebrew:"חלק מ..",english:"some / part of",tone:'not_drilled',source:"אלמוג 4(1).apkg"},
+  {id:"uv_0266",level:3,thai:"ด้วยกัน",roman:"doi gan",hebrew:"יחדיו",english:"together",tone:'not_drilled',source:"אלמוג 4(1).apkg"},
+  {id:"uv_0267",level:1,thai:"พวกเขา",roman:"guwa",hebrew:"they הם",english:"they (review)",tone:'not_drilled',source:"אלמוג 4(1).apkg"},
+  {id:"uv_0268",level:3,thai:"บางวัน",roman:"baang wan",hebrew:"חלק מהימים",english:"some days",tone:'not_drilled',source:"אלמוג 4(1).apkg"},
+  {id:"uv_0269",level:3,thai:"ทุกที่",roman:"tug tii",hebrew:"בכל מקום",english:"everywhere",tone:'not_drilled',source:"אלמוג 4(1).apkg"},
+  {id:"uv_0270",level:1,thai:"อุ่น",roman:"oon",hebrew:"חמים,חם",english:"warm",tone:'not_drilled',source:"אלמוג 4(1).apkg"},
+  {id:"uv_0271",level:1,thai:"เข้า",roman:"kao3",hebrew:"כניסה היכנס",english:"enter / in",tone:'not_drilled',source:"אלמוג 4(1).apkg"},
+  {id:"uv_0272",level:3,thai:"โรงพัก",roman:"rong pag",hebrew:"תחתנת משטרה",english:"police station",tone:'not_drilled',source:"אלמוג 4(1).apkg"},
+  {id:"uv_0273",level:3,thai:"ไม่ได้…",roman:"mai dai+v",hebrew:"לא עשיתי",english:"did not / cannot + verb",tone:'not_drilled',source:"אלמוג 4(1).apkg"},
+  {id:"uv_0274",level:1,thai:"ผึ้ง",roman:"peuang",hebrew:"דבורה,רק",english:"bee",tone:'not_drilled',source:"אלמוג 4(1).apkg"},
 ];
 
 
@@ -401,6 +678,86 @@ function level6FindWord(thai){
 function level6WordMeaning(word){ return isHebrew() ? word.hebrew : word.english; }
 function level6WordRoman(word){ return word.roman || ''; }
 
+
+// Level 1.2 — paired foundation drill for letters and vowels.
+// Rule: every Thai item displayed in the question/answer is accompanied by romanization or Hebrew/English meaning.
+function level12Pool(){
+  return BOARD_ITEMS.filter(x => x.symbol && x.name && x.boardWord && x.boardWord !== '-' && (x.he || x.sound));
+}
+function level12DisplayName(item){
+  const meaning = isHebrew() ? item.boardMeaningHe : item.boardMeaningEn;
+  const label = isHebrew() ? item.localHe : item.localEn;
+  return `${item.name} — ${label} — ${item.boardWord} = ${meaning}`;
+}
+function level12ChoiceBundle(item, type){
+  const meaning = isHebrew() ? item.boardMeaningHe : item.boardMeaningEn;
+  const label = isHebrew() ? item.localHe : item.localEn;
+  if(type === 'symbol') return `${item.symbol} — ${item.name} — ${label}`;
+  if(type === 'sound') return `${isHebrew()?item.he:item.sound} — ${label}`;
+  if(type === 'board') return `${item.boardWord} — ${meaning}`;
+  return level12DisplayName(item);
+}
+function makeLevel12Mcq(item){
+  const types = ['symbol','sound','name','board'];
+  const type = types[Math.floor(Math.random()*types.length)];
+  const pool = level12Pool().filter(x => x.id !== item.id);
+  let question, correct, choices, explanation;
+  if(type === 'symbol'){
+    question = isHebrew()
+      ? `איזה סימן/אות מתאים ל־${item.name} — ${isHebrew()?item.localHe:item.localEn}?`
+      : `Which sign/letter matches ${item.name} — ${item.localEn}?`;
+    correct = level12ChoiceBundle(item,'symbol');
+    choices = sampleChoices(correct, pool.map(x=>level12ChoiceBundle(x,'symbol')), 4);
+  } else if(type === 'sound'){
+    question = isHebrew()
+      ? `מה הצליל/התפקיד של ${item.symbol} — ${item.name}?`
+      : `What is the sound/function of ${item.symbol} — ${item.name}?`;
+    correct = level12ChoiceBundle(item,'sound');
+    choices = sampleChoices(correct, pool.map(x=>level12ChoiceBundle(x,'sound')), 4);
+  } else if(type === 'board'){
+    question = isHebrew()
+      ? `איזו מילת לוח שייכת ל־${item.symbol} — ${item.name}?`
+      : `Which board word belongs to ${item.symbol} — ${item.name}?`;
+    correct = level12ChoiceBundle(item,'board');
+    choices = sampleChoices(correct, pool.map(x=>level12ChoiceBundle(x,'board')), 4);
+  } else {
+    question = isHebrew()
+      ? `מה השם וההסבר של ${item.symbol}?`
+      : `What are the name and explanation of ${item.symbol}?`;
+    correct = level12ChoiceBundle(item,'name');
+    choices = sampleChoices(correct, pool.map(x=>level12ChoiceBundle(x,'name')), 4);
+  }
+  explanation = level12DisplayName(item);
+  return {type, question, correct, choices, explanation};
+}
+function makeLevel12WritingTask(item){
+  const meaning = isHebrew() ? item.boardMeaningHe : item.boardMeaningEn;
+  const label = isHebrew() ? item.localHe : item.localEn;
+  const useBoardWord = item.kind === 'consonant' && item.boardWord && Math.random() < 0.45;
+  if(useBoardWord){
+    return {
+      prompt: isHebrew()
+        ? `כתוב בתאית את מילת הלוח של ${item.symbol} — ${item.name}. משמעות: ${meaning}.`
+        : `Write the Thai board word for ${item.symbol} — ${item.name}. Meaning: ${meaning}.`,
+      expected: item.boardWord,
+      hint: isHebrew() ? `מילת לוח / Board word: ${meaning}` : `Board word meaning: ${meaning}`
+    };
+  }
+  return {
+    prompt: isHebrew()
+      ? `כתוב את הסימן/האות שמתאים ל־${item.name}. הסבר: ${label}. מילת לוח: ${item.boardWord} = ${meaning}.`
+      : `Write the sign/letter for ${item.name}. Explanation: ${label}. Board word: ${item.boardWord} = ${meaning}.`,
+    expected: item.symbol,
+    hint: isHebrew() ? `כתוב רק את הסימן/האות התאיים.` : `Write only the Thai sign/letter.`
+  };
+}
+function makeLevel12PairedQuestion(){
+  const item = weightedPick(level12Pool());
+  const mcq = makeLevel12Mcq(item);
+  const writing = makeLevel12WritingTask(item);
+  return { item, mode:'level12_pair', mcq, writing, expected: writing.expected };
+}
+
 const MODES = ['read_meaning','hebrew_write','tone','roman_write'];
 const MODE_OPTIONS = ['mixed','read_meaning','hebrew_write','tone','roman_write'];
 const STORAGE_KEY = 'thaiTrainerStateV3';
@@ -465,11 +822,20 @@ function init(){
 function setupLevels(){
   const select = el('levelSelect');
   const currentValue = select.value || '1';
+  const levels = [
+    {value:'1', label:`${t('level')} 1`},
+    {value:'1.2', label:t('foundationLevel')},
+    {value:'2', label:`${t('level')} 2`},
+    {value:'3', label:`${t('level')} 3`},
+    {value:'4', label:`${t('level')} 4`},
+    {value:'5', label:`${t('level')} 5`},
+    {value:'6', label:`${t('level')} 6 — ${t('vowelLevel')}`}
+  ];
   select.innerHTML = '';
-  for(let i=1;i<=6;i++){
+  for(const lvl of levels){
     const o = document.createElement('option');
-    o.value = String(i);
-    o.textContent = i === 6 ? `${t('level')} 6 — ${t('vowelLevel')}` : `${t('level')} ${i}`;
+    o.value = lvl.value;
+    o.textContent = lvl.label;
     select.appendChild(o);
   }
   select.value = [...select.options].some(o=>o.value===currentValue) ? currentValue : '1';
@@ -591,21 +957,26 @@ function newQuestion(){
   selectedTone = null;
   selectedVowelAnswer = null;
   level6McqAnswered = false;
-  const level = Number(el('levelSelect').value || 1);
-  const mode = level === 6 ? 'level6_pair' : pickMode();
-  if(mode === 'level6_pair'){
+  const levelValue = el('levelSelect').value || '1';
+  const mode = levelValue === '6' ? 'level6_pair' : levelValue === '1.2' ? 'level12_pair' : pickMode();
+  if(mode === 'level12_pair'){
+    current = makeLevel12PairedQuestion();
+  } else if(mode === 'level6_pair' || mode === 'level12_pair'){
     current = makeLevel6PairedQuestion();
   } else if(mode === 'vowel_write'){
     current = makeVowelWritingQuestion();
   } else if(mode === 'vowel_board'){
     current = makeVowelQuestion();
   } else {
-    let items = WORDS.filter(w=>w.level === level);
-    if(mode === 'tone'){
+    let items = WORDS.filter(w=>String(w.level) === String(levelValue));
+    let actualMode = mode;
+    if(actualMode === 'tone'){
       const toneItems = items.filter(hasDrillableTone);
       if(toneItems.length) items = toneItems;
+      else actualMode = ['read_meaning','hebrew_write','roman_write'][Math.floor(Math.random()*3)];
     }
-    current = { item: weightedPick(items), mode };
+    if(!items.length){ items = WORDS.filter(w=>String(w.level) === '1'); }
+    current = { item: weightedPick(items), mode: actualMode };
   }
   renderQuestion(); clearCanvas();
 }
@@ -768,25 +1139,25 @@ function makeVowelWritingQuestion(){
 }
 function renderQuestion(){
   const {item, mode} = current;
-  const itemLevel = (mode === 'vowel_board' || mode === 'vowel_write' || mode === 'level6_pair') ? 6 : item.level;
-  el('levelBadge').textContent = itemLevel === 6 ? `${t('level')} 6 — ${t('vowelLevel')}` : `${t('level')} ${itemLevel}`;
+  const itemLevel = (mode === 'vowel_board' || mode === 'vowel_write' || mode === 'level6_pair') ? '6' : (mode === 'level12_pair' ? '1.2' : String(item.level));
+  el('levelBadge').textContent = itemLevel === '6' ? `${t('level')} 6 — ${t('vowelLevel')}` : itemLevel === '1.2' ? t('foundationLevel') : `${t('level')} ${itemLevel}`;
   el('modeBadge').textContent = modeLabel(mode);
   el('progressBadge').textContent = `${state.stats.total || 0} ${t('questions')}`;
   el('answerBox').hidden = true;
   renderLevel6Pair(current);
   renderStudyCard(current);
   const canvasWrap = document.querySelector('.canvas-wrap');
-  if(canvasWrap) canvasWrap.hidden = (mode === 'level6_pair' && !level6McqAnswered);
-  el('clearBtn').hidden = (mode === 'level6_pair' && !level6McqAnswered);
-  el('showAnswerBtn').hidden = (mode === 'level6_pair' && !level6McqAnswered);
+  if(canvasWrap) canvasWrap.hidden = ((mode === 'level6_pair' || mode === 'level12_pair') && !level6McqAnswered);
+  el('clearBtn').hidden = ((mode === 'level6_pair' || mode === 'level12_pair') && !level6McqAnswered);
+  el('showAnswerBtn').hidden = ((mode === 'level6_pair' || mode === 'level12_pair') && !level6McqAnswered);
   el('toneChoices').hidden = !(mode === 'tone' || mode === 'vowel_board');
   el('toneChoices').innerHTML = '';
 
-  if(mode === 'level6_pair'){
-    el('promptText').textContent = t('level6Choose');
+  if(mode === 'level6_pair' || mode === 'level12_pair'){
+    el('promptText').textContent = mode === 'level12_pair' ? t('level12Choose') : t('level6Choose');
     el('questionText').hidden = true;
     el('questionText').textContent = '';
-    el('questionHint').textContent = level6McqAnswered ? t('level6WriteIntro') : t('level6WriteLocked');
+    el('questionHint').textContent = level6McqAnswered ? (mode === 'level12_pair' ? t('level12WriteIntro') : t('level6WriteIntro')) : t('level6WriteLocked');
   } else {
     el('questionText').hidden = false;
   }
@@ -823,7 +1194,7 @@ function renderQuestion(){
 function renderLevel6Pair(q){
   const box = el('level6Pair');
   if(!box) return;
-  if(!q || q.mode !== 'level6_pair'){
+  if(!q || (q.mode !== 'level6_pair' && q.mode !== 'level12_pair')){
     box.hidden = true;
     box.innerHTML = '';
     return;
@@ -846,7 +1217,7 @@ function renderLevel6Pair(q){
       <div class="pair-kicker">${escapeHtml(t('level6McqKicker'))}</div>
       <div class="pair-context">
         <span class="pair-symbol">${escapeHtml(item.symbol)}</span>
-        <span class="pair-label">${escapeHtml(item.kind === 'consonant' ? (isHebrew() ? 'עיצור' : 'Consonant') : item.kind === 'vowel' ? (isHebrew() ? 'תנועה' : 'Vowel') : (isHebrew() ? 'סימן מיוחד' : 'Special sign'))} ${escapeHtml(item.emoji)}</span>
+        <span class="pair-label">${escapeHtml(item.kind === 'consonant' ? (isHebrew() ? 'עיצור' : 'Consonant') : item.kind === 'vowel' ? (isHebrew() ? 'תנועה' : 'Vowel') : (isHebrew() ? 'סימן מיוחד' : 'Special sign'))} ${escapeHtml(item.emoji)} · ${escapeHtml(item.name)} · ${escapeHtml(isHebrew()?item.localHe:item.localEn)}</span>
       </div>
       <div class="pair-main">${escapeHtml(q.mcq.question)}</div>
       <div class="choices level6-choices">${choiceHtml}</div>
@@ -925,11 +1296,11 @@ function makeToneDistractors(tone){
 }
 function toneToHeb(tone){ return tone.split('-').map(part => { const found = TONES.find(tt=>tt.id===part)||{}; return isHebrew() ? (found.he || part) : (found.en || part); }).join(isHebrew() ? '־' : '-'); }
 function modeLabel(mode){
-  return {read_meaning:t('readMeaning'),hebrew_write:t('meaningWrite'),tone:t('toneMode'),roman_write:t('romanWrite'),vowel_board:t('vowelBoard'),vowel_write:t('vowelBoard'),level6_pair:t('vowelBoard')}[mode] || t('mixed');
+  return {read_meaning:t('readMeaning'),hebrew_write:t('meaningWrite'),tone:t('toneMode'),roman_write:t('romanWrite'),vowel_board:t('vowelBoard'),vowel_write:t('vowelBoard'),level6_pair:t('vowelBoard'),level12_pair:t('foundationLevel')}[mode] || t('mixed');
 }
 function showAnswer(){
   const {item, mode} = current;
-  if(mode === 'level6_pair'){
+  if(mode === 'level6_pair' || mode === 'level12_pair'){
     if(!level6McqAnswered){ return; }
     el('answerBox').innerHTML = `
       ${clickableThaiAnswerHtml(current.expected)}
@@ -1067,10 +1438,72 @@ function setupCanvas(){
     const r = canvas.getBoundingClientRect();
     return {x:e.clientX-r.left,y:e.clientY-r.top};
   };
-  canvas.addEventListener('pointerdown', e=>{ e.preventDefault(); canvas.setPointerCapture(e.pointerId); drawing=true; lastPoint=getPoint(e); ctx.beginPath(); ctx.moveTo(lastPoint.x,lastPoint.y); });
-  canvas.addEventListener('pointermove', e=>{ if(!drawing) return; e.preventDefault(); const p=getPoint(e); ctx.lineTo(p.x,p.y); ctx.stroke(); lastPoint=p; });
-  const stop = e=>{ if(!drawing) return; e.preventDefault(); drawing=false; lastPoint=null; };
-  canvas.addEventListener('pointerup', stop); canvas.addEventListener('pointercancel', stop); canvas.addEventListener('pointerleave', stop);
+
+  const beginStroke = point => {
+    drawing = true;
+    lastPoint = point;
+    ctx.beginPath();
+    ctx.moveTo(point.x, point.y);
+  };
+  const moveStroke = point => {
+    if(!drawing) return;
+    ctx.lineTo(point.x, point.y);
+    ctx.stroke();
+    lastPoint = point;
+  };
+  const endStroke = () => {
+    if(!drawing) return;
+    drawing = false;
+    lastPoint = null;
+  };
+
+  // iPad Air 1 usually runs iOS 12, which does NOT support Pointer Events.
+  // The previous canvas listened only to pointerdown/pointermove, so drawing was locked on that device.
+  // Modern browsers still use pointer events; older iOS Safari gets touch + mouse fallbacks.
+  if(window.PointerEvent){
+    canvas.addEventListener('pointerdown', e=>{
+      e.preventDefault();
+      if(canvas.setPointerCapture){ canvas.setPointerCapture(e.pointerId); }
+      beginStroke(getPoint(e));
+    });
+    canvas.addEventListener('pointermove', e=>{
+      if(!drawing) return;
+      e.preventDefault();
+      moveStroke(getPoint(e));
+    });
+    const stopPointer = e=>{
+      if(!drawing) return;
+      e.preventDefault();
+      endStroke();
+    };
+    canvas.addEventListener('pointerup', stopPointer);
+    canvas.addEventListener('pointercancel', stopPointer);
+    canvas.addEventListener('pointerleave', stopPointer);
+  } else {
+    const getTouchPoint = e => {
+      const touch = (e.touches && e.touches[0]) || (e.changedTouches && e.changedTouches[0]);
+      if(!touch) return null;
+      const r = canvas.getBoundingClientRect();
+      return {x: touch.clientX - r.left, y: touch.clientY - r.top};
+    };
+    canvas.addEventListener('touchstart', e=>{
+      e.preventDefault();
+      const p = getTouchPoint(e);
+      if(p) beginStroke(p);
+    }, {passive:false});
+    canvas.addEventListener('touchmove', e=>{
+      if(!drawing) return;
+      e.preventDefault();
+      const p = getTouchPoint(e);
+      if(p) moveStroke(p);
+    }, {passive:false});
+    canvas.addEventListener('touchend', e=>{ e.preventDefault(); endStroke(); }, {passive:false});
+    canvas.addEventListener('touchcancel', e=>{ e.preventDefault(); endStroke(); }, {passive:false});
+
+    canvas.addEventListener('mousedown', e=>{ e.preventDefault(); beginStroke(getPoint(e)); });
+    canvas.addEventListener('mousemove', e=>{ if(!drawing) return; e.preventDefault(); moveStroke(getPoint(e)); });
+    window.addEventListener('mouseup', endStroke);
+  }
 
   window.__drawGuideLines = drawGuideLines;
   window.clearCanvas = function(){ drawGuideLines(); };
@@ -1199,19 +1632,26 @@ function escapeHtml(s){ return String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<'
 function runQA(){
   const lines = [];
   const ids = new Set(); let ok = true;
-  for(let level=1;level<=5;level++){
-    const count = WORDS.filter(w=>w.level===level).length;
+  const levelValues = ['1','1.2','2','3','4','5','6'];
+  for(const level of levelValues){
+    const count = WORDS.filter(w=>String(w.level)===level).length;
     const variants = count * MODES.length;
     lines.push(`Level ${level}: ${count} items × ${MODES.length} modes = ${variants} question variants`);
-    if(variants < 50){ ok=false; lines.push(`ERROR: Level ${level} has fewer than 50 variants`); }
+    if(count && variants < 50){ ok=false; lines.push(`ERROR: Level ${level} has fewer than 50 variants`); }
   }
   for(const w of WORDS){
-    const required = ['id','level','thai','roman','hebrew','tone'];
+    const required = ['id','level','thai','roman','hebrew','english','tone'];
     for(const k of required){ if(!w[k]){ ok=false; lines.push(`ERROR: missing ${k} in ${JSON.stringify(w)}`); } }
     if(ids.has(w.id)){ ok=false; lines.push(`ERROR: duplicate id ${w.id}`); }
     ids.add(w.id);
-    for(const part of w.tone.split('-')){ if(!TONES.some(t=>t.id===part)){ ok=false; lines.push(`ERROR: bad tone ${w.tone} for ${w.id}`); } }
+    if(w.tone !== 'not_drilled'){
+      for(const part of String(w.tone).split('-')){ if(!TONES.some(t=>t.id===part)){ ok=false; lines.push(`ERROR: bad tone ${w.tone} for ${w.id}`); } }
+    }
+    if(/[\u0E00-\u0E7F]/.test(w.thai) && (!w.roman || !w.hebrew || !w.english)){
+      ok=false; lines.push(`ERROR: untranslated Thai item ${w.id}`);
+    }
   }
+  lines.push(`Level 1.2: ${level12Pool().length} signs/consonants × paired MCQ+writing`);
   lines.push(`Board level: ${BOARD_ITEMS.length} signs/consonants × writing question types`);
   lines.unshift(ok ? 'QA PASS' : 'QA FAILED');
   el('qaOutput').textContent = lines.join('\n');

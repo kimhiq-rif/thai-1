@@ -101,3 +101,19 @@ body.theme-notebook .thai-char{background:#e6f6fb;color:#0f172a;border-color:#7d
 body.theme-minimal .thai-char{background:#eef8ff;color:#075985;border-color:#bae6fd;box-shadow:none}body.theme-minimal .thai-letter-info{background:#f0f9ff;color:#0f172a}
 body.theme-neon .thai-char{box-shadow:0 0 22px rgba(217,70,239,.25),0 0 18px rgba(34,211,238,.28)}
 @media (max-width:640px){.thai-char{border-radius:11px;padding:.01em .1em}.answer-microhint{font-size:12px}.thai-letter-info{font-size:14px}}
+
+
+/* v1.14: make Thai letters/signs easier to distinguish in paired drills */
+.pair-symbol{font-size:clamp(3.2rem, 10vw, 6.4rem); line-height:1;}
+.thai-answer{font-size:clamp(2.8rem, 8vw, 5rem); line-height:1.15;}
+.thai-inline{font-size:1.35em;}
+.level6-choice{font-size:1rem; line-height:1.45;}
+.study-symbol{font-size:clamp(3.2rem, 10vw, 6.2rem);}
+
+
+/* v1.15 — older iPad/iOS canvas writing fix */
+canvas{
+  -webkit-user-select:none;
+  -webkit-touch-callout:none;
+  user-select:none;
+}
