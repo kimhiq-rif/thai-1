@@ -132,14 +132,3 @@ canvas{
 .foundation-note b{ color: var(--accent-2); }
 
 .char-note{margin-top:8px;color:#d9ccff;font-weight:600;}
-
-
-/* v1.21 — local eraser tool for the handwriting canvas */
-.writing-controls{grid-template-columns:1fr 1fr 1fr}
-.eraser-toggle{display:flex;align-items:center;justify-content:center;gap:10px;position:relative;overflow:hidden;transition:filter .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease, border-color .18s ease}
-.eraser-icon{width:36px;height:36px;display:block;filter:drop-shadow(0 4px 10px rgba(0,0,0,.28))}
-.eraser-label{font-weight:900}
-.eraser-toggle.active{background:linear-gradient(135deg,#020617,#0f172a 55%,#1e293b);color:#e0f2fe;border-color:#67e8f9;box-shadow:0 0 0 2px rgba(103,232,249,.35),0 0 32px rgba(56,189,248,.68),inset 0 0 18px rgba(8,47,73,.9);filter:brightness(1.05)}
-.eraser-toggle.active .eraser-icon{filter:drop-shadow(0 0 12px rgba(103,232,249,.95)) drop-shadow(0 4px 10px rgba(0,0,0,.4))}
-canvas.eraser-mode{cursor:cell}
-@media (max-width:720px){.writing-controls{grid-template-columns:1fr}.eraser-icon{width:34px;height:34px}}
