@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.22.1-sync-download-fallback';
+const APP_VERSION = '1.23.1-device-compatibility';
 
 const TONES = [
   { id:'mid', he:'אמצעי', en:'mid' },
@@ -24,7 +24,8 @@ const I18N = {
     writeHint:'כתוב על הלוח הלבן ואז הצג תשובה', answerThai:'תאית', roman:'תעתיק', meaning:'עברית', tone:'טון', selected:'בחרת', afterAnswer:'עכשיו אפשר לנקות, לכתוב שוב נכון, ואז לסמן צדקתי / טעיתי.', clickThaiLetters:'לחץ על אות/סימן בתשובה כדי לראות מידע קצר.',
     soundQuestion:'מה הצליל של הסימן?', nameQuestion:'מה שם הסימן בתאית?', symbolQuestion:'איזה סימן מתאים לשם?', boardWordQuestion:'איזו מילת לוח שייכת לסימן?', shortcutQuestion:'מה התפקיד של הסימן?',
     sound:'צליל', signName:'שם הסימן', boardWord:'מילת לוח', note:'הערה', emoji:'אימוג׳י', shortcutAnswer:'מקצר תנועה', userLabel:'שם משתמש', userPlaceholder:'לדוגמה: rif', initUserOk:'נוצרה/נמצאה לשונית משתמש ✅', initUserErr:'שגיאת יצירת משתמש: ', saveProgress:'שמור התקדמות', loadProgress:'טען התקדמות', testSync:'בדוק חיבור', openSyncTest:'פתח בדיקה', promptVowelWrite:'כתוב על הלוח את התשובה לפי לוח התנועות', level6McqKicker:'שאלה 1 מתוך 2 — הבנה', level6WriteKicker:'שאלה 2 מתוך 2 — כתיבה', level6Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו נושא.', level12Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו סימן/אות.', level12WriteIntro:'עכשיו כתוב את הסימן/האות או מילת הלוח מאותו פריט.', level6WriteLocked:'בחר קודם תשובה אמריקאית כדי לפתוח את שאלת הכתיבה.', level6Correct:'נכון', level6Wrong:'לא נכון', level6WriteIntro:'עכשיו השתמש באותו סימן/עיצור וכתוב את המילה המבוקשת.', vowelAnswer:'תשובת לוח', thaiName:'שם תאילנדי', localName:'הסבר בעברית', writingRule:'כלל כתיבה', example:'דוגמה', consonantName:'שם העיצור', theme:'לוק',
-    syncSaved:'כתובת הסנכרון נשמרה.', uploadOk:'העלאה לענן הצליחה ✅', uploadSent:'העלאה לענן נשלחה בהצלחה ✅', downloadOk:'הורדה מהענן הצליחה ✅', uploadErr:'שגיאת העלאה: ', downloadErr:'שגיאת הורדה: ', syncTestOk:'החיבור ל־Google Apps Script עובד ✅', syncTestErr:'בדיקת החיבור נכשלה: ', scriptBlockedHe:'הדפדפן חסם טעינת סקריפט מ־Google. נסה לכבות VPN/AdBlock/Tracking Protection או לפתוח ב־Chrome/Safari. אפשר גם ללחוץ "פתח בדיקה" ולראות אם הכתובת עובדת.'
+    syncSaved:'כתובת הסנכרון נשמרה.', uploadOk:'העלאה לענן הצליחה ✅', uploadSent:'העלאה לענן נשלחה בהצלחה ✅', downloadOk:'הורדה מהענן הצליחה ✅', uploadErr:'שגיאת העלאה: ', downloadErr:'שגיאת הורדה: ', syncTestOk:'החיבור ל־Google Apps Script עובד ✅', syncTestErr:'בדיקת החיבור נכשלה: ', scriptBlockedHe:'הדפדפן חסם טעינת סקריפט מ־Google. נסה לכבות VPN/AdBlock/Tracking Protection או לפתוח ב־Chrome/Safari. אפשר גם ללחוץ "פתח בדיקה" ולראות אם הכתובת עובדת.',
+    syncWorking:'עובד...', lastSync:'סנכרון אחרון', neverSynced:'עדיין לא סונכרן', localBackup:'גיבוי מקומי', restoreBackup:'שחזר גיבוי', exportOk:'קובץ גיבוי נשמר במחשב ✅', importOk:'הגיבוי נטען בהצלחה ✅', importErr:'שגיאת שחזור גיבוי: ', importConfirm:'לטעון את הגיבוי ולהחליף את ההתקדמות הנוכחית?'
   },
   en: {
     langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.22', title:'Reading, writing, tones and meaning',
@@ -38,7 +39,8 @@ const I18N = {
     writeHint:'Write on the whiteboard, then reveal the answer', answerThai:'Thai', roman:'Romanization', meaning:'English', tone:'Tone', selected:'Selected', afterAnswer:'Now you can clear, rewrite correctly, then mark correct / wrong.', clickThaiLetters:'Tap a Thai letter/sign in the answer to see a short note.',
     soundQuestion:'What sound does this sign make?', nameQuestion:'What is the Thai name of this sign?', symbolQuestion:'Which sign matches this name?', boardWordQuestion:'Which board word belongs to this sign?', shortcutQuestion:'What does this sign do?',
     sound:'Sound', signName:'Sign name', boardWord:'Board word', note:'Note', emoji:'Emoji', shortcutAnswer:'shortens a vowel', userLabel:'Username', userPlaceholder:'e.g. rif', initUserOk:'User sheet created/found ✅', initUserErr:'User init error: ', saveProgress:'Save progress', loadProgress:'Load progress', testSync:'Test connection', openSyncTest:'Open test', promptVowelWrite:'Write the answer on the board from the vowel board', level6McqKicker:'Question 1 of 2 — understanding', level6WriteKicker:'Question 2 of 2 — writing', level6Choose:'Choose one answer. After choosing, a writing question about the same topic will open.', level12Choose:'Choose one answer. After choosing, a writing task about the same sign/letter will open.', level12WriteIntro:'Now write the sign/letter or board word from the same item.', level6WriteLocked:'Choose a multiple-choice answer first to unlock the writing task.', level6Correct:'Correct', level6Wrong:'Not correct', level6WriteIntro:'Now use the same sign/consonant and write the requested word.', vowelAnswer:'Vowel-board answer', thaiName:'Thai name', localName:'English explanation', writingRule:'Writing rule', example:'Example', consonantName:'Consonant name', theme:'Theme',
-    syncSaved:'Sync URL saved.', uploadOk:'Cloud upload succeeded ✅', uploadSent:'Cloud upload was sent ✅', downloadOk:'Cloud download succeeded ✅', uploadErr:'Upload error: ', downloadErr:'Download error: ', syncTestOk:'Google Apps Script connection works ✅', syncTestErr:'Connection test failed: ', scriptBlockedHe:'The browser blocked loading a Google script. Try disabling VPN/AdBlock/Tracking Protection or open in Chrome/Safari. You can also click “Open test” to verify the URL.'
+    syncSaved:'Sync URL saved.', uploadOk:'Cloud upload succeeded ✅', uploadSent:'Cloud upload was sent ✅', downloadOk:'Cloud download succeeded ✅', uploadErr:'Upload error: ', downloadErr:'Download error: ', syncTestOk:'Google Apps Script connection works ✅', syncTestErr:'Connection test failed: ', scriptBlockedHe:'The browser blocked loading a Google script. Try disabling VPN/AdBlock/Tracking Protection or open in Chrome/Safari. You can also click “Open test” to verify the URL.',
+    syncWorking:'Working...', lastSync:'Last sync', neverSynced:'Not synced yet', localBackup:'Local backup', restoreBackup:'Restore backup', exportOk:'Backup file saved ✅', importOk:'Backup restored ✅', importErr:'Backup restore error: ', importConfirm:'Load this backup and replace current progress?'
   }
 };
 function lang(){ return state && state.lang ? state.lang : 'he'; }
@@ -1027,6 +1029,7 @@ function init(){
   if(!state.syncUrl){ state.syncUrl = DEFAULT_SYNC_URL; saveState(); }
   el('syncUrl').value = state.syncUrl || DEFAULT_SYNC_URL;
   el('userIdInput').value = state.userId || 'rif';
+  updateSyncHealth();
   updateStats(); newQuestion();
   // v1.5: do NOT register a service worker. It caused stale versions to stay alive in normal browser windows.
   // We actively unregister old workers and clear old caches once the fresh app loads.
@@ -1082,10 +1085,14 @@ function setupEvents(){
   el('syncDownloadBtn').addEventListener('click', syncDownload);
   if(el('syncTestBtn')) el('syncTestBtn').addEventListener('click', syncTest);
   if(el('openSyncTestBtn')) el('openSyncTestBtn').addEventListener('click', openSyncTest);
+  if(el('exportBackupBtn')) el('exportBackupBtn').addEventListener('click', exportLocalBackup);
+  if(el('importBackupBtn')) el('importBackupBtn').addEventListener('click', () => el('importBackupInput').click());
+  if(el('importBackupInput')) el('importBackupInput').addEventListener('change', importLocalBackup);
+  el('syncUrl').addEventListener('input', updateSyncHealth);
   el('langToggle').addEventListener('click', toggleLanguage);
   el('themeToggle').addEventListener('click', cycleTheme);
   el('userIdInput').addEventListener('keydown', e => { if(e.key === 'Enter'){ e.preventDefault(); initUserSheet(); } });
-  el('userIdInput').addEventListener('blur', () => { const v = cleanUserId(el('userIdInput').value); if(v && v !== state.userId){ state.userId=v; saveState(); } });
+  el('userIdInput').addEventListener('blur', () => { const v = cleanUserId(el('userIdInput').value); if(v && v !== state.userId){ state.userId=v; saveState(); updateSyncHealth(); } });
 }
 function setupPwa(){
   window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredInstallPrompt=e; el('installBtn').hidden=false; });
@@ -1142,6 +1149,10 @@ function applyLanguage(){
   el('syncDownloadBtn').textContent = t('loadProgress');
   if(el('syncTestBtn')) el('syncTestBtn').textContent = t('testSync');
   if(el('openSyncTestBtn')) el('openSyncTestBtn').textContent = t('openSyncTest');
+  if(el('exportBackupBtn')) el('exportBackupBtn').textContent = t('localBackup');
+  if(el('importBackupBtn')) el('importBackupBtn').textContent = t('restoreBackup');
+  if(el('lastSyncLabel')) el('lastSyncLabel').textContent = t('lastSync');
+  updateSyncHealth();
   el('qaSummary').textContent = t('qa');
   if(el('syncStatus').textContent === 'מוכן.' || el('syncStatus').textContent === 'Ready.') el('syncStatus').textContent = t('ready');
   setupLevels();
@@ -1671,18 +1682,24 @@ function setupCanvas(){
   function resizeCanvas(){
     const ratio = Math.max(1, window.devicePixelRatio || 1);
     const rect = canvas.getBoundingClientRect();
+    if(!rect.width || !rect.height) return;
     canvas.width = Math.round(rect.width * ratio);
     canvas.height = Math.round(rect.height * ratio);
     ctx.setTransform(ratio,0,0,ratio,0,0);
     drawGuideLines();
   }
-  window.addEventListener('resize', resizeCanvas);
+  const scheduleResize = () => requestAnimationFrame(resizeCanvas);
+  window.addEventListener('resize', scheduleResize);
+  window.addEventListener('orientationchange', () => setTimeout(resizeCanvas, 250));
+  if(window.visualViewport) window.visualViewport.addEventListener('resize', scheduleResize);
   resizeCanvas();
   function applyToolStyle(){
+    const rect = canvas.getBoundingClientRect();
     ctx.globalCompositeOperation = 'source-over';
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
-    ctx.lineWidth = eraserMode ? 30 : 5;
+    const penWidth = Math.max(4, Math.min(7, rect.width / 130));
+    ctx.lineWidth = eraserMode ? Math.max(24, penWidth * 6) : penWidth;
     ctx.strokeStyle = eraserMode ? '#ffffff' : '#020617';
   }
 
@@ -1714,8 +1731,10 @@ function setupCanvas(){
   // iPad Air 1 usually runs iOS 12, which does NOT support Pointer Events.
   // The previous canvas listened only to pointerdown/pointermove, so drawing was locked on that device.
   // Modern browsers still use pointer events; older iOS Safari gets touch + mouse fallbacks.
+  canvas.addEventListener('contextmenu', e => e.preventDefault());
   if(window.PointerEvent){
     canvas.addEventListener('pointerdown', e=>{
+      if(e.pointerType === 'mouse' && e.button !== 0) return;
       e.preventDefault();
       if(canvas.setPointerCapture){ canvas.setPointerCapture(e.pointerId); }
       beginStroke(getPoint(e));
@@ -1741,6 +1760,7 @@ function setupCanvas(){
       return {x: touch.clientX - r.left, y: touch.clientY - r.top};
     };
     canvas.addEventListener('touchstart', e=>{
+      if(e.touches && e.touches.length > 1) return;
       e.preventDefault();
       const p = getTouchPoint(e);
       if(p) beginStroke(p);
@@ -1774,22 +1794,79 @@ function cleanUserId(value){
 }
 async function initUserSheet(){
   try{
+    setSyncBusy(true);
+    setSyncStatus(t('syncWorking'), 'loading');
     const userId = cleanUserId(el('userIdInput').value);
     state.userId = userId;
     el('userIdInput').value = userId;
     saveState();
     const json = await jsonpRequest({action:'inituser', userId});
     if(!json.ok) throw new Error(json.error || 'init failed');
-    setSyncStatus(`${t('initUserOk')} — ${json.sheetName || userId}`);
-  } catch(err){ setSyncStatus(t('initUserErr') + err.message); }
+    updateSyncHealth();
+    setSyncStatus(`${t('initUserOk')} — ${json.sheetName || userId}`, 'ok');
+  } catch(err){ setSyncStatus(t('initUserErr') + err.message, 'error'); }
+  finally{ setSyncBusy(false); }
 }
-function saveSyncUrl(){
+function saveSyncUrl(silent=false){
   state.syncUrl = normalizeSyncUrlValue(el('syncUrl').value.trim() || state.syncUrl || DEFAULT_SYNC_URL);
   el('syncUrl').value = state.syncUrl;
   state.userId = cleanUserId(el('userIdInput').value || state.userId);
   el('userIdInput').value = state.userId;
   saveState();
-  setSyncStatus(t('syncSaved'));
+  updateSyncHealth();
+  if(!silent) setSyncStatus(t('syncSaved'), 'ok');
+}
+function formatTime(ts){
+  if(!ts) return t('neverSynced');
+  try{ return new Intl.DateTimeFormat(isHebrew() ? 'he-IL' : 'en-US', {dateStyle:'short', timeStyle:'short'}).format(new Date(ts)); }
+  catch{ return new Date(ts).toLocaleString(); }
+}
+function updateSyncHealth(){
+  if(el('lastSyncValue')) el('lastSyncValue').textContent = formatTime(state.lastSync);
+  if(el('syncUrlPreview')){
+    const url = normalizeSyncUrlValue(state.syncUrl || el('syncUrl')?.value || '');
+    el('syncUrlPreview').textContent = url ? url.replace(/^https:\/\/script\.google\.com\/macros\/s\//, '.../') : (isHebrew() ? 'לא הוגדר' : 'Not set');
+  }
+}
+function setSyncBusy(isBusy){
+  const ids = ['saveSyncUrlBtn','syncUploadBtn','syncDownloadBtn','syncTestBtn','openSyncTestBtn','exportBackupBtn','importBackupBtn'];
+  for(const id of ids){ if(el(id)) el(id).disabled = !!isBusy; }
+  if(el('syncStatus')) el('syncStatus').classList.toggle('is-loading', !!isBusy);
+}
+function downloadTextFile(filename, text){
+  const blob = new Blob([text], {type:'application/json;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 0);
+}
+function exportLocalBackup(){
+  try{
+    const backup = {...state, exportedAt: Date.now(), appVersion: APP_VERSION};
+    const stamp = new Date().toISOString().slice(0,19).replace(/[:T]/g,'-');
+    downloadTextFile(`thai-trainer-backup-${cleanUserId(state.userId)}-${stamp}.json`, JSON.stringify(backup, null, 2));
+    setSyncStatus(t('exportOk'), 'ok');
+  }catch(err){ setSyncStatus((isHebrew() ? 'שגיאת גיבוי: ' : 'Backup error: ') + err.message, 'error'); }
+}
+async function importLocalBackup(event){
+  const input = event.target;
+  const file = input.files && input.files[0];
+  input.value = '';
+  if(!file) return;
+  try{
+    const text = await file.text();
+    const imported = JSON.parse(text);
+    if(!imported || typeof imported !== 'object') throw new Error('invalid backup file');
+    if(!confirm(t('importConfirm'))) return;
+    state = {...defaultState(), ...imported, syncUrl: state.syncUrl, userId: cleanUserId(imported.userId || state.userId), lang: state.lang};
+    saveState();
+    el('userIdInput').value = state.userId;
+    el('syncUrl').value = state.syncUrl || DEFAULT_SYNC_URL;
+    updateSyncHealth(); updateStats(); newQuestion();
+    setSyncStatus(t('importOk'), 'ok');
+  }catch(err){ setSyncStatus(t('importErr') + err.message, 'error'); }
 }
 
 function encodePayload(obj){
@@ -1824,7 +1901,7 @@ function syncUrlWithParams(params){
 }
 function jsonpRequest(params, timeoutMs=12000){
   return new Promise((resolve, reject)=>{
-    saveSyncUrl();
+    saveSyncUrl(true);
     let src;
     try{
       const callbackName = 'thaiSyncCb_' + Date.now() + '_' + Math.floor(Math.random()*100000);
@@ -1848,14 +1925,17 @@ function jsonpRequest(params, timeoutMs=12000){
 }
 async function syncTest(){
   try{
+    setSyncBusy(true);
+    setSyncStatus(t('syncWorking'), 'loading');
     const json = await jsonpRequest({action:'ping', userId: cleanUserId(el('userIdInput').value || state.userId)}, 10000);
     if(!json.ok) throw new Error(json.error || 'ping failed');
-    setSyncStatus(t('syncTestOk'));
-  }catch(err){ setSyncStatus(t('syncTestErr') + err.message); }
+    setSyncStatus(t('syncTestOk'), 'ok');
+  }catch(err){ setSyncStatus(t('syncTestErr') + err.message, 'error'); }
+  finally{ setSyncBusy(false); }
 }
 function openSyncTest(){
   try{
-    saveSyncUrl();
+    saveSyncUrl(true);
     const url = syncUrlWithParams({action:'ping', userId: cleanUserId(el('userIdInput').value || state.userId)});
     window.open(url, '_blank', 'noopener,noreferrer');
     setSyncStatus(isHebrew() ? 'נפתחה בדיקת חיבור בחלון חדש. אם אתה רואה JSON עם ok:true — הסקריפט תקין והדפדפן חסם את הקריאה מתוך האפליקציה.' : 'Opened a connection test in a new tab. If you see JSON with ok:true, the script is OK and the browser blocked the in-app request.');
@@ -1863,7 +1943,7 @@ function openSyncTest(){
 }
 function formPostUpload(params, timeoutMs=15000){
   return new Promise((resolve, reject)=>{
-    saveSyncUrl();
+    saveSyncUrl(true);
     let url;
     try{ url = normalizedSyncUrl(); }catch(err){ reject(err); return; }
     const iframeName = 'thaiSyncFrame_' + Date.now() + '_' + Math.floor(Math.random()*100000);
@@ -1931,24 +2011,29 @@ function iframeBridgeDownload(params, timeoutMs=15000){
 }
 async function syncUpload(){
   try{
+    setSyncBusy(true);
+    setSyncStatus(t('syncWorking'), 'loading');
     const safeState = {...state, lastSync: Date.now()};
     const data = encodePayload(safeState);
     // First try JSONP, because it gives a real success/error response.
     try{
       const json = await jsonpRequest({action:'upload', userId: cleanUserId(el('userIdInput').value || state.userId), data});
       if(!json.ok) throw new Error(json.error || 'sync failed');
-      state.lastSync = Date.now(); saveState(); setSyncStatus(t('uploadOk'));
+      state.lastSync = Date.now(); saveState(); updateSyncHealth(); setSyncStatus(t('uploadOk'), 'ok');
       return;
     }catch(jsonpErr){
       // Some browsers/extensions block script.googleusercontent.com as a script.
       // Fallback: submit a hidden form POST. It avoids CORS and usually bypasses script blockers.
       await formPostUpload({action:'upload', userId: cleanUserId(el('userIdInput').value || state.userId), data});
-      state.lastSync = Date.now(); saveState(); setSyncStatus(t('uploadSent'));
+      state.lastSync = Date.now(); saveState(); updateSyncHealth(); setSyncStatus(t('uploadSent'), 'ok');
     }
-  } catch(err){ setSyncStatus(t('uploadErr')+err.message); }
+  } catch(err){ setSyncStatus(t('uploadErr')+err.message, 'error'); }
+  finally{ setSyncBusy(false); }
 }
 async function syncDownload(){
   try{
+    setSyncBusy(true);
+    setSyncStatus(t('syncWorking'), 'loading');
     const userId = cleanUserId(el('userIdInput').value || state.userId);
     let json;
     try{
@@ -1962,10 +2047,19 @@ async function syncDownload(){
       state = {...defaultState(),...cloudState, syncUrl:state.syncUrl, lang:state.lang, userId: cleanUserId(el('userIdInput').value || state.userId)};
       saveState(); updateStats(); newQuestion();
     }
-    setSyncStatus(t('downloadOk'));
-  } catch(err){ setSyncStatus(t('downloadErr')+err.message+(isHebrew()?' — אם זה עובד בחלון פרטי, הדפדפן חוסם טעינת סקריפט של Google.':' — if it works in a private window, the browser is blocking the Google script.')); }
+    state.lastSync = Date.now(); saveState(); updateSyncHealth();
+    setSyncStatus(t('downloadOk'), 'ok');
+  } catch(err){ setSyncStatus(t('downloadErr')+err.message+(isHebrew()?' — אם זה עובד בחלון פרטי, הדפדפן חוסם טעינת סקריפט של Google.':' — if it works in a private window, the browser is blocking the Google script.'), 'error'); }
+  finally{ setSyncBusy(false); }
 }
-function setSyncStatus(msg){ el('syncStatus').textContent = msg; }
+function setSyncStatus(msg, type='neutral'){
+  const status = el('syncStatus');
+  status.textContent = msg;
+  status.classList.remove('is-ok','is-error','is-loading');
+  if(type === 'ok') status.classList.add('is-ok');
+  if(type === 'error') status.classList.add('is-error');
+  if(type === 'loading') status.classList.add('is-loading');
+}
 function escapeHtml(s){ return String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])); }
 function runQA(){
   const lines = [];

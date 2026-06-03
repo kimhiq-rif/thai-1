@@ -6,13 +6,13 @@
   <meta name="theme-color" content="#07111f" />
   <title>Thai Trainer — תרגול תאית</title>
   <!-- manifest kept for later, but service worker is disabled in v1.5 to prevent stale app versions -->
-  <link rel="stylesheet" href="styles.css?v=1.22.0" />
+  <link rel="stylesheet" href="styles.css?v=1.23.1" />
 </head>
 <body>
   <main class="app" id="app">
     <header class="hero">
       <div>
-        <p class="eyebrow" id="eyebrowText">Thai Trainer 🇹🇭 · v1.22.1</p>
+        <p class="eyebrow" id="eyebrowText">Thai Trainer 🇹🇭 · v1.23</p>
         <h1 id="mainTitle">קריאה, כתיבה, טונים ומשמעות</h1>
         <p class="subtitle" id="subtitleText">כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.</p>
       </div>
@@ -102,13 +102,26 @@
         <input id="userIdInput" type="text" placeholder="rif" autocomplete="nickname" />
       </label>
       <input id="syncUrl" type="url" placeholder="https://script.google.com/macros/s/.../exec" dir="ltr" />
+      <div class="sync-health" aria-live="polite">
+        <div>
+          <span id="lastSyncLabel">סנכרון אחרון</span>
+          <strong id="lastSyncValue">עדיין לא סונכרן</strong>
+        </div>
+        <div>
+          <span>Web App</span>
+          <strong id="syncUrlPreview" dir="ltr">לא הוגדר</strong>
+        </div>
+      </div>
       <div class="button-grid">
         <button class="secondary" id="saveSyncUrlBtn">שמור כתובת</button>
         <button class="secondary" id="syncUploadBtn">Sync Upload</button>
         <button class="secondary" id="syncDownloadBtn">Sync Download</button>
         <button class="secondary" id="syncTestBtn" type="button">בדוק חיבור</button>
         <button class="secondary" id="openSyncTestBtn" type="button">פתח בדיקה</button>
+        <button class="secondary" id="exportBackupBtn" type="button">גיבוי מקומי</button>
+        <button class="secondary" id="importBackupBtn" type="button">שחזר גיבוי</button>
       </div>
+      <input id="importBackupInput" type="file" accept="application/json,.json" hidden />
       <p class="status" id="syncStatus">מוכן.</p>
     </section>
 
@@ -119,6 +132,6 @@
       </details>
     </section>
   </main>
-  <script src="app.js?v=1.22.1" defer></script>
+  <script src="app.js?v=1.23.1" defer></script>
 </body>
 </html>
