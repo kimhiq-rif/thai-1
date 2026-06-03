@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.23.1-device-compatibility';
+const APP_VERSION = '1.25.1-auto-scroll';
 
 const TONES = [
   { id:'mid', he:'אמצעי', en:'mid' },
@@ -13,7 +13,7 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.23.1', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.1', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', eraser:'מחק', eraserActive:'מחק פעיל', eraserTitle:'הפעל/כבה מחק מקומי', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
@@ -25,10 +25,11 @@ const I18N = {
     soundQuestion:'מה הצליל של הסימן?', nameQuestion:'מה שם הסימן בתאית?', symbolQuestion:'איזה סימן מתאים לשם?', boardWordQuestion:'איזו מילת לוח שייכת לסימן?', shortcutQuestion:'מה התפקיד של הסימן?',
     sound:'צליל', signName:'שם הסימן', boardWord:'מילת לוח', note:'הערה', emoji:'אימוג׳י', shortcutAnswer:'מקצר תנועה', userLabel:'שם משתמש', userPlaceholder:'לדוגמה: rif', initUserOk:'נוצרה/נמצאה לשונית משתמש ✅', initUserErr:'שגיאת יצירת משתמש: ', saveProgress:'שמור התקדמות', loadProgress:'טען התקדמות', testSync:'בדוק חיבור', openSyncTest:'פתח בדיקה', promptVowelWrite:'כתוב על הלוח את התשובה לפי לוח התנועות', level6McqKicker:'שאלה 1 מתוך 2 — הבנה', level6WriteKicker:'שאלה 2 מתוך 2 — כתיבה', level6Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו נושא.', level12Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו סימן/אות.', level12WriteIntro:'עכשיו כתוב את הסימן/האות או מילת הלוח מאותו פריט.', level6WriteLocked:'בחר קודם תשובה אמריקאית כדי לפתוח את שאלת הכתיבה.', level6Correct:'נכון', level6Wrong:'לא נכון', level6WriteIntro:'עכשיו השתמש באותו סימן/עיצור וכתוב את המילה המבוקשת.', vowelAnswer:'תשובת לוח', thaiName:'שם תאילנדי', localName:'הסבר בעברית', writingRule:'כלל כתיבה', example:'דוגמה', consonantName:'שם העיצור', theme:'לוק',
     syncSaved:'כתובת הסנכרון נשמרה.', uploadOk:'העלאה לענן הצליחה ✅', uploadSent:'העלאה לענן נשלחה בהצלחה ✅', downloadOk:'הורדה מהענן הצליחה ✅', uploadErr:'שגיאת העלאה: ', downloadErr:'שגיאת הורדה: ', syncTestOk:'החיבור ל־Google Apps Script עובד ✅', syncTestErr:'בדיקת החיבור נכשלה: ', scriptBlockedHe:'הדפדפן חסם טעינת סקריפט מ־Google. נסה לכבות VPN/AdBlock/Tracking Protection או לפתוח ב־Chrome/Safari. אפשר גם ללחוץ "פתח בדיקה" ולראות אם הכתובת עובדת.',
-    syncWorking:'עובד...', lastSync:'סנכרון אחרון', neverSynced:'עדיין לא סונכרן', localBackup:'גיבוי מקומי', restoreBackup:'שחזר גיבוי', exportOk:'קובץ גיבוי נשמר במחשב ✅', importOk:'הגיבוי נטען בהצלחה ✅', importErr:'שגיאת שחזור גיבוי: ', importConfirm:'לטעון את הגיבוי ולהחליף את ההתקדמות הנוכחית?'
+    syncWorking:'עובד...', lastSync:'סנכרון אחרון', neverSynced:'עדיין לא סונכרן', localBackup:'גיבוי מקומי', restoreBackup:'שחזר גיבוי', exportOk:'קובץ גיבוי נשמר במחשב ✅', importOk:'הגיבוי נטען בהצלחה ✅', importErr:'שגיאת שחזור גיבוי: ', importConfirm:'לטעון את הגיבוי ולהחליף את ההתקדמות הנוכחית?',
+    dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא'
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.23.1', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.1', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', eraser:'Eraser', eraserActive:'Eraser on', eraserTitle:'Toggle local eraser', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
@@ -40,7 +41,8 @@ const I18N = {
     soundQuestion:'What sound does this sign make?', nameQuestion:'What is the Thai name of this sign?', symbolQuestion:'Which sign matches this name?', boardWordQuestion:'Which board word belongs to this sign?', shortcutQuestion:'What does this sign do?',
     sound:'Sound', signName:'Sign name', boardWord:'Board word', note:'Note', emoji:'Emoji', shortcutAnswer:'shortens a vowel', userLabel:'Username', userPlaceholder:'e.g. rif', initUserOk:'User sheet created/found ✅', initUserErr:'User init error: ', saveProgress:'Save progress', loadProgress:'Load progress', testSync:'Test connection', openSyncTest:'Open test', promptVowelWrite:'Write the answer on the board from the vowel board', level6McqKicker:'Question 1 of 2 — understanding', level6WriteKicker:'Question 2 of 2 — writing', level6Choose:'Choose one answer. After choosing, a writing question about the same topic will open.', level12Choose:'Choose one answer. After choosing, a writing task about the same sign/letter will open.', level12WriteIntro:'Now write the sign/letter or board word from the same item.', level6WriteLocked:'Choose a multiple-choice answer first to unlock the writing task.', level6Correct:'Correct', level6Wrong:'Not correct', level6WriteIntro:'Now use the same sign/consonant and write the requested word.', vowelAnswer:'Vowel-board answer', thaiName:'Thai name', localName:'English explanation', writingRule:'Writing rule', example:'Example', consonantName:'Consonant name', theme:'Theme',
     syncSaved:'Sync URL saved.', uploadOk:'Cloud upload succeeded ✅', uploadSent:'Cloud upload was sent ✅', downloadOk:'Cloud download succeeded ✅', uploadErr:'Upload error: ', downloadErr:'Download error: ', syncTestOk:'Google Apps Script connection works ✅', syncTestErr:'Connection test failed: ', scriptBlockedHe:'The browser blocked loading a Google script. Try disabling VPN/AdBlock/Tracking Protection or open in Chrome/Safari. You can also click “Open test” to verify the URL.',
-    syncWorking:'Working...', lastSync:'Last sync', neverSynced:'Not synced yet', localBackup:'Local backup', restoreBackup:'Restore backup', exportOk:'Backup file saved ✅', importOk:'Backup restored ✅', importErr:'Backup restore error: ', importConfirm:'Load this backup and replace current progress?'
+    syncWorking:'Working...', lastSync:'Last sync', neverSynced:'Not synced yet', localBackup:'Local backup', restoreBackup:'Restore backup', exportOk:'Backup file saved ✅', importOk:'Backup restored ✅', importErr:'Backup restore error: ', importConfirm:'Load this backup and replace current progress?',
+    dailyPractice:'Daily practice', dailyOn:'Daily practice active', dailyDone:'Daily practice complete', dueItems:'Due', weakItems:'Weak', strongItems:'Strong', todayGoal:'Today goal', achievements:'Achievements', penSize:'Pen size', skins:'Premium skins', coachPoints:'coach pts', nextSkin:'Next skin'
   }
 };
 function lang(){ return state && state.lang ? state.lang : 'he'; }
@@ -977,11 +979,21 @@ const MODES = ['read_meaning','hebrew_write','tone','roman_write'];
 const MODE_OPTIONS = ['mixed','read_meaning','hebrew_write','tone','roman_write'];
 const STORAGE_KEY = 'thaiTrainerStateV3';
 const THEMES = [
-  {id:'ocean', he:'Ocean Calm 🌊', en:'Ocean Calm 🌊'},
-  {id:'notebook', he:'Thai Notebook ✍️', en:'Thai Notebook ✍️'},
-  {id:'neon', he:'Neon Bangkok 🌃', en:'Neon Bangkok 🌃'},
-  {id:'minimal', he:'Minimal Premium 🧊', en:'Minimal Premium 🧊'},
-  {id:'island', he:'Island Focus 🏝️', en:'Island Focus 🏝️'}
+  {id:'ocean', he:'Ocean Calm 🌊', en:'Ocean Calm 🌊', points:0},
+  {id:'notebook', he:'Thai Notebook ✍️', en:'Thai Notebook ✍️', points:0},
+  {id:'neon', he:'Neon Bangkok 🌃', en:'Neon Bangkok 🌃', points:0},
+  {id:'minimal', he:'Minimal Premium 🧊', en:'Minimal Premium 🧊', points:0},
+  {id:'island', he:'Island Focus 🏝️', en:'Island Focus 🏝️', points:0},
+  {id:'lotus', he:'Lotus Temple 🪷', en:'Lotus Temple 🪷', points:20, premium:true},
+  {id:'sakura', he:'Sakura Ink 🌸', en:'Sakura Ink 🌸', points:45, premium:true},
+  {id:'mango', he:'Mango Sticky ✨', en:'Mango Sticky ✨', points:75, premium:true},
+  {id:'rainforest', he:'Thai Rainforest 🌿', en:'Thai Rainforest 🌿', points:110, premium:true},
+  {id:'royal', he:'Royal Gold 👑', en:'Royal Gold 👑', points:150, premium:true},
+  {id:'cyber', he:'Cyber Bangkok 🛸', en:'Cyber Bangkok 🛸', points:200, premium:true},
+  {id:'midnight', he:'Midnight Scholar 🌙', en:'Midnight Scholar 🌙', points:260, premium:true},
+  {id:'coral', he:'Coral Reef 🪸', en:'Coral Reef 🪸', points:330, premium:true},
+  {id:'festival', he:'Lantern Festival 🏮', en:'Lantern Festival 🏮', points:420, premium:true},
+  {id:'master', he:'Thai Master Aura 🔥', en:'Thai Master Aura 🔥', points:540, premium:true}
 ];
 const DEFAULT_SYNC_URL = 'https://script.google.com/macros/s/AKfycbzbr2OfX-0WVpJqPuMgQ_ye-kUCGdyAjGvF3Mv3wCugy_n9_x36x6l6ld6oecD4F7Ru/exec';
 let deferredInstallPrompt = null;
@@ -999,7 +1011,7 @@ const canvas = el('writeCanvas');
 const ctx = canvas.getContext('2d');
 
 function defaultState(){
-  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], syncUrl:'', lastSync:null, lang:'he', userId:'rif', theme:'ocean' };
+  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:''}, achievements:{}, penSize:5, syncUrl:'', lastSync:null, lang:'he', userId:'rif', theme:'ocean' };
 }
 
 async function disableOldServiceWorkers(){
@@ -1029,6 +1041,7 @@ function init(){
   if(!state.syncUrl){ state.syncUrl = DEFAULT_SYNC_URL; saveState(); }
   el('syncUrl').value = state.syncUrl || DEFAULT_SYNC_URL;
   el('userIdInput').value = state.userId || 'rif';
+  if(el('penSizeInput')) el('penSizeInput').value = String(state.penSize || 5);
   updateSyncHealth();
   updateStats(); newQuestion();
   // v1.5: do NOT register a service worker. It caused stale versions to stay alive in normal browser windows.
@@ -1072,6 +1085,8 @@ function setupModes(){
 }
 function setupEvents(){
   el('newQuestionBtn').addEventListener('click', newQuestion);
+  if(el('dailyPracticeBtn')) el('dailyPracticeBtn').addEventListener('click', toggleDailyPractice);
+  if(el('penSizeInput')) el('penSizeInput').addEventListener('input', e => { state.penSize = Number(e.target.value) || 5; saveState(); });
   el('clearBtn').addEventListener('click', clearCanvas);
   const eraserBtn = el('eraserToggleBtn');
   if(eraserBtn) eraserBtn.addEventListener('click', toggleEraserMode);
@@ -1101,22 +1116,30 @@ function setupPwa(){
 
 function currentTheme(){ return THEMES.find(x=>x.id===state.theme) || THEMES[0]; }
 function applyTheme(){
+  unlockEligibleThemes();
   const theme = currentTheme();
+  if(!isThemeUnlocked(theme)){
+    state.theme = 'ocean';
+    saveState();
+  }
+  const activeTheme = currentTheme();
   document.body.classList.remove(...THEMES.map(x=>'theme-'+x.id));
-  document.body.classList.add('theme-'+theme.id);
+  document.body.classList.add('theme-'+activeTheme.id);
   const b = el('themeToggle');
-  if(b) b.textContent = isHebrew() ? theme.he : theme.en;
+  if(b) b.textContent = isHebrew() ? activeTheme.he : activeTheme.en;
   const meta = document.querySelector('meta[name="theme-color"]');
   if(meta){
-    const colors = {ocean:'#07111f',notebook:'#f3efe6',neon:'#080014',minimal:'#edf7ff',island:'#062f3a'};
-    meta.setAttribute('content', colors[theme.id] || '#07111f');
+    const colors = {ocean:'#07111f',notebook:'#f3efe6',neon:'#080014',minimal:'#edf7ff',island:'#062f3a',lotus:'#180f2e',sakura:'#2a1022',mango:'#241706',rainforest:'#06261d',royal:'#1f1604',cyber:'#03051f',midnight:'#050812',coral:'#042832',festival:'#220b13',master:'#17020b'};
+    meta.setAttribute('content', colors[activeTheme.id] || '#07111f');
   }
 }
 function cycleTheme(){
-  const idx = THEMES.findIndex(x=>x.id===state.theme);
-  state.theme = THEMES[(idx+1+THEMES.length)%THEMES.length].id;
+  const availableThemes = THEMES.filter(isThemeUnlocked);
+  const idx = availableThemes.findIndex(x=>x.id===state.theme);
+  state.theme = availableThemes[(idx+1+availableThemes.length)%availableThemes.length].id;
   saveState();
   applyTheme();
+  updateSkinPanel();
 }
 function applyLanguage(){
   document.documentElement.lang = lang();
@@ -1131,6 +1154,7 @@ function applyLanguage(){
   el('levelLabel').textContent = t('levelLabel');
   el('modeLabelText').textContent = t('modeLabel');
   el('newQuestionBtn').textContent = t('newQuestion');
+  if(el('dailyPracticeBtn')) el('dailyPracticeBtn').textContent = state.daily?.active ? t('dailyOn') : t('dailyPractice');
   el('clearBtn').textContent = t('clear');
   updateEraserButton();
   el('showAnswerBtn').textContent = t('showAnswer');
@@ -1140,6 +1164,12 @@ function applyLanguage(){
   el('wrongLabel').textContent = t('wrongStat');
   el('streakLabel').textContent = t('streakStat');
   el('accuracyLabel').textContent = t('accuracyStat');
+  if(el('achievementsTitle')) el('achievementsTitle').textContent = t('achievements');
+  if(el('dueItemsLabel')) el('dueItemsLabel').textContent = t('dueItems');
+  if(el('weakItemsLabel')) el('weakItemsLabel').textContent = t('weakItems');
+  if(el('strongItemsLabel')) el('strongItemsLabel').textContent = t('strongItems');
+  if(el('penSizeLabel')) el('penSizeLabel').textContent = t('penSize');
+  if(el('skinsTitle')) el('skinsTitle').textContent = t('skins');
   el('syncTitle').textContent = t('syncTitle');
   el('syncDescription').textContent = t('syncDescription');
   el('userLabel').textContent = t('userLabel');
@@ -1173,10 +1203,78 @@ function mastery(item){
   const s = state.itemStats[item.id] || {correct:0,wrong:0};
   return (s.correct - s.wrong*1.5);
 }
+function todayKey(){ return new Date().toISOString().slice(0,10); }
+function ensureDailyState(){
+  state.daily = {...defaultState().daily, ...(state.daily || {})};
+  state.coach = {...defaultState().coach, ...(state.coach || {})};
+  state.coach.unlocked = [...new Set([...(defaultState().coach.unlocked || []), ...((state.coach && state.coach.unlocked) || [])])];
+  if(state.daily.date !== todayKey()) state.daily = {...defaultState().daily, date:todayKey()};
+}
+function toggleDailyPractice(){
+  ensureDailyState();
+  state.daily.active = !state.daily.active;
+  saveState();
+  updateStats();
+  newQuestion();
+}
+function itemMemory(item){
+  const s = state.itemStats[item.id] || {correct:0,wrong:0,lastSeen:0,box:0,dueAt:0};
+  const attempts = (s.correct || 0) + (s.wrong || 0);
+  const accuracy = attempts ? (s.correct || 0) / attempts : 0;
+  const now = Date.now();
+  const due = !s.dueAt || s.dueAt <= now;
+  const weak = attempts > 0 && (accuracy < 0.62 || (s.wrong || 0) > (s.correct || 0));
+  const strong = attempts >= 4 && accuracy >= 0.82 && (s.box || 0) >= 3;
+  return {s, attempts, accuracy, due, weak, strong};
+}
+function updateSchedule(item, correct){
+  const s = state.itemStats[item.id] || {correct:0,wrong:0,lastSeen:0,modes:{}};
+  const prevBox = s.box || 0;
+  s.box = correct ? Math.min(5, prevBox + 1) : 0;
+  const minutes = correct ? [20, 120, 720, 1440, 4320, 10080][s.box] : 8;
+  s.dueAt = Date.now() + minutes * 60 * 1000;
+  return s;
+}
+function isThemeUnlocked(theme){
+  ensureDailyState();
+  return !theme.premium || (state.coach.unlocked || []).includes(theme.id) || (state.coach.points || 0) >= (theme.points || 0);
+}
+function unlockEligibleThemes(){
+  ensureDailyState();
+  const before = new Set(state.coach.unlocked || []);
+  for(const theme of THEMES){
+    if(isThemeUnlocked(theme)) before.add(theme.id);
+  }
+  state.coach.unlocked = [...before];
+}
+function awardDailyCoachPoints(){
+  ensureDailyState();
+  if(!state.daily.active || state.daily.awarded || (state.daily.done || 0) < (state.daily.goal || 15)) return 0;
+  const correct = state.daily.correct || 0;
+  const done = state.daily.done || 0;
+  const acc = done ? correct / done : 0;
+  let points = 10;
+  if(acc >= 0.8) points += 4;
+  if(acc >= 1) points += 6;
+  if((state.stats.streak || 0) >= 10) points += 3;
+  state.coach.points = (state.coach.points || 0) + points;
+  state.coach.lastAwardDate = todayKey();
+  state.daily.awarded = true;
+  unlockEligibleThemes();
+  return points;
+}
 function weightedPick(items){
   const recentIds = state.history.slice(-8).map(h=>h.id);
   const pool = items.map(item => {
     let weight = 10 - mastery(item);
+    const mem = itemMemory(item);
+    if(mem.due) weight += 5;
+    if(mem.weak) weight += 8;
+    if(mem.strong) weight *= 0.35;
+    if(state.daily && state.daily.active){
+      if(mem.weak || mem.due) weight += 8;
+      if(!mem.attempts) weight += 2.5;
+    }
     if(recentIds.includes(item.id)) weight *= 0.18;
     return {item, weight: Math.max(0.5, weight)};
   });
@@ -1374,7 +1472,9 @@ function renderQuestion(){
   const itemLevel = (mode === 'vowel_board' || mode === 'vowel_write' || mode === 'level6_pair') ? '6' : (mode === 'level12_pair' ? '1.2' : String(item.level));
   el('levelBadge').textContent = itemLevel === '6' ? `${t('level')} 6 — ${t('vowelLevel')}` : itemLevel === '1.2' ? t('foundationLevel') : `${t('level')} ${itemLevel}`;
   el('modeBadge').textContent = modeLabel(mode);
-  el('progressBadge').textContent = `${state.stats.total || 0} ${t('questions')}`;
+  el('progressBadge').textContent = state.daily?.active
+    ? `${t('todayGoal')}: ${state.daily.done || 0}/${state.daily.goal || 15}`
+    : `${state.stats.total || 0} ${t('questions')}`;
   el('answerBox').hidden = true;
   renderLevel6Pair(current);
   renderStudyCard(current);
@@ -1384,6 +1484,7 @@ function renderQuestion(){
   el('clearBtn').hidden = writingLocked;
   const eraserBtn = el('eraserToggleBtn');
   if(eraserBtn) eraserBtn.hidden = writingLocked;
+  if(el('penControl')) el('penControl').hidden = writingLocked;
   el('showAnswerBtn').hidden = writingLocked;
   el('toneChoices').hidden = !(mode === 'tone' || mode === 'vowel_board');
   el('toneChoices').innerHTML = '';
@@ -1596,6 +1697,13 @@ function showAnswer(){
   bindThaiAnswerInfo();
   el('answerBox').hidden = false;
 }
+function scrollToQuestionCard(){
+  const target = document.querySelector('.question-card') || el('controlsPanel') || document.body;
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  requestAnimationFrame(() => {
+    target.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block:'start'});
+  });
+}
 function mark(correct){
   if(!current) return;
   const {item, mode} = current;
@@ -1607,17 +1715,104 @@ function mark(correct){
   s.modes[mode] = s.modes[mode] || {correct:0,wrong:0};
   correct ? s.modes[mode].correct++ : s.modes[mode].wrong++;
   state.itemStats[item.id] = s;
+  updateSchedule(item, correct);
   state.history.push({id:item.id,mode,correct,at:Date.now()});
   if(state.history.length>250) state.history = state.history.slice(-250);
-  saveState(); updateStats(); newQuestion();
+  ensureDailyState();
+  if(state.daily.active){
+    state.daily.done = Math.min(state.daily.goal || 15, (state.daily.done || 0) + 1);
+    correct ? state.daily.correct++ : state.daily.wrong++;
+    const awarded = awardDailyCoachPoints();
+    if(awarded) state.achievements.dailyAward = Date.now();
+  }
+  updateAchievements(correct);
+  saveState(); updateStats(); newQuestion(); scrollToQuestionCard();
+}
+function updateAchievements(correct){
+  state.achievements = state.achievements || {};
+  if((state.stats.streak || 0) >= 5) state.achievements.streak5 = Date.now();
+  if((state.stats.streak || 0) >= 10) state.achievements.streak10 = Date.now();
+  if(state.daily && state.daily.done >= state.daily.goal) state.achievements.dailyComplete = Date.now();
+  const recent = state.history.slice(-10);
+  if(recent.length >= 10 && recent.filter(x=>x.correct).length >= 8) state.achievements.focused10 = Date.now();
+  if(correct && state.stats.total >= 50) state.achievements.fifty = Date.now();
 }
 function updateStats(){
+  ensureDailyState();
   const {correct,wrong,streak,total} = state.stats;
   const acc = total ? Math.round((correct/total)*100) : 0;
   el('correctCount').textContent = correct;
   el('wrongCount').textContent = wrong;
   el('streakCount').textContent = streak;
   el('accuracyCount').textContent = `${acc}%`;
+  updateAchievementPanel();
+  updateSkinPanel();
+}
+function practiceCounts(){
+  const all = [...WORDS, ...BOARD_ITEMS];
+  let due = 0, weak = 0, strong = 0;
+  for(const item of all){
+    const mem = itemMemory(item);
+    if(mem.due && mem.attempts) due++;
+    if(mem.weak) weak++;
+    if(mem.strong) strong++;
+  }
+  return {due, weak, strong};
+}
+function achievementText(){
+  const a = state.achievements || {};
+  if(state.daily && state.daily.done >= state.daily.goal) return t('dailyDone');
+  if(a.streak10) return isHebrew() ? 'רצף 10 תשובות נכונות. יפה.' : '10-correct streak. Nice.';
+  if(a.focused10) return isHebrew() ? 'אימון מדויק: 8 מתוך 10 לאחרונה.' : 'Focused run: 8 of the last 10 correct.';
+  if(a.streak5) return isHebrew() ? 'רצף 5 תשובות נכונות.' : '5-correct streak.';
+  return state.daily?.active ? t('dailyOn') : (isHebrew() ? 'התחל אימון יומי כדי לקבל תמהיל חכם יותר.' : 'Start daily practice for a smarter mix.');
+}
+function updateAchievementPanel(){
+  if(!el('dailyGoalBadge')) return;
+  const goal = state.daily?.goal || 15;
+  const done = state.daily?.done || 0;
+  const counts = practiceCounts();
+  el('dailyGoalBadge').textContent = `${done}/${goal}`;
+  el('dailyGoalBadge').classList.toggle('complete', done >= goal);
+  if(el('dailyPracticeBtn')){
+    el('dailyPracticeBtn').textContent = state.daily?.active ? t('dailyOn') : t('dailyPractice');
+    el('dailyPracticeBtn').classList.toggle('active', !!state.daily?.active);
+  }
+  el('dueItemsCount').textContent = counts.due;
+  el('weakItemsCount').textContent = counts.weak;
+  el('strongItemsCount').textContent = counts.strong;
+  el('achievementNote').textContent = achievementText();
+  updateSkinPanel();
+}
+function updateSkinPanel(){
+  if(!el('skinGrid')) return;
+  ensureDailyState();
+  unlockEligibleThemes();
+  const points = state.coach.points || 0;
+  el('coachPointsBadge').textContent = isHebrew() ? `${points} נק׳` : `${points} pts`;
+  const premiumThemes = THEMES.filter(x=>x.premium);
+  el('skinGrid').innerHTML = premiumThemes.map(theme => {
+    const unlocked = isThemeUnlocked(theme);
+    const active = state.theme === theme.id;
+    const label = isHebrew() ? theme.he : theme.en;
+    return `<button type="button" class="skin-card ${unlocked?'unlocked':'locked'} ${active?'active':''}" data-theme="${theme.id}" ${unlocked?'':'disabled'}>
+      <span class="skin-swatch skin-${theme.id}"></span>
+      <strong>${escapeHtml(label)}</strong>
+      <small>${unlocked ? (active ? (isHebrew()?'פעיל':'Active') : (isHebrew()?'נפתח':'Unlocked')) : `${theme.points} ${isHebrew()?'נק׳':'pts'}`}</small>
+    </button>`;
+  }).join('');
+  el('skinGrid').querySelectorAll('.skin-card.unlocked').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.theme = btn.getAttribute('data-theme');
+      saveState();
+      applyTheme();
+      updateSkinPanel();
+    });
+  });
+  const next = premiumThemes.find(theme => !isThemeUnlocked(theme));
+  el('nextSkinNote').textContent = next
+    ? `${t('nextSkin')}: ${isHebrew()?next.he:next.en} · ${(next.points || 0) - points} ${isHebrew()?'נק׳ נשארו':'pts left'}`
+    : (isHebrew() ? 'כל הסקינים נפתחו. אגדה.' : 'All skins unlocked. Legendary.');
 }
 
 
@@ -1698,7 +1893,7 @@ function setupCanvas(){
     ctx.globalCompositeOperation = 'source-over';
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
-    const penWidth = Math.max(4, Math.min(7, rect.width / 130));
+    const penWidth = Math.max(3, Math.min(10, Number(state.penSize) || 5));
     ctx.lineWidth = eraserMode ? Math.max(24, penWidth * 6) : penWidth;
     ctx.strokeStyle = eraserMode ? '#ffffff' : '#020617';
   }

@@ -19,8 +19,8 @@ button:active{transform:translateY(1px)}button.secondary,button.ghost{background
 .meta-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}.meta-row span{background:#071424;border:1px solid var(--border);border-radius:999px;padding:8px 12px;color:#cbd5e1;font-weight:800}
 .prompt{text-align:center;color:#dbeafe;font-weight:900;font-size:clamp(20px,5vw,30px);margin:22px 0 10px}.thai-big{font-size:clamp(84px,20vw,180px);line-height:1.05;text-align:center;font-weight:900;margin:8px 0;direction:ltr;font-family:Arial,"Noto Sans Thai",sans-serif}.hint{text-align:center;color:var(--muted);font-size:clamp(18px,5vw,26px);margin:6px 0 18px;direction:ltr}
 .choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}.choices button{background:#152b4e;border:1px solid var(--border);box-shadow:none}.choices button.selected{outline:4px solid var(--orange)}
-.canvas-wrap{background:#f8fafc;border:5px solid #24344f;border-radius:22px;overflow:hidden;margin:16px 0;position:relative;touch-action:none;-webkit-user-select:none;user-select:none}
-canvas{display:block;width:100%;height:320px;background:#fff;touch-action:none;cursor:crosshair;position:relative;z-index:0;-webkit-user-select:none;user-select:none}.button-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.answer{background:#071424;border:1px solid var(--border);border-radius:18px;padding:18px;margin-top:16px;font-size:clamp(20px,5vw,30px);line-height:1.65}.answer .thai-answer{font-size:300%;line-height:1.15;direction:ltr;text-align:center;margin:8px 0 12px;color:#e0f2fe;font-weight:900}
+.canvas-wrap{background:linear-gradient(90deg,rgba(244,63,94,.12) 0 2px,transparent 2px 54px),linear-gradient(#fbfdff,#f8fbff);border:1px solid rgba(148,163,184,.45);border-radius:22px;overflow:hidden;margin:16px 0;position:relative;touch-action:none;-webkit-user-select:none;user-select:none;box-shadow:inset 0 0 0 6px rgba(15,23,42,.06),0 18px 48px rgba(0,0,0,.18)}
+canvas{display:block;width:100%;height:320px;background:transparent;touch-action:none;cursor:crosshair;position:relative;z-index:0;-webkit-user-select:none;user-select:none}.button-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.answer{background:#071424;border:1px solid var(--border);border-radius:18px;padding:18px;margin-top:16px;font-size:clamp(20px,5vw,30px);line-height:1.65}.answer .thai-answer{font-size:300%;line-height:1.15;direction:ltr;text-align:center;margin:8px 0 12px;color:#e0f2fe;font-weight:900}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.stats-grid div{background:#071424;border:1px solid var(--border);border-radius:18px;padding:14px;text-align:center}.stats-grid strong{display:block;font-size:32px;color:#7dd3fc}.stats-grid span{color:var(--muted);font-weight:800}.sync-panel h2{margin-top:0}.sync-panel p,.status{color:var(--muted);line-height:1.5}.qa-panel summary{font-weight:900;cursor:pointer}pre{white-space:pre-wrap;direction:ltr;text-align:left;background:#020617;color:#d1fae5;border-radius:14px;padding:12px;overflow:auto}
 @media (max-width:720px){.hero{display:block}.controls{grid-template-columns:1fr}.button-grid,.stats-grid{grid-template-columns:1fr 1fr}canvas{height:300px}.panel{padding:14px;border-radius:20px}}
 @media (pointer:coarse) and (min-width:721px){canvas{height:380px}button,select,input{min-height:60px}}
@@ -160,3 +160,50 @@ button:disabled{opacity:.58;cursor:progress;filter:saturate(.75)}
 @keyframes syncPulse{0%{background-position:0 0}100%{background-position:220% 0}}
 @media (max-width:900px){.sync-panel .button-grid{grid-template-columns:1fr 1fr;}}
 @media (max-width:560px){.sync-panel .button-grid,.sync-health{grid-template-columns:1fr;}}
+
+/* v1.24 — smarter practice, calmer motivation */
+.controls{grid-template-columns:1fr 1fr auto auto}
+.daily-toggle.active{border-color:rgba(34,197,94,.52);background:linear-gradient(135deg,rgba(22,101,52,.78),rgba(14,116,144,.72));color:#dcfce7}
+.pen-control{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;margin-top:10px;color:var(--muted);font-weight:900}
+.pen-control input{min-height:auto;padding:0;accent-color:var(--blue);cursor:pointer}
+.achievement-panel h2{margin:0;font-size:clamp(22px,4vw,30px)}
+.achievement-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+#dailyGoalBadge{border:1px solid var(--border);border-radius:999px;padding:8px 12px;color:#cffafe;background:rgba(8,47,73,.28);font-weight:900}
+#dailyGoalBadge.complete{color:#bbf7d0;border-color:rgba(34,197,94,.46);background:rgba(22,101,52,.22)}
+.achievement-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.achievement-grid div{background:rgba(2,6,23,.34);border:1px solid var(--border);border-radius:16px;padding:12px;text-align:center}
+.achievement-grid span{display:block;color:var(--muted);font-weight:800;margin-bottom:4px}
+.achievement-grid strong{display:block;color:#e0f2fe;font-size:28px}
+.achievement-note{margin:12px 0 0;color:var(--muted);font-weight:800}
+@media (max-width:860px){.controls{grid-template-columns:1fr 1fr}.controls button{width:100%}}
+@media (max-width:560px){.controls,.achievement-grid,.pen-control{grid-template-columns:1fr}.achievement-head{align-items:flex-start;flex-direction:column}}
+
+/* v1.25 — premium coach reward skins */
+.skin-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.skin-card{min-height:118px;padding:12px;border-radius:16px;border:1px solid var(--border);background:rgba(2,6,23,.34);box-shadow:none;display:grid;gap:7px;align-content:start;text-align:start;color:var(--text)}
+.skin-card strong{font-size:15px;line-height:1.25}.skin-card small{color:var(--muted);font-weight:900}.skin-card.locked{opacity:.58;cursor:not-allowed;filter:saturate(.55)}.skin-card.active{outline:3px solid rgba(34,211,238,.75)}
+.skin-swatch{display:block;height:34px;border-radius:12px;border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 0 18px rgba(255,255,255,.16)}
+.skin-lotus{background:linear-gradient(135deg,#3b0764,#db2777,#f9a8d4)}
+.skin-sakura{background:linear-gradient(135deg,#3b0a1f,#fb7185,#ffe4e6)}
+.skin-mango{background:linear-gradient(135deg,#7c2d12,#f59e0b,#fde68a)}
+.skin-rainforest{background:linear-gradient(135deg,#052e16,#16a34a,#bef264)}
+.skin-royal{background:linear-gradient(135deg,#111827,#a16207,#fef3c7)}
+.skin-cyber{background:linear-gradient(135deg,#020617,#2563eb,#22d3ee)}
+.skin-midnight{background:linear-gradient(135deg,#020617,#312e81,#a5b4fc)}
+.skin-coral{background:linear-gradient(135deg,#083344,#06b6d4,#fb7185)}
+.skin-festival{background:linear-gradient(135deg,#450a0a,#e11d48,#fbbf24)}
+.skin-master{background:linear-gradient(135deg,#030712,#7f1d1d,#f97316)}
+@media (max-width:900px){.skin-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.skin-grid{grid-template-columns:1fr}}
+
+body.theme-lotus{--bg:#180f2e;--panel:#24123f;--panel2:#3b1b5f;--text:#fff7fb;--muted:#f0c4dd;--blue:#e879f9;--blue2:#db2777;--green:#86efac;--red:#fb7185;--orange:#f9a8d4;--border:rgba(244,114,182,.3);background:radial-gradient(circle at 20% 0%,rgba(232,121,249,.32),transparent 32%),linear-gradient(180deg,#180f2e,#2a0f43 60%,#080212)}
+body.theme-sakura{--bg:#2a1022;--panel:#3b142c;--panel2:#581c38;--text:#fff7f9;--muted:#fecdd3;--blue:#fb7185;--blue2:#f43f5e;--green:#86efac;--red:#be123c;--orange:#fda4af;--border:rgba(251,113,133,.3);background:linear-gradient(180deg,#2a1022,#451a2f 58%,#12050d)}
+body.theme-mango{--bg:#241706;--panel:#3a2108;--panel2:#5f330b;--text:#fff7ed;--muted:#fed7aa;--blue:#f59e0b;--blue2:#ea580c;--green:#84cc16;--red:#dc2626;--orange:#fbbf24;--border:rgba(251,191,36,.32);background:radial-gradient(circle at 80% 0%,rgba(251,191,36,.3),transparent 32%),linear-gradient(180deg,#241706,#3a2108 62%,#120904)}
+body.theme-rainforest{--bg:#06261d;--panel:#0b3427;--panel2:#14532d;--text:#f0fdf4;--muted:#bbf7d0;--blue:#2dd4bf;--blue2:#16a34a;--green:#bef264;--red:#fb7185;--orange:#facc15;--border:rgba(134,239,172,.28);background:radial-gradient(circle at 12% 5%,rgba(34,197,94,.28),transparent 34%),linear-gradient(180deg,#06261d,#0b3b2b 60%,#02120d)}
+body.theme-royal{--bg:#1f1604;--panel:#2f2207;--panel2:#4a350a;--text:#fffbeb;--muted:#fde68a;--blue:#f59e0b;--blue2:#a16207;--green:#84cc16;--red:#dc2626;--orange:#fbbf24;--border:rgba(253,230,138,.3);background:linear-gradient(135deg,#0f0b02,#3f2d05 52%,#100a01)}
+body.theme-cyber{--bg:#03051f;--panel:#071033;--panel2:#0f1d4f;--text:#eff6ff;--muted:#bae6fd;--blue:#22d3ee;--blue2:#2563eb;--green:#39ff88;--red:#ff3b6b;--orange:#facc15;--border:rgba(34,211,238,.36);background:radial-gradient(circle at 12% 0%,rgba(37,99,235,.38),transparent 33%),radial-gradient(circle at 92% 18%,rgba(34,211,238,.3),transparent 28%),linear-gradient(180deg,#03051f,#071033 62%,#01030e)}
+body.theme-midnight{--bg:#050812;--panel:#0c1220;--panel2:#111827;--text:#e5e7eb;--muted:#c7d2fe;--blue:#818cf8;--blue2:#4f46e5;--green:#34d399;--red:#f87171;--orange:#fbbf24;--border:rgba(165,180,252,.26);background:radial-gradient(circle at 50% -10%,rgba(99,102,241,.28),transparent 36%),linear-gradient(180deg,#050812,#0c1220 60%,#02030a)}
+body.theme-coral{--bg:#042832;--panel:#083344;--panel2:#0e4a5c;--text:#ecfeff;--muted:#a5f3fc;--blue:#06b6d4;--blue2:#0891b2;--green:#2dd4bf;--red:#fb7185;--orange:#f97316;--border:rgba(103,232,249,.28);background:radial-gradient(circle at 88% 0%,rgba(251,113,133,.22),transparent 32%),linear-gradient(180deg,#042832,#083344 58%,#021217)}
+body.theme-festival{--bg:#220b13;--panel:#3b0f1c;--panel2:#5f172c;--text:#fff7ed;--muted:#fecdd3;--blue:#f43f5e;--blue2:#e11d48;--green:#bef264;--red:#dc2626;--orange:#fbbf24;--border:rgba(251,191,36,.28);background:radial-gradient(circle at 25% 0%,rgba(251,191,36,.24),transparent 31%),linear-gradient(180deg,#220b13,#3b0f1c 60%,#100307)}
+body.theme-master{--bg:#17020b;--panel:#2b0712;--panel2:#450a1a;--text:#fff7ed;--muted:#fed7aa;--blue:#fb7185;--blue2:#f97316;--green:#bef264;--red:#ef4444;--orange:#facc15;--border:rgba(249,115,22,.34);background:radial-gradient(circle at 50% -10%,rgba(249,115,22,.36),transparent 35%),linear-gradient(180deg,#17020b,#450a1a 62%,#070104)}
+body[class*="theme-"] .skin-card.active{box-shadow:0 0 0 1px rgba(255,255,255,.16),0 0 28px rgba(34,211,238,.18)}
