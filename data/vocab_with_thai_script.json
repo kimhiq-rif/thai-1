@@ -14,6 +14,7 @@
     "original_front":"sam¹-kan¹",
     "original_back":"חשוב",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -31,6 +32,7 @@
     "original_front":"kha-num¹",
     "original_back":"חטיף",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -41,13 +43,14 @@
     "he":"אשכול\/יחידת בננות; מסרק",
     "english":"banana bunch\/classifier; comb",
     "confidence":"verified_central_context_note",
-    "suggested_level":"3",
+    "suggested_level":3,
     "active_for_questions":true,
     "source_file":"תומר 1,csv.txt",
     "sources":"תומר 1,csv.txt",
     "original_front":"wii¹",
     "original_back":"אשכול בננות",
     "note":"Central Thai; beginner context needs note because หวี also means comb.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -58,13 +61,14 @@
     "he":"באתי \/ אני בא (זכר מנומס)",
     "english":"I came \/ I am coming (male polite)",
     "confidence":"verified_central_corrected_meaning",
-    "suggested_level":"3",
+    "suggested_level":3,
     "active_for_questions":true,
     "source_file":"תומר 1,csv.txt",
     "sources":"תומר 1,csv.txt",
     "original_front":"ma¹-krap",
     "original_back":"אני כאן",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -82,6 +86,7 @@
     "original_front":"waai³",
     "original_back":"לחלוק כבוד",
     "note":"מחווה של הצמדת ידיים",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -99,6 +104,7 @@
     "original_front":"nam¹",
     "original_back":"מים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -116,6 +122,7 @@
     "original_front":"bpaag²-gaa¹",
     "original_back":"עט",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -133,6 +140,7 @@
     "original_front":"bpaag²",
     "original_back":"פה \/ מקור",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -150,6 +158,7 @@
     "original_front":"gaa¹",
     "original_back":"עורב",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -167,6 +176,7 @@
     "original_front":"waai³-nam¹",
     "original_back":"לשחות",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -184,6 +194,7 @@
     "original_front":"kru¹",
     "original_back":"מורה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -201,6 +212,7 @@
     "original_front":"kun¹ cheuu³ a-rai¹?",
     "original_back":"מה השם שלך?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -218,6 +230,7 @@
     "original_front":"pom⁵ cheuu³ (name)",
     "original_back":"השם שלי הוא...",
     "note":"לזכר",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -235,6 +248,7 @@
     "original_front":"chan⁵ cheuu³ (name)",
     "original_back":"השם שלי הוא...",
     "note":"לנקבה",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -252,6 +266,7 @@
     "original_front":"maa¹",
     "original_back":"לבוא",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -269,6 +284,7 @@
     "original_front":"bpai¹",
     "original_back":"ללכת",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -286,6 +302,7 @@
     "original_front":"yuu²",
     "original_back":"להיות \/ לגור",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -303,6 +320,7 @@
     "original_front":"thong³",
     "original_back":"בטן",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -320,6 +338,7 @@
     "original_front":"hin⁵",
     "original_back":"אבן",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -337,6 +356,7 @@
     "original_front":"kong¹",
     "original_back":"ערימה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -354,6 +374,7 @@
     "original_front":"pom⁵ yuu² (place)",
     "original_back":"אני גר ב...",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -371,6 +392,7 @@
     "original_front":"waan⁵",
     "original_back":"מתוק",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -388,6 +410,7 @@
     "original_front":"kaai³",
     "original_back":"מחנה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -405,6 +428,7 @@
     "original_front":"chaa¹",
     "original_back":"תה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -422,6 +446,7 @@
     "original_front":"a-rai¹",
     "original_back":"מה?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -439,6 +464,7 @@
     "original_front":"deuum²",
     "original_back":"לשתות",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -456,6 +482,7 @@
     "original_front":"baan³",
     "original_back":"בית",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -473,6 +500,7 @@
     "original_front":"dtai³",
     "original_back":"דרום \/ מתחת",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -490,6 +518,7 @@
     "original_front":"rawn¹",
     "original_back":"חם",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -500,13 +529,14 @@
     "he":"מילת שאלה (כן\/לא)",
     "english":"yes\/no question particle",
     "confidence":"verified_central_corrected_script",
-    "suggested_level":"1",
+    "suggested_level":1,
     "active_for_questions":true,
     "source_file":"תומר 1,csv.txt",
     "sources":"תומר 1,csv.txt",
     "original_front":"mai¹?",
     "original_back":"מילת שאלה (כן\/לא)",
     "note":null,
+    "roman":"mai?",
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -524,6 +554,7 @@
     "original_front":"chai³ mai¹?",
     "original_back":"נכון?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -541,6 +572,7 @@
     "original_front":"mai³",
     "original_back":"לא \/ אל",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -558,6 +590,7 @@
     "original_front":"suai⁵",
     "original_back":"יפה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -568,13 +601,14 @@
     "he":"מה שלומך?",
     "english":"How are you?",
     "confidence":"verified_central_added_script",
-    "suggested_level":"5",
+    "suggested_level":5,
     "active_for_questions":true,
     "source_file":"תומר 1,csv.txt",
     "sources":"תומר 1,csv.txt",
     "original_front":"sa-baai¹ dii¹ mai¹?",
     "original_back":"מה שלומך?",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -585,13 +619,14 @@
     "he":"הכל טוב \/ בסדר",
     "english":"I am fine \/ okay",
     "confidence":"verified_central_added_script",
-    "suggested_level":"4",
+    "suggested_level":4,
     "active_for_questions":true,
     "source_file":"תומר 1,csv.txt",
     "sources":"תומר 1,csv.txt",
     "original_front":"sa-baai¹ dii¹",
     "original_back":"הכל טוב \/ בסדר",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -602,13 +637,14 @@
     "he":"לא מרגיש טוב",
     "english":"not feeling well",
     "confidence":"verified_central_added_script",
-    "suggested_level":"4",
+    "suggested_level":4,
     "active_for_questions":true,
     "source_file":"תומר 1,csv.txt",
     "sources":"תומר 1,csv.txt",
     "original_front":"mai³ sa-baai¹",
     "original_back":"לא מרגיש טוב",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -626,6 +662,7 @@
     "original_front":"dtii¹ maa¹",
     "original_back":"להרביץ לכלב",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -643,6 +680,7 @@
     "original_front":"dtawb²",
     "original_back":"לענות",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -660,6 +698,7 @@
     "original_front":"nguu¹",
     "original_back":"נחש",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -677,6 +716,7 @@
     "original_front":"ngoen¹",
     "original_back":"כסף",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -694,6 +734,7 @@
     "original_front":"ngaan¹",
     "original_back":"עבודה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -711,6 +752,7 @@
     "original_front":"mii¹",
     "original_back":"יש",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -728,6 +770,7 @@
     "original_front":"tam¹-ngaan¹",
     "original_back":"לעבוד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -745,6 +788,7 @@
     "original_front":"tam¹",
     "original_back":"לעשות \/ להכין",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -762,6 +806,7 @@
     "original_front":"lang⁵",
     "original_back":"חזרת",
     "note":"Original Hebrew “חזרת” did not match หลัง. If the target is “returned”, use กลับ.",
+    "roman":null,
     "validation_status":"needs_user_review_or_not_priority"
   },
   {
@@ -779,6 +824,7 @@
     "original_front":"a¹-roi²",
     "original_back":"טעים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -796,6 +842,7 @@
     "original_front":"nit-noi²",
     "original_back":"קצת",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -813,6 +860,7 @@
     "original_front":"ja²",
     "original_back":"מילת עתיד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -830,6 +878,7 @@
     "original_front":"gin¹ a¹-rai¹?",
     "original_back":"מה אתה אוכל?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -847,6 +896,7 @@
     "original_front":"pom⁵\/chan⁵ rak¹ kun¹",
     "original_back":"אני אוהב\/ת אותך",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -857,13 +907,14 @@
     "he":"אתה אוהב אותי?",
     "english":"Do you love me?",
     "confidence":"verified_central_corrected_phrase",
-    "suggested_level":"5",
+    "suggested_level":5,
     "active_for_questions":true,
     "source_file":"תומר 2,csv.txt",
     "sources":"תומר 2,csv.txt",
     "original_front":"rak¹ kun¹ pom⁵\/chan⁵",
     "original_back":"אתה אוהב אותי",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -881,6 +932,7 @@
     "original_front":"bpoed²",
     "original_back":"להדליק \/ לפתוח",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -898,6 +950,7 @@
     "original_front":"chawb³",
     "original_back":"לאהוב \/ לחבב",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -915,6 +968,7 @@
     "original_front":"rong¹-rian¹",
     "original_back":"בית ספר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -932,6 +986,7 @@
     "original_front":"rian¹",
     "original_back":"ללמוד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -949,6 +1004,7 @@
     "original_front":"rong¹",
     "original_back":"מקום מפגש",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -966,6 +1022,7 @@
     "original_front":"kaw⁵-tohd³",
     "original_back":"סליחה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -983,6 +1040,7 @@
     "original_front":"khon¹",
     "original_back":"אנשים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1000,6 +1058,7 @@
     "original_front":"kian⁵",
     "original_back":"לכתוב",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1017,6 +1076,7 @@
     "original_front":"kaaw³-niaw³ ma¹-muang³",
     "original_back":"סטיקי רייס מנגו",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1034,6 +1094,7 @@
     "original_front":"pad²",
     "original_back":"מוקפץ",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1051,6 +1112,7 @@
     "original_front":"koh⁵",
     "original_back":"אפשר לקבל...",
     "note":"בצורה מנומסת",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1068,6 +1130,7 @@
     "original_front":"riag³ a¹-rai¹?",
     "original_back":"איך קוראים ל...?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1085,6 +1148,7 @@
     "original_front":"kun¹ la²",
     "original_back":"ואתה\/ואת?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1102,6 +1166,7 @@
     "original_front":"chen¹-gan¹",
     "original_back":"אותו הדבר \/ גם אני",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1119,6 +1184,7 @@
     "original_front":"yin¹-dii¹",
     "original_back":"ברוך הבא",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1136,6 +1202,7 @@
     "original_front":"ruu⁴",
     "original_back":"לדעת (מידע)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1153,6 +1220,7 @@
     "original_front":"ruu⁴-jag²",
     "original_back":"להכיר (אנשים\/מקומות)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1170,6 +1238,7 @@
     "original_front":"ruu⁴ mai¹?",
     "original_back":"אתה יודע?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1187,6 +1256,7 @@
     "original_front":"mai³ ruu⁴",
     "original_back":"לא יודע",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1204,6 +1274,7 @@
     "original_front":"yang¹ mai³ ruu⁴",
     "original_back":"עדיין לא יודע",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1221,6 +1292,7 @@
     "original_front":"naa-tii¹",
     "original_back":"דקה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1238,6 +1310,7 @@
     "original_front":"haad²",
     "original_back":"חוף",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1255,6 +1328,7 @@
     "original_front":"dai³",
     "original_back":"יכול",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1272,6 +1346,7 @@
     "original_front":"puud³",
     "original_back":"לדבר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1289,6 +1364,7 @@
     "original_front":"puud³ Thai dai³ mai¹?",
     "original_back":"אתה יכול לדבר תאילנדית?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1306,6 +1382,7 @@
     "original_front":"prik¹",
     "original_back":"צ'ילי",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1323,6 +1400,7 @@
     "original_front":"mai³ sai²",
     "original_back":"בלי \/ לא לשים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1340,6 +1418,7 @@
     "original_front":"nam¹ dtaan¹",
     "original_back":"סוכר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1357,6 +1436,7 @@
     "original_front":"peum³",
     "original_back":"להוסיף",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1374,6 +1454,7 @@
     "original_front":"tii-nii",
     "original_back":"פה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1391,6 +1472,7 @@
     "original_front":"paa-saa",
     "original_back":"שפה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1408,6 +1490,7 @@
     "original_front":"bpra-ted",
     "original_back":"מדינה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1425,6 +1508,7 @@
     "original_front":"tuk-kon",
     "original_back":"כולם",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1435,13 +1519,14 @@
     "he":"אל תחכה",
     "english":"do not wait",
     "confidence":"verified_central_corrected_phrase",
-    "suggested_level":"3",
+    "suggested_level":3,
     "active_for_questions":true,
     "source_file":"תומר 3,csv.txt",
     "sources":"תומר 3,csv.txt; תומר4,csv.txt",
     "original_front":"mai ro mai koh",
     "original_back":"אל תחכה",
     "note":"Replaced unclear ไม่รอไม่ขอ with common central phrase อย่ารอ.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1452,13 +1537,14 @@
     "he":"זה מספיק?",
     "english":"Is it enough?",
     "confidence":"verified_central_corrected_phrase",
-    "suggested_level":"5",
+    "suggested_level":5,
     "active_for_questions":true,
     "source_file":"תומר 3,csv.txt",
     "sources":"תומר 3,csv.txt; תומר4,csv.txt",
     "original_front":"paw-dii\/paw mai",
     "original_back":"מספיק \/ לא מספיק",
     "note":"For “not enough” use ไม่พอ (mai phaw).",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1476,6 +1562,7 @@
     "original_front":"bpai nai?",
     "original_back":"לאן אתה הולך?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1493,6 +1580,7 @@
     "original_front":"tobp-tuan",
     "original_back":"לחזור (על חומר)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1510,6 +1598,7 @@
     "original_front":"pii",
     "original_back":"אח\/אחות מבוגר\/ת",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1527,6 +1616,7 @@
     "original_front":"leuum",
     "original_back":"לשכוח",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1544,6 +1634,7 @@
     "original_front":"laeh",
     "original_back":"ו...",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1561,6 +1652,7 @@
     "original_front":"kun puud paasaa a-rai?",
     "original_back":"איזו שפה אתה מדבר?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1578,6 +1670,7 @@
     "original_front":"sed",
     "original_back":"לסיים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1595,6 +1688,7 @@
     "original_front":"yen",
     "original_back":"קר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1612,6 +1706,7 @@
     "original_front":"kun maa jaag (place)",
     "original_back":"מאיפה אתה?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1629,6 +1724,7 @@
     "original_front":"jaag",
     "original_back":"מ... (מקור)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1646,6 +1742,7 @@
     "original_front":"nai\/tii nai",
     "original_back":"איפה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1663,6 +1760,7 @@
     "original_front":"hong krua",
     "original_back":"מטבח",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1680,6 +1778,7 @@
     "original_front":"jaai",
     "original_back":"לב",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1697,6 +1796,7 @@
     "original_front":"jaai dii",
     "original_back":"לב טוב",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1714,6 +1814,7 @@
     "original_front":"tam-mai?",
     "original_back":"למה?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1731,6 +1832,7 @@
     "original_front":"maag",
     "original_back":"מאוד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1748,6 +1850,7 @@
     "original_front":"sawn",
     "original_back":"ללמד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1765,6 +1868,7 @@
     "original_front":"peang",
     "original_back":"יקר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1782,6 +1886,7 @@
     "original_front":"tug-yaang",
     "original_back":"הכל",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1799,6 +1904,7 @@
     "original_front":"dtae",
     "original_back":"אבל",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1816,6 +1922,7 @@
     "original_front":"tok",
     "original_back":"ליפול",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1833,6 +1940,7 @@
     "original_front":"nam-tok",
     "original_back":"מפל",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1850,6 +1958,7 @@
     "original_front":"kid",
     "original_back":"לחשוב",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1867,6 +1976,7 @@
     "original_front":"kun kid a-rai?",
     "original_back":"על מה אתה חושב?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1884,6 +1994,7 @@
     "original_front":"chuai",
     "original_back":"לעזור",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1901,6 +2012,7 @@
     "original_front":"dtaw",
     "original_back":"להמשיך \/ להאריך",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1911,13 +2023,14 @@
     "he":"לחפש \/ למצוא",
     "english":"look for \/ find",
     "confidence":"verified_central_corrected_script",
-    "suggested_level":"1",
+    "suggested_level":1,
     "active_for_questions":true,
     "source_file":"תומר 3,csv.txt",
     "sources":"תומר 3,csv.txt; תומר4,csv.txt",
     "original_front":"haa",
     "original_back":"לראות \/ לחפש",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1935,6 +2048,7 @@
     "original_front":"maw³",
     "original_back":"סיר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1952,6 +2066,7 @@
     "original_front":"maws",
     "original_back":"רופא",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1969,6 +2084,7 @@
     "original_front":"buag",
     "original_back":"פלוס",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -1986,6 +2102,7 @@
     "original_front":"löb",
     "original_back":"מינוס",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2003,6 +2120,7 @@
     "original_front":"ta-gab",
     "original_back":"שווה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2013,13 +2131,14 @@
     "he":"שווה \/ באותה מידה",
     "english":"equal \/ as much as",
     "confidence":"verified_central_corrected_meaning",
-    "suggested_level":"3",
+    "suggested_level":3,
     "active_for_questions":true,
     "source_file":"תומר 3,csv.txt",
     "sources":"תומר 3,csv.txt; תומר4,csv.txt",
     "original_front":"dtao",
     "original_back":"סך הכל",
     "note":"For total\/sum use รวม or ทั้งหมด depending context.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2037,6 +2156,7 @@
     "original_front":"tao-rai",
     "original_back":"כמה (מחיר)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2054,6 +2174,7 @@
     "original_front":"laew-dtua kun",
     "original_back":"תלוי בך",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2071,6 +2192,7 @@
     "original_front":"gii mong?",
     "original_back":"איזו שעה?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2088,6 +2210,7 @@
     "original_front":"dtua-ni",
     "original_back":"עכשיו",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2105,6 +2228,7 @@
     "original_front":"wan-nii",
     "original_back":"היום",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2122,6 +2246,7 @@
     "original_front":"pru-ngii",
     "original_back":"מחר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2139,6 +2264,7 @@
     "original_front":"meua-wan",
     "original_back":"אתמול",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2156,6 +2282,7 @@
     "original_front":"dtan-chao",
     "original_back":"בוקר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2173,6 +2300,7 @@
     "original_front":"dtan-tiang",
     "original_back":"צהריים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2190,6 +2318,7 @@
     "original_front":"dtan-yen",
     "original_back":"ערב",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2207,6 +2336,7 @@
     "original_front":"dtan-klang-keun",
     "original_back":"לילה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2224,6 +2354,7 @@
     "original_front":"gin-kaaw",
     "original_back":"לאכול (אורז\/ארוחה)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2241,6 +2372,7 @@
     "original_front":"nueng",
     "original_back":"אחד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2258,6 +2390,7 @@
     "original_front":"song",
     "original_back":"שתיים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2275,6 +2408,7 @@
     "original_front":"saam",
     "original_back":"שלוש",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2292,6 +2426,7 @@
     "original_front":"sii",
     "original_back":"ארבע",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2309,6 +2444,7 @@
     "original_front":"haa",
     "original_back":"חמש",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2326,6 +2462,7 @@
     "original_front":"hok",
     "original_back":"שש",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2343,6 +2480,7 @@
     "original_front":"jet",
     "original_back":"שבע",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2360,6 +2498,7 @@
     "original_front":"bpaed",
     "original_back":"שמונה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2377,6 +2516,7 @@
     "original_front":"gao",
     "original_back":"תשע",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2394,6 +2534,7 @@
     "original_front":"sip",
     "original_back":"עשר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2411,6 +2552,7 @@
     "original_front":"sip-et",
     "original_back":"אחת עשרה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2428,6 +2570,7 @@
     "original_front":"yii-sip",
     "original_back":"עשרים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2445,6 +2588,7 @@
     "original_front":"roi",
     "original_back":"מאה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2462,6 +2606,7 @@
     "original_front":"pan",
     "original_back":"אלף",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2479,6 +2624,7 @@
     "original_front":"meun",
     "original_back":"עשרת אלפים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2496,6 +2642,7 @@
     "original_front":"san",
     "original_back":"מאה אלף",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2513,6 +2660,7 @@
     "original_front":"lan",
     "original_back":"מיליון",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2530,6 +2678,7 @@
     "original_front":"naa",
     "original_back":"פנים \/ עונה \/ דף",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2547,6 +2696,7 @@
     "original_front":"naa-rawn",
     "original_back":"העונה החמה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2564,6 +2714,7 @@
     "original_front":"naa-fon",
     "original_back":"עונת הגשמים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2581,6 +2732,7 @@
     "original_front":"naa-nao",
     "original_back":"העונה הקרה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2598,6 +2750,7 @@
     "original_front":"glai",
     "original_back":"קרוב (טון נמוך)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2615,6 +2768,7 @@
     "original_front":"glai",
     "original_back":"רחוק (טון גבוה)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2632,6 +2786,7 @@
     "original_front":"dtong",
     "original_back":"חייב",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2649,6 +2804,7 @@
     "original_front":"glua",
     "original_back":"לפחד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2666,6 +2822,7 @@
     "original_front":"bpra-maan",
     "original_back":"בערך",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2683,6 +2840,7 @@
     "original_front":"glap",
     "original_back":"לחזור",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2700,6 +2858,7 @@
     "original_front":"glap baan",
     "original_back":"לחזור הביתה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2717,6 +2876,7 @@
     "original_front":"heua",
     "original_back":"זיעה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2734,6 +2894,7 @@
     "original_front":"heua-awk",
     "original_back":"להזיע",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2751,6 +2912,7 @@
     "original_front":"nuay",
     "original_back":"עייף",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2768,6 +2930,7 @@
     "original_front":"hiu",
     "original_back":"רעב",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2785,6 +2948,7 @@
     "original_front":"hiu-nam",
     "original_back":"צמא",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2802,6 +2966,7 @@
     "original_front":"im",
     "original_back":"שבע (מאוכל)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2819,6 +2984,7 @@
     "original_front":"pet",
     "original_back":"חריף",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2836,6 +3002,7 @@
     "original_front":"kem",
     "original_back":"מלוח",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2853,6 +3020,7 @@
     "original_front":"bpreaw",
     "original_back":"חמוץ",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2870,6 +3038,7 @@
     "original_front":"kom",
     "original_back":"מר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2887,6 +3056,7 @@
     "original_front":"man",
     "original_back":"שומני",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2904,6 +3074,7 @@
     "original_front":"juad",
     "original_back":"תפל",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2921,6 +3092,7 @@
     "original_front":"ka-ya",
     "original_back":"זבל",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2938,6 +3110,7 @@
     "original_front":"mai-pen-rai",
     "original_back":"לא משנה \/ אין בעבר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2955,6 +3128,7 @@
     "original_front":"cho-dee",
     "original_back":"בהצלחה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2972,6 +3146,7 @@
     "original_front":"la-gon",
     "original_back":"להתראות",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -2989,6 +3164,7 @@
     "original_front":"pai-gon-na",
     "original_back":"אני הולך עכשיו (להתראות)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3006,6 +3182,7 @@
     "original_front":"bpai-leaw",
     "original_back":"כבר הלכתי \/ הלכתי",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3023,6 +3200,7 @@
     "original_front":"jer-gan",
     "original_back":"נתראה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3040,6 +3218,7 @@
     "original_front":"tuk-wan",
     "original_back":"כל יום",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3050,13 +3229,14 @@
     "he":"הכל",
     "english":"everything",
     "confidence":"verified_central_added_script",
-    "suggested_level":"3",
+    "suggested_level":3,
     "active_for_questions":true,
     "source_file":"תומר 5,csv.txt",
     "sources":"תומר 5,csv.txt",
     "original_front":"tuk-yaang",
     "original_back":"הכל",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3074,6 +3254,7 @@
     "original_front":"bang-ti",
     "original_back":"לפעמים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3091,6 +3272,7 @@
     "original_front":"bang-kon",
     "original_back":"חלק מהאנשים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3108,6 +3290,7 @@
     "original_front":"mai-koey",
     "original_back":"אף פעם לא",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3125,6 +3308,7 @@
     "original_front":"koey",
     "original_back":"פעם \/ כבר עשיתי",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3142,6 +3326,7 @@
     "original_front":"bua",
     "original_back":"משעמם",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3159,6 +3344,7 @@
     "original_front":"nguang-non",
     "original_back":"ישנוני",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3176,6 +3362,7 @@
     "original_front":"sanook",
     "original_back":"כיף",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3193,6 +3380,7 @@
     "original_front":"bpen",
     "original_back":"להיות \/ לדעת לעשות",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3210,6 +3398,7 @@
     "original_front":"kue",
     "original_back":"זה \/ הוא (להגדרות)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3227,6 +3416,7 @@
     "original_front":"sa-waat-dee",
     "original_back":"שלום",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3244,6 +3434,7 @@
     "original_front":"kob-kun",
     "original_back":"תודה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3254,13 +3445,14 @@
     "he":"נעים להכיר",
     "english":"nice to meet you",
     "confidence":"verified_central_added_script",
-    "suggested_level":"5",
+    "suggested_level":5,
     "active_for_questions":true,
     "source_file":"תומר 5,csv.txt",
     "sources":"תומר 5,csv.txt",
     "original_front":"yin-dee-tii-dai-ruu-jag",
     "original_back":"נעים להכיר",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3278,6 +3470,7 @@
     "original_front":"tii-nai?",
     "original_back":"איפה?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3295,6 +3488,7 @@
     "original_front":"meua-rai?",
     "original_back":"מתי?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3312,6 +3506,7 @@
     "original_front":"yang-ngai?",
     "original_back":"איך?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3329,6 +3524,7 @@
     "original_front":"prow-wa",
     "original_back":"בגלל ש...",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3346,6 +3542,7 @@
     "original_front":"ka-nom-bpang",
     "original_back":"לחם",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3363,6 +3560,7 @@
     "original_front":"neu-a",
     "original_back":"בשר \/ בקר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3380,6 +3578,7 @@
     "original_front":"gai",
     "original_back":"עוף",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3397,6 +3596,7 @@
     "original_front":"moo",
     "original_back":"חזיר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3414,6 +3614,7 @@
     "original_front":"bpaa",
     "original_back":"דג",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3431,6 +3632,7 @@
     "original_front":"goong",
     "original_back":"שרימפס",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3448,6 +3650,7 @@
     "original_front":"puu",
     "original_back":"סרטן",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3465,6 +3668,7 @@
     "original_front":"kai",
     "original_back":"ביצה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3482,6 +3686,7 @@
     "original_front":"kai-dao",
     "original_back":"ביצת עין",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3499,6 +3704,7 @@
     "original_front":"kai-jeaw",
     "original_back":"חביתה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3516,6 +3722,7 @@
     "original_front":"pak",
     "original_back":"ירקות",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3533,6 +3740,7 @@
     "original_front":"pon-la-mai",
     "original_back":"פירות",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3550,6 +3758,7 @@
     "original_front":"som",
     "original_back":"תפוז",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3567,6 +3776,7 @@
     "original_front":"ma-muang",
     "original_back":"מנגו",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3584,6 +3794,7 @@
     "original_front":"ma-prao",
     "original_back":"קוקוס",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3601,6 +3812,7 @@
     "original_front":"gluay",
     "original_back":"בננה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3618,6 +3830,7 @@
     "original_front":"sup-pa-rot",
     "original_back":"אננס",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3626,16 +3839,17 @@
     "transliteration":"dtaeng-mo",
     "normalized_transliteration":"dtaeng-mo",
     "he":"אבטיח",
-    "english":"watermelon",
-    "confidence":"original_thai_from_file_verified_english",
-    "suggested_level":"1",
-    "active_for_questions":true,
+    "english":"needs English review",
+    "confidence":"original_thai_from_file_needs_english",
+    "suggested_level":"review_queue",
+    "active_for_questions":false,
     "source_file":"תומר 6,csv.txt",
     "sources":"תומר 6,csv.txt",
     "original_front":"แตงโม (dtaeng-mo)",
     "original_back":"אבטיח",
     "note":null,
-    "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
+    "roman":null,
+    "validation_status":"needs_user_review_or_not_priority"
   },
   {
     "id":"vocab_0215",
@@ -3652,6 +3866,7 @@
     "original_front":"nam-kaeng",
     "original_back":"קרח",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3669,6 +3884,7 @@
     "original_front":"nam-som",
     "original_back":"מיץ תפוזים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3686,6 +3902,7 @@
     "original_front":"ga-fe",
     "original_back":"קפה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3703,6 +3920,7 @@
     "original_front":"nom",
     "original_back":"חלב",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3720,6 +3938,7 @@
     "original_front":"เบียร์ (beer)",
     "original_back":"בירה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3737,6 +3956,7 @@
     "original_front":"เหล้า (lao)",
     "original_back":"אלכוהול \/ וויסקי",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3754,6 +3974,7 @@
     "original_front":"gap",
     "original_back":"עם",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3771,6 +3992,7 @@
     "original_front":"ao",
     "original_back":"רוצה \/ לקחת",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3788,6 +4010,7 @@
     "original_front":"mai ao",
     "original_back":"לא רוצה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3805,6 +4028,7 @@
     "original_front":"ao-an-nii",
     "original_back":"רוצה את זה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3822,6 +4046,7 @@
     "original_front":"reua",
     "original_back":"סירה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3839,6 +4064,7 @@
     "original_front":"reua-bin",
     "original_back":"מטוס",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3856,6 +4082,7 @@
     "original_front":"rot",
     "original_back":"מכונית",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3873,6 +4100,7 @@
     "original_front":"rot-mae",
     "original_back":"אוטובוס",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3890,6 +4118,7 @@
     "original_front":"rot-fai",
     "original_back":"רכבת",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3907,6 +4136,7 @@
     "original_front":"mo-dtu-sai",
     "original_back":"אופנוע",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3917,13 +4147,14 @@
     "he":"אופניים",
     "english":"bicycle",
     "confidence":"verified_central_added_script",
-    "suggested_level":"4",
+    "suggested_level":4,
     "active_for_questions":true,
     "source_file":"תומר 6,csv.txt",
     "sources":"תומר 6,csv.txt",
     "original_front":"jak-kra-yaan",
     "original_back":"אופניים",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3941,6 +4172,7 @@
     "original_front":"doen",
     "original_back":"ללכת ברגל",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3958,6 +4190,7 @@
     "original_front":"wing",
     "original_back":"לרוץ",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3975,6 +4208,7 @@
     "original_front":"suay",
     "original_back":"יפה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -3992,6 +4226,7 @@
     "original_front":"naa-rak",
     "original_back":"חמוד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4009,6 +4244,7 @@
     "original_front":"lor",
     "original_back":"חתיך",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4026,6 +4262,7 @@
     "original_front":"dtia",
     "original_back":"נמוך",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4043,6 +4280,7 @@
     "original_front":"soong",
     "original_back":"גבוה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4060,6 +4298,7 @@
     "original_front":"u-an",
     "original_back":"שמן (גוף)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4077,6 +4316,7 @@
     "original_front":"ผอม (pom)",
     "original_back":"רזה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4094,6 +4334,7 @@
     "original_front":"yai",
     "original_back":"גדול",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4111,6 +4352,7 @@
     "original_front":"lek",
     "original_back":"קטן",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4128,6 +4370,7 @@
     "original_front":"ngao",
     "original_back":"בודד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4145,6 +4388,7 @@
     "original_front":"sia-jai",
     "original_back":"עצוב",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4162,6 +4406,7 @@
     "original_front":"dii-jai",
     "original_back":"שמח",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4179,6 +4424,7 @@
     "original_front":"โกรธ (grote)",
     "original_back":"כועס",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4196,6 +4442,7 @@
     "original_front":"glua",
     "original_back":"מפחד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4213,6 +4460,7 @@
     "original_front":"dtok-jai",
     "original_back":"מופתע \/ בהלם",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4230,6 +4478,7 @@
     "original_front":"ngong",
     "original_back":"מבולבל",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4247,6 +4496,7 @@
     "original_front":"man-jai",
     "original_back":"בטוח בעצמי",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4264,6 +4514,7 @@
     "original_front":"naa-kao-jai",
     "original_back":"מובן",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4281,6 +4532,7 @@
     "original_front":"mai-kao-jai",
     "original_back":"לא מבין",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4298,6 +4550,7 @@
     "original_front":"kao-jai mai?",
     "original_back":"מבין?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4315,6 +4568,7 @@
     "original_front":"kao-jai leaw",
     "original_back":"הבנתי כבר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4332,6 +4586,7 @@
     "original_front":"rak",
     "original_back":"אוהב",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4349,6 +4604,7 @@
     "original_front":"gliad",
     "original_back":"שונא",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4366,6 +4622,7 @@
     "original_front":"hen-duai",
     "original_back":"מסכים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4383,6 +4640,7 @@
     "original_front":"mai-hen-duai",
     "original_back":"לא מסכים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4400,6 +4658,7 @@
     "original_front":"jing-jing",
     "original_back":"באמת",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4417,6 +4676,7 @@
     "original_front":"long",
     "original_back":"לנסות",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4434,6 +4694,7 @@
     "original_front":"duu",
     "original_back":"לראות \/ להסתכל",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4451,6 +4712,7 @@
     "original_front":"fang",
     "original_back":"להקשיב",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4468,6 +4730,7 @@
     "original_front":"dom",
     "original_back":"להריח",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4485,6 +4748,7 @@
     "original_front":"chim",
     "original_back":"לטעום",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4502,6 +4766,7 @@
     "original_front":"jum",
     "original_back":"לזכור",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4519,6 +4784,7 @@
     "original_front":"keey",
     "original_back":"להתרגל \/ פעם...",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4536,6 +4802,7 @@
     "original_front":"teaw",
     "original_back":"לטייל \/ לבלות",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4553,6 +4820,7 @@
     "original_front":"raw",
     "original_back":"לחכות",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4570,6 +4838,7 @@
     "original_front":"suu",
     "original_back":"לקנות",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4587,6 +4856,7 @@
     "original_front":"kaai",
     "original_back":"למכור",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4604,6 +4874,7 @@
     "original_front":"hai",
     "original_back":"לתת \/ עבור",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4621,6 +4892,7 @@
     "original_front":"choo-ay",
     "original_back":"לעזור",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4638,6 +4910,7 @@
     "original_front":"bork",
     "original_back":"להגיד \/ לספר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4655,6 +4928,7 @@
     "original_front":"tam",
     "original_back":"לשאול",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4672,6 +4946,7 @@
     "original_front":"yim",
     "original_back":"לחייך",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4689,6 +4964,7 @@
     "original_front":"rong¹-hai³",
     "original_back":"לבכות",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4706,6 +4982,7 @@
     "original_front":"it²-chaa¹",
     "original_back":"לקנא",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4723,6 +5000,7 @@
     "original_front":"mo¹-ho¹",
     "original_back":"עצבני",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4740,6 +5018,7 @@
     "original_front":"ram¹-kaan¹",
     "original_back":"מעצבן",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4757,6 +5036,7 @@
     "original_front":"wang¹",
     "original_back":"לקוות",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4774,6 +5054,7 @@
     "original_front":"man¹-jai¹",
     "original_back":"בטוח",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4791,6 +5072,7 @@
     "original_front":"naa³-song⁵-saan¹",
     "original_back":"מסכן",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4808,6 +5090,7 @@
     "original_front":"pum¹-jai¹",
     "original_back":"גאה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4825,6 +5108,7 @@
     "original_front":"sia⁵-daai¹",
     "original_back":"חבל \/ בזבוז",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4835,13 +5119,14 @@
     "he":"מתרגש",
     "english":"excited",
     "confidence":"verified_central_added_script",
-    "suggested_level":"3",
+    "suggested_level":3,
     "active_for_questions":true,
     "source_file":"תומר 8,csv.txt",
     "sources":"תומר 8,csv.txt",
     "original_front":"dtun²-dten³",
     "original_back":"מתרגש",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4859,6 +5144,7 @@
     "original_front":"nguang³",
     "original_back":"ישנוני",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4876,6 +5162,7 @@
     "original_front":"dtok²-jai¹",
     "original_back":"מבוהל",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4893,6 +5180,7 @@
     "original_front":"ruam¹",
     "original_back":"ביחד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4910,6 +5198,7 @@
     "original_front":"cheuu³-jing¹",
     "original_back":"שם אמיתי",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4927,6 +5216,7 @@
     "original_front":"cheuu³-len³",
     "original_back":"כינוי",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4944,6 +5234,7 @@
     "original_front":"naam¹-sa¹-kun¹",
     "original_back":"שם משפחה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4961,6 +5252,7 @@
     "original_front":"keuu¹",
     "original_back":"זה \/ הוא (הגדרה)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4978,6 +5270,7 @@
     "original_front":"beaua²",
     "original_back":"משעמם",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -4995,6 +5288,7 @@
     "original_front":"sa¹-mawng¹",
     "original_back":"מוח",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5012,6 +5306,7 @@
     "original_front":"sa¹-mawng¹ mai³ tam¹-ngaan¹",
     "original_back":"המוח לא עובד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5029,6 +5324,7 @@
     "original_front":"bon¹",
     "original_back":"על (מעל)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5046,6 +5342,7 @@
     "original_front":"dtor²-bpai¹",
     "original_back":"הבא",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5063,6 +5360,7 @@
     "original_front":"hen¹",
     "original_back":"רואה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5080,6 +5378,7 @@
     "original_front":"naa³-dtang²",
     "original_back":"חלון",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5097,6 +5396,7 @@
     "original_front":"hawng³",
     "original_back":"חדר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5114,6 +5414,7 @@
     "original_front":"poh³-mae³",
     "original_back":"הורים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5131,6 +5432,7 @@
     "original_front":"kap²-kaao³",
     "original_back":"אוכל (שאוכלים עם אורז)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5148,6 +5450,7 @@
     "original_front":"nag²-rian¹",
     "original_back":"סטודנט \/ תלמיד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5165,6 +5468,7 @@
     "original_front":"raan³-aa¹-haan⁵",
     "original_back":"מסעדה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5182,6 +5486,7 @@
     "original_front":"jao³-kawng¹",
     "original_back":"הבעלים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5199,6 +5504,7 @@
     "original_front":"mae³",
     "original_back":"אמא",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5216,6 +5522,7 @@
     "original_front":"puu³-ying⁵",
     "original_back":"אישה \/ נקבה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5233,6 +5540,7 @@
     "original_front":"puu³-chaai¹",
     "original_back":"גבר \/ זכר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5250,6 +5558,7 @@
     "original_front":"nai¹-lu-ang¹",
     "original_back":"המלך",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5267,6 +5576,7 @@
     "original_front":"pra¹-jao³-yuu²-hua¹",
     "original_back":"המלך (תואר רשמי)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5277,13 +5587,14 @@
     "he":"קבוצה \/ כפר \/ חבורה",
     "english":"group \/ village \/ category",
     "confidence":"verified_central_corrected_script",
-    "suggested_level":"3",
+    "suggested_level":3,
     "active_for_questions":true,
     "source_file":"תומר 8,csv.txt",
     "sources":"תומר 8,csv.txt",
     "original_front":"moo²",
     "original_back":"קבוצה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5301,6 +5612,7 @@
     "original_front":"chaao¹-pao¹",
     "original_back":"אנשי שבט",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5318,6 +5630,7 @@
     "original_front":"doi¹",
     "original_back":"הר",
     "note":"Prefer ภูเขา for standard Central Thai “mountain”.",
+    "roman":null,
     "validation_status":"needs_user_review_or_not_priority"
   },
   {
@@ -5335,6 +5648,7 @@
     "original_front":"puu¹-kao¹",
     "original_back":"הר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5345,13 +5659,14 @@
     "he":"בד \/ בגד",
     "english":"cloth \/ fabric \/ clothing",
     "confidence":"verified_central_corrected_script",
-    "suggested_level":"1",
+    "suggested_level":1,
     "active_for_questions":true,
     "source_file":"תומר 8,csv.txt",
     "sources":"תומר 8,csv.txt",
     "original_front":"paa³",
     "original_back":"בד \/ בגד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5369,6 +5684,7 @@
     "original_front":"dtalard²-nat¹",
     "original_back":"שוק",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5386,6 +5702,7 @@
     "original_front":"iig(2)",
     "original_back":"שוב (Again)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5403,6 +5720,7 @@
     "original_front":"pag-pawn(2-2)",
     "original_back":"לנוח",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5420,6 +5738,7 @@
     "original_front":"bpai-tiao(1-3)",
     "original_back":"לטייל \/ להסתובב בכיף",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5437,6 +5756,7 @@
     "original_front":"sed(2)",
     "original_back":"סיים \/ נגמר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5454,6 +5774,7 @@
     "original_front":"mod(2)",
     "original_back":"הכל נגמר \/ אזל",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5471,6 +5792,7 @@
     "original_front":"theung(2)",
     "original_back":"להתעורר",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5488,6 +5810,7 @@
     "original_front":"long(1)",
     "original_back":"ללכת לאיבוד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5505,6 +5828,7 @@
     "original_front":"kwaam-od-ton(1-2-1)",
     "original_back":"סבלנות",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5522,6 +5846,7 @@
     "original_front":"bplaa(1)",
     "original_back":"דג",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5539,6 +5864,7 @@
     "original_front":"gung(3)",
     "original_back":"שרימפס",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5556,6 +5882,7 @@
     "original_front":"hoi(5)",
     "original_back":"צדפה",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5566,13 +5893,14 @@
     "he":"דיונון",
     "english":"squid",
     "confidence":"verified_central_added_script",
-    "suggested_level":"3",
+    "suggested_level":3,
     "active_for_questions":true,
     "source_file":"אלמוג 1,CSV.txt",
     "sources":"אלמוג 1,CSV.txt",
     "original_front":"bpla-meuk(1-2)",
     "original_back":"דיונון",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5590,6 +5918,7 @@
     "original_front":"aa-haan-ta-lay(1(1)-5-1-1)",
     "original_back":"פירות ים",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5607,6 +5936,7 @@
     "original_front":"meua-rai(3-1)",
     "original_back":"מתי",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5617,13 +5947,14 @@
     "he":"איך?",
     "english":"how?",
     "confidence":"verified_bangkok_spoken_preferred",
-    "suggested_level":"5",
+    "suggested_level":5,
     "active_for_questions":true,
     "source_file":"אלמוג 1,CSV.txt",
     "sources":"אלמוג 1,CSV.txt",
     "original_front":"yaang-ngai(2-1)",
     "original_back":"איך",
     "note":"Spoken Bangkok preference; formal written form is อย่างไร.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5641,6 +5972,7 @@
     "original_front":"khrai(1)",
     "original_back":"מי (או מי זה)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5658,6 +5990,7 @@
     "original_front":"wan-geut(1-2)",
     "original_back":"יום הולדת",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5675,6 +6008,7 @@
     "original_front":"koey(1)",
     "original_back":"אי פעם",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5692,6 +6026,7 @@
     "original_front":"sa-ma-chik(2-1-3)",
     "original_back":"חבר (במועדון \/ קבוצה)",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5709,6 +6044,7 @@
     "original_front":"dek(2)",
     "original_back":"ילד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5726,6 +6062,7 @@
     "original_front":"nam-man(1-1)",
     "original_back":"שמן \/ דלק",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5743,6 +6080,7 @@
     "original_front":"bpum-nam-man(3-1-1)",
     "original_back":"תחנת דלק",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5760,6 +6098,7 @@
     "original_front":"gan(1)",
     "original_back":"אחד את השני \/ ביחד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5770,13 +6109,14 @@
     "he":"לפנות בוקר \/ מוקדם בבוקר",
     "english":"early in the morning",
     "confidence":"verified_central_added_script",
-    "suggested_level":"4",
+    "suggested_level":4,
     "active_for_questions":true,
     "source_file":"אלמוג 5(2).apkg",
     "sources":"אלמוג 5(2).apkg",
     "original_front":"dtae-chao",
     "original_back":"לפנות בוקר \/ מוקדם בבוקר",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5787,13 +6127,14 @@
     "he":"בבוקר",
     "english":"morning \/ in the morning",
     "confidence":"verified_central_added_script",
-    "suggested_level":"3",
+    "suggested_level":3,
     "active_for_questions":true,
     "source_file":"אלמוג 5(2).apkg",
     "sources":"אלמוג 5(2).apkg",
     "original_front":"dton-chao",
     "original_back":"בבוקר",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5804,13 +6145,14 @@
     "he":"מאוחר בבוקר",
     "english":"late morning",
     "confidence":"verified_central_added_script",
-    "suggested_level":"4",
+    "suggested_level":4,
     "active_for_questions":true,
     "source_file":"אלמוג 5(2).apkg",
     "sources":"אלמוג 5(2).apkg",
     "original_front":"dton-saai",
     "original_back":"מאוחר בבוקר",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5821,13 +6163,14 @@
     "he":"בצהריים",
     "english":"noon \/ midday",
     "confidence":"verified_central_added_script",
-    "suggested_level":"3",
+    "suggested_level":3,
     "active_for_questions":true,
     "source_file":"אלמוג 5(2).apkg",
     "sources":"אלמוג 5(2).apkg",
     "original_front":"dton-tieng",
     "original_back":"בצהריים",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5838,13 +6181,14 @@
     "he":"אחר הצהריים",
     "english":"afternoon",
     "confidence":"verified_central_added_script",
-    "suggested_level":"3",
+    "suggested_level":3,
     "active_for_questions":true,
     "source_file":"אלמוג 5(2).apkg",
     "sources":"אלמוג 5(2).apkg",
     "original_front":"dton-baai",
     "original_back":"אחר הצהריים",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5855,13 +6199,14 @@
     "he":"בערב",
     "english":"evening",
     "confidence":"verified_central_added_script",
-    "suggested_level":"3",
+    "suggested_level":3,
     "active_for_questions":true,
     "source_file":"אלמוג 5(2).apkg",
     "sources":"אלמוג 5(2).apkg",
     "original_front":"dton-yen",
     "original_back":"בערב",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5872,13 +6217,14 @@
     "he":"בלילה",
     "english":"night \/ at night",
     "confidence":"verified_central_added_script",
-    "suggested_level":"4",
+    "suggested_level":4,
     "active_for_questions":true,
     "source_file":"אלמוג 5(2).apkg",
     "sources":"אלמוג 5(2).apkg",
     "original_front":"dton-tiang-kheun",
     "original_back":"בלילה",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5889,13 +6235,14 @@
     "he":"מאוחר בלילה",
     "english":"late at night",
     "confidence":"verified_central_added_script",
-    "suggested_level":"4",
+    "suggested_level":4,
     "active_for_questions":true,
     "source_file":"אלמוג 5(2).apkg",
     "sources":"אלמוג 5(2).apkg",
     "original_front":"dton-deug",
     "original_back":"מאוחר בלילה",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5906,13 +6253,14 @@
     "he":"להסכים",
     "english":"agree",
     "confidence":"verified_central_added_script",
-    "suggested_level":"3",
+    "suggested_level":3,
     "active_for_questions":true,
     "source_file":"אלמוג 5(2).apkg",
     "sources":"אלמוג 5(2).apkg",
     "original_front":"להסכים",
     "original_back":"Hen Dubai",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5923,13 +6271,14 @@
     "he":"רואה?",
     "english":"Do you see?",
     "confidence":"verified_central_added_script",
-    "suggested_level":"5",
+    "suggested_level":5,
     "active_for_questions":true,
     "source_file":"אלמוג 5(2).apkg",
     "sources":"אלמוג 5(2).apkg",
     "original_front":"רואה?",
     "original_back":"Hen mai?",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5940,13 +6289,14 @@
     "he":"האם אתה מסכים?",
     "english":"Do you agree?",
     "confidence":"verified_central_added_script",
-    "suggested_level":"5",
+    "suggested_level":5,
     "active_for_questions":true,
     "source_file":"אלמוג 5(2).apkg",
     "sources":"אלמוג 5(2).apkg",
     "original_front":"האם מסכים",
     "original_back":"Hen duai mai",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5964,6 +6314,7 @@
     "original_front":"Yuen",
     "original_back":"לעמוד",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5981,6 +6332,7 @@
     "original_front":"Nung",
     "original_back":"לשבת",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -5998,6 +6350,7 @@
     "original_front":"Doen",
     "original_back":"ללכת",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6015,6 +6368,7 @@
     "original_front":"Khaam",
     "original_back":"לדלג",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6025,13 +6379,14 @@
     "he":"לא יכול \/ לא מסוגל \/ לא עומד בזה",
     "english":"cannot handle it \/ cannot manage",
     "confidence":"verified_central_added_script",
-    "suggested_level":"4",
+    "suggested_level":4,
     "active_for_questions":true,
     "source_file":"אלמוג 5(2).apkg",
     "sources":"אלמוג 5(2).apkg",
     "original_front":"ไม่ไหว mai wai",
     "original_back":"לא יכול \/ לא מסוגל \/ לא עומד בזה",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6049,6 +6404,7 @@
     "original_front":"ไม่ต้องห่วง mai dtong huang",
     "original_back":"אל תדאג \/ אין מה לדאוג",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6066,6 +6422,7 @@
     "original_front":"ไม่สนใจ mai son jai",
     "original_back":"לא מעוניין \/ לא אכפת",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6076,13 +6433,14 @@
     "he":"אין כלום",
     "english":"there is nothing \/ nothing",
     "confidence":"verified_central_added_script",
-    "suggested_level":"4",
+    "suggested_level":4,
     "active_for_questions":true,
     "source_file":"אלמוג 5(2).apkg",
     "sources":"אלמוג 5(2).apkg",
     "original_front":"ไม่มีอะไร mai mee a-rai",
     "original_back":"אין כלום",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6100,6 +6458,7 @@
     "original_front":"ไม่ต้อง mai dtong",
     "original_back":"לא צריך \/ אין צורך",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6110,13 +6469,14 @@
     "he":"אין בעיה",
     "english":"no problem",
     "confidence":"verified_central_added_script",
-    "suggested_level":"4",
+    "suggested_level":4,
     "active_for_questions":true,
     "source_file":"אלמוג 5(2).apkg",
     "sources":"אלמוג 5(2).apkg",
     "original_front":"ไม่มีปัญหา mai mee pan-haa",
     "original_back":"אין בעיה",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6134,6 +6494,7 @@
     "original_front":"ไม่มีทาง (mâi mee taang)",
     "original_back":"אין מצב \/ אין סיכוי",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6151,6 +6512,7 @@
     "original_front":"ว่าไง (wâa ngai)",
     "original_back":"מה קורה? \/ מה נשמע?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6168,6 +6530,7 @@
     "original_front":"ไม่เก็ทอะ (mâi get à)",
     "original_back":"אני לא מבין \/ לא קולט",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6185,6 +6548,7 @@
     "original_front":"แล้วไง (láew ngai)",
     "original_back":"אז מה?",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6202,6 +6566,7 @@
     "original_front":"คิดว่า (khít wâa)",
     "original_back":"לחשוב ש...",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6212,13 +6577,14 @@
     "he":"לומר ש...",
     "english":"say that...",
     "confidence":"verified_central_added_script",
-    "suggested_level":"3",
+    "suggested_level":3,
     "active_for_questions":true,
     "source_file":"אלמוג 5(2).apkg",
     "sources":"אלמוג 5(2).apkg",
     "original_front":"พูดว่า (phûut wâa)",
     "original_back":"לומר ש...",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6236,6 +6602,7 @@
     "original_front":"บอกว่า (bòk wâa)",
     "original_back":"לספר \/ להגיד ש...",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6253,6 +6620,7 @@
     "original_front":"รู้สึกว่า (rúu sèuk wâa)",
     "original_back":"להרגיש ש...",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6270,6 +6638,7 @@
     "original_front":"เพราะว่า (phróh wâa)",
     "original_back":"בגלל ש...",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6280,13 +6649,14 @@
     "he":"לשמוע ש...",
     "english":"hear that...",
     "confidence":"verified_central_added_script",
-    "suggested_level":"4",
+    "suggested_level":4,
     "active_for_questions":true,
     "source_file":"אלמוג 5(2).apkg",
     "sources":"אלמוג 5(2).apkg",
     "original_front":"ได้ยินว่า (dâai yin wâa)",
     "original_back":"לשמוע ש...",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6297,13 +6667,14 @@
     "he":"צמח \/ עץ",
     "english":"plant \/ tree",
     "confidence":"verified_central_added_script",
-    "suggested_level":"3",
+    "suggested_level":3,
     "active_for_questions":true,
     "source_file":"אלמוג 4(1).apkg",
     "sources":"אלמוג 4(1).apkg",
     "original_front":"ton mai",
     "original_back":"צמח עציץ",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6321,6 +6692,7 @@
     "original_front":"חלק מ..",
     "original_back":"baang",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6338,6 +6710,7 @@
     "original_front":"יחדיו",
     "original_back":"doi gan",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6355,6 +6728,7 @@
     "original_front":"יכול להיות",
     "original_back":"baang tii",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6365,13 +6739,14 @@
     "he":"הם",
     "english":"they \/ them",
     "confidence":"verified_central_corrected_romanization",
-    "suggested_level":"3",
+    "suggested_level":3,
     "active_for_questions":true,
     "source_file":"אלמוג 4(1).apkg",
     "sources":"אלמוג 4(1).apkg",
     "original_front":"they הם",
     "original_back":"guwa",
     "note":"Corrected from erroneous guwa.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6389,6 +6764,7 @@
     "original_front":"חלק מהימים",
     "original_back":"baang wan",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6406,6 +6782,7 @@
     "original_front":"בכל מקום",
     "original_back":"tug tii",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6423,6 +6800,7 @@
     "original_front":"יציאה,החוצה",
     "original_back":"oog",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6440,6 +6818,7 @@
     "original_front":"חמים,חם",
     "original_back":"oon",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6450,13 +6829,14 @@
     "he":"כשהייתי ילד",
     "english":"when I was a child",
     "confidence":"verified_central_added_script",
-    "suggested_level":"5",
+    "suggested_level":5,
     "active_for_questions":true,
     "source_file":"אלמוג 4(1).apkg",
     "sources":"אלמוג 4(1).apkg",
     "original_front":"כשהייתי ילד",
     "original_back":"dton pom deg deg",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6474,6 +6854,7 @@
     "original_front":"כניסה היכנס",
     "original_back":"kao3",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6491,6 +6872,7 @@
     "original_front":"פנים,לפנים,הלאה,עונות",
     "original_back":"naa3",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6508,6 +6890,7 @@
     "original_front":"תחתנת משטרה",
     "original_back":"rong pag",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6525,6 +6908,7 @@
     "original_front":"לא עשיתי",
     "original_back":"mai dai+v",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6535,13 +6919,14 @@
     "he":"נחמד לראותך",
     "english":"nice to see you",
     "confidence":"verified_central_added_script",
-    "suggested_level":"5",
+    "suggested_level":5,
     "active_for_questions":true,
     "source_file":"אלמוג 4(1).apkg",
     "sources":"אלמוג 4(1).apkg",
     "original_front":"ิ่נחמד לראותך",
     "original_back":"dii jai tii dai jer",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6559,6 +6944,7 @@
     "original_front":"דבורה,רק",
     "original_back":"peuang",
     "note":null,
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   },
   {
@@ -6569,13 +6955,14 @@
     "he":"אגרוף \/ לעקוץ",
     "english":"to punch \/ to sting",
     "confidence":"verified_central_added_script",
-    "suggested_level":"3",
+    "suggested_level":3,
     "active_for_questions":true,
     "source_file":"אלמוג 4(1).apkg",
     "sources":"אלמוג 4(1).apkg",
     "original_front":"אגרוף ,עקיצה",
     "original_back":"dtoy",
     "note":"Verified as modern Standard\/Central Thai; added from review queue.",
+    "roman":null,
     "validation_status":"central_bangkok_ok_for_beginner_or_context_note"
   }
 ]

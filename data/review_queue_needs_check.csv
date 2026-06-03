@@ -1,3 +1,4 @@
-id,thai,transliteration,normalized_transliteration,he,english,confidence,suggested_level,active_for_questions,source_file,sources,original_front,original_back,note,validation_status
-vocab_0045,หลัง,lang⁵,lang5,גב / מאחור / אחרי,back / behind / after,review_context_mismatch,review_queue,False,"תומר 2,csv.txt","תומר 2,csv.txt",lang⁵,חזרת,"Original Hebrew “חזרת” did not match หลัง. If the target is “returned”, use กลับ.",needs_user_review_or_not_priority
-vocab_0313,ดอย,doi¹,doi1,הר,mountain,regional_northern_not_priority,review_queue,False,"תומר 8,csv.txt","תומר 8,csv.txt",doi¹,הר,Prefer ภูเขา for standard Central Thai “mountain”.,needs_user_review_or_not_priority
+id,thai,transliteration,normalized_transliteration,he,english,confidence,suggested_level,active_for_questions,source_file,sources,original_front,original_back,note,roman,validation_status
+vocab_0045,หลัง,lang⁵,lang5,גב / מאחור / אחרי,back / behind / after,review_context_mismatch,review_queue,False,"תומר 2,csv.txt","תומר 2,csv.txt",lang⁵,חזרת,"Original Hebrew “חזרת” did not match หลัง. If the target is “returned”, use กลับ.",,needs_user_review_or_not_priority
+vocab_0214,แตงโม,dtaeng-mo,dtaeng-mo,אבטיח,needs English review,original_thai_from_file_needs_english,review_queue,False,"תומר 6,csv.txt","תומר 6,csv.txt",แตงโม (dtaeng-mo),אבטיח,,,needs_user_review_or_not_priority
+vocab_0313,ดอย,doi¹,doi1,הר,mountain,regional_northern_not_priority,review_queue,False,"תומר 8,csv.txt","תומר 8,csv.txt",doi¹,הר,Prefer ภูเขา for standard Central Thai “mountain”.,,needs_user_review_or_not_priority

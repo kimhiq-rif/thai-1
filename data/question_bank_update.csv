@@ -635,522 +635,519 @@ qv19_0633,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: gluay �
 qv19_0634,4,mcq_read_meaning,מה המשמעות של สับปะรด (sup-pa-rot)?,What does สับปะรด (sup-pa-rot) mean?,สับปะรด,sup-pa-rot,אננס,pineapple,vocab_0213
 qv19_0635,4,write_he_to_thai,כתוב בתאית: אננס — pineapple (sup-pa-rot),Write in Thai: pineapple — אננס (sup-pa-rot),สับปะรด,sup-pa-rot,אננס,pineapple,vocab_0213
 qv19_0636,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: sup-pa-rot — אננס / pineapple,Write Thai from romanization: sup-pa-rot — pineapple / אננס,สับปะรด,sup-pa-rot,אננס,pineapple,vocab_0213
-qv19_0637,1,mcq_read_meaning,מה המשמעות של แตงโม (dtaeng-mo)?,What does แตงโม (dtaeng-mo) mean?,แตงโม,dtaeng-mo,אבטיח,watermelon,vocab_0214
-qv19_0638,1,write_he_to_thai,כתוב בתאית: אבטיח — watermelon (dtaeng-mo),Write in Thai: watermelon — אבטיח (dtaeng-mo),แตงโม,dtaeng-mo,אבטיח,watermelon,vocab_0214
-qv19_0639,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: dtaeng-mo — אבטיח / watermelon,Write Thai from romanization: dtaeng-mo — watermelon / אבטיח,แตงโม,dtaeng-mo,אבטיח,watermelon,vocab_0214
-qv19_0640,3,mcq_read_meaning,מה המשמעות של น้ำแข็ง (nam-kaeng)?,What does น้ำแข็ง (nam-kaeng) mean?,น้ำแข็ง,nam-kaeng,קרח,ice,vocab_0215
-qv19_0641,3,write_he_to_thai,כתוב בתאית: קרח — ice (nam-kaeng),Write in Thai: ice — קרח (nam-kaeng),น้ำแข็ง,nam-kaeng,קרח,ice,vocab_0215
-qv19_0642,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: nam-kaeng — קרח / ice,Write Thai from romanization: nam-kaeng — ice / קרח,น้ำแข็ง,nam-kaeng,קרח,ice,vocab_0215
-qv19_0643,3,mcq_read_meaning,מה המשמעות של น้ำส้ม (nam-som)?,What does น้ำส้ม (nam-som) mean?,น้ำส้ม,nam-som,מיץ תפוזים,orange juice,vocab_0216
-qv19_0644,3,write_he_to_thai,כתוב בתאית: מיץ תפוזים — orange juice (nam-som),Write in Thai: orange juice — מיץ תפוזים (nam-som),น้ำส้ม,nam-som,מיץ תפוזים,orange juice,vocab_0216
-qv19_0645,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: nam-som — מיץ תפוזים / orange juice,Write Thai from romanization: nam-som — orange juice / מיץ תפוזים,น้ำส้ม,nam-som,מיץ תפוזים,orange juice,vocab_0216
-qv19_0646,3,mcq_read_meaning,מה המשמעות של กาแฟ (ga-fe)?,What does กาแฟ (ga-fe) mean?,กาแฟ,ga-fe,קפה,coffee,vocab_0217
-qv19_0647,3,write_he_to_thai,כתוב בתאית: קפה — coffee (ga-fe),Write in Thai: coffee — קפה (ga-fe),กาแฟ,ga-fe,קפה,coffee,vocab_0217
-qv19_0648,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: ga-fe — קפה / coffee,Write Thai from romanization: ga-fe — coffee / קפה,กาแฟ,ga-fe,קפה,coffee,vocab_0217
-qv19_0649,1,mcq_read_meaning,מה המשמעות של นม (nom)?,What does นม (nom) mean?,นม,nom,חלב,milk,vocab_0218
-qv19_0650,1,write_he_to_thai,כתוב בתאית: חלב — milk (nom),Write in Thai: milk — חלב (nom),นม,nom,חלב,milk,vocab_0218
-qv19_0651,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: nom — חלב / milk,Write Thai from romanization: nom — milk / חלב,นม,nom,חלב,milk,vocab_0218
-qv19_0652,1,mcq_read_meaning,מה המשמעות של เบียร์ (beer)?,What does เบียร์ (beer) mean?,เบียร์,beer,בירה,beer,vocab_0219
-qv19_0653,1,write_he_to_thai,כתוב בתאית: בירה — beer (beer),Write in Thai: beer — בירה (beer),เบียร์,beer,בירה,beer,vocab_0219
-qv19_0654,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: beer — בירה / beer,Write Thai from romanization: beer — beer / בירה,เบียร์,beer,בירה,beer,vocab_0219
-qv19_0655,1,mcq_read_meaning,מה המשמעות של เหล้า (lao)?,What does เหล้า (lao) mean?,เหล้า,lao,אלכוהול / וויסקי,alcohol / whiskey,vocab_0220
-qv19_0656,1,write_he_to_thai,כתוב בתאית: אלכוהול / וויסקי — alcohol / whiskey (lao),Write in Thai: alcohol / whiskey — אלכוהול / וויסקי (lao),เหล้า,lao,אלכוהול / וויסקי,alcohol / whiskey,vocab_0220
-qv19_0657,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: lao — אלכוהול / וויסקי / alcohol / whiskey,Write Thai from romanization: lao — alcohol / whiskey / אלכוהול / וויסקי,เหล้า,lao,אלכוהול / וויסקי,alcohol / whiskey,vocab_0220
-qv19_0658,1,mcq_read_meaning,מה המשמעות של กับ (gap)?,What does กับ (gap) mean?,กับ,gap,עם,with,vocab_0221
-qv19_0659,1,write_he_to_thai,כתוב בתאית: עם — with (gap),Write in Thai: with — עם (gap),กับ,gap,עם,with,vocab_0221
-qv19_0660,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: gap — עם / with,Write Thai from romanization: gap — with / עם,กับ,gap,עם,with,vocab_0221
-qv19_0661,1,mcq_read_meaning,מה המשמעות של เอา (ao)?,What does เอา (ao) mean?,เอา,ao,רוצה / לקחת,want / take,vocab_0222
-qv19_0662,1,write_he_to_thai,כתוב בתאית: רוצה / לקחת — want / take (ao),Write in Thai: want / take — רוצה / לקחת (ao),เอา,ao,רוצה / לקחת,want / take,vocab_0222
-qv19_0663,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: ao — רוצה / לקחת / want / take,Write Thai from romanization: ao — want / take / רוצה / לקחת,เอา,ao,רוצה / לקחת,want / take,vocab_0222
-qv19_0664,3,mcq_read_meaning,מה המשמעות של ไม่เอา (mai ao)?,What does ไม่เอา (mai ao) mean?,ไม่เอา,mai ao,לא רוצה,do not want,vocab_0223
-qv19_0665,3,write_he_to_thai,כתוב בתאית: לא רוצה — do not want (mai ao),Write in Thai: do not want — לא רוצה (mai ao),ไม่เอา,mai ao,לא רוצה,do not want,vocab_0223
-qv19_0666,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai ao — לא רוצה / do not want,Write Thai from romanization: mai ao — do not want / לא רוצה,ไม่เอา,mai ao,לא רוצה,do not want,vocab_0223
-qv19_0667,4,mcq_read_meaning,מה המשמעות של เอาอันนี้ (ao-an-nii)?,What does เอาอันนี้ (ao-an-nii) mean?,เอาอันนี้,ao-an-nii,רוצה את זה,want this one,vocab_0224
-qv19_0668,4,write_he_to_thai,כתוב בתאית: רוצה את זה — want this one (ao-an-nii),Write in Thai: want this one — רוצה את זה (ao-an-nii),เอาอันนี้,ao-an-nii,רוצה את זה,want this one,vocab_0224
-qv19_0669,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: ao-an-nii — רוצה את זה / want this one,Write Thai from romanization: ao-an-nii — want this one / רוצה את זה,เอาอันนี้,ao-an-nii,רוצה את זה,want this one,vocab_0224
-qv19_0670,1,mcq_read_meaning,מה המשמעות של เรือ (reua)?,What does เรือ (reua) mean?,เรือ,reua,סירה,boat,vocab_0225
-qv19_0671,1,write_he_to_thai,כתוב בתאית: סירה — boat (reua),Write in Thai: boat — סירה (reua),เรือ,reua,סירה,boat,vocab_0225
-qv19_0672,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: reua — סירה / boat,Write Thai from romanization: reua — boat / סירה,เรือ,reua,סירה,boat,vocab_0225
-qv19_0673,3,mcq_read_meaning,מה המשמעות של เรือบิน (reua-bin)?,What does เรือบิน (reua-bin) mean?,เรือบิน,reua-bin,מטוס,airplane,vocab_0226
-qv19_0674,3,write_he_to_thai,כתוב בתאית: מטוס — airplane (reua-bin),Write in Thai: airplane — מטוס (reua-bin),เรือบิน,reua-bin,מטוס,airplane,vocab_0226
-qv19_0675,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: reua-bin — מטוס / airplane,Write Thai from romanization: reua-bin — airplane / מטוס,เรือบิน,reua-bin,מטוס,airplane,vocab_0226
-qv19_0676,1,mcq_read_meaning,מה המשמעות של รถ (rot)?,What does รถ (rot) mean?,รถ,rot,מכונית,car / vehicle,vocab_0227
-qv19_0677,1,write_he_to_thai,כתוב בתאית: מכונית — car / vehicle (rot),Write in Thai: car / vehicle — מכונית (rot),รถ,rot,מכונית,car / vehicle,vocab_0227
-qv19_0678,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: rot — מכונית / car / vehicle,Write Thai from romanization: rot — car / vehicle / מכונית,รถ,rot,מכונית,car / vehicle,vocab_0227
-qv19_0679,3,mcq_read_meaning,מה המשמעות של รถเมล์ (rot-mae)?,What does รถเมล์ (rot-mae) mean?,รถเมล์,rot-mae,אוטובוס,bus,vocab_0228
-qv19_0680,3,write_he_to_thai,כתוב בתאית: אוטובוס — bus (rot-mae),Write in Thai: bus — אוטובוס (rot-mae),รถเมล์,rot-mae,אוטובוס,bus,vocab_0228
-qv19_0681,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: rot-mae — אוטובוס / bus,Write Thai from romanization: rot-mae — bus / אוטובוס,รถเมล์,rot-mae,אוטובוס,bus,vocab_0228
-qv19_0682,3,mcq_read_meaning,מה המשמעות של รถไฟ (rot-fai)?,What does รถไฟ (rot-fai) mean?,รถไฟ,rot-fai,רכבת,train,vocab_0229
-qv19_0683,3,write_he_to_thai,כתוב בתאית: רכבת — train (rot-fai),Write in Thai: train — רכבת (rot-fai),รถไฟ,rot-fai,רכבת,train,vocab_0229
-qv19_0684,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: rot-fai — רכבת / train,Write Thai from romanization: rot-fai — train / רכבת,รถไฟ,rot-fai,רכבת,train,vocab_0229
-qv19_0685,4,mcq_read_meaning,מה המשמעות של มอเตอร์ไซค์ (mo-dtu-sai)?,What does มอเตอร์ไซค์ (mo-dtu-sai) mean?,มอเตอร์ไซค์,mo-dtu-sai,אופנוע,motorbike,vocab_0230
-qv19_0686,4,write_he_to_thai,כתוב בתאית: אופנוע — motorbike (mo-dtu-sai),Write in Thai: motorbike — אופנוע (mo-dtu-sai),มอเตอร์ไซค์,mo-dtu-sai,אופנוע,motorbike,vocab_0230
-qv19_0687,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mo-dtu-sai — אופנוע / motorbike,Write Thai from romanization: mo-dtu-sai — motorbike / אופנוע,มอเตอร์ไซค์,mo-dtu-sai,אופנוע,motorbike,vocab_0230
-qv19_0688,4,mcq_read_meaning,מה המשמעות של จักรยาน (jak-kra-yaan)?,What does จักรยาน (jak-kra-yaan) mean?,จักรยาน,jak-kra-yaan,אופניים,bicycle,vocab_0231
-qv19_0689,4,write_he_to_thai,כתוב בתאית: אופניים — bicycle (jak-kra-yaan),Write in Thai: bicycle — אופניים (jak-kra-yaan),จักรยาน,jak-kra-yaan,אופניים,bicycle,vocab_0231
-qv19_0690,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: jak-kra-yaan — אופניים / bicycle,Write Thai from romanization: jak-kra-yaan — bicycle / אופניים,จักรยาน,jak-kra-yaan,אופניים,bicycle,vocab_0231
-qv19_0691,1,mcq_read_meaning,מה המשמעות של เดิน (doen)?,What does เดิน (doen) mean?,เดิน,doen,ללכת ברגל,walk,vocab_0232
-qv19_0692,1,write_he_to_thai,כתוב בתאית: ללכת ברגל — walk (doen),Write in Thai: walk — ללכת ברגל (doen),เดิน,doen,ללכת ברגל,walk,vocab_0232
-qv19_0693,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: doen — ללכת ברגל / walk,Write Thai from romanization: doen — walk / ללכת ברגל,เดิน,doen,ללכת ברגל,walk,vocab_0232
-qv19_0694,1,mcq_read_meaning,מה המשמעות של วิ่ง (wing)?,What does วิ่ง (wing) mean?,วิ่ง,wing,לרוץ,run,vocab_0233
-qv19_0695,1,write_he_to_thai,כתוב בתאית: לרוץ — run (wing),Write in Thai: run — לרוץ (wing),วิ่ง,wing,לרוץ,run,vocab_0233
-qv19_0696,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: wing — לרוץ / run,Write Thai from romanization: wing — run / לרוץ,วิ่ง,wing,לרוץ,run,vocab_0233
-qv19_0697,1,mcq_read_meaning,מה המשמעות של สวย (suay)?,What does สวย (suay) mean?,สวย,suay,יפה,beautiful,vocab_0234
-qv19_0698,1,write_he_to_thai,כתוב בתאית: יפה — beautiful (suay),Write in Thai: beautiful — יפה (suay),สวย,suay,יפה,beautiful,vocab_0234
-qv19_0699,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: suay — יפה / beautiful,Write Thai from romanization: suay — beautiful / יפה,สวย,suay,יפה,beautiful,vocab_0234
-qv19_0700,3,mcq_read_meaning,מה המשמעות של น่ารัก (naa-rak)?,What does น่ารัก (naa-rak) mean?,น่ารัก,naa-rak,חמוד,cute,vocab_0235
-qv19_0701,3,write_he_to_thai,כתוב בתאית: חמוד — cute (naa-rak),Write in Thai: cute — חמוד (naa-rak),น่ารัก,naa-rak,חמוד,cute,vocab_0235
-qv19_0702,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: naa-rak — חמוד / cute,Write Thai from romanization: naa-rak — cute / חמוד,น่ารัก,naa-rak,חמוד,cute,vocab_0235
-qv19_0703,1,mcq_read_meaning,מה המשמעות של หล่อ (lor)?,What does หล่อ (lor) mean?,หล่อ,lor,חתיך,handsome,vocab_0236
-qv19_0704,1,write_he_to_thai,כתוב בתאית: חתיך — handsome (lor),Write in Thai: handsome — חתיך (lor),หล่อ,lor,חתיך,handsome,vocab_0236
-qv19_0705,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: lor — חתיך / handsome,Write Thai from romanization: lor — handsome / חתיך,หล่อ,lor,חתיך,handsome,vocab_0236
-qv19_0706,1,mcq_read_meaning,מה המשמעות של เตี้ย (dtia)?,What does เตี้ย (dtia) mean?,เตี้ย,dtia,נמוך,short,vocab_0237
-qv19_0707,1,write_he_to_thai,כתוב בתאית: נמוך — short (dtia),Write in Thai: short — נמוך (dtia),เตี้ย,dtia,נמוך,short,vocab_0237
-qv19_0708,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: dtia — נמוך / short,Write Thai from romanization: dtia — short / נמוך,เตี้ย,dtia,נמוך,short,vocab_0237
-qv19_0709,1,mcq_read_meaning,מה המשמעות של สูง (soong)?,What does สูง (soong) mean?,สูง,soong,גבוה,tall,vocab_0238
-qv19_0710,1,write_he_to_thai,כתוב בתאית: גבוה — tall (soong),Write in Thai: tall — גבוה (soong),สูง,soong,גבוה,tall,vocab_0238
-qv19_0711,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: soong — גבוה / tall,Write Thai from romanization: soong — tall / גבוה,สูง,soong,גבוה,tall,vocab_0238
-qv19_0712,3,mcq_read_meaning,מה המשמעות של อ้วน (u-an)?,What does อ้วน (u-an) mean?,อ้วน,u-an,שמן (גוף),fat / overweight,vocab_0239
-qv19_0713,3,write_he_to_thai,כתוב בתאית: שמן (גוף) — fat / overweight (u-an),Write in Thai: fat / overweight — שמן (גוף) (u-an),อ้วน,u-an,שמן (גוף),fat / overweight,vocab_0239
-qv19_0714,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: u-an — שמן (גוף) / fat / overweight,Write Thai from romanization: u-an — fat / overweight / שמן (גוף),อ้วน,u-an,שמן (גוף),fat / overweight,vocab_0239
-qv19_0715,1,mcq_read_meaning,מה המשמעות של ผอม (pom)?,What does ผอม (pom) mean?,ผอม,pom,רזה,thin,vocab_0240
-qv19_0716,1,write_he_to_thai,כתוב בתאית: רזה — thin (pom),Write in Thai: thin — רזה (pom),ผอม,pom,רזה,thin,vocab_0240
-qv19_0717,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: pom — רזה / thin,Write Thai from romanization: pom — thin / רזה,ผอม,pom,רזה,thin,vocab_0240
-qv19_0718,1,mcq_read_meaning,מה המשמעות של ใหญ่ (yai)?,What does ใหญ่ (yai) mean?,ใหญ่,yai,גדול,big,vocab_0241
-qv19_0719,1,write_he_to_thai,כתוב בתאית: גדול — big (yai),Write in Thai: big — גדול (yai),ใหญ่,yai,גדול,big,vocab_0241
-qv19_0720,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: yai — גדול / big,Write Thai from romanization: yai — big / גדול,ใหญ่,yai,גדול,big,vocab_0241
-qv19_0721,1,mcq_read_meaning,מה המשמעות של เล็ก (lek)?,What does เล็ก (lek) mean?,เล็ก,lek,קטן,small,vocab_0242
-qv19_0722,1,write_he_to_thai,כתוב בתאית: קטן — small (lek),Write in Thai: small — קטן (lek),เล็ก,lek,קטן,small,vocab_0242
-qv19_0723,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: lek — קטן / small,Write Thai from romanization: lek — small / קטן,เล็ก,lek,קטן,small,vocab_0242
-qv19_0724,1,mcq_read_meaning,מה המשמעות של เหงา (ngao)?,What does เหงา (ngao) mean?,เหงา,ngao,בודד,lonely,vocab_0243
-qv19_0725,1,write_he_to_thai,כתוב בתאית: בודד — lonely (ngao),Write in Thai: lonely — בודד (ngao),เหงา,ngao,בודד,lonely,vocab_0243
-qv19_0726,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: ngao — בודד / lonely,Write Thai from romanization: ngao — lonely / בודד,เหงา,ngao,בודד,lonely,vocab_0243
-qv19_0727,3,mcq_read_meaning,מה המשמעות של เสียใจ (sia-jai)?,What does เสียใจ (sia-jai) mean?,เสียใจ,sia-jai,עצוב,sad / sorry,vocab_0244
-qv19_0728,3,write_he_to_thai,כתוב בתאית: עצוב — sad / sorry (sia-jai),Write in Thai: sad / sorry — עצוב (sia-jai),เสียใจ,sia-jai,עצוב,sad / sorry,vocab_0244
-qv19_0729,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: sia-jai — עצוב / sad / sorry,Write Thai from romanization: sia-jai — sad / sorry / עצוב,เสียใจ,sia-jai,עצוב,sad / sorry,vocab_0244
-qv19_0730,3,mcq_read_meaning,מה המשמעות של ดีใจ (dii-jai)?,What does ดีใจ (dii-jai) mean?,ดีใจ,dii-jai,שמח,happy,vocab_0245
-qv19_0731,3,write_he_to_thai,כתוב בתאית: שמח — happy (dii-jai),Write in Thai: happy — שמח (dii-jai),ดีใจ,dii-jai,שמח,happy,vocab_0245
-qv19_0732,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dii-jai — שמח / happy,Write Thai from romanization: dii-jai — happy / שמח,ดีใจ,dii-jai,שמח,happy,vocab_0245
-qv19_0733,1,mcq_read_meaning,מה המשמעות של โกรธ (grote)?,What does โกรธ (grote) mean?,โกรธ,grote,כועס,angry,vocab_0246
-qv19_0734,1,write_he_to_thai,כתוב בתאית: כועס — angry (grote),Write in Thai: angry — כועס (grote),โกรธ,grote,כועס,angry,vocab_0246
-qv19_0735,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: grote — כועס / angry,Write Thai from romanization: grote — angry / כועס,โกรธ,grote,כועס,angry,vocab_0246
-qv19_0736,1,mcq_read_meaning,מה המשמעות של กลัว (glua)?,What does กลัว (glua) mean?,กลัว,glua,מפחד,afraid,vocab_0247
-qv19_0737,1,write_he_to_thai,כתוב בתאית: מפחד — afraid (glua),Write in Thai: afraid — מפחד (glua),กลัว,glua,מפחד,afraid,vocab_0247
-qv19_0738,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: glua — מפחד / afraid,Write Thai from romanization: glua — afraid / מפחד,กลัว,glua,מפחד,afraid,vocab_0247
-qv19_0739,3,mcq_read_meaning,מה המשמעות של ตกใจ (dtok-jai)?,What does ตกใจ (dtok-jai) mean?,ตกใจ,dtok-jai,מופתע / בהלם,shocked / startled,vocab_0248
-qv19_0740,3,write_he_to_thai,כתוב בתאית: מופתע / בהלם — shocked / startled (dtok-jai),Write in Thai: shocked / startled — מופתע / בהלם (dtok-jai),ตกใจ,dtok-jai,מופתע / בהלם,shocked / startled,vocab_0248
-qv19_0741,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dtok-jai — מופתע / בהלם / shocked / startled,Write Thai from romanization: dtok-jai — shocked / startled / מופתע / בהלם,ตกใจ,dtok-jai,מופתע / בהלם,shocked / startled,vocab_0248
-qv19_0742,1,mcq_read_meaning,מה המשמעות של งง (ngong)?,What does งง (ngong) mean?,งง,ngong,מבולבל,confused,vocab_0249
-qv19_0743,1,write_he_to_thai,כתוב בתאית: מבולבל — confused (ngong),Write in Thai: confused — מבולבל (ngong),งง,ngong,מבולבל,confused,vocab_0249
-qv19_0744,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: ngong — מבולבל / confused,Write Thai from romanization: ngong — confused / מבולבל,งง,ngong,מבולבל,confused,vocab_0249
-qv19_0745,3,mcq_read_meaning,מה המשמעות של มั่นใจ (man-jai)?,What does มั่นใจ (man-jai) mean?,มั่นใจ,man-jai,בטוח בעצמי,confident,vocab_0250
-qv19_0746,3,write_he_to_thai,כתוב בתאית: בטוח בעצמי — confident (man-jai),Write in Thai: confident — בטוח בעצמי (man-jai),มั่นใจ,man-jai,בטוח בעצמי,confident,vocab_0250
-qv19_0747,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: man-jai — בטוח בעצמי / confident,Write Thai from romanization: man-jai — confident / בטוח בעצמי,มั่นใจ,man-jai,בטוח בעצמי,confident,vocab_0250
-qv19_0748,4,mcq_read_meaning,מה המשמעות של น่าเข้าใจ (naa-kao-jai)?,What does น่าเข้าใจ (naa-kao-jai) mean?,น่าเข้าใจ,naa-kao-jai,מובן,understandable,vocab_0251
-qv19_0749,4,write_he_to_thai,כתוב בתאית: מובן — understandable (naa-kao-jai),Write in Thai: understandable — מובן (naa-kao-jai),น่าเข้าใจ,naa-kao-jai,מובן,understandable,vocab_0251
-qv19_0750,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: naa-kao-jai — מובן / understandable,Write Thai from romanization: naa-kao-jai — understandable / מובן,น่าเข้าใจ,naa-kao-jai,מובן,understandable,vocab_0251
-qv19_0751,4,mcq_read_meaning,מה המשמעות של ไม่เข้าใจ (mai-kao-jai)?,What does ไม่เข้าใจ (mai-kao-jai) mean?,ไม่เข้าใจ,mai-kao-jai,לא מבין,do not understand,vocab_0252
-qv19_0752,4,write_he_to_thai,כתוב בתאית: לא מבין — do not understand (mai-kao-jai),Write in Thai: do not understand — לא מבין (mai-kao-jai),ไม่เข้าใจ,mai-kao-jai,לא מבין,do not understand,vocab_0252
-qv19_0753,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai-kao-jai — לא מבין / do not understand,Write Thai from romanization: mai-kao-jai — do not understand / לא מבין,ไม่เข้าใจ,mai-kao-jai,לא מבין,do not understand,vocab_0252
-qv19_0754,5,mcq_read_meaning,מה המשמעות של เข้าใจไหม (kao-jai mai?)?,What does เข้าใจไหม (kao-jai mai?) mean?,เข้าใจไหม,kao-jai mai?,מבין?,Do you understand?,vocab_0253
-qv19_0755,5,write_he_to_thai,כתוב בתאית: מבין? — Do you understand? (kao-jai mai?),Write in Thai: Do you understand? — מבין? (kao-jai mai?),เข้าใจไหม,kao-jai mai?,מבין?,Do you understand?,vocab_0253
-qv19_0756,5,write_roman_to_thai,כתוב בתאית לפי התעתיק: kao-jai mai? — מבין? / Do you understand?,Write Thai from romanization: kao-jai mai? — Do you understand? / מבין?,เข้าใจไหม,kao-jai mai?,מבין?,Do you understand?,vocab_0253
-qv19_0757,4,mcq_read_meaning,מה המשמעות של เข้าใจแล้ว (kao-jai leaw)?,What does เข้าใจแล้ว (kao-jai leaw) mean?,เข้าใจแล้ว,kao-jai leaw,הבנתי כבר,understood already,vocab_0254
-qv19_0758,4,write_he_to_thai,כתוב בתאית: הבנתי כבר — understood already (kao-jai leaw),Write in Thai: understood already — הבנתי כבר (kao-jai leaw),เข้าใจแล้ว,kao-jai leaw,הבנתי כבר,understood already,vocab_0254
-qv19_0759,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: kao-jai leaw — הבנתי כבר / understood already,Write Thai from romanization: kao-jai leaw — understood already / הבנתי כבר,เข้าใจแล้ว,kao-jai leaw,הבנתי כבר,understood already,vocab_0254
-qv19_0760,1,mcq_read_meaning,מה המשמעות של รัก (rak)?,What does รัก (rak) mean?,รัก,rak,אוהב,love,vocab_0255
-qv19_0761,1,write_he_to_thai,כתוב בתאית: אוהב — love (rak),Write in Thai: love — אוהב (rak),รัก,rak,אוהב,love,vocab_0255
-qv19_0762,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: rak — אוהב / love,Write Thai from romanization: rak — love / אוהב,รัก,rak,אוהב,love,vocab_0255
-qv19_0763,1,mcq_read_meaning,מה המשמעות של เกลียด (gliad)?,What does เกลียด (gliad) mean?,เกลียด,gliad,שונא,hate,vocab_0256
-qv19_0764,1,write_he_to_thai,כתוב בתאית: שונא — hate (gliad),Write in Thai: hate — שונא (gliad),เกลียด,gliad,שונא,hate,vocab_0256
-qv19_0765,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: gliad — שונא / hate,Write Thai from romanization: gliad — hate / שונא,เกลียด,gliad,שונא,hate,vocab_0256
-qv19_0766,3,mcq_read_meaning,מה המשמעות של เห็นด้วย (hen-duai)?,What does เห็นด้วย (hen-duai) mean?,เห็นด้วย,hen-duai,מסכים,agree,vocab_0257
-qv19_0767,3,write_he_to_thai,כתוב בתאית: מסכים — agree (hen-duai),Write in Thai: agree — מסכים (hen-duai),เห็นด้วย,hen-duai,מסכים,agree,vocab_0257
-qv19_0768,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: hen-duai — מסכים / agree,Write Thai from romanization: hen-duai — agree / מסכים,เห็นด้วย,hen-duai,מסכים,agree,vocab_0257
-qv19_0769,4,mcq_read_meaning,מה המשמעות של ไม่เห็นด้วย (mai-hen-duai)?,What does ไม่เห็นด้วย (mai-hen-duai) mean?,ไม่เห็นด้วย,mai-hen-duai,לא מסכים,disagree,vocab_0258
-qv19_0770,4,write_he_to_thai,כתוב בתאית: לא מסכים — disagree (mai-hen-duai),Write in Thai: disagree — לא מסכים (mai-hen-duai),ไม่เห็นด้วย,mai-hen-duai,לא מסכים,disagree,vocab_0258
-qv19_0771,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai-hen-duai — לא מסכים / disagree,Write Thai from romanization: mai-hen-duai — disagree / לא מסכים,ไม่เห็นด้วย,mai-hen-duai,לא מסכים,disagree,vocab_0258
-qv19_0772,3,mcq_read_meaning,מה המשמעות של จริง ๆ (jing-jing)?,What does จริง ๆ (jing-jing) mean?,จริง ๆ,jing-jing,באמת,really,vocab_0259
-qv19_0773,3,write_he_to_thai,כתוב בתאית: באמת — really (jing-jing),Write in Thai: really — באמת (jing-jing),จริง ๆ,jing-jing,באמת,really,vocab_0259
-qv19_0774,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: jing-jing — באמת / really,Write Thai from romanization: jing-jing — really / באמת,จริง ๆ,jing-jing,באמת,really,vocab_0259
-qv19_0775,1,mcq_read_meaning,מה המשמעות של ลอง (long)?,What does ลอง (long) mean?,ลอง,long,לנסות,try,vocab_0260
-qv19_0776,1,write_he_to_thai,כתוב בתאית: לנסות — try (long),Write in Thai: try — לנסות (long),ลอง,long,לנסות,try,vocab_0260
-qv19_0777,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: long — לנסות / try,Write Thai from romanization: long — try / לנסות,ลอง,long,לנסות,try,vocab_0260
-qv19_0778,1,mcq_read_meaning,מה המשמעות של ดู (duu)?,What does ดู (duu) mean?,ดู,duu,לראות / להסתכל,look / watch,vocab_0261
-qv19_0779,1,write_he_to_thai,כתוב בתאית: לראות / להסתכל — look / watch (duu),Write in Thai: look / watch — לראות / להסתכל (duu),ดู,duu,לראות / להסתכל,look / watch,vocab_0261
-qv19_0780,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: duu — לראות / להסתכל / look / watch,Write Thai from romanization: duu — look / watch / לראות / להסתכל,ดู,duu,לראות / להסתכל,look / watch,vocab_0261
-qv19_0781,1,mcq_read_meaning,מה המשמעות של ฟัง (fang)?,What does ฟัง (fang) mean?,ฟัง,fang,להקשיב,listen,vocab_0262
-qv19_0782,1,write_he_to_thai,כתוב בתאית: להקשיב — listen (fang),Write in Thai: listen — להקשיב (fang),ฟัง,fang,להקשיב,listen,vocab_0262
-qv19_0783,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: fang — להקשיב / listen,Write Thai from romanization: fang — listen / להקשיב,ฟัง,fang,להקשיב,listen,vocab_0262
-qv19_0784,1,mcq_read_meaning,מה המשמעות של ดม (dom)?,What does ดม (dom) mean?,ดม,dom,להריח,smell,vocab_0263
-qv19_0785,1,write_he_to_thai,כתוב בתאית: להריח — smell (dom),Write in Thai: smell — להריח (dom),ดม,dom,להריח,smell,vocab_0263
-qv19_0786,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: dom — להריח / smell,Write Thai from romanization: dom — smell / להריח,ดม,dom,להריח,smell,vocab_0263
-qv19_0787,1,mcq_read_meaning,מה המשמעות של ชิม (chim)?,What does ชิม (chim) mean?,ชิม,chim,לטעום,taste,vocab_0264
-qv19_0788,1,write_he_to_thai,כתוב בתאית: לטעום — taste (chim),Write in Thai: taste — לטעום (chim),ชิม,chim,לטעום,taste,vocab_0264
-qv19_0789,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: chim — לטעום / taste,Write Thai from romanization: chim — taste / לטעום,ชิม,chim,לטעום,taste,vocab_0264
-qv19_0790,1,mcq_read_meaning,מה המשמעות של จำ (jum)?,What does จำ (jum) mean?,จำ,jum,לזכור,remember,vocab_0265
-qv19_0791,1,write_he_to_thai,כתוב בתאית: לזכור — remember (jum),Write in Thai: remember — לזכור (jum),จำ,jum,לזכור,remember,vocab_0265
-qv19_0792,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: jum — לזכור / remember,Write Thai from romanization: jum — remember / לזכור,จำ,jum,לזכור,remember,vocab_0265
-qv19_0793,1,mcq_read_meaning,מה המשמעות של เคย (keey)?,What does เคย (keey) mean?,เคย,keey,להתרגל / פעם...,ever / used to,vocab_0266
-qv19_0794,1,write_he_to_thai,כתוב בתאית: להתרגל / פעם... — ever / used to (keey),Write in Thai: ever / used to — להתרגל / פעם... (keey),เคย,keey,להתרגל / פעם...,ever / used to,vocab_0266
-qv19_0795,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: keey — להתרגל / פעם... / ever / used to,Write Thai from romanization: keey — ever / used to / להתרגל / פעם...,เคย,keey,להתרגל / פעם...,ever / used to,vocab_0266
-qv19_0796,1,mcq_read_meaning,מה המשמעות של เที่ยว (teaw)?,What does เที่ยว (teaw) mean?,เที่ยว,teaw,לטייל / לבלות,travel / hang out,vocab_0267
-qv19_0797,1,write_he_to_thai,כתוב בתאית: לטייל / לבלות — travel / hang out (teaw),Write in Thai: travel / hang out — לטייל / לבלות (teaw),เที่ยว,teaw,לטייל / לבלות,travel / hang out,vocab_0267
-qv19_0798,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: teaw — לטייל / לבלות / travel / hang out,Write Thai from romanization: teaw — travel / hang out / לטייל / לבלות,เที่ยว,teaw,לטייל / לבלות,travel / hang out,vocab_0267
-qv19_0799,1,mcq_read_meaning,מה המשמעות של รอ (raw)?,What does รอ (raw) mean?,รอ,raw,לחכות,wait,vocab_0268
-qv19_0800,1,write_he_to_thai,כתוב בתאית: לחכות — wait (raw),Write in Thai: wait — לחכות (raw),รอ,raw,לחכות,wait,vocab_0268
-qv19_0801,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: raw — לחכות / wait,Write Thai from romanization: raw — wait / לחכות,รอ,raw,לחכות,wait,vocab_0268
-qv19_0802,1,mcq_read_meaning,מה המשמעות של ซื้อ (suu)?,What does ซื้อ (suu) mean?,ซื้อ,suu,לקנות,buy,vocab_0269
-qv19_0803,1,write_he_to_thai,כתוב בתאית: לקנות — buy (suu),Write in Thai: buy — לקנות (suu),ซื้อ,suu,לקנות,buy,vocab_0269
-qv19_0804,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: suu — לקנות / buy,Write Thai from romanization: suu — buy / לקנות,ซื้อ,suu,לקנות,buy,vocab_0269
-qv19_0805,1,mcq_read_meaning,מה המשמעות של ขาย (kaai)?,What does ขาย (kaai) mean?,ขาย,kaai,למכור,sell,vocab_0270
-qv19_0806,1,write_he_to_thai,כתוב בתאית: למכור — sell (kaai),Write in Thai: sell — למכור (kaai),ขาย,kaai,למכור,sell,vocab_0270
-qv19_0807,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: kaai — למכור / sell,Write Thai from romanization: kaai — sell / למכור,ขาย,kaai,למכור,sell,vocab_0270
-qv19_0808,1,mcq_read_meaning,מה המשמעות של ให้ (hai)?,What does ให้ (hai) mean?,ให้,hai,לתת / עבור,give / for,vocab_0271
-qv19_0809,1,write_he_to_thai,כתוב בתאית: לתת / עבור — give / for (hai),Write in Thai: give / for — לתת / עבור (hai),ให้,hai,לתת / עבור,give / for,vocab_0271
-qv19_0810,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: hai — לתת / עבור / give / for,Write Thai from romanization: hai — give / for / לתת / עבור,ให้,hai,לתת / עבור,give / for,vocab_0271
-qv19_0811,3,mcq_read_meaning,מה המשמעות של ช่วย (choo-ay)?,What does ช่วย (choo-ay) mean?,ช่วย,choo-ay,לעזור,help,vocab_0272
-qv19_0812,3,write_he_to_thai,כתוב בתאית: לעזור — help (choo-ay),Write in Thai: help — לעזור (choo-ay),ช่วย,choo-ay,לעזור,help,vocab_0272
-qv19_0813,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: choo-ay — לעזור / help,Write Thai from romanization: choo-ay — help / לעזור,ช่วย,choo-ay,לעזור,help,vocab_0272
-qv19_0814,1,mcq_read_meaning,מה המשמעות של บอก (bork)?,What does บอก (bork) mean?,บอก,bork,להגיד / לספר,tell,vocab_0273
-qv19_0815,1,write_he_to_thai,כתוב בתאית: להגיד / לספר — tell (bork),Write in Thai: tell — להגיד / לספר (bork),บอก,bork,להגיד / לספר,tell,vocab_0273
-qv19_0816,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: bork — להגיד / לספר / tell,Write Thai from romanization: bork — tell / להגיד / לספר,บอก,bork,להגיד / לספר,tell,vocab_0273
-qv19_0817,1,mcq_read_meaning,מה המשמעות של ถาม (tam)?,What does ถาม (tam) mean?,ถาม,tam,לשאול,ask,vocab_0274
-qv19_0818,1,write_he_to_thai,כתוב בתאית: לשאול — ask (tam),Write in Thai: ask — לשאול (tam),ถาม,tam,לשאול,ask,vocab_0274
-qv19_0819,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: tam — לשאול / ask,Write Thai from romanization: tam — ask / לשאול,ถาม,tam,לשאול,ask,vocab_0274
-qv19_0820,1,mcq_read_meaning,מה המשמעות של ยิ้ม (yim)?,What does ยิ้ม (yim) mean?,ยิ้ม,yim,לחייך,smile,vocab_0275
-qv19_0821,1,write_he_to_thai,כתוב בתאית: לחייך — smile (yim),Write in Thai: smile — לחייך (yim),ยิ้ม,yim,לחייך,smile,vocab_0275
-qv19_0822,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: yim — לחייך / smile,Write Thai from romanization: yim — smile / לחייך,ยิ้ม,yim,לחייך,smile,vocab_0275
-qv19_0823,3,mcq_read_meaning,מה המשמעות של ร้องไห้ (rong¹-hai³)?,What does ร้องไห้ (rong¹-hai³) mean?,ร้องไห้,rong¹-hai³,לבכות,cry,vocab_0276
-qv19_0824,3,write_he_to_thai,כתוב בתאית: לבכות — cry (rong¹-hai³),Write in Thai: cry — לבכות (rong¹-hai³),ร้องไห้,rong¹-hai³,לבכות,cry,vocab_0276
-qv19_0825,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: rong¹-hai³ — לבכות / cry,Write Thai from romanization: rong¹-hai³ — cry / לבכות,ร้องไห้,rong¹-hai³,לבכות,cry,vocab_0276
-qv19_0826,3,mcq_read_meaning,מה המשמעות של อิจฉา (it²-chaa¹)?,What does อิจฉา (it²-chaa¹) mean?,อิจฉา,it²-chaa¹,לקנא,envy / jealous,vocab_0277
-qv19_0827,3,write_he_to_thai,כתוב בתאית: לקנא — envy / jealous (it²-chaa¹),Write in Thai: envy / jealous — לקנא (it²-chaa¹),อิจฉา,it²-chaa¹,לקנא,envy / jealous,vocab_0277
-qv19_0828,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: it²-chaa¹ — לקנא / envy / jealous,Write Thai from romanization: it²-chaa¹ — envy / jealous / לקנא,อิจฉา,it²-chaa¹,לקנא,envy / jealous,vocab_0277
-qv19_0829,3,mcq_read_meaning,מה המשמעות של โมโห (mo¹-ho¹)?,What does โมโห (mo¹-ho¹) mean?,โมโห,mo¹-ho¹,עצבני,angry / annoyed,vocab_0278
-qv19_0830,3,write_he_to_thai,כתוב בתאית: עצבני — angry / annoyed (mo¹-ho¹),Write in Thai: angry / annoyed — עצבני (mo¹-ho¹),โมโห,mo¹-ho¹,עצבני,angry / annoyed,vocab_0278
-qv19_0831,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: mo¹-ho¹ — עצבני / angry / annoyed,Write Thai from romanization: mo¹-ho¹ — angry / annoyed / עצבני,โมโห,mo¹-ho¹,עצבני,angry / annoyed,vocab_0278
-qv19_0832,3,mcq_read_meaning,מה המשמעות של รำคาญ (ram¹-kaan¹)?,What does รำคาญ (ram¹-kaan¹) mean?,รำคาญ,ram¹-kaan¹,מעצבן,annoyed / annoying,vocab_0279
-qv19_0833,3,write_he_to_thai,כתוב בתאית: מעצבן — annoyed / annoying (ram¹-kaan¹),Write in Thai: annoyed / annoying — מעצבן (ram¹-kaan¹),รำคาญ,ram¹-kaan¹,מעצבן,annoyed / annoying,vocab_0279
-qv19_0834,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: ram¹-kaan¹ — מעצבן / annoyed / annoying,Write Thai from romanization: ram¹-kaan¹ — annoyed / annoying / מעצבן,รำคาญ,ram¹-kaan¹,מעצבן,annoyed / annoying,vocab_0279
-qv19_0835,1,mcq_read_meaning,מה המשמעות של หวัง (wang¹)?,What does หวัง (wang¹) mean?,หวัง,wang¹,לקוות,hope,vocab_0280
-qv19_0836,1,write_he_to_thai,כתוב בתאית: לקוות — hope (wang¹),Write in Thai: hope — לקוות (wang¹),หวัง,wang¹,לקוות,hope,vocab_0280
-qv19_0837,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: wang¹ — לקוות / hope,Write Thai from romanization: wang¹ — hope / לקוות,หวัง,wang¹,לקוות,hope,vocab_0280
-qv19_0838,3,mcq_read_meaning,מה המשמעות של มั่นใจ (man¹-jai¹)?,What does มั่นใจ (man¹-jai¹) mean?,มั่นใจ,man¹-jai¹,בטוח,confident,vocab_0281
-qv19_0839,3,write_he_to_thai,כתוב בתאית: בטוח — confident (man¹-jai¹),Write in Thai: confident — בטוח (man¹-jai¹),มั่นใจ,man¹-jai¹,בטוח,confident,vocab_0281
-qv19_0840,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: man¹-jai¹ — בטוח / confident,Write Thai from romanization: man¹-jai¹ — confident / בטוח,มั่นใจ,man¹-jai¹,בטוח,confident,vocab_0281
-qv19_0841,4,mcq_read_meaning,מה המשמעות של น่าสงสาร (naa³-song⁵-saan¹)?,What does น่าสงสาร (naa³-song⁵-saan¹) mean?,น่าสงสาร,naa³-song⁵-saan¹,מסכן,pitiful / poor thing,vocab_0282
-qv19_0842,4,write_he_to_thai,כתוב בתאית: מסכן — pitiful / poor thing (naa³-song⁵-saan¹),Write in Thai: pitiful / poor thing — מסכן (naa³-song⁵-saan¹),น่าสงสาร,naa³-song⁵-saan¹,מסכן,pitiful / poor thing,vocab_0282
-qv19_0843,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: naa³-song⁵-saan¹ — מסכן / pitiful / poor thing,Write Thai from romanization: naa³-song⁵-saan¹ — pitiful / poor thing / מסכן,น่าสงสาร,naa³-song⁵-saan¹,מסכן,pitiful / poor thing,vocab_0282
-qv19_0844,3,mcq_read_meaning,מה המשמעות של ภูมิใจ (pum¹-jai¹)?,What does ภูมิใจ (pum¹-jai¹) mean?,ภูมิใจ,pum¹-jai¹,גאה,proud,vocab_0283
-qv19_0845,3,write_he_to_thai,כתוב בתאית: גאה — proud (pum¹-jai¹),Write in Thai: proud — גאה (pum¹-jai¹),ภูมิใจ,pum¹-jai¹,גאה,proud,vocab_0283
-qv19_0846,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: pum¹-jai¹ — גאה / proud,Write Thai from romanization: pum¹-jai¹ — proud / גאה,ภูมิใจ,pum¹-jai¹,גאה,proud,vocab_0283
-qv19_0847,3,mcq_read_meaning,מה המשמעות של เสียดาย (sia⁵-daai¹)?,What does เสียดาย (sia⁵-daai¹) mean?,เสียดาย,sia⁵-daai¹,חבל / בזבוז,what a pity / waste,vocab_0284
-qv19_0848,3,write_he_to_thai,כתוב בתאית: חבל / בזבוז — what a pity / waste (sia⁵-daai¹),Write in Thai: what a pity / waste — חבל / בזבוז (sia⁵-daai¹),เสียดาย,sia⁵-daai¹,חבל / בזבוז,what a pity / waste,vocab_0284
-qv19_0849,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: sia⁵-daai¹ — חבל / בזבוז / what a pity / waste,Write Thai from romanization: sia⁵-daai¹ — what a pity / waste / חבל / בזבוז,เสียดาย,sia⁵-daai¹,חבל / בזבוז,what a pity / waste,vocab_0284
-qv19_0850,3,mcq_read_meaning,מה המשמעות של ตื่นเต้น (dteun-dten)?,What does ตื่นเต้น (dteun-dten) mean?,ตื่นเต้น,dteun-dten,מתרגש,excited,vocab_0285
-qv19_0851,3,write_he_to_thai,כתוב בתאית: מתרגש — excited (dteun-dten),Write in Thai: excited — מתרגש (dteun-dten),ตื่นเต้น,dteun-dten,מתרגש,excited,vocab_0285
-qv19_0852,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dteun-dten — מתרגש / excited,Write Thai from romanization: dteun-dten — excited / מתרגש,ตื่นเต้น,dteun-dten,מתרגש,excited,vocab_0285
-qv19_0853,1,mcq_read_meaning,מה המשמעות של ง่วง (nguang³)?,What does ง่วง (nguang³) mean?,ง่วง,nguang³,ישנוני,sleepy,vocab_0286
-qv19_0854,1,write_he_to_thai,כתוב בתאית: ישנוני — sleepy (nguang³),Write in Thai: sleepy — ישנוני (nguang³),ง่วง,nguang³,ישנוני,sleepy,vocab_0286
-qv19_0855,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: nguang³ — ישנוני / sleepy,Write Thai from romanization: nguang³ — sleepy / ישנוני,ง่วง,nguang³,ישנוני,sleepy,vocab_0286
-qv19_0856,3,mcq_read_meaning,מה המשמעות של ตกใจ (dtok²-jai¹)?,What does ตกใจ (dtok²-jai¹) mean?,ตกใจ,dtok²-jai¹,מבוהל,shocked / startled,vocab_0287
-qv19_0857,3,write_he_to_thai,כתוב בתאית: מבוהל — shocked / startled (dtok²-jai¹),Write in Thai: shocked / startled — מבוהל (dtok²-jai¹),ตกใจ,dtok²-jai¹,מבוהל,shocked / startled,vocab_0287
-qv19_0858,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dtok²-jai¹ — מבוהל / shocked / startled,Write Thai from romanization: dtok²-jai¹ — shocked / startled / מבוהל,ตกใจ,dtok²-jai¹,מבוהל,shocked / startled,vocab_0287
-qv19_0859,1,mcq_read_meaning,מה המשמעות של รวม (ruam¹)?,What does รวม (ruam¹) mean?,รวม,ruam¹,ביחד,together / include,vocab_0288
-qv19_0860,1,write_he_to_thai,כתוב בתאית: ביחד — together / include (ruam¹),Write in Thai: together / include — ביחד (ruam¹),รวม,ruam¹,ביחד,together / include,vocab_0288
-qv19_0861,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: ruam¹ — ביחד / together / include,Write Thai from romanization: ruam¹ — together / include / ביחד,รวม,ruam¹,ביחד,together / include,vocab_0288
-qv19_0862,3,mcq_read_meaning,מה המשמעות של ชื่อจริง (cheuu³-jing¹)?,What does ชื่อจริง (cheuu³-jing¹) mean?,ชื่อจริง,cheuu³-jing¹,שם אמיתי,real name,vocab_0289
-qv19_0863,3,write_he_to_thai,כתוב בתאית: שם אמיתי — real name (cheuu³-jing¹),Write in Thai: real name — שם אמיתי (cheuu³-jing¹),ชื่อจริง,cheuu³-jing¹,שם אמיתי,real name,vocab_0289
-qv19_0864,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: cheuu³-jing¹ — שם אמיתי / real name,Write Thai from romanization: cheuu³-jing¹ — real name / שם אמיתי,ชื่อจริง,cheuu³-jing¹,שם אמיתי,real name,vocab_0289
-qv19_0865,3,mcq_read_meaning,מה המשמעות של ชื่อเล่น (cheuu³-len³)?,What does ชื่อเล่น (cheuu³-len³) mean?,ชื่อเล่น,cheuu³-len³,כינוי,nickname,vocab_0290
-qv19_0866,3,write_he_to_thai,כתוב בתאית: כינוי — nickname (cheuu³-len³),Write in Thai: nickname — כינוי (cheuu³-len³),ชื่อเล่น,cheuu³-len³,כינוי,nickname,vocab_0290
-qv19_0867,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: cheuu³-len³ — כינוי / nickname,Write Thai from romanization: cheuu³-len³ — nickname / כינוי,ชื่อเล่น,cheuu³-len³,כינוי,nickname,vocab_0290
-qv19_0868,4,mcq_read_meaning,מה המשמעות של นามสกุล (naam¹-sa¹-kun¹)?,What does นามสกุล (naam¹-sa¹-kun¹) mean?,นามสกุล,naam¹-sa¹-kun¹,שם משפחה,surname,vocab_0291
-qv19_0869,4,write_he_to_thai,כתוב בתאית: שם משפחה — surname (naam¹-sa¹-kun¹),Write in Thai: surname — שם משפחה (naam¹-sa¹-kun¹),นามสกุล,naam¹-sa¹-kun¹,שם משפחה,surname,vocab_0291
-qv19_0870,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: naam¹-sa¹-kun¹ — שם משפחה / surname,Write Thai from romanization: naam¹-sa¹-kun¹ — surname / שם משפחה,นามสกุล,naam¹-sa¹-kun¹,שם משפחה,surname,vocab_0291
-qv19_0871,1,mcq_read_meaning,מה המשמעות של คือ (keuu¹)?,What does คือ (keuu¹) mean?,คือ,keuu¹,זה / הוא (הגדרה),is / means,vocab_0292
-qv19_0872,1,write_he_to_thai,כתוב בתאית: זה / הוא (הגדרה) — is / means (keuu¹),Write in Thai: is / means — זה / הוא (הגדרה) (keuu¹),คือ,keuu¹,זה / הוא (הגדרה),is / means,vocab_0292
-qv19_0873,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: keuu¹ — זה / הוא (הגדרה) / is / means,Write Thai from romanization: keuu¹ — is / means / זה / הוא (הגדרה),คือ,keuu¹,זה / הוא (הגדרה),is / means,vocab_0292
-qv19_0874,1,mcq_read_meaning,מה המשמעות של เบื่อ (beaua²)?,What does เบื่อ (beaua²) mean?,เบื่อ,beaua²,משעמם,bored,vocab_0293
-qv19_0875,1,write_he_to_thai,כתוב בתאית: משעמם — bored (beaua²),Write in Thai: bored — משעמם (beaua²),เบื่อ,beaua²,משעמם,bored,vocab_0293
-qv19_0876,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: beaua² — משעמם / bored,Write Thai from romanization: beaua² — bored / משעמם,เบื่อ,beaua²,משעמם,bored,vocab_0293
-qv19_0877,3,mcq_read_meaning,מה המשמעות של สมอง (sa¹-mawng¹)?,What does สมอง (sa¹-mawng¹) mean?,สมอง,sa¹-mawng¹,מוח,brain,vocab_0294
-qv19_0878,3,write_he_to_thai,כתוב בתאית: מוח — brain (sa¹-mawng¹),Write in Thai: brain — מוח (sa¹-mawng¹),สมอง,sa¹-mawng¹,מוח,brain,vocab_0294
-qv19_0879,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: sa¹-mawng¹ — מוח / brain,Write Thai from romanization: sa¹-mawng¹ — brain / מוח,สมอง,sa¹-mawng¹,מוח,brain,vocab_0294
-qv19_0880,4,mcq_read_meaning,מה המשמעות של สมองไม่ทำงาน (sa¹-mawng¹ mai³ tam¹-ngaan¹)?,What does สมองไม่ทำงาน (sa¹-mawng¹ mai³ tam¹-ngaan¹) mean?,สมองไม่ทำงาน,sa¹-mawng¹ mai³ tam¹-ngaan¹,המוח לא עובד,brain not working,vocab_0295
-qv19_0881,4,write_he_to_thai,כתוב בתאית: המוח לא עובד — brain not working (sa¹-mawng¹ mai³ tam¹-ngaan¹),Write in Thai: brain not working — המוח לא עובד (sa¹-mawng¹ mai³ tam¹-ngaan¹),สมองไม่ทำงาน,sa¹-mawng¹ mai³ tam¹-ngaan¹,המוח לא עובד,brain not working,vocab_0295
-qv19_0882,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: sa¹-mawng¹ mai³ tam¹-ngaan¹ — המוח לא עובד / brain not working,Write Thai from romanization: sa¹-mawng¹ mai³ tam¹-ngaan¹ — brain not working / המוח לא עובד,สมองไม่ทำงาน,sa¹-mawng¹ mai³ tam¹-ngaan¹,המוח לא עובד,brain not working,vocab_0295
-qv19_0883,1,mcq_read_meaning,מה המשמעות של บน (bon¹)?,What does บน (bon¹) mean?,บน,bon¹,על (מעל),on / above,vocab_0296
-qv19_0884,1,write_he_to_thai,כתוב בתאית: על (מעל) — on / above (bon¹),Write in Thai: on / above — על (מעל) (bon¹),บน,bon¹,על (מעל),on / above,vocab_0296
-qv19_0885,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: bon¹ — על (מעל) / on / above,Write Thai from romanization: bon¹ — on / above / על (מעל),บน,bon¹,על (מעל),on / above,vocab_0296
-qv19_0886,3,mcq_read_meaning,מה המשמעות של ต่อไป (dtor²-bpai¹)?,What does ต่อไป (dtor²-bpai¹) mean?,ต่อไป,dtor²-bpai¹,הבא,next,vocab_0297
-qv19_0887,3,write_he_to_thai,כתוב בתאית: הבא — next (dtor²-bpai¹),Write in Thai: next — הבא (dtor²-bpai¹),ต่อไป,dtor²-bpai¹,הבא,next,vocab_0297
-qv19_0888,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dtor²-bpai¹ — הבא / next,Write Thai from romanization: dtor²-bpai¹ — next / הבא,ต่อไป,dtor²-bpai¹,הבא,next,vocab_0297
-qv19_0889,1,mcq_read_meaning,מה המשמעות של เห็น (hen¹)?,What does เห็น (hen¹) mean?,เห็น,hen¹,רואה,see,vocab_0298
-qv19_0890,1,write_he_to_thai,כתוב בתאית: רואה — see (hen¹),Write in Thai: see — רואה (hen¹),เห็น,hen¹,רואה,see,vocab_0298
-qv19_0891,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: hen¹ — רואה / see,Write Thai from romanization: hen¹ — see / רואה,เห็น,hen¹,רואה,see,vocab_0298
-qv19_0892,3,mcq_read_meaning,מה המשמעות של หน้าต่าง (naa³-dtang²)?,What does หน้าต่าง (naa³-dtang²) mean?,หน้าต่าง,naa³-dtang²,חלון,window,vocab_0299
-qv19_0893,3,write_he_to_thai,כתוב בתאית: חלון — window (naa³-dtang²),Write in Thai: window — חלון (naa³-dtang²),หน้าต่าง,naa³-dtang²,חלון,window,vocab_0299
-qv19_0894,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: naa³-dtang² — חלון / window,Write Thai from romanization: naa³-dtang² — window / חלון,หน้าต่าง,naa³-dtang²,חלון,window,vocab_0299
-qv19_0895,1,mcq_read_meaning,מה המשמעות של ห้อง (hawng³)?,What does ห้อง (hawng³) mean?,ห้อง,hawng³,חדר,room,vocab_0300
-qv19_0896,1,write_he_to_thai,כתוב בתאית: חדר — room (hawng³),Write in Thai: room — חדר (hawng³),ห้อง,hawng³,חדר,room,vocab_0300
-qv19_0897,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: hawng³ — חדר / room,Write Thai from romanization: hawng³ — room / חדר,ห้อง,hawng³,חדר,room,vocab_0300
-qv19_0898,3,mcq_read_meaning,מה המשמעות של พ่อแม่ (poh³-mae³)?,What does พ่อแม่ (poh³-mae³) mean?,พ่อแม่,poh³-mae³,הורים,parents,vocab_0301
-qv19_0899,3,write_he_to_thai,כתוב בתאית: הורים — parents (poh³-mae³),Write in Thai: parents — הורים (poh³-mae³),พ่อแม่,poh³-mae³,הורים,parents,vocab_0301
-qv19_0900,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: poh³-mae³ — הורים / parents,Write Thai from romanization: poh³-mae³ — parents / הורים,พ่อแม่,poh³-mae³,הורים,parents,vocab_0301
-qv19_0901,3,mcq_read_meaning,מה המשמעות של กับข้าว (kap²-kaao³)?,What does กับข้าว (kap²-kaao³) mean?,กับข้าว,kap²-kaao³,אוכל (שאוכלים עם אורז),food eaten with rice,vocab_0302
-qv19_0902,3,write_he_to_thai,כתוב בתאית: אוכל (שאוכלים עם אורז) — food eaten with rice (kap²-kaao³),Write in Thai: food eaten with rice — אוכל (שאוכלים עם אורז) (kap²-kaao³),กับข้าว,kap²-kaao³,אוכל (שאוכלים עם אורז),food eaten with rice,vocab_0302
-qv19_0903,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: kap²-kaao³ — אוכל (שאוכלים עם אורז) / food eaten with rice,Write Thai from romanization: kap²-kaao³ — food eaten with rice / אוכל (שאוכלים עם אורז),กับข้าว,kap²-kaao³,אוכל (שאוכלים עם אורז),food eaten with rice,vocab_0302
-qv19_0904,3,mcq_read_meaning,מה המשמעות של นักเรียน (nag²-rian¹)?,What does นักเรียน (nag²-rian¹) mean?,นักเรียน,nag²-rian¹,סטודנט / תלמיד,student,vocab_0303
-qv19_0905,3,write_he_to_thai,כתוב בתאית: סטודנט / תלמיד — student (nag²-rian¹),Write in Thai: student — סטודנט / תלמיד (nag²-rian¹),นักเรียน,nag²-rian¹,סטודנט / תלמיד,student,vocab_0303
-qv19_0906,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: nag²-rian¹ — סטודנט / תלמיד / student,Write Thai from romanization: nag²-rian¹ — student / סטודנט / תלמיד,นักเรียน,nag²-rian¹,סטודנט / תלמיד,student,vocab_0303
-qv19_0907,4,mcq_read_meaning,מה המשמעות של ร้านอาหาร (raan³-aa¹-haan⁵)?,What does ร้านอาหาร (raan³-aa¹-haan⁵) mean?,ร้านอาหาร,raan³-aa¹-haan⁵,מסעדה,restaurant,vocab_0304
-qv19_0908,4,write_he_to_thai,כתוב בתאית: מסעדה — restaurant (raan³-aa¹-haan⁵),Write in Thai: restaurant — מסעדה (raan³-aa¹-haan⁵),ร้านอาหาร,raan³-aa¹-haan⁵,מסעדה,restaurant,vocab_0304
-qv19_0909,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: raan³-aa¹-haan⁵ — מסעדה / restaurant,Write Thai from romanization: raan³-aa¹-haan⁵ — restaurant / מסעדה,ร้านอาหาร,raan³-aa¹-haan⁵,מסעדה,restaurant,vocab_0304
-qv19_0910,3,mcq_read_meaning,מה המשמעות של เจ้าของ (jao³-kawng¹)?,What does เจ้าของ (jao³-kawng¹) mean?,เจ้าของ,jao³-kawng¹,הבעלים,owner,vocab_0305
-qv19_0911,3,write_he_to_thai,כתוב בתאית: הבעלים — owner (jao³-kawng¹),Write in Thai: owner — הבעלים (jao³-kawng¹),เจ้าของ,jao³-kawng¹,הבעלים,owner,vocab_0305
-qv19_0912,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: jao³-kawng¹ — הבעלים / owner,Write Thai from romanization: jao³-kawng¹ — owner / הבעלים,เจ้าของ,jao³-kawng¹,הבעלים,owner,vocab_0305
-qv19_0913,1,mcq_read_meaning,מה המשמעות של แม่ (mae³)?,What does แม่ (mae³) mean?,แม่,mae³,אמא,mother,vocab_0306
-qv19_0914,1,write_he_to_thai,כתוב בתאית: אמא — mother (mae³),Write in Thai: mother — אמא (mae³),แม่,mae³,אמא,mother,vocab_0306
-qv19_0915,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: mae³ — אמא / mother,Write Thai from romanization: mae³ — mother / אמא,แม่,mae³,אמא,mother,vocab_0306
-qv19_0916,3,mcq_read_meaning,מה המשמעות של ผู้หญิง (puu³-ying⁵)?,What does ผู้หญิง (puu³-ying⁵) mean?,ผู้หญิง,puu³-ying⁵,אישה / נקבה,woman / female,vocab_0307
-qv19_0917,3,write_he_to_thai,כתוב בתאית: אישה / נקבה — woman / female (puu³-ying⁵),Write in Thai: woman / female — אישה / נקבה (puu³-ying⁵),ผู้หญิง,puu³-ying⁵,אישה / נקבה,woman / female,vocab_0307
-qv19_0918,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: puu³-ying⁵ — אישה / נקבה / woman / female,Write Thai from romanization: puu³-ying⁵ — woman / female / אישה / נקבה,ผู้หญิง,puu³-ying⁵,אישה / נקבה,woman / female,vocab_0307
-qv19_0919,3,mcq_read_meaning,מה המשמעות של ผู้ชาย (puu³-chaai¹)?,What does ผู้ชาย (puu³-chaai¹) mean?,ผู้ชาย,puu³-chaai¹,גבר / זכר,man / male,vocab_0308
-qv19_0920,3,write_he_to_thai,כתוב בתאית: גבר / זכר — man / male (puu³-chaai¹),Write in Thai: man / male — גבר / זכר (puu³-chaai¹),ผู้ชาย,puu³-chaai¹,גבר / זכר,man / male,vocab_0308
-qv19_0921,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: puu³-chaai¹ — גבר / זכר / man / male,Write Thai from romanization: puu³-chaai¹ — man / male / גבר / זכר,ผู้ชาย,puu³-chaai¹,גבר / זכר,man / male,vocab_0308
-qv19_0922,4,mcq_read_meaning,מה המשמעות של ในหลวง (nai¹-lu-ang¹)?,What does ในหลวง (nai¹-lu-ang¹) mean?,ในหลวง,nai¹-lu-ang¹,המלך,king,vocab_0309
-qv19_0923,4,write_he_to_thai,כתוב בתאית: המלך — king (nai¹-lu-ang¹),Write in Thai: king — המלך (nai¹-lu-ang¹),ในหลวง,nai¹-lu-ang¹,המלך,king,vocab_0309
-qv19_0924,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: nai¹-lu-ang¹ — המלך / king,Write Thai from romanization: nai¹-lu-ang¹ — king / המלך,ในหลวง,nai¹-lu-ang¹,המלך,king,vocab_0309
-qv19_0925,4,mcq_read_meaning,מה המשמעות של พระเจ้าอยู่หัว (pra¹-jao³-yuu²-hua¹)?,What does พระเจ้าอยู่หัว (pra¹-jao³-yuu²-hua¹) mean?,พระเจ้าอยู่หัว,pra¹-jao³-yuu²-hua¹,המלך (תואר רשמי),king (formal title),vocab_0310
-qv19_0926,4,write_he_to_thai,כתוב בתאית: המלך (תואר רשמי) — king (formal title) (pra¹-jao³-yuu²-hua¹),Write in Thai: king (formal title) — המלך (תואר רשמי) (pra¹-jao³-yuu²-hua¹),พระเจ้าอยู่หัว,pra¹-jao³-yuu²-hua¹,המלך (תואר רשמי),king (formal title),vocab_0310
-qv19_0927,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: pra¹-jao³-yuu²-hua¹ — המלך (תואר רשמי) / king (formal title),Write Thai from romanization: pra¹-jao³-yuu²-hua¹ — king (formal title) / המלך (תואר רשמי),พระเจ้าอยู่หัว,pra¹-jao³-yuu²-hua¹,המלך (תואר רשמי),king (formal title),vocab_0310
-qv19_0928,3,mcq_read_meaning,מה המשמעות של หมู่ (muu)?,What does หมู่ (muu) mean?,หมู่,muu,קבוצה / כפר / חבורה,group / village / category,vocab_0311
-qv19_0929,3,write_he_to_thai,כתוב בתאית: קבוצה / כפר / חבורה — group / village / category (muu),Write in Thai: group / village / category — קבוצה / כפר / חבורה (muu),หมู่,muu,קבוצה / כפר / חבורה,group / village / category,vocab_0311
-qv19_0930,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: muu — קבוצה / כפר / חבורה / group / village / category,Write Thai from romanization: muu — group / village / category / קבוצה / כפר / חבורה,หมู่,muu,קבוצה / כפר / חבורה,group / village / category,vocab_0311
-qv19_0931,3,mcq_read_meaning,מה המשמעות של ชาวเผ่า (chaao¹-pao¹)?,What does ชาวเผ่า (chaao¹-pao¹) mean?,ชาวเผ่า,chaao¹-pao¹,אנשי שבט,tribal people,vocab_0312
-qv19_0932,3,write_he_to_thai,כתוב בתאית: אנשי שבט — tribal people (chaao¹-pao¹),Write in Thai: tribal people — אנשי שבט (chaao¹-pao¹),ชาวเผ่า,chaao¹-pao¹,אנשי שבט,tribal people,vocab_0312
-qv19_0933,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: chaao¹-pao¹ — אנשי שבט / tribal people,Write Thai from romanization: chaao¹-pao¹ — tribal people / אנשי שבט,ชาวเผ่า,chaao¹-pao¹,אנשי שבט,tribal people,vocab_0312
-qv19_0934,3,mcq_read_meaning,מה המשמעות של ภูเขา (puu¹-kao¹)?,What does ภูเขา (puu¹-kao¹) mean?,ภูเขา,puu¹-kao¹,הר,mountain,vocab_0314
-qv19_0935,3,write_he_to_thai,כתוב בתאית: הר — mountain (puu¹-kao¹),Write in Thai: mountain — הר (puu¹-kao¹),ภูเขา,puu¹-kao¹,הר,mountain,vocab_0314
-qv19_0936,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: puu¹-kao¹ — הר / mountain,Write Thai from romanization: puu¹-kao¹ — mountain / הר,ภูเขา,puu¹-kao¹,הר,mountain,vocab_0314
-qv19_0937,1,mcq_read_meaning,מה המשמעות של ผ้า (paa)?,What does ผ้า (paa) mean?,ผ้า,paa,בד / בגד,cloth / fabric / clothing,vocab_0315
-qv19_0938,1,write_he_to_thai,כתוב בתאית: בד / בגד — cloth / fabric / clothing (paa),Write in Thai: cloth / fabric / clothing — בד / בגד (paa),ผ้า,paa,בד / בגד,cloth / fabric / clothing,vocab_0315
-qv19_0939,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: paa — בד / בגד / cloth / fabric / clothing,Write Thai from romanization: paa — cloth / fabric / clothing / בד / בגד,ผ้า,paa,בד / בגד,cloth / fabric / clothing,vocab_0315
-qv19_0940,3,mcq_read_meaning,מה המשמעות של ตลาดนัด (dtalard²-nat¹)?,What does ตลาดนัด (dtalard²-nat¹) mean?,ตลาดนัด,dtalard²-nat¹,שוק,market,vocab_0316
-qv19_0941,3,write_he_to_thai,כתוב בתאית: שוק — market (dtalard²-nat¹),Write in Thai: market — שוק (dtalard²-nat¹),ตลาดนัด,dtalard²-nat¹,שוק,market,vocab_0316
-qv19_0942,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dtalard²-nat¹ — שוק / market,Write Thai from romanization: dtalard²-nat¹ — market / שוק,ตลาดนัด,dtalard²-nat¹,שוק,market,vocab_0316
-qv19_0943,2,mcq_read_meaning,מה המשמעות של อีก (iig(2))?,What does อีก (iig(2)) mean?,อีก,iig(2),שוב (Again),again / more,vocab_0317
-qv19_0944,2,write_he_to_thai,כתוב בתאית: שוב (Again) — again / more (iig(2)),Write in Thai: again / more — שוב (Again) (iig(2)),อีก,iig(2),שוב (Again),again / more,vocab_0317
-qv19_0945,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: iig(2) — שוב (Again) / again / more,Write Thai from romanization: iig(2) — again / more / שוב (Again),อีก,iig(2),שוב (Again),again / more,vocab_0317
-qv19_0946,3,mcq_read_meaning,מה המשמעות של พักผ่อน (pag-pawn(2-2))?,What does พักผ่อน (pag-pawn(2-2)) mean?,พักผ่อน,pag-pawn(2-2),לנוח,rest,vocab_0318
-qv19_0947,3,write_he_to_thai,כתוב בתאית: לנוח — rest (pag-pawn(2-2)),Write in Thai: rest — לנוח (pag-pawn(2-2)),พักผ่อน,pag-pawn(2-2),לנוח,rest,vocab_0318
-qv19_0948,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: pag-pawn(2-2) — לנוח / rest,Write Thai from romanization: pag-pawn(2-2) — rest / לנוח,พักผ่อน,pag-pawn(2-2),לנוח,rest,vocab_0318
-qv19_0949,3,mcq_read_meaning,מה המשמעות של ไปเที่ยว (bpai-tiao(1-3))?,What does ไปเที่ยว (bpai-tiao(1-3)) mean?,ไปเที่ยว,bpai-tiao(1-3),לטייל / להסתובב בכיף,go out / travel for fun,vocab_0319
-qv19_0950,3,write_he_to_thai,כתוב בתאית: לטייל / להסתובב בכיף — go out / travel for fun (bpai-tiao(1-3)),Write in Thai: go out / travel for fun — לטייל / להסתובב בכיף (bpai-tiao(1-3)),ไปเที่ยว,bpai-tiao(1-3),לטייל / להסתובב בכיף,go out / travel for fun,vocab_0319
-qv19_0951,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: bpai-tiao(1-3) — לטייל / להסתובב בכיף / go out / travel for fun,Write Thai from romanization: bpai-tiao(1-3) — go out / travel for fun / לטייל / להסתובב בכיף,ไปเที่ยว,bpai-tiao(1-3),לטייל / להסתובב בכיף,go out / travel for fun,vocab_0319
-qv19_0952,2,mcq_read_meaning,מה המשמעות של เสร็จ (sed(2))?,What does เสร็จ (sed(2)) mean?,เสร็จ,sed(2),סיים / נגמר,finish / done,vocab_0320
-qv19_0953,2,write_he_to_thai,כתוב בתאית: סיים / נגמר — finish / done (sed(2)),Write in Thai: finish / done — סיים / נגמר (sed(2)),เสร็จ,sed(2),סיים / נגמר,finish / done,vocab_0320
-qv19_0954,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: sed(2) — סיים / נגמר / finish / done,Write Thai from romanization: sed(2) — finish / done / סיים / נגמר,เสร็จ,sed(2),סיים / נגמר,finish / done,vocab_0320
-qv19_0955,2,mcq_read_meaning,מה המשמעות של หมด (mod(2))?,What does หมด (mod(2)) mean?,หมด,mod(2),הכל נגמר / אזל,finished / used up,vocab_0321
-qv19_0956,2,write_he_to_thai,כתוב בתאית: הכל נגמר / אזל — finished / used up (mod(2)),Write in Thai: finished / used up — הכל נגמר / אזל (mod(2)),หมด,mod(2),הכל נגמר / אזל,finished / used up,vocab_0321
-qv19_0957,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: mod(2) — הכל נגמר / אזל / finished / used up,Write Thai from romanization: mod(2) — finished / used up / הכל נגמר / אזל,หมด,mod(2),הכל נגמר / אזל,finished / used up,vocab_0321
-qv19_0958,2,mcq_read_meaning,מה המשמעות של ตื่น (dteun)?,What does ตื่น (dteun) mean?,ตื่น,dteun,להתעורר,wake up,vocab_0322
-qv19_0959,2,write_he_to_thai,כתוב בתאית: להתעורר — wake up (dteun),Write in Thai: wake up — להתעורר (dteun),ตื่น,dteun,להתעורר,wake up,vocab_0322
-qv19_0960,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: dteun — להתעורר / wake up,Write Thai from romanization: dteun — wake up / להתעורר,ตื่น,dteun,להתעורר,wake up,vocab_0322
-qv19_0961,2,mcq_read_meaning,מה המשמעות של หลง (long(1))?,What does หลง (long(1)) mean?,หลง,long(1),ללכת לאיבוד,lost,vocab_0323
-qv19_0962,2,write_he_to_thai,כתוב בתאית: ללכת לאיבוד — lost (long(1)),Write in Thai: lost — ללכת לאיבוד (long(1)),หลง,long(1),ללכת לאיבוד,lost,vocab_0323
-qv19_0963,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: long(1) — ללכת לאיבוד / lost,Write Thai from romanization: long(1) — lost / ללכת לאיבוד,หลง,long(1),ללכת לאיבוד,lost,vocab_0323
-qv19_0964,4,mcq_read_meaning,מה המשמעות של ความอดทน (kwaam-od-ton(1-2-1))?,What does ความอดทน (kwaam-od-ton(1-2-1)) mean?,ความอดทน,kwaam-od-ton(1-2-1),סבלנות,patience,vocab_0324
-qv19_0965,4,write_he_to_thai,כתוב בתאית: סבלנות — patience (kwaam-od-ton(1-2-1)),Write in Thai: patience — סבלנות (kwaam-od-ton(1-2-1)),ความอดทน,kwaam-od-ton(1-2-1),סבלנות,patience,vocab_0324
-qv19_0966,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: kwaam-od-ton(1-2-1) — סבלנות / patience,Write Thai from romanization: kwaam-od-ton(1-2-1) — patience / סבלנות,ความอดทน,kwaam-od-ton(1-2-1),סבלנות,patience,vocab_0324
-qv19_0967,2,mcq_read_meaning,מה המשמעות של ปลา (bplaa(1))?,What does ปลา (bplaa(1)) mean?,ปลา,bplaa(1),דג,fish,vocab_0325
-qv19_0968,2,write_he_to_thai,כתוב בתאית: דג — fish (bplaa(1)),Write in Thai: fish — דג (bplaa(1)),ปลา,bplaa(1),דג,fish,vocab_0325
-qv19_0969,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: bplaa(1) — דג / fish,Write Thai from romanization: bplaa(1) — fish / דג,ปลา,bplaa(1),דג,fish,vocab_0325
-qv19_0970,2,mcq_read_meaning,מה המשמעות של กุ้ง (gung(3))?,What does กุ้ง (gung(3)) mean?,กุ้ง,gung(3),שרימפס,shrimp,vocab_0326
-qv19_0971,2,write_he_to_thai,כתוב בתאית: שרימפס — shrimp (gung(3)),Write in Thai: shrimp — שרימפס (gung(3)),กุ้ง,gung(3),שרימפס,shrimp,vocab_0326
-qv19_0972,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: gung(3) — שרימפס / shrimp,Write Thai from romanization: gung(3) — shrimp / שרימפס,กุ้ง,gung(3),שרימפס,shrimp,vocab_0326
-qv19_0973,2,mcq_read_meaning,מה המשמעות של หอย (hoi(5))?,What does หอย (hoi(5)) mean?,หอย,hoi(5),צדפה,shellfish,vocab_0327
-qv19_0974,2,write_he_to_thai,כתוב בתאית: צדפה — shellfish (hoi(5)),Write in Thai: shellfish — צדפה (hoi(5)),หอย,hoi(5),צדפה,shellfish,vocab_0327
-qv19_0975,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: hoi(5) — צדפה / shellfish,Write Thai from romanization: hoi(5) — shellfish / צדפה,หอย,hoi(5),צדפה,shellfish,vocab_0327
-qv19_0976,3,mcq_read_meaning,מה המשמעות של ปลาหมึก (bpla-meuk)?,What does ปลาหมึก (bpla-meuk) mean?,ปลาหมึก,bpla-meuk,דיונון,squid,vocab_0328
-qv19_0977,3,write_he_to_thai,כתוב בתאית: דיונון — squid (bpla-meuk),Write in Thai: squid — דיונון (bpla-meuk),ปลาหมึก,bpla-meuk,דיונון,squid,vocab_0328
-qv19_0978,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: bpla-meuk — דיונון / squid,Write Thai from romanization: bpla-meuk — squid / דיונון,ปลาหมึก,bpla-meuk,דיונון,squid,vocab_0328
-qv19_0979,4,mcq_read_meaning,מה המשמעות של อาหารทะเล (aa-haan-ta-lay(1(1)-5-1-1))?,What does อาหารทะเล (aa-haan-ta-lay(1(1)-5-1-1)) mean?,อาหารทะเล,aa-haan-ta-lay(1(1)-5-1-1),פירות ים,seafood,vocab_0329
-qv19_0980,4,write_he_to_thai,כתוב בתאית: פירות ים — seafood (aa-haan-ta-lay(1(1)-5-1-1)),Write in Thai: seafood — פירות ים (aa-haan-ta-lay(1(1)-5-1-1)),อาหารทะเล,aa-haan-ta-lay(1(1)-5-1-1),פירות ים,seafood,vocab_0329
-qv19_0981,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: aa-haan-ta-lay(1(1)-5-1-1) — פירות ים / seafood,Write Thai from romanization: aa-haan-ta-lay(1(1)-5-1-1) — seafood / פירות ים,อาหารทะเล,aa-haan-ta-lay(1(1)-5-1-1),פירות ים,seafood,vocab_0329
-qv19_0982,3,mcq_read_meaning,מה המשמעות של เมื่อไร (meua-rai(3-1))?,What does เมื่อไร (meua-rai(3-1)) mean?,เมื่อไร,meua-rai(3-1),מתי,when?,vocab_0330
-qv19_0983,3,write_he_to_thai,כתוב בתאית: מתי — when? (meua-rai(3-1)),Write in Thai: when? — מתי (meua-rai(3-1)),เมื่อไร,meua-rai(3-1),מתי,when?,vocab_0330
-qv19_0984,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: meua-rai(3-1) — מתי / when?,Write Thai from romanization: meua-rai(3-1) — when? / מתי,เมื่อไร,meua-rai(3-1),מתי,when?,vocab_0330
-qv19_0985,5,mcq_read_meaning,מה המשמעות של ยังไง (yang-ngai)?,What does ยังไง (yang-ngai) mean?,ยังไง,yang-ngai,איך?,how?,vocab_0331
-qv19_0986,5,write_he_to_thai,כתוב בתאית: איך? — how? (yang-ngai),Write in Thai: how? — איך? (yang-ngai),ยังไง,yang-ngai,איך?,how?,vocab_0331
-qv19_0987,5,write_roman_to_thai,כתוב בתאית לפי התעתיק: yang-ngai — איך? / how?,Write Thai from romanization: yang-ngai — how? / איך?,ยังไง,yang-ngai,איך?,how?,vocab_0331
-qv19_0988,2,mcq_read_meaning,מה המשמעות של ใคร (khrai(1))?,What does ใคร (khrai(1)) mean?,ใคร,khrai(1),מי (או מי זה),who,vocab_0332
-qv19_0989,2,write_he_to_thai,כתוב בתאית: מי (או מי זה) — who (khrai(1)),Write in Thai: who — מי (או מי זה) (khrai(1)),ใคร,khrai(1),מי (או מי זה),who,vocab_0332
-qv19_0990,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: khrai(1) — מי (או מי זה) / who,Write Thai from romanization: khrai(1) — who / מי (או מי זה),ใคร,khrai(1),מי (או מי זה),who,vocab_0332
-qv19_0991,3,mcq_read_meaning,מה המשמעות של วันเกิด (wan-geut(1-2))?,What does วันเกิด (wan-geut(1-2)) mean?,วันเกิด,wan-geut(1-2),יום הולדת,birthday,vocab_0333
-qv19_0992,3,write_he_to_thai,כתוב בתאית: יום הולדת — birthday (wan-geut(1-2)),Write in Thai: birthday — יום הולדת (wan-geut(1-2)),วันเกิด,wan-geut(1-2),יום הולדת,birthday,vocab_0333
-qv19_0993,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: wan-geut(1-2) — יום הולדת / birthday,Write Thai from romanization: wan-geut(1-2) — birthday / יום הולדת,วันเกิด,wan-geut(1-2),יום הולדת,birthday,vocab_0333
-qv19_0994,2,mcq_read_meaning,מה המשמעות של เคย (koey(1))?,What does เคย (koey(1)) mean?,เคย,koey(1),אי פעם,ever,vocab_0334
-qv19_0995,2,write_he_to_thai,כתוב בתאית: אי פעם — ever (koey(1)),Write in Thai: ever — אי פעם (koey(1)),เคย,koey(1),אי פעם,ever,vocab_0334
-qv19_0996,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: koey(1) — אי פעם / ever,Write Thai from romanization: koey(1) — ever / אי פעם,เคย,koey(1),אי פעם,ever,vocab_0334
-qv19_0997,4,mcq_read_meaning,מה המשמעות של สมาชิก (sa-ma-chik(2-1-3))?,What does สมาชิก (sa-ma-chik(2-1-3)) mean?,สมาชิก,sa-ma-chik(2-1-3),חבר (במועדון / קבוצה),member,vocab_0335
-qv19_0998,4,write_he_to_thai,כתוב בתאית: חבר (במועדון / קבוצה) — member (sa-ma-chik(2-1-3)),Write in Thai: member — חבר (במועדון / קבוצה) (sa-ma-chik(2-1-3)),สมาชิก,sa-ma-chik(2-1-3),חבר (במועדון / קבוצה),member,vocab_0335
-qv19_0999,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: sa-ma-chik(2-1-3) — חבר (במועדון / קבוצה) / member,Write Thai from romanization: sa-ma-chik(2-1-3) — member / חבר (במועדון / קבוצה),สมาชิก,sa-ma-chik(2-1-3),חבר (במועדון / קבוצה),member,vocab_0335
-qv19_1000,2,mcq_read_meaning,מה המשמעות של เด็ก (dek(2))?,What does เด็ก (dek(2)) mean?,เด็ก,dek(2),ילד,child,vocab_0336
-qv19_1001,2,write_he_to_thai,כתוב בתאית: ילד — child (dek(2)),Write in Thai: child — ילד (dek(2)),เด็ก,dek(2),ילד,child,vocab_0336
-qv19_1002,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: dek(2) — ילד / child,Write Thai from romanization: dek(2) — child / ילד,เด็ก,dek(2),ילד,child,vocab_0336
-qv19_1003,3,mcq_read_meaning,מה המשמעות של น้ำมัน (nam-man(1-1))?,What does น้ำมัน (nam-man(1-1)) mean?,น้ำมัน,nam-man(1-1),שמן / דלק,oil / fuel,vocab_0337
-qv19_1004,3,write_he_to_thai,כתוב בתאית: שמן / דלק — oil / fuel (nam-man(1-1)),Write in Thai: oil / fuel — שמן / דלק (nam-man(1-1)),น้ำมัน,nam-man(1-1),שמן / דלק,oil / fuel,vocab_0337
-qv19_1005,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: nam-man(1-1) — שמן / דלק / oil / fuel,Write Thai from romanization: nam-man(1-1) — oil / fuel / שמן / דלק,น้ำมัน,nam-man(1-1),שמן / דלק,oil / fuel,vocab_0337
-qv19_1006,4,mcq_read_meaning,מה המשמעות של ปั๊มน้ำมัน (bpum-nam-man(3-1-1))?,What does ปั๊มน้ำมัน (bpum-nam-man(3-1-1)) mean?,ปั๊มน้ำมัน,bpum-nam-man(3-1-1),תחנת דלק,gas station,vocab_0338
-qv19_1007,4,write_he_to_thai,כתוב בתאית: תחנת דלק — gas station (bpum-nam-man(3-1-1)),Write in Thai: gas station — תחנת דלק (bpum-nam-man(3-1-1)),ปั๊มน้ำมัน,bpum-nam-man(3-1-1),תחנת דלק,gas station,vocab_0338
-qv19_1008,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: bpum-nam-man(3-1-1) — תחנת דלק / gas station,Write Thai from romanization: bpum-nam-man(3-1-1) — gas station / תחנת דלק,ปั๊มน้ำมัน,bpum-nam-man(3-1-1),תחנת דלק,gas station,vocab_0338
-qv19_1009,2,mcq_read_meaning,מה המשמעות של กัน (gan(1))?,What does กัน (gan(1)) mean?,กัน,gan(1),אחד את השני / ביחד,each other / together,vocab_0339
-qv19_1010,2,write_he_to_thai,כתוב בתאית: אחד את השני / ביחד — each other / together (gan(1)),Write in Thai: each other / together — אחד את השני / ביחד (gan(1)),กัน,gan(1),אחד את השני / ביחד,each other / together,vocab_0339
-qv19_1011,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: gan(1) — אחד את השני / ביחד / each other / together,Write Thai from romanization: gan(1) — each other / together / אחד את השני / ביחד,กัน,gan(1),אחד את השני / ביחד,each other / together,vocab_0339
-qv19_1012,4,mcq_read_meaning,מה המשמעות של แต่เช้า (dtae-chao)?,What does แต่เช้า (dtae-chao) mean?,แต่เช้า,dtae-chao,לפנות בוקר / מוקדם בבוקר,early in the morning,vocab_0340
-qv19_1013,4,write_he_to_thai,כתוב בתאית: לפנות בוקר / מוקדם בבוקר — early in the morning (dtae-chao),Write in Thai: early in the morning — לפנות בוקר / מוקדם בבוקר (dtae-chao),แต่เช้า,dtae-chao,לפנות בוקר / מוקדם בבוקר,early in the morning,vocab_0340
-qv19_1014,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: dtae-chao — לפנות בוקר / מוקדם בבוקר / early in the morning,Write Thai from romanization: dtae-chao — early in the morning / לפנות בוקר / מוקדם בבוקר,แต่เช้า,dtae-chao,לפנות בוקר / מוקדם בבוקר,early in the morning,vocab_0340
-qv19_1015,3,mcq_read_meaning,מה המשמעות של ตอนเช้า (dton-chao)?,What does ตอนเช้า (dton-chao) mean?,ตอนเช้า,dton-chao,בבוקר,morning / in the morning,vocab_0341
-qv19_1016,3,write_he_to_thai,כתוב בתאית: בבוקר — morning / in the morning (dton-chao),Write in Thai: morning / in the morning — בבוקר (dton-chao),ตอนเช้า,dton-chao,בבוקר,morning / in the morning,vocab_0341
-qv19_1017,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dton-chao — בבוקר / morning / in the morning,Write Thai from romanization: dton-chao — morning / in the morning / בבוקר,ตอนเช้า,dton-chao,בבוקר,morning / in the morning,vocab_0341
-qv19_1018,4,mcq_read_meaning,מה המשמעות של ตอนสาย (dton-saai)?,What does ตอนสาย (dton-saai) mean?,ตอนสาย,dton-saai,מאוחר בבוקר,late morning,vocab_0342
-qv19_1019,4,write_he_to_thai,כתוב בתאית: מאוחר בבוקר — late morning (dton-saai),Write in Thai: late morning — מאוחר בבוקר (dton-saai),ตอนสาย,dton-saai,מאוחר בבוקר,late morning,vocab_0342
-qv19_1020,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: dton-saai — מאוחר בבוקר / late morning,Write Thai from romanization: dton-saai — late morning / מאוחר בבוקר,ตอนสาย,dton-saai,מאוחר בבוקר,late morning,vocab_0342
-qv19_1021,3,mcq_read_meaning,מה המשמעות של ตอนเที่ยง (dton-tiang)?,What does ตอนเที่ยง (dton-tiang) mean?,ตอนเที่ยง,dton-tiang,בצהריים,noon / midday,vocab_0343
-qv19_1022,3,write_he_to_thai,כתוב בתאית: בצהריים — noon / midday (dton-tiang),Write in Thai: noon / midday — בצהריים (dton-tiang),ตอนเที่ยง,dton-tiang,בצהריים,noon / midday,vocab_0343
-qv19_1023,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dton-tiang — בצהריים / noon / midday,Write Thai from romanization: dton-tiang — noon / midday / בצהריים,ตอนเที่ยง,dton-tiang,בצהריים,noon / midday,vocab_0343
-qv19_1024,3,mcq_read_meaning,מה המשמעות של ตอนบ่าย (dton-baai)?,What does ตอนบ่าย (dton-baai) mean?,ตอนบ่าย,dton-baai,אחר הצהריים,afternoon,vocab_0344
-qv19_1025,3,write_he_to_thai,כתוב בתאית: אחר הצהריים — afternoon (dton-baai),Write in Thai: afternoon — אחר הצהריים (dton-baai),ตอนบ่าย,dton-baai,אחר הצהריים,afternoon,vocab_0344
-qv19_1026,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dton-baai — אחר הצהריים / afternoon,Write Thai from romanization: dton-baai — afternoon / אחר הצהריים,ตอนบ่าย,dton-baai,אחר הצהריים,afternoon,vocab_0344
-qv19_1027,3,mcq_read_meaning,מה המשמעות של ตอนเย็น (dton-yen)?,What does ตอนเย็น (dton-yen) mean?,ตอนเย็น,dton-yen,בערב,evening,vocab_0345
-qv19_1028,3,write_he_to_thai,כתוב בתאית: בערב — evening (dton-yen),Write in Thai: evening — בערב (dton-yen),ตอนเย็น,dton-yen,בערב,evening,vocab_0345
-qv19_1029,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dton-yen — בערב / evening,Write Thai from romanization: dton-yen — evening / בערב,ตอนเย็น,dton-yen,בערב,evening,vocab_0345
-qv19_1030,4,mcq_read_meaning,מה המשמעות של ตอนกลางคืน (dton-glaang-kheun)?,What does ตอนกลางคืน (dton-glaang-kheun) mean?,ตอนกลางคืน,dton-glaang-kheun,בלילה,night / at night,vocab_0346
-qv19_1031,4,write_he_to_thai,כתוב בתאית: בלילה — night / at night (dton-glaang-kheun),Write in Thai: night / at night — בלילה (dton-glaang-kheun),ตอนกลางคืน,dton-glaang-kheun,בלילה,night / at night,vocab_0346
-qv19_1032,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: dton-glaang-kheun — בלילה / night / at night,Write Thai from romanization: dton-glaang-kheun — night / at night / בלילה,ตอนกลางคืน,dton-glaang-kheun,בלילה,night / at night,vocab_0346
-qv19_1033,4,mcq_read_meaning,מה המשמעות של ตอนดึก (dton-deuk)?,What does ตอนดึก (dton-deuk) mean?,ตอนดึก,dton-deuk,מאוחר בלילה,late at night,vocab_0347
-qv19_1034,4,write_he_to_thai,כתוב בתאית: מאוחר בלילה — late at night (dton-deuk),Write in Thai: late at night — מאוחר בלילה (dton-deuk),ตอนดึก,dton-deuk,מאוחר בלילה,late at night,vocab_0347
-qv19_1035,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: dton-deuk — מאוחר בלילה / late at night,Write Thai from romanization: dton-deuk — late at night / מאוחר בלילה,ตอนดึก,dton-deuk,מאוחר בלילה,late at night,vocab_0347
-qv19_1036,3,mcq_read_meaning,מה המשמעות של เห็นด้วย (hen-duai)?,What does เห็นด้วย (hen-duai) mean?,เห็นด้วย,hen-duai,להסכים,agree,vocab_0348
-qv19_1037,3,write_he_to_thai,כתוב בתאית: להסכים — agree (hen-duai),Write in Thai: agree — להסכים (hen-duai),เห็นด้วย,hen-duai,להסכים,agree,vocab_0348
-qv19_1038,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: hen-duai — להסכים / agree,Write Thai from romanization: hen-duai — agree / להסכים,เห็นด้วย,hen-duai,להסכים,agree,vocab_0348
-qv19_1039,5,mcq_read_meaning,מה המשמעות של เห็นไหม (hen mai?)?,What does เห็นไหม (hen mai?) mean?,เห็นไหม,hen mai?,רואה?,Do you see?,vocab_0349
-qv19_1040,5,write_he_to_thai,כתוב בתאית: רואה? — Do you see? (hen mai?),Write in Thai: Do you see? — רואה? (hen mai?),เห็นไหม,hen mai?,רואה?,Do you see?,vocab_0349
-qv19_1041,5,write_roman_to_thai,כתוב בתאית לפי התעתיק: hen mai? — רואה? / Do you see?,Write Thai from romanization: hen mai? — Do you see? / רואה?,เห็นไหม,hen mai?,רואה?,Do you see?,vocab_0349
-qv19_1042,5,mcq_read_meaning,מה המשמעות של เห็นด้วยไหม (hen-duai mai?)?,What does เห็นด้วยไหม (hen-duai mai?) mean?,เห็นด้วยไหม,hen-duai mai?,האם אתה מסכים?,Do you agree?,vocab_0350
-qv19_1043,5,write_he_to_thai,כתוב בתאית: האם אתה מסכים? — Do you agree? (hen-duai mai?),Write in Thai: Do you agree? — האם אתה מסכים? (hen-duai mai?),เห็นด้วยไหม,hen-duai mai?,האם אתה מסכים?,Do you agree?,vocab_0350
-qv19_1044,5,write_roman_to_thai,כתוב בתאית לפי התעתיק: hen-duai mai? — האם אתה מסכים? / Do you agree?,Write Thai from romanization: hen-duai mai? — Do you agree? / האם אתה מסכים?,เห็นด้วยไหม,hen-duai mai?,האם אתה מסכים?,Do you agree?,vocab_0350
-qv19_1045,1,mcq_read_meaning,מה המשמעות של ยืน (yuen)?,What does ยืน (yuen) mean?,ยืน,yuen,לעמוד,stand,vocab_0351
-qv19_1046,1,write_he_to_thai,כתוב בתאית: לעמוד — stand (yuen),Write in Thai: stand — לעמוד (yuen),ยืน,yuen,לעמוד,stand,vocab_0351
-qv19_1047,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: yuen — לעמוד / stand,Write Thai from romanization: yuen — stand / לעמוד,ยืน,yuen,לעמוד,stand,vocab_0351
-qv19_1048,1,mcq_read_meaning,מה המשמעות של นั่ง (nang)?,What does นั่ง (nang) mean?,นั่ง,nang,לשבת,sit,vocab_0352
-qv19_1049,1,write_he_to_thai,כתוב בתאית: לשבת — sit (nang),Write in Thai: sit — לשבת (nang),นั่ง,nang,לשבת,sit,vocab_0352
-qv19_1050,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: nang — לשבת / sit,Write Thai from romanization: nang — sit / לשבת,นั่ง,nang,לשבת,sit,vocab_0352
-qv19_1051,1,mcq_read_meaning,מה המשמעות של เดิน (dern)?,What does เดิน (dern) mean?,เดิน,dern,ללכת,walk,vocab_0353
-qv19_1052,1,write_he_to_thai,כתוב בתאית: ללכת — walk (dern),Write in Thai: walk — ללכת (dern),เดิน,dern,ללכת,walk,vocab_0353
-qv19_1053,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: dern — ללכת / walk,Write Thai from romanization: dern — walk / ללכת,เดิน,dern,ללכת,walk,vocab_0353
-qv19_1054,1,mcq_read_meaning,מה המשמעות של ข้าม (khaam)?,What does ข้าม (khaam) mean?,ข้าม,khaam,לדלג,cross / skip over,vocab_0354
-qv19_1055,1,write_he_to_thai,כתוב בתאית: לדלג — cross / skip over (khaam),Write in Thai: cross / skip over — לדלג (khaam),ข้าม,khaam,לדלג,cross / skip over,vocab_0354
-qv19_1056,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: khaam — לדלג / cross / skip over,Write Thai from romanization: khaam — cross / skip over / לדלג,ข้าม,khaam,לדלג,cross / skip over,vocab_0354
-qv19_1057,4,mcq_read_meaning,מה המשמעות של ไม่ไหว (mai wai)?,What does ไม่ไหว (mai wai) mean?,ไม่ไหว,mai wai,לא יכול / לא מסוגל / לא עומד בזה,cannot handle it / cannot manage,vocab_0355
-qv19_1058,4,write_he_to_thai,כתוב בתאית: לא יכול / לא מסוגל / לא עומד בזה — cannot handle it / cannot manage (mai wai),Write in Thai: cannot handle it / cannot manage — לא יכול / לא מסוגל / לא עומד בזה (mai wai),ไม่ไหว,mai wai,לא יכול / לא מסוגל / לא עומד בזה,cannot handle it / cannot manage,vocab_0355
-qv19_1059,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai wai — לא יכול / לא מסוגל / לא עומד בזה / cannot handle it / cannot manage,Write Thai from romanization: mai wai — cannot handle it / cannot manage / לא יכול / לא מסוגל / לא עומד בזה,ไม่ไหว,mai wai,לא יכול / לא מסוגל / לא עומד בזה,cannot handle it / cannot manage,vocab_0355
-qv19_1060,4,mcq_read_meaning,מה המשמעות של ไม่ต้องห่วง (mai dtong huang)?,What does ไม่ต้องห่วง (mai dtong huang) mean?,ไม่ต้องห่วง,mai dtong huang,אל תדאג / אין מה לדאוג,do not worry,vocab_0356
-qv19_1061,4,write_he_to_thai,כתוב בתאית: אל תדאג / אין מה לדאוג — do not worry (mai dtong huang),Write in Thai: do not worry — אל תדאג / אין מה לדאוג (mai dtong huang),ไม่ต้องห่วง,mai dtong huang,אל תדאג / אין מה לדאוג,do not worry,vocab_0356
-qv19_1062,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai dtong huang — אל תדאג / אין מה לדאוג / do not worry,Write Thai from romanization: mai dtong huang — do not worry / אל תדאג / אין מה לדאוג,ไม่ต้องห่วง,mai dtong huang,אל תדאג / אין מה לדאוג,do not worry,vocab_0356
-qv19_1063,4,mcq_read_meaning,מה המשמעות של ไม่สนใจ (mai son jai)?,What does ไม่สนใจ (mai son jai) mean?,ไม่สนใจ,mai son jai,לא מעוניין / לא אכפת,not interested / do not care,vocab_0357
-qv19_1064,4,write_he_to_thai,כתוב בתאית: לא מעוניין / לא אכפת — not interested / do not care (mai son jai),Write in Thai: not interested / do not care — לא מעוניין / לא אכפת (mai son jai),ไม่สนใจ,mai son jai,לא מעוניין / לא אכפת,not interested / do not care,vocab_0357
-qv19_1065,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai son jai — לא מעוניין / לא אכפת / not interested / do not care,Write Thai from romanization: mai son jai — not interested / do not care / לא מעוניין / לא אכפת,ไม่สนใจ,mai son jai,לא מעוניין / לא אכפת,not interested / do not care,vocab_0357
-qv19_1066,4,mcq_read_meaning,מה המשמעות של ไม่มีอะไร (mai mee a-rai)?,What does ไม่มีอะไร (mai mee a-rai) mean?,ไม่มีอะไร,mai mee a-rai,אין כלום,there is nothing / nothing,vocab_0358
-qv19_1067,4,write_he_to_thai,כתוב בתאית: אין כלום — there is nothing / nothing (mai mee a-rai),Write in Thai: there is nothing / nothing — אין כלום (mai mee a-rai),ไม่มีอะไร,mai mee a-rai,אין כלום,there is nothing / nothing,vocab_0358
-qv19_1068,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai mee a-rai — אין כלום / there is nothing / nothing,Write Thai from romanization: mai mee a-rai — there is nothing / nothing / אין כלום,ไม่มีอะไร,mai mee a-rai,אין כלום,there is nothing / nothing,vocab_0358
-qv19_1069,3,mcq_read_meaning,מה המשמעות של ไม่ต้อง (mai dtong)?,What does ไม่ต้อง (mai dtong) mean?,ไม่ต้อง,mai dtong,לא צריך / אין צורך,do not need,vocab_0359
-qv19_1070,3,write_he_to_thai,כתוב בתאית: לא צריך / אין צורך — do not need (mai dtong),Write in Thai: do not need — לא צריך / אין צורך (mai dtong),ไม่ต้อง,mai dtong,לא צריך / אין צורך,do not need,vocab_0359
-qv19_1071,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai dtong — לא צריך / אין צורך / do not need,Write Thai from romanization: mai dtong — do not need / לא צריך / אין צורך,ไม่ต้อง,mai dtong,לא צריך / אין צורך,do not need,vocab_0359
-qv19_1072,4,mcq_read_meaning,מה המשמעות של ไม่มีปัญหา (mai mee pan-haa)?,What does ไม่มีปัญหา (mai mee pan-haa) mean?,ไม่มีปัญหา,mai mee pan-haa,אין בעיה,no problem,vocab_0360
-qv19_1073,4,write_he_to_thai,כתוב בתאית: אין בעיה — no problem (mai mee pan-haa),Write in Thai: no problem — אין בעיה (mai mee pan-haa),ไม่มีปัญหา,mai mee pan-haa,אין בעיה,no problem,vocab_0360
-qv19_1074,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai mee pan-haa — אין בעיה / no problem,Write Thai from romanization: mai mee pan-haa — no problem / אין בעיה,ไม่มีปัญหา,mai mee pan-haa,אין בעיה,no problem,vocab_0360
-qv19_1075,4,mcq_read_meaning,מה המשמעות של ไม่มีทาง (mâi mee taang)?,What does ไม่มีทาง (mâi mee taang) mean?,ไม่มีทาง,mâi mee taang,אין מצב / אין סיכוי,no way,vocab_0361
-qv19_1076,4,write_he_to_thai,כתוב בתאית: אין מצב / אין סיכוי — no way (mâi mee taang),Write in Thai: no way — אין מצב / אין סיכוי (mâi mee taang),ไม่มีทาง,mâi mee taang,אין מצב / אין סיכוי,no way,vocab_0361
-qv19_1077,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mâi mee taang — אין מצב / אין סיכוי / no way,Write Thai from romanization: mâi mee taang — no way / אין מצב / אין סיכוי,ไม่มีทาง,mâi mee taang,אין מצב / אין סיכוי,no way,vocab_0361
-qv19_1078,5,mcq_read_meaning,מה המשמעות של ว่าไง (wâa ngai)?,What does ว่าไง (wâa ngai) mean?,ว่าไง,wâa ngai,מה קורה? / מה נשמע?,what’s up?,vocab_0362
-qv19_1079,5,write_he_to_thai,כתוב בתאית: מה קורה? / מה נשמע? — what’s up? (wâa ngai),Write in Thai: what’s up? — מה קורה? / מה נשמע? (wâa ngai),ว่าไง,wâa ngai,מה קורה? / מה נשמע?,what’s up?,vocab_0362
-qv19_1080,5,write_roman_to_thai,כתוב בתאית לפי התעתיק: wâa ngai — מה קורה? / מה נשמע? / what’s up?,Write Thai from romanization: wâa ngai — what’s up? / מה קורה? / מה נשמע?,ว่าไง,wâa ngai,מה קורה? / מה נשמע?,what’s up?,vocab_0362
-qv19_1081,4,mcq_read_meaning,מה המשמעות של ไม่เก็ทอะ (mâi get à)?,What does ไม่เก็ทอะ (mâi get à) mean?,ไม่เก็ทอะ,mâi get à,אני לא מבין / לא קולט,I do not get it,vocab_0363
-qv19_1082,4,write_he_to_thai,כתוב בתאית: אני לא מבין / לא קולט — I do not get it (mâi get à),Write in Thai: I do not get it — אני לא מבין / לא קולט (mâi get à),ไม่เก็ทอะ,mâi get à,אני לא מבין / לא קולט,I do not get it,vocab_0363
-qv19_1083,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mâi get à — אני לא מבין / לא קולט / I do not get it,Write Thai from romanization: mâi get à — I do not get it / אני לא מבין / לא קולט,ไม่เก็ทอะ,mâi get à,אני לא מבין / לא קולט,I do not get it,vocab_0363
-qv19_1084,5,mcq_read_meaning,מה המשמעות של แล้วไง (láew ngai)?,What does แล้วไง (láew ngai) mean?,แล้วไง,láew ngai,אז מה?,so what?,vocab_0364
-qv19_1085,5,write_he_to_thai,כתוב בתאית: אז מה? — so what? (láew ngai),Write in Thai: so what? — אז מה? (láew ngai),แล้วไง,láew ngai,אז מה?,so what?,vocab_0364
-qv19_1086,5,write_roman_to_thai,כתוב בתאית לפי התעתיק: láew ngai — אז מה? / so what?,Write Thai from romanization: láew ngai — so what? / אז מה?,แล้วไง,láew ngai,אז מה?,so what?,vocab_0364
-qv19_1087,3,mcq_read_meaning,מה המשמעות של คิดว่า (khít wâa)?,What does คิดว่า (khít wâa) mean?,คิดว่า,khít wâa,לחשוב ש...,think that,vocab_0365
-qv19_1088,3,write_he_to_thai,כתוב בתאית: לחשוב ש... — think that (khít wâa),Write in Thai: think that — לחשוב ש... (khít wâa),คิดว่า,khít wâa,לחשוב ש...,think that,vocab_0365
-qv19_1089,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: khít wâa — לחשוב ש... / think that,Write Thai from romanization: khít wâa — think that / לחשוב ש...,คิดว่า,khít wâa,לחשוב ש...,think that,vocab_0365
-qv19_1090,3,mcq_read_meaning,מה המשמעות של พูดว่า (phuut waa)?,What does พูดว่า (phuut waa) mean?,พูดว่า,phuut waa,לומר ש...,say that...,vocab_0366
-qv19_1091,3,write_he_to_thai,כתוב בתאית: לומר ש... — say that... (phuut waa),Write in Thai: say that... — לומר ש... (phuut waa),พูดว่า,phuut waa,לומר ש...,say that...,vocab_0366
-qv19_1092,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: phuut waa — לומר ש... / say that...,Write Thai from romanization: phuut waa — say that... / לומר ש...,พูดว่า,phuut waa,לומר ש...,say that...,vocab_0366
-qv19_1093,3,mcq_read_meaning,מה המשמעות של บอกว่า (bòk wâa)?,What does บอกว่า (bòk wâa) mean?,บอกว่า,bòk wâa,לספר / להגיד ש...,tell / say that,vocab_0367
-qv19_1094,3,write_he_to_thai,כתוב בתאית: לספר / להגיד ש... — tell / say that (bòk wâa),Write in Thai: tell / say that — לספר / להגיד ש... (bòk wâa),บอกว่า,bòk wâa,לספר / להגיד ש...,tell / say that,vocab_0367
-qv19_1095,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: bòk wâa — לספר / להגיד ש... / tell / say that,Write Thai from romanization: bòk wâa — tell / say that / לספר / להגיד ש...,บอกว่า,bòk wâa,לספר / להגיד ש...,tell / say that,vocab_0367
-qv19_1096,4,mcq_read_meaning,מה המשמעות של รู้สึกว่า (rúu sèuk wâa)?,What does รู้สึกว่า (rúu sèuk wâa) mean?,รู้สึกว่า,rúu sèuk wâa,להרגיש ש...,feel that,vocab_0368
-qv19_1097,4,write_he_to_thai,כתוב בתאית: להרגיש ש... — feel that (rúu sèuk wâa),Write in Thai: feel that — להרגיש ש... (rúu sèuk wâa),รู้สึกว่า,rúu sèuk wâa,להרגיש ש...,feel that,vocab_0368
-qv19_1098,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: rúu sèuk wâa — להרגיש ש... / feel that,Write Thai from romanization: rúu sèuk wâa — feel that / להרגיש ש...,รู้สึกว่า,rúu sèuk wâa,להרגיש ש...,feel that,vocab_0368
-qv19_1099,3,mcq_read_meaning,מה המשמעות של เพราะว่า (phróh wâa)?,What does เพราะว่า (phróh wâa) mean?,เพราะว่า,phróh wâa,בגלל ש...,because,vocab_0369
-qv19_1100,3,write_he_to_thai,כתוב בתאית: בגלל ש... — because (phróh wâa),Write in Thai: because — בגלל ש... (phróh wâa),เพราะว่า,phróh wâa,בגלל ש...,because,vocab_0369
-qv19_1101,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: phróh wâa — בגלל ש... / because,Write Thai from romanization: phróh wâa — because / בגלל ש...,เพราะว่า,phróh wâa,בגלל ש...,because,vocab_0369
-qv19_1102,4,mcq_read_meaning,מה המשמעות של ได้ยินว่า (dai-yin waa)?,What does ได้ยินว่า (dai-yin waa) mean?,ได้ยินว่า,dai-yin waa,לשמוע ש...,hear that...,vocab_0370
-qv19_1103,4,write_he_to_thai,כתוב בתאית: לשמוע ש... — hear that... (dai-yin waa),Write in Thai: hear that... — לשמוע ש... (dai-yin waa),ได้ยินว่า,dai-yin waa,לשמוע ש...,hear that...,vocab_0370
-qv19_1104,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: dai-yin waa — לשמוע ש... / hear that...,Write Thai from romanization: dai-yin waa — hear that... / לשמוע ש...,ได้ยินว่า,dai-yin waa,לשמוע ש...,hear that...,vocab_0370
-qv19_1105,3,mcq_read_meaning,מה המשמעות של ต้นไม้ (ton mai)?,What does ต้นไม้ (ton mai) mean?,ต้นไม้,ton mai,צמח / עץ,plant / tree,vocab_0371
-qv19_1106,3,write_he_to_thai,כתוב בתאית: צמח / עץ — plant / tree (ton mai),Write in Thai: plant / tree — צמח / עץ (ton mai),ต้นไม้,ton mai,צמח / עץ,plant / tree,vocab_0371
-qv19_1107,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: ton mai — צמח / עץ / plant / tree,Write Thai from romanization: ton mai — plant / tree / צמח / עץ,ต้นไม้,ton mai,צמח / עץ,plant / tree,vocab_0371
-qv19_1108,1,mcq_read_meaning,מה המשמעות של บาง (baang)?,What does บาง (baang) mean?,บาง,baang,חלק מ..,some / part of,vocab_0372
-qv19_1109,1,write_he_to_thai,כתוב בתאית: חלק מ.. — some / part of (baang),Write in Thai: some / part of — חלק מ.. (baang),บาง,baang,חלק מ..,some / part of,vocab_0372
-qv19_1110,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: baang — חלק מ.. / some / part of,Write Thai from romanization: baang — some / part of / חלק מ..,บาง,baang,חלק מ..,some / part of,vocab_0372
-qv19_1111,3,mcq_read_meaning,מה המשמעות של ด้วยกัน (duay gan)?,What does ด้วยกัน (duay gan) mean?,ด้วยกัน,duay gan,יחדיו,together,vocab_0373
-qv19_1112,3,write_he_to_thai,כתוב בתאית: יחדיו — together (duay gan),Write in Thai: together — יחדיו (duay gan),ด้วยกัน,duay gan,יחדיו,together,vocab_0373
-qv19_1113,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: duay gan — יחדיו / together,Write Thai from romanization: duay gan — together / יחדיו,ด้วยกัน,duay gan,יחדיו,together,vocab_0373
-qv19_1114,3,mcq_read_meaning,מה המשמעות של บางที (baang tii)?,What does บางที (baang tii) mean?,บางที,baang tii,יכול להיות,maybe / sometimes,vocab_0374
-qv19_1115,3,write_he_to_thai,כתוב בתאית: יכול להיות — maybe / sometimes (baang tii),Write in Thai: maybe / sometimes — יכול להיות (baang tii),บางที,baang tii,יכול להיות,maybe / sometimes,vocab_0374
-qv19_1116,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: baang tii — יכול להיות / maybe / sometimes,Write Thai from romanization: baang tii — maybe / sometimes / יכול להיות,บางที,baang tii,יכול להיות,maybe / sometimes,vocab_0374
-qv19_1117,3,mcq_read_meaning,מה המשמעות של พวกเขา (phuak khao)?,What does พวกเขา (phuak khao) mean?,พวกเขา,phuak khao,הם,they / them,vocab_0375
-qv19_1118,3,write_he_to_thai,כתוב בתאית: הם — they / them (phuak khao),Write in Thai: they / them — הם (phuak khao),พวกเขา,phuak khao,הם,they / them,vocab_0375
-qv19_1119,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: phuak khao — הם / they / them,Write Thai from romanization: phuak khao — they / them / הם,พวกเขา,phuak khao,הם,they / them,vocab_0375
-qv19_1120,3,mcq_read_meaning,מה המשמעות של บางวัน (baang wan)?,What does บางวัน (baang wan) mean?,บางวัน,baang wan,חלק מהימים,some days,vocab_0376
-qv19_1121,3,write_he_to_thai,כתוב בתאית: חלק מהימים — some days (baang wan),Write in Thai: some days — חלק מהימים (baang wan),บางวัน,baang wan,חלק מהימים,some days,vocab_0376
-qv19_1122,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: baang wan — חלק מהימים / some days,Write Thai from romanization: baang wan — some days / חלק מהימים,บางวัน,baang wan,חלק מהימים,some days,vocab_0376
-qv19_1123,3,mcq_read_meaning,מה המשמעות של ทุกที่ (tug tii)?,What does ทุกที่ (tug tii) mean?,ทุกที่,tug tii,בכל מקום,everywhere,vocab_0377
-qv19_1124,3,write_he_to_thai,כתוב בתאית: בכל מקום — everywhere (tug tii),Write in Thai: everywhere — בכל מקום (tug tii),ทุกที่,tug tii,בכל מקום,everywhere,vocab_0377
-qv19_1125,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: tug tii — בכל מקום / everywhere,Write Thai from romanization: tug tii — everywhere / בכל מקום,ทุกที่,tug tii,בכל מקום,everywhere,vocab_0377
-qv19_1126,1,mcq_read_meaning,מה המשמעות של ออก (awk)?,What does ออก (awk) mean?,ออก,awk,"יציאה,החוצה",exit / out / go out,vocab_0378
-qv19_1127,1,write_he_to_thai,"כתוב בתאית: יציאה,החוצה — exit / out / go out (awk)","Write in Thai: exit / out / go out — יציאה,החוצה (awk)",ออก,awk,"יציאה,החוצה",exit / out / go out,vocab_0378
-qv19_1128,1,write_roman_to_thai,"כתוב בתאית לפי התעתיק: awk — יציאה,החוצה / exit / out / go out","Write Thai from romanization: awk — exit / out / go out / יציאה,החוצה",ออก,awk,"יציאה,החוצה",exit / out / go out,vocab_0378
-qv19_1129,1,mcq_read_meaning,מה המשמעות של อุ่น (un)?,What does อุ่น (un) mean?,อุ่น,un,"חמים,חם",warm,vocab_0379
-qv19_1130,1,write_he_to_thai,"כתוב בתאית: חמים,חם — warm (un)","Write in Thai: warm — חמים,חם (un)",อุ่น,un,"חמים,חם",warm,vocab_0379
-qv19_1131,1,write_roman_to_thai,"כתוב בתאית לפי התעתיק: un — חמים,חם / warm","Write Thai from romanization: un — warm / חמים,חם",อุ่น,un,"חמים,חם",warm,vocab_0379
-qv19_1132,5,mcq_read_meaning,מה המשמעות של ตอนผมเด็ก ๆ (dton phom dek dek)?,What does ตอนผมเด็ก ๆ (dton phom dek dek) mean?,ตอนผมเด็ก ๆ,dton phom dek dek,כשהייתי ילד,when I was a child,vocab_0380
-qv19_1133,5,write_he_to_thai,כתוב בתאית: כשהייתי ילד — when I was a child (dton phom dek dek),Write in Thai: when I was a child — כשהייתי ילד (dton phom dek dek),ตอนผมเด็ก ๆ,dton phom dek dek,כשהייתי ילד,when I was a child,vocab_0380
-qv19_1134,5,write_roman_to_thai,כתוב בתאית לפי התעתיק: dton phom dek dek — כשהייתי ילד / when I was a child,Write Thai from romanization: dton phom dek dek — when I was a child / כשהייתי ילד,ตอนผมเด็ก ๆ,dton phom dek dek,כשהייתי ילד,when I was a child,vocab_0380
-qv19_1135,1,mcq_read_meaning,מה המשמעות של เข้า (khao)?,What does เข้า (khao) mean?,เข้า,khao,להיכנס / כניסה,enter / go in,vocab_0381
-qv19_1136,1,write_he_to_thai,כתוב בתאית: להיכנס / כניסה — enter / go in (khao),Write in Thai: enter / go in — להיכנס / כניסה (khao),เข้า,khao,להיכנס / כניסה,enter / go in,vocab_0381
-qv19_1137,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: khao — להיכנס / כניסה / enter / go in,Write Thai from romanization: khao — enter / go in / להיכנס / כניסה,เข้า,khao,להיכנס / כניסה,enter / go in,vocab_0381
-qv19_1138,1,mcq_read_meaning,מה המשמעות של หน้า (naa)?,What does หน้า (naa) mean?,หน้า,naa,פנים / קדימה / עונה / דף,face / front / season / page,vocab_0382
-qv19_1139,1,write_he_to_thai,כתוב בתאית: פנים / קדימה / עונה / דף — face / front / season / page (naa),Write in Thai: face / front / season / page — פנים / קדימה / עונה / דף (naa),หน้า,naa,פנים / קדימה / עונה / דף,face / front / season / page,vocab_0382
-qv19_1140,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: naa — פנים / קדימה / עונה / דף / face / front / season / page,Write Thai from romanization: naa — face / front / season / page / פנים / קדימה / עונה / דף,หน้า,naa,פנים / קדימה / עונה / דף,face / front / season / page,vocab_0382
-qv19_1141,3,mcq_read_meaning,מה המשמעות של โรงพัก (rong pag)?,What does โรงพัก (rong pag) mean?,โรงพัก,rong pag,תחנת משטרה,police station,vocab_0383
-qv19_1142,3,write_he_to_thai,כתוב בתאית: תחנת משטרה — police station (rong pag),Write in Thai: police station — תחנת משטרה (rong pag),โรงพัก,rong pag,תחנת משטרה,police station,vocab_0383
-qv19_1143,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: rong pag — תחנת משטרה / police station,Write Thai from romanization: rong pag — police station / תחנת משטרה,โรงพัก,rong pag,תחנת משטרה,police station,vocab_0383
-qv19_1144,3,mcq_read_meaning,מה המשמעות של ไม่ได้… (mai dai+v)?,What does ไม่ได้… (mai dai+v) mean?,ไม่ได้…,mai dai+v,לא עשיתי,did not / cannot + verb,vocab_0384
-qv19_1145,3,write_he_to_thai,כתוב בתאית: לא עשיתי — did not / cannot + verb (mai dai+v),Write in Thai: did not / cannot + verb — לא עשיתי (mai dai+v),ไม่ได้…,mai dai+v,לא עשיתי,did not / cannot + verb,vocab_0384
-qv19_1146,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai dai+v — לא עשיתי / did not / cannot + verb,Write Thai from romanization: mai dai+v — did not / cannot + verb / לא עשיתי,ไม่ได้…,mai dai+v,לא עשיתי,did not / cannot + verb,vocab_0384
-qv19_1147,5,mcq_read_meaning,מה המשמעות של ดีใจที่ได้เจอ (dii-jai tii dai jer)?,What does ดีใจที่ได้เจอ (dii-jai tii dai jer) mean?,ดีใจที่ได้เจอ,dii-jai tii dai jer,נחמד לראותך,nice to see you,vocab_0385
-qv19_1148,5,write_he_to_thai,כתוב בתאית: נחמד לראותך — nice to see you (dii-jai tii dai jer),Write in Thai: nice to see you — נחמד לראותך (dii-jai tii dai jer),ดีใจที่ได้เจอ,dii-jai tii dai jer,נחמד לראותך,nice to see you,vocab_0385
-qv19_1149,5,write_roman_to_thai,כתוב בתאית לפי התעתיק: dii-jai tii dai jer — נחמד לראותך / nice to see you,Write Thai from romanization: dii-jai tii dai jer — nice to see you / נחמד לראותך,ดีใจที่ได้เจอ,dii-jai tii dai jer,נחמד לראותך,nice to see you,vocab_0385
-qv19_1150,1,mcq_read_meaning,מה המשמעות של ผึ้ง (phueng)?,What does ผึ้ง (phueng) mean?,ผึ้ง,phueng,דבורה,bee,vocab_0386
-qv19_1151,1,write_he_to_thai,כתוב בתאית: דבורה — bee (phueng),Write in Thai: bee — דבורה (phueng),ผึ้ง,phueng,דבורה,bee,vocab_0386
-qv19_1152,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: phueng — דבורה / bee,Write Thai from romanization: phueng — bee / דבורה,ผึ้ง,phueng,דבורה,bee,vocab_0386
-qv19_1153,3,mcq_read_meaning,מה המשמעות של ต่อย (dtoy)?,What does ต่อย (dtoy) mean?,ต่อย,dtoy,אגרוף / לעקוץ,to punch / to sting,vocab_0387
-qv19_1154,3,write_he_to_thai,כתוב בתאית: אגרוף / לעקוץ — to punch / to sting (dtoy),Write in Thai: to punch / to sting — אגרוף / לעקוץ (dtoy),ต่อย,dtoy,אגרוף / לעקוץ,to punch / to sting,vocab_0387
-qv19_1155,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dtoy — אגרוף / לעקוץ / to punch / to sting,Write Thai from romanization: dtoy — to punch / to sting / אגרוף / לעקוץ,ต่อย,dtoy,אגרוף / לעקוץ,to punch / to sting,vocab_0387
+qv19_0637,3,mcq_read_meaning,מה המשמעות של น้ำแข็ง (nam-kaeng)?,What does น้ำแข็ง (nam-kaeng) mean?,น้ำแข็ง,nam-kaeng,קרח,ice,vocab_0215
+qv19_0638,3,write_he_to_thai,כתוב בתאית: קרח — ice (nam-kaeng),Write in Thai: ice — קרח (nam-kaeng),น้ำแข็ง,nam-kaeng,קרח,ice,vocab_0215
+qv19_0639,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: nam-kaeng — קרח / ice,Write Thai from romanization: nam-kaeng — ice / קרח,น้ำแข็ง,nam-kaeng,קרח,ice,vocab_0215
+qv19_0640,3,mcq_read_meaning,מה המשמעות של น้ำส้ม (nam-som)?,What does น้ำส้ม (nam-som) mean?,น้ำส้ม,nam-som,מיץ תפוזים,orange juice,vocab_0216
+qv19_0641,3,write_he_to_thai,כתוב בתאית: מיץ תפוזים — orange juice (nam-som),Write in Thai: orange juice — מיץ תפוזים (nam-som),น้ำส้ม,nam-som,מיץ תפוזים,orange juice,vocab_0216
+qv19_0642,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: nam-som — מיץ תפוזים / orange juice,Write Thai from romanization: nam-som — orange juice / מיץ תפוזים,น้ำส้ม,nam-som,מיץ תפוזים,orange juice,vocab_0216
+qv19_0643,3,mcq_read_meaning,מה המשמעות של กาแฟ (ga-fe)?,What does กาแฟ (ga-fe) mean?,กาแฟ,ga-fe,קפה,coffee,vocab_0217
+qv19_0644,3,write_he_to_thai,כתוב בתאית: קפה — coffee (ga-fe),Write in Thai: coffee — קפה (ga-fe),กาแฟ,ga-fe,קפה,coffee,vocab_0217
+qv19_0645,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: ga-fe — קפה / coffee,Write Thai from romanization: ga-fe — coffee / קפה,กาแฟ,ga-fe,קפה,coffee,vocab_0217
+qv19_0646,1,mcq_read_meaning,מה המשמעות של นม (nom)?,What does นม (nom) mean?,นม,nom,חלב,milk,vocab_0218
+qv19_0647,1,write_he_to_thai,כתוב בתאית: חלב — milk (nom),Write in Thai: milk — חלב (nom),นม,nom,חלב,milk,vocab_0218
+qv19_0648,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: nom — חלב / milk,Write Thai from romanization: nom — milk / חלב,นม,nom,חלב,milk,vocab_0218
+qv19_0649,1,mcq_read_meaning,מה המשמעות של เบียร์ (beer)?,What does เบียร์ (beer) mean?,เบียร์,beer,בירה,beer,vocab_0219
+qv19_0650,1,write_he_to_thai,כתוב בתאית: בירה — beer (beer),Write in Thai: beer — בירה (beer),เบียร์,beer,בירה,beer,vocab_0219
+qv19_0651,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: beer — בירה / beer,Write Thai from romanization: beer — beer / בירה,เบียร์,beer,בירה,beer,vocab_0219
+qv19_0652,1,mcq_read_meaning,מה המשמעות של เหล้า (lao)?,What does เหล้า (lao) mean?,เหล้า,lao,אלכוהול / וויסקי,alcohol / whiskey,vocab_0220
+qv19_0653,1,write_he_to_thai,כתוב בתאית: אלכוהול / וויסקי — alcohol / whiskey (lao),Write in Thai: alcohol / whiskey — אלכוהול / וויסקי (lao),เหล้า,lao,אלכוהול / וויסקי,alcohol / whiskey,vocab_0220
+qv19_0654,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: lao — אלכוהול / וויסקי / alcohol / whiskey,Write Thai from romanization: lao — alcohol / whiskey / אלכוהול / וויסקי,เหล้า,lao,אלכוהול / וויסקי,alcohol / whiskey,vocab_0220
+qv19_0655,1,mcq_read_meaning,מה המשמעות של กับ (gap)?,What does กับ (gap) mean?,กับ,gap,עם,with,vocab_0221
+qv19_0656,1,write_he_to_thai,כתוב בתאית: עם — with (gap),Write in Thai: with — עם (gap),กับ,gap,עם,with,vocab_0221
+qv19_0657,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: gap — עם / with,Write Thai from romanization: gap — with / עם,กับ,gap,עם,with,vocab_0221
+qv19_0658,1,mcq_read_meaning,מה המשמעות של เอา (ao)?,What does เอา (ao) mean?,เอา,ao,רוצה / לקחת,want / take,vocab_0222
+qv19_0659,1,write_he_to_thai,כתוב בתאית: רוצה / לקחת — want / take (ao),Write in Thai: want / take — רוצה / לקחת (ao),เอา,ao,רוצה / לקחת,want / take,vocab_0222
+qv19_0660,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: ao — רוצה / לקחת / want / take,Write Thai from romanization: ao — want / take / רוצה / לקחת,เอา,ao,רוצה / לקחת,want / take,vocab_0222
+qv19_0661,3,mcq_read_meaning,מה המשמעות של ไม่เอา (mai ao)?,What does ไม่เอา (mai ao) mean?,ไม่เอา,mai ao,לא רוצה,do not want,vocab_0223
+qv19_0662,3,write_he_to_thai,כתוב בתאית: לא רוצה — do not want (mai ao),Write in Thai: do not want — לא רוצה (mai ao),ไม่เอา,mai ao,לא רוצה,do not want,vocab_0223
+qv19_0663,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai ao — לא רוצה / do not want,Write Thai from romanization: mai ao — do not want / לא רוצה,ไม่เอา,mai ao,לא רוצה,do not want,vocab_0223
+qv19_0664,4,mcq_read_meaning,מה המשמעות של เอาอันนี้ (ao-an-nii)?,What does เอาอันนี้ (ao-an-nii) mean?,เอาอันนี้,ao-an-nii,רוצה את זה,want this one,vocab_0224
+qv19_0665,4,write_he_to_thai,כתוב בתאית: רוצה את זה — want this one (ao-an-nii),Write in Thai: want this one — רוצה את זה (ao-an-nii),เอาอันนี้,ao-an-nii,רוצה את זה,want this one,vocab_0224
+qv19_0666,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: ao-an-nii — רוצה את זה / want this one,Write Thai from romanization: ao-an-nii — want this one / רוצה את זה,เอาอันนี้,ao-an-nii,רוצה את זה,want this one,vocab_0224
+qv19_0667,1,mcq_read_meaning,מה המשמעות של เรือ (reua)?,What does เรือ (reua) mean?,เรือ,reua,סירה,boat,vocab_0225
+qv19_0668,1,write_he_to_thai,כתוב בתאית: סירה — boat (reua),Write in Thai: boat — סירה (reua),เรือ,reua,סירה,boat,vocab_0225
+qv19_0669,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: reua — סירה / boat,Write Thai from romanization: reua — boat / סירה,เรือ,reua,סירה,boat,vocab_0225
+qv19_0670,3,mcq_read_meaning,מה המשמעות של เรือบิน (reua-bin)?,What does เรือบิน (reua-bin) mean?,เรือบิน,reua-bin,מטוס,airplane,vocab_0226
+qv19_0671,3,write_he_to_thai,כתוב בתאית: מטוס — airplane (reua-bin),Write in Thai: airplane — מטוס (reua-bin),เรือบิน,reua-bin,מטוס,airplane,vocab_0226
+qv19_0672,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: reua-bin — מטוס / airplane,Write Thai from romanization: reua-bin — airplane / מטוס,เรือบิน,reua-bin,מטוס,airplane,vocab_0226
+qv19_0673,1,mcq_read_meaning,מה המשמעות של รถ (rot)?,What does รถ (rot) mean?,รถ,rot,מכונית,car / vehicle,vocab_0227
+qv19_0674,1,write_he_to_thai,כתוב בתאית: מכונית — car / vehicle (rot),Write in Thai: car / vehicle — מכונית (rot),รถ,rot,מכונית,car / vehicle,vocab_0227
+qv19_0675,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: rot — מכונית / car / vehicle,Write Thai from romanization: rot — car / vehicle / מכונית,รถ,rot,מכונית,car / vehicle,vocab_0227
+qv19_0676,3,mcq_read_meaning,מה המשמעות של รถเมล์ (rot-mae)?,What does รถเมล์ (rot-mae) mean?,รถเมล์,rot-mae,אוטובוס,bus,vocab_0228
+qv19_0677,3,write_he_to_thai,כתוב בתאית: אוטובוס — bus (rot-mae),Write in Thai: bus — אוטובוס (rot-mae),รถเมล์,rot-mae,אוטובוס,bus,vocab_0228
+qv19_0678,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: rot-mae — אוטובוס / bus,Write Thai from romanization: rot-mae — bus / אוטובוס,รถเมล์,rot-mae,אוטובוס,bus,vocab_0228
+qv19_0679,3,mcq_read_meaning,מה המשמעות של รถไฟ (rot-fai)?,What does รถไฟ (rot-fai) mean?,รถไฟ,rot-fai,רכבת,train,vocab_0229
+qv19_0680,3,write_he_to_thai,כתוב בתאית: רכבת — train (rot-fai),Write in Thai: train — רכבת (rot-fai),รถไฟ,rot-fai,רכבת,train,vocab_0229
+qv19_0681,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: rot-fai — רכבת / train,Write Thai from romanization: rot-fai — train / רכבת,รถไฟ,rot-fai,רכבת,train,vocab_0229
+qv19_0682,4,mcq_read_meaning,מה המשמעות של มอเตอร์ไซค์ (mo-dtu-sai)?,What does มอเตอร์ไซค์ (mo-dtu-sai) mean?,มอเตอร์ไซค์,mo-dtu-sai,אופנוע,motorbike,vocab_0230
+qv19_0683,4,write_he_to_thai,כתוב בתאית: אופנוע — motorbike (mo-dtu-sai),Write in Thai: motorbike — אופנוע (mo-dtu-sai),มอเตอร์ไซค์,mo-dtu-sai,אופנוע,motorbike,vocab_0230
+qv19_0684,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mo-dtu-sai — אופנוע / motorbike,Write Thai from romanization: mo-dtu-sai — motorbike / אופנוע,มอเตอร์ไซค์,mo-dtu-sai,אופנוע,motorbike,vocab_0230
+qv19_0685,4,mcq_read_meaning,מה המשמעות של จักรยาน (jak-kra-yaan)?,What does จักรยาน (jak-kra-yaan) mean?,จักรยาน,jak-kra-yaan,אופניים,bicycle,vocab_0231
+qv19_0686,4,write_he_to_thai,כתוב בתאית: אופניים — bicycle (jak-kra-yaan),Write in Thai: bicycle — אופניים (jak-kra-yaan),จักรยาน,jak-kra-yaan,אופניים,bicycle,vocab_0231
+qv19_0687,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: jak-kra-yaan — אופניים / bicycle,Write Thai from romanization: jak-kra-yaan — bicycle / אופניים,จักรยาน,jak-kra-yaan,אופניים,bicycle,vocab_0231
+qv19_0688,1,mcq_read_meaning,מה המשמעות של เดิน (doen)?,What does เดิน (doen) mean?,เดิน,doen,ללכת ברגל,walk,vocab_0232
+qv19_0689,1,write_he_to_thai,כתוב בתאית: ללכת ברגל — walk (doen),Write in Thai: walk — ללכת ברגל (doen),เดิน,doen,ללכת ברגל,walk,vocab_0232
+qv19_0690,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: doen — ללכת ברגל / walk,Write Thai from romanization: doen — walk / ללכת ברגל,เดิน,doen,ללכת ברגל,walk,vocab_0232
+qv19_0691,1,mcq_read_meaning,מה המשמעות של วิ่ง (wing)?,What does วิ่ง (wing) mean?,วิ่ง,wing,לרוץ,run,vocab_0233
+qv19_0692,1,write_he_to_thai,כתוב בתאית: לרוץ — run (wing),Write in Thai: run — לרוץ (wing),วิ่ง,wing,לרוץ,run,vocab_0233
+qv19_0693,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: wing — לרוץ / run,Write Thai from romanization: wing — run / לרוץ,วิ่ง,wing,לרוץ,run,vocab_0233
+qv19_0694,1,mcq_read_meaning,מה המשמעות של สวย (suay)?,What does สวย (suay) mean?,สวย,suay,יפה,beautiful,vocab_0234
+qv19_0695,1,write_he_to_thai,כתוב בתאית: יפה — beautiful (suay),Write in Thai: beautiful — יפה (suay),สวย,suay,יפה,beautiful,vocab_0234
+qv19_0696,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: suay — יפה / beautiful,Write Thai from romanization: suay — beautiful / יפה,สวย,suay,יפה,beautiful,vocab_0234
+qv19_0697,3,mcq_read_meaning,מה המשמעות של น่ารัก (naa-rak)?,What does น่ารัก (naa-rak) mean?,น่ารัก,naa-rak,חמוד,cute,vocab_0235
+qv19_0698,3,write_he_to_thai,כתוב בתאית: חמוד — cute (naa-rak),Write in Thai: cute — חמוד (naa-rak),น่ารัก,naa-rak,חמוד,cute,vocab_0235
+qv19_0699,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: naa-rak — חמוד / cute,Write Thai from romanization: naa-rak — cute / חמוד,น่ารัก,naa-rak,חמוד,cute,vocab_0235
+qv19_0700,1,mcq_read_meaning,מה המשמעות של หล่อ (lor)?,What does หล่อ (lor) mean?,หล่อ,lor,חתיך,handsome,vocab_0236
+qv19_0701,1,write_he_to_thai,כתוב בתאית: חתיך — handsome (lor),Write in Thai: handsome — חתיך (lor),หล่อ,lor,חתיך,handsome,vocab_0236
+qv19_0702,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: lor — חתיך / handsome,Write Thai from romanization: lor — handsome / חתיך,หล่อ,lor,חתיך,handsome,vocab_0236
+qv19_0703,1,mcq_read_meaning,מה המשמעות של เตี้ย (dtia)?,What does เตี้ย (dtia) mean?,เตี้ย,dtia,נמוך,short,vocab_0237
+qv19_0704,1,write_he_to_thai,כתוב בתאית: נמוך — short (dtia),Write in Thai: short — נמוך (dtia),เตี้ย,dtia,נמוך,short,vocab_0237
+qv19_0705,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: dtia — נמוך / short,Write Thai from romanization: dtia — short / נמוך,เตี้ย,dtia,נמוך,short,vocab_0237
+qv19_0706,1,mcq_read_meaning,מה המשמעות של สูง (soong)?,What does สูง (soong) mean?,สูง,soong,גבוה,tall,vocab_0238
+qv19_0707,1,write_he_to_thai,כתוב בתאית: גבוה — tall (soong),Write in Thai: tall — גבוה (soong),สูง,soong,גבוה,tall,vocab_0238
+qv19_0708,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: soong — גבוה / tall,Write Thai from romanization: soong — tall / גבוה,สูง,soong,גבוה,tall,vocab_0238
+qv19_0709,3,mcq_read_meaning,מה המשמעות של อ้วน (u-an)?,What does อ้วน (u-an) mean?,อ้วน,u-an,שמן (גוף),fat / overweight,vocab_0239
+qv19_0710,3,write_he_to_thai,כתוב בתאית: שמן (גוף) — fat / overweight (u-an),Write in Thai: fat / overweight — שמן (גוף) (u-an),อ้วน,u-an,שמן (גוף),fat / overweight,vocab_0239
+qv19_0711,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: u-an — שמן (גוף) / fat / overweight,Write Thai from romanization: u-an — fat / overweight / שמן (גוף),อ้วน,u-an,שמן (גוף),fat / overweight,vocab_0239
+qv19_0712,1,mcq_read_meaning,מה המשמעות של ผอม (pom)?,What does ผอม (pom) mean?,ผอม,pom,רזה,thin,vocab_0240
+qv19_0713,1,write_he_to_thai,כתוב בתאית: רזה — thin (pom),Write in Thai: thin — רזה (pom),ผอม,pom,רזה,thin,vocab_0240
+qv19_0714,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: pom — רזה / thin,Write Thai from romanization: pom — thin / רזה,ผอม,pom,רזה,thin,vocab_0240
+qv19_0715,1,mcq_read_meaning,מה המשמעות של ใหญ่ (yai)?,What does ใหญ่ (yai) mean?,ใหญ่,yai,גדול,big,vocab_0241
+qv19_0716,1,write_he_to_thai,כתוב בתאית: גדול — big (yai),Write in Thai: big — גדול (yai),ใหญ่,yai,גדול,big,vocab_0241
+qv19_0717,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: yai — גדול / big,Write Thai from romanization: yai — big / גדול,ใหญ่,yai,גדול,big,vocab_0241
+qv19_0718,1,mcq_read_meaning,מה המשמעות של เล็ก (lek)?,What does เล็ก (lek) mean?,เล็ก,lek,קטן,small,vocab_0242
+qv19_0719,1,write_he_to_thai,כתוב בתאית: קטן — small (lek),Write in Thai: small — קטן (lek),เล็ก,lek,קטן,small,vocab_0242
+qv19_0720,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: lek — קטן / small,Write Thai from romanization: lek — small / קטן,เล็ก,lek,קטן,small,vocab_0242
+qv19_0721,1,mcq_read_meaning,מה המשמעות של เหงา (ngao)?,What does เหงา (ngao) mean?,เหงา,ngao,בודד,lonely,vocab_0243
+qv19_0722,1,write_he_to_thai,כתוב בתאית: בודד — lonely (ngao),Write in Thai: lonely — בודד (ngao),เหงา,ngao,בודד,lonely,vocab_0243
+qv19_0723,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: ngao — בודד / lonely,Write Thai from romanization: ngao — lonely / בודד,เหงา,ngao,בודד,lonely,vocab_0243
+qv19_0724,3,mcq_read_meaning,מה המשמעות של เสียใจ (sia-jai)?,What does เสียใจ (sia-jai) mean?,เสียใจ,sia-jai,עצוב,sad / sorry,vocab_0244
+qv19_0725,3,write_he_to_thai,כתוב בתאית: עצוב — sad / sorry (sia-jai),Write in Thai: sad / sorry — עצוב (sia-jai),เสียใจ,sia-jai,עצוב,sad / sorry,vocab_0244
+qv19_0726,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: sia-jai — עצוב / sad / sorry,Write Thai from romanization: sia-jai — sad / sorry / עצוב,เสียใจ,sia-jai,עצוב,sad / sorry,vocab_0244
+qv19_0727,3,mcq_read_meaning,מה המשמעות של ดีใจ (dii-jai)?,What does ดีใจ (dii-jai) mean?,ดีใจ,dii-jai,שמח,happy,vocab_0245
+qv19_0728,3,write_he_to_thai,כתוב בתאית: שמח — happy (dii-jai),Write in Thai: happy — שמח (dii-jai),ดีใจ,dii-jai,שמח,happy,vocab_0245
+qv19_0729,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dii-jai — שמח / happy,Write Thai from romanization: dii-jai — happy / שמח,ดีใจ,dii-jai,שמח,happy,vocab_0245
+qv19_0730,1,mcq_read_meaning,מה המשמעות של โกรธ (grote)?,What does โกรธ (grote) mean?,โกรธ,grote,כועס,angry,vocab_0246
+qv19_0731,1,write_he_to_thai,כתוב בתאית: כועס — angry (grote),Write in Thai: angry — כועס (grote),โกรธ,grote,כועס,angry,vocab_0246
+qv19_0732,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: grote — כועס / angry,Write Thai from romanization: grote — angry / כועס,โกรธ,grote,כועס,angry,vocab_0246
+qv19_0733,1,mcq_read_meaning,מה המשמעות של กลัว (glua)?,What does กลัว (glua) mean?,กลัว,glua,מפחד,afraid,vocab_0247
+qv19_0734,1,write_he_to_thai,כתוב בתאית: מפחד — afraid (glua),Write in Thai: afraid — מפחד (glua),กลัว,glua,מפחד,afraid,vocab_0247
+qv19_0735,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: glua — מפחד / afraid,Write Thai from romanization: glua — afraid / מפחד,กลัว,glua,מפחד,afraid,vocab_0247
+qv19_0736,3,mcq_read_meaning,מה המשמעות של ตกใจ (dtok-jai)?,What does ตกใจ (dtok-jai) mean?,ตกใจ,dtok-jai,מופתע / בהלם,shocked / startled,vocab_0248
+qv19_0737,3,write_he_to_thai,כתוב בתאית: מופתע / בהלם — shocked / startled (dtok-jai),Write in Thai: shocked / startled — מופתע / בהלם (dtok-jai),ตกใจ,dtok-jai,מופתע / בהלם,shocked / startled,vocab_0248
+qv19_0738,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dtok-jai — מופתע / בהלם / shocked / startled,Write Thai from romanization: dtok-jai — shocked / startled / מופתע / בהלם,ตกใจ,dtok-jai,מופתע / בהלם,shocked / startled,vocab_0248
+qv19_0739,1,mcq_read_meaning,מה המשמעות של งง (ngong)?,What does งง (ngong) mean?,งง,ngong,מבולבל,confused,vocab_0249
+qv19_0740,1,write_he_to_thai,כתוב בתאית: מבולבל — confused (ngong),Write in Thai: confused — מבולבל (ngong),งง,ngong,מבולבל,confused,vocab_0249
+qv19_0741,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: ngong — מבולבל / confused,Write Thai from romanization: ngong — confused / מבולבל,งง,ngong,מבולבל,confused,vocab_0249
+qv19_0742,3,mcq_read_meaning,מה המשמעות של มั่นใจ (man-jai)?,What does มั่นใจ (man-jai) mean?,มั่นใจ,man-jai,בטוח בעצמי,confident,vocab_0250
+qv19_0743,3,write_he_to_thai,כתוב בתאית: בטוח בעצמי — confident (man-jai),Write in Thai: confident — בטוח בעצמי (man-jai),มั่นใจ,man-jai,בטוח בעצמי,confident,vocab_0250
+qv19_0744,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: man-jai — בטוח בעצמי / confident,Write Thai from romanization: man-jai — confident / בטוח בעצמי,มั่นใจ,man-jai,בטוח בעצמי,confident,vocab_0250
+qv19_0745,4,mcq_read_meaning,מה המשמעות של น่าเข้าใจ (naa-kao-jai)?,What does น่าเข้าใจ (naa-kao-jai) mean?,น่าเข้าใจ,naa-kao-jai,מובן,understandable,vocab_0251
+qv19_0746,4,write_he_to_thai,כתוב בתאית: מובן — understandable (naa-kao-jai),Write in Thai: understandable — מובן (naa-kao-jai),น่าเข้าใจ,naa-kao-jai,מובן,understandable,vocab_0251
+qv19_0747,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: naa-kao-jai — מובן / understandable,Write Thai from romanization: naa-kao-jai — understandable / מובן,น่าเข้าใจ,naa-kao-jai,מובן,understandable,vocab_0251
+qv19_0748,4,mcq_read_meaning,מה המשמעות של ไม่เข้าใจ (mai-kao-jai)?,What does ไม่เข้าใจ (mai-kao-jai) mean?,ไม่เข้าใจ,mai-kao-jai,לא מבין,do not understand,vocab_0252
+qv19_0749,4,write_he_to_thai,כתוב בתאית: לא מבין — do not understand (mai-kao-jai),Write in Thai: do not understand — לא מבין (mai-kao-jai),ไม่เข้าใจ,mai-kao-jai,לא מבין,do not understand,vocab_0252
+qv19_0750,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai-kao-jai — לא מבין / do not understand,Write Thai from romanization: mai-kao-jai — do not understand / לא מבין,ไม่เข้าใจ,mai-kao-jai,לא מבין,do not understand,vocab_0252
+qv19_0751,5,mcq_read_meaning,מה המשמעות של เข้าใจไหม (kao-jai mai?)?,What does เข้าใจไหม (kao-jai mai?) mean?,เข้าใจไหม,kao-jai mai?,מבין?,Do you understand?,vocab_0253
+qv19_0752,5,write_he_to_thai,כתוב בתאית: מבין? — Do you understand? (kao-jai mai?),Write in Thai: Do you understand? — מבין? (kao-jai mai?),เข้าใจไหม,kao-jai mai?,מבין?,Do you understand?,vocab_0253
+qv19_0753,5,write_roman_to_thai,כתוב בתאית לפי התעתיק: kao-jai mai? — מבין? / Do you understand?,Write Thai from romanization: kao-jai mai? — Do you understand? / מבין?,เข้าใจไหม,kao-jai mai?,מבין?,Do you understand?,vocab_0253
+qv19_0754,4,mcq_read_meaning,מה המשמעות של เข้าใจแล้ว (kao-jai leaw)?,What does เข้าใจแล้ว (kao-jai leaw) mean?,เข้าใจแล้ว,kao-jai leaw,הבנתי כבר,understood already,vocab_0254
+qv19_0755,4,write_he_to_thai,כתוב בתאית: הבנתי כבר — understood already (kao-jai leaw),Write in Thai: understood already — הבנתי כבר (kao-jai leaw),เข้าใจแล้ว,kao-jai leaw,הבנתי כבר,understood already,vocab_0254
+qv19_0756,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: kao-jai leaw — הבנתי כבר / understood already,Write Thai from romanization: kao-jai leaw — understood already / הבנתי כבר,เข้าใจแล้ว,kao-jai leaw,הבנתי כבר,understood already,vocab_0254
+qv19_0757,1,mcq_read_meaning,מה המשמעות של รัก (rak)?,What does รัก (rak) mean?,รัก,rak,אוהב,love,vocab_0255
+qv19_0758,1,write_he_to_thai,כתוב בתאית: אוהב — love (rak),Write in Thai: love — אוהב (rak),รัก,rak,אוהב,love,vocab_0255
+qv19_0759,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: rak — אוהב / love,Write Thai from romanization: rak — love / אוהב,รัก,rak,אוהב,love,vocab_0255
+qv19_0760,1,mcq_read_meaning,מה המשמעות של เกลียด (gliad)?,What does เกลียด (gliad) mean?,เกลียด,gliad,שונא,hate,vocab_0256
+qv19_0761,1,write_he_to_thai,כתוב בתאית: שונא — hate (gliad),Write in Thai: hate — שונא (gliad),เกลียด,gliad,שונא,hate,vocab_0256
+qv19_0762,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: gliad — שונא / hate,Write Thai from romanization: gliad — hate / שונא,เกลียด,gliad,שונא,hate,vocab_0256
+qv19_0763,3,mcq_read_meaning,מה המשמעות של เห็นด้วย (hen-duai)?,What does เห็นด้วย (hen-duai) mean?,เห็นด้วย,hen-duai,מסכים,agree,vocab_0257
+qv19_0764,3,write_he_to_thai,כתוב בתאית: מסכים — agree (hen-duai),Write in Thai: agree — מסכים (hen-duai),เห็นด้วย,hen-duai,מסכים,agree,vocab_0257
+qv19_0765,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: hen-duai — מסכים / agree,Write Thai from romanization: hen-duai — agree / מסכים,เห็นด้วย,hen-duai,מסכים,agree,vocab_0257
+qv19_0766,4,mcq_read_meaning,מה המשמעות של ไม่เห็นด้วย (mai-hen-duai)?,What does ไม่เห็นด้วย (mai-hen-duai) mean?,ไม่เห็นด้วย,mai-hen-duai,לא מסכים,disagree,vocab_0258
+qv19_0767,4,write_he_to_thai,כתוב בתאית: לא מסכים — disagree (mai-hen-duai),Write in Thai: disagree — לא מסכים (mai-hen-duai),ไม่เห็นด้วย,mai-hen-duai,לא מסכים,disagree,vocab_0258
+qv19_0768,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai-hen-duai — לא מסכים / disagree,Write Thai from romanization: mai-hen-duai — disagree / לא מסכים,ไม่เห็นด้วย,mai-hen-duai,לא מסכים,disagree,vocab_0258
+qv19_0769,3,mcq_read_meaning,מה המשמעות של จริง ๆ (jing-jing)?,What does จริง ๆ (jing-jing) mean?,จริง ๆ,jing-jing,באמת,really,vocab_0259
+qv19_0770,3,write_he_to_thai,כתוב בתאית: באמת — really (jing-jing),Write in Thai: really — באמת (jing-jing),จริง ๆ,jing-jing,באמת,really,vocab_0259
+qv19_0771,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: jing-jing — באמת / really,Write Thai from romanization: jing-jing — really / באמת,จริง ๆ,jing-jing,באמת,really,vocab_0259
+qv19_0772,1,mcq_read_meaning,מה המשמעות של ลอง (long)?,What does ลอง (long) mean?,ลอง,long,לנסות,try,vocab_0260
+qv19_0773,1,write_he_to_thai,כתוב בתאית: לנסות — try (long),Write in Thai: try — לנסות (long),ลอง,long,לנסות,try,vocab_0260
+qv19_0774,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: long — לנסות / try,Write Thai from romanization: long — try / לנסות,ลอง,long,לנסות,try,vocab_0260
+qv19_0775,1,mcq_read_meaning,מה המשמעות של ดู (duu)?,What does ดู (duu) mean?,ดู,duu,לראות / להסתכל,look / watch,vocab_0261
+qv19_0776,1,write_he_to_thai,כתוב בתאית: לראות / להסתכל — look / watch (duu),Write in Thai: look / watch — לראות / להסתכל (duu),ดู,duu,לראות / להסתכל,look / watch,vocab_0261
+qv19_0777,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: duu — לראות / להסתכל / look / watch,Write Thai from romanization: duu — look / watch / לראות / להסתכל,ดู,duu,לראות / להסתכל,look / watch,vocab_0261
+qv19_0778,1,mcq_read_meaning,מה המשמעות של ฟัง (fang)?,What does ฟัง (fang) mean?,ฟัง,fang,להקשיב,listen,vocab_0262
+qv19_0779,1,write_he_to_thai,כתוב בתאית: להקשיב — listen (fang),Write in Thai: listen — להקשיב (fang),ฟัง,fang,להקשיב,listen,vocab_0262
+qv19_0780,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: fang — להקשיב / listen,Write Thai from romanization: fang — listen / להקשיב,ฟัง,fang,להקשיב,listen,vocab_0262
+qv19_0781,1,mcq_read_meaning,מה המשמעות של ดม (dom)?,What does ดม (dom) mean?,ดม,dom,להריח,smell,vocab_0263
+qv19_0782,1,write_he_to_thai,כתוב בתאית: להריח — smell (dom),Write in Thai: smell — להריח (dom),ดม,dom,להריח,smell,vocab_0263
+qv19_0783,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: dom — להריח / smell,Write Thai from romanization: dom — smell / להריח,ดม,dom,להריח,smell,vocab_0263
+qv19_0784,1,mcq_read_meaning,מה המשמעות של ชิม (chim)?,What does ชิม (chim) mean?,ชิม,chim,לטעום,taste,vocab_0264
+qv19_0785,1,write_he_to_thai,כתוב בתאית: לטעום — taste (chim),Write in Thai: taste — לטעום (chim),ชิม,chim,לטעום,taste,vocab_0264
+qv19_0786,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: chim — לטעום / taste,Write Thai from romanization: chim — taste / לטעום,ชิม,chim,לטעום,taste,vocab_0264
+qv19_0787,1,mcq_read_meaning,מה המשמעות של จำ (jum)?,What does จำ (jum) mean?,จำ,jum,לזכור,remember,vocab_0265
+qv19_0788,1,write_he_to_thai,כתוב בתאית: לזכור — remember (jum),Write in Thai: remember — לזכור (jum),จำ,jum,לזכור,remember,vocab_0265
+qv19_0789,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: jum — לזכור / remember,Write Thai from romanization: jum — remember / לזכור,จำ,jum,לזכור,remember,vocab_0265
+qv19_0790,1,mcq_read_meaning,מה המשמעות של เคย (keey)?,What does เคย (keey) mean?,เคย,keey,להתרגל / פעם...,ever / used to,vocab_0266
+qv19_0791,1,write_he_to_thai,כתוב בתאית: להתרגל / פעם... — ever / used to (keey),Write in Thai: ever / used to — להתרגל / פעם... (keey),เคย,keey,להתרגל / פעם...,ever / used to,vocab_0266
+qv19_0792,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: keey — להתרגל / פעם... / ever / used to,Write Thai from romanization: keey — ever / used to / להתרגל / פעם...,เคย,keey,להתרגל / פעם...,ever / used to,vocab_0266
+qv19_0793,1,mcq_read_meaning,מה המשמעות של เที่ยว (teaw)?,What does เที่ยว (teaw) mean?,เที่ยว,teaw,לטייל / לבלות,travel / hang out,vocab_0267
+qv19_0794,1,write_he_to_thai,כתוב בתאית: לטייל / לבלות — travel / hang out (teaw),Write in Thai: travel / hang out — לטייל / לבלות (teaw),เที่ยว,teaw,לטייל / לבלות,travel / hang out,vocab_0267
+qv19_0795,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: teaw — לטייל / לבלות / travel / hang out,Write Thai from romanization: teaw — travel / hang out / לטייל / לבלות,เที่ยว,teaw,לטייל / לבלות,travel / hang out,vocab_0267
+qv19_0796,1,mcq_read_meaning,מה המשמעות של รอ (raw)?,What does รอ (raw) mean?,รอ,raw,לחכות,wait,vocab_0268
+qv19_0797,1,write_he_to_thai,כתוב בתאית: לחכות — wait (raw),Write in Thai: wait — לחכות (raw),รอ,raw,לחכות,wait,vocab_0268
+qv19_0798,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: raw — לחכות / wait,Write Thai from romanization: raw — wait / לחכות,รอ,raw,לחכות,wait,vocab_0268
+qv19_0799,1,mcq_read_meaning,מה המשמעות של ซื้อ (suu)?,What does ซื้อ (suu) mean?,ซื้อ,suu,לקנות,buy,vocab_0269
+qv19_0800,1,write_he_to_thai,כתוב בתאית: לקנות — buy (suu),Write in Thai: buy — לקנות (suu),ซื้อ,suu,לקנות,buy,vocab_0269
+qv19_0801,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: suu — לקנות / buy,Write Thai from romanization: suu — buy / לקנות,ซื้อ,suu,לקנות,buy,vocab_0269
+qv19_0802,1,mcq_read_meaning,מה המשמעות של ขาย (kaai)?,What does ขาย (kaai) mean?,ขาย,kaai,למכור,sell,vocab_0270
+qv19_0803,1,write_he_to_thai,כתוב בתאית: למכור — sell (kaai),Write in Thai: sell — למכור (kaai),ขาย,kaai,למכור,sell,vocab_0270
+qv19_0804,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: kaai — למכור / sell,Write Thai from romanization: kaai — sell / למכור,ขาย,kaai,למכור,sell,vocab_0270
+qv19_0805,1,mcq_read_meaning,מה המשמעות של ให้ (hai)?,What does ให้ (hai) mean?,ให้,hai,לתת / עבור,give / for,vocab_0271
+qv19_0806,1,write_he_to_thai,כתוב בתאית: לתת / עבור — give / for (hai),Write in Thai: give / for — לתת / עבור (hai),ให้,hai,לתת / עבור,give / for,vocab_0271
+qv19_0807,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: hai — לתת / עבור / give / for,Write Thai from romanization: hai — give / for / לתת / עבור,ให้,hai,לתת / עבור,give / for,vocab_0271
+qv19_0808,3,mcq_read_meaning,מה המשמעות של ช่วย (choo-ay)?,What does ช่วย (choo-ay) mean?,ช่วย,choo-ay,לעזור,help,vocab_0272
+qv19_0809,3,write_he_to_thai,כתוב בתאית: לעזור — help (choo-ay),Write in Thai: help — לעזור (choo-ay),ช่วย,choo-ay,לעזור,help,vocab_0272
+qv19_0810,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: choo-ay — לעזור / help,Write Thai from romanization: choo-ay — help / לעזור,ช่วย,choo-ay,לעזור,help,vocab_0272
+qv19_0811,1,mcq_read_meaning,מה המשמעות של บอก (bork)?,What does บอก (bork) mean?,บอก,bork,להגיד / לספר,tell,vocab_0273
+qv19_0812,1,write_he_to_thai,כתוב בתאית: להגיד / לספר — tell (bork),Write in Thai: tell — להגיד / לספר (bork),บอก,bork,להגיד / לספר,tell,vocab_0273
+qv19_0813,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: bork — להגיד / לספר / tell,Write Thai from romanization: bork — tell / להגיד / לספר,บอก,bork,להגיד / לספר,tell,vocab_0273
+qv19_0814,1,mcq_read_meaning,מה המשמעות של ถาม (tam)?,What does ถาม (tam) mean?,ถาม,tam,לשאול,ask,vocab_0274
+qv19_0815,1,write_he_to_thai,כתוב בתאית: לשאול — ask (tam),Write in Thai: ask — לשאול (tam),ถาม,tam,לשאול,ask,vocab_0274
+qv19_0816,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: tam — לשאול / ask,Write Thai from romanization: tam — ask / לשאול,ถาม,tam,לשאול,ask,vocab_0274
+qv19_0817,1,mcq_read_meaning,מה המשמעות של ยิ้ม (yim)?,What does ยิ้ม (yim) mean?,ยิ้ม,yim,לחייך,smile,vocab_0275
+qv19_0818,1,write_he_to_thai,כתוב בתאית: לחייך — smile (yim),Write in Thai: smile — לחייך (yim),ยิ้ม,yim,לחייך,smile,vocab_0275
+qv19_0819,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: yim — לחייך / smile,Write Thai from romanization: yim — smile / לחייך,ยิ้ม,yim,לחייך,smile,vocab_0275
+qv19_0820,3,mcq_read_meaning,מה המשמעות של ร้องไห้ (rong¹-hai³)?,What does ร้องไห้ (rong¹-hai³) mean?,ร้องไห้,rong¹-hai³,לבכות,cry,vocab_0276
+qv19_0821,3,write_he_to_thai,כתוב בתאית: לבכות — cry (rong¹-hai³),Write in Thai: cry — לבכות (rong¹-hai³),ร้องไห้,rong¹-hai³,לבכות,cry,vocab_0276
+qv19_0822,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: rong¹-hai³ — לבכות / cry,Write Thai from romanization: rong¹-hai³ — cry / לבכות,ร้องไห้,rong¹-hai³,לבכות,cry,vocab_0276
+qv19_0823,3,mcq_read_meaning,מה המשמעות של อิจฉา (it²-chaa¹)?,What does อิจฉา (it²-chaa¹) mean?,อิจฉา,it²-chaa¹,לקנא,envy / jealous,vocab_0277
+qv19_0824,3,write_he_to_thai,כתוב בתאית: לקנא — envy / jealous (it²-chaa¹),Write in Thai: envy / jealous — לקנא (it²-chaa¹),อิจฉา,it²-chaa¹,לקנא,envy / jealous,vocab_0277
+qv19_0825,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: it²-chaa¹ — לקנא / envy / jealous,Write Thai from romanization: it²-chaa¹ — envy / jealous / לקנא,อิจฉา,it²-chaa¹,לקנא,envy / jealous,vocab_0277
+qv19_0826,3,mcq_read_meaning,מה המשמעות של โมโห (mo¹-ho¹)?,What does โมโห (mo¹-ho¹) mean?,โมโห,mo¹-ho¹,עצבני,angry / annoyed,vocab_0278
+qv19_0827,3,write_he_to_thai,כתוב בתאית: עצבני — angry / annoyed (mo¹-ho¹),Write in Thai: angry / annoyed — עצבני (mo¹-ho¹),โมโห,mo¹-ho¹,עצבני,angry / annoyed,vocab_0278
+qv19_0828,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: mo¹-ho¹ — עצבני / angry / annoyed,Write Thai from romanization: mo¹-ho¹ — angry / annoyed / עצבני,โมโห,mo¹-ho¹,עצבני,angry / annoyed,vocab_0278
+qv19_0829,3,mcq_read_meaning,מה המשמעות של รำคาญ (ram¹-kaan¹)?,What does รำคาญ (ram¹-kaan¹) mean?,รำคาญ,ram¹-kaan¹,מעצבן,annoyed / annoying,vocab_0279
+qv19_0830,3,write_he_to_thai,כתוב בתאית: מעצבן — annoyed / annoying (ram¹-kaan¹),Write in Thai: annoyed / annoying — מעצבן (ram¹-kaan¹),รำคาญ,ram¹-kaan¹,מעצבן,annoyed / annoying,vocab_0279
+qv19_0831,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: ram¹-kaan¹ — מעצבן / annoyed / annoying,Write Thai from romanization: ram¹-kaan¹ — annoyed / annoying / מעצבן,รำคาญ,ram¹-kaan¹,מעצבן,annoyed / annoying,vocab_0279
+qv19_0832,1,mcq_read_meaning,מה המשמעות של หวัง (wang¹)?,What does หวัง (wang¹) mean?,หวัง,wang¹,לקוות,hope,vocab_0280
+qv19_0833,1,write_he_to_thai,כתוב בתאית: לקוות — hope (wang¹),Write in Thai: hope — לקוות (wang¹),หวัง,wang¹,לקוות,hope,vocab_0280
+qv19_0834,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: wang¹ — לקוות / hope,Write Thai from romanization: wang¹ — hope / לקוות,หวัง,wang¹,לקוות,hope,vocab_0280
+qv19_0835,3,mcq_read_meaning,מה המשמעות של มั่นใจ (man¹-jai¹)?,What does มั่นใจ (man¹-jai¹) mean?,มั่นใจ,man¹-jai¹,בטוח,confident,vocab_0281
+qv19_0836,3,write_he_to_thai,כתוב בתאית: בטוח — confident (man¹-jai¹),Write in Thai: confident — בטוח (man¹-jai¹),มั่นใจ,man¹-jai¹,בטוח,confident,vocab_0281
+qv19_0837,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: man¹-jai¹ — בטוח / confident,Write Thai from romanization: man¹-jai¹ — confident / בטוח,มั่นใจ,man¹-jai¹,בטוח,confident,vocab_0281
+qv19_0838,4,mcq_read_meaning,מה המשמעות של น่าสงสาร (naa³-song⁵-saan¹)?,What does น่าสงสาร (naa³-song⁵-saan¹) mean?,น่าสงสาร,naa³-song⁵-saan¹,מסכן,pitiful / poor thing,vocab_0282
+qv19_0839,4,write_he_to_thai,כתוב בתאית: מסכן — pitiful / poor thing (naa³-song⁵-saan¹),Write in Thai: pitiful / poor thing — מסכן (naa³-song⁵-saan¹),น่าสงสาร,naa³-song⁵-saan¹,מסכן,pitiful / poor thing,vocab_0282
+qv19_0840,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: naa³-song⁵-saan¹ — מסכן / pitiful / poor thing,Write Thai from romanization: naa³-song⁵-saan¹ — pitiful / poor thing / מסכן,น่าสงสาร,naa³-song⁵-saan¹,מסכן,pitiful / poor thing,vocab_0282
+qv19_0841,3,mcq_read_meaning,מה המשמעות של ภูมิใจ (pum¹-jai¹)?,What does ภูมิใจ (pum¹-jai¹) mean?,ภูมิใจ,pum¹-jai¹,גאה,proud,vocab_0283
+qv19_0842,3,write_he_to_thai,כתוב בתאית: גאה — proud (pum¹-jai¹),Write in Thai: proud — גאה (pum¹-jai¹),ภูมิใจ,pum¹-jai¹,גאה,proud,vocab_0283
+qv19_0843,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: pum¹-jai¹ — גאה / proud,Write Thai from romanization: pum¹-jai¹ — proud / גאה,ภูมิใจ,pum¹-jai¹,גאה,proud,vocab_0283
+qv19_0844,3,mcq_read_meaning,מה המשמעות של เสียดาย (sia⁵-daai¹)?,What does เสียดาย (sia⁵-daai¹) mean?,เสียดาย,sia⁵-daai¹,חבל / בזבוז,what a pity / waste,vocab_0284
+qv19_0845,3,write_he_to_thai,כתוב בתאית: חבל / בזבוז — what a pity / waste (sia⁵-daai¹),Write in Thai: what a pity / waste — חבל / בזבוז (sia⁵-daai¹),เสียดาย,sia⁵-daai¹,חבל / בזבוז,what a pity / waste,vocab_0284
+qv19_0846,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: sia⁵-daai¹ — חבל / בזבוז / what a pity / waste,Write Thai from romanization: sia⁵-daai¹ — what a pity / waste / חבל / בזבוז,เสียดาย,sia⁵-daai¹,חבל / בזבוז,what a pity / waste,vocab_0284
+qv19_0847,3,mcq_read_meaning,מה המשמעות של ตื่นเต้น (dteun-dten)?,What does ตื่นเต้น (dteun-dten) mean?,ตื่นเต้น,dteun-dten,מתרגש,excited,vocab_0285
+qv19_0848,3,write_he_to_thai,כתוב בתאית: מתרגש — excited (dteun-dten),Write in Thai: excited — מתרגש (dteun-dten),ตื่นเต้น,dteun-dten,מתרגש,excited,vocab_0285
+qv19_0849,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dteun-dten — מתרגש / excited,Write Thai from romanization: dteun-dten — excited / מתרגש,ตื่นเต้น,dteun-dten,מתרגש,excited,vocab_0285
+qv19_0850,1,mcq_read_meaning,מה המשמעות של ง่วง (nguang³)?,What does ง่วง (nguang³) mean?,ง่วง,nguang³,ישנוני,sleepy,vocab_0286
+qv19_0851,1,write_he_to_thai,כתוב בתאית: ישנוני — sleepy (nguang³),Write in Thai: sleepy — ישנוני (nguang³),ง่วง,nguang³,ישנוני,sleepy,vocab_0286
+qv19_0852,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: nguang³ — ישנוני / sleepy,Write Thai from romanization: nguang³ — sleepy / ישנוני,ง่วง,nguang³,ישנוני,sleepy,vocab_0286
+qv19_0853,3,mcq_read_meaning,מה המשמעות של ตกใจ (dtok²-jai¹)?,What does ตกใจ (dtok²-jai¹) mean?,ตกใจ,dtok²-jai¹,מבוהל,shocked / startled,vocab_0287
+qv19_0854,3,write_he_to_thai,כתוב בתאית: מבוהל — shocked / startled (dtok²-jai¹),Write in Thai: shocked / startled — מבוהל (dtok²-jai¹),ตกใจ,dtok²-jai¹,מבוהל,shocked / startled,vocab_0287
+qv19_0855,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dtok²-jai¹ — מבוהל / shocked / startled,Write Thai from romanization: dtok²-jai¹ — shocked / startled / מבוהל,ตกใจ,dtok²-jai¹,מבוהל,shocked / startled,vocab_0287
+qv19_0856,1,mcq_read_meaning,מה המשמעות של รวม (ruam¹)?,What does รวม (ruam¹) mean?,รวม,ruam¹,ביחד,together / include,vocab_0288
+qv19_0857,1,write_he_to_thai,כתוב בתאית: ביחד — together / include (ruam¹),Write in Thai: together / include — ביחד (ruam¹),รวม,ruam¹,ביחד,together / include,vocab_0288
+qv19_0858,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: ruam¹ — ביחד / together / include,Write Thai from romanization: ruam¹ — together / include / ביחד,รวม,ruam¹,ביחד,together / include,vocab_0288
+qv19_0859,3,mcq_read_meaning,מה המשמעות של ชื่อจริง (cheuu³-jing¹)?,What does ชื่อจริง (cheuu³-jing¹) mean?,ชื่อจริง,cheuu³-jing¹,שם אמיתי,real name,vocab_0289
+qv19_0860,3,write_he_to_thai,כתוב בתאית: שם אמיתי — real name (cheuu³-jing¹),Write in Thai: real name — שם אמיתי (cheuu³-jing¹),ชื่อจริง,cheuu³-jing¹,שם אמיתי,real name,vocab_0289
+qv19_0861,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: cheuu³-jing¹ — שם אמיתי / real name,Write Thai from romanization: cheuu³-jing¹ — real name / שם אמיתי,ชื่อจริง,cheuu³-jing¹,שם אמיתי,real name,vocab_0289
+qv19_0862,3,mcq_read_meaning,מה המשמעות של ชื่อเล่น (cheuu³-len³)?,What does ชื่อเล่น (cheuu³-len³) mean?,ชื่อเล่น,cheuu³-len³,כינוי,nickname,vocab_0290
+qv19_0863,3,write_he_to_thai,כתוב בתאית: כינוי — nickname (cheuu³-len³),Write in Thai: nickname — כינוי (cheuu³-len³),ชื่อเล่น,cheuu³-len³,כינוי,nickname,vocab_0290
+qv19_0864,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: cheuu³-len³ — כינוי / nickname,Write Thai from romanization: cheuu³-len³ — nickname / כינוי,ชื่อเล่น,cheuu³-len³,כינוי,nickname,vocab_0290
+qv19_0865,4,mcq_read_meaning,מה המשמעות של นามสกุล (naam¹-sa¹-kun¹)?,What does นามสกุล (naam¹-sa¹-kun¹) mean?,นามสกุล,naam¹-sa¹-kun¹,שם משפחה,surname,vocab_0291
+qv19_0866,4,write_he_to_thai,כתוב בתאית: שם משפחה — surname (naam¹-sa¹-kun¹),Write in Thai: surname — שם משפחה (naam¹-sa¹-kun¹),นามสกุล,naam¹-sa¹-kun¹,שם משפחה,surname,vocab_0291
+qv19_0867,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: naam¹-sa¹-kun¹ — שם משפחה / surname,Write Thai from romanization: naam¹-sa¹-kun¹ — surname / שם משפחה,นามสกุล,naam¹-sa¹-kun¹,שם משפחה,surname,vocab_0291
+qv19_0868,1,mcq_read_meaning,מה המשמעות של คือ (keuu¹)?,What does คือ (keuu¹) mean?,คือ,keuu¹,זה / הוא (הגדרה),is / means,vocab_0292
+qv19_0869,1,write_he_to_thai,כתוב בתאית: זה / הוא (הגדרה) — is / means (keuu¹),Write in Thai: is / means — זה / הוא (הגדרה) (keuu¹),คือ,keuu¹,זה / הוא (הגדרה),is / means,vocab_0292
+qv19_0870,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: keuu¹ — זה / הוא (הגדרה) / is / means,Write Thai from romanization: keuu¹ — is / means / זה / הוא (הגדרה),คือ,keuu¹,זה / הוא (הגדרה),is / means,vocab_0292
+qv19_0871,1,mcq_read_meaning,מה המשמעות של เบื่อ (beaua²)?,What does เบื่อ (beaua²) mean?,เบื่อ,beaua²,משעמם,bored,vocab_0293
+qv19_0872,1,write_he_to_thai,כתוב בתאית: משעמם — bored (beaua²),Write in Thai: bored — משעמם (beaua²),เบื่อ,beaua²,משעמם,bored,vocab_0293
+qv19_0873,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: beaua² — משעמם / bored,Write Thai from romanization: beaua² — bored / משעמם,เบื่อ,beaua²,משעמם,bored,vocab_0293
+qv19_0874,3,mcq_read_meaning,מה המשמעות של สมอง (sa¹-mawng¹)?,What does สมอง (sa¹-mawng¹) mean?,สมอง,sa¹-mawng¹,מוח,brain,vocab_0294
+qv19_0875,3,write_he_to_thai,כתוב בתאית: מוח — brain (sa¹-mawng¹),Write in Thai: brain — מוח (sa¹-mawng¹),สมอง,sa¹-mawng¹,מוח,brain,vocab_0294
+qv19_0876,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: sa¹-mawng¹ — מוח / brain,Write Thai from romanization: sa¹-mawng¹ — brain / מוח,สมอง,sa¹-mawng¹,מוח,brain,vocab_0294
+qv19_0877,4,mcq_read_meaning,מה המשמעות של สมองไม่ทำงาน (sa¹-mawng¹ mai³ tam¹-ngaan¹)?,What does สมองไม่ทำงาน (sa¹-mawng¹ mai³ tam¹-ngaan¹) mean?,สมองไม่ทำงาน,sa¹-mawng¹ mai³ tam¹-ngaan¹,המוח לא עובד,brain not working,vocab_0295
+qv19_0878,4,write_he_to_thai,כתוב בתאית: המוח לא עובד — brain not working (sa¹-mawng¹ mai³ tam¹-ngaan¹),Write in Thai: brain not working — המוח לא עובד (sa¹-mawng¹ mai³ tam¹-ngaan¹),สมองไม่ทำงาน,sa¹-mawng¹ mai³ tam¹-ngaan¹,המוח לא עובד,brain not working,vocab_0295
+qv19_0879,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: sa¹-mawng¹ mai³ tam¹-ngaan¹ — המוח לא עובד / brain not working,Write Thai from romanization: sa¹-mawng¹ mai³ tam¹-ngaan¹ — brain not working / המוח לא עובד,สมองไม่ทำงาน,sa¹-mawng¹ mai³ tam¹-ngaan¹,המוח לא עובד,brain not working,vocab_0295
+qv19_0880,1,mcq_read_meaning,מה המשמעות של บน (bon¹)?,What does บน (bon¹) mean?,บน,bon¹,על (מעל),on / above,vocab_0296
+qv19_0881,1,write_he_to_thai,כתוב בתאית: על (מעל) — on / above (bon¹),Write in Thai: on / above — על (מעל) (bon¹),บน,bon¹,על (מעל),on / above,vocab_0296
+qv19_0882,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: bon¹ — על (מעל) / on / above,Write Thai from romanization: bon¹ — on / above / על (מעל),บน,bon¹,על (מעל),on / above,vocab_0296
+qv19_0883,3,mcq_read_meaning,מה המשמעות של ต่อไป (dtor²-bpai¹)?,What does ต่อไป (dtor²-bpai¹) mean?,ต่อไป,dtor²-bpai¹,הבא,next,vocab_0297
+qv19_0884,3,write_he_to_thai,כתוב בתאית: הבא — next (dtor²-bpai¹),Write in Thai: next — הבא (dtor²-bpai¹),ต่อไป,dtor²-bpai¹,הבא,next,vocab_0297
+qv19_0885,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dtor²-bpai¹ — הבא / next,Write Thai from romanization: dtor²-bpai¹ — next / הבא,ต่อไป,dtor²-bpai¹,הבא,next,vocab_0297
+qv19_0886,1,mcq_read_meaning,מה המשמעות של เห็น (hen¹)?,What does เห็น (hen¹) mean?,เห็น,hen¹,רואה,see,vocab_0298
+qv19_0887,1,write_he_to_thai,כתוב בתאית: רואה — see (hen¹),Write in Thai: see — רואה (hen¹),เห็น,hen¹,רואה,see,vocab_0298
+qv19_0888,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: hen¹ — רואה / see,Write Thai from romanization: hen¹ — see / רואה,เห็น,hen¹,רואה,see,vocab_0298
+qv19_0889,3,mcq_read_meaning,מה המשמעות של หน้าต่าง (naa³-dtang²)?,What does หน้าต่าง (naa³-dtang²) mean?,หน้าต่าง,naa³-dtang²,חלון,window,vocab_0299
+qv19_0890,3,write_he_to_thai,כתוב בתאית: חלון — window (naa³-dtang²),Write in Thai: window — חלון (naa³-dtang²),หน้าต่าง,naa³-dtang²,חלון,window,vocab_0299
+qv19_0891,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: naa³-dtang² — חלון / window,Write Thai from romanization: naa³-dtang² — window / חלון,หน้าต่าง,naa³-dtang²,חלון,window,vocab_0299
+qv19_0892,1,mcq_read_meaning,מה המשמעות של ห้อง (hawng³)?,What does ห้อง (hawng³) mean?,ห้อง,hawng³,חדר,room,vocab_0300
+qv19_0893,1,write_he_to_thai,כתוב בתאית: חדר — room (hawng³),Write in Thai: room — חדר (hawng³),ห้อง,hawng³,חדר,room,vocab_0300
+qv19_0894,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: hawng³ — חדר / room,Write Thai from romanization: hawng³ — room / חדר,ห้อง,hawng³,חדר,room,vocab_0300
+qv19_0895,3,mcq_read_meaning,מה המשמעות של พ่อแม่ (poh³-mae³)?,What does พ่อแม่ (poh³-mae³) mean?,พ่อแม่,poh³-mae³,הורים,parents,vocab_0301
+qv19_0896,3,write_he_to_thai,כתוב בתאית: הורים — parents (poh³-mae³),Write in Thai: parents — הורים (poh³-mae³),พ่อแม่,poh³-mae³,הורים,parents,vocab_0301
+qv19_0897,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: poh³-mae³ — הורים / parents,Write Thai from romanization: poh³-mae³ — parents / הורים,พ่อแม่,poh³-mae³,הורים,parents,vocab_0301
+qv19_0898,3,mcq_read_meaning,מה המשמעות של กับข้าว (kap²-kaao³)?,What does กับข้าว (kap²-kaao³) mean?,กับข้าว,kap²-kaao³,אוכל (שאוכלים עם אורז),food eaten with rice,vocab_0302
+qv19_0899,3,write_he_to_thai,כתוב בתאית: אוכל (שאוכלים עם אורז) — food eaten with rice (kap²-kaao³),Write in Thai: food eaten with rice — אוכל (שאוכלים עם אורז) (kap²-kaao³),กับข้าว,kap²-kaao³,אוכל (שאוכלים עם אורז),food eaten with rice,vocab_0302
+qv19_0900,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: kap²-kaao³ — אוכל (שאוכלים עם אורז) / food eaten with rice,Write Thai from romanization: kap²-kaao³ — food eaten with rice / אוכל (שאוכלים עם אורז),กับข้าว,kap²-kaao³,אוכל (שאוכלים עם אורז),food eaten with rice,vocab_0302
+qv19_0901,3,mcq_read_meaning,מה המשמעות של นักเรียน (nag²-rian¹)?,What does นักเรียน (nag²-rian¹) mean?,นักเรียน,nag²-rian¹,סטודנט / תלמיד,student,vocab_0303
+qv19_0902,3,write_he_to_thai,כתוב בתאית: סטודנט / תלמיד — student (nag²-rian¹),Write in Thai: student — סטודנט / תלמיד (nag²-rian¹),นักเรียน,nag²-rian¹,סטודנט / תלמיד,student,vocab_0303
+qv19_0903,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: nag²-rian¹ — סטודנט / תלמיד / student,Write Thai from romanization: nag²-rian¹ — student / סטודנט / תלמיד,นักเรียน,nag²-rian¹,סטודנט / תלמיד,student,vocab_0303
+qv19_0904,4,mcq_read_meaning,מה המשמעות של ร้านอาหาร (raan³-aa¹-haan⁵)?,What does ร้านอาหาร (raan³-aa¹-haan⁵) mean?,ร้านอาหาร,raan³-aa¹-haan⁵,מסעדה,restaurant,vocab_0304
+qv19_0905,4,write_he_to_thai,כתוב בתאית: מסעדה — restaurant (raan³-aa¹-haan⁵),Write in Thai: restaurant — מסעדה (raan³-aa¹-haan⁵),ร้านอาหาร,raan³-aa¹-haan⁵,מסעדה,restaurant,vocab_0304
+qv19_0906,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: raan³-aa¹-haan⁵ — מסעדה / restaurant,Write Thai from romanization: raan³-aa¹-haan⁵ — restaurant / מסעדה,ร้านอาหาร,raan³-aa¹-haan⁵,מסעדה,restaurant,vocab_0304
+qv19_0907,3,mcq_read_meaning,מה המשמעות של เจ้าของ (jao³-kawng¹)?,What does เจ้าของ (jao³-kawng¹) mean?,เจ้าของ,jao³-kawng¹,הבעלים,owner,vocab_0305
+qv19_0908,3,write_he_to_thai,כתוב בתאית: הבעלים — owner (jao³-kawng¹),Write in Thai: owner — הבעלים (jao³-kawng¹),เจ้าของ,jao³-kawng¹,הבעלים,owner,vocab_0305
+qv19_0909,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: jao³-kawng¹ — הבעלים / owner,Write Thai from romanization: jao³-kawng¹ — owner / הבעלים,เจ้าของ,jao³-kawng¹,הבעלים,owner,vocab_0305
+qv19_0910,1,mcq_read_meaning,מה המשמעות של แม่ (mae³)?,What does แม่ (mae³) mean?,แม่,mae³,אמא,mother,vocab_0306
+qv19_0911,1,write_he_to_thai,כתוב בתאית: אמא — mother (mae³),Write in Thai: mother — אמא (mae³),แม่,mae³,אמא,mother,vocab_0306
+qv19_0912,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: mae³ — אמא / mother,Write Thai from romanization: mae³ — mother / אמא,แม่,mae³,אמא,mother,vocab_0306
+qv19_0913,3,mcq_read_meaning,מה המשמעות של ผู้หญิง (puu³-ying⁵)?,What does ผู้หญิง (puu³-ying⁵) mean?,ผู้หญิง,puu³-ying⁵,אישה / נקבה,woman / female,vocab_0307
+qv19_0914,3,write_he_to_thai,כתוב בתאית: אישה / נקבה — woman / female (puu³-ying⁵),Write in Thai: woman / female — אישה / נקבה (puu³-ying⁵),ผู้หญิง,puu³-ying⁵,אישה / נקבה,woman / female,vocab_0307
+qv19_0915,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: puu³-ying⁵ — אישה / נקבה / woman / female,Write Thai from romanization: puu³-ying⁵ — woman / female / אישה / נקבה,ผู้หญิง,puu³-ying⁵,אישה / נקבה,woman / female,vocab_0307
+qv19_0916,3,mcq_read_meaning,מה המשמעות של ผู้ชาย (puu³-chaai¹)?,What does ผู้ชาย (puu³-chaai¹) mean?,ผู้ชาย,puu³-chaai¹,גבר / זכר,man / male,vocab_0308
+qv19_0917,3,write_he_to_thai,כתוב בתאית: גבר / זכר — man / male (puu³-chaai¹),Write in Thai: man / male — גבר / זכר (puu³-chaai¹),ผู้ชาย,puu³-chaai¹,גבר / זכר,man / male,vocab_0308
+qv19_0918,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: puu³-chaai¹ — גבר / זכר / man / male,Write Thai from romanization: puu³-chaai¹ — man / male / גבר / זכר,ผู้ชาย,puu³-chaai¹,גבר / זכר,man / male,vocab_0308
+qv19_0919,4,mcq_read_meaning,מה המשמעות של ในหลวง (nai¹-lu-ang¹)?,What does ในหลวง (nai¹-lu-ang¹) mean?,ในหลวง,nai¹-lu-ang¹,המלך,king,vocab_0309
+qv19_0920,4,write_he_to_thai,כתוב בתאית: המלך — king (nai¹-lu-ang¹),Write in Thai: king — המלך (nai¹-lu-ang¹),ในหลวง,nai¹-lu-ang¹,המלך,king,vocab_0309
+qv19_0921,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: nai¹-lu-ang¹ — המלך / king,Write Thai from romanization: nai¹-lu-ang¹ — king / המלך,ในหลวง,nai¹-lu-ang¹,המלך,king,vocab_0309
+qv19_0922,4,mcq_read_meaning,מה המשמעות של พระเจ้าอยู่หัว (pra¹-jao³-yuu²-hua¹)?,What does พระเจ้าอยู่หัว (pra¹-jao³-yuu²-hua¹) mean?,พระเจ้าอยู่หัว,pra¹-jao³-yuu²-hua¹,המלך (תואר רשמי),king (formal title),vocab_0310
+qv19_0923,4,write_he_to_thai,כתוב בתאית: המלך (תואר רשמי) — king (formal title) (pra¹-jao³-yuu²-hua¹),Write in Thai: king (formal title) — המלך (תואר רשמי) (pra¹-jao³-yuu²-hua¹),พระเจ้าอยู่หัว,pra¹-jao³-yuu²-hua¹,המלך (תואר רשמי),king (formal title),vocab_0310
+qv19_0924,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: pra¹-jao³-yuu²-hua¹ — המלך (תואר רשמי) / king (formal title),Write Thai from romanization: pra¹-jao³-yuu²-hua¹ — king (formal title) / המלך (תואר רשמי),พระเจ้าอยู่หัว,pra¹-jao³-yuu²-hua¹,המלך (תואר רשמי),king (formal title),vocab_0310
+qv19_0925,3,mcq_read_meaning,מה המשמעות של หมู่ (muu)?,What does หมู่ (muu) mean?,หมู่,muu,קבוצה / כפר / חבורה,group / village / category,vocab_0311
+qv19_0926,3,write_he_to_thai,כתוב בתאית: קבוצה / כפר / חבורה — group / village / category (muu),Write in Thai: group / village / category — קבוצה / כפר / חבורה (muu),หมู่,muu,קבוצה / כפר / חבורה,group / village / category,vocab_0311
+qv19_0927,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: muu — קבוצה / כפר / חבורה / group / village / category,Write Thai from romanization: muu — group / village / category / קבוצה / כפר / חבורה,หมู่,muu,קבוצה / כפר / חבורה,group / village / category,vocab_0311
+qv19_0928,3,mcq_read_meaning,מה המשמעות של ชาวเผ่า (chaao¹-pao¹)?,What does ชาวเผ่า (chaao¹-pao¹) mean?,ชาวเผ่า,chaao¹-pao¹,אנשי שבט,tribal people,vocab_0312
+qv19_0929,3,write_he_to_thai,כתוב בתאית: אנשי שבט — tribal people (chaao¹-pao¹),Write in Thai: tribal people — אנשי שבט (chaao¹-pao¹),ชาวเผ่า,chaao¹-pao¹,אנשי שבט,tribal people,vocab_0312
+qv19_0930,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: chaao¹-pao¹ — אנשי שבט / tribal people,Write Thai from romanization: chaao¹-pao¹ — tribal people / אנשי שבט,ชาวเผ่า,chaao¹-pao¹,אנשי שבט,tribal people,vocab_0312
+qv19_0931,3,mcq_read_meaning,מה המשמעות של ภูเขา (puu¹-kao¹)?,What does ภูเขา (puu¹-kao¹) mean?,ภูเขา,puu¹-kao¹,הר,mountain,vocab_0314
+qv19_0932,3,write_he_to_thai,כתוב בתאית: הר — mountain (puu¹-kao¹),Write in Thai: mountain — הר (puu¹-kao¹),ภูเขา,puu¹-kao¹,הר,mountain,vocab_0314
+qv19_0933,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: puu¹-kao¹ — הר / mountain,Write Thai from romanization: puu¹-kao¹ — mountain / הר,ภูเขา,puu¹-kao¹,הר,mountain,vocab_0314
+qv19_0934,1,mcq_read_meaning,מה המשמעות של ผ้า (paa)?,What does ผ้า (paa) mean?,ผ้า,paa,בד / בגד,cloth / fabric / clothing,vocab_0315
+qv19_0935,1,write_he_to_thai,כתוב בתאית: בד / בגד — cloth / fabric / clothing (paa),Write in Thai: cloth / fabric / clothing — בד / בגד (paa),ผ้า,paa,בד / בגד,cloth / fabric / clothing,vocab_0315
+qv19_0936,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: paa — בד / בגד / cloth / fabric / clothing,Write Thai from romanization: paa — cloth / fabric / clothing / בד / בגד,ผ้า,paa,בד / בגד,cloth / fabric / clothing,vocab_0315
+qv19_0937,3,mcq_read_meaning,מה המשמעות של ตลาดนัด (dtalard²-nat¹)?,What does ตลาดนัด (dtalard²-nat¹) mean?,ตลาดนัด,dtalard²-nat¹,שוק,market,vocab_0316
+qv19_0938,3,write_he_to_thai,כתוב בתאית: שוק — market (dtalard²-nat¹),Write in Thai: market — שוק (dtalard²-nat¹),ตลาดนัด,dtalard²-nat¹,שוק,market,vocab_0316
+qv19_0939,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dtalard²-nat¹ — שוק / market,Write Thai from romanization: dtalard²-nat¹ — market / שוק,ตลาดนัด,dtalard²-nat¹,שוק,market,vocab_0316
+qv19_0940,2,mcq_read_meaning,מה המשמעות של อีก (iig(2))?,What does อีก (iig(2)) mean?,อีก,iig(2),שוב (Again),again / more,vocab_0317
+qv19_0941,2,write_he_to_thai,כתוב בתאית: שוב (Again) — again / more (iig(2)),Write in Thai: again / more — שוב (Again) (iig(2)),อีก,iig(2),שוב (Again),again / more,vocab_0317
+qv19_0942,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: iig(2) — שוב (Again) / again / more,Write Thai from romanization: iig(2) — again / more / שוב (Again),อีก,iig(2),שוב (Again),again / more,vocab_0317
+qv19_0943,3,mcq_read_meaning,מה המשמעות של พักผ่อน (pag-pawn(2-2))?,What does พักผ่อน (pag-pawn(2-2)) mean?,พักผ่อน,pag-pawn(2-2),לנוח,rest,vocab_0318
+qv19_0944,3,write_he_to_thai,כתוב בתאית: לנוח — rest (pag-pawn(2-2)),Write in Thai: rest — לנוח (pag-pawn(2-2)),พักผ่อน,pag-pawn(2-2),לנוח,rest,vocab_0318
+qv19_0945,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: pag-pawn(2-2) — לנוח / rest,Write Thai from romanization: pag-pawn(2-2) — rest / לנוח,พักผ่อน,pag-pawn(2-2),לנוח,rest,vocab_0318
+qv19_0946,3,mcq_read_meaning,מה המשמעות של ไปเที่ยว (bpai-tiao(1-3))?,What does ไปเที่ยว (bpai-tiao(1-3)) mean?,ไปเที่ยว,bpai-tiao(1-3),לטייל / להסתובב בכיף,go out / travel for fun,vocab_0319
+qv19_0947,3,write_he_to_thai,כתוב בתאית: לטייל / להסתובב בכיף — go out / travel for fun (bpai-tiao(1-3)),Write in Thai: go out / travel for fun — לטייל / להסתובב בכיף (bpai-tiao(1-3)),ไปเที่ยว,bpai-tiao(1-3),לטייל / להסתובב בכיף,go out / travel for fun,vocab_0319
+qv19_0948,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: bpai-tiao(1-3) — לטייל / להסתובב בכיף / go out / travel for fun,Write Thai from romanization: bpai-tiao(1-3) — go out / travel for fun / לטייל / להסתובב בכיף,ไปเที่ยว,bpai-tiao(1-3),לטייל / להסתובב בכיף,go out / travel for fun,vocab_0319
+qv19_0949,2,mcq_read_meaning,מה המשמעות של เสร็จ (sed(2))?,What does เสร็จ (sed(2)) mean?,เสร็จ,sed(2),סיים / נגמר,finish / done,vocab_0320
+qv19_0950,2,write_he_to_thai,כתוב בתאית: סיים / נגמר — finish / done (sed(2)),Write in Thai: finish / done — סיים / נגמר (sed(2)),เสร็จ,sed(2),סיים / נגמר,finish / done,vocab_0320
+qv19_0951,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: sed(2) — סיים / נגמר / finish / done,Write Thai from romanization: sed(2) — finish / done / סיים / נגמר,เสร็จ,sed(2),סיים / נגמר,finish / done,vocab_0320
+qv19_0952,2,mcq_read_meaning,מה המשמעות של หมด (mod(2))?,What does หมด (mod(2)) mean?,หมด,mod(2),הכל נגמר / אזל,finished / used up,vocab_0321
+qv19_0953,2,write_he_to_thai,כתוב בתאית: הכל נגמר / אזל — finished / used up (mod(2)),Write in Thai: finished / used up — הכל נגמר / אזל (mod(2)),หมด,mod(2),הכל נגמר / אזל,finished / used up,vocab_0321
+qv19_0954,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: mod(2) — הכל נגמר / אזל / finished / used up,Write Thai from romanization: mod(2) — finished / used up / הכל נגמר / אזל,หมด,mod(2),הכל נגמר / אזל,finished / used up,vocab_0321
+qv19_0955,2,mcq_read_meaning,מה המשמעות של ตื่น (dteun)?,What does ตื่น (dteun) mean?,ตื่น,dteun,להתעורר,wake up,vocab_0322
+qv19_0956,2,write_he_to_thai,כתוב בתאית: להתעורר — wake up (dteun),Write in Thai: wake up — להתעורר (dteun),ตื่น,dteun,להתעורר,wake up,vocab_0322
+qv19_0957,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: dteun — להתעורר / wake up,Write Thai from romanization: dteun — wake up / להתעורר,ตื่น,dteun,להתעורר,wake up,vocab_0322
+qv19_0958,2,mcq_read_meaning,מה המשמעות של หลง (long(1))?,What does หลง (long(1)) mean?,หลง,long(1),ללכת לאיבוד,lost,vocab_0323
+qv19_0959,2,write_he_to_thai,כתוב בתאית: ללכת לאיבוד — lost (long(1)),Write in Thai: lost — ללכת לאיבוד (long(1)),หลง,long(1),ללכת לאיבוד,lost,vocab_0323
+qv19_0960,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: long(1) — ללכת לאיבוד / lost,Write Thai from romanization: long(1) — lost / ללכת לאיבוד,หลง,long(1),ללכת לאיבוד,lost,vocab_0323
+qv19_0961,4,mcq_read_meaning,מה המשמעות של ความอดทน (kwaam-od-ton(1-2-1))?,What does ความอดทน (kwaam-od-ton(1-2-1)) mean?,ความอดทน,kwaam-od-ton(1-2-1),סבלנות,patience,vocab_0324
+qv19_0962,4,write_he_to_thai,כתוב בתאית: סבלנות — patience (kwaam-od-ton(1-2-1)),Write in Thai: patience — סבלנות (kwaam-od-ton(1-2-1)),ความอดทน,kwaam-od-ton(1-2-1),סבלנות,patience,vocab_0324
+qv19_0963,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: kwaam-od-ton(1-2-1) — סבלנות / patience,Write Thai from romanization: kwaam-od-ton(1-2-1) — patience / סבלנות,ความอดทน,kwaam-od-ton(1-2-1),סבלנות,patience,vocab_0324
+qv19_0964,2,mcq_read_meaning,מה המשמעות של ปลา (bplaa(1))?,What does ปลา (bplaa(1)) mean?,ปลา,bplaa(1),דג,fish,vocab_0325
+qv19_0965,2,write_he_to_thai,כתוב בתאית: דג — fish (bplaa(1)),Write in Thai: fish — דג (bplaa(1)),ปลา,bplaa(1),דג,fish,vocab_0325
+qv19_0966,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: bplaa(1) — דג / fish,Write Thai from romanization: bplaa(1) — fish / דג,ปลา,bplaa(1),דג,fish,vocab_0325
+qv19_0967,2,mcq_read_meaning,מה המשמעות של กุ้ง (gung(3))?,What does กุ้ง (gung(3)) mean?,กุ้ง,gung(3),שרימפס,shrimp,vocab_0326
+qv19_0968,2,write_he_to_thai,כתוב בתאית: שרימפס — shrimp (gung(3)),Write in Thai: shrimp — שרימפס (gung(3)),กุ้ง,gung(3),שרימפס,shrimp,vocab_0326
+qv19_0969,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: gung(3) — שרימפס / shrimp,Write Thai from romanization: gung(3) — shrimp / שרימפס,กุ้ง,gung(3),שרימפס,shrimp,vocab_0326
+qv19_0970,2,mcq_read_meaning,מה המשמעות של หอย (hoi(5))?,What does หอย (hoi(5)) mean?,หอย,hoi(5),צדפה,shellfish,vocab_0327
+qv19_0971,2,write_he_to_thai,כתוב בתאית: צדפה — shellfish (hoi(5)),Write in Thai: shellfish — צדפה (hoi(5)),หอย,hoi(5),צדפה,shellfish,vocab_0327
+qv19_0972,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: hoi(5) — צדפה / shellfish,Write Thai from romanization: hoi(5) — shellfish / צדפה,หอย,hoi(5),צדפה,shellfish,vocab_0327
+qv19_0973,3,mcq_read_meaning,מה המשמעות של ปลาหมึก (bpla-meuk)?,What does ปลาหมึก (bpla-meuk) mean?,ปลาหมึก,bpla-meuk,דיונון,squid,vocab_0328
+qv19_0974,3,write_he_to_thai,כתוב בתאית: דיונון — squid (bpla-meuk),Write in Thai: squid — דיונון (bpla-meuk),ปลาหมึก,bpla-meuk,דיונון,squid,vocab_0328
+qv19_0975,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: bpla-meuk — דיונון / squid,Write Thai from romanization: bpla-meuk — squid / דיונון,ปลาหมึก,bpla-meuk,דיונון,squid,vocab_0328
+qv19_0976,4,mcq_read_meaning,מה המשמעות של อาหารทะเล (aa-haan-ta-lay(1(1)-5-1-1))?,What does อาหารทะเล (aa-haan-ta-lay(1(1)-5-1-1)) mean?,อาหารทะเล,aa-haan-ta-lay(1(1)-5-1-1),פירות ים,seafood,vocab_0329
+qv19_0977,4,write_he_to_thai,כתוב בתאית: פירות ים — seafood (aa-haan-ta-lay(1(1)-5-1-1)),Write in Thai: seafood — פירות ים (aa-haan-ta-lay(1(1)-5-1-1)),อาหารทะเล,aa-haan-ta-lay(1(1)-5-1-1),פירות ים,seafood,vocab_0329
+qv19_0978,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: aa-haan-ta-lay(1(1)-5-1-1) — פירות ים / seafood,Write Thai from romanization: aa-haan-ta-lay(1(1)-5-1-1) — seafood / פירות ים,อาหารทะเล,aa-haan-ta-lay(1(1)-5-1-1),פירות ים,seafood,vocab_0329
+qv19_0979,3,mcq_read_meaning,מה המשמעות של เมื่อไร (meua-rai(3-1))?,What does เมื่อไร (meua-rai(3-1)) mean?,เมื่อไร,meua-rai(3-1),מתי,when?,vocab_0330
+qv19_0980,3,write_he_to_thai,כתוב בתאית: מתי — when? (meua-rai(3-1)),Write in Thai: when? — מתי (meua-rai(3-1)),เมื่อไร,meua-rai(3-1),מתי,when?,vocab_0330
+qv19_0981,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: meua-rai(3-1) — מתי / when?,Write Thai from romanization: meua-rai(3-1) — when? / מתי,เมื่อไร,meua-rai(3-1),מתי,when?,vocab_0330
+qv19_0982,5,mcq_read_meaning,מה המשמעות של ยังไง (yang-ngai)?,What does ยังไง (yang-ngai) mean?,ยังไง,yang-ngai,איך?,how?,vocab_0331
+qv19_0983,5,write_he_to_thai,כתוב בתאית: איך? — how? (yang-ngai),Write in Thai: how? — איך? (yang-ngai),ยังไง,yang-ngai,איך?,how?,vocab_0331
+qv19_0984,5,write_roman_to_thai,כתוב בתאית לפי התעתיק: yang-ngai — איך? / how?,Write Thai from romanization: yang-ngai — how? / איך?,ยังไง,yang-ngai,איך?,how?,vocab_0331
+qv19_0985,2,mcq_read_meaning,מה המשמעות של ใคร (khrai(1))?,What does ใคร (khrai(1)) mean?,ใคร,khrai(1),מי (או מי זה),who,vocab_0332
+qv19_0986,2,write_he_to_thai,כתוב בתאית: מי (או מי זה) — who (khrai(1)),Write in Thai: who — מי (או מי זה) (khrai(1)),ใคร,khrai(1),מי (או מי זה),who,vocab_0332
+qv19_0987,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: khrai(1) — מי (או מי זה) / who,Write Thai from romanization: khrai(1) — who / מי (או מי זה),ใคร,khrai(1),מי (או מי זה),who,vocab_0332
+qv19_0988,3,mcq_read_meaning,מה המשמעות של วันเกิด (wan-geut(1-2))?,What does วันเกิด (wan-geut(1-2)) mean?,วันเกิด,wan-geut(1-2),יום הולדת,birthday,vocab_0333
+qv19_0989,3,write_he_to_thai,כתוב בתאית: יום הולדת — birthday (wan-geut(1-2)),Write in Thai: birthday — יום הולדת (wan-geut(1-2)),วันเกิด,wan-geut(1-2),יום הולדת,birthday,vocab_0333
+qv19_0990,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: wan-geut(1-2) — יום הולדת / birthday,Write Thai from romanization: wan-geut(1-2) — birthday / יום הולדת,วันเกิด,wan-geut(1-2),יום הולדת,birthday,vocab_0333
+qv19_0991,2,mcq_read_meaning,מה המשמעות של เคย (koey(1))?,What does เคย (koey(1)) mean?,เคย,koey(1),אי פעם,ever,vocab_0334
+qv19_0992,2,write_he_to_thai,כתוב בתאית: אי פעם — ever (koey(1)),Write in Thai: ever — אי פעם (koey(1)),เคย,koey(1),אי פעם,ever,vocab_0334
+qv19_0993,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: koey(1) — אי פעם / ever,Write Thai from romanization: koey(1) — ever / אי פעם,เคย,koey(1),אי פעם,ever,vocab_0334
+qv19_0994,4,mcq_read_meaning,מה המשמעות של สมาชิก (sa-ma-chik(2-1-3))?,What does สมาชิก (sa-ma-chik(2-1-3)) mean?,สมาชิก,sa-ma-chik(2-1-3),חבר (במועדון / קבוצה),member,vocab_0335
+qv19_0995,4,write_he_to_thai,כתוב בתאית: חבר (במועדון / קבוצה) — member (sa-ma-chik(2-1-3)),Write in Thai: member — חבר (במועדון / קבוצה) (sa-ma-chik(2-1-3)),สมาชิก,sa-ma-chik(2-1-3),חבר (במועדון / קבוצה),member,vocab_0335
+qv19_0996,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: sa-ma-chik(2-1-3) — חבר (במועדון / קבוצה) / member,Write Thai from romanization: sa-ma-chik(2-1-3) — member / חבר (במועדון / קבוצה),สมาชิก,sa-ma-chik(2-1-3),חבר (במועדון / קבוצה),member,vocab_0335
+qv19_0997,2,mcq_read_meaning,מה המשמעות של เด็ก (dek(2))?,What does เด็ก (dek(2)) mean?,เด็ก,dek(2),ילד,child,vocab_0336
+qv19_0998,2,write_he_to_thai,כתוב בתאית: ילד — child (dek(2)),Write in Thai: child — ילד (dek(2)),เด็ก,dek(2),ילד,child,vocab_0336
+qv19_0999,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: dek(2) — ילד / child,Write Thai from romanization: dek(2) — child / ילד,เด็ก,dek(2),ילד,child,vocab_0336
+qv19_1000,3,mcq_read_meaning,מה המשמעות של น้ำมัน (nam-man(1-1))?,What does น้ำมัน (nam-man(1-1)) mean?,น้ำมัน,nam-man(1-1),שמן / דלק,oil / fuel,vocab_0337
+qv19_1001,3,write_he_to_thai,כתוב בתאית: שמן / דלק — oil / fuel (nam-man(1-1)),Write in Thai: oil / fuel — שמן / דלק (nam-man(1-1)),น้ำมัน,nam-man(1-1),שמן / דלק,oil / fuel,vocab_0337
+qv19_1002,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: nam-man(1-1) — שמן / דלק / oil / fuel,Write Thai from romanization: nam-man(1-1) — oil / fuel / שמן / דלק,น้ำมัน,nam-man(1-1),שמן / דלק,oil / fuel,vocab_0337
+qv19_1003,4,mcq_read_meaning,מה המשמעות של ปั๊มน้ำมัน (bpum-nam-man(3-1-1))?,What does ปั๊มน้ำมัน (bpum-nam-man(3-1-1)) mean?,ปั๊มน้ำมัน,bpum-nam-man(3-1-1),תחנת דלק,gas station,vocab_0338
+qv19_1004,4,write_he_to_thai,כתוב בתאית: תחנת דלק — gas station (bpum-nam-man(3-1-1)),Write in Thai: gas station — תחנת דלק (bpum-nam-man(3-1-1)),ปั๊มน้ำมัน,bpum-nam-man(3-1-1),תחנת דלק,gas station,vocab_0338
+qv19_1005,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: bpum-nam-man(3-1-1) — תחנת דלק / gas station,Write Thai from romanization: bpum-nam-man(3-1-1) — gas station / תחנת דלק,ปั๊มน้ำมัน,bpum-nam-man(3-1-1),תחנת דלק,gas station,vocab_0338
+qv19_1006,2,mcq_read_meaning,מה המשמעות של กัน (gan(1))?,What does กัน (gan(1)) mean?,กัน,gan(1),אחד את השני / ביחד,each other / together,vocab_0339
+qv19_1007,2,write_he_to_thai,כתוב בתאית: אחד את השני / ביחד — each other / together (gan(1)),Write in Thai: each other / together — אחד את השני / ביחד (gan(1)),กัน,gan(1),אחד את השני / ביחד,each other / together,vocab_0339
+qv19_1008,2,write_roman_to_thai,כתוב בתאית לפי התעתיק: gan(1) — אחד את השני / ביחד / each other / together,Write Thai from romanization: gan(1) — each other / together / אחד את השני / ביחד,กัน,gan(1),אחד את השני / ביחד,each other / together,vocab_0339
+qv19_1009,4,mcq_read_meaning,מה המשמעות של แต่เช้า (dtae-chao)?,What does แต่เช้า (dtae-chao) mean?,แต่เช้า,dtae-chao,לפנות בוקר / מוקדם בבוקר,early in the morning,vocab_0340
+qv19_1010,4,write_he_to_thai,כתוב בתאית: לפנות בוקר / מוקדם בבוקר — early in the morning (dtae-chao),Write in Thai: early in the morning — לפנות בוקר / מוקדם בבוקר (dtae-chao),แต่เช้า,dtae-chao,לפנות בוקר / מוקדם בבוקר,early in the morning,vocab_0340
+qv19_1011,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: dtae-chao — לפנות בוקר / מוקדם בבוקר / early in the morning,Write Thai from romanization: dtae-chao — early in the morning / לפנות בוקר / מוקדם בבוקר,แต่เช้า,dtae-chao,לפנות בוקר / מוקדם בבוקר,early in the morning,vocab_0340
+qv19_1012,3,mcq_read_meaning,מה המשמעות של ตอนเช้า (dton-chao)?,What does ตอนเช้า (dton-chao) mean?,ตอนเช้า,dton-chao,בבוקר,morning / in the morning,vocab_0341
+qv19_1013,3,write_he_to_thai,כתוב בתאית: בבוקר — morning / in the morning (dton-chao),Write in Thai: morning / in the morning — בבוקר (dton-chao),ตอนเช้า,dton-chao,בבוקר,morning / in the morning,vocab_0341
+qv19_1014,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dton-chao — בבוקר / morning / in the morning,Write Thai from romanization: dton-chao — morning / in the morning / בבוקר,ตอนเช้า,dton-chao,בבוקר,morning / in the morning,vocab_0341
+qv19_1015,4,mcq_read_meaning,מה המשמעות של ตอนสาย (dton-saai)?,What does ตอนสาย (dton-saai) mean?,ตอนสาย,dton-saai,מאוחר בבוקר,late morning,vocab_0342
+qv19_1016,4,write_he_to_thai,כתוב בתאית: מאוחר בבוקר — late morning (dton-saai),Write in Thai: late morning — מאוחר בבוקר (dton-saai),ตอนสาย,dton-saai,מאוחר בבוקר,late morning,vocab_0342
+qv19_1017,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: dton-saai — מאוחר בבוקר / late morning,Write Thai from romanization: dton-saai — late morning / מאוחר בבוקר,ตอนสาย,dton-saai,מאוחר בבוקר,late morning,vocab_0342
+qv19_1018,3,mcq_read_meaning,מה המשמעות של ตอนเที่ยง (dton-tiang)?,What does ตอนเที่ยง (dton-tiang) mean?,ตอนเที่ยง,dton-tiang,בצהריים,noon / midday,vocab_0343
+qv19_1019,3,write_he_to_thai,כתוב בתאית: בצהריים — noon / midday (dton-tiang),Write in Thai: noon / midday — בצהריים (dton-tiang),ตอนเที่ยง,dton-tiang,בצהריים,noon / midday,vocab_0343
+qv19_1020,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dton-tiang — בצהריים / noon / midday,Write Thai from romanization: dton-tiang — noon / midday / בצהריים,ตอนเที่ยง,dton-tiang,בצהריים,noon / midday,vocab_0343
+qv19_1021,3,mcq_read_meaning,מה המשמעות של ตอนบ่าย (dton-baai)?,What does ตอนบ่าย (dton-baai) mean?,ตอนบ่าย,dton-baai,אחר הצהריים,afternoon,vocab_0344
+qv19_1022,3,write_he_to_thai,כתוב בתאית: אחר הצהריים — afternoon (dton-baai),Write in Thai: afternoon — אחר הצהריים (dton-baai),ตอนบ่าย,dton-baai,אחר הצהריים,afternoon,vocab_0344
+qv19_1023,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dton-baai — אחר הצהריים / afternoon,Write Thai from romanization: dton-baai — afternoon / אחר הצהריים,ตอนบ่าย,dton-baai,אחר הצהריים,afternoon,vocab_0344
+qv19_1024,3,mcq_read_meaning,מה המשמעות של ตอนเย็น (dton-yen)?,What does ตอนเย็น (dton-yen) mean?,ตอนเย็น,dton-yen,בערב,evening,vocab_0345
+qv19_1025,3,write_he_to_thai,כתוב בתאית: בערב — evening (dton-yen),Write in Thai: evening — בערב (dton-yen),ตอนเย็น,dton-yen,בערב,evening,vocab_0345
+qv19_1026,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dton-yen — בערב / evening,Write Thai from romanization: dton-yen — evening / בערב,ตอนเย็น,dton-yen,בערב,evening,vocab_0345
+qv19_1027,4,mcq_read_meaning,מה המשמעות של ตอนกลางคืน (dton-glaang-kheun)?,What does ตอนกลางคืน (dton-glaang-kheun) mean?,ตอนกลางคืน,dton-glaang-kheun,בלילה,night / at night,vocab_0346
+qv19_1028,4,write_he_to_thai,כתוב בתאית: בלילה — night / at night (dton-glaang-kheun),Write in Thai: night / at night — בלילה (dton-glaang-kheun),ตอนกลางคืน,dton-glaang-kheun,בלילה,night / at night,vocab_0346
+qv19_1029,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: dton-glaang-kheun — בלילה / night / at night,Write Thai from romanization: dton-glaang-kheun — night / at night / בלילה,ตอนกลางคืน,dton-glaang-kheun,בלילה,night / at night,vocab_0346
+qv19_1030,4,mcq_read_meaning,מה המשמעות של ตอนดึก (dton-deuk)?,What does ตอนดึก (dton-deuk) mean?,ตอนดึก,dton-deuk,מאוחר בלילה,late at night,vocab_0347
+qv19_1031,4,write_he_to_thai,כתוב בתאית: מאוחר בלילה — late at night (dton-deuk),Write in Thai: late at night — מאוחר בלילה (dton-deuk),ตอนดึก,dton-deuk,מאוחר בלילה,late at night,vocab_0347
+qv19_1032,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: dton-deuk — מאוחר בלילה / late at night,Write Thai from romanization: dton-deuk — late at night / מאוחר בלילה,ตอนดึก,dton-deuk,מאוחר בלילה,late at night,vocab_0347
+qv19_1033,3,mcq_read_meaning,מה המשמעות של เห็นด้วย (hen-duai)?,What does เห็นด้วย (hen-duai) mean?,เห็นด้วย,hen-duai,להסכים,agree,vocab_0348
+qv19_1034,3,write_he_to_thai,כתוב בתאית: להסכים — agree (hen-duai),Write in Thai: agree — להסכים (hen-duai),เห็นด้วย,hen-duai,להסכים,agree,vocab_0348
+qv19_1035,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: hen-duai — להסכים / agree,Write Thai from romanization: hen-duai — agree / להסכים,เห็นด้วย,hen-duai,להסכים,agree,vocab_0348
+qv19_1036,5,mcq_read_meaning,מה המשמעות של เห็นไหม (hen mai?)?,What does เห็นไหม (hen mai?) mean?,เห็นไหม,hen mai?,רואה?,Do you see?,vocab_0349
+qv19_1037,5,write_he_to_thai,כתוב בתאית: רואה? — Do you see? (hen mai?),Write in Thai: Do you see? — רואה? (hen mai?),เห็นไหม,hen mai?,רואה?,Do you see?,vocab_0349
+qv19_1038,5,write_roman_to_thai,כתוב בתאית לפי התעתיק: hen mai? — רואה? / Do you see?,Write Thai from romanization: hen mai? — Do you see? / רואה?,เห็นไหม,hen mai?,רואה?,Do you see?,vocab_0349
+qv19_1039,5,mcq_read_meaning,מה המשמעות של เห็นด้วยไหม (hen-duai mai?)?,What does เห็นด้วยไหม (hen-duai mai?) mean?,เห็นด้วยไหม,hen-duai mai?,האם אתה מסכים?,Do you agree?,vocab_0350
+qv19_1040,5,write_he_to_thai,כתוב בתאית: האם אתה מסכים? — Do you agree? (hen-duai mai?),Write in Thai: Do you agree? — האם אתה מסכים? (hen-duai mai?),เห็นด้วยไหม,hen-duai mai?,האם אתה מסכים?,Do you agree?,vocab_0350
+qv19_1041,5,write_roman_to_thai,כתוב בתאית לפי התעתיק: hen-duai mai? — האם אתה מסכים? / Do you agree?,Write Thai from romanization: hen-duai mai? — Do you agree? / האם אתה מסכים?,เห็นด้วยไหม,hen-duai mai?,האם אתה מסכים?,Do you agree?,vocab_0350
+qv19_1042,1,mcq_read_meaning,מה המשמעות של ยืน (yuen)?,What does ยืน (yuen) mean?,ยืน,yuen,לעמוד,stand,vocab_0351
+qv19_1043,1,write_he_to_thai,כתוב בתאית: לעמוד — stand (yuen),Write in Thai: stand — לעמוד (yuen),ยืน,yuen,לעמוד,stand,vocab_0351
+qv19_1044,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: yuen — לעמוד / stand,Write Thai from romanization: yuen — stand / לעמוד,ยืน,yuen,לעמוד,stand,vocab_0351
+qv19_1045,1,mcq_read_meaning,מה המשמעות של นั่ง (nang)?,What does นั่ง (nang) mean?,นั่ง,nang,לשבת,sit,vocab_0352
+qv19_1046,1,write_he_to_thai,כתוב בתאית: לשבת — sit (nang),Write in Thai: sit — לשבת (nang),นั่ง,nang,לשבת,sit,vocab_0352
+qv19_1047,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: nang — לשבת / sit,Write Thai from romanization: nang — sit / לשבת,นั่ง,nang,לשבת,sit,vocab_0352
+qv19_1048,1,mcq_read_meaning,מה המשמעות של เดิน (dern)?,What does เดิน (dern) mean?,เดิน,dern,ללכת,walk,vocab_0353
+qv19_1049,1,write_he_to_thai,כתוב בתאית: ללכת — walk (dern),Write in Thai: walk — ללכת (dern),เดิน,dern,ללכת,walk,vocab_0353
+qv19_1050,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: dern — ללכת / walk,Write Thai from romanization: dern — walk / ללכת,เดิน,dern,ללכת,walk,vocab_0353
+qv19_1051,1,mcq_read_meaning,מה המשמעות של ข้าม (khaam)?,What does ข้าม (khaam) mean?,ข้าม,khaam,לדלג,cross / skip over,vocab_0354
+qv19_1052,1,write_he_to_thai,כתוב בתאית: לדלג — cross / skip over (khaam),Write in Thai: cross / skip over — לדלג (khaam),ข้าม,khaam,לדלג,cross / skip over,vocab_0354
+qv19_1053,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: khaam — לדלג / cross / skip over,Write Thai from romanization: khaam — cross / skip over / לדלג,ข้าม,khaam,לדלג,cross / skip over,vocab_0354
+qv19_1054,4,mcq_read_meaning,מה המשמעות של ไม่ไหว (mai wai)?,What does ไม่ไหว (mai wai) mean?,ไม่ไหว,mai wai,לא יכול / לא מסוגל / לא עומד בזה,cannot handle it / cannot manage,vocab_0355
+qv19_1055,4,write_he_to_thai,כתוב בתאית: לא יכול / לא מסוגל / לא עומד בזה — cannot handle it / cannot manage (mai wai),Write in Thai: cannot handle it / cannot manage — לא יכול / לא מסוגל / לא עומד בזה (mai wai),ไม่ไหว,mai wai,לא יכול / לא מסוגל / לא עומד בזה,cannot handle it / cannot manage,vocab_0355
+qv19_1056,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai wai — לא יכול / לא מסוגל / לא עומד בזה / cannot handle it / cannot manage,Write Thai from romanization: mai wai — cannot handle it / cannot manage / לא יכול / לא מסוגל / לא עומד בזה,ไม่ไหว,mai wai,לא יכול / לא מסוגל / לא עומד בזה,cannot handle it / cannot manage,vocab_0355
+qv19_1057,4,mcq_read_meaning,מה המשמעות של ไม่ต้องห่วง (mai dtong huang)?,What does ไม่ต้องห่วง (mai dtong huang) mean?,ไม่ต้องห่วง,mai dtong huang,אל תדאג / אין מה לדאוג,do not worry,vocab_0356
+qv19_1058,4,write_he_to_thai,כתוב בתאית: אל תדאג / אין מה לדאוג — do not worry (mai dtong huang),Write in Thai: do not worry — אל תדאג / אין מה לדאוג (mai dtong huang),ไม่ต้องห่วง,mai dtong huang,אל תדאג / אין מה לדאוג,do not worry,vocab_0356
+qv19_1059,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai dtong huang — אל תדאג / אין מה לדאוג / do not worry,Write Thai from romanization: mai dtong huang — do not worry / אל תדאג / אין מה לדאוג,ไม่ต้องห่วง,mai dtong huang,אל תדאג / אין מה לדאוג,do not worry,vocab_0356
+qv19_1060,4,mcq_read_meaning,מה המשמעות של ไม่สนใจ (mai son jai)?,What does ไม่สนใจ (mai son jai) mean?,ไม่สนใจ,mai son jai,לא מעוניין / לא אכפת,not interested / do not care,vocab_0357
+qv19_1061,4,write_he_to_thai,כתוב בתאית: לא מעוניין / לא אכפת — not interested / do not care (mai son jai),Write in Thai: not interested / do not care — לא מעוניין / לא אכפת (mai son jai),ไม่สนใจ,mai son jai,לא מעוניין / לא אכפת,not interested / do not care,vocab_0357
+qv19_1062,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai son jai — לא מעוניין / לא אכפת / not interested / do not care,Write Thai from romanization: mai son jai — not interested / do not care / לא מעוניין / לא אכפת,ไม่สนใจ,mai son jai,לא מעוניין / לא אכפת,not interested / do not care,vocab_0357
+qv19_1063,4,mcq_read_meaning,מה המשמעות של ไม่มีอะไร (mai mee a-rai)?,What does ไม่มีอะไร (mai mee a-rai) mean?,ไม่มีอะไร,mai mee a-rai,אין כלום,there is nothing / nothing,vocab_0358
+qv19_1064,4,write_he_to_thai,כתוב בתאית: אין כלום — there is nothing / nothing (mai mee a-rai),Write in Thai: there is nothing / nothing — אין כלום (mai mee a-rai),ไม่มีอะไร,mai mee a-rai,אין כלום,there is nothing / nothing,vocab_0358
+qv19_1065,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai mee a-rai — אין כלום / there is nothing / nothing,Write Thai from romanization: mai mee a-rai — there is nothing / nothing / אין כלום,ไม่มีอะไร,mai mee a-rai,אין כלום,there is nothing / nothing,vocab_0358
+qv19_1066,3,mcq_read_meaning,מה המשמעות של ไม่ต้อง (mai dtong)?,What does ไม่ต้อง (mai dtong) mean?,ไม่ต้อง,mai dtong,לא צריך / אין צורך,do not need,vocab_0359
+qv19_1067,3,write_he_to_thai,כתוב בתאית: לא צריך / אין צורך — do not need (mai dtong),Write in Thai: do not need — לא צריך / אין צורך (mai dtong),ไม่ต้อง,mai dtong,לא צריך / אין צורך,do not need,vocab_0359
+qv19_1068,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai dtong — לא צריך / אין צורך / do not need,Write Thai from romanization: mai dtong — do not need / לא צריך / אין צורך,ไม่ต้อง,mai dtong,לא צריך / אין צורך,do not need,vocab_0359
+qv19_1069,4,mcq_read_meaning,מה המשמעות של ไม่มีปัญหา (mai mee pan-haa)?,What does ไม่มีปัญหา (mai mee pan-haa) mean?,ไม่มีปัญหา,mai mee pan-haa,אין בעיה,no problem,vocab_0360
+qv19_1070,4,write_he_to_thai,כתוב בתאית: אין בעיה — no problem (mai mee pan-haa),Write in Thai: no problem — אין בעיה (mai mee pan-haa),ไม่มีปัญหา,mai mee pan-haa,אין בעיה,no problem,vocab_0360
+qv19_1071,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai mee pan-haa — אין בעיה / no problem,Write Thai from romanization: mai mee pan-haa — no problem / אין בעיה,ไม่มีปัญหา,mai mee pan-haa,אין בעיה,no problem,vocab_0360
+qv19_1072,4,mcq_read_meaning,מה המשמעות של ไม่มีทาง (mâi mee taang)?,What does ไม่มีทาง (mâi mee taang) mean?,ไม่มีทาง,mâi mee taang,אין מצב / אין סיכוי,no way,vocab_0361
+qv19_1073,4,write_he_to_thai,כתוב בתאית: אין מצב / אין סיכוי — no way (mâi mee taang),Write in Thai: no way — אין מצב / אין סיכוי (mâi mee taang),ไม่มีทาง,mâi mee taang,אין מצב / אין סיכוי,no way,vocab_0361
+qv19_1074,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mâi mee taang — אין מצב / אין סיכוי / no way,Write Thai from romanization: mâi mee taang — no way / אין מצב / אין סיכוי,ไม่มีทาง,mâi mee taang,אין מצב / אין סיכוי,no way,vocab_0361
+qv19_1075,5,mcq_read_meaning,מה המשמעות של ว่าไง (wâa ngai)?,What does ว่าไง (wâa ngai) mean?,ว่าไง,wâa ngai,מה קורה? / מה נשמע?,what’s up?,vocab_0362
+qv19_1076,5,write_he_to_thai,כתוב בתאית: מה קורה? / מה נשמע? — what’s up? (wâa ngai),Write in Thai: what’s up? — מה קורה? / מה נשמע? (wâa ngai),ว่าไง,wâa ngai,מה קורה? / מה נשמע?,what’s up?,vocab_0362
+qv19_1077,5,write_roman_to_thai,כתוב בתאית לפי התעתיק: wâa ngai — מה קורה? / מה נשמע? / what’s up?,Write Thai from romanization: wâa ngai — what’s up? / מה קורה? / מה נשמע?,ว่าไง,wâa ngai,מה קורה? / מה נשמע?,what’s up?,vocab_0362
+qv19_1078,4,mcq_read_meaning,מה המשמעות של ไม่เก็ทอะ (mâi get à)?,What does ไม่เก็ทอะ (mâi get à) mean?,ไม่เก็ทอะ,mâi get à,אני לא מבין / לא קולט,I do not get it,vocab_0363
+qv19_1079,4,write_he_to_thai,כתוב בתאית: אני לא מבין / לא קולט — I do not get it (mâi get à),Write in Thai: I do not get it — אני לא מבין / לא קולט (mâi get à),ไม่เก็ทอะ,mâi get à,אני לא מבין / לא קולט,I do not get it,vocab_0363
+qv19_1080,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: mâi get à — אני לא מבין / לא קולט / I do not get it,Write Thai from romanization: mâi get à — I do not get it / אני לא מבין / לא קולט,ไม่เก็ทอะ,mâi get à,אני לא מבין / לא קולט,I do not get it,vocab_0363
+qv19_1081,5,mcq_read_meaning,מה המשמעות של แล้วไง (láew ngai)?,What does แล้วไง (láew ngai) mean?,แล้วไง,láew ngai,אז מה?,so what?,vocab_0364
+qv19_1082,5,write_he_to_thai,כתוב בתאית: אז מה? — so what? (láew ngai),Write in Thai: so what? — אז מה? (láew ngai),แล้วไง,láew ngai,אז מה?,so what?,vocab_0364
+qv19_1083,5,write_roman_to_thai,כתוב בתאית לפי התעתיק: láew ngai — אז מה? / so what?,Write Thai from romanization: láew ngai — so what? / אז מה?,แล้วไง,láew ngai,אז מה?,so what?,vocab_0364
+qv19_1084,3,mcq_read_meaning,מה המשמעות של คิดว่า (khít wâa)?,What does คิดว่า (khít wâa) mean?,คิดว่า,khít wâa,לחשוב ש...,think that,vocab_0365
+qv19_1085,3,write_he_to_thai,כתוב בתאית: לחשוב ש... — think that (khít wâa),Write in Thai: think that — לחשוב ש... (khít wâa),คิดว่า,khít wâa,לחשוב ש...,think that,vocab_0365
+qv19_1086,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: khít wâa — לחשוב ש... / think that,Write Thai from romanization: khít wâa — think that / לחשוב ש...,คิดว่า,khít wâa,לחשוב ש...,think that,vocab_0365
+qv19_1087,3,mcq_read_meaning,מה המשמעות של พูดว่า (phuut waa)?,What does พูดว่า (phuut waa) mean?,พูดว่า,phuut waa,לומר ש...,say that...,vocab_0366
+qv19_1088,3,write_he_to_thai,כתוב בתאית: לומר ש... — say that... (phuut waa),Write in Thai: say that... — לומר ש... (phuut waa),พูดว่า,phuut waa,לומר ש...,say that...,vocab_0366
+qv19_1089,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: phuut waa — לומר ש... / say that...,Write Thai from romanization: phuut waa — say that... / לומר ש...,พูดว่า,phuut waa,לומר ש...,say that...,vocab_0366
+qv19_1090,3,mcq_read_meaning,מה המשמעות של บอกว่า (bòk wâa)?,What does บอกว่า (bòk wâa) mean?,บอกว่า,bòk wâa,לספר / להגיד ש...,tell / say that,vocab_0367
+qv19_1091,3,write_he_to_thai,כתוב בתאית: לספר / להגיד ש... — tell / say that (bòk wâa),Write in Thai: tell / say that — לספר / להגיד ש... (bòk wâa),บอกว่า,bòk wâa,לספר / להגיד ש...,tell / say that,vocab_0367
+qv19_1092,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: bòk wâa — לספר / להגיד ש... / tell / say that,Write Thai from romanization: bòk wâa — tell / say that / לספר / להגיד ש...,บอกว่า,bòk wâa,לספר / להגיד ש...,tell / say that,vocab_0367
+qv19_1093,4,mcq_read_meaning,מה המשמעות של รู้สึกว่า (rúu sèuk wâa)?,What does รู้สึกว่า (rúu sèuk wâa) mean?,รู้สึกว่า,rúu sèuk wâa,להרגיש ש...,feel that,vocab_0368
+qv19_1094,4,write_he_to_thai,כתוב בתאית: להרגיש ש... — feel that (rúu sèuk wâa),Write in Thai: feel that — להרגיש ש... (rúu sèuk wâa),รู้สึกว่า,rúu sèuk wâa,להרגיש ש...,feel that,vocab_0368
+qv19_1095,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: rúu sèuk wâa — להרגיש ש... / feel that,Write Thai from romanization: rúu sèuk wâa — feel that / להרגיש ש...,รู้สึกว่า,rúu sèuk wâa,להרגיש ש...,feel that,vocab_0368
+qv19_1096,3,mcq_read_meaning,מה המשמעות של เพราะว่า (phróh wâa)?,What does เพราะว่า (phróh wâa) mean?,เพราะว่า,phróh wâa,בגלל ש...,because,vocab_0369
+qv19_1097,3,write_he_to_thai,כתוב בתאית: בגלל ש... — because (phróh wâa),Write in Thai: because — בגלל ש... (phróh wâa),เพราะว่า,phróh wâa,בגלל ש...,because,vocab_0369
+qv19_1098,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: phróh wâa — בגלל ש... / because,Write Thai from romanization: phróh wâa — because / בגלל ש...,เพราะว่า,phróh wâa,בגלל ש...,because,vocab_0369
+qv19_1099,4,mcq_read_meaning,מה המשמעות של ได้ยินว่า (dai-yin waa)?,What does ได้ยินว่า (dai-yin waa) mean?,ได้ยินว่า,dai-yin waa,לשמוע ש...,hear that...,vocab_0370
+qv19_1100,4,write_he_to_thai,כתוב בתאית: לשמוע ש... — hear that... (dai-yin waa),Write in Thai: hear that... — לשמוע ש... (dai-yin waa),ได้ยินว่า,dai-yin waa,לשמוע ש...,hear that...,vocab_0370
+qv19_1101,4,write_roman_to_thai,כתוב בתאית לפי התעתיק: dai-yin waa — לשמוע ש... / hear that...,Write Thai from romanization: dai-yin waa — hear that... / לשמוע ש...,ได้ยินว่า,dai-yin waa,לשמוע ש...,hear that...,vocab_0370
+qv19_1102,3,mcq_read_meaning,מה המשמעות של ต้นไม้ (ton mai)?,What does ต้นไม้ (ton mai) mean?,ต้นไม้,ton mai,צמח / עץ,plant / tree,vocab_0371
+qv19_1103,3,write_he_to_thai,כתוב בתאית: צמח / עץ — plant / tree (ton mai),Write in Thai: plant / tree — צמח / עץ (ton mai),ต้นไม้,ton mai,צמח / עץ,plant / tree,vocab_0371
+qv19_1104,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: ton mai — צמח / עץ / plant / tree,Write Thai from romanization: ton mai — plant / tree / צמח / עץ,ต้นไม้,ton mai,צמח / עץ,plant / tree,vocab_0371
+qv19_1105,1,mcq_read_meaning,מה המשמעות של บาง (baang)?,What does บาง (baang) mean?,บาง,baang,חלק מ..,some / part of,vocab_0372
+qv19_1106,1,write_he_to_thai,כתוב בתאית: חלק מ.. — some / part of (baang),Write in Thai: some / part of — חלק מ.. (baang),บาง,baang,חלק מ..,some / part of,vocab_0372
+qv19_1107,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: baang — חלק מ.. / some / part of,Write Thai from romanization: baang — some / part of / חלק מ..,บาง,baang,חלק מ..,some / part of,vocab_0372
+qv19_1108,3,mcq_read_meaning,מה המשמעות של ด้วยกัน (duay gan)?,What does ด้วยกัน (duay gan) mean?,ด้วยกัน,duay gan,יחדיו,together,vocab_0373
+qv19_1109,3,write_he_to_thai,כתוב בתאית: יחדיו — together (duay gan),Write in Thai: together — יחדיו (duay gan),ด้วยกัน,duay gan,יחדיו,together,vocab_0373
+qv19_1110,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: duay gan — יחדיו / together,Write Thai from romanization: duay gan — together / יחדיו,ด้วยกัน,duay gan,יחדיו,together,vocab_0373
+qv19_1111,3,mcq_read_meaning,מה המשמעות של บางที (baang tii)?,What does บางที (baang tii) mean?,บางที,baang tii,יכול להיות,maybe / sometimes,vocab_0374
+qv19_1112,3,write_he_to_thai,כתוב בתאית: יכול להיות — maybe / sometimes (baang tii),Write in Thai: maybe / sometimes — יכול להיות (baang tii),บางที,baang tii,יכול להיות,maybe / sometimes,vocab_0374
+qv19_1113,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: baang tii — יכול להיות / maybe / sometimes,Write Thai from romanization: baang tii — maybe / sometimes / יכול להיות,บางที,baang tii,יכול להיות,maybe / sometimes,vocab_0374
+qv19_1114,3,mcq_read_meaning,מה המשמעות של พวกเขา (phuak khao)?,What does พวกเขา (phuak khao) mean?,พวกเขา,phuak khao,הם,they / them,vocab_0375
+qv19_1115,3,write_he_to_thai,כתוב בתאית: הם — they / them (phuak khao),Write in Thai: they / them — הם (phuak khao),พวกเขา,phuak khao,הם,they / them,vocab_0375
+qv19_1116,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: phuak khao — הם / they / them,Write Thai from romanization: phuak khao — they / them / הם,พวกเขา,phuak khao,הם,they / them,vocab_0375
+qv19_1117,3,mcq_read_meaning,מה המשמעות של บางวัน (baang wan)?,What does บางวัน (baang wan) mean?,บางวัน,baang wan,חלק מהימים,some days,vocab_0376
+qv19_1118,3,write_he_to_thai,כתוב בתאית: חלק מהימים — some days (baang wan),Write in Thai: some days — חלק מהימים (baang wan),บางวัน,baang wan,חלק מהימים,some days,vocab_0376
+qv19_1119,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: baang wan — חלק מהימים / some days,Write Thai from romanization: baang wan — some days / חלק מהימים,บางวัน,baang wan,חלק מהימים,some days,vocab_0376
+qv19_1120,3,mcq_read_meaning,מה המשמעות של ทุกที่ (tug tii)?,What does ทุกที่ (tug tii) mean?,ทุกที่,tug tii,בכל מקום,everywhere,vocab_0377
+qv19_1121,3,write_he_to_thai,כתוב בתאית: בכל מקום — everywhere (tug tii),Write in Thai: everywhere — בכל מקום (tug tii),ทุกที่,tug tii,בכל מקום,everywhere,vocab_0377
+qv19_1122,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: tug tii — בכל מקום / everywhere,Write Thai from romanization: tug tii — everywhere / בכל מקום,ทุกที่,tug tii,בכל מקום,everywhere,vocab_0377
+qv19_1123,1,mcq_read_meaning,מה המשמעות של ออก (awk)?,What does ออก (awk) mean?,ออก,awk,"יציאה,החוצה",exit / out / go out,vocab_0378
+qv19_1124,1,write_he_to_thai,"כתוב בתאית: יציאה,החוצה — exit / out / go out (awk)","Write in Thai: exit / out / go out — יציאה,החוצה (awk)",ออก,awk,"יציאה,החוצה",exit / out / go out,vocab_0378
+qv19_1125,1,write_roman_to_thai,"כתוב בתאית לפי התעתיק: awk — יציאה,החוצה / exit / out / go out","Write Thai from romanization: awk — exit / out / go out / יציאה,החוצה",ออก,awk,"יציאה,החוצה",exit / out / go out,vocab_0378
+qv19_1126,1,mcq_read_meaning,מה המשמעות של อุ่น (un)?,What does อุ่น (un) mean?,อุ่น,un,"חמים,חם",warm,vocab_0379
+qv19_1127,1,write_he_to_thai,"כתוב בתאית: חמים,חם — warm (un)","Write in Thai: warm — חמים,חם (un)",อุ่น,un,"חמים,חם",warm,vocab_0379
+qv19_1128,1,write_roman_to_thai,"כתוב בתאית לפי התעתיק: un — חמים,חם / warm","Write Thai from romanization: un — warm / חמים,חם",อุ่น,un,"חמים,חם",warm,vocab_0379
+qv19_1129,5,mcq_read_meaning,מה המשמעות של ตอนผมเด็ก ๆ (dton phom dek dek)?,What does ตอนผมเด็ก ๆ (dton phom dek dek) mean?,ตอนผมเด็ก ๆ,dton phom dek dek,כשהייתי ילד,when I was a child,vocab_0380
+qv19_1130,5,write_he_to_thai,כתוב בתאית: כשהייתי ילד — when I was a child (dton phom dek dek),Write in Thai: when I was a child — כשהייתי ילד (dton phom dek dek),ตอนผมเด็ก ๆ,dton phom dek dek,כשהייתי ילד,when I was a child,vocab_0380
+qv19_1131,5,write_roman_to_thai,כתוב בתאית לפי התעתיק: dton phom dek dek — כשהייתי ילד / when I was a child,Write Thai from romanization: dton phom dek dek — when I was a child / כשהייתי ילד,ตอนผมเด็ก ๆ,dton phom dek dek,כשהייתי ילד,when I was a child,vocab_0380
+qv19_1132,1,mcq_read_meaning,מה המשמעות של เข้า (khao)?,What does เข้า (khao) mean?,เข้า,khao,להיכנס / כניסה,enter / go in,vocab_0381
+qv19_1133,1,write_he_to_thai,כתוב בתאית: להיכנס / כניסה — enter / go in (khao),Write in Thai: enter / go in — להיכנס / כניסה (khao),เข้า,khao,להיכנס / כניסה,enter / go in,vocab_0381
+qv19_1134,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: khao — להיכנס / כניסה / enter / go in,Write Thai from romanization: khao — enter / go in / להיכנס / כניסה,เข้า,khao,להיכנס / כניסה,enter / go in,vocab_0381
+qv19_1135,1,mcq_read_meaning,מה המשמעות של หน้า (naa)?,What does หน้า (naa) mean?,หน้า,naa,פנים / קדימה / עונה / דף,face / front / season / page,vocab_0382
+qv19_1136,1,write_he_to_thai,כתוב בתאית: פנים / קדימה / עונה / דף — face / front / season / page (naa),Write in Thai: face / front / season / page — פנים / קדימה / עונה / דף (naa),หน้า,naa,פנים / קדימה / עונה / דף,face / front / season / page,vocab_0382
+qv19_1137,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: naa — פנים / קדימה / עונה / דף / face / front / season / page,Write Thai from romanization: naa — face / front / season / page / פנים / קדימה / עונה / דף,หน้า,naa,פנים / קדימה / עונה / דף,face / front / season / page,vocab_0382
+qv19_1138,3,mcq_read_meaning,מה המשמעות של โรงพัก (rong pag)?,What does โรงพัก (rong pag) mean?,โรงพัก,rong pag,תחנת משטרה,police station,vocab_0383
+qv19_1139,3,write_he_to_thai,כתוב בתאית: תחנת משטרה — police station (rong pag),Write in Thai: police station — תחנת משטרה (rong pag),โรงพัก,rong pag,תחנת משטרה,police station,vocab_0383
+qv19_1140,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: rong pag — תחנת משטרה / police station,Write Thai from romanization: rong pag — police station / תחנת משטרה,โรงพัก,rong pag,תחנת משטרה,police station,vocab_0383
+qv19_1141,3,mcq_read_meaning,מה המשמעות של ไม่ได้… (mai dai+v)?,What does ไม่ได้… (mai dai+v) mean?,ไม่ได้…,mai dai+v,לא עשיתי,did not / cannot + verb,vocab_0384
+qv19_1142,3,write_he_to_thai,כתוב בתאית: לא עשיתי — did not / cannot + verb (mai dai+v),Write in Thai: did not / cannot + verb — לא עשיתי (mai dai+v),ไม่ได้…,mai dai+v,לא עשיתי,did not / cannot + verb,vocab_0384
+qv19_1143,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: mai dai+v — לא עשיתי / did not / cannot + verb,Write Thai from romanization: mai dai+v — did not / cannot + verb / לא עשיתי,ไม่ได้…,mai dai+v,לא עשיתי,did not / cannot + verb,vocab_0384
+qv19_1144,5,mcq_read_meaning,מה המשמעות של ดีใจที่ได้เจอ (dii-jai tii dai jer)?,What does ดีใจที่ได้เจอ (dii-jai tii dai jer) mean?,ดีใจที่ได้เจอ,dii-jai tii dai jer,נחמד לראותך,nice to see you,vocab_0385
+qv19_1145,5,write_he_to_thai,כתוב בתאית: נחמד לראותך — nice to see you (dii-jai tii dai jer),Write in Thai: nice to see you — נחמד לראותך (dii-jai tii dai jer),ดีใจที่ได้เจอ,dii-jai tii dai jer,נחמד לראותך,nice to see you,vocab_0385
+qv19_1146,5,write_roman_to_thai,כתוב בתאית לפי התעתיק: dii-jai tii dai jer — נחמד לראותך / nice to see you,Write Thai from romanization: dii-jai tii dai jer — nice to see you / נחמד לראותך,ดีใจที่ได้เจอ,dii-jai tii dai jer,נחמד לראותך,nice to see you,vocab_0385
+qv19_1147,1,mcq_read_meaning,מה המשמעות של ผึ้ง (phueng)?,What does ผึ้ง (phueng) mean?,ผึ้ง,phueng,דבורה,bee,vocab_0386
+qv19_1148,1,write_he_to_thai,כתוב בתאית: דבורה — bee (phueng),Write in Thai: bee — דבורה (phueng),ผึ้ง,phueng,דבורה,bee,vocab_0386
+qv19_1149,1,write_roman_to_thai,כתוב בתאית לפי התעתיק: phueng — דבורה / bee,Write Thai from romanization: phueng — bee / דבורה,ผึ้ง,phueng,דבורה,bee,vocab_0386
+qv19_1150,3,mcq_read_meaning,מה המשמעות של ต่อย (dtoy)?,What does ต่อย (dtoy) mean?,ต่อย,dtoy,אגרוף / לעקוץ,to punch / to sting,vocab_0387
+qv19_1151,3,write_he_to_thai,כתוב בתאית: אגרוף / לעקוץ — to punch / to sting (dtoy),Write in Thai: to punch / to sting — אגרוף / לעקוץ (dtoy),ต่อย,dtoy,אגרוף / לעקוץ,to punch / to sting,vocab_0387
+qv19_1152,3,write_roman_to_thai,כתוב בתאית לפי התעתיק: dtoy — אגרוף / לעקוץ / to punch / to sting,Write Thai from romanization: dtoy — to punch / to sting / אגרוף / לעקוץ,ต่อย,dtoy,אגרוף / לעקוץ,to punch / to sting,vocab_0387

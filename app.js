@@ -13,7 +13,7 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.19', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.20', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
@@ -27,7 +27,7 @@ const I18N = {
     syncSaved:'כתובת הסנכרון נשמרה.', uploadOk:'העלאה לענן הצליחה ✅', uploadSent:'העלאה לענן נשלחה בהצלחה ✅', downloadOk:'הורדה מהענן הצליחה ✅', uploadErr:'שגיאת העלאה: ', downloadErr:'שגיאת הורדה: '
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.19', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.20', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
@@ -389,7 +389,6 @@ const WORDS = [
   {id:"uv19_0211",level:3,thai:"มะพร้าว",roman:"ma-prao",hebrew:"קוקוס",english:"coconut",tone:'not_drilled',source:"תומר 6,csv.txt"},
   {id:"uv19_0212",level:1,thai:"กล้วย",roman:"gluay",hebrew:"בננה",english:"banana",tone:'not_drilled',source:"תומר 6,csv.txt"},
   {id:"uv19_0213",level:4,thai:"สับปะรด",roman:"sup-pa-rot",hebrew:"אננס",english:"pineapple",tone:'not_drilled',source:"תומר 6,csv.txt"},
-  {id:"uv19_0214",level:1,thai:"แตงโม",roman:"dtaeng-mo",hebrew:"אבטיח",english:"watermelon",tone:'not_drilled',source:"תומר 6,csv.txt"},
   {id:"uv19_0215",level:3,thai:"น้ำแข็ง",roman:"nam-kaeng",hebrew:"קרח",english:"ice",tone:'not_drilled',source:"תומר 6,csv.txt"},
   {id:"uv19_0216",level:3,thai:"น้ำส้ม",roman:"nam-som",hebrew:"מיץ תפוזים",english:"orange juice",tone:'not_drilled',source:"תומר 6,csv.txt"},
   {id:"uv19_0217",level:3,thai:"กาแฟ",roman:"ga-fe",hebrew:"קפה",english:"coffee",tone:'not_drilled',source:"תומר 6,csv.txt"},
@@ -620,35 +619,75 @@ const CONSONANTS = [
 const BOARD_ITEMS = VOWELS.concat(CONSONANTS);
 
 const THAI_CONSONANT_INFO = {
-  'ก': ['กอ ไก่','middle','g/k','k','dead'], 'จ': ['จอ จาน','middle','j','t','dead'], 'ฎ': ['ฎอ ชฎา','middle','d','t','dead'], 'ฏ': ['ฏอ ปฏัก','middle','dt/t','t','dead'], 'ด': ['ดอ เด็ก','middle','d','t','dead'], 'ต': ['ตอ เต่า','middle','dt/t','t','dead'], 'บ': ['บอ ใบไม้','middle','b','p','dead'], 'ป': ['ปอ ปลา','middle','bp/p','p','dead'], 'อ': ['ออ อ่าง','middle','vowel carrier / ɔɔ','—','carrier'],
-  'ข': ['ขอ ไข่','high','kh','k','dead'], 'ฃ': ['ฃอ ขวด','high','kh','k','dead'], 'ฉ': ['ฉอ ฉิ่ง','high','ch','rare','rare'], 'ฐ': ['ฐอ ฐาน','high','th','t','dead'], 'ถ': ['ถอ ถุง','high','th','t','dead'], 'ผ': ['ผอ ผึ้ง','high','ph','rare','rare'], 'ฝ': ['ฝอ ฝา','high','f','rare','rare'], 'ศ': ['ศอ ศาลา','high','s','t','dead'], 'ษ': ['ษอ ฤๅษี','high','s','t','dead'], 'ส': ['สอ เสือ','high','s','t','dead'], 'ห': ['หอ หีบ','high','h','rare','rare'],
-  'ค': ['คอ ควาย','low','kh','k','dead'], 'ฅ': ['ฅอ คน','low','kh','k','dead'], 'ฆ': ['ฆอ ระฆัง','low','kh','k','dead'], 'ช': ['ชอ ช้าง','low','ch','t','dead'], 'ซ': ['ซอ โซ่','low','s','t','dead'], 'ฌ': ['ฌอ เฌอ','low','ch','t','dead'], 'ฑ': ['ฑอ มณโฑ','low','th/d','t','dead'], 'ฒ': ['ฒอ ผู้เฒ่า','low','th','t','dead'], 'ท': ['ทอ ทหาร','low','th','t','dead'], 'ธ': ['ธอ ธง','low','th','t','dead'], 'พ': ['พอ พาน','low','ph','p','dead'], 'ฟ': ['ฟอ ฟัน','low','f','p','dead'], 'ภ': ['ภอ สำเภา','low','ph','p','dead'], 'ฮ': ['ฮอ นกฮูก','low','h','rare','rare'],
-  'ง': ['งอ งู','low','ng','ng','live'], 'ญ': ['ญอ หญิง','low','y','n','live'], 'ณ': ['ณอ เณร','low','n','n','live'], 'น': ['นอ หนู','low','n','n','live'], 'ม': ['มอ ม้า','low','m','m','live'], 'ย': ['ยอ ยักษ์','low','y','y','live'], 'ร': ['รอ เรือ','low','r','n','live'], 'ล': ['ลอ ลิง','low','l','n','live'], 'ว': ['วอ แหวน','low','w','w','live'], 'ฬ': ['ฬอ จุฬา','low','l','n','live']
+  'ก': {name:'กอ ไก่', romanName:'go gai / ko kai', cls:'middle', initial:'g/k', final:'k', finalKind:'dead', word:'ไก่', wordRoman:'gai', he:'תרנגולת', en:'chicken'},
+  'ข': {name:'ขอ ไข่', romanName:'kho khai', cls:'high', initial:'kh', final:'k', finalKind:'dead', word:'ไข่', wordRoman:'khai', he:'ביצה', en:'egg'},
+  'ฃ': {name:'ฃอ ขวด', romanName:'kho khuat', cls:'high', initial:'kh', final:'k', finalKind:'dead', word:'ขวด', wordRoman:'khuat', he:'בקבוק', en:'bottle', usageHe:'אות נדירה/כמעט לא בשימוש מודרני.', usageEn:'Rare/obsolete letter in modern Thai.'},
+  'ค': {name:'คอ ควาย', romanName:'kho khwai', cls:'low', initial:'kh', final:'k', finalKind:'dead', word:'ควาย', wordRoman:'khwai', he:'תאו מים', en:'water buffalo'},
+  'ฅ': {name:'ฅอ คน', romanName:'kho khon', cls:'low', initial:'kh', final:'k', finalKind:'dead', word:'คน', wordRoman:'khon', he:'אדם / אנשים', en:'person / people', usageHe:'אות נדירה/כמעט לא בשימוש מודרני.', usageEn:'Rare/obsolete letter in modern Thai.'},
+  'ฆ': {name:'ฆอ ระฆัง', romanName:'kho ra-khang', cls:'low', initial:'kh', final:'k', finalKind:'dead', word:'ระฆัง', wordRoman:'ra-khang', he:'פעמון', en:'bell'},
+  'ง': {name:'งอ งู', romanName:'ngo nguu', cls:'low', initial:'ng', final:'ng', finalKind:'live', word:'งู', wordRoman:'nguu', he:'נחש', en:'snake'},
+  'จ': {name:'จอ จาน', romanName:'jo jaan', cls:'middle', initial:'j', final:'t', finalKind:'dead', word:'จาน', wordRoman:'jaan', he:'צלחת', en:'plate'},
+  'ฉ': {name:'ฉอ ฉิ่ง', romanName:'cho ching', cls:'high', initial:'ch', final:'rare', finalKind:'rare', word:'ฉิ่ง', wordRoman:'ching', he:'מצלתיים קטנות', en:'small cymbals'},
+  'ช': {name:'ชอ ช้าง', romanName:'cho chang', cls:'low', initial:'ch', final:'t', finalKind:'dead', word:'ช้าง', wordRoman:'chang', he:'פיל', en:'elephant'},
+  'ซ': {name:'ซอ โซ่', romanName:'so so', cls:'low', initial:'s', final:'t', finalKind:'dead', word:'โซ่', wordRoman:'so', he:'שרשרת', en:'chain'},
+  'ฌ': {name:'ฌอ เฌอ', romanName:'cho choe', cls:'low', initial:'ch', final:'t', finalKind:'dead', word:'เฌอ', wordRoman:'choe', he:'עץ', en:'tree'},
+  'ญ': {name:'ญอ หญิง', romanName:'yo ying', cls:'low', initial:'y', final:'n', finalKind:'live', word:'หญิง', wordRoman:'ying', he:'אישה / נקבה', en:'woman / female'},
+  'ฎ': {name:'ฎอ ชฎา', romanName:'do chada', cls:'middle', initial:'d', final:'t', finalKind:'dead', word:'ชฎา', wordRoman:'chada', he:'כתר/כיסוי ראש תאילנדי', en:'Thai headdress'},
+  'ฏ': {name:'ฏอ ปฏัก', romanName:'to patak', cls:'middle', initial:'dt/t', final:'t', finalKind:'dead', word:'ปฏัก', wordRoman:'patak', he:'מוט דקירה / דרבן', en:'goad / spear-like prod'},
+  'ฐ': {name:'ฐอ ฐาน', romanName:'tho than', cls:'high', initial:'th', final:'t', finalKind:'dead', word:'ฐาน', wordRoman:'than', he:'בסיס / כן', en:'base / pedestal'},
+  'ฑ': {name:'ฑอ มณโฑ', romanName:'tho montho', cls:'low', initial:'th/d', final:'t', finalKind:'dead', word:'มณโฑ', wordRoman:'montho', he:'מונת׳ו — שם דמות', en:'Montho, a character name'},
+  'ฒ': {name:'ฒอ ผู้เฒ่า', romanName:'tho phu thao', cls:'low', initial:'th', final:'t', finalKind:'dead', word:'ผู้เฒ่า', wordRoman:'phu thao', he:'זקן / אדם מבוגר', en:'elderly person'},
+  'ณ': {name:'ณอ เณร', romanName:'no nen', cls:'low', initial:'n', final:'n', finalKind:'live', word:'เณร', wordRoman:'nen', he:'נזיר צעיר', en:'novice monk'},
+  'ด': {name:'ดอ เด็ก', romanName:'do dek', cls:'middle', initial:'d', final:'t', finalKind:'dead', word:'เด็ก', wordRoman:'dek', he:'ילד', en:'child'},
+  'ต': {name:'ตอ เต่า', romanName:'to tao / dto dtao', cls:'middle', initial:'dt / t', final:'t', finalKind:'dead', word:'เต่า', wordRoman:'tao / dtao', he:'צב', en:'turtle'},
+  'ถ': {name:'ถอ ถุง', romanName:'tho thung', cls:'high', initial:'th', final:'t', finalKind:'dead', word:'ถุง', wordRoman:'thung', he:'שקית', en:'bag'},
+  'ท': {name:'ทอ ทหาร', romanName:'tho thahan', cls:'low', initial:'th', final:'t', finalKind:'dead', word:'ทหาร', wordRoman:'thahan', he:'חייל', en:'soldier'},
+  'ธ': {name:'ธอ ธง', romanName:'tho thong', cls:'low', initial:'th', final:'t', finalKind:'dead', word:'ธง', wordRoman:'thong', he:'דגל', en:'flag'},
+  'น': {name:'นอ หนู', romanName:'no nuu', cls:'low', initial:'n', final:'n', finalKind:'live', word:'หนู', wordRoman:'nuu', he:'עכבר / כינוי עצמי לילד', en:'mouse / child’s self-pronoun'},
+  'บ': {name:'บอ ใบไม้', romanName:'bo bai mai', cls:'middle', initial:'b', final:'p', finalKind:'dead', word:'ใบไม้', wordRoman:'bai mai', he:'עלה', en:'leaf'},
+  'ป': {name:'ปอ ปลา', romanName:'po pla / bpo bplaa', cls:'middle', initial:'bp / p', final:'p', finalKind:'dead', word:'ปลา', wordRoman:'pla / bplaa', he:'דג', en:'fish'},
+  'ผ': {name:'ผอ ผึ้ง', romanName:'pho phueng', cls:'high', initial:'ph', final:'rare', finalKind:'rare', word:'ผึ้ง', wordRoman:'phueng', he:'דבורה', en:'bee'},
+  'ฝ': {name:'ฝอ ฝา', romanName:'fo fa', cls:'high', initial:'f', final:'rare', finalKind:'rare', word:'ฝา', wordRoman:'fa', he:'מכסה', en:'lid'},
+  'พ': {name:'พอ พาน', romanName:'pho phan', cls:'low', initial:'ph', final:'p', finalKind:'dead', word:'พาน', wordRoman:'phan', he:'מגש טקסי', en:'ceremonial tray'},
+  'ฟ': {name:'ฟอ ฟัน', romanName:'fo fan', cls:'low', initial:'f', final:'p', finalKind:'dead', word:'ฟัน', wordRoman:'fan', he:'שן', en:'tooth'},
+  'ภ': {name:'ภอ สำเภา', romanName:'pho samphao', cls:'low', initial:'ph', final:'p', finalKind:'dead', word:'สำเภา', wordRoman:'samphao', he:'ספינת מפרש / ג׳ונקה', en:'junk / sailing ship'},
+  'ม': {name:'มอ ม้า', romanName:'mo maa', cls:'low', initial:'m', final:'m', finalKind:'live', word:'ม้า', wordRoman:'maa', he:'סוס', en:'horse'},
+  'ย': {name:'ยอ ยักษ์', romanName:'yo yak', cls:'low', initial:'y', final:'y', finalKind:'live', word:'ยักษ์', wordRoman:'yak', he:'ענק / שד', en:'giant / ogre'},
+  'ร': {name:'รอ เรือ', romanName:'ro ruea', cls:'low', initial:'r', final:'n', finalKind:'live', word:'เรือ', wordRoman:'ruea', he:'סירה', en:'boat'},
+  'ล': {name:'ลอ ลิง', romanName:'lo ling', cls:'low', initial:'l', final:'n', finalKind:'live', word:'ลิง', wordRoman:'ling', he:'קוף', en:'monkey'},
+  'ว': {name:'วอ แหวน', romanName:'wo waen', cls:'low', initial:'w', final:'w', finalKind:'live', word:'แหวน', wordRoman:'waen', he:'טבעת', en:'ring'},
+  'ศ': {name:'ศอ ศาลา', romanName:'so sala', cls:'high', initial:'s', final:'t', finalKind:'dead', word:'ศาลา', wordRoman:'sala', he:'ביתן / פביליון', en:'pavilion'},
+  'ษ': {name:'ษอ ฤๅษี', romanName:'so rue-si', cls:'high', initial:'s', final:'t', finalKind:'dead', word:'ฤๅษี', wordRoman:'rue-si', he:'נזיר / חכם מתבודד', en:'hermit / sage'},
+  'ส': {name:'สอ เสือ', romanName:'so suea', cls:'high', initial:'s', final:'t', finalKind:'dead', word:'เสือ', wordRoman:'suea', he:'נמר', en:'tiger'},
+  'ห': {name:'หอ หีบ', romanName:'ho hiip / ho hib', cls:'high', initial:'h', final:'rare', finalKind:'rare', word:'หีบ', wordRoman:'hiip / hib', he:'תיבה / ארגז', en:'chest / box', usageHe:'לפני ง ญ น ม ย ร ล ว היא יכולה להיות ห นำ: לרוב לא שומעים h, אבל היא משפיעה על הטון. למשל หลง = long.', usageEn:'Before ง ญ น ม ย ร ล ว it can be ห นำ: the h is often not pronounced, but it affects tone. Example: หลง = long.'},
+  'ฬ': {name:'ฬอ จุฬา', romanName:'lo chula', cls:'low', initial:'l', final:'n', finalKind:'live', word:'จุฬา', wordRoman:'chula', he:'עפיפון', en:'kite'},
+  'อ': {name:'ออ อ่าง', romanName:'o aang', cls:'middle', initial:'silent carrier / ɔɔ', final:'—', finalKind:'carrier', word:'อ่าง', wordRoman:'aang', he:'אגן / כיור / גיגית', en:'basin / tub'},
+  'ฮ': {name:'ฮอ นกฮูก', romanName:'ho nok huk', cls:'low', initial:'h', final:'rare', finalKind:'rare', word:'นกฮูก', wordRoman:'nok huk', he:'ינשוף', en:'owl'}
 };
 
 const THAI_SIGN_INFO = {
-  'ะ': ['สระอะ','short a','vowel','after the consonant; marks a short open syllable'],
-  'า': ['สระอา','long aa','vowel','written after the consonant'],
-  'ิ': ['สระอิ','short i','vowel','written above the consonant'],
-  'ี': ['สระอี','long ii','vowel','written above the consonant'],
-  'ึ': ['สระอึ','short eu','vowel','written above the consonant'],
-  'ื': ['สระอือ','long euu','vowel','written above the consonant; open syllables often add อ'],
-  'ุ': ['สระอุ','short u','vowel','written below the consonant'],
-  'ู': ['สระอู','long uu','vowel','written below the consonant'],
-  'เ': ['สระเอ / part of เ-ะ','e / ee family','leading vowel','written before the consonant'],
-  'แ': ['สระแอ / part of แ-ะ','ae family','leading vowel','written before the consonant'],
-  'โ': ['สระโอ / part of โ-ะ','o / oo family','leading vowel','written before the consonant'],
-  'ใ': ['สระใอ','ai','leading vowel','written before the consonant'],
-  'ไ': ['สระไอ','ai','leading vowel','written before the consonant'],
-  'ำ': ['สระอำ','am','vowel','written above/after the consonant as one vowel sign'],
-  'ั': ['ไม้หันอากาศ','short a / part of ua','vowel mark','written above the consonant'],
-  '็': ['ไม้ไต่คู้','vowel shortener','special mark','not a tone mark; shortens vowels such as เ-ะ / แ-ะ before a final consonant'],
-  '่': ['ไม้เอก','tone mark 1','tone mark','tone result depends on consonant class and syllable type'],
-  '้': ['ไม้โท','tone mark 2','tone mark','tone result depends on consonant class and syllable type'],
-  '๊': ['ไม้ตรี','tone mark 3','tone mark','used mainly with middle-class consonants'],
-  '๋': ['ไม้จัตวา','tone mark 4','tone mark','used mainly with middle-class consonants'],
-  '์': ['การันต์','silent mark','special mark','marks a letter that is not pronounced'],
-  'ๆ': ['ไม้ยมก','repetition mark','special mark','repeats the previous word or phrase']
+  'ะ': {name:'สระอะ', romanName:'sara a', sound:'short a', kind:'vowel', ruleHe:'נכתב אחרי העיצור; מסמן הברה פתוחה קצרה.', ruleEn:'Written after the consonant; marks a short open syllable.'},
+  'า': {name:'สระอา', romanName:'sara aa', sound:'long aa', kind:'vowel', ruleHe:'נכתב אחרי העיצור.', ruleEn:'Written after the consonant.'},
+  'ิ': {name:'สระอิ', romanName:'sara i', sound:'short i', kind:'vowel', ruleHe:'נכתב מעל העיצור.', ruleEn:'Written above the consonant.'},
+  'ี': {name:'สระอี', romanName:'sara ii', sound:'long ii / ee', kind:'vowel', ruleHe:'נכתב מעל העיצור.', ruleEn:'Written above the consonant.'},
+  'ึ': {name:'สระอึ', romanName:'sara ue / sara eu', sound:'short ue/eu', kind:'vowel', ruleHe:'נכתב מעל העיצור.', ruleEn:'Written above the consonant.'},
+  'ื': {name:'สระอือ', romanName:'sara uue / sara euu', sound:'long uue/euu', kind:'vowel', ruleHe:'נכתב מעל העיצור; בהברה פתוחה מוסיפים לרוב อ.', ruleEn:'Written above the consonant; open syllables often add อ.'},
+  'ุ': {name:'สระอุ', romanName:'sara u', sound:'short u', kind:'vowel', ruleHe:'נכתב מתחת לעיצור.', ruleEn:'Written below the consonant.'},
+  'ู': {name:'สระอู', romanName:'sara uu', sound:'long uu / oo', kind:'vowel', ruleHe:'נכתב מתחת לעיצור.', ruleEn:'Written below the consonant.'},
+  'เ': {name:'สระเอ / part of เ-ะ', romanName:'sara e', sound:'e / ee family', kind:'leading vowel', ruleHe:'נכתב לפני העיצור; הוא חלק מצורות כמו เ-ะ, เ-, เ-อ, เ-ือ.', ruleEn:'Written before the consonant; part of forms such as เ-ะ, เ-, เ-อ, เ-ือ.'},
+  'แ': {name:'สระแอ / part of แ-ะ', romanName:'sara ae', sound:'ae family', kind:'leading vowel', ruleHe:'נכתב לפני העיצור; חלק מצורות ae קצר/ארוך.', ruleEn:'Written before the consonant; part of short/long ae forms.'},
+  'โ': {name:'สระโอ / part of โ-ะ', romanName:'sara o', sound:'o / oo family', kind:'leading vowel', ruleHe:'נכתב לפני העיצור; חלק ממשפחת o/oo.', ruleEn:'Written before the consonant; part of the o/oo family.'},
+  'ใ': {name:'สระใอ', romanName:'sara ai mai muan', sound:'ai', kind:'leading vowel', ruleHe:'נכתב לפני העיצור; אחד משני סימני ai.', ruleEn:'Written before the consonant; one of two ai signs.'},
+  'ไ': {name:'สระไอ', romanName:'sara ai mai malai', sound:'ai', kind:'leading vowel', ruleHe:'נכתב לפני העיצור; אחד משני סימני ai.', ruleEn:'Written before the consonant; one of two ai signs.'},
+  'ำ': {name:'สระอำ', romanName:'sara am', sound:'am', kind:'vowel', ruleHe:'סימן תנועה אחד שנכתב מעל/אחרי העיצור.', ruleEn:'One vowel sign written above/after the consonant.'},
+  'ั': {name:'ไม้หันอากาศ', romanName:'mai han-akat', sound:'short a / part of ua', kind:'vowel mark', ruleHe:'נכתב מעל העיצור; מופיע למשל כחלק מ־-ัว וגם כסימן a קצר בהברה סגורה.', ruleEn:'Written above the consonant; appears as part of -ัว and also as short a in closed syllables.'},
+  '็': {name:'ไม้ไต่คู้', romanName:'mai taikhu', sound:'vowel shortener', kind:'special mark', ruleHe:'לא סימן טון. נכתב מעל העיצור ומקצר תנועה לפני עיצור סופי, למשל เด็ก / แข็ง / ล็อก.', ruleEn:'Not a tone mark. Written above the consonant to shorten a vowel before a final consonant, e.g. เด็ก / แข็ง / ล็อก.'},
+  '่': {name:'ไม้เอก', romanName:'mai ek', sound:'tone mark 1', kind:'tone mark', ruleHe:'סימן טון. התוצאה תלויה בקבוצת העיצור ובסוג ההברה.', ruleEn:'Tone mark. The resulting tone depends on consonant class and syllable type.'},
+  '้': {name:'ไม้โท', romanName:'mai tho', sound:'tone mark 2', kind:'tone mark', ruleHe:'סימן טון. התוצאה תלויה בקבוצת העיצור ובסוג ההברה.', ruleEn:'Tone mark. The resulting tone depends on consonant class and syllable type.'},
+  '๊': {name:'ไม้ตรี', romanName:'mai tri', sound:'tone mark 3', kind:'tone mark', ruleHe:'סימן טון, נפוץ בעיקר עם עיצורים מקבוצה אמצעית.', ruleEn:'Tone mark, used mainly with middle-class consonants.'},
+  '๋': {name:'ไม้จัตวา', romanName:'mai chattawa', sound:'tone mark 4', kind:'tone mark', ruleHe:'סימן טון, נפוץ בעיקר עם עיצורים מקבוצה אמצעית.', ruleEn:'Tone mark, used mainly with middle-class consonants.'},
+  '์': {name:'การันต์ / ไม้ทัณฑฆาต', romanName:'garan / mai thanthakhat', sound:'silent mark', kind:'special mark', ruleHe:'מסמן שאות לא נהגית.', ruleEn:'Marks a letter as silent.'},
+  'ๆ': {name:'ไม้ยมก', romanName:'mai yamok', sound:'repetition mark', kind:'special mark', ruleHe:'חוזר על המילה או הביטוי הקודמים.', ruleEn:'Repeats the previous word or phrase.'}
 };
 
 function consonantClassLabel(cls){
@@ -668,18 +707,23 @@ function signKindLabel(kind){
 }
 function thaiCharInfoHtml(ch){
   if(THAI_CONSONANT_INFO[ch]){
-    const [name, cls, initial, final, kind] = THAI_CONSONANT_INFO[ch];
+    const x = THAI_CONSONANT_INFO[ch];
+    const usage = isHebrew() ? (x.usageHe || '') : (x.usageEn || '');
+    const boardLine = isHebrew()
+      ? `מילת לוח: ${x.word} (${x.wordRoman}) — ${x.he} / ${x.en}`
+      : `Board word: ${x.word} (${x.wordRoman}) — ${x.en} / ${x.he}`;
     if(isHebrew()){
-      return `<div><b>${escapeHtml(ch)} — ${escapeHtml(name)}</b></div><div>קבוצה: ${escapeHtml(consonantClassLabel(cls))}</div><div>תחילה: <span dir="ltr">${escapeHtml(initial)}</span> · סוף: <span dir="ltr">${escapeHtml(final)}</span></div><div>${escapeHtml(finalKindLabel(kind))}</div>`;
+      return `<div><b>${escapeHtml(ch)} — ${escapeHtml(x.name)} <span dir="ltr">(${escapeHtml(x.romanName)})</span></b></div><div>${escapeHtml(boardLine)}</div><div>קבוצה: ${escapeHtml(consonantClassLabel(x.cls))}</div><div>תחילה: <span dir="ltr">${escapeHtml(x.initial)}</span> · סוף: <span dir="ltr">${escapeHtml(x.final)}</span></div><div>${escapeHtml(finalKindLabel(x.finalKind))}</div>${usage ? `<div class="char-note">${escapeHtml(usage)}</div>` : ''}`;
     }
-    return `<div><b>${escapeHtml(ch)} — ${escapeHtml(name)}</b></div><div>Class: ${escapeHtml(consonantClassLabel(cls))}</div><div>Initial: <span dir="ltr">${escapeHtml(initial)}</span> · Final: <span dir="ltr">${escapeHtml(final)}</span></div><div>${escapeHtml(finalKindLabel(kind))}</div>`;
+    return `<div><b>${escapeHtml(ch)} — ${escapeHtml(x.name)} <span dir="ltr">(${escapeHtml(x.romanName)})</span></b></div><div>${escapeHtml(boardLine)}</div><div>Class: ${escapeHtml(consonantClassLabel(x.cls))}</div><div>Initial: <span dir="ltr">${escapeHtml(x.initial)}</span> · Final: <span dir="ltr">${escapeHtml(x.final)}</span></div><div>${escapeHtml(finalKindLabel(x.finalKind))}</div>${usage ? `<div class="char-note">${escapeHtml(usage)}</div>` : ''}`;
   }
   if(THAI_SIGN_INFO[ch]){
-    const [name, sound, kind, rule] = THAI_SIGN_INFO[ch];
+    const x = THAI_SIGN_INFO[ch];
+    const rule = isHebrew() ? x.ruleHe : x.ruleEn;
     if(isHebrew()){
-      return `<div><b>${escapeHtml(ch)} — ${escapeHtml(name)}</b></div><div>סוג: ${escapeHtml(signKindLabel(kind))}</div><div>צליל/תפקיד: <span dir="ltr">${escapeHtml(sound)}</span></div><div>${escapeHtml(rule)}</div>`;
+      return `<div><b>${escapeHtml(ch)} — ${escapeHtml(x.name)} <span dir="ltr">(${escapeHtml(x.romanName)})</span></b></div><div>סוג: ${escapeHtml(signKindLabel(x.kind))}</div><div>צליל/תפקיד: <span dir="ltr">${escapeHtml(x.sound)}</span></div><div>${escapeHtml(rule)}</div>`;
     }
-    return `<div><b>${escapeHtml(ch)} — ${escapeHtml(name)}</b></div><div>Type: ${escapeHtml(signKindLabel(kind))}</div><div>Sound/function: <span dir="ltr">${escapeHtml(sound)}</span></div><div>${escapeHtml(rule)}</div>`;
+    return `<div><b>${escapeHtml(ch)} — ${escapeHtml(x.name)} <span dir="ltr">(${escapeHtml(x.romanName)})</span></b></div><div>Type: ${escapeHtml(signKindLabel(x.kind))}</div><div>Sound/function: <span dir="ltr">${escapeHtml(x.sound)}</span></div><div>${escapeHtml(rule)}</div>`;
   }
   return `<div><b>${escapeHtml(ch)}</b></div><div>${escapeHtml(isHebrew() ? 'סימן תאילנדי — עדיין אין מידע מפורט עליו במאגר.' : 'Thai sign — no detailed entry in the current bank yet.')}</div>`;
 }

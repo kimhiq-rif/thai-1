@@ -1,0 +1,4 @@
+﻿area,status,missing_before,now
+click info — consonants,fixed,romanized Thai letter name for all 44 letters; board-word meaning was not shown; special ห นำ note missing for ห,shows Thai name + romanized name + board word + Hebrew/English meaning + class + initial/final; ห includes ห นำ explanation
+click info — vowel/sign marks,fixed,romanized sign name for all 22 known signs; Hebrew UI displayed English-only rule text,shows Thai name + romanized sign name + type + sound/function + Hebrew or English rule according to UI language
+unknown Thai marks outside current bank,still fallback,no detailed entry for marks not in THAI_SIGN_INFO/THAI_CONSONANT_INFO,"fallback message remains; examples outside current bank include ฺ, ฯ, ๏, ๚, ๛, ฿ if they ever appear"

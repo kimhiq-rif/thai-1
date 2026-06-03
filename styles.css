@@ -130,3 +130,5 @@ canvas{
   font-size: .98rem;
 }
 .foundation-note b{ color: var(--accent-2); }
+
+.char-note{margin-top:8px;color:#d9ccff;font-weight:600;}

@@ -2,12 +2,12 @@
   "version": "1.19",
   "name": "Central/Bangkok vocabulary validation pass",
   "total_vocab_items": 387,
-  "active_for_questions": 385,
-  "review_queue": 2,
-  "question_count": 1155,
+  "active_for_questions": 384,
+  "review_queue": 3,
+  "question_count": 1152,
   "notes": [
     "Level 1.2 remains special for letters/vowels.",
     "Vocabulary remains merged into existing levels 1–5.",
-    "Validation corrected mismatches and moved regional/unclear items to review."
+    "A validation pass corrected mismatches and moved regional/unclear items to review."
   ]
 }

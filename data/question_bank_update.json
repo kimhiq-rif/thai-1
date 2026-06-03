@@ -7633,42 +7633,6 @@
   },
   {
     "id":"qv19_0637",
-    "level":"1",
-    "type":"mcq_read_meaning",
-    "prompt_he":"מה המשמעות של แตงโม (dtaeng-mo)?",
-    "prompt_en":"What does แตงโม (dtaeng-mo) mean?",
-    "answer_thai":"แตงโม",
-    "answer_roman":"dtaeng-mo",
-    "answer_he":"אבטיח",
-    "answer_en":"watermelon",
-    "source_vocab_id":"vocab_0214"
-  },
-  {
-    "id":"qv19_0638",
-    "level":"1",
-    "type":"write_he_to_thai",
-    "prompt_he":"כתוב בתאית: אבטיח — watermelon (dtaeng-mo)",
-    "prompt_en":"Write in Thai: watermelon — אבטיח (dtaeng-mo)",
-    "answer_thai":"แตงโม",
-    "answer_roman":"dtaeng-mo",
-    "answer_he":"אבטיח",
-    "answer_en":"watermelon",
-    "source_vocab_id":"vocab_0214"
-  },
-  {
-    "id":"qv19_0639",
-    "level":"1",
-    "type":"write_roman_to_thai",
-    "prompt_he":"כתוב בתאית לפי התעתיק: dtaeng-mo — אבטיח \/ watermelon",
-    "prompt_en":"Write Thai from romanization: dtaeng-mo — watermelon \/ אבטיח",
-    "answer_thai":"แตงโม",
-    "answer_roman":"dtaeng-mo",
-    "answer_he":"אבטיח",
-    "answer_en":"watermelon",
-    "source_vocab_id":"vocab_0214"
-  },
-  {
-    "id":"qv19_0640",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של น้ำแข็ง (nam-kaeng)?",
@@ -7680,7 +7644,7 @@
     "source_vocab_id":"vocab_0215"
   },
   {
-    "id":"qv19_0641",
+    "id":"qv19_0638",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: קרח — ice (nam-kaeng)",
@@ -7692,7 +7656,7 @@
     "source_vocab_id":"vocab_0215"
   },
   {
-    "id":"qv19_0642",
+    "id":"qv19_0639",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: nam-kaeng — קרח \/ ice",
@@ -7704,7 +7668,7 @@
     "source_vocab_id":"vocab_0215"
   },
   {
-    "id":"qv19_0643",
+    "id":"qv19_0640",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של น้ำส้ม (nam-som)?",
@@ -7716,7 +7680,7 @@
     "source_vocab_id":"vocab_0216"
   },
   {
-    "id":"qv19_0644",
+    "id":"qv19_0641",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מיץ תפוזים — orange juice (nam-som)",
@@ -7728,7 +7692,7 @@
     "source_vocab_id":"vocab_0216"
   },
   {
-    "id":"qv19_0645",
+    "id":"qv19_0642",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: nam-som — מיץ תפוזים \/ orange juice",
@@ -7740,7 +7704,7 @@
     "source_vocab_id":"vocab_0216"
   },
   {
-    "id":"qv19_0646",
+    "id":"qv19_0643",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של กาแฟ (ga-fe)?",
@@ -7752,7 +7716,7 @@
     "source_vocab_id":"vocab_0217"
   },
   {
-    "id":"qv19_0647",
+    "id":"qv19_0644",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: קפה — coffee (ga-fe)",
@@ -7764,7 +7728,7 @@
     "source_vocab_id":"vocab_0217"
   },
   {
-    "id":"qv19_0648",
+    "id":"qv19_0645",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: ga-fe — קפה \/ coffee",
@@ -7776,7 +7740,7 @@
     "source_vocab_id":"vocab_0217"
   },
   {
-    "id":"qv19_0649",
+    "id":"qv19_0646",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של นม (nom)?",
@@ -7788,7 +7752,7 @@
     "source_vocab_id":"vocab_0218"
   },
   {
-    "id":"qv19_0650",
+    "id":"qv19_0647",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: חלב — milk (nom)",
@@ -7800,7 +7764,7 @@
     "source_vocab_id":"vocab_0218"
   },
   {
-    "id":"qv19_0651",
+    "id":"qv19_0648",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: nom — חלב \/ milk",
@@ -7812,7 +7776,7 @@
     "source_vocab_id":"vocab_0218"
   },
   {
-    "id":"qv19_0652",
+    "id":"qv19_0649",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เบียร์ (beer)?",
@@ -7824,7 +7788,7 @@
     "source_vocab_id":"vocab_0219"
   },
   {
-    "id":"qv19_0653",
+    "id":"qv19_0650",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: בירה — beer (beer)",
@@ -7836,7 +7800,7 @@
     "source_vocab_id":"vocab_0219"
   },
   {
-    "id":"qv19_0654",
+    "id":"qv19_0651",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: beer — בירה \/ beer",
@@ -7848,7 +7812,7 @@
     "source_vocab_id":"vocab_0219"
   },
   {
-    "id":"qv19_0655",
+    "id":"qv19_0652",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เหล้า (lao)?",
@@ -7860,7 +7824,7 @@
     "source_vocab_id":"vocab_0220"
   },
   {
-    "id":"qv19_0656",
+    "id":"qv19_0653",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אלכוהול \/ וויסקי — alcohol \/ whiskey (lao)",
@@ -7872,7 +7836,7 @@
     "source_vocab_id":"vocab_0220"
   },
   {
-    "id":"qv19_0657",
+    "id":"qv19_0654",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: lao — אלכוהול \/ וויסקי \/ alcohol \/ whiskey",
@@ -7884,7 +7848,7 @@
     "source_vocab_id":"vocab_0220"
   },
   {
-    "id":"qv19_0658",
+    "id":"qv19_0655",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של กับ (gap)?",
@@ -7896,7 +7860,7 @@
     "source_vocab_id":"vocab_0221"
   },
   {
-    "id":"qv19_0659",
+    "id":"qv19_0656",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: עם — with (gap)",
@@ -7908,7 +7872,7 @@
     "source_vocab_id":"vocab_0221"
   },
   {
-    "id":"qv19_0660",
+    "id":"qv19_0657",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: gap — עם \/ with",
@@ -7920,7 +7884,7 @@
     "source_vocab_id":"vocab_0221"
   },
   {
-    "id":"qv19_0661",
+    "id":"qv19_0658",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เอา (ao)?",
@@ -7932,7 +7896,7 @@
     "source_vocab_id":"vocab_0222"
   },
   {
-    "id":"qv19_0662",
+    "id":"qv19_0659",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: רוצה \/ לקחת — want \/ take (ao)",
@@ -7944,7 +7908,7 @@
     "source_vocab_id":"vocab_0222"
   },
   {
-    "id":"qv19_0663",
+    "id":"qv19_0660",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: ao — רוצה \/ לקחת \/ want \/ take",
@@ -7956,7 +7920,7 @@
     "source_vocab_id":"vocab_0222"
   },
   {
-    "id":"qv19_0664",
+    "id":"qv19_0661",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ไม่เอา (mai ao)?",
@@ -7968,7 +7932,7 @@
     "source_vocab_id":"vocab_0223"
   },
   {
-    "id":"qv19_0665",
+    "id":"qv19_0662",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לא רוצה — do not want (mai ao)",
@@ -7980,7 +7944,7 @@
     "source_vocab_id":"vocab_0223"
   },
   {
-    "id":"qv19_0666",
+    "id":"qv19_0663",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: mai ao — לא רוצה \/ do not want",
@@ -7992,7 +7956,7 @@
     "source_vocab_id":"vocab_0223"
   },
   {
-    "id":"qv19_0667",
+    "id":"qv19_0664",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เอาอันนี้ (ao-an-nii)?",
@@ -8004,7 +7968,7 @@
     "source_vocab_id":"vocab_0224"
   },
   {
-    "id":"qv19_0668",
+    "id":"qv19_0665",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: רוצה את זה — want this one (ao-an-nii)",
@@ -8016,7 +7980,7 @@
     "source_vocab_id":"vocab_0224"
   },
   {
-    "id":"qv19_0669",
+    "id":"qv19_0666",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: ao-an-nii — רוצה את זה \/ want this one",
@@ -8028,7 +7992,7 @@
     "source_vocab_id":"vocab_0224"
   },
   {
-    "id":"qv19_0670",
+    "id":"qv19_0667",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เรือ (reua)?",
@@ -8040,7 +8004,7 @@
     "source_vocab_id":"vocab_0225"
   },
   {
-    "id":"qv19_0671",
+    "id":"qv19_0668",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: סירה — boat (reua)",
@@ -8052,7 +8016,7 @@
     "source_vocab_id":"vocab_0225"
   },
   {
-    "id":"qv19_0672",
+    "id":"qv19_0669",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: reua — סירה \/ boat",
@@ -8064,7 +8028,7 @@
     "source_vocab_id":"vocab_0225"
   },
   {
-    "id":"qv19_0673",
+    "id":"qv19_0670",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เรือบิน (reua-bin)?",
@@ -8076,7 +8040,7 @@
     "source_vocab_id":"vocab_0226"
   },
   {
-    "id":"qv19_0674",
+    "id":"qv19_0671",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מטוס — airplane (reua-bin)",
@@ -8088,7 +8052,7 @@
     "source_vocab_id":"vocab_0226"
   },
   {
-    "id":"qv19_0675",
+    "id":"qv19_0672",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: reua-bin — מטוס \/ airplane",
@@ -8100,7 +8064,7 @@
     "source_vocab_id":"vocab_0226"
   },
   {
-    "id":"qv19_0676",
+    "id":"qv19_0673",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של รถ (rot)?",
@@ -8112,7 +8076,7 @@
     "source_vocab_id":"vocab_0227"
   },
   {
-    "id":"qv19_0677",
+    "id":"qv19_0674",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מכונית — car \/ vehicle (rot)",
@@ -8124,7 +8088,7 @@
     "source_vocab_id":"vocab_0227"
   },
   {
-    "id":"qv19_0678",
+    "id":"qv19_0675",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: rot — מכונית \/ car \/ vehicle",
@@ -8136,7 +8100,7 @@
     "source_vocab_id":"vocab_0227"
   },
   {
-    "id":"qv19_0679",
+    "id":"qv19_0676",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של รถเมล์ (rot-mae)?",
@@ -8148,7 +8112,7 @@
     "source_vocab_id":"vocab_0228"
   },
   {
-    "id":"qv19_0680",
+    "id":"qv19_0677",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אוטובוס — bus (rot-mae)",
@@ -8160,7 +8124,7 @@
     "source_vocab_id":"vocab_0228"
   },
   {
-    "id":"qv19_0681",
+    "id":"qv19_0678",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: rot-mae — אוטובוס \/ bus",
@@ -8172,7 +8136,7 @@
     "source_vocab_id":"vocab_0228"
   },
   {
-    "id":"qv19_0682",
+    "id":"qv19_0679",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של รถไฟ (rot-fai)?",
@@ -8184,7 +8148,7 @@
     "source_vocab_id":"vocab_0229"
   },
   {
-    "id":"qv19_0683",
+    "id":"qv19_0680",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: רכבת — train (rot-fai)",
@@ -8196,7 +8160,7 @@
     "source_vocab_id":"vocab_0229"
   },
   {
-    "id":"qv19_0684",
+    "id":"qv19_0681",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: rot-fai — רכבת \/ train",
@@ -8208,7 +8172,7 @@
     "source_vocab_id":"vocab_0229"
   },
   {
-    "id":"qv19_0685",
+    "id":"qv19_0682",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של มอเตอร์ไซค์ (mo-dtu-sai)?",
@@ -8220,7 +8184,7 @@
     "source_vocab_id":"vocab_0230"
   },
   {
-    "id":"qv19_0686",
+    "id":"qv19_0683",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אופנוע — motorbike (mo-dtu-sai)",
@@ -8232,7 +8196,7 @@
     "source_vocab_id":"vocab_0230"
   },
   {
-    "id":"qv19_0687",
+    "id":"qv19_0684",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: mo-dtu-sai — אופנוע \/ motorbike",
@@ -8244,7 +8208,7 @@
     "source_vocab_id":"vocab_0230"
   },
   {
-    "id":"qv19_0688",
+    "id":"qv19_0685",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של จักรยาน (jak-kra-yaan)?",
@@ -8256,7 +8220,7 @@
     "source_vocab_id":"vocab_0231"
   },
   {
-    "id":"qv19_0689",
+    "id":"qv19_0686",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אופניים — bicycle (jak-kra-yaan)",
@@ -8268,7 +8232,7 @@
     "source_vocab_id":"vocab_0231"
   },
   {
-    "id":"qv19_0690",
+    "id":"qv19_0687",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: jak-kra-yaan — אופניים \/ bicycle",
@@ -8280,7 +8244,7 @@
     "source_vocab_id":"vocab_0231"
   },
   {
-    "id":"qv19_0691",
+    "id":"qv19_0688",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เดิน (doen)?",
@@ -8292,7 +8256,7 @@
     "source_vocab_id":"vocab_0232"
   },
   {
-    "id":"qv19_0692",
+    "id":"qv19_0689",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: ללכת ברגל — walk (doen)",
@@ -8304,7 +8268,7 @@
     "source_vocab_id":"vocab_0232"
   },
   {
-    "id":"qv19_0693",
+    "id":"qv19_0690",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: doen — ללכת ברגל \/ walk",
@@ -8316,7 +8280,7 @@
     "source_vocab_id":"vocab_0232"
   },
   {
-    "id":"qv19_0694",
+    "id":"qv19_0691",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של วิ่ง (wing)?",
@@ -8328,7 +8292,7 @@
     "source_vocab_id":"vocab_0233"
   },
   {
-    "id":"qv19_0695",
+    "id":"qv19_0692",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לרוץ — run (wing)",
@@ -8340,7 +8304,7 @@
     "source_vocab_id":"vocab_0233"
   },
   {
-    "id":"qv19_0696",
+    "id":"qv19_0693",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: wing — לרוץ \/ run",
@@ -8352,7 +8316,7 @@
     "source_vocab_id":"vocab_0233"
   },
   {
-    "id":"qv19_0697",
+    "id":"qv19_0694",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של สวย (suay)?",
@@ -8364,7 +8328,7 @@
     "source_vocab_id":"vocab_0234"
   },
   {
-    "id":"qv19_0698",
+    "id":"qv19_0695",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: יפה — beautiful (suay)",
@@ -8376,7 +8340,7 @@
     "source_vocab_id":"vocab_0234"
   },
   {
-    "id":"qv19_0699",
+    "id":"qv19_0696",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: suay — יפה \/ beautiful",
@@ -8388,7 +8352,7 @@
     "source_vocab_id":"vocab_0234"
   },
   {
-    "id":"qv19_0700",
+    "id":"qv19_0697",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של น่ารัก (naa-rak)?",
@@ -8400,7 +8364,7 @@
     "source_vocab_id":"vocab_0235"
   },
   {
-    "id":"qv19_0701",
+    "id":"qv19_0698",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: חמוד — cute (naa-rak)",
@@ -8412,7 +8376,7 @@
     "source_vocab_id":"vocab_0235"
   },
   {
-    "id":"qv19_0702",
+    "id":"qv19_0699",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: naa-rak — חמוד \/ cute",
@@ -8424,7 +8388,7 @@
     "source_vocab_id":"vocab_0235"
   },
   {
-    "id":"qv19_0703",
+    "id":"qv19_0700",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של หล่อ (lor)?",
@@ -8436,7 +8400,7 @@
     "source_vocab_id":"vocab_0236"
   },
   {
-    "id":"qv19_0704",
+    "id":"qv19_0701",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: חתיך — handsome (lor)",
@@ -8448,7 +8412,7 @@
     "source_vocab_id":"vocab_0236"
   },
   {
-    "id":"qv19_0705",
+    "id":"qv19_0702",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: lor — חתיך \/ handsome",
@@ -8460,7 +8424,7 @@
     "source_vocab_id":"vocab_0236"
   },
   {
-    "id":"qv19_0706",
+    "id":"qv19_0703",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เตี้ย (dtia)?",
@@ -8472,7 +8436,7 @@
     "source_vocab_id":"vocab_0237"
   },
   {
-    "id":"qv19_0707",
+    "id":"qv19_0704",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: נמוך — short (dtia)",
@@ -8484,7 +8448,7 @@
     "source_vocab_id":"vocab_0237"
   },
   {
-    "id":"qv19_0708",
+    "id":"qv19_0705",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dtia — נמוך \/ short",
@@ -8496,7 +8460,7 @@
     "source_vocab_id":"vocab_0237"
   },
   {
-    "id":"qv19_0709",
+    "id":"qv19_0706",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של สูง (soong)?",
@@ -8508,7 +8472,7 @@
     "source_vocab_id":"vocab_0238"
   },
   {
-    "id":"qv19_0710",
+    "id":"qv19_0707",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: גבוה — tall (soong)",
@@ -8520,7 +8484,7 @@
     "source_vocab_id":"vocab_0238"
   },
   {
-    "id":"qv19_0711",
+    "id":"qv19_0708",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: soong — גבוה \/ tall",
@@ -8532,7 +8496,7 @@
     "source_vocab_id":"vocab_0238"
   },
   {
-    "id":"qv19_0712",
+    "id":"qv19_0709",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של อ้วน (u-an)?",
@@ -8544,7 +8508,7 @@
     "source_vocab_id":"vocab_0239"
   },
   {
-    "id":"qv19_0713",
+    "id":"qv19_0710",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: שמן (גוף) — fat \/ overweight (u-an)",
@@ -8556,7 +8520,7 @@
     "source_vocab_id":"vocab_0239"
   },
   {
-    "id":"qv19_0714",
+    "id":"qv19_0711",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: u-an — שמן (גוף) \/ fat \/ overweight",
@@ -8568,7 +8532,7 @@
     "source_vocab_id":"vocab_0239"
   },
   {
-    "id":"qv19_0715",
+    "id":"qv19_0712",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ผอม (pom)?",
@@ -8580,7 +8544,7 @@
     "source_vocab_id":"vocab_0240"
   },
   {
-    "id":"qv19_0716",
+    "id":"qv19_0713",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: רזה — thin (pom)",
@@ -8592,7 +8556,7 @@
     "source_vocab_id":"vocab_0240"
   },
   {
-    "id":"qv19_0717",
+    "id":"qv19_0714",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: pom — רזה \/ thin",
@@ -8604,7 +8568,7 @@
     "source_vocab_id":"vocab_0240"
   },
   {
-    "id":"qv19_0718",
+    "id":"qv19_0715",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ใหญ่ (yai)?",
@@ -8616,7 +8580,7 @@
     "source_vocab_id":"vocab_0241"
   },
   {
-    "id":"qv19_0719",
+    "id":"qv19_0716",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: גדול — big (yai)",
@@ -8628,7 +8592,7 @@
     "source_vocab_id":"vocab_0241"
   },
   {
-    "id":"qv19_0720",
+    "id":"qv19_0717",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: yai — גדול \/ big",
@@ -8640,7 +8604,7 @@
     "source_vocab_id":"vocab_0241"
   },
   {
-    "id":"qv19_0721",
+    "id":"qv19_0718",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เล็ก (lek)?",
@@ -8652,7 +8616,7 @@
     "source_vocab_id":"vocab_0242"
   },
   {
-    "id":"qv19_0722",
+    "id":"qv19_0719",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: קטן — small (lek)",
@@ -8664,7 +8628,7 @@
     "source_vocab_id":"vocab_0242"
   },
   {
-    "id":"qv19_0723",
+    "id":"qv19_0720",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: lek — קטן \/ small",
@@ -8676,7 +8640,7 @@
     "source_vocab_id":"vocab_0242"
   },
   {
-    "id":"qv19_0724",
+    "id":"qv19_0721",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เหงา (ngao)?",
@@ -8688,7 +8652,7 @@
     "source_vocab_id":"vocab_0243"
   },
   {
-    "id":"qv19_0725",
+    "id":"qv19_0722",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: בודד — lonely (ngao)",
@@ -8700,7 +8664,7 @@
     "source_vocab_id":"vocab_0243"
   },
   {
-    "id":"qv19_0726",
+    "id":"qv19_0723",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: ngao — בודד \/ lonely",
@@ -8712,7 +8676,7 @@
     "source_vocab_id":"vocab_0243"
   },
   {
-    "id":"qv19_0727",
+    "id":"qv19_0724",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เสียใจ (sia-jai)?",
@@ -8724,7 +8688,7 @@
     "source_vocab_id":"vocab_0244"
   },
   {
-    "id":"qv19_0728",
+    "id":"qv19_0725",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: עצוב — sad \/ sorry (sia-jai)",
@@ -8736,7 +8700,7 @@
     "source_vocab_id":"vocab_0244"
   },
   {
-    "id":"qv19_0729",
+    "id":"qv19_0726",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: sia-jai — עצוב \/ sad \/ sorry",
@@ -8748,7 +8712,7 @@
     "source_vocab_id":"vocab_0244"
   },
   {
-    "id":"qv19_0730",
+    "id":"qv19_0727",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ดีใจ (dii-jai)?",
@@ -8760,7 +8724,7 @@
     "source_vocab_id":"vocab_0245"
   },
   {
-    "id":"qv19_0731",
+    "id":"qv19_0728",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: שמח — happy (dii-jai)",
@@ -8772,7 +8736,7 @@
     "source_vocab_id":"vocab_0245"
   },
   {
-    "id":"qv19_0732",
+    "id":"qv19_0729",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dii-jai — שמח \/ happy",
@@ -8784,7 +8748,7 @@
     "source_vocab_id":"vocab_0245"
   },
   {
-    "id":"qv19_0733",
+    "id":"qv19_0730",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של โกรธ (grote)?",
@@ -8796,7 +8760,7 @@
     "source_vocab_id":"vocab_0246"
   },
   {
-    "id":"qv19_0734",
+    "id":"qv19_0731",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: כועס — angry (grote)",
@@ -8808,7 +8772,7 @@
     "source_vocab_id":"vocab_0246"
   },
   {
-    "id":"qv19_0735",
+    "id":"qv19_0732",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: grote — כועס \/ angry",
@@ -8820,7 +8784,7 @@
     "source_vocab_id":"vocab_0246"
   },
   {
-    "id":"qv19_0736",
+    "id":"qv19_0733",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של กลัว (glua)?",
@@ -8832,7 +8796,7 @@
     "source_vocab_id":"vocab_0247"
   },
   {
-    "id":"qv19_0737",
+    "id":"qv19_0734",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מפחד — afraid (glua)",
@@ -8844,7 +8808,7 @@
     "source_vocab_id":"vocab_0247"
   },
   {
-    "id":"qv19_0738",
+    "id":"qv19_0735",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: glua — מפחד \/ afraid",
@@ -8856,7 +8820,7 @@
     "source_vocab_id":"vocab_0247"
   },
   {
-    "id":"qv19_0739",
+    "id":"qv19_0736",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ตกใจ (dtok-jai)?",
@@ -8868,7 +8832,7 @@
     "source_vocab_id":"vocab_0248"
   },
   {
-    "id":"qv19_0740",
+    "id":"qv19_0737",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מופתע \/ בהלם — shocked \/ startled (dtok-jai)",
@@ -8880,7 +8844,7 @@
     "source_vocab_id":"vocab_0248"
   },
   {
-    "id":"qv19_0741",
+    "id":"qv19_0738",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dtok-jai — מופתע \/ בהלם \/ shocked \/ startled",
@@ -8892,7 +8856,7 @@
     "source_vocab_id":"vocab_0248"
   },
   {
-    "id":"qv19_0742",
+    "id":"qv19_0739",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של งง (ngong)?",
@@ -8904,7 +8868,7 @@
     "source_vocab_id":"vocab_0249"
   },
   {
-    "id":"qv19_0743",
+    "id":"qv19_0740",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מבולבל — confused (ngong)",
@@ -8916,7 +8880,7 @@
     "source_vocab_id":"vocab_0249"
   },
   {
-    "id":"qv19_0744",
+    "id":"qv19_0741",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: ngong — מבולבל \/ confused",
@@ -8928,7 +8892,7 @@
     "source_vocab_id":"vocab_0249"
   },
   {
-    "id":"qv19_0745",
+    "id":"qv19_0742",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של มั่นใจ (man-jai)?",
@@ -8940,7 +8904,7 @@
     "source_vocab_id":"vocab_0250"
   },
   {
-    "id":"qv19_0746",
+    "id":"qv19_0743",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: בטוח בעצמי — confident (man-jai)",
@@ -8952,7 +8916,7 @@
     "source_vocab_id":"vocab_0250"
   },
   {
-    "id":"qv19_0747",
+    "id":"qv19_0744",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: man-jai — בטוח בעצמי \/ confident",
@@ -8964,7 +8928,7 @@
     "source_vocab_id":"vocab_0250"
   },
   {
-    "id":"qv19_0748",
+    "id":"qv19_0745",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של น่าเข้าใจ (naa-kao-jai)?",
@@ -8976,7 +8940,7 @@
     "source_vocab_id":"vocab_0251"
   },
   {
-    "id":"qv19_0749",
+    "id":"qv19_0746",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מובן — understandable (naa-kao-jai)",
@@ -8988,7 +8952,7 @@
     "source_vocab_id":"vocab_0251"
   },
   {
-    "id":"qv19_0750",
+    "id":"qv19_0747",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: naa-kao-jai — מובן \/ understandable",
@@ -9000,7 +8964,7 @@
     "source_vocab_id":"vocab_0251"
   },
   {
-    "id":"qv19_0751",
+    "id":"qv19_0748",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ไม่เข้าใจ (mai-kao-jai)?",
@@ -9012,7 +8976,7 @@
     "source_vocab_id":"vocab_0252"
   },
   {
-    "id":"qv19_0752",
+    "id":"qv19_0749",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לא מבין — do not understand (mai-kao-jai)",
@@ -9024,7 +8988,7 @@
     "source_vocab_id":"vocab_0252"
   },
   {
-    "id":"qv19_0753",
+    "id":"qv19_0750",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: mai-kao-jai — לא מבין \/ do not understand",
@@ -9036,7 +9000,7 @@
     "source_vocab_id":"vocab_0252"
   },
   {
-    "id":"qv19_0754",
+    "id":"qv19_0751",
     "level":"5",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เข้าใจไหม (kao-jai mai?)?",
@@ -9048,7 +9012,7 @@
     "source_vocab_id":"vocab_0253"
   },
   {
-    "id":"qv19_0755",
+    "id":"qv19_0752",
     "level":"5",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מבין? — Do you understand? (kao-jai mai?)",
@@ -9060,7 +9024,7 @@
     "source_vocab_id":"vocab_0253"
   },
   {
-    "id":"qv19_0756",
+    "id":"qv19_0753",
     "level":"5",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: kao-jai mai? — מבין? \/ Do you understand?",
@@ -9072,7 +9036,7 @@
     "source_vocab_id":"vocab_0253"
   },
   {
-    "id":"qv19_0757",
+    "id":"qv19_0754",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เข้าใจแล้ว (kao-jai leaw)?",
@@ -9084,7 +9048,7 @@
     "source_vocab_id":"vocab_0254"
   },
   {
-    "id":"qv19_0758",
+    "id":"qv19_0755",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: הבנתי כבר — understood already (kao-jai leaw)",
@@ -9096,7 +9060,7 @@
     "source_vocab_id":"vocab_0254"
   },
   {
-    "id":"qv19_0759",
+    "id":"qv19_0756",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: kao-jai leaw — הבנתי כבר \/ understood already",
@@ -9108,7 +9072,7 @@
     "source_vocab_id":"vocab_0254"
   },
   {
-    "id":"qv19_0760",
+    "id":"qv19_0757",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של รัก (rak)?",
@@ -9120,7 +9084,7 @@
     "source_vocab_id":"vocab_0255"
   },
   {
-    "id":"qv19_0761",
+    "id":"qv19_0758",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אוהב — love (rak)",
@@ -9132,7 +9096,7 @@
     "source_vocab_id":"vocab_0255"
   },
   {
-    "id":"qv19_0762",
+    "id":"qv19_0759",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: rak — אוהב \/ love",
@@ -9144,7 +9108,7 @@
     "source_vocab_id":"vocab_0255"
   },
   {
-    "id":"qv19_0763",
+    "id":"qv19_0760",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เกลียด (gliad)?",
@@ -9156,7 +9120,7 @@
     "source_vocab_id":"vocab_0256"
   },
   {
-    "id":"qv19_0764",
+    "id":"qv19_0761",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: שונא — hate (gliad)",
@@ -9168,7 +9132,7 @@
     "source_vocab_id":"vocab_0256"
   },
   {
-    "id":"qv19_0765",
+    "id":"qv19_0762",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: gliad — שונא \/ hate",
@@ -9180,7 +9144,7 @@
     "source_vocab_id":"vocab_0256"
   },
   {
-    "id":"qv19_0766",
+    "id":"qv19_0763",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เห็นด้วย (hen-duai)?",
@@ -9192,7 +9156,7 @@
     "source_vocab_id":"vocab_0257"
   },
   {
-    "id":"qv19_0767",
+    "id":"qv19_0764",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מסכים — agree (hen-duai)",
@@ -9204,7 +9168,7 @@
     "source_vocab_id":"vocab_0257"
   },
   {
-    "id":"qv19_0768",
+    "id":"qv19_0765",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: hen-duai — מסכים \/ agree",
@@ -9216,7 +9180,7 @@
     "source_vocab_id":"vocab_0257"
   },
   {
-    "id":"qv19_0769",
+    "id":"qv19_0766",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ไม่เห็นด้วย (mai-hen-duai)?",
@@ -9228,7 +9192,7 @@
     "source_vocab_id":"vocab_0258"
   },
   {
-    "id":"qv19_0770",
+    "id":"qv19_0767",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לא מסכים — disagree (mai-hen-duai)",
@@ -9240,7 +9204,7 @@
     "source_vocab_id":"vocab_0258"
   },
   {
-    "id":"qv19_0771",
+    "id":"qv19_0768",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: mai-hen-duai — לא מסכים \/ disagree",
@@ -9252,7 +9216,7 @@
     "source_vocab_id":"vocab_0258"
   },
   {
-    "id":"qv19_0772",
+    "id":"qv19_0769",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של จริง ๆ (jing-jing)?",
@@ -9264,7 +9228,7 @@
     "source_vocab_id":"vocab_0259"
   },
   {
-    "id":"qv19_0773",
+    "id":"qv19_0770",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: באמת — really (jing-jing)",
@@ -9276,7 +9240,7 @@
     "source_vocab_id":"vocab_0259"
   },
   {
-    "id":"qv19_0774",
+    "id":"qv19_0771",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: jing-jing — באמת \/ really",
@@ -9288,7 +9252,7 @@
     "source_vocab_id":"vocab_0259"
   },
   {
-    "id":"qv19_0775",
+    "id":"qv19_0772",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ลอง (long)?",
@@ -9300,7 +9264,7 @@
     "source_vocab_id":"vocab_0260"
   },
   {
-    "id":"qv19_0776",
+    "id":"qv19_0773",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לנסות — try (long)",
@@ -9312,7 +9276,7 @@
     "source_vocab_id":"vocab_0260"
   },
   {
-    "id":"qv19_0777",
+    "id":"qv19_0774",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: long — לנסות \/ try",
@@ -9324,7 +9288,7 @@
     "source_vocab_id":"vocab_0260"
   },
   {
-    "id":"qv19_0778",
+    "id":"qv19_0775",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ดู (duu)?",
@@ -9336,7 +9300,7 @@
     "source_vocab_id":"vocab_0261"
   },
   {
-    "id":"qv19_0779",
+    "id":"qv19_0776",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לראות \/ להסתכל — look \/ watch (duu)",
@@ -9348,7 +9312,7 @@
     "source_vocab_id":"vocab_0261"
   },
   {
-    "id":"qv19_0780",
+    "id":"qv19_0777",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: duu — לראות \/ להסתכל \/ look \/ watch",
@@ -9360,7 +9324,7 @@
     "source_vocab_id":"vocab_0261"
   },
   {
-    "id":"qv19_0781",
+    "id":"qv19_0778",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ฟัง (fang)?",
@@ -9372,7 +9336,7 @@
     "source_vocab_id":"vocab_0262"
   },
   {
-    "id":"qv19_0782",
+    "id":"qv19_0779",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: להקשיב — listen (fang)",
@@ -9384,7 +9348,7 @@
     "source_vocab_id":"vocab_0262"
   },
   {
-    "id":"qv19_0783",
+    "id":"qv19_0780",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: fang — להקשיב \/ listen",
@@ -9396,7 +9360,7 @@
     "source_vocab_id":"vocab_0262"
   },
   {
-    "id":"qv19_0784",
+    "id":"qv19_0781",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ดม (dom)?",
@@ -9408,7 +9372,7 @@
     "source_vocab_id":"vocab_0263"
   },
   {
-    "id":"qv19_0785",
+    "id":"qv19_0782",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: להריח — smell (dom)",
@@ -9420,7 +9384,7 @@
     "source_vocab_id":"vocab_0263"
   },
   {
-    "id":"qv19_0786",
+    "id":"qv19_0783",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dom — להריח \/ smell",
@@ -9432,7 +9396,7 @@
     "source_vocab_id":"vocab_0263"
   },
   {
-    "id":"qv19_0787",
+    "id":"qv19_0784",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ชิม (chim)?",
@@ -9444,7 +9408,7 @@
     "source_vocab_id":"vocab_0264"
   },
   {
-    "id":"qv19_0788",
+    "id":"qv19_0785",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לטעום — taste (chim)",
@@ -9456,7 +9420,7 @@
     "source_vocab_id":"vocab_0264"
   },
   {
-    "id":"qv19_0789",
+    "id":"qv19_0786",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: chim — לטעום \/ taste",
@@ -9468,7 +9432,7 @@
     "source_vocab_id":"vocab_0264"
   },
   {
-    "id":"qv19_0790",
+    "id":"qv19_0787",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של จำ (jum)?",
@@ -9480,7 +9444,7 @@
     "source_vocab_id":"vocab_0265"
   },
   {
-    "id":"qv19_0791",
+    "id":"qv19_0788",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לזכור — remember (jum)",
@@ -9492,7 +9456,7 @@
     "source_vocab_id":"vocab_0265"
   },
   {
-    "id":"qv19_0792",
+    "id":"qv19_0789",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: jum — לזכור \/ remember",
@@ -9504,7 +9468,7 @@
     "source_vocab_id":"vocab_0265"
   },
   {
-    "id":"qv19_0793",
+    "id":"qv19_0790",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เคย (keey)?",
@@ -9516,7 +9480,7 @@
     "source_vocab_id":"vocab_0266"
   },
   {
-    "id":"qv19_0794",
+    "id":"qv19_0791",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: להתרגל \/ פעם... — ever \/ used to (keey)",
@@ -9528,7 +9492,7 @@
     "source_vocab_id":"vocab_0266"
   },
   {
-    "id":"qv19_0795",
+    "id":"qv19_0792",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: keey — להתרגל \/ פעם... \/ ever \/ used to",
@@ -9540,7 +9504,7 @@
     "source_vocab_id":"vocab_0266"
   },
   {
-    "id":"qv19_0796",
+    "id":"qv19_0793",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เที่ยว (teaw)?",
@@ -9552,7 +9516,7 @@
     "source_vocab_id":"vocab_0267"
   },
   {
-    "id":"qv19_0797",
+    "id":"qv19_0794",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לטייל \/ לבלות — travel \/ hang out (teaw)",
@@ -9564,7 +9528,7 @@
     "source_vocab_id":"vocab_0267"
   },
   {
-    "id":"qv19_0798",
+    "id":"qv19_0795",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: teaw — לטייל \/ לבלות \/ travel \/ hang out",
@@ -9576,7 +9540,7 @@
     "source_vocab_id":"vocab_0267"
   },
   {
-    "id":"qv19_0799",
+    "id":"qv19_0796",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של รอ (raw)?",
@@ -9588,7 +9552,7 @@
     "source_vocab_id":"vocab_0268"
   },
   {
-    "id":"qv19_0800",
+    "id":"qv19_0797",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לחכות — wait (raw)",
@@ -9600,7 +9564,7 @@
     "source_vocab_id":"vocab_0268"
   },
   {
-    "id":"qv19_0801",
+    "id":"qv19_0798",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: raw — לחכות \/ wait",
@@ -9612,7 +9576,7 @@
     "source_vocab_id":"vocab_0268"
   },
   {
-    "id":"qv19_0802",
+    "id":"qv19_0799",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ซื้อ (suu)?",
@@ -9624,7 +9588,7 @@
     "source_vocab_id":"vocab_0269"
   },
   {
-    "id":"qv19_0803",
+    "id":"qv19_0800",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לקנות — buy (suu)",
@@ -9636,7 +9600,7 @@
     "source_vocab_id":"vocab_0269"
   },
   {
-    "id":"qv19_0804",
+    "id":"qv19_0801",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: suu — לקנות \/ buy",
@@ -9648,7 +9612,7 @@
     "source_vocab_id":"vocab_0269"
   },
   {
-    "id":"qv19_0805",
+    "id":"qv19_0802",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ขาย (kaai)?",
@@ -9660,7 +9624,7 @@
     "source_vocab_id":"vocab_0270"
   },
   {
-    "id":"qv19_0806",
+    "id":"qv19_0803",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: למכור — sell (kaai)",
@@ -9672,7 +9636,7 @@
     "source_vocab_id":"vocab_0270"
   },
   {
-    "id":"qv19_0807",
+    "id":"qv19_0804",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: kaai — למכור \/ sell",
@@ -9684,7 +9648,7 @@
     "source_vocab_id":"vocab_0270"
   },
   {
-    "id":"qv19_0808",
+    "id":"qv19_0805",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ให้ (hai)?",
@@ -9696,7 +9660,7 @@
     "source_vocab_id":"vocab_0271"
   },
   {
-    "id":"qv19_0809",
+    "id":"qv19_0806",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לתת \/ עבור — give \/ for (hai)",
@@ -9708,7 +9672,7 @@
     "source_vocab_id":"vocab_0271"
   },
   {
-    "id":"qv19_0810",
+    "id":"qv19_0807",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: hai — לתת \/ עבור \/ give \/ for",
@@ -9720,7 +9684,7 @@
     "source_vocab_id":"vocab_0271"
   },
   {
-    "id":"qv19_0811",
+    "id":"qv19_0808",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ช่วย (choo-ay)?",
@@ -9732,7 +9696,7 @@
     "source_vocab_id":"vocab_0272"
   },
   {
-    "id":"qv19_0812",
+    "id":"qv19_0809",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לעזור — help (choo-ay)",
@@ -9744,7 +9708,7 @@
     "source_vocab_id":"vocab_0272"
   },
   {
-    "id":"qv19_0813",
+    "id":"qv19_0810",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: choo-ay — לעזור \/ help",
@@ -9756,7 +9720,7 @@
     "source_vocab_id":"vocab_0272"
   },
   {
-    "id":"qv19_0814",
+    "id":"qv19_0811",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של บอก (bork)?",
@@ -9768,7 +9732,7 @@
     "source_vocab_id":"vocab_0273"
   },
   {
-    "id":"qv19_0815",
+    "id":"qv19_0812",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: להגיד \/ לספר — tell (bork)",
@@ -9780,7 +9744,7 @@
     "source_vocab_id":"vocab_0273"
   },
   {
-    "id":"qv19_0816",
+    "id":"qv19_0813",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: bork — להגיד \/ לספר \/ tell",
@@ -9792,7 +9756,7 @@
     "source_vocab_id":"vocab_0273"
   },
   {
-    "id":"qv19_0817",
+    "id":"qv19_0814",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ถาม (tam)?",
@@ -9804,7 +9768,7 @@
     "source_vocab_id":"vocab_0274"
   },
   {
-    "id":"qv19_0818",
+    "id":"qv19_0815",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לשאול — ask (tam)",
@@ -9816,7 +9780,7 @@
     "source_vocab_id":"vocab_0274"
   },
   {
-    "id":"qv19_0819",
+    "id":"qv19_0816",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: tam — לשאול \/ ask",
@@ -9828,7 +9792,7 @@
     "source_vocab_id":"vocab_0274"
   },
   {
-    "id":"qv19_0820",
+    "id":"qv19_0817",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ยิ้ม (yim)?",
@@ -9840,7 +9804,7 @@
     "source_vocab_id":"vocab_0275"
   },
   {
-    "id":"qv19_0821",
+    "id":"qv19_0818",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לחייך — smile (yim)",
@@ -9852,7 +9816,7 @@
     "source_vocab_id":"vocab_0275"
   },
   {
-    "id":"qv19_0822",
+    "id":"qv19_0819",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: yim — לחייך \/ smile",
@@ -9864,7 +9828,7 @@
     "source_vocab_id":"vocab_0275"
   },
   {
-    "id":"qv19_0823",
+    "id":"qv19_0820",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ร้องไห้ (rong¹-hai³)?",
@@ -9876,7 +9840,7 @@
     "source_vocab_id":"vocab_0276"
   },
   {
-    "id":"qv19_0824",
+    "id":"qv19_0821",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לבכות — cry (rong¹-hai³)",
@@ -9888,7 +9852,7 @@
     "source_vocab_id":"vocab_0276"
   },
   {
-    "id":"qv19_0825",
+    "id":"qv19_0822",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: rong¹-hai³ — לבכות \/ cry",
@@ -9900,7 +9864,7 @@
     "source_vocab_id":"vocab_0276"
   },
   {
-    "id":"qv19_0826",
+    "id":"qv19_0823",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של อิจฉา (it²-chaa¹)?",
@@ -9912,7 +9876,7 @@
     "source_vocab_id":"vocab_0277"
   },
   {
-    "id":"qv19_0827",
+    "id":"qv19_0824",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לקנא — envy \/ jealous (it²-chaa¹)",
@@ -9924,7 +9888,7 @@
     "source_vocab_id":"vocab_0277"
   },
   {
-    "id":"qv19_0828",
+    "id":"qv19_0825",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: it²-chaa¹ — לקנא \/ envy \/ jealous",
@@ -9936,7 +9900,7 @@
     "source_vocab_id":"vocab_0277"
   },
   {
-    "id":"qv19_0829",
+    "id":"qv19_0826",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של โมโห (mo¹-ho¹)?",
@@ -9948,7 +9912,7 @@
     "source_vocab_id":"vocab_0278"
   },
   {
-    "id":"qv19_0830",
+    "id":"qv19_0827",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: עצבני — angry \/ annoyed (mo¹-ho¹)",
@@ -9960,7 +9924,7 @@
     "source_vocab_id":"vocab_0278"
   },
   {
-    "id":"qv19_0831",
+    "id":"qv19_0828",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: mo¹-ho¹ — עצבני \/ angry \/ annoyed",
@@ -9972,7 +9936,7 @@
     "source_vocab_id":"vocab_0278"
   },
   {
-    "id":"qv19_0832",
+    "id":"qv19_0829",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של รำคาญ (ram¹-kaan¹)?",
@@ -9984,7 +9948,7 @@
     "source_vocab_id":"vocab_0279"
   },
   {
-    "id":"qv19_0833",
+    "id":"qv19_0830",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מעצבן — annoyed \/ annoying (ram¹-kaan¹)",
@@ -9996,7 +9960,7 @@
     "source_vocab_id":"vocab_0279"
   },
   {
-    "id":"qv19_0834",
+    "id":"qv19_0831",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: ram¹-kaan¹ — מעצבן \/ annoyed \/ annoying",
@@ -10008,7 +9972,7 @@
     "source_vocab_id":"vocab_0279"
   },
   {
-    "id":"qv19_0835",
+    "id":"qv19_0832",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של หวัง (wang¹)?",
@@ -10020,7 +9984,7 @@
     "source_vocab_id":"vocab_0280"
   },
   {
-    "id":"qv19_0836",
+    "id":"qv19_0833",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לקוות — hope (wang¹)",
@@ -10032,7 +9996,7 @@
     "source_vocab_id":"vocab_0280"
   },
   {
-    "id":"qv19_0837",
+    "id":"qv19_0834",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: wang¹ — לקוות \/ hope",
@@ -10044,7 +10008,7 @@
     "source_vocab_id":"vocab_0280"
   },
   {
-    "id":"qv19_0838",
+    "id":"qv19_0835",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של มั่นใจ (man¹-jai¹)?",
@@ -10056,7 +10020,7 @@
     "source_vocab_id":"vocab_0281"
   },
   {
-    "id":"qv19_0839",
+    "id":"qv19_0836",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: בטוח — confident (man¹-jai¹)",
@@ -10068,7 +10032,7 @@
     "source_vocab_id":"vocab_0281"
   },
   {
-    "id":"qv19_0840",
+    "id":"qv19_0837",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: man¹-jai¹ — בטוח \/ confident",
@@ -10080,7 +10044,7 @@
     "source_vocab_id":"vocab_0281"
   },
   {
-    "id":"qv19_0841",
+    "id":"qv19_0838",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של น่าสงสาร (naa³-song⁵-saan¹)?",
@@ -10092,7 +10056,7 @@
     "source_vocab_id":"vocab_0282"
   },
   {
-    "id":"qv19_0842",
+    "id":"qv19_0839",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מסכן — pitiful \/ poor thing (naa³-song⁵-saan¹)",
@@ -10104,7 +10068,7 @@
     "source_vocab_id":"vocab_0282"
   },
   {
-    "id":"qv19_0843",
+    "id":"qv19_0840",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: naa³-song⁵-saan¹ — מסכן \/ pitiful \/ poor thing",
@@ -10116,7 +10080,7 @@
     "source_vocab_id":"vocab_0282"
   },
   {
-    "id":"qv19_0844",
+    "id":"qv19_0841",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ภูมิใจ (pum¹-jai¹)?",
@@ -10128,7 +10092,7 @@
     "source_vocab_id":"vocab_0283"
   },
   {
-    "id":"qv19_0845",
+    "id":"qv19_0842",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: גאה — proud (pum¹-jai¹)",
@@ -10140,7 +10104,7 @@
     "source_vocab_id":"vocab_0283"
   },
   {
-    "id":"qv19_0846",
+    "id":"qv19_0843",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: pum¹-jai¹ — גאה \/ proud",
@@ -10152,7 +10116,7 @@
     "source_vocab_id":"vocab_0283"
   },
   {
-    "id":"qv19_0847",
+    "id":"qv19_0844",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เสียดาย (sia⁵-daai¹)?",
@@ -10164,7 +10128,7 @@
     "source_vocab_id":"vocab_0284"
   },
   {
-    "id":"qv19_0848",
+    "id":"qv19_0845",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: חבל \/ בזבוז — what a pity \/ waste (sia⁵-daai¹)",
@@ -10176,7 +10140,7 @@
     "source_vocab_id":"vocab_0284"
   },
   {
-    "id":"qv19_0849",
+    "id":"qv19_0846",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: sia⁵-daai¹ — חבל \/ בזבוז \/ what a pity \/ waste",
@@ -10188,7 +10152,7 @@
     "source_vocab_id":"vocab_0284"
   },
   {
-    "id":"qv19_0850",
+    "id":"qv19_0847",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ตื่นเต้น (dteun-dten)?",
@@ -10200,7 +10164,7 @@
     "source_vocab_id":"vocab_0285"
   },
   {
-    "id":"qv19_0851",
+    "id":"qv19_0848",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מתרגש — excited (dteun-dten)",
@@ -10212,7 +10176,7 @@
     "source_vocab_id":"vocab_0285"
   },
   {
-    "id":"qv19_0852",
+    "id":"qv19_0849",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dteun-dten — מתרגש \/ excited",
@@ -10224,7 +10188,7 @@
     "source_vocab_id":"vocab_0285"
   },
   {
-    "id":"qv19_0853",
+    "id":"qv19_0850",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ง่วง (nguang³)?",
@@ -10236,7 +10200,7 @@
     "source_vocab_id":"vocab_0286"
   },
   {
-    "id":"qv19_0854",
+    "id":"qv19_0851",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: ישנוני — sleepy (nguang³)",
@@ -10248,7 +10212,7 @@
     "source_vocab_id":"vocab_0286"
   },
   {
-    "id":"qv19_0855",
+    "id":"qv19_0852",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: nguang³ — ישנוני \/ sleepy",
@@ -10260,7 +10224,7 @@
     "source_vocab_id":"vocab_0286"
   },
   {
-    "id":"qv19_0856",
+    "id":"qv19_0853",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ตกใจ (dtok²-jai¹)?",
@@ -10272,7 +10236,7 @@
     "source_vocab_id":"vocab_0287"
   },
   {
-    "id":"qv19_0857",
+    "id":"qv19_0854",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מבוהל — shocked \/ startled (dtok²-jai¹)",
@@ -10284,7 +10248,7 @@
     "source_vocab_id":"vocab_0287"
   },
   {
-    "id":"qv19_0858",
+    "id":"qv19_0855",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dtok²-jai¹ — מבוהל \/ shocked \/ startled",
@@ -10296,7 +10260,7 @@
     "source_vocab_id":"vocab_0287"
   },
   {
-    "id":"qv19_0859",
+    "id":"qv19_0856",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של รวม (ruam¹)?",
@@ -10308,7 +10272,7 @@
     "source_vocab_id":"vocab_0288"
   },
   {
-    "id":"qv19_0860",
+    "id":"qv19_0857",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: ביחד — together \/ include (ruam¹)",
@@ -10320,7 +10284,7 @@
     "source_vocab_id":"vocab_0288"
   },
   {
-    "id":"qv19_0861",
+    "id":"qv19_0858",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: ruam¹ — ביחד \/ together \/ include",
@@ -10332,7 +10296,7 @@
     "source_vocab_id":"vocab_0288"
   },
   {
-    "id":"qv19_0862",
+    "id":"qv19_0859",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ชื่อจริง (cheuu³-jing¹)?",
@@ -10344,7 +10308,7 @@
     "source_vocab_id":"vocab_0289"
   },
   {
-    "id":"qv19_0863",
+    "id":"qv19_0860",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: שם אמיתי — real name (cheuu³-jing¹)",
@@ -10356,7 +10320,7 @@
     "source_vocab_id":"vocab_0289"
   },
   {
-    "id":"qv19_0864",
+    "id":"qv19_0861",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: cheuu³-jing¹ — שם אמיתי \/ real name",
@@ -10368,7 +10332,7 @@
     "source_vocab_id":"vocab_0289"
   },
   {
-    "id":"qv19_0865",
+    "id":"qv19_0862",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ชื่อเล่น (cheuu³-len³)?",
@@ -10380,7 +10344,7 @@
     "source_vocab_id":"vocab_0290"
   },
   {
-    "id":"qv19_0866",
+    "id":"qv19_0863",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: כינוי — nickname (cheuu³-len³)",
@@ -10392,7 +10356,7 @@
     "source_vocab_id":"vocab_0290"
   },
   {
-    "id":"qv19_0867",
+    "id":"qv19_0864",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: cheuu³-len³ — כינוי \/ nickname",
@@ -10404,7 +10368,7 @@
     "source_vocab_id":"vocab_0290"
   },
   {
-    "id":"qv19_0868",
+    "id":"qv19_0865",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של นามสกุล (naam¹-sa¹-kun¹)?",
@@ -10416,7 +10380,7 @@
     "source_vocab_id":"vocab_0291"
   },
   {
-    "id":"qv19_0869",
+    "id":"qv19_0866",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: שם משפחה — surname (naam¹-sa¹-kun¹)",
@@ -10428,7 +10392,7 @@
     "source_vocab_id":"vocab_0291"
   },
   {
-    "id":"qv19_0870",
+    "id":"qv19_0867",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: naam¹-sa¹-kun¹ — שם משפחה \/ surname",
@@ -10440,7 +10404,7 @@
     "source_vocab_id":"vocab_0291"
   },
   {
-    "id":"qv19_0871",
+    "id":"qv19_0868",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של คือ (keuu¹)?",
@@ -10452,7 +10416,7 @@
     "source_vocab_id":"vocab_0292"
   },
   {
-    "id":"qv19_0872",
+    "id":"qv19_0869",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: זה \/ הוא (הגדרה) — is \/ means (keuu¹)",
@@ -10464,7 +10428,7 @@
     "source_vocab_id":"vocab_0292"
   },
   {
-    "id":"qv19_0873",
+    "id":"qv19_0870",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: keuu¹ — זה \/ הוא (הגדרה) \/ is \/ means",
@@ -10476,7 +10440,7 @@
     "source_vocab_id":"vocab_0292"
   },
   {
-    "id":"qv19_0874",
+    "id":"qv19_0871",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เบื่อ (beaua²)?",
@@ -10488,7 +10452,7 @@
     "source_vocab_id":"vocab_0293"
   },
   {
-    "id":"qv19_0875",
+    "id":"qv19_0872",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: משעמם — bored (beaua²)",
@@ -10500,7 +10464,7 @@
     "source_vocab_id":"vocab_0293"
   },
   {
-    "id":"qv19_0876",
+    "id":"qv19_0873",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: beaua² — משעמם \/ bored",
@@ -10512,7 +10476,7 @@
     "source_vocab_id":"vocab_0293"
   },
   {
-    "id":"qv19_0877",
+    "id":"qv19_0874",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של สมอง (sa¹-mawng¹)?",
@@ -10524,7 +10488,7 @@
     "source_vocab_id":"vocab_0294"
   },
   {
-    "id":"qv19_0878",
+    "id":"qv19_0875",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מוח — brain (sa¹-mawng¹)",
@@ -10536,7 +10500,7 @@
     "source_vocab_id":"vocab_0294"
   },
   {
-    "id":"qv19_0879",
+    "id":"qv19_0876",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: sa¹-mawng¹ — מוח \/ brain",
@@ -10548,7 +10512,7 @@
     "source_vocab_id":"vocab_0294"
   },
   {
-    "id":"qv19_0880",
+    "id":"qv19_0877",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של สมองไม่ทำงาน (sa¹-mawng¹ mai³ tam¹-ngaan¹)?",
@@ -10560,7 +10524,7 @@
     "source_vocab_id":"vocab_0295"
   },
   {
-    "id":"qv19_0881",
+    "id":"qv19_0878",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: המוח לא עובד — brain not working (sa¹-mawng¹ mai³ tam¹-ngaan¹)",
@@ -10572,7 +10536,7 @@
     "source_vocab_id":"vocab_0295"
   },
   {
-    "id":"qv19_0882",
+    "id":"qv19_0879",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: sa¹-mawng¹ mai³ tam¹-ngaan¹ — המוח לא עובד \/ brain not working",
@@ -10584,7 +10548,7 @@
     "source_vocab_id":"vocab_0295"
   },
   {
-    "id":"qv19_0883",
+    "id":"qv19_0880",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של บน (bon¹)?",
@@ -10596,7 +10560,7 @@
     "source_vocab_id":"vocab_0296"
   },
   {
-    "id":"qv19_0884",
+    "id":"qv19_0881",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: על (מעל) — on \/ above (bon¹)",
@@ -10608,7 +10572,7 @@
     "source_vocab_id":"vocab_0296"
   },
   {
-    "id":"qv19_0885",
+    "id":"qv19_0882",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: bon¹ — על (מעל) \/ on \/ above",
@@ -10620,7 +10584,7 @@
     "source_vocab_id":"vocab_0296"
   },
   {
-    "id":"qv19_0886",
+    "id":"qv19_0883",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ต่อไป (dtor²-bpai¹)?",
@@ -10632,7 +10596,7 @@
     "source_vocab_id":"vocab_0297"
   },
   {
-    "id":"qv19_0887",
+    "id":"qv19_0884",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: הבא — next (dtor²-bpai¹)",
@@ -10644,7 +10608,7 @@
     "source_vocab_id":"vocab_0297"
   },
   {
-    "id":"qv19_0888",
+    "id":"qv19_0885",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dtor²-bpai¹ — הבא \/ next",
@@ -10656,7 +10620,7 @@
     "source_vocab_id":"vocab_0297"
   },
   {
-    "id":"qv19_0889",
+    "id":"qv19_0886",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เห็น (hen¹)?",
@@ -10668,7 +10632,7 @@
     "source_vocab_id":"vocab_0298"
   },
   {
-    "id":"qv19_0890",
+    "id":"qv19_0887",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: רואה — see (hen¹)",
@@ -10680,7 +10644,7 @@
     "source_vocab_id":"vocab_0298"
   },
   {
-    "id":"qv19_0891",
+    "id":"qv19_0888",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: hen¹ — רואה \/ see",
@@ -10692,7 +10656,7 @@
     "source_vocab_id":"vocab_0298"
   },
   {
-    "id":"qv19_0892",
+    "id":"qv19_0889",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של หน้าต่าง (naa³-dtang²)?",
@@ -10704,7 +10668,7 @@
     "source_vocab_id":"vocab_0299"
   },
   {
-    "id":"qv19_0893",
+    "id":"qv19_0890",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: חלון — window (naa³-dtang²)",
@@ -10716,7 +10680,7 @@
     "source_vocab_id":"vocab_0299"
   },
   {
-    "id":"qv19_0894",
+    "id":"qv19_0891",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: naa³-dtang² — חלון \/ window",
@@ -10728,7 +10692,7 @@
     "source_vocab_id":"vocab_0299"
   },
   {
-    "id":"qv19_0895",
+    "id":"qv19_0892",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ห้อง (hawng³)?",
@@ -10740,7 +10704,7 @@
     "source_vocab_id":"vocab_0300"
   },
   {
-    "id":"qv19_0896",
+    "id":"qv19_0893",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: חדר — room (hawng³)",
@@ -10752,7 +10716,7 @@
     "source_vocab_id":"vocab_0300"
   },
   {
-    "id":"qv19_0897",
+    "id":"qv19_0894",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: hawng³ — חדר \/ room",
@@ -10764,7 +10728,7 @@
     "source_vocab_id":"vocab_0300"
   },
   {
-    "id":"qv19_0898",
+    "id":"qv19_0895",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של พ่อแม่ (poh³-mae³)?",
@@ -10776,7 +10740,7 @@
     "source_vocab_id":"vocab_0301"
   },
   {
-    "id":"qv19_0899",
+    "id":"qv19_0896",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: הורים — parents (poh³-mae³)",
@@ -10788,7 +10752,7 @@
     "source_vocab_id":"vocab_0301"
   },
   {
-    "id":"qv19_0900",
+    "id":"qv19_0897",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: poh³-mae³ — הורים \/ parents",
@@ -10800,7 +10764,7 @@
     "source_vocab_id":"vocab_0301"
   },
   {
-    "id":"qv19_0901",
+    "id":"qv19_0898",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של กับข้าว (kap²-kaao³)?",
@@ -10812,7 +10776,7 @@
     "source_vocab_id":"vocab_0302"
   },
   {
-    "id":"qv19_0902",
+    "id":"qv19_0899",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אוכל (שאוכלים עם אורז) — food eaten with rice (kap²-kaao³)",
@@ -10824,7 +10788,7 @@
     "source_vocab_id":"vocab_0302"
   },
   {
-    "id":"qv19_0903",
+    "id":"qv19_0900",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: kap²-kaao³ — אוכל (שאוכלים עם אורז) \/ food eaten with rice",
@@ -10836,7 +10800,7 @@
     "source_vocab_id":"vocab_0302"
   },
   {
-    "id":"qv19_0904",
+    "id":"qv19_0901",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של นักเรียน (nag²-rian¹)?",
@@ -10848,7 +10812,7 @@
     "source_vocab_id":"vocab_0303"
   },
   {
-    "id":"qv19_0905",
+    "id":"qv19_0902",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: סטודנט \/ תלמיד — student (nag²-rian¹)",
@@ -10860,7 +10824,7 @@
     "source_vocab_id":"vocab_0303"
   },
   {
-    "id":"qv19_0906",
+    "id":"qv19_0903",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: nag²-rian¹ — סטודנט \/ תלמיד \/ student",
@@ -10872,7 +10836,7 @@
     "source_vocab_id":"vocab_0303"
   },
   {
-    "id":"qv19_0907",
+    "id":"qv19_0904",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ร้านอาหาร (raan³-aa¹-haan⁵)?",
@@ -10884,7 +10848,7 @@
     "source_vocab_id":"vocab_0304"
   },
   {
-    "id":"qv19_0908",
+    "id":"qv19_0905",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מסעדה — restaurant (raan³-aa¹-haan⁵)",
@@ -10896,7 +10860,7 @@
     "source_vocab_id":"vocab_0304"
   },
   {
-    "id":"qv19_0909",
+    "id":"qv19_0906",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: raan³-aa¹-haan⁵ — מסעדה \/ restaurant",
@@ -10908,7 +10872,7 @@
     "source_vocab_id":"vocab_0304"
   },
   {
-    "id":"qv19_0910",
+    "id":"qv19_0907",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เจ้าของ (jao³-kawng¹)?",
@@ -10920,7 +10884,7 @@
     "source_vocab_id":"vocab_0305"
   },
   {
-    "id":"qv19_0911",
+    "id":"qv19_0908",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: הבעלים — owner (jao³-kawng¹)",
@@ -10932,7 +10896,7 @@
     "source_vocab_id":"vocab_0305"
   },
   {
-    "id":"qv19_0912",
+    "id":"qv19_0909",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: jao³-kawng¹ — הבעלים \/ owner",
@@ -10944,7 +10908,7 @@
     "source_vocab_id":"vocab_0305"
   },
   {
-    "id":"qv19_0913",
+    "id":"qv19_0910",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של แม่ (mae³)?",
@@ -10956,7 +10920,7 @@
     "source_vocab_id":"vocab_0306"
   },
   {
-    "id":"qv19_0914",
+    "id":"qv19_0911",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אמא — mother (mae³)",
@@ -10968,7 +10932,7 @@
     "source_vocab_id":"vocab_0306"
   },
   {
-    "id":"qv19_0915",
+    "id":"qv19_0912",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: mae³ — אמא \/ mother",
@@ -10980,7 +10944,7 @@
     "source_vocab_id":"vocab_0306"
   },
   {
-    "id":"qv19_0916",
+    "id":"qv19_0913",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ผู้หญิง (puu³-ying⁵)?",
@@ -10992,7 +10956,7 @@
     "source_vocab_id":"vocab_0307"
   },
   {
-    "id":"qv19_0917",
+    "id":"qv19_0914",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אישה \/ נקבה — woman \/ female (puu³-ying⁵)",
@@ -11004,7 +10968,7 @@
     "source_vocab_id":"vocab_0307"
   },
   {
-    "id":"qv19_0918",
+    "id":"qv19_0915",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: puu³-ying⁵ — אישה \/ נקבה \/ woman \/ female",
@@ -11016,7 +10980,7 @@
     "source_vocab_id":"vocab_0307"
   },
   {
-    "id":"qv19_0919",
+    "id":"qv19_0916",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ผู้ชาย (puu³-chaai¹)?",
@@ -11028,7 +10992,7 @@
     "source_vocab_id":"vocab_0308"
   },
   {
-    "id":"qv19_0920",
+    "id":"qv19_0917",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: גבר \/ זכר — man \/ male (puu³-chaai¹)",
@@ -11040,7 +11004,7 @@
     "source_vocab_id":"vocab_0308"
   },
   {
-    "id":"qv19_0921",
+    "id":"qv19_0918",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: puu³-chaai¹ — גבר \/ זכר \/ man \/ male",
@@ -11052,7 +11016,7 @@
     "source_vocab_id":"vocab_0308"
   },
   {
-    "id":"qv19_0922",
+    "id":"qv19_0919",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ในหลวง (nai¹-lu-ang¹)?",
@@ -11064,7 +11028,7 @@
     "source_vocab_id":"vocab_0309"
   },
   {
-    "id":"qv19_0923",
+    "id":"qv19_0920",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: המלך — king (nai¹-lu-ang¹)",
@@ -11076,7 +11040,7 @@
     "source_vocab_id":"vocab_0309"
   },
   {
-    "id":"qv19_0924",
+    "id":"qv19_0921",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: nai¹-lu-ang¹ — המלך \/ king",
@@ -11088,7 +11052,7 @@
     "source_vocab_id":"vocab_0309"
   },
   {
-    "id":"qv19_0925",
+    "id":"qv19_0922",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של พระเจ้าอยู่หัว (pra¹-jao³-yuu²-hua¹)?",
@@ -11100,7 +11064,7 @@
     "source_vocab_id":"vocab_0310"
   },
   {
-    "id":"qv19_0926",
+    "id":"qv19_0923",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: המלך (תואר רשמי) — king (formal title) (pra¹-jao³-yuu²-hua¹)",
@@ -11112,7 +11076,7 @@
     "source_vocab_id":"vocab_0310"
   },
   {
-    "id":"qv19_0927",
+    "id":"qv19_0924",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: pra¹-jao³-yuu²-hua¹ — המלך (תואר רשמי) \/ king (formal title)",
@@ -11124,7 +11088,7 @@
     "source_vocab_id":"vocab_0310"
   },
   {
-    "id":"qv19_0928",
+    "id":"qv19_0925",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של หมู่ (muu)?",
@@ -11136,7 +11100,7 @@
     "source_vocab_id":"vocab_0311"
   },
   {
-    "id":"qv19_0929",
+    "id":"qv19_0926",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: קבוצה \/ כפר \/ חבורה — group \/ village \/ category (muu)",
@@ -11148,7 +11112,7 @@
     "source_vocab_id":"vocab_0311"
   },
   {
-    "id":"qv19_0930",
+    "id":"qv19_0927",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: muu — קבוצה \/ כפר \/ חבורה \/ group \/ village \/ category",
@@ -11160,7 +11124,7 @@
     "source_vocab_id":"vocab_0311"
   },
   {
-    "id":"qv19_0931",
+    "id":"qv19_0928",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ชาวเผ่า (chaao¹-pao¹)?",
@@ -11172,7 +11136,7 @@
     "source_vocab_id":"vocab_0312"
   },
   {
-    "id":"qv19_0932",
+    "id":"qv19_0929",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אנשי שבט — tribal people (chaao¹-pao¹)",
@@ -11184,7 +11148,7 @@
     "source_vocab_id":"vocab_0312"
   },
   {
-    "id":"qv19_0933",
+    "id":"qv19_0930",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: chaao¹-pao¹ — אנשי שבט \/ tribal people",
@@ -11196,7 +11160,7 @@
     "source_vocab_id":"vocab_0312"
   },
   {
-    "id":"qv19_0934",
+    "id":"qv19_0931",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ภูเขา (puu¹-kao¹)?",
@@ -11208,7 +11172,7 @@
     "source_vocab_id":"vocab_0314"
   },
   {
-    "id":"qv19_0935",
+    "id":"qv19_0932",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: הר — mountain (puu¹-kao¹)",
@@ -11220,7 +11184,7 @@
     "source_vocab_id":"vocab_0314"
   },
   {
-    "id":"qv19_0936",
+    "id":"qv19_0933",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: puu¹-kao¹ — הר \/ mountain",
@@ -11232,7 +11196,7 @@
     "source_vocab_id":"vocab_0314"
   },
   {
-    "id":"qv19_0937",
+    "id":"qv19_0934",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ผ้า (paa)?",
@@ -11244,7 +11208,7 @@
     "source_vocab_id":"vocab_0315"
   },
   {
-    "id":"qv19_0938",
+    "id":"qv19_0935",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: בד \/ בגד — cloth \/ fabric \/ clothing (paa)",
@@ -11256,7 +11220,7 @@
     "source_vocab_id":"vocab_0315"
   },
   {
-    "id":"qv19_0939",
+    "id":"qv19_0936",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: paa — בד \/ בגד \/ cloth \/ fabric \/ clothing",
@@ -11268,7 +11232,7 @@
     "source_vocab_id":"vocab_0315"
   },
   {
-    "id":"qv19_0940",
+    "id":"qv19_0937",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ตลาดนัด (dtalard²-nat¹)?",
@@ -11280,7 +11244,7 @@
     "source_vocab_id":"vocab_0316"
   },
   {
-    "id":"qv19_0941",
+    "id":"qv19_0938",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: שוק — market (dtalard²-nat¹)",
@@ -11292,7 +11256,7 @@
     "source_vocab_id":"vocab_0316"
   },
   {
-    "id":"qv19_0942",
+    "id":"qv19_0939",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dtalard²-nat¹ — שוק \/ market",
@@ -11304,7 +11268,7 @@
     "source_vocab_id":"vocab_0316"
   },
   {
-    "id":"qv19_0943",
+    "id":"qv19_0940",
     "level":"2",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של อีก (iig(2))?",
@@ -11316,7 +11280,7 @@
     "source_vocab_id":"vocab_0317"
   },
   {
-    "id":"qv19_0944",
+    "id":"qv19_0941",
     "level":"2",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: שוב (Again) — again \/ more (iig(2))",
@@ -11328,7 +11292,7 @@
     "source_vocab_id":"vocab_0317"
   },
   {
-    "id":"qv19_0945",
+    "id":"qv19_0942",
     "level":"2",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: iig(2) — שוב (Again) \/ again \/ more",
@@ -11340,7 +11304,7 @@
     "source_vocab_id":"vocab_0317"
   },
   {
-    "id":"qv19_0946",
+    "id":"qv19_0943",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של พักผ่อน (pag-pawn(2-2))?",
@@ -11352,7 +11316,7 @@
     "source_vocab_id":"vocab_0318"
   },
   {
-    "id":"qv19_0947",
+    "id":"qv19_0944",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לנוח — rest (pag-pawn(2-2))",
@@ -11364,7 +11328,7 @@
     "source_vocab_id":"vocab_0318"
   },
   {
-    "id":"qv19_0948",
+    "id":"qv19_0945",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: pag-pawn(2-2) — לנוח \/ rest",
@@ -11376,7 +11340,7 @@
     "source_vocab_id":"vocab_0318"
   },
   {
-    "id":"qv19_0949",
+    "id":"qv19_0946",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ไปเที่ยว (bpai-tiao(1-3))?",
@@ -11388,7 +11352,7 @@
     "source_vocab_id":"vocab_0319"
   },
   {
-    "id":"qv19_0950",
+    "id":"qv19_0947",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לטייל \/ להסתובב בכיף — go out \/ travel for fun (bpai-tiao(1-3))",
@@ -11400,7 +11364,7 @@
     "source_vocab_id":"vocab_0319"
   },
   {
-    "id":"qv19_0951",
+    "id":"qv19_0948",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: bpai-tiao(1-3) — לטייל \/ להסתובב בכיף \/ go out \/ travel for fun",
@@ -11412,7 +11376,7 @@
     "source_vocab_id":"vocab_0319"
   },
   {
-    "id":"qv19_0952",
+    "id":"qv19_0949",
     "level":"2",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เสร็จ (sed(2))?",
@@ -11424,7 +11388,7 @@
     "source_vocab_id":"vocab_0320"
   },
   {
-    "id":"qv19_0953",
+    "id":"qv19_0950",
     "level":"2",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: סיים \/ נגמר — finish \/ done (sed(2))",
@@ -11436,7 +11400,7 @@
     "source_vocab_id":"vocab_0320"
   },
   {
-    "id":"qv19_0954",
+    "id":"qv19_0951",
     "level":"2",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: sed(2) — סיים \/ נגמר \/ finish \/ done",
@@ -11448,7 +11412,7 @@
     "source_vocab_id":"vocab_0320"
   },
   {
-    "id":"qv19_0955",
+    "id":"qv19_0952",
     "level":"2",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של หมด (mod(2))?",
@@ -11460,7 +11424,7 @@
     "source_vocab_id":"vocab_0321"
   },
   {
-    "id":"qv19_0956",
+    "id":"qv19_0953",
     "level":"2",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: הכל נגמר \/ אזל — finished \/ used up (mod(2))",
@@ -11472,7 +11436,7 @@
     "source_vocab_id":"vocab_0321"
   },
   {
-    "id":"qv19_0957",
+    "id":"qv19_0954",
     "level":"2",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: mod(2) — הכל נגמר \/ אזל \/ finished \/ used up",
@@ -11484,7 +11448,7 @@
     "source_vocab_id":"vocab_0321"
   },
   {
-    "id":"qv19_0958",
+    "id":"qv19_0955",
     "level":"2",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ตื่น (dteun)?",
@@ -11496,7 +11460,7 @@
     "source_vocab_id":"vocab_0322"
   },
   {
-    "id":"qv19_0959",
+    "id":"qv19_0956",
     "level":"2",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: להתעורר — wake up (dteun)",
@@ -11508,7 +11472,7 @@
     "source_vocab_id":"vocab_0322"
   },
   {
-    "id":"qv19_0960",
+    "id":"qv19_0957",
     "level":"2",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dteun — להתעורר \/ wake up",
@@ -11520,7 +11484,7 @@
     "source_vocab_id":"vocab_0322"
   },
   {
-    "id":"qv19_0961",
+    "id":"qv19_0958",
     "level":"2",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של หลง (long(1))?",
@@ -11532,7 +11496,7 @@
     "source_vocab_id":"vocab_0323"
   },
   {
-    "id":"qv19_0962",
+    "id":"qv19_0959",
     "level":"2",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: ללכת לאיבוד — lost (long(1))",
@@ -11544,7 +11508,7 @@
     "source_vocab_id":"vocab_0323"
   },
   {
-    "id":"qv19_0963",
+    "id":"qv19_0960",
     "level":"2",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: long(1) — ללכת לאיבוד \/ lost",
@@ -11556,7 +11520,7 @@
     "source_vocab_id":"vocab_0323"
   },
   {
-    "id":"qv19_0964",
+    "id":"qv19_0961",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ความอดทน (kwaam-od-ton(1-2-1))?",
@@ -11568,7 +11532,7 @@
     "source_vocab_id":"vocab_0324"
   },
   {
-    "id":"qv19_0965",
+    "id":"qv19_0962",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: סבלנות — patience (kwaam-od-ton(1-2-1))",
@@ -11580,7 +11544,7 @@
     "source_vocab_id":"vocab_0324"
   },
   {
-    "id":"qv19_0966",
+    "id":"qv19_0963",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: kwaam-od-ton(1-2-1) — סבלנות \/ patience",
@@ -11592,7 +11556,7 @@
     "source_vocab_id":"vocab_0324"
   },
   {
-    "id":"qv19_0967",
+    "id":"qv19_0964",
     "level":"2",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ปลา (bplaa(1))?",
@@ -11604,7 +11568,7 @@
     "source_vocab_id":"vocab_0325"
   },
   {
-    "id":"qv19_0968",
+    "id":"qv19_0965",
     "level":"2",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: דג — fish (bplaa(1))",
@@ -11616,7 +11580,7 @@
     "source_vocab_id":"vocab_0325"
   },
   {
-    "id":"qv19_0969",
+    "id":"qv19_0966",
     "level":"2",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: bplaa(1) — דג \/ fish",
@@ -11628,7 +11592,7 @@
     "source_vocab_id":"vocab_0325"
   },
   {
-    "id":"qv19_0970",
+    "id":"qv19_0967",
     "level":"2",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של กุ้ง (gung(3))?",
@@ -11640,7 +11604,7 @@
     "source_vocab_id":"vocab_0326"
   },
   {
-    "id":"qv19_0971",
+    "id":"qv19_0968",
     "level":"2",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: שרימפס — shrimp (gung(3))",
@@ -11652,7 +11616,7 @@
     "source_vocab_id":"vocab_0326"
   },
   {
-    "id":"qv19_0972",
+    "id":"qv19_0969",
     "level":"2",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: gung(3) — שרימפס \/ shrimp",
@@ -11664,7 +11628,7 @@
     "source_vocab_id":"vocab_0326"
   },
   {
-    "id":"qv19_0973",
+    "id":"qv19_0970",
     "level":"2",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של หอย (hoi(5))?",
@@ -11676,7 +11640,7 @@
     "source_vocab_id":"vocab_0327"
   },
   {
-    "id":"qv19_0974",
+    "id":"qv19_0971",
     "level":"2",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: צדפה — shellfish (hoi(5))",
@@ -11688,7 +11652,7 @@
     "source_vocab_id":"vocab_0327"
   },
   {
-    "id":"qv19_0975",
+    "id":"qv19_0972",
     "level":"2",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: hoi(5) — צדפה \/ shellfish",
@@ -11700,7 +11664,7 @@
     "source_vocab_id":"vocab_0327"
   },
   {
-    "id":"qv19_0976",
+    "id":"qv19_0973",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ปลาหมึก (bpla-meuk)?",
@@ -11712,7 +11676,7 @@
     "source_vocab_id":"vocab_0328"
   },
   {
-    "id":"qv19_0977",
+    "id":"qv19_0974",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: דיונון — squid (bpla-meuk)",
@@ -11724,7 +11688,7 @@
     "source_vocab_id":"vocab_0328"
   },
   {
-    "id":"qv19_0978",
+    "id":"qv19_0975",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: bpla-meuk — דיונון \/ squid",
@@ -11736,7 +11700,7 @@
     "source_vocab_id":"vocab_0328"
   },
   {
-    "id":"qv19_0979",
+    "id":"qv19_0976",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של อาหารทะเล (aa-haan-ta-lay(1(1)-5-1-1))?",
@@ -11748,7 +11712,7 @@
     "source_vocab_id":"vocab_0329"
   },
   {
-    "id":"qv19_0980",
+    "id":"qv19_0977",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: פירות ים — seafood (aa-haan-ta-lay(1(1)-5-1-1))",
@@ -11760,7 +11724,7 @@
     "source_vocab_id":"vocab_0329"
   },
   {
-    "id":"qv19_0981",
+    "id":"qv19_0978",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: aa-haan-ta-lay(1(1)-5-1-1) — פירות ים \/ seafood",
@@ -11772,7 +11736,7 @@
     "source_vocab_id":"vocab_0329"
   },
   {
-    "id":"qv19_0982",
+    "id":"qv19_0979",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เมื่อไร (meua-rai(3-1))?",
@@ -11784,7 +11748,7 @@
     "source_vocab_id":"vocab_0330"
   },
   {
-    "id":"qv19_0983",
+    "id":"qv19_0980",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מתי — when? (meua-rai(3-1))",
@@ -11796,7 +11760,7 @@
     "source_vocab_id":"vocab_0330"
   },
   {
-    "id":"qv19_0984",
+    "id":"qv19_0981",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: meua-rai(3-1) — מתי \/ when?",
@@ -11808,7 +11772,7 @@
     "source_vocab_id":"vocab_0330"
   },
   {
-    "id":"qv19_0985",
+    "id":"qv19_0982",
     "level":"5",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ยังไง (yang-ngai)?",
@@ -11820,7 +11784,7 @@
     "source_vocab_id":"vocab_0331"
   },
   {
-    "id":"qv19_0986",
+    "id":"qv19_0983",
     "level":"5",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: איך? — how? (yang-ngai)",
@@ -11832,7 +11796,7 @@
     "source_vocab_id":"vocab_0331"
   },
   {
-    "id":"qv19_0987",
+    "id":"qv19_0984",
     "level":"5",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: yang-ngai — איך? \/ how?",
@@ -11844,7 +11808,7 @@
     "source_vocab_id":"vocab_0331"
   },
   {
-    "id":"qv19_0988",
+    "id":"qv19_0985",
     "level":"2",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ใคร (khrai(1))?",
@@ -11856,7 +11820,7 @@
     "source_vocab_id":"vocab_0332"
   },
   {
-    "id":"qv19_0989",
+    "id":"qv19_0986",
     "level":"2",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מי (או מי זה) — who (khrai(1))",
@@ -11868,7 +11832,7 @@
     "source_vocab_id":"vocab_0332"
   },
   {
-    "id":"qv19_0990",
+    "id":"qv19_0987",
     "level":"2",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: khrai(1) — מי (או מי זה) \/ who",
@@ -11880,7 +11844,7 @@
     "source_vocab_id":"vocab_0332"
   },
   {
-    "id":"qv19_0991",
+    "id":"qv19_0988",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של วันเกิด (wan-geut(1-2))?",
@@ -11892,7 +11856,7 @@
     "source_vocab_id":"vocab_0333"
   },
   {
-    "id":"qv19_0992",
+    "id":"qv19_0989",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: יום הולדת — birthday (wan-geut(1-2))",
@@ -11904,7 +11868,7 @@
     "source_vocab_id":"vocab_0333"
   },
   {
-    "id":"qv19_0993",
+    "id":"qv19_0990",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: wan-geut(1-2) — יום הולדת \/ birthday",
@@ -11916,7 +11880,7 @@
     "source_vocab_id":"vocab_0333"
   },
   {
-    "id":"qv19_0994",
+    "id":"qv19_0991",
     "level":"2",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เคย (koey(1))?",
@@ -11928,7 +11892,7 @@
     "source_vocab_id":"vocab_0334"
   },
   {
-    "id":"qv19_0995",
+    "id":"qv19_0992",
     "level":"2",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אי פעם — ever (koey(1))",
@@ -11940,7 +11904,7 @@
     "source_vocab_id":"vocab_0334"
   },
   {
-    "id":"qv19_0996",
+    "id":"qv19_0993",
     "level":"2",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: koey(1) — אי פעם \/ ever",
@@ -11952,7 +11916,7 @@
     "source_vocab_id":"vocab_0334"
   },
   {
-    "id":"qv19_0997",
+    "id":"qv19_0994",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של สมาชิก (sa-ma-chik(2-1-3))?",
@@ -11964,7 +11928,7 @@
     "source_vocab_id":"vocab_0335"
   },
   {
-    "id":"qv19_0998",
+    "id":"qv19_0995",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: חבר (במועדון \/ קבוצה) — member (sa-ma-chik(2-1-3))",
@@ -11976,7 +11940,7 @@
     "source_vocab_id":"vocab_0335"
   },
   {
-    "id":"qv19_0999",
+    "id":"qv19_0996",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: sa-ma-chik(2-1-3) — חבר (במועדון \/ קבוצה) \/ member",
@@ -11988,7 +11952,7 @@
     "source_vocab_id":"vocab_0335"
   },
   {
-    "id":"qv19_1000",
+    "id":"qv19_0997",
     "level":"2",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เด็ก (dek(2))?",
@@ -12000,7 +11964,7 @@
     "source_vocab_id":"vocab_0336"
   },
   {
-    "id":"qv19_1001",
+    "id":"qv19_0998",
     "level":"2",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: ילד — child (dek(2))",
@@ -12012,7 +11976,7 @@
     "source_vocab_id":"vocab_0336"
   },
   {
-    "id":"qv19_1002",
+    "id":"qv19_0999",
     "level":"2",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dek(2) — ילד \/ child",
@@ -12024,7 +11988,7 @@
     "source_vocab_id":"vocab_0336"
   },
   {
-    "id":"qv19_1003",
+    "id":"qv19_1000",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של น้ำมัน (nam-man(1-1))?",
@@ -12036,7 +12000,7 @@
     "source_vocab_id":"vocab_0337"
   },
   {
-    "id":"qv19_1004",
+    "id":"qv19_1001",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: שמן \/ דלק — oil \/ fuel (nam-man(1-1))",
@@ -12048,7 +12012,7 @@
     "source_vocab_id":"vocab_0337"
   },
   {
-    "id":"qv19_1005",
+    "id":"qv19_1002",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: nam-man(1-1) — שמן \/ דלק \/ oil \/ fuel",
@@ -12060,7 +12024,7 @@
     "source_vocab_id":"vocab_0337"
   },
   {
-    "id":"qv19_1006",
+    "id":"qv19_1003",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ปั๊มน้ำมัน (bpum-nam-man(3-1-1))?",
@@ -12072,7 +12036,7 @@
     "source_vocab_id":"vocab_0338"
   },
   {
-    "id":"qv19_1007",
+    "id":"qv19_1004",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: תחנת דלק — gas station (bpum-nam-man(3-1-1))",
@@ -12084,7 +12048,7 @@
     "source_vocab_id":"vocab_0338"
   },
   {
-    "id":"qv19_1008",
+    "id":"qv19_1005",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: bpum-nam-man(3-1-1) — תחנת דלק \/ gas station",
@@ -12096,7 +12060,7 @@
     "source_vocab_id":"vocab_0338"
   },
   {
-    "id":"qv19_1009",
+    "id":"qv19_1006",
     "level":"2",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של กัน (gan(1))?",
@@ -12108,7 +12072,7 @@
     "source_vocab_id":"vocab_0339"
   },
   {
-    "id":"qv19_1010",
+    "id":"qv19_1007",
     "level":"2",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אחד את השני \/ ביחד — each other \/ together (gan(1))",
@@ -12120,7 +12084,7 @@
     "source_vocab_id":"vocab_0339"
   },
   {
-    "id":"qv19_1011",
+    "id":"qv19_1008",
     "level":"2",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: gan(1) — אחד את השני \/ ביחד \/ each other \/ together",
@@ -12132,7 +12096,7 @@
     "source_vocab_id":"vocab_0339"
   },
   {
-    "id":"qv19_1012",
+    "id":"qv19_1009",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של แต่เช้า (dtae-chao)?",
@@ -12144,7 +12108,7 @@
     "source_vocab_id":"vocab_0340"
   },
   {
-    "id":"qv19_1013",
+    "id":"qv19_1010",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לפנות בוקר \/ מוקדם בבוקר — early in the morning (dtae-chao)",
@@ -12156,7 +12120,7 @@
     "source_vocab_id":"vocab_0340"
   },
   {
-    "id":"qv19_1014",
+    "id":"qv19_1011",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dtae-chao — לפנות בוקר \/ מוקדם בבוקר \/ early in the morning",
@@ -12168,7 +12132,7 @@
     "source_vocab_id":"vocab_0340"
   },
   {
-    "id":"qv19_1015",
+    "id":"qv19_1012",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ตอนเช้า (dton-chao)?",
@@ -12180,7 +12144,7 @@
     "source_vocab_id":"vocab_0341"
   },
   {
-    "id":"qv19_1016",
+    "id":"qv19_1013",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: בבוקר — morning \/ in the morning (dton-chao)",
@@ -12192,7 +12156,7 @@
     "source_vocab_id":"vocab_0341"
   },
   {
-    "id":"qv19_1017",
+    "id":"qv19_1014",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dton-chao — בבוקר \/ morning \/ in the morning",
@@ -12204,7 +12168,7 @@
     "source_vocab_id":"vocab_0341"
   },
   {
-    "id":"qv19_1018",
+    "id":"qv19_1015",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ตอนสาย (dton-saai)?",
@@ -12216,7 +12180,7 @@
     "source_vocab_id":"vocab_0342"
   },
   {
-    "id":"qv19_1019",
+    "id":"qv19_1016",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מאוחר בבוקר — late morning (dton-saai)",
@@ -12228,7 +12192,7 @@
     "source_vocab_id":"vocab_0342"
   },
   {
-    "id":"qv19_1020",
+    "id":"qv19_1017",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dton-saai — מאוחר בבוקר \/ late morning",
@@ -12240,7 +12204,7 @@
     "source_vocab_id":"vocab_0342"
   },
   {
-    "id":"qv19_1021",
+    "id":"qv19_1018",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ตอนเที่ยง (dton-tiang)?",
@@ -12252,7 +12216,7 @@
     "source_vocab_id":"vocab_0343"
   },
   {
-    "id":"qv19_1022",
+    "id":"qv19_1019",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: בצהריים — noon \/ midday (dton-tiang)",
@@ -12264,7 +12228,7 @@
     "source_vocab_id":"vocab_0343"
   },
   {
-    "id":"qv19_1023",
+    "id":"qv19_1020",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dton-tiang — בצהריים \/ noon \/ midday",
@@ -12276,7 +12240,7 @@
     "source_vocab_id":"vocab_0343"
   },
   {
-    "id":"qv19_1024",
+    "id":"qv19_1021",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ตอนบ่าย (dton-baai)?",
@@ -12288,7 +12252,7 @@
     "source_vocab_id":"vocab_0344"
   },
   {
-    "id":"qv19_1025",
+    "id":"qv19_1022",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אחר הצהריים — afternoon (dton-baai)",
@@ -12300,7 +12264,7 @@
     "source_vocab_id":"vocab_0344"
   },
   {
-    "id":"qv19_1026",
+    "id":"qv19_1023",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dton-baai — אחר הצהריים \/ afternoon",
@@ -12312,7 +12276,7 @@
     "source_vocab_id":"vocab_0344"
   },
   {
-    "id":"qv19_1027",
+    "id":"qv19_1024",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ตอนเย็น (dton-yen)?",
@@ -12324,7 +12288,7 @@
     "source_vocab_id":"vocab_0345"
   },
   {
-    "id":"qv19_1028",
+    "id":"qv19_1025",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: בערב — evening (dton-yen)",
@@ -12336,7 +12300,7 @@
     "source_vocab_id":"vocab_0345"
   },
   {
-    "id":"qv19_1029",
+    "id":"qv19_1026",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dton-yen — בערב \/ evening",
@@ -12348,7 +12312,7 @@
     "source_vocab_id":"vocab_0345"
   },
   {
-    "id":"qv19_1030",
+    "id":"qv19_1027",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ตอนกลางคืน (dton-glaang-kheun)?",
@@ -12360,7 +12324,7 @@
     "source_vocab_id":"vocab_0346"
   },
   {
-    "id":"qv19_1031",
+    "id":"qv19_1028",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: בלילה — night \/ at night (dton-glaang-kheun)",
@@ -12372,7 +12336,7 @@
     "source_vocab_id":"vocab_0346"
   },
   {
-    "id":"qv19_1032",
+    "id":"qv19_1029",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dton-glaang-kheun — בלילה \/ night \/ at night",
@@ -12384,7 +12348,7 @@
     "source_vocab_id":"vocab_0346"
   },
   {
-    "id":"qv19_1033",
+    "id":"qv19_1030",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ตอนดึก (dton-deuk)?",
@@ -12396,7 +12360,7 @@
     "source_vocab_id":"vocab_0347"
   },
   {
-    "id":"qv19_1034",
+    "id":"qv19_1031",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מאוחר בלילה — late at night (dton-deuk)",
@@ -12408,7 +12372,7 @@
     "source_vocab_id":"vocab_0347"
   },
   {
-    "id":"qv19_1035",
+    "id":"qv19_1032",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dton-deuk — מאוחר בלילה \/ late at night",
@@ -12420,7 +12384,7 @@
     "source_vocab_id":"vocab_0347"
   },
   {
-    "id":"qv19_1036",
+    "id":"qv19_1033",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เห็นด้วย (hen-duai)?",
@@ -12432,7 +12396,7 @@
     "source_vocab_id":"vocab_0348"
   },
   {
-    "id":"qv19_1037",
+    "id":"qv19_1034",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: להסכים — agree (hen-duai)",
@@ -12444,7 +12408,7 @@
     "source_vocab_id":"vocab_0348"
   },
   {
-    "id":"qv19_1038",
+    "id":"qv19_1035",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: hen-duai — להסכים \/ agree",
@@ -12456,7 +12420,7 @@
     "source_vocab_id":"vocab_0348"
   },
   {
-    "id":"qv19_1039",
+    "id":"qv19_1036",
     "level":"5",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เห็นไหม (hen mai?)?",
@@ -12468,7 +12432,7 @@
     "source_vocab_id":"vocab_0349"
   },
   {
-    "id":"qv19_1040",
+    "id":"qv19_1037",
     "level":"5",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: רואה? — Do you see? (hen mai?)",
@@ -12480,7 +12444,7 @@
     "source_vocab_id":"vocab_0349"
   },
   {
-    "id":"qv19_1041",
+    "id":"qv19_1038",
     "level":"5",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: hen mai? — רואה? \/ Do you see?",
@@ -12492,7 +12456,7 @@
     "source_vocab_id":"vocab_0349"
   },
   {
-    "id":"qv19_1042",
+    "id":"qv19_1039",
     "level":"5",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เห็นด้วยไหม (hen-duai mai?)?",
@@ -12504,7 +12468,7 @@
     "source_vocab_id":"vocab_0350"
   },
   {
-    "id":"qv19_1043",
+    "id":"qv19_1040",
     "level":"5",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: האם אתה מסכים? — Do you agree? (hen-duai mai?)",
@@ -12516,7 +12480,7 @@
     "source_vocab_id":"vocab_0350"
   },
   {
-    "id":"qv19_1044",
+    "id":"qv19_1041",
     "level":"5",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: hen-duai mai? — האם אתה מסכים? \/ Do you agree?",
@@ -12528,7 +12492,7 @@
     "source_vocab_id":"vocab_0350"
   },
   {
-    "id":"qv19_1045",
+    "id":"qv19_1042",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ยืน (yuen)?",
@@ -12540,7 +12504,7 @@
     "source_vocab_id":"vocab_0351"
   },
   {
-    "id":"qv19_1046",
+    "id":"qv19_1043",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לעמוד — stand (yuen)",
@@ -12552,7 +12516,7 @@
     "source_vocab_id":"vocab_0351"
   },
   {
-    "id":"qv19_1047",
+    "id":"qv19_1044",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: yuen — לעמוד \/ stand",
@@ -12564,7 +12528,7 @@
     "source_vocab_id":"vocab_0351"
   },
   {
-    "id":"qv19_1048",
+    "id":"qv19_1045",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של นั่ง (nang)?",
@@ -12576,7 +12540,7 @@
     "source_vocab_id":"vocab_0352"
   },
   {
-    "id":"qv19_1049",
+    "id":"qv19_1046",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לשבת — sit (nang)",
@@ -12588,7 +12552,7 @@
     "source_vocab_id":"vocab_0352"
   },
   {
-    "id":"qv19_1050",
+    "id":"qv19_1047",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: nang — לשבת \/ sit",
@@ -12600,7 +12564,7 @@
     "source_vocab_id":"vocab_0352"
   },
   {
-    "id":"qv19_1051",
+    "id":"qv19_1048",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เดิน (dern)?",
@@ -12612,7 +12576,7 @@
     "source_vocab_id":"vocab_0353"
   },
   {
-    "id":"qv19_1052",
+    "id":"qv19_1049",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: ללכת — walk (dern)",
@@ -12624,7 +12588,7 @@
     "source_vocab_id":"vocab_0353"
   },
   {
-    "id":"qv19_1053",
+    "id":"qv19_1050",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dern — ללכת \/ walk",
@@ -12636,7 +12600,7 @@
     "source_vocab_id":"vocab_0353"
   },
   {
-    "id":"qv19_1054",
+    "id":"qv19_1051",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ข้าม (khaam)?",
@@ -12648,7 +12612,7 @@
     "source_vocab_id":"vocab_0354"
   },
   {
-    "id":"qv19_1055",
+    "id":"qv19_1052",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לדלג — cross \/ skip over (khaam)",
@@ -12660,7 +12624,7 @@
     "source_vocab_id":"vocab_0354"
   },
   {
-    "id":"qv19_1056",
+    "id":"qv19_1053",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: khaam — לדלג \/ cross \/ skip over",
@@ -12672,7 +12636,7 @@
     "source_vocab_id":"vocab_0354"
   },
   {
-    "id":"qv19_1057",
+    "id":"qv19_1054",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ไม่ไหว (mai wai)?",
@@ -12684,7 +12648,7 @@
     "source_vocab_id":"vocab_0355"
   },
   {
-    "id":"qv19_1058",
+    "id":"qv19_1055",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לא יכול \/ לא מסוגל \/ לא עומד בזה — cannot handle it \/ cannot manage (mai wai)",
@@ -12696,7 +12660,7 @@
     "source_vocab_id":"vocab_0355"
   },
   {
-    "id":"qv19_1059",
+    "id":"qv19_1056",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: mai wai — לא יכול \/ לא מסוגל \/ לא עומד בזה \/ cannot handle it \/ cannot manage",
@@ -12708,7 +12672,7 @@
     "source_vocab_id":"vocab_0355"
   },
   {
-    "id":"qv19_1060",
+    "id":"qv19_1057",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ไม่ต้องห่วง (mai dtong huang)?",
@@ -12720,7 +12684,7 @@
     "source_vocab_id":"vocab_0356"
   },
   {
-    "id":"qv19_1061",
+    "id":"qv19_1058",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אל תדאג \/ אין מה לדאוג — do not worry (mai dtong huang)",
@@ -12732,7 +12696,7 @@
     "source_vocab_id":"vocab_0356"
   },
   {
-    "id":"qv19_1062",
+    "id":"qv19_1059",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: mai dtong huang — אל תדאג \/ אין מה לדאוג \/ do not worry",
@@ -12744,7 +12708,7 @@
     "source_vocab_id":"vocab_0356"
   },
   {
-    "id":"qv19_1063",
+    "id":"qv19_1060",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ไม่สนใจ (mai son jai)?",
@@ -12756,7 +12720,7 @@
     "source_vocab_id":"vocab_0357"
   },
   {
-    "id":"qv19_1064",
+    "id":"qv19_1061",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לא מעוניין \/ לא אכפת — not interested \/ do not care (mai son jai)",
@@ -12768,7 +12732,7 @@
     "source_vocab_id":"vocab_0357"
   },
   {
-    "id":"qv19_1065",
+    "id":"qv19_1062",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: mai son jai — לא מעוניין \/ לא אכפת \/ not interested \/ do not care",
@@ -12780,7 +12744,7 @@
     "source_vocab_id":"vocab_0357"
   },
   {
-    "id":"qv19_1066",
+    "id":"qv19_1063",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ไม่มีอะไร (mai mee a-rai)?",
@@ -12792,7 +12756,7 @@
     "source_vocab_id":"vocab_0358"
   },
   {
-    "id":"qv19_1067",
+    "id":"qv19_1064",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אין כלום — there is nothing \/ nothing (mai mee a-rai)",
@@ -12804,7 +12768,7 @@
     "source_vocab_id":"vocab_0358"
   },
   {
-    "id":"qv19_1068",
+    "id":"qv19_1065",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: mai mee a-rai — אין כלום \/ there is nothing \/ nothing",
@@ -12816,7 +12780,7 @@
     "source_vocab_id":"vocab_0358"
   },
   {
-    "id":"qv19_1069",
+    "id":"qv19_1066",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ไม่ต้อง (mai dtong)?",
@@ -12828,7 +12792,7 @@
     "source_vocab_id":"vocab_0359"
   },
   {
-    "id":"qv19_1070",
+    "id":"qv19_1067",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לא צריך \/ אין צורך — do not need (mai dtong)",
@@ -12840,7 +12804,7 @@
     "source_vocab_id":"vocab_0359"
   },
   {
-    "id":"qv19_1071",
+    "id":"qv19_1068",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: mai dtong — לא צריך \/ אין צורך \/ do not need",
@@ -12852,7 +12816,7 @@
     "source_vocab_id":"vocab_0359"
   },
   {
-    "id":"qv19_1072",
+    "id":"qv19_1069",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ไม่มีปัญหา (mai mee pan-haa)?",
@@ -12864,7 +12828,7 @@
     "source_vocab_id":"vocab_0360"
   },
   {
-    "id":"qv19_1073",
+    "id":"qv19_1070",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אין בעיה — no problem (mai mee pan-haa)",
@@ -12876,7 +12840,7 @@
     "source_vocab_id":"vocab_0360"
   },
   {
-    "id":"qv19_1074",
+    "id":"qv19_1071",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: mai mee pan-haa — אין בעיה \/ no problem",
@@ -12888,7 +12852,7 @@
     "source_vocab_id":"vocab_0360"
   },
   {
-    "id":"qv19_1075",
+    "id":"qv19_1072",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ไม่มีทาง (mâi mee taang)?",
@@ -12900,7 +12864,7 @@
     "source_vocab_id":"vocab_0361"
   },
   {
-    "id":"qv19_1076",
+    "id":"qv19_1073",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אין מצב \/ אין סיכוי — no way (mâi mee taang)",
@@ -12912,7 +12876,7 @@
     "source_vocab_id":"vocab_0361"
   },
   {
-    "id":"qv19_1077",
+    "id":"qv19_1074",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: mâi mee taang — אין מצב \/ אין סיכוי \/ no way",
@@ -12924,7 +12888,7 @@
     "source_vocab_id":"vocab_0361"
   },
   {
-    "id":"qv19_1078",
+    "id":"qv19_1075",
     "level":"5",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ว่าไง (wâa ngai)?",
@@ -12936,7 +12900,7 @@
     "source_vocab_id":"vocab_0362"
   },
   {
-    "id":"qv19_1079",
+    "id":"qv19_1076",
     "level":"5",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: מה קורה? \/ מה נשמע? — what’s up? (wâa ngai)",
@@ -12948,7 +12912,7 @@
     "source_vocab_id":"vocab_0362"
   },
   {
-    "id":"qv19_1080",
+    "id":"qv19_1077",
     "level":"5",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: wâa ngai — מה קורה? \/ מה נשמע? \/ what’s up?",
@@ -12960,7 +12924,7 @@
     "source_vocab_id":"vocab_0362"
   },
   {
-    "id":"qv19_1081",
+    "id":"qv19_1078",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ไม่เก็ทอะ (mâi get à)?",
@@ -12972,7 +12936,7 @@
     "source_vocab_id":"vocab_0363"
   },
   {
-    "id":"qv19_1082",
+    "id":"qv19_1079",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אני לא מבין \/ לא קולט — I do not get it (mâi get à)",
@@ -12984,7 +12948,7 @@
     "source_vocab_id":"vocab_0363"
   },
   {
-    "id":"qv19_1083",
+    "id":"qv19_1080",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: mâi get à — אני לא מבין \/ לא קולט \/ I do not get it",
@@ -12996,7 +12960,7 @@
     "source_vocab_id":"vocab_0363"
   },
   {
-    "id":"qv19_1084",
+    "id":"qv19_1081",
     "level":"5",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של แล้วไง (láew ngai)?",
@@ -13008,7 +12972,7 @@
     "source_vocab_id":"vocab_0364"
   },
   {
-    "id":"qv19_1085",
+    "id":"qv19_1082",
     "level":"5",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אז מה? — so what? (láew ngai)",
@@ -13020,7 +12984,7 @@
     "source_vocab_id":"vocab_0364"
   },
   {
-    "id":"qv19_1086",
+    "id":"qv19_1083",
     "level":"5",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: láew ngai — אז מה? \/ so what?",
@@ -13032,7 +12996,7 @@
     "source_vocab_id":"vocab_0364"
   },
   {
-    "id":"qv19_1087",
+    "id":"qv19_1084",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של คิดว่า (khít wâa)?",
@@ -13044,7 +13008,7 @@
     "source_vocab_id":"vocab_0365"
   },
   {
-    "id":"qv19_1088",
+    "id":"qv19_1085",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לחשוב ש... — think that (khít wâa)",
@@ -13056,7 +13020,7 @@
     "source_vocab_id":"vocab_0365"
   },
   {
-    "id":"qv19_1089",
+    "id":"qv19_1086",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: khít wâa — לחשוב ש... \/ think that",
@@ -13068,7 +13032,7 @@
     "source_vocab_id":"vocab_0365"
   },
   {
-    "id":"qv19_1090",
+    "id":"qv19_1087",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של พูดว่า (phuut waa)?",
@@ -13080,7 +13044,7 @@
     "source_vocab_id":"vocab_0366"
   },
   {
-    "id":"qv19_1091",
+    "id":"qv19_1088",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לומר ש... — say that... (phuut waa)",
@@ -13092,7 +13056,7 @@
     "source_vocab_id":"vocab_0366"
   },
   {
-    "id":"qv19_1092",
+    "id":"qv19_1089",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: phuut waa — לומר ש... \/ say that...",
@@ -13104,7 +13068,7 @@
     "source_vocab_id":"vocab_0366"
   },
   {
-    "id":"qv19_1093",
+    "id":"qv19_1090",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של บอกว่า (bòk wâa)?",
@@ -13116,7 +13080,7 @@
     "source_vocab_id":"vocab_0367"
   },
   {
-    "id":"qv19_1094",
+    "id":"qv19_1091",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לספר \/ להגיד ש... — tell \/ say that (bòk wâa)",
@@ -13128,7 +13092,7 @@
     "source_vocab_id":"vocab_0367"
   },
   {
-    "id":"qv19_1095",
+    "id":"qv19_1092",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: bòk wâa — לספר \/ להגיד ש... \/ tell \/ say that",
@@ -13140,7 +13104,7 @@
     "source_vocab_id":"vocab_0367"
   },
   {
-    "id":"qv19_1096",
+    "id":"qv19_1093",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של รู้สึกว่า (rúu sèuk wâa)?",
@@ -13152,7 +13116,7 @@
     "source_vocab_id":"vocab_0368"
   },
   {
-    "id":"qv19_1097",
+    "id":"qv19_1094",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: להרגיש ש... — feel that (rúu sèuk wâa)",
@@ -13164,7 +13128,7 @@
     "source_vocab_id":"vocab_0368"
   },
   {
-    "id":"qv19_1098",
+    "id":"qv19_1095",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: rúu sèuk wâa — להרגיש ש... \/ feel that",
@@ -13176,7 +13140,7 @@
     "source_vocab_id":"vocab_0368"
   },
   {
-    "id":"qv19_1099",
+    "id":"qv19_1096",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เพราะว่า (phróh wâa)?",
@@ -13188,7 +13152,7 @@
     "source_vocab_id":"vocab_0369"
   },
   {
-    "id":"qv19_1100",
+    "id":"qv19_1097",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: בגלל ש... — because (phróh wâa)",
@@ -13200,7 +13164,7 @@
     "source_vocab_id":"vocab_0369"
   },
   {
-    "id":"qv19_1101",
+    "id":"qv19_1098",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: phróh wâa — בגלל ש... \/ because",
@@ -13212,7 +13176,7 @@
     "source_vocab_id":"vocab_0369"
   },
   {
-    "id":"qv19_1102",
+    "id":"qv19_1099",
     "level":"4",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ได้ยินว่า (dai-yin waa)?",
@@ -13224,7 +13188,7 @@
     "source_vocab_id":"vocab_0370"
   },
   {
-    "id":"qv19_1103",
+    "id":"qv19_1100",
     "level":"4",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לשמוע ש... — hear that... (dai-yin waa)",
@@ -13236,7 +13200,7 @@
     "source_vocab_id":"vocab_0370"
   },
   {
-    "id":"qv19_1104",
+    "id":"qv19_1101",
     "level":"4",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dai-yin waa — לשמוע ש... \/ hear that...",
@@ -13248,7 +13212,7 @@
     "source_vocab_id":"vocab_0370"
   },
   {
-    "id":"qv19_1105",
+    "id":"qv19_1102",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ต้นไม้ (ton mai)?",
@@ -13260,7 +13224,7 @@
     "source_vocab_id":"vocab_0371"
   },
   {
-    "id":"qv19_1106",
+    "id":"qv19_1103",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: צמח \/ עץ — plant \/ tree (ton mai)",
@@ -13272,7 +13236,7 @@
     "source_vocab_id":"vocab_0371"
   },
   {
-    "id":"qv19_1107",
+    "id":"qv19_1104",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: ton mai — צמח \/ עץ \/ plant \/ tree",
@@ -13284,7 +13248,7 @@
     "source_vocab_id":"vocab_0371"
   },
   {
-    "id":"qv19_1108",
+    "id":"qv19_1105",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של บาง (baang)?",
@@ -13296,7 +13260,7 @@
     "source_vocab_id":"vocab_0372"
   },
   {
-    "id":"qv19_1109",
+    "id":"qv19_1106",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: חלק מ.. — some \/ part of (baang)",
@@ -13308,7 +13272,7 @@
     "source_vocab_id":"vocab_0372"
   },
   {
-    "id":"qv19_1110",
+    "id":"qv19_1107",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: baang — חלק מ.. \/ some \/ part of",
@@ -13320,7 +13284,7 @@
     "source_vocab_id":"vocab_0372"
   },
   {
-    "id":"qv19_1111",
+    "id":"qv19_1108",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ด้วยกัน (duay gan)?",
@@ -13332,7 +13296,7 @@
     "source_vocab_id":"vocab_0373"
   },
   {
-    "id":"qv19_1112",
+    "id":"qv19_1109",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: יחדיו — together (duay gan)",
@@ -13344,7 +13308,7 @@
     "source_vocab_id":"vocab_0373"
   },
   {
-    "id":"qv19_1113",
+    "id":"qv19_1110",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: duay gan — יחדיו \/ together",
@@ -13356,7 +13320,7 @@
     "source_vocab_id":"vocab_0373"
   },
   {
-    "id":"qv19_1114",
+    "id":"qv19_1111",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של บางที (baang tii)?",
@@ -13368,7 +13332,7 @@
     "source_vocab_id":"vocab_0374"
   },
   {
-    "id":"qv19_1115",
+    "id":"qv19_1112",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: יכול להיות — maybe \/ sometimes (baang tii)",
@@ -13380,7 +13344,7 @@
     "source_vocab_id":"vocab_0374"
   },
   {
-    "id":"qv19_1116",
+    "id":"qv19_1113",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: baang tii — יכול להיות \/ maybe \/ sometimes",
@@ -13392,7 +13356,7 @@
     "source_vocab_id":"vocab_0374"
   },
   {
-    "id":"qv19_1117",
+    "id":"qv19_1114",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של พวกเขา (phuak khao)?",
@@ -13404,7 +13368,7 @@
     "source_vocab_id":"vocab_0375"
   },
   {
-    "id":"qv19_1118",
+    "id":"qv19_1115",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: הם — they \/ them (phuak khao)",
@@ -13416,7 +13380,7 @@
     "source_vocab_id":"vocab_0375"
   },
   {
-    "id":"qv19_1119",
+    "id":"qv19_1116",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: phuak khao — הם \/ they \/ them",
@@ -13428,7 +13392,7 @@
     "source_vocab_id":"vocab_0375"
   },
   {
-    "id":"qv19_1120",
+    "id":"qv19_1117",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של บางวัน (baang wan)?",
@@ -13440,7 +13404,7 @@
     "source_vocab_id":"vocab_0376"
   },
   {
-    "id":"qv19_1121",
+    "id":"qv19_1118",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: חלק מהימים — some days (baang wan)",
@@ -13452,7 +13416,7 @@
     "source_vocab_id":"vocab_0376"
   },
   {
-    "id":"qv19_1122",
+    "id":"qv19_1119",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: baang wan — חלק מהימים \/ some days",
@@ -13464,7 +13428,7 @@
     "source_vocab_id":"vocab_0376"
   },
   {
-    "id":"qv19_1123",
+    "id":"qv19_1120",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ทุกที่ (tug tii)?",
@@ -13476,7 +13440,7 @@
     "source_vocab_id":"vocab_0377"
   },
   {
-    "id":"qv19_1124",
+    "id":"qv19_1121",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: בכל מקום — everywhere (tug tii)",
@@ -13488,7 +13452,7 @@
     "source_vocab_id":"vocab_0377"
   },
   {
-    "id":"qv19_1125",
+    "id":"qv19_1122",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: tug tii — בכל מקום \/ everywhere",
@@ -13500,7 +13464,7 @@
     "source_vocab_id":"vocab_0377"
   },
   {
-    "id":"qv19_1126",
+    "id":"qv19_1123",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ออก (awk)?",
@@ -13512,7 +13476,7 @@
     "source_vocab_id":"vocab_0378"
   },
   {
-    "id":"qv19_1127",
+    "id":"qv19_1124",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: יציאה,החוצה — exit \/ out \/ go out (awk)",
@@ -13524,7 +13488,7 @@
     "source_vocab_id":"vocab_0378"
   },
   {
-    "id":"qv19_1128",
+    "id":"qv19_1125",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: awk — יציאה,החוצה \/ exit \/ out \/ go out",
@@ -13536,7 +13500,7 @@
     "source_vocab_id":"vocab_0378"
   },
   {
-    "id":"qv19_1129",
+    "id":"qv19_1126",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של อุ่น (un)?",
@@ -13548,7 +13512,7 @@
     "source_vocab_id":"vocab_0379"
   },
   {
-    "id":"qv19_1130",
+    "id":"qv19_1127",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: חמים,חם — warm (un)",
@@ -13560,7 +13524,7 @@
     "source_vocab_id":"vocab_0379"
   },
   {
-    "id":"qv19_1131",
+    "id":"qv19_1128",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: un — חמים,חם \/ warm",
@@ -13572,7 +13536,7 @@
     "source_vocab_id":"vocab_0379"
   },
   {
-    "id":"qv19_1132",
+    "id":"qv19_1129",
     "level":"5",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ตอนผมเด็ก ๆ (dton phom dek dek)?",
@@ -13584,7 +13548,7 @@
     "source_vocab_id":"vocab_0380"
   },
   {
-    "id":"qv19_1133",
+    "id":"qv19_1130",
     "level":"5",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: כשהייתי ילד — when I was a child (dton phom dek dek)",
@@ -13596,7 +13560,7 @@
     "source_vocab_id":"vocab_0380"
   },
   {
-    "id":"qv19_1134",
+    "id":"qv19_1131",
     "level":"5",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dton phom dek dek — כשהייתי ילד \/ when I was a child",
@@ -13608,7 +13572,7 @@
     "source_vocab_id":"vocab_0380"
   },
   {
-    "id":"qv19_1135",
+    "id":"qv19_1132",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של เข้า (khao)?",
@@ -13620,7 +13584,7 @@
     "source_vocab_id":"vocab_0381"
   },
   {
-    "id":"qv19_1136",
+    "id":"qv19_1133",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: להיכנס \/ כניסה — enter \/ go in (khao)",
@@ -13632,7 +13596,7 @@
     "source_vocab_id":"vocab_0381"
   },
   {
-    "id":"qv19_1137",
+    "id":"qv19_1134",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: khao — להיכנס \/ כניסה \/ enter \/ go in",
@@ -13644,7 +13608,7 @@
     "source_vocab_id":"vocab_0381"
   },
   {
-    "id":"qv19_1138",
+    "id":"qv19_1135",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של หน้า (naa)?",
@@ -13656,7 +13620,7 @@
     "source_vocab_id":"vocab_0382"
   },
   {
-    "id":"qv19_1139",
+    "id":"qv19_1136",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: פנים \/ קדימה \/ עונה \/ דף — face \/ front \/ season \/ page (naa)",
@@ -13668,7 +13632,7 @@
     "source_vocab_id":"vocab_0382"
   },
   {
-    "id":"qv19_1140",
+    "id":"qv19_1137",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: naa — פנים \/ קדימה \/ עונה \/ דף \/ face \/ front \/ season \/ page",
@@ -13680,7 +13644,7 @@
     "source_vocab_id":"vocab_0382"
   },
   {
-    "id":"qv19_1141",
+    "id":"qv19_1138",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של โรงพัก (rong pag)?",
@@ -13692,7 +13656,7 @@
     "source_vocab_id":"vocab_0383"
   },
   {
-    "id":"qv19_1142",
+    "id":"qv19_1139",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: תחנת משטרה — police station (rong pag)",
@@ -13704,7 +13668,7 @@
     "source_vocab_id":"vocab_0383"
   },
   {
-    "id":"qv19_1143",
+    "id":"qv19_1140",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: rong pag — תחנת משטרה \/ police station",
@@ -13716,7 +13680,7 @@
     "source_vocab_id":"vocab_0383"
   },
   {
-    "id":"qv19_1144",
+    "id":"qv19_1141",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ไม่ได้… (mai dai+v)?",
@@ -13728,7 +13692,7 @@
     "source_vocab_id":"vocab_0384"
   },
   {
-    "id":"qv19_1145",
+    "id":"qv19_1142",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: לא עשיתי — did not \/ cannot + verb (mai dai+v)",
@@ -13740,7 +13704,7 @@
     "source_vocab_id":"vocab_0384"
   },
   {
-    "id":"qv19_1146",
+    "id":"qv19_1143",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: mai dai+v — לא עשיתי \/ did not \/ cannot + verb",
@@ -13752,7 +13716,7 @@
     "source_vocab_id":"vocab_0384"
   },
   {
-    "id":"qv19_1147",
+    "id":"qv19_1144",
     "level":"5",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ดีใจที่ได้เจอ (dii-jai tii dai jer)?",
@@ -13764,7 +13728,7 @@
     "source_vocab_id":"vocab_0385"
   },
   {
-    "id":"qv19_1148",
+    "id":"qv19_1145",
     "level":"5",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: נחמד לראותך — nice to see you (dii-jai tii dai jer)",
@@ -13776,7 +13740,7 @@
     "source_vocab_id":"vocab_0385"
   },
   {
-    "id":"qv19_1149",
+    "id":"qv19_1146",
     "level":"5",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dii-jai tii dai jer — נחמד לראותך \/ nice to see you",
@@ -13788,7 +13752,7 @@
     "source_vocab_id":"vocab_0385"
   },
   {
-    "id":"qv19_1150",
+    "id":"qv19_1147",
     "level":"1",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ผึ้ง (phueng)?",
@@ -13800,7 +13764,7 @@
     "source_vocab_id":"vocab_0386"
   },
   {
-    "id":"qv19_1151",
+    "id":"qv19_1148",
     "level":"1",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: דבורה — bee (phueng)",
@@ -13812,7 +13776,7 @@
     "source_vocab_id":"vocab_0386"
   },
   {
-    "id":"qv19_1152",
+    "id":"qv19_1149",
     "level":"1",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: phueng — דבורה \/ bee",
@@ -13824,7 +13788,7 @@
     "source_vocab_id":"vocab_0386"
   },
   {
-    "id":"qv19_1153",
+    "id":"qv19_1150",
     "level":"3",
     "type":"mcq_read_meaning",
     "prompt_he":"מה המשמעות של ต่อย (dtoy)?",
@@ -13836,7 +13800,7 @@
     "source_vocab_id":"vocab_0387"
   },
   {
-    "id":"qv19_1154",
+    "id":"qv19_1151",
     "level":"3",
     "type":"write_he_to_thai",
     "prompt_he":"כתוב בתאית: אגרוף \/ לעקוץ — to punch \/ to sting (dtoy)",
@@ -13848,7 +13812,7 @@
     "source_vocab_id":"vocab_0387"
   },
   {
-    "id":"qv19_1155",
+    "id":"qv19_1152",
     "level":"3",
     "type":"write_roman_to_thai",
     "prompt_he":"כתוב בתאית לפי התעתיק: dtoy — אגרוף \/ לעקוץ \/ to punch \/ to sting",
