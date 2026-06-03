@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.22.0-sync-diagnostics';
+const APP_VERSION = '1.22.1-sync-download-fallback';
 
 const TONES = [
   { id:'mid', he:'אמצעי', en:'mid' },
@@ -1897,6 +1897,38 @@ function formPostUpload(params, timeoutMs=15000){
     form.submit();
   });
 }
+function iframeBridgeDownload(params, timeoutMs=15000){
+  return new Promise((resolve, reject)=>{
+    saveSyncUrl();
+    const requestId = 'thaiSyncReq_' + Date.now() + '_' + Math.floor(Math.random()*100000);
+    let url;
+    try{
+      const targetOrigin = window.location.origin && window.location.origin !== 'null' ? window.location.origin : '*';
+      url = syncUrlWithParams({...params, action:'download_bridge', requestId, targetOrigin});
+    }catch(err){ reject(err); return; }
+
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    const cleanup = () => {
+      window.removeEventListener('message', onMessage);
+      iframe.remove();
+      clearTimeout(timer);
+    };
+    const timer = setTimeout(()=>{ cleanup(); reject(new Error('timeout')); }, timeoutMs);
+    const onMessage = event => {
+      if(event.source !== iframe.contentWindow) return;
+      const data = event.data || {};
+      if(data.source !== 'thai-trainer-sync' || data.requestId !== requestId) return;
+      cleanup();
+      if(!data.ok) reject(new Error(data.error || 'sync failed'));
+      else resolve(data);
+    };
+    iframe.onerror = () => { cleanup(); reject(new Error('iframe download failed')); };
+    window.addEventListener('message', onMessage);
+    document.body.appendChild(iframe);
+    iframe.src = url;
+  });
+}
 async function syncUpload(){
   try{
     const safeState = {...state, lastSync: Date.now()};
@@ -1917,7 +1949,13 @@ async function syncUpload(){
 }
 async function syncDownload(){
   try{
-    const json = await jsonpRequest({action:'download', userId: cleanUserId(el('userIdInput').value || state.userId)});
+    const userId = cleanUserId(el('userIdInput').value || state.userId);
+    let json;
+    try{
+      json = await jsonpRequest({action:'download', userId});
+    }catch(jsonpErr){
+      json = await iframeBridgeDownload({userId});
+    }
     if(!json.ok) throw new Error(json.error || 'sync failed');
     if(json.data){
       const cloudState = decodePayload(json.data);

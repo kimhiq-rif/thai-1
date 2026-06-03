@@ -115,16 +115,32 @@ function handle_(params) {
 
 function doGet(e) {
   try {
-    return output_(handle_((e && e.parameter) || {}), ((e && e.parameter) || {}).callback || '');
+    const params = (e && e.parameter) || {};
+    if (String(params.action || '').toLowerCase() === 'download_bridge') {
+      return outputBridge_(handle_({ action: 'download', userId: params.userId }), params);
+    }
+    return output_(handle_(params), params.callback || '');
   } catch (err) {
-    return output_({ ok: false, error: String(err.message || err) }, ((e && e.parameter) || {}).callback || '');
+    const params = (e && e.parameter) || {};
+    if (String(params.action || '').toLowerCase() === 'download_bridge') {
+      return outputBridge_({ ok: false, error: String(err.message || err) }, params);
+    }
+    return output_({ ok: false, error: String(err.message || err) }, params.callback || '');
   }
 }
 
 function doPost(e) {
   try {
-    return output_(handle_((e && e.parameter) || {}), '');
+    const params = (e && e.parameter) || {};
+    if (String(params.action || '').toLowerCase() === 'download_bridge') {
+      return outputBridge_(handle_({ action: 'download', userId: params.userId }), params);
+    }
+    return output_(handle_(params), '');
   } catch (err) {
+    const params = (e && e.parameter) || {};
+    if (String(params.action || '').toLowerCase() === 'download_bridge') {
+      return outputBridge_({ ok: false, error: String(err.message || err) }, params);
+    }
     return output_({ ok: false, error: String(err.message || err) }, '');
   }
 }
@@ -139,4 +155,20 @@ function output_(obj, callback) {
   return ContentService
     .createTextOutput(json)
     .setMimeType(ContentService.MimeType.JSON);
+}
+
+function outputBridge_(obj, params) {
+  const targetOrigin = String((params && params.targetOrigin) || '*') || '*';
+  const requestId = String((params && params.requestId) || '');
+  const message = Object.assign({ source: 'thai-trainer-sync', requestId }, obj);
+  const html = '<!doctype html><html><body><script>' +
+    '(function(){' +
+    'var message=' + JSON.stringify(message).replace(/</g, '\\u003c') + ';' +
+    'var targetOrigin=' + JSON.stringify(targetOrigin) + ';' +
+    'if(parent&&parent!==window){parent.postMessage(message,targetOrigin||"*");}' +
+    '})();' +
+    '</script></body></html>';
+  return HtmlService
+    .createHtmlOutput(html)
+    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
