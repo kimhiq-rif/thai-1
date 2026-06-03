@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.1-auto-scroll';
+const APP_VERSION = '1.25.2-polish-tones';
 
 const TONES = [
   { id:'mid', he:'אמצעי', en:'mid' },
@@ -13,7 +13,7 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.1', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.2', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', eraser:'מחק', eraserActive:'מחק פעיל', eraserTitle:'הפעל/כבה מחק מקומי', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
@@ -29,7 +29,7 @@ const I18N = {
     dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא'
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.1', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.2', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', eraser:'Eraser', eraserActive:'Eraser on', eraserTitle:'Toggle local eraser', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
@@ -181,85 +181,85 @@ const WORDS = [
 
 
   // Uploaded vocabulary expansion — merged into existing Levels 1–5. Tone is intentionally not drilled yet.
-  {id:"uv19_0001",level:3,thai:"สำคัญ",roman:"sam¹-kan¹",hebrew:"חשוב",english:"important",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0002",level:3,thai:"ขนม",roman:"kha-num¹",hebrew:"חטיף",english:"snack",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0003",level:3,thai:"หวี",roman:"wii¹",hebrew:"אשכול/יחידת בננות; מסרק",english:"banana bunch/classifier; comb",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0004",level:3,thai:"มาครับ",roman:"ma¹-krap",hebrew:"באתי / אני בא (זכר מנומס)",english:"I came / I am coming (male polite)",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0005",level:1,thai:"ไหว้",roman:"waai³",hebrew:"לחלוק כבוד",english:"wai greeting / pay respect",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0006",level:1,thai:"น้ำ",roman:"nam¹",hebrew:"מים",english:"water",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0007",level:3,thai:"ปากกา",roman:"bpaag²-gaa¹",hebrew:"עט",english:"pen",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0008",level:1,thai:"ปาก",roman:"bpaag²",hebrew:"פה / מקור",english:"mouth / beak",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0009",level:1,thai:"กา",roman:"gaa¹",hebrew:"עורב",english:"crow",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0010",level:3,thai:"ว่ายน้ำ",roman:"waai³-nam¹",hebrew:"לשחות",english:"swim",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0011",level:1,thai:"ครู",roman:"kru¹",hebrew:"מורה",english:"teacher",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0012",level:5,thai:"คุณชื่ออะไร",roman:"kun¹ cheuu³ a-rai¹?",hebrew:"מה השם שלך?",english:"What is your name?",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0013",level:4,thai:"ผมชื่อ…",roman:"pom⁵ cheuu³ (name)",hebrew:"השם שלי הוא...",english:"My name is… (male)",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0014",level:4,thai:"ฉันชื่อ…",roman:"chan⁵ cheuu³ (name)",hebrew:"השם שלי הוא...",english:"My name is… (female)",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0015",level:1,thai:"มา",roman:"maa¹",hebrew:"לבוא",english:"come",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0016",level:1,thai:"ไป",roman:"bpai¹",hebrew:"ללכת",english:"go",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0017",level:1,thai:"อยู่",roman:"yuu²",hebrew:"להיות / לגור",english:"be / live / stay",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0018",level:1,thai:"ท้อง",roman:"thong³",hebrew:"בטן",english:"belly",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0019",level:1,thai:"หิน",roman:"hin⁵",hebrew:"אבן",english:"stone",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0020",level:1,thai:"กอง",roman:"kong¹",hebrew:"ערימה",english:"pile",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0021",level:4,thai:"ผมอยู่…",roman:"pom⁵ yuu² (place)",hebrew:"אני גר ב...",english:"I live/stay in…",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0022",level:1,thai:"หวาน",roman:"waan⁵",hebrew:"מתוק",english:"sweet",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0023",level:1,thai:"ค่าย",roman:"kaai³",hebrew:"מחנה",english:"camp",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0024",level:1,thai:"ชา",roman:"chaa¹",hebrew:"תה",english:"tea",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0025",level:5,thai:"อะไร",roman:"a-rai¹",hebrew:"מה?",english:"what",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0026",level:1,thai:"ดื่ม",roman:"deuum²",hebrew:"לשתות",english:"drink",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0027",level:1,thai:"บ้าน",roman:"baan³",hebrew:"בית",english:"house / home",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0028",level:1,thai:"ใต้",roman:"dtai³",hebrew:"דרום / מתחת",english:"south / under",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0029",level:1,thai:"ร้อน",roman:"rawn¹",hebrew:"חם",english:"hot",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0030",level:1,thai:"ไหม",roman:"mai¹?",hebrew:"מילת שאלה (כן/לא)",english:"yes/no question particle",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0031",level:5,thai:"ใช่ไหม",roman:"chai³ mai¹?",hebrew:"נכון?",english:"right? / correct?",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0032",level:1,thai:"ไม่",roman:"mai³",hebrew:"לא / אל",english:"not / no",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0033",level:1,thai:"สวย",roman:"suai⁵",hebrew:"יפה",english:"beautiful",tone:'not_drilled',source:"תומר 1,csv.txt"},
+  {id:"uv19_0001",level:3,thai:"สำคัญ",roman:"sam¹-kan¹",hebrew:"חשוב",english:"important",tone:'mid-mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0002",level:3,thai:"ขนม",roman:"kha-num¹",hebrew:"חטיף",english:"snack",tone:'mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0003",level:3,thai:"หวี",roman:"wii¹",hebrew:"אשכול/יחידת בננות; מסרק",english:"banana bunch/classifier; comb",tone:'mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0004",level:3,thai:"มาครับ",roman:"ma¹-krap",hebrew:"באתי / אני בא (זכר מנומס)",english:"I came / I am coming (male polite)",tone:'mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0005",level:1,thai:"ไหว้",roman:"waai³",hebrew:"לחלוק כבוד",english:"wai greeting / pay respect",tone:'falling',source:"תומר 1,csv.txt"},
+  {id:"uv19_0006",level:1,thai:"น้ำ",roman:"nam¹",hebrew:"מים",english:"water",tone:'mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0007",level:3,thai:"ปากกา",roman:"bpaag²-gaa¹",hebrew:"עט",english:"pen",tone:'low-mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0008",level:1,thai:"ปาก",roman:"bpaag²",hebrew:"פה / מקור",english:"mouth / beak",tone:'low',source:"תומר 1,csv.txt"},
+  {id:"uv19_0009",level:1,thai:"กา",roman:"gaa¹",hebrew:"עורב",english:"crow",tone:'mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0010",level:3,thai:"ว่ายน้ำ",roman:"waai³-nam¹",hebrew:"לשחות",english:"swim",tone:'falling-mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0011",level:1,thai:"ครู",roman:"kru¹",hebrew:"מורה",english:"teacher",tone:'mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0012",level:5,thai:"คุณชื่ออะไร",roman:"kun¹ cheuu³ a-rai¹?",hebrew:"מה השם שלך?",english:"What is your name?",tone:'mid-falling-mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0013",level:4,thai:"ผมชื่อ…",roman:"pom⁵ cheuu³ (name)",hebrew:"השם שלי הוא...",english:"My name is… (male)",tone:'rising-falling',source:"תומר 1,csv.txt"},
+  {id:"uv19_0014",level:4,thai:"ฉันชื่อ…",roman:"chan⁵ cheuu³ (name)",hebrew:"השם שלי הוא...",english:"My name is… (female)",tone:'rising-falling',source:"תומר 1,csv.txt"},
+  {id:"uv19_0015",level:1,thai:"มา",roman:"maa¹",hebrew:"לבוא",english:"come",tone:'mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0016",level:1,thai:"ไป",roman:"bpai¹",hebrew:"ללכת",english:"go",tone:'mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0017",level:1,thai:"อยู่",roman:"yuu²",hebrew:"להיות / לגור",english:"be / live / stay",tone:'low',source:"תומר 1,csv.txt"},
+  {id:"uv19_0018",level:1,thai:"ท้อง",roman:"thong³",hebrew:"בטן",english:"belly",tone:'falling',source:"תומר 1,csv.txt"},
+  {id:"uv19_0019",level:1,thai:"หิน",roman:"hin⁵",hebrew:"אבן",english:"stone",tone:'rising',source:"תומר 1,csv.txt"},
+  {id:"uv19_0020",level:1,thai:"กอง",roman:"kong¹",hebrew:"ערימה",english:"pile",tone:'mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0021",level:4,thai:"ผมอยู่…",roman:"pom⁵ yuu² (place)",hebrew:"אני גר ב...",english:"I live/stay in…",tone:'rising-low',source:"תומר 1,csv.txt"},
+  {id:"uv19_0022",level:1,thai:"หวาน",roman:"waan⁵",hebrew:"מתוק",english:"sweet",tone:'rising',source:"תומר 1,csv.txt"},
+  {id:"uv19_0023",level:1,thai:"ค่าย",roman:"kaai³",hebrew:"מחנה",english:"camp",tone:'falling',source:"תומר 1,csv.txt"},
+  {id:"uv19_0024",level:1,thai:"ชา",roman:"chaa¹",hebrew:"תה",english:"tea",tone:'mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0025",level:5,thai:"อะไร",roman:"a-rai¹",hebrew:"מה?",english:"what",tone:'mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0026",level:1,thai:"ดื่ม",roman:"deuum²",hebrew:"לשתות",english:"drink",tone:'low',source:"תומר 1,csv.txt"},
+  {id:"uv19_0027",level:1,thai:"บ้าน",roman:"baan³",hebrew:"בית",english:"house / home",tone:'falling',source:"תומר 1,csv.txt"},
+  {id:"uv19_0028",level:1,thai:"ใต้",roman:"dtai³",hebrew:"דרום / מתחת",english:"south / under",tone:'falling',source:"תומר 1,csv.txt"},
+  {id:"uv19_0029",level:1,thai:"ร้อน",roman:"rawn¹",hebrew:"חם",english:"hot",tone:'mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0030",level:1,thai:"ไหม",roman:"mai¹?",hebrew:"מילת שאלה (כן/לא)",english:"yes/no question particle",tone:'mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0031",level:5,thai:"ใช่ไหม",roman:"chai³ mai¹?",hebrew:"נכון?",english:"right? / correct?",tone:'falling-mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0032",level:1,thai:"ไม่",roman:"mai³",hebrew:"לא / אל",english:"not / no",tone:'falling',source:"תומר 1,csv.txt"},
+  {id:"uv19_0033",level:1,thai:"สวย",roman:"suai⁵",hebrew:"יפה",english:"beautiful",tone:'rising',source:"תומר 1,csv.txt"},
   {id:"uv19_0034",level:5,thai:"สบายดีไหม",roman:"sa-baai dii mai?",hebrew:"מה שלומך?",english:"How are you?",tone:'not_drilled',source:"תומר 1,csv.txt"},
   {id:"uv19_0035",level:4,thai:"สบายดี",roman:"sa-baai dii",hebrew:"הכל טוב / בסדר",english:"I am fine / okay",tone:'not_drilled',source:"תומר 1,csv.txt"},
   {id:"uv19_0036",level:4,thai:"ไม่สบาย",roman:"mai sa-baai",hebrew:"לא מרגיש טוב",english:"not feeling well",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0037",level:3,thai:"ตีหมา",roman:"dtii¹ maa¹",hebrew:"להרביץ לכלב",english:"hit a dog",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0038",level:1,thai:"ตอบ",roman:"dtawb²",hebrew:"לענות",english:"answer",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0039",level:1,thai:"งู",roman:"nguu¹",hebrew:"נחש",english:"snake",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0040",level:1,thai:"เงิน",roman:"ngoen¹",hebrew:"כסף",english:"money",tone:'not_drilled',source:"תומר 1,csv.txt"},
-  {id:"uv19_0041",level:1,thai:"งาน",roman:"ngaan¹",hebrew:"עבודה",english:"work / job",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0042",level:1,thai:"มี",roman:"mii¹",hebrew:"יש",english:"have / there is",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0043",level:3,thai:"ทำงาน",roman:"tam¹-ngaan¹",hebrew:"לעבוד",english:"work",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0044",level:1,thai:"ทำ",roman:"tam¹",hebrew:"לעשות / להכין",english:"do / make",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0046",level:3,thai:"อร่อย",roman:"a¹-roi²",hebrew:"טעים",english:"delicious",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0047",level:3,thai:"นิดหน่อย",roman:"nit-noi²",hebrew:"קצת",english:"a little",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0048",level:1,thai:"จะ",roman:"ja²",hebrew:"מילת עתיד",english:"future marker / will",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0049",level:5,thai:"กินอะไร",roman:"gin¹ a¹-rai¹?",hebrew:"מה אתה אוכל?",english:"What are you eating?",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0050",level:4,thai:"ผม/ฉันรักคุณ",roman:"pom⁵/chan⁵ rak¹ kun¹",hebrew:"אני אוהב/ת אותך",english:"I love you",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv19_0037",level:3,thai:"ตีหมา",roman:"dtii¹ maa¹",hebrew:"להרביץ לכלב",english:"hit a dog",tone:'mid-mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0038",level:1,thai:"ตอบ",roman:"dtawb²",hebrew:"לענות",english:"answer",tone:'low',source:"תומר 1,csv.txt"},
+  {id:"uv19_0039",level:1,thai:"งู",roman:"nguu¹",hebrew:"נחש",english:"snake",tone:'mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0040",level:1,thai:"เงิน",roman:"ngoen¹",hebrew:"כסף",english:"money",tone:'mid',source:"תומר 1,csv.txt"},
+  {id:"uv19_0041",level:1,thai:"งาน",roman:"ngaan¹",hebrew:"עבודה",english:"work / job",tone:'mid',source:"תומר 2,csv.txt"},
+  {id:"uv19_0042",level:1,thai:"มี",roman:"mii¹",hebrew:"יש",english:"have / there is",tone:'mid',source:"תומר 2,csv.txt"},
+  {id:"uv19_0043",level:3,thai:"ทำงาน",roman:"tam¹-ngaan¹",hebrew:"לעבוד",english:"work",tone:'mid-mid',source:"תומר 2,csv.txt"},
+  {id:"uv19_0044",level:1,thai:"ทำ",roman:"tam¹",hebrew:"לעשות / להכין",english:"do / make",tone:'mid',source:"תומר 2,csv.txt"},
+  {id:"uv19_0046",level:3,thai:"อร่อย",roman:"a¹-roi²",hebrew:"טעים",english:"delicious",tone:'mid-low',source:"תומר 2,csv.txt"},
+  {id:"uv19_0047",level:3,thai:"นิดหน่อย",roman:"nit-noi²",hebrew:"קצת",english:"a little",tone:'low',source:"תומר 2,csv.txt"},
+  {id:"uv19_0048",level:1,thai:"จะ",roman:"ja²",hebrew:"מילת עתיד",english:"future marker / will",tone:'low',source:"תומר 2,csv.txt"},
+  {id:"uv19_0049",level:5,thai:"กินอะไร",roman:"gin¹ a¹-rai¹?",hebrew:"מה אתה אוכל?",english:"What are you eating?",tone:'mid-mid-mid',source:"תומר 2,csv.txt"},
+  {id:"uv19_0050",level:4,thai:"ผม/ฉันรักคุณ",roman:"pom⁵/chan⁵ rak¹ kun¹",hebrew:"אני אוהב/ת אותך",english:"I love you",tone:'rising-rising-mid-mid',source:"תומר 2,csv.txt"},
   {id:"uv19_0051",level:5,thai:"คุณรักผม/ฉันไหม",roman:"khun rak phom/chan mai?",hebrew:"אתה אוהב אותי?",english:"Do you love me?",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0052",level:1,thai:"เปิด",roman:"bpoed²",hebrew:"להדליק / לפתוח",english:"open / turn on",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0053",level:1,thai:"ชอบ",roman:"chawb³",hebrew:"לאהוב / לחבב",english:"like",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0054",level:3,thai:"โรงเรียน",roman:"rong¹-rian¹",hebrew:"בית ספר",english:"school",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0055",level:1,thai:"เรียน",roman:"rian¹",hebrew:"ללמוד",english:"study / learn",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0056",level:1,thai:"โรง",roman:"rong¹",hebrew:"מקום מפגש",english:"building / hall",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0057",level:3,thai:"ขอโทษ",roman:"kaw⁵-tohd³",hebrew:"סליחה",english:"sorry / excuse me",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0058",level:1,thai:"คน",roman:"khon¹",hebrew:"אנשים",english:"person / people",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0059",level:1,thai:"เขียน",roman:"kian⁵",hebrew:"לכתוב",english:"write",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0060",level:4,thai:"ข้าวเหนียวมะม่วง",roman:"kaaw³-niaw³ ma¹-muang³",hebrew:"סטיקי רייס מנגו",english:"mango sticky rice",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0061",level:1,thai:"ผัด",roman:"pad²",hebrew:"מוקפץ",english:"stir-fried",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0062",level:1,thai:"ขอ",roman:"koh⁵",hebrew:"אפשר לקבל...",english:"request / may I have",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0063",level:5,thai:"เรียกว่าอะไร",roman:"riag³ a¹-rai¹?",hebrew:"איך קוראים ל...?",english:"What is it called?",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0064",level:5,thai:"คุณล่ะ",roman:"kun¹ la²",hebrew:"ואתה/ואת?",english:"and you?",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0065",level:3,thai:"เช่นกัน",roman:"chen¹-gan¹",hebrew:"אותו הדבר / גם אני",english:"same / likewise",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0066",level:3,thai:"ยินดี",roman:"yin¹-dii¹",hebrew:"ברוך הבא",english:"welcome / pleased",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0067",level:1,thai:"รู้",roman:"ruu⁴",hebrew:"לדעת (מידע)",english:"know",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0068",level:3,thai:"รู้จัก",roman:"ruu⁴-jag²",hebrew:"להכיר (אנשים/מקומות)",english:"know / be acquainted with",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0069",level:5,thai:"รู้ไหม",roman:"ruu⁴ mai¹?",hebrew:"אתה יודע?",english:"Do you know?",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0070",level:3,thai:"ไม่รู้",roman:"mai³ ruu⁴",hebrew:"לא יודע",english:"do not know",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0071",level:4,thai:"ยังไม่รู้",roman:"yang¹ mai³ ruu⁴",hebrew:"עדיין לא יודע",english:"do not know yet",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0072",level:3,thai:"นาที",roman:"naa-tii¹",hebrew:"דקה",english:"minute",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0073",level:1,thai:"หาด",roman:"haad²",hebrew:"חוף",english:"beach",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0074",level:1,thai:"ได้",roman:"dai³",hebrew:"יכול",english:"can / able",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0075",level:1,thai:"พูด",roman:"puud³",hebrew:"לדבר",english:"speak",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0076",level:5,thai:"พูดไทยได้ไหม",roman:"puud³ Thai dai³ mai¹?",hebrew:"אתה יכול לדבר תאילנדית?",english:"Can you speak Thai?",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0077",level:1,thai:"พริก",roman:"prik¹",hebrew:"צ'ילי",english:"chili",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0078",level:3,thai:"ไม่ใส่",roman:"mai³ sai²",hebrew:"בלי / לא לשים",english:"without / do not put",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0079",level:3,thai:"น้ำตาล",roman:"nam¹ dtaan¹",hebrew:"סוכר",english:"sugar",tone:'not_drilled',source:"תומר 2,csv.txt"},
-  {id:"uv19_0080",level:1,thai:"เพิ่ม",roman:"peum³",hebrew:"להוסיף",english:"add / increase",tone:'not_drilled',source:"תומר 2,csv.txt"},
+  {id:"uv19_0052",level:1,thai:"เปิด",roman:"bpoed²",hebrew:"להדליק / לפתוח",english:"open / turn on",tone:'low',source:"תומר 2,csv.txt"},
+  {id:"uv19_0053",level:1,thai:"ชอบ",roman:"chawb³",hebrew:"לאהוב / לחבב",english:"like",tone:'falling',source:"תומר 2,csv.txt"},
+  {id:"uv19_0054",level:3,thai:"โรงเรียน",roman:"rong¹-rian¹",hebrew:"בית ספר",english:"school",tone:'mid-mid',source:"תומר 2,csv.txt"},
+  {id:"uv19_0055",level:1,thai:"เรียน",roman:"rian¹",hebrew:"ללמוד",english:"study / learn",tone:'mid',source:"תומר 2,csv.txt"},
+  {id:"uv19_0056",level:1,thai:"โรง",roman:"rong¹",hebrew:"מקום מפגש",english:"building / hall",tone:'mid',source:"תומר 2,csv.txt"},
+  {id:"uv19_0057",level:3,thai:"ขอโทษ",roman:"kaw⁵-tohd³",hebrew:"סליחה",english:"sorry / excuse me",tone:'rising-falling',source:"תומר 2,csv.txt"},
+  {id:"uv19_0058",level:1,thai:"คน",roman:"khon¹",hebrew:"אנשים",english:"person / people",tone:'mid',source:"תומר 2,csv.txt"},
+  {id:"uv19_0059",level:1,thai:"เขียน",roman:"kian⁵",hebrew:"לכתוב",english:"write",tone:'rising',source:"תומר 2,csv.txt"},
+  {id:"uv19_0060",level:4,thai:"ข้าวเหนียวมะม่วง",roman:"kaaw³-niaw³ ma¹-muang³",hebrew:"סטיקי רייס מנגו",english:"mango sticky rice",tone:'falling-falling-mid-falling',source:"תומר 2,csv.txt"},
+  {id:"uv19_0061",level:1,thai:"ผัด",roman:"pad²",hebrew:"מוקפץ",english:"stir-fried",tone:'low',source:"תומר 2,csv.txt"},
+  {id:"uv19_0062",level:1,thai:"ขอ",roman:"koh⁵",hebrew:"אפשר לקבל...",english:"request / may I have",tone:'rising',source:"תומר 2,csv.txt"},
+  {id:"uv19_0063",level:5,thai:"เรียกว่าอะไร",roman:"riag³ a¹-rai¹?",hebrew:"איך קוראים ל...?",english:"What is it called?",tone:'falling-mid-mid',source:"תומר 2,csv.txt"},
+  {id:"uv19_0064",level:5,thai:"คุณล่ะ",roman:"kun¹ la²",hebrew:"ואתה/ואת?",english:"and you?",tone:'mid-low',source:"תומר 2,csv.txt"},
+  {id:"uv19_0065",level:3,thai:"เช่นกัน",roman:"chen¹-gan¹",hebrew:"אותו הדבר / גם אני",english:"same / likewise",tone:'mid-mid',source:"תומר 2,csv.txt"},
+  {id:"uv19_0066",level:3,thai:"ยินดี",roman:"yin¹-dii¹",hebrew:"ברוך הבא",english:"welcome / pleased",tone:'mid-mid',source:"תומר 2,csv.txt"},
+  {id:"uv19_0067",level:1,thai:"รู้",roman:"ruu⁴",hebrew:"לדעת (מידע)",english:"know",tone:'high',source:"תומר 2,csv.txt"},
+  {id:"uv19_0068",level:3,thai:"รู้จัก",roman:"ruu⁴-jag²",hebrew:"להכיר (אנשים/מקומות)",english:"know / be acquainted with",tone:'high-low',source:"תומר 2,csv.txt"},
+  {id:"uv19_0069",level:5,thai:"รู้ไหม",roman:"ruu⁴ mai¹?",hebrew:"אתה יודע?",english:"Do you know?",tone:'high-mid',source:"תומר 2,csv.txt"},
+  {id:"uv19_0070",level:3,thai:"ไม่รู้",roman:"mai³ ruu⁴",hebrew:"לא יודע",english:"do not know",tone:'falling-high',source:"תומר 2,csv.txt"},
+  {id:"uv19_0071",level:4,thai:"ยังไม่รู้",roman:"yang¹ mai³ ruu⁴",hebrew:"עדיין לא יודע",english:"do not know yet",tone:'mid-falling-high',source:"תומר 2,csv.txt"},
+  {id:"uv19_0072",level:3,thai:"นาที",roman:"naa-tii¹",hebrew:"דקה",english:"minute",tone:'mid',source:"תומר 2,csv.txt"},
+  {id:"uv19_0073",level:1,thai:"หาด",roman:"haad²",hebrew:"חוף",english:"beach",tone:'low',source:"תומר 2,csv.txt"},
+  {id:"uv19_0074",level:1,thai:"ได้",roman:"dai³",hebrew:"יכול",english:"can / able",tone:'falling',source:"תומר 2,csv.txt"},
+  {id:"uv19_0075",level:1,thai:"พูด",roman:"puud³",hebrew:"לדבר",english:"speak",tone:'falling',source:"תומר 2,csv.txt"},
+  {id:"uv19_0076",level:5,thai:"พูดไทยได้ไหม",roman:"puud³ Thai dai³ mai¹?",hebrew:"אתה יכול לדבר תאילנדית?",english:"Can you speak Thai?",tone:'falling-falling-mid',source:"תומר 2,csv.txt"},
+  {id:"uv19_0077",level:1,thai:"พริก",roman:"prik¹",hebrew:"צ'ילי",english:"chili",tone:'mid',source:"תומר 2,csv.txt"},
+  {id:"uv19_0078",level:3,thai:"ไม่ใส่",roman:"mai³ sai²",hebrew:"בלי / לא לשים",english:"without / do not put",tone:'falling-low',source:"תומר 2,csv.txt"},
+  {id:"uv19_0079",level:3,thai:"น้ำตาล",roman:"nam¹ dtaan¹",hebrew:"סוכר",english:"sugar",tone:'mid-mid',source:"תומר 2,csv.txt"},
+  {id:"uv19_0080",level:1,thai:"เพิ่ม",roman:"peum³",hebrew:"להוסיף",english:"add / increase",tone:'falling',source:"תומר 2,csv.txt"},
   {id:"uv19_0081",level:3,thai:"ที่นี่",roman:"tii-nii",hebrew:"פה",english:"here",tone:'not_drilled',source:"תומר 3,csv.txt"},
   {id:"uv19_0082",level:3,thai:"ภาษา",roman:"paa-saa",hebrew:"שפה",english:"language",tone:'not_drilled',source:"תומר 3,csv.txt"},
   {id:"uv19_0083",level:3,thai:"ประเทศ",roman:"bpra-ted",hebrew:"מדינה",english:"country",tone:'not_drilled',source:"תומר 3,csv.txt"},
@@ -293,7 +293,7 @@ const WORDS = [
   {id:"uv19_0111",level:1,thai:"ช่วย",roman:"chuai",hebrew:"לעזור",english:"help",tone:'not_drilled',source:"תומר 3,csv.txt"},
   {id:"uv19_0112",level:1,thai:"ต่อ",roman:"dtaw",hebrew:"להמשיך / להאריך",english:"continue / extend",tone:'not_drilled',source:"תומר 3,csv.txt"},
   {id:"uv19_0113",level:1,thai:"หา",roman:"haa",hebrew:"לחפש / למצוא",english:"look for / find",tone:'not_drilled',source:"תומר 3,csv.txt"},
-  {id:"uv19_0114",level:1,thai:"หม้อ",roman:"maw³",hebrew:"סיר",english:"pot",tone:'not_drilled',source:"תומר 3,csv.txt"},
+  {id:"uv19_0114",level:1,thai:"หม้อ",roman:"maw³",hebrew:"סיר",english:"pot",tone:'falling',source:"תומר 3,csv.txt"},
   {id:"uv19_0115",level:1,thai:"หมอ",roman:"maws",hebrew:"רופא",english:"doctor",tone:'not_drilled',source:"תומר 3,csv.txt"},
   {id:"uv19_0116",level:1,thai:"บวก",roman:"buag",hebrew:"פלוס",english:"plus",tone:'not_drilled',source:"תומר 3,csv.txt"},
   {id:"uv19_0117",level:1,thai:"ลบ",roman:"löb",hebrew:"מינוס",english:"minus",tone:'not_drilled',source:"תומר 3,csv.txt"},
@@ -454,69 +454,69 @@ const WORDS = [
   {id:"uv19_0273",level:1,thai:"บอก",roman:"bork",hebrew:"להגיד / לספר",english:"tell",tone:'not_drilled',source:"תומר 7,csv.txt"},
   {id:"uv19_0274",level:1,thai:"ถาม",roman:"tam",hebrew:"לשאול",english:"ask",tone:'not_drilled',source:"תומר 7,csv.txt"},
   {id:"uv19_0275",level:1,thai:"ยิ้ม",roman:"yim",hebrew:"לחייך",english:"smile",tone:'not_drilled',source:"תומר 7,csv.txt"},
-  {id:"uv19_0276",level:3,thai:"ร้องไห้",roman:"rong¹-hai³",hebrew:"לבכות",english:"cry",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0277",level:3,thai:"อิจฉา",roman:"it²-chaa¹",hebrew:"לקנא",english:"envy / jealous",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0278",level:3,thai:"โมโห",roman:"mo¹-ho¹",hebrew:"עצבני",english:"angry / annoyed",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0279",level:3,thai:"รำคาญ",roman:"ram¹-kaan¹",hebrew:"מעצבן",english:"annoyed / annoying",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0280",level:1,thai:"หวัง",roman:"wang¹",hebrew:"לקוות",english:"hope",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0281",level:3,thai:"มั่นใจ",roman:"man¹-jai¹",hebrew:"בטוח",english:"confident",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0282",level:4,thai:"น่าสงสาร",roman:"naa³-song⁵-saan¹",hebrew:"מסכן",english:"pitiful / poor thing",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0283",level:3,thai:"ภูมิใจ",roman:"pum¹-jai¹",hebrew:"גאה",english:"proud",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0284",level:3,thai:"เสียดาย",roman:"sia⁵-daai¹",hebrew:"חבל / בזבוז",english:"what a pity / waste",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv19_0276",level:3,thai:"ร้องไห้",roman:"rong¹-hai³",hebrew:"לבכות",english:"cry",tone:'mid-falling',source:"תומר 8,csv.txt"},
+  {id:"uv19_0277",level:3,thai:"อิจฉา",roman:"it²-chaa¹",hebrew:"לקנא",english:"envy / jealous",tone:'low-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0278",level:3,thai:"โมโห",roman:"mo¹-ho¹",hebrew:"עצבני",english:"angry / annoyed",tone:'mid-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0279",level:3,thai:"รำคาญ",roman:"ram¹-kaan¹",hebrew:"מעצבן",english:"annoyed / annoying",tone:'mid-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0280",level:1,thai:"หวัง",roman:"wang¹",hebrew:"לקוות",english:"hope",tone:'mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0281",level:3,thai:"มั่นใจ",roman:"man¹-jai¹",hebrew:"בטוח",english:"confident",tone:'mid-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0282",level:4,thai:"น่าสงสาร",roman:"naa³-song⁵-saan¹",hebrew:"מסכן",english:"pitiful / poor thing",tone:'falling-rising-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0283",level:3,thai:"ภูมิใจ",roman:"pum¹-jai¹",hebrew:"גאה",english:"proud",tone:'mid-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0284",level:3,thai:"เสียดาย",roman:"sia⁵-daai¹",hebrew:"חבל / בזבוז",english:"what a pity / waste",tone:'rising-mid',source:"תומר 8,csv.txt"},
   {id:"uv19_0285",level:3,thai:"ตื่นเต้น",roman:"dteun-dten",hebrew:"מתרגש",english:"excited",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0286",level:1,thai:"ง่วง",roman:"nguang³",hebrew:"ישנוני",english:"sleepy",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0287",level:3,thai:"ตกใจ",roman:"dtok²-jai¹",hebrew:"מבוהל",english:"shocked / startled",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0288",level:1,thai:"รวม",roman:"ruam¹",hebrew:"ביחד",english:"together / include",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0289",level:3,thai:"ชื่อจริง",roman:"cheuu³-jing¹",hebrew:"שם אמיתי",english:"real name",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0290",level:3,thai:"ชื่อเล่น",roman:"cheuu³-len³",hebrew:"כינוי",english:"nickname",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0291",level:4,thai:"นามสกุล",roman:"naam¹-sa¹-kun¹",hebrew:"שם משפחה",english:"surname",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0292",level:1,thai:"คือ",roman:"keuu¹",hebrew:"זה / הוא (הגדרה)",english:"is / means",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0293",level:1,thai:"เบื่อ",roman:"beaua²",hebrew:"משעמם",english:"bored",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0294",level:3,thai:"สมอง",roman:"sa¹-mawng¹",hebrew:"מוח",english:"brain",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0295",level:4,thai:"สมองไม่ทำงาน",roman:"sa¹-mawng¹ mai³ tam¹-ngaan¹",hebrew:"המוח לא עובד",english:"brain not working",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0296",level:1,thai:"บน",roman:"bon¹",hebrew:"על (מעל)",english:"on / above",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0297",level:3,thai:"ต่อไป",roman:"dtor²-bpai¹",hebrew:"הבא",english:"next",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0298",level:1,thai:"เห็น",roman:"hen¹",hebrew:"רואה",english:"see",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0299",level:3,thai:"หน้าต่าง",roman:"naa³-dtang²",hebrew:"חלון",english:"window",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0300",level:1,thai:"ห้อง",roman:"hawng³",hebrew:"חדר",english:"room",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0301",level:3,thai:"พ่อแม่",roman:"poh³-mae³",hebrew:"הורים",english:"parents",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0302",level:3,thai:"กับข้าว",roman:"kap²-kaao³",hebrew:"אוכל (שאוכלים עם אורז)",english:"food eaten with rice",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0303",level:3,thai:"นักเรียน",roman:"nag²-rian¹",hebrew:"סטודנט / תלמיד",english:"student",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0304",level:4,thai:"ร้านอาหาร",roman:"raan³-aa¹-haan⁵",hebrew:"מסעדה",english:"restaurant",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0305",level:3,thai:"เจ้าของ",roman:"jao³-kawng¹",hebrew:"הבעלים",english:"owner",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0306",level:1,thai:"แม่",roman:"mae³",hebrew:"אמא",english:"mother",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0307",level:3,thai:"ผู้หญิง",roman:"puu³-ying⁵",hebrew:"אישה / נקבה",english:"woman / female",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0308",level:3,thai:"ผู้ชาย",roman:"puu³-chaai¹",hebrew:"גבר / זכר",english:"man / male",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0309",level:4,thai:"ในหลวง",roman:"nai¹-lu-ang¹",hebrew:"המלך",english:"king",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0310",level:4,thai:"พระเจ้าอยู่หัว",roman:"pra¹-jao³-yuu²-hua¹",hebrew:"המלך (תואר רשמי)",english:"king (formal title)",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv19_0286",level:1,thai:"ง่วง",roman:"nguang³",hebrew:"ישנוני",english:"sleepy",tone:'falling',source:"תומר 8,csv.txt"},
+  {id:"uv19_0287",level:3,thai:"ตกใจ",roman:"dtok²-jai¹",hebrew:"מבוהל",english:"shocked / startled",tone:'low-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0288",level:1,thai:"รวม",roman:"ruam¹",hebrew:"ביחד",english:"together / include",tone:'mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0289",level:3,thai:"ชื่อจริง",roman:"cheuu³-jing¹",hebrew:"שם אמיתי",english:"real name",tone:'falling-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0290",level:3,thai:"ชื่อเล่น",roman:"cheuu³-len³",hebrew:"כינוי",english:"nickname",tone:'falling-falling',source:"תומר 8,csv.txt"},
+  {id:"uv19_0291",level:4,thai:"นามสกุล",roman:"naam¹-sa¹-kun¹",hebrew:"שם משפחה",english:"surname",tone:'mid-mid-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0292",level:1,thai:"คือ",roman:"keuu¹",hebrew:"זה / הוא (הגדרה)",english:"is / means",tone:'mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0293",level:1,thai:"เบื่อ",roman:"beaua²",hebrew:"משעמם",english:"bored",tone:'low',source:"תומר 8,csv.txt"},
+  {id:"uv19_0294",level:3,thai:"สมอง",roman:"sa¹-mawng¹",hebrew:"מוח",english:"brain",tone:'mid-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0295",level:4,thai:"สมองไม่ทำงาน",roman:"sa¹-mawng¹ mai³ tam¹-ngaan¹",hebrew:"המוח לא עובד",english:"brain not working",tone:'mid-mid-falling-mid-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0296",level:1,thai:"บน",roman:"bon¹",hebrew:"על (מעל)",english:"on / above",tone:'mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0297",level:3,thai:"ต่อไป",roman:"dtor²-bpai¹",hebrew:"הבא",english:"next",tone:'low-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0298",level:1,thai:"เห็น",roman:"hen¹",hebrew:"רואה",english:"see",tone:'mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0299",level:3,thai:"หน้าต่าง",roman:"naa³-dtang²",hebrew:"חלון",english:"window",tone:'falling-low',source:"תומר 8,csv.txt"},
+  {id:"uv19_0300",level:1,thai:"ห้อง",roman:"hawng³",hebrew:"חדר",english:"room",tone:'falling',source:"תומר 8,csv.txt"},
+  {id:"uv19_0301",level:3,thai:"พ่อแม่",roman:"poh³-mae³",hebrew:"הורים",english:"parents",tone:'falling-falling',source:"תומר 8,csv.txt"},
+  {id:"uv19_0302",level:3,thai:"กับข้าว",roman:"kap²-kaao³",hebrew:"אוכל (שאוכלים עם אורז)",english:"food eaten with rice",tone:'low-falling',source:"תומר 8,csv.txt"},
+  {id:"uv19_0303",level:3,thai:"นักเรียน",roman:"nag²-rian¹",hebrew:"סטודנט / תלמיד",english:"student",tone:'low-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0304",level:4,thai:"ร้านอาหาร",roman:"raan³-aa¹-haan⁵",hebrew:"מסעדה",english:"restaurant",tone:'falling-mid-rising',source:"תומר 8,csv.txt"},
+  {id:"uv19_0305",level:3,thai:"เจ้าของ",roman:"jao³-kawng¹",hebrew:"הבעלים",english:"owner",tone:'falling-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0306",level:1,thai:"แม่",roman:"mae³",hebrew:"אמא",english:"mother",tone:'falling',source:"תומר 8,csv.txt"},
+  {id:"uv19_0307",level:3,thai:"ผู้หญิง",roman:"puu³-ying⁵",hebrew:"אישה / נקבה",english:"woman / female",tone:'falling-rising',source:"תומר 8,csv.txt"},
+  {id:"uv19_0308",level:3,thai:"ผู้ชาย",roman:"puu³-chaai¹",hebrew:"גבר / זכר",english:"man / male",tone:'falling-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0309",level:4,thai:"ในหลวง",roman:"nai¹-lu-ang¹",hebrew:"המלך",english:"king",tone:'mid-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0310",level:4,thai:"พระเจ้าอยู่หัว",roman:"pra¹-jao³-yuu²-hua¹",hebrew:"המלך (תואר רשמי)",english:"king (formal title)",tone:'mid-falling-low-mid',source:"תומר 8,csv.txt"},
   {id:"uv19_0311",level:3,thai:"หมู่",roman:"muu",hebrew:"קבוצה / כפר / חבורה",english:"group / village / category",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0312",level:3,thai:"ชาวเผ่า",roman:"chaao¹-pao¹",hebrew:"אנשי שבט",english:"tribal people",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0314",level:3,thai:"ภูเขา",roman:"puu¹-kao¹",hebrew:"הר",english:"mountain",tone:'not_drilled',source:"תומר 8,csv.txt"},
+  {id:"uv19_0312",level:3,thai:"ชาวเผ่า",roman:"chaao¹-pao¹",hebrew:"אנשי שבט",english:"tribal people",tone:'mid-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0314",level:3,thai:"ภูเขา",roman:"puu¹-kao¹",hebrew:"הר",english:"mountain",tone:'mid-mid',source:"תומר 8,csv.txt"},
   {id:"uv19_0315",level:1,thai:"ผ้า",roman:"paa",hebrew:"בד / בגד",english:"cloth / fabric / clothing",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0316",level:3,thai:"ตลาดนัด",roman:"dtalard²-nat¹",hebrew:"שוק",english:"market",tone:'not_drilled',source:"תומר 8,csv.txt"},
-  {id:"uv19_0317",level:2,thai:"อีก",roman:"iig(2)",hebrew:"שוב (Again)",english:"again / more",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0318",level:3,thai:"พักผ่อน",roman:"pag-pawn(2-2)",hebrew:"לנוח",english:"rest",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0319",level:3,thai:"ไปเที่ยว",roman:"bpai-tiao(1-3)",hebrew:"לטייל / להסתובב בכיף",english:"go out / travel for fun",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0320",level:2,thai:"เสร็จ",roman:"sed(2)",hebrew:"סיים / נגמר",english:"finish / done",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0321",level:2,thai:"หมด",roman:"mod(2)",hebrew:"הכל נגמר / אזל",english:"finished / used up",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0316",level:3,thai:"ตลาดนัด",roman:"dtalard²-nat¹",hebrew:"שוק",english:"market",tone:'low-mid',source:"תומר 8,csv.txt"},
+  {id:"uv19_0317",level:2,thai:"อีก",roman:"iig(2)",hebrew:"שוב (Again)",english:"again / more",tone:'low',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0318",level:3,thai:"พักผ่อน",roman:"pag-pawn(2-2)",hebrew:"לנוח",english:"rest",tone:'low-low',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0319",level:3,thai:"ไปเที่ยว",roman:"bpai-tiao(1-3)",hebrew:"לטייל / להסתובב בכיף",english:"go out / travel for fun",tone:'mid-falling',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0320",level:2,thai:"เสร็จ",roman:"sed(2)",hebrew:"סיים / נגמר",english:"finish / done",tone:'low',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0321",level:2,thai:"หมด",roman:"mod(2)",hebrew:"הכל נגמר / אזל",english:"finished / used up",tone:'low',source:"אלמוג 1,CSV.txt"},
   {id:"uv19_0322",level:2,thai:"ตื่น",roman:"dteun",hebrew:"להתעורר",english:"wake up",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0323",level:2,thai:"หลง",roman:"long(1)",hebrew:"ללכת לאיבוד",english:"lost",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0324",level:4,thai:"ความอดทน",roman:"kwaam-od-ton(1-2-1)",hebrew:"סבלנות",english:"patience",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0325",level:2,thai:"ปลา",roman:"bplaa(1)",hebrew:"דג",english:"fish",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0326",level:2,thai:"กุ้ง",roman:"gung(3)",hebrew:"שרימפס",english:"shrimp",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0327",level:2,thai:"หอย",roman:"hoi(5)",hebrew:"צדפה",english:"shellfish",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0323",level:2,thai:"หลง",roman:"long(1)",hebrew:"ללכת לאיבוד",english:"lost",tone:'mid',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0324",level:4,thai:"ความอดทน",roman:"kwaam-od-ton(1-2-1)",hebrew:"סבלנות",english:"patience",tone:'mid-low-mid',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0325",level:2,thai:"ปลา",roman:"bplaa(1)",hebrew:"דג",english:"fish",tone:'mid',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0326",level:2,thai:"กุ้ง",roman:"gung(3)",hebrew:"שרימפס",english:"shrimp",tone:'falling',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0327",level:2,thai:"หอย",roman:"hoi(5)",hebrew:"צדפה",english:"shellfish",tone:'rising',source:"אלמוג 1,CSV.txt"},
   {id:"uv19_0328",level:3,thai:"ปลาหมึก",roman:"bpla-meuk",hebrew:"דיונון",english:"squid",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0329",level:4,thai:"อาหารทะเล",roman:"aa-haan-ta-lay(1(1)-5-1-1)",hebrew:"פירות ים",english:"seafood",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0330",level:3,thai:"เมื่อไร",roman:"meua-rai(3-1)",hebrew:"מתי",english:"when?",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0329",level:4,thai:"อาหารทะเล",roman:"aa-haan-ta-lay(1(1)-5-1-1)",hebrew:"פירות ים",english:"seafood",tone:'mid-mid-rising-mid-mid',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0330",level:3,thai:"เมื่อไร",roman:"meua-rai(3-1)",hebrew:"מתי",english:"when?",tone:'falling-mid',source:"אלמוג 1,CSV.txt"},
   {id:"uv19_0331",level:5,thai:"ยังไง",roman:"yang-ngai",hebrew:"איך?",english:"how?",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0332",level:2,thai:"ใคร",roman:"khrai(1)",hebrew:"מי (או מי זה)",english:"who",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0333",level:3,thai:"วันเกิด",roman:"wan-geut(1-2)",hebrew:"יום הולדת",english:"birthday",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0334",level:2,thai:"เคย",roman:"koey(1)",hebrew:"אי פעם",english:"ever",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0335",level:4,thai:"สมาชิก",roman:"sa-ma-chik(2-1-3)",hebrew:"חבר (במועדון / קבוצה)",english:"member",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0336",level:2,thai:"เด็ก",roman:"dek(2)",hebrew:"ילד",english:"child",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0337",level:3,thai:"น้ำมัน",roman:"nam-man(1-1)",hebrew:"שמן / דלק",english:"oil / fuel",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0338",level:4,thai:"ปั๊มน้ำมัน",roman:"bpum-nam-man(3-1-1)",hebrew:"תחנת דלק",english:"gas station",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
-  {id:"uv19_0339",level:2,thai:"กัน",roman:"gan(1)",hebrew:"אחד את השני / ביחד",english:"each other / together",tone:'not_drilled',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0332",level:2,thai:"ใคร",roman:"khrai(1)",hebrew:"מי (או מי זה)",english:"who",tone:'mid',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0333",level:3,thai:"วันเกิด",roman:"wan-geut(1-2)",hebrew:"יום הולדת",english:"birthday",tone:'mid-low',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0334",level:2,thai:"เคย",roman:"koey(1)",hebrew:"אי פעם",english:"ever",tone:'mid',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0335",level:4,thai:"สมาชิก",roman:"sa-ma-chik(2-1-3)",hebrew:"חבר (במועדון / קבוצה)",english:"member",tone:'low-mid-falling',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0336",level:2,thai:"เด็ก",roman:"dek(2)",hebrew:"ילד",english:"child",tone:'low',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0337",level:3,thai:"น้ำมัน",roman:"nam-man(1-1)",hebrew:"שמן / דלק",english:"oil / fuel",tone:'mid-mid',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0338",level:4,thai:"ปั๊มน้ำมัน",roman:"bpum-nam-man(3-1-1)",hebrew:"תחנת דלק",english:"gas station",tone:'falling-mid-mid',source:"אלמוג 1,CSV.txt"},
+  {id:"uv19_0339",level:2,thai:"กัน",roman:"gan(1)",hebrew:"אחד את השני / ביחד",english:"each other / together",tone:'mid',source:"אלמוג 1,CSV.txt"},
   {id:"uv19_0340",level:4,thai:"แต่เช้า",roman:"dtae-chao",hebrew:"לפנות בוקר / מוקדם בבוקר",english:"early in the morning",tone:'not_drilled',source:"אלמוג 5(2).apkg"},
   {id:"uv19_0341",level:3,thai:"ตอนเช้า",roman:"dton-chao",hebrew:"בבוקר",english:"morning / in the morning",tone:'not_drilled',source:"אלמוג 5(2).apkg"},
   {id:"uv19_0342",level:4,thai:"ตอนสาย",roman:"dton-saai",hebrew:"מאוחר בבוקר",english:"late morning",tone:'not_drilled',source:"אלמוג 5(2).apkg"},
@@ -1789,8 +1789,16 @@ function updateSkinPanel(){
   ensureDailyState();
   unlockEligibleThemes();
   const points = state.coach.points || 0;
-  el('coachPointsBadge').textContent = isHebrew() ? `${points} נק׳` : `${points} pts`;
   const premiumThemes = THEMES.filter(x=>x.premium);
+  const next = premiumThemes.find(theme => !isThemeUnlocked(theme));
+  const previousTarget = [...premiumThemes].reverse().find(theme => (theme.points || 0) <= points)?.points || 0;
+  const nextTarget = next ? (next.points || 0) : (premiumThemes[premiumThemes.length - 1]?.points || points || 1);
+  const span = Math.max(1, nextTarget - previousTarget);
+  const progress = next ? Math.max(0, Math.min(100, ((points - previousTarget) / span) * 100)) : 100;
+  el('coachPointsBadge').textContent = next
+    ? (isHebrew() ? `${points} נק׳ · עוד ${nextTarget - points}` : `${points} pts · ${nextTarget - points} left`)
+    : (isHebrew() ? `${points} נק׳ · הכל פתוח` : `${points} pts · all unlocked`);
+  if(el('skinProgressFill')) el('skinProgressFill').style.width = `${progress}%`;
   el('skinGrid').innerHTML = premiumThemes.map(theme => {
     const unlocked = isThemeUnlocked(theme);
     const active = state.theme === theme.id;
@@ -1809,9 +1817,8 @@ function updateSkinPanel(){
       updateSkinPanel();
     });
   });
-  const next = premiumThemes.find(theme => !isThemeUnlocked(theme));
   el('nextSkinNote').textContent = next
-    ? `${t('nextSkin')}: ${isHebrew()?next.he:next.en} · ${(next.points || 0) - points} ${isHebrew()?'נק׳ נשארו':'pts left'}`
+    ? `${t('nextSkin')}: ${isHebrew()?next.he:next.en} · ${points}/${next.points} ${isHebrew()?'נק׳':'pts'}`
     : (isHebrew() ? 'כל הסקינים נפתחו. אגדה.' : 'All skins unlocked. Legendary.');
 }
 
@@ -1840,34 +1847,7 @@ function setupCanvas(){
 
     ctx.save();
     ctx.setLineDash([]);
-    ctx.lineCap = 'butt';
-    ctx.lineJoin = 'miter';
-
-    // White background
-    ctx.fillStyle = '#ffffff';
-    ctx.fillRect(0, 0, w, h);
-
-    // Writing guide lines, drawn INSIDE the canvas so they appear on every browser/device.
-    const lines = [0.18, 0.38, 0.58, 0.78];
-    lines.forEach((pct, idx) => {
-      ctx.beginPath();
-      ctx.moveTo(0, Math.round(h * pct) + 0.5);
-      ctx.lineTo(w, Math.round(h * pct) + 0.5);
-      ctx.strokeStyle = idx === 0 || idx === lines.length - 1 ? 'rgba(15,23,42,0.28)' : 'rgba(15,23,42,0.18)';
-      ctx.lineWidth = idx === 0 || idx === lines.length - 1 ? 1.5 : 1;
-      ctx.stroke();
-    });
-
-    // Light vertical guides
-    ctx.strokeStyle = 'rgba(15,23,42,0.06)';
-    ctx.lineWidth = 1;
-    for(let x = 48; x < w; x += 48){
-      ctx.beginPath();
-      ctx.moveTo(x + 0.5, 0);
-      ctx.lineTo(x + 0.5, h);
-      ctx.stroke();
-    }
-
+    ctx.clearRect(0, 0, w, h);
     ctx.restore();
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
@@ -1890,12 +1870,12 @@ function setupCanvas(){
   resizeCanvas();
   function applyToolStyle(){
     const rect = canvas.getBoundingClientRect();
-    ctx.globalCompositeOperation = 'source-over';
+    ctx.globalCompositeOperation = eraserMode ? 'destination-out' : 'source-over';
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
     const penWidth = Math.max(3, Math.min(10, Number(state.penSize) || 5));
     ctx.lineWidth = eraserMode ? Math.max(24, penWidth * 6) : penWidth;
-    ctx.strokeStyle = eraserMode ? '#ffffff' : '#020617';
+    ctx.strokeStyle = '#020617';
   }
 
   const getPoint = e => {
@@ -1980,8 +1960,7 @@ function setupCanvas(){
 function clearCanvas(){
   if(window.__drawGuideLines){ window.__drawGuideLines(); updateEraserButton(); return; }
   const rect = canvas.getBoundingClientRect();
-  ctx.fillStyle = '#ffffff';
-  ctx.fillRect(0, 0, rect.width, rect.height);
+  ctx.clearRect(0, 0, rect.width, rect.height);
 }
 
 function cleanUserId(value){

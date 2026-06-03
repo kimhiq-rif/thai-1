@@ -1,0 +1,284 @@
+id,level,thai,roman,hebrew,english,source
+apkg_001,4,แต่เช้า,dtae-chao,לפנות בוקר / מוקדם בבוקר,early morning / at dawn,apkg_almog5
+apkg_002,4,ตอนเช้า,dton-chao,בבוקר,in the morning,apkg_almog5
+apkg_003,4,ตอนสาย,dton-saai,מאוחר בבוקר,late morning,apkg_almog5
+apkg_004,4,ตอนเที่ยง,dton-tieng,בצהריים,at noon,apkg_almog5
+apkg_005,4,ตอนบ่าย,dton-baai,אחר הצהריים,in the afternoon,apkg_almog5
+apkg_006,4,ตอนเย็น,dton-yen,בערב,in the evening,apkg_almog5
+apkg_007,4,ตอนเที่ยงคืน,dton-tiang-kheun,בחצות / בלילה,at midnight,apkg_almog5
+apkg_008,4,ตอนดึก,dton-deug,מאוחר בלילה,late at night,apkg_almog5
+apkg_009,4,เห็นด้วย,hen duai,להסכים / מסכים,to agree / agree,apkg_almog5
+apkg_010,4,เห็นไหม,hen mai,רואה? / אתה רואה?,Do you see?,apkg_almog5
+apkg_011,4,เห็นด้วยไหม,hen duai mai,האם אתה מסכים?,Do you agree?,apkg_almog5
+apkg_012,4,ยืน,yuen,לעמוד,to stand,apkg_almog5
+apkg_013,4,นั่ง,nung / nang,לשבת,to sit,apkg_almog5
+apkg_014,4,เดิน,doen,ללכת / לצעוד,to walk,apkg_almog5
+apkg_015,4,วิ่ง,wing,לרוץ,to run,apkg_almog5
+apkg_016,4,ข้าม,khaam,לדלג / לחצות,to skip / to cross,apkg_almog5
+apkg_017,5,ไม่ไหว,mai wai,לא יכול / לא מסוגל / לא עומד בזה,cannot / cannot handle it,apkg_almog5
+apkg_018,5,ไม่ต้องห่วง,mai dtong huang,אל תדאג / אין מה לדאוג,do not worry,apkg_almog5
+apkg_019,5,ไม่สนใจ,mai son jai,לא מעוניין / לא אכפת,not interested / do not care,apkg_almog5
+apkg_020,5,ไม่มีอะไร,mai mee a-rai,אין כלום,there is nothing / nothing,apkg_almog5
+apkg_021,5,ไม่ต้อง,mai dtong,לא צריך / אין צורך,do not need to,apkg_almog5
+apkg_022,5,ไม่มีปัญหา,mai mee pan-haa,אין בעיה,no problem,apkg_almog5
+apkg_023,5,ไม่มีทาง,mai mee taang,אין מצב / אין סיכוי,no way / impossible,apkg_almog5
+apkg_024,5,ว่าไง,waa ngai,מה קורה? / מה נשמע?,What’s up?,apkg_almog5
+apkg_025,5,ไม่เก็ทอะ,mai get a,אני לא מבין / לא קולט,I do not get it,apkg_almog5
+apkg_026,5,แล้วไง,laew ngai,אז מה?,so what?,apkg_almog5
+apkg_027,5,คิดว่า,khit waa,לחשוב ש...,to think that...,apkg_almog5
+apkg_028,5,พูดว่า,phuut waa,לומר ש...,to say that...,apkg_almog5
+apkg_029,5,บอกว่า,bok waa,לספר / להגיד ש...,to tell / say that...,apkg_almog5
+apkg_030,5,รู้สึกว่า,ruu seuk waa,להרגיש ש...,to feel that...,apkg_almog5
+apkg_031,5,เพราะว่า,phroh waa,בגלל ש... / כי,because,apkg_almog5
+apkg_032,5,ได้ยินว่า,daai yin waa,לשמוע ש...,to hear that...,apkg_almog5
+uv19_0034,5,สบายดีไหม,sa-baai dii mai?,מה שלומך?,How are you?,"תומר 1,csv.txt"
+uv19_0035,4,สบายดี,sa-baai dii,הכל טוב / בסדר,I am fine / okay,"תומר 1,csv.txt"
+uv19_0036,4,ไม่สบาย,mai sa-baai,לא מרגיש טוב,not feeling well,"תומר 1,csv.txt"
+uv19_0051,5,คุณรักผม/ฉันไหม,khun rak phom/chan mai?,אתה אוהב אותי?,Do you love me?,"תומר 2,csv.txt"
+uv19_0081,3,ที่นี่,tii-nii,פה,here,"תומר 3,csv.txt"
+uv19_0082,3,ภาษา,paa-saa,שפה,language,"תומר 3,csv.txt"
+uv19_0083,3,ประเทศ,bpra-ted,מדינה,country,"תומר 3,csv.txt"
+uv19_0084,3,ทุกคน,tuk-kon,כולם,everyone,"תומר 3,csv.txt"
+uv19_0085,3,อย่ารอ,yaa ror,אל תחכה,do not wait,"תומר 3,csv.txt"
+uv19_0086,5,พอไหม,phaw mai?,זה מספיק?,Is it enough?,"תומר 3,csv.txt"
+uv19_0087,5,ไปไหน,bpai nai?,לאן אתה הולך?,Where are you going?,"תומר 3,csv.txt"
+uv19_0088,3,ทบทวน,tobp-tuan,לחזור (על חומר),review,"תומר 3,csv.txt"
+uv19_0089,1,พี่,pii,אח/אחות מבוגר/ת,older sibling / senior,"תומר 3,csv.txt"
+uv19_0090,1,ลืม,leuum,לשכוח,forget,"תומר 3,csv.txt"
+uv19_0091,1,และ,laeh,ו...,and,"תומר 3,csv.txt"
+uv19_0092,5,คุณพูดภาษาอะไร,kun puud paasaa a-rai?,איזו שפה אתה מדבר?,What language do you speak?,"תומר 3,csv.txt"
+uv19_0093,1,เสร็จ,sed,לסיים,finish / done,"תומר 3,csv.txt"
+uv19_0094,1,เย็น,yen,קר,cold / evening,"תומר 3,csv.txt"
+uv19_0095,5,คุณมาจาก…,kun maa jaag (place),מאיפה אתה?,Where are you from?,"תומר 3,csv.txt"
+uv19_0096,1,จาก,jaag,מ... (מקור),from,"תומר 3,csv.txt"
+uv19_0097,4,ไหน/ที่ไหน,nai/tii nai,איפה,where,"תומר 3,csv.txt"
+uv19_0098,3,ห้องครัว,hong krua,מטבח,kitchen,"תומר 3,csv.txt"
+uv19_0099,1,ใจ,jaai,לב,heart / mind,"תומר 3,csv.txt"
+uv19_0100,3,ใจดี,jaai dii,לב טוב,kind,"תומר 3,csv.txt"
+uv19_0101,5,ทำไม,tam-mai?,למה?,why?,"תומר 3,csv.txt"
+uv19_0102,1,มาก,maag,מאוד,very / much,"תומר 3,csv.txt"
+uv19_0103,1,สอน,sawn,ללמד,teach,"תומר 3,csv.txt"
+uv19_0104,1,แพง,peang,יקר,expensive,"תומר 3,csv.txt"
+uv19_0105,3,ทุกอย่าง,tug-yaang,הכל,everything,"תומר 3,csv.txt"
+uv19_0106,1,แต่,dtae,אבל,but,"תומר 3,csv.txt"
+uv19_0107,1,ตก,tok,ליפול,fall,"תומר 3,csv.txt"
+uv19_0108,3,น้ำตก,nam-tok,מפל,waterfall,"תומר 3,csv.txt"
+uv19_0109,1,คิด,kid,לחשוב,think,"תומר 3,csv.txt"
+uv19_0110,5,คุณคิดอะไร,kun kid a-rai?,על מה אתה חושב?,What are you thinking?,"תומר 3,csv.txt"
+uv19_0111,1,ช่วย,chuai,לעזור,help,"תומר 3,csv.txt"
+uv19_0112,1,ต่อ,dtaw,להמשיך / להאריך,continue / extend,"תומר 3,csv.txt"
+uv19_0113,1,หา,haa,לחפש / למצוא,look for / find,"תומר 3,csv.txt"
+uv19_0115,1,หมอ,maws,רופא,doctor,"תומר 3,csv.txt"
+uv19_0116,1,บวก,buag,פלוס,plus,"תומר 3,csv.txt"
+uv19_0117,1,ลบ,löb,מינוס,minus,"תומר 3,csv.txt"
+uv19_0118,3,เท่ากับ,ta-gab,שווה,equals,"תומר 3,csv.txt"
+uv19_0119,3,เท่า,tao,שווה / באותה מידה,equal / as much as,"תומר 3,csv.txt"
+uv19_0120,3,เท่าไร,tao-rai,כמה (מחיר),how much?,"תומר 3,csv.txt"
+uv19_0121,4,แล้วแต่คุณ,laew-dtua kun,תלוי בך,up to you,"תומר4,csv.txt"
+uv19_0122,5,กี่โมง,gii mong?,איזו שעה?,what time?,"תומר4,csv.txt"
+uv19_0123,3,ตอนนี้,dtua-ni,עכשיו,now,"תומר4,csv.txt"
+uv19_0124,3,วันนี้,wan-nii,היום,today,"תומר4,csv.txt"
+uv19_0125,3,พรุ่งนี้,pru-ngii,מחר,tomorrow,"תומר4,csv.txt"
+uv19_0126,3,เมื่อวาน,meua-wan,אתמול,yesterday,"תומר4,csv.txt"
+uv19_0127,3,ตอนเช้า,dtan-chao,בוקר,morning,"תומר4,csv.txt"
+uv19_0128,3,ตอนเที่ยง,dtan-tiang,צהריים,noon,"תומר4,csv.txt"
+uv19_0129,3,ตอนเย็น,dtan-yen,ערב,evening,"תומר4,csv.txt"
+uv19_0130,4,ตอนกลางคืน,dtan-klang-keun,לילה,night,"תומר4,csv.txt"
+uv19_0131,3,กินข้าว,gin-kaaw,לאכול (אורז/ארוחה),eat / have a meal,"תומר4,csv.txt"
+uv19_0132,1,หนึ่ง,nueng,אחד,one,"תומר4,csv.txt"
+uv19_0133,1,สอง,song,שתיים,two,"תומר4,csv.txt"
+uv19_0134,1,สาม,saam,שלוש,three,"תומר4,csv.txt"
+uv19_0135,1,สี่,sii,ארבע,four,"תומר4,csv.txt"
+uv19_0136,1,ห้า,haa,חמש,five,"תומר4,csv.txt"
+uv19_0137,1,หก,hok,שש,six,"תומר4,csv.txt"
+uv19_0138,1,เจ็ด,jet,שבע,seven,"תומר4,csv.txt"
+uv19_0139,1,แปด,bpaed,שמונה,eight,"תומר4,csv.txt"
+uv19_0140,1,เก้า,gao,תשע,nine,"תומר4,csv.txt"
+uv19_0141,1,สิบ,sip,עשר,ten,"תומר4,csv.txt"
+uv19_0142,3,สิบเอ็ด,sip-et,אחת עשרה,eleven,"תומר4,csv.txt"
+uv19_0143,3,ยี่สิบ,yii-sip,עשרים,twenty,"תומר4,csv.txt"
+uv19_0144,1,ร้อย,roi,מאה,hundred,"תומר4,csv.txt"
+uv19_0145,1,พัน,pan,אלף,thousand,"תומר4,csv.txt"
+uv19_0146,1,หมื่น,meun,עשרת אלפים,ten thousand,"תומר4,csv.txt"
+uv19_0147,1,แสน,san,מאה אלף,hundred thousand,"תומר4,csv.txt"
+uv19_0148,1,ล้าน,lan,מיליון,million,"תומר4,csv.txt"
+uv19_0149,1,หน้า,naa,פנים / עונה / דף,face / season / page,"תומר4,csv.txt"
+uv19_0150,3,หน้าร้อน,naa-rawn,העונה החמה,hot season,"תומר4,csv.txt"
+uv19_0151,3,หน้าฝน,naa-fon,עונת הגשמים,rainy season,"תומר4,csv.txt"
+uv19_0152,3,หน้าหนาว,naa-nao,העונה הקרה,cold season,"תומר4,csv.txt"
+uv19_0153,1,ใกล้,glai,קרוב (טון נמוך),near,"תומר4,csv.txt"
+uv19_0154,1,ไกล,glai,רחוק (טון גבוה),far,"תומר4,csv.txt"
+uv19_0155,1,ต้อง,dtong,חייב,must,"תומר4,csv.txt"
+uv19_0156,1,กลัว,glua,לפחד,afraid,"תומר4,csv.txt"
+uv19_0157,3,ประมาณ,bpra-maan,בערך,about / approximately,"תומר4,csv.txt"
+uv19_0158,1,กลับ,glap,לחזור,return,"תומר4,csv.txt"
+uv19_0159,3,กลับบ้าน,glap baan,לחזור הביתה,return home,"תומר4,csv.txt"
+uv19_0160,1,เหงื่อ,heua,זיעה,sweat,"תומר 5,csv.txt"
+uv19_0161,3,เหงื่อออก,heua-awk,להזיע,sweat / perspire,"תומר 5,csv.txt"
+uv19_0162,1,เหนื่อย,nuay,עייף,tired,"תומר 5,csv.txt"
+uv19_0163,1,หิว,hiu,רעב,hungry,"תומר 5,csv.txt"
+uv19_0164,3,หิวน้ำ,hiu-nam,צמא,thirsty,"תומר 5,csv.txt"
+uv19_0165,1,อิ่ม,im,שבע (מאוכל),full from food,"תומר 5,csv.txt"
+uv19_0166,1,เผ็ด,pet,חריף,spicy,"תומר 5,csv.txt"
+uv19_0167,1,เค็ม,kem,מלוח,salty,"תומר 5,csv.txt"
+uv19_0168,1,เปรี้ยว,bpreaw,חמוץ,sour,"תומר 5,csv.txt"
+uv19_0169,1,ขม,kom,מר,bitter,"תומר 5,csv.txt"
+uv19_0170,1,มัน,man,שומני,oily / fatty,"תומר 5,csv.txt"
+uv19_0171,1,จืด,juad,תפל,bland,"תומר 5,csv.txt"
+uv19_0172,3,ขยะ,ka-ya,זבל,trash,"תומר 5,csv.txt"
+uv19_0173,4,ไม่เป็นไร,mai-pen-rai,לא משנה / אין בעיה,never mind / no problem,"תומר 5,csv.txt"
+uv19_0174,3,โชคดี,chok-dee,בהצלחה,good luck,"תומר 5,csv.txt"
+uv19_0175,3,ลาก่อน,la-gon,להתראות,goodbye,"תומר 5,csv.txt"
+uv19_0176,4,ไปก่อนนะ,pai-gon-na,אני הולך עכשיו (להתראות),I am going now / bye,"תומר 5,csv.txt"
+uv19_0177,3,ไปแล้ว,bpai-leaw,כבר הלכתי / הלכתי,already went,"תומר 5,csv.txt"
+uv19_0178,3,เจอกัน,jer-gan,נתראה,see you,"תומר 5,csv.txt"
+uv19_0179,3,ทุกวัน,tuk-wan,כל יום,every day,"תומר 5,csv.txt"
+uv19_0180,3,ทุกอย่าง,tuk-yaang,הכל,everything,"תומר 5,csv.txt"
+uv19_0181,3,บางที,bang-ti,לפעמים,sometimes,"תומר 5,csv.txt"
+uv19_0182,3,บางคน,bang-kon,חלק מהאנשים,some people,"תומר 5,csv.txt"
+uv19_0183,3,ไม่เคย,mai-koey,אף פעם לא,never,"תומר 5,csv.txt"
+uv19_0184,1,เคย,koey,פעם / כבר עשיתי,ever,"תומר 5,csv.txt"
+uv19_0185,1,เบื่อ,bua,משעמם,bored,"תומר 5,csv.txt"
+uv19_0186,3,ง่วงนอน,nguang-non,ישנוני,sleepy,"תומר 5,csv.txt"
+uv19_0187,1,สนุก,sanook,כיף,fun,"תומר 5,csv.txt"
+uv19_0188,1,เป็น,bpen,להיות / לדעת לעשות,be / know how to,"תומר 5,csv.txt"
+uv19_0189,1,คือ,kue,זה / הוא (להגדרות),is / means,"תומר 5,csv.txt"
+uv19_0190,4,สวัสดี,sa-waat-dee,שלום,hello,"תומר 5,csv.txt"
+uv19_0191,3,ขอบคุณ,kob-kun,תודה,thank you,"תומר 5,csv.txt"
+uv19_0192,5,ยินดีที่ได้รู้จัก,yin-dee tii dai ruu-jak,נעים להכיר,nice to meet you,"תומר 5,csv.txt"
+uv19_0193,5,ที่ไหน,tii-nai?,איפה?,where?,"תומר 5,csv.txt"
+uv19_0194,5,เมื่อไร,meua-rai?,מתי?,when?,"תומר 5,csv.txt"
+uv19_0195,5,ยังไง,yang-ngai?,איך?,how?,"תומר 5,csv.txt"
+uv19_0196,3,เพราะว่า,prow-wa,בגלל ש...,because,"תומר 5,csv.txt"
+uv19_0197,4,ขนมปัง,ka-nom-bpang,לחם,bread,"תומר 5,csv.txt"
+uv19_0198,3,เนื้อ,neu-a,בשר / בקר,meat / beef,"תומר 5,csv.txt"
+uv19_0199,1,ไก่,gai,עוף,chicken,"תומר 6,csv.txt"
+uv19_0200,1,หมู,moo,חזיר,pork / pig,"תומר 6,csv.txt"
+uv19_0201,1,ปลา,bpaa,דג,fish,"תומר 6,csv.txt"
+uv19_0202,1,กุ้ง,goong,שרימפס,shrimp,"תומר 6,csv.txt"
+uv19_0203,1,ปู,puu,סרטן,crab,"תומר 6,csv.txt"
+uv19_0204,1,ไข่,kai,ביצה,egg,"תומר 6,csv.txt"
+uv19_0205,3,ไข่ดาว,kai-dao,ביצת עין,fried egg,"תומר 6,csv.txt"
+uv19_0206,3,ไข่เจียว,kai-jeaw,חביתה,omelette,"תומר 6,csv.txt"
+uv19_0207,1,ผัก,pak,ירקות,vegetables,"תומר 6,csv.txt"
+uv19_0208,4,ผลไม้,pon-la-mai,פירות,fruit,"תומר 6,csv.txt"
+uv19_0209,1,ส้ม,som,תפוז,orange,"תומר 6,csv.txt"
+uv19_0210,3,มะม่วง,ma-muang,מנגו,mango,"תומר 6,csv.txt"
+uv19_0211,3,มะพร้าว,ma-prao,קוקוס,coconut,"תומר 6,csv.txt"
+uv19_0212,1,กล้วย,gluay,בננה,banana,"תומר 6,csv.txt"
+uv19_0213,4,สับปะรด,sup-pa-rot,אננס,pineapple,"תומר 6,csv.txt"
+uv19_0215,3,น้ำแข็ง,nam-kaeng,קרח,ice,"תומר 6,csv.txt"
+uv19_0216,3,น้ำส้ม,nam-som,מיץ תפוזים,orange juice,"תומר 6,csv.txt"
+uv19_0217,3,กาแฟ,ga-fe,קפה,coffee,"תומר 6,csv.txt"
+uv19_0218,1,นม,nom,חלב,milk,"תומר 6,csv.txt"
+uv19_0219,1,เบียร์,beer,בירה,beer,"תומר 6,csv.txt"
+uv19_0220,1,เหล้า,lao,אלכוהול / וויסקי,alcohol / whiskey,"תומר 6,csv.txt"
+uv19_0221,1,กับ,gap,עם,with,"תומר 6,csv.txt"
+uv19_0222,1,เอา,ao,רוצה / לקחת,want / take,"תומר 6,csv.txt"
+uv19_0223,3,ไม่เอา,mai ao,לא רוצה,do not want,"תומר 6,csv.txt"
+uv19_0224,4,เอาอันนี้,ao-an-nii,רוצה את זה,want this one,"תומר 6,csv.txt"
+uv19_0225,1,เรือ,reua,סירה,boat,"תומר 6,csv.txt"
+uv19_0226,3,เรือบิน,reua-bin,מטוס,airplane,"תומר 6,csv.txt"
+uv19_0227,1,รถ,rot,מכונית,car / vehicle,"תומר 6,csv.txt"
+uv19_0228,3,รถเมล์,rot-mae,אוטובוס,bus,"תומר 6,csv.txt"
+uv19_0229,3,รถไฟ,rot-fai,רכבת,train,"תומר 6,csv.txt"
+uv19_0230,4,มอเตอร์ไซค์,mo-dtu-sai,אופנוע,motorbike,"תומר 6,csv.txt"
+uv19_0231,4,จักรยาน,jak-kra-yaan,אופניים,bicycle,"תומר 6,csv.txt"
+uv19_0232,1,เดิน,doen,ללכת ברגל,walk,"תומר 6,csv.txt"
+uv19_0233,1,วิ่ง,wing,לרוץ,run,"תומר 6,csv.txt"
+uv19_0234,1,สวย,suay,יפה,beautiful,"תומר 6,csv.txt"
+uv19_0235,3,น่ารัก,naa-rak,חמוד,cute,"תומר 6,csv.txt"
+uv19_0236,1,หล่อ,lor,חתיך,handsome,"תומר 6,csv.txt"
+uv19_0237,1,เตี้ย,dtia,נמוך,short,"תומר 6,csv.txt"
+uv19_0238,1,สูง,soong,גבוה,tall,"תומר 6,csv.txt"
+uv19_0239,3,อ้วน,u-an,שמן (גוף),fat / overweight,"תומר 7,csv.txt"
+uv19_0240,1,ผอม,pom,רזה,thin,"תומר 7,csv.txt"
+uv19_0241,1,ใหญ่,yai,גדול,big,"תומר 7,csv.txt"
+uv19_0242,1,เล็ก,lek,קטן,small,"תומר 7,csv.txt"
+uv19_0243,1,เหงา,ngao,בודד,lonely,"תומר 7,csv.txt"
+uv19_0244,3,เสียใจ,sia-jai,עצוב,sad / sorry,"תומר 7,csv.txt"
+uv19_0245,3,ดีใจ,dii-jai,שמח,happy,"תומר 7,csv.txt"
+uv19_0246,1,โกรธ,grote,כועס,angry,"תומר 7,csv.txt"
+uv19_0247,1,กลัว,glua,מפחד,afraid,"תומר 7,csv.txt"
+uv19_0248,3,ตกใจ,dtok-jai,מופתע / בהלם,shocked / startled,"תומר 7,csv.txt"
+uv19_0249,1,งง,ngong,מבולבל,confused,"תומר 7,csv.txt"
+uv19_0250,3,มั่นใจ,man-jai,בטוח בעצמי,confident,"תומר 7,csv.txt"
+uv19_0251,4,น่าเข้าใจ,naa-kao-jai,מובן,understandable,"תומר 7,csv.txt"
+uv19_0252,4,ไม่เข้าใจ,mai-kao-jai,לא מבין,do not understand,"תומר 7,csv.txt"
+uv19_0253,5,เข้าใจไหม,kao-jai mai?,מבין?,Do you understand?,"תומר 7,csv.txt"
+uv19_0254,4,เข้าใจแล้ว,kao-jai leaw,הבנתי כבר,understood already,"תומר 7,csv.txt"
+uv19_0255,1,รัก,rak,אוהב,love,"תומר 7,csv.txt"
+uv19_0256,1,เกลียด,gliad,שונא,hate,"תומר 7,csv.txt"
+uv19_0257,3,เห็นด้วย,hen-duai,מסכים,agree,"תומר 7,csv.txt"
+uv19_0258,4,ไม่เห็นด้วย,mai-hen-duai,לא מסכים,disagree,"תומר 7,csv.txt"
+uv19_0259,3,จริง ๆ,jing-jing,באמת,really,"תומר 7,csv.txt"
+uv19_0260,1,ลอง,long,לנסות,try,"תומר 7,csv.txt"
+uv19_0261,1,ดู,duu,לראות / להסתכל,look / watch,"תומר 7,csv.txt"
+uv19_0262,1,ฟัง,fang,להקשיב,listen,"תומר 7,csv.txt"
+uv19_0263,1,ดม,dom,להריח,smell,"תומר 7,csv.txt"
+uv19_0264,1,ชิม,chim,לטעום,taste,"תומר 7,csv.txt"
+uv19_0265,1,จำ,jum,לזכור,remember,"תומר 7,csv.txt"
+uv19_0266,1,เคย,keey,להתרגל / פעם...,ever / used to,"תומר 7,csv.txt"
+uv19_0267,1,เที่ยว,teaw,לטייל / לבלות,travel / hang out,"תומר 7,csv.txt"
+uv19_0268,1,รอ,raw,לחכות,wait,"תומר 7,csv.txt"
+uv19_0269,1,ซื้อ,suu,לקנות,buy,"תומר 7,csv.txt"
+uv19_0270,1,ขาย,kaai,למכור,sell,"תומר 7,csv.txt"
+uv19_0271,1,ให้,hai,לתת / עבור,give / for,"תומר 7,csv.txt"
+uv19_0272,3,ช่วย,choo-ay,לעזור,help,"תומר 7,csv.txt"
+uv19_0273,1,บอก,bork,להגיד / לספר,tell,"תומר 7,csv.txt"
+uv19_0274,1,ถาม,tam,לשאול,ask,"תומר 7,csv.txt"
+uv19_0275,1,ยิ้ม,yim,לחייך,smile,"תומר 7,csv.txt"
+uv19_0285,3,ตื่นเต้น,dteun-dten,מתרגש,excited,"תומר 8,csv.txt"
+uv19_0311,3,หมู่,muu,קבוצה / כפר / חבורה,group / village / category,"תומר 8,csv.txt"
+uv19_0315,1,ผ้า,paa,בד / בגד,cloth / fabric / clothing,"תומר 8,csv.txt"
+uv19_0322,2,ตื่น,dteun,להתעורר,wake up,"אלמוג 1,CSV.txt"
+uv19_0328,3,ปลาหมึก,bpla-meuk,דיונון,squid,"אלמוג 1,CSV.txt"
+uv19_0331,5,ยังไง,yang-ngai,איך?,how?,"אלמוג 1,CSV.txt"
+uv19_0340,4,แต่เช้า,dtae-chao,לפנות בוקר / מוקדם בבוקר,early in the morning,אלמוג 5(2).apkg
+uv19_0341,3,ตอนเช้า,dton-chao,בבוקר,morning / in the morning,אלמוג 5(2).apkg
+uv19_0342,4,ตอนสาย,dton-saai,מאוחר בבוקר,late morning,אלמוג 5(2).apkg
+uv19_0343,3,ตอนเที่ยง,dton-tiang,בצהריים,noon / midday,אלמוג 5(2).apkg
+uv19_0344,3,ตอนบ่าย,dton-baai,אחר הצהריים,afternoon,אלמוג 5(2).apkg
+uv19_0345,3,ตอนเย็น,dton-yen,בערב,evening,אלמוג 5(2).apkg
+uv19_0346,4,ตอนกลางคืน,dton-glaang-kheun,בלילה,night / at night,אלמוג 5(2).apkg
+uv19_0347,4,ตอนดึก,dton-deuk,מאוחר בלילה,late at night,אלמוג 5(2).apkg
+uv19_0348,3,เห็นด้วย,hen-duai,להסכים,agree,אלמוג 5(2).apkg
+uv19_0349,5,เห็นไหม,hen mai?,רואה?,Do you see?,אלמוג 5(2).apkg
+uv19_0350,5,เห็นด้วยไหม,hen-duai mai?,האם אתה מסכים?,Do you agree?,אלמוג 5(2).apkg
+uv19_0351,1,ยืน,yuen,לעמוד,stand,אלמוג 5(2).apkg
+uv19_0352,1,นั่ง,nang,לשבת,sit,אלמוג 5(2).apkg
+uv19_0353,1,เดิน,dern,ללכת,walk,אלמוג 5(2).apkg
+uv19_0354,1,ข้าม,khaam,לדלג,cross / skip over,אלמוג 5(2).apkg
+uv19_0355,4,ไม่ไหว,mai wai,לא יכול / לא מסוגל / לא עומד בזה,cannot handle it / cannot manage,אלמוג 5(2).apkg
+uv19_0356,4,ไม่ต้องห่วง,mai dtong huang,אל תדאג / אין מה לדאוג,do not worry,אלמוג 5(2).apkg
+uv19_0357,4,ไม่สนใจ,mai son jai,לא מעוניין / לא אכפת,not interested / do not care,אלמוג 5(2).apkg
+uv19_0358,4,ไม่มีอะไร,mai mee a-rai,אין כלום,there is nothing / nothing,אלמוג 5(2).apkg
+uv19_0359,3,ไม่ต้อง,mai dtong,לא צריך / אין צורך,do not need,אלמוג 5(2).apkg
+uv19_0360,4,ไม่มีปัญหา,mai mee pan-haa,אין בעיה,no problem,אלמוג 5(2).apkg
+uv19_0361,4,ไม่มีทาง,mâi mee taang,אין מצב / אין סיכוי,no way,אלמוג 5(2).apkg
+uv19_0362,5,ว่าไง,wâa ngai,מה קורה? / מה נשמע?,what’s up?,אלמוג 5(2).apkg
+uv19_0363,4,ไม่เก็ทอะ,mâi get à,אני לא מבין / לא קולט,I do not get it,אלמוג 5(2).apkg
+uv19_0364,5,แล้วไง,láew ngai,אז מה?,so what?,אלמוג 5(2).apkg
+uv19_0365,3,คิดว่า,khít wâa,לחשוב ש...,think that,אלמוג 5(2).apkg
+uv19_0366,3,พูดว่า,phuut waa,לומר ש...,say that...,אלמוג 5(2).apkg
+uv19_0367,3,บอกว่า,bòk wâa,לספר / להגיד ש...,tell / say that,אלמוג 5(2).apkg
+uv19_0368,4,รู้สึกว่า,rúu sèuk wâa,להרגיש ש...,feel that,אלמוג 5(2).apkg
+uv19_0369,3,เพราะว่า,phróh wâa,בגלל ש...,because,אלמוג 5(2).apkg
+uv19_0370,4,ได้ยินว่า,dai-yin waa,לשמוע ש...,hear that...,אלמוג 5(2).apkg
+uv19_0371,3,ต้นไม้,ton mai,צמח / עץ,plant / tree,אלמוג 4(1).apkg
+uv19_0372,1,บาง,baang,חלק מ..,some / part of,אלמוג 4(1).apkg
+uv19_0373,3,ด้วยกัน,duay gan,יחדיו,together,אלמוג 4(1).apkg
+uv19_0374,3,บางที,baang tii,יכול להיות,maybe / sometimes,אלמוג 4(1).apkg
+uv19_0375,3,พวกเขา,phuak khao,הם,they / them,אלמוג 4(1).apkg
+uv19_0376,3,บางวัน,baang wan,חלק מהימים,some days,אלמוג 4(1).apkg
+uv19_0377,3,ทุกที่,tug tii,בכל מקום,everywhere,אלמוג 4(1).apkg
+uv19_0378,1,ออก,awk,"יציאה,החוצה",exit / out / go out,אלמוג 4(1).apkg
+uv19_0379,1,อุ่น,un,"חמים,חם",warm,אלמוג 4(1).apkg
+uv19_0380,5,ตอนผมเด็ก ๆ,dton phom dek dek,כשהייתי ילד,when I was a child,אלמוג 4(1).apkg
+uv19_0381,1,เข้า,khao,להיכנס / כניסה,enter / go in,אלמוג 4(1).apkg
+uv19_0382,1,หน้า,naa,פנים / קדימה / עונה / דף,face / front / season / page,אלמוג 4(1).apkg
+uv19_0383,3,โรงพัก,rong pag,תחנת משטרה,police station,אלמוג 4(1).apkg
+uv19_0384,3,ไม่ได้…,mai dai+v,לא עשיתי,did not / cannot + verb,אלמוג 4(1).apkg
+uv19_0385,5,ดีใจที่ได้เจอ,dii-jai tii dai jer,נחמד לראותך,nice to see you,אלמוג 4(1).apkg
+uv19_0386,1,ผึ้ง,phueng,דבורה,bee,אלמוג 4(1).apkg
+uv19_0387,3,ต่อย,dtoy,אגרוף / לעקוץ,to punch / to sting,אלמוג 4(1).apkg
