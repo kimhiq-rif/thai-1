@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.19.0-central-bangkok-vocab-validation';
+const APP_VERSION = '1.22.0-sync-diagnostics';
 
 const TONES = [
   { id:'mid', he:'אמצעי', en:'mid' },
@@ -13,9 +13,9 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.20', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.22', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
-    levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
+    levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', eraser:'מחק', eraserActive:'מחק פעיל', eraserTitle:'הפעל/כבה מחק מקומי', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
     syncTitle:'סנכרון Google Sheets', syncDescription:'הדבק כאן את כתובת ה־Web App של Google Apps Script. בלי כתובת — ההתקדמות נשמרת רק במכשיר הזה.',
     saveUrl:'שמור כתובת', ready:'מוכן.', qa:'בדיקת תקינות פנימית', install:'התקנה למסך הבית',
@@ -23,13 +23,13 @@ const I18N = {
     promptRead:'קרא את המילה וכתוב בעברית את המשמעות + הטון', promptMeaningWrite:'כתוב בתאית את המילה הבאה', promptRoman:'כתוב בתאית לפי התעתיק', promptTone:'מה הטון של המילה / תבנית הטונים?',
     writeHint:'כתוב על הלוח הלבן ואז הצג תשובה', answerThai:'תאית', roman:'תעתיק', meaning:'עברית', tone:'טון', selected:'בחרת', afterAnswer:'עכשיו אפשר לנקות, לכתוב שוב נכון, ואז לסמן צדקתי / טעיתי.', clickThaiLetters:'לחץ על אות/סימן בתשובה כדי לראות מידע קצר.',
     soundQuestion:'מה הצליל של הסימן?', nameQuestion:'מה שם הסימן בתאית?', symbolQuestion:'איזה סימן מתאים לשם?', boardWordQuestion:'איזו מילת לוח שייכת לסימן?', shortcutQuestion:'מה התפקיד של הסימן?',
-    sound:'צליל', signName:'שם הסימן', boardWord:'מילת לוח', note:'הערה', emoji:'אימוג׳י', shortcutAnswer:'מקצר תנועה', userLabel:'שם משתמש', userPlaceholder:'לדוגמה: rif', initUserOk:'נוצרה/נמצאה לשונית משתמש ✅', initUserErr:'שגיאת יצירת משתמש: ', saveProgress:'שמור התקדמות', loadProgress:'טען התקדמות', promptVowelWrite:'כתוב על הלוח את התשובה לפי לוח התנועות', level6McqKicker:'שאלה 1 מתוך 2 — הבנה', level6WriteKicker:'שאלה 2 מתוך 2 — כתיבה', level6Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו נושא.', level12Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו סימן/אות.', level12WriteIntro:'עכשיו כתוב את הסימן/האות או מילת הלוח מאותו פריט.', level6WriteLocked:'בחר קודם תשובה אמריקאית כדי לפתוח את שאלת הכתיבה.', level6Correct:'נכון', level6Wrong:'לא נכון', level6WriteIntro:'עכשיו השתמש באותו סימן/עיצור וכתוב את המילה המבוקשת.', vowelAnswer:'תשובת לוח', thaiName:'שם תאילנדי', localName:'הסבר בעברית', writingRule:'כלל כתיבה', example:'דוגמה', consonantName:'שם העיצור', theme:'לוק',
-    syncSaved:'כתובת הסנכרון נשמרה.', uploadOk:'העלאה לענן הצליחה ✅', uploadSent:'העלאה לענן נשלחה בהצלחה ✅', downloadOk:'הורדה מהענן הצליחה ✅', uploadErr:'שגיאת העלאה: ', downloadErr:'שגיאת הורדה: '
+    sound:'צליל', signName:'שם הסימן', boardWord:'מילת לוח', note:'הערה', emoji:'אימוג׳י', shortcutAnswer:'מקצר תנועה', userLabel:'שם משתמש', userPlaceholder:'לדוגמה: rif', initUserOk:'נוצרה/נמצאה לשונית משתמש ✅', initUserErr:'שגיאת יצירת משתמש: ', saveProgress:'שמור התקדמות', loadProgress:'טען התקדמות', testSync:'בדוק חיבור', openSyncTest:'פתח בדיקה', promptVowelWrite:'כתוב על הלוח את התשובה לפי לוח התנועות', level6McqKicker:'שאלה 1 מתוך 2 — הבנה', level6WriteKicker:'שאלה 2 מתוך 2 — כתיבה', level6Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו נושא.', level12Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו סימן/אות.', level12WriteIntro:'עכשיו כתוב את הסימן/האות או מילת הלוח מאותו פריט.', level6WriteLocked:'בחר קודם תשובה אמריקאית כדי לפתוח את שאלת הכתיבה.', level6Correct:'נכון', level6Wrong:'לא נכון', level6WriteIntro:'עכשיו השתמש באותו סימן/עיצור וכתוב את המילה המבוקשת.', vowelAnswer:'תשובת לוח', thaiName:'שם תאילנדי', localName:'הסבר בעברית', writingRule:'כלל כתיבה', example:'דוגמה', consonantName:'שם העיצור', theme:'לוק',
+    syncSaved:'כתובת הסנכרון נשמרה.', uploadOk:'העלאה לענן הצליחה ✅', uploadSent:'העלאה לענן נשלחה בהצלחה ✅', downloadOk:'הורדה מהענן הצליחה ✅', uploadErr:'שגיאת העלאה: ', downloadErr:'שגיאת הורדה: ', syncTestOk:'החיבור ל־Google Apps Script עובד ✅', syncTestErr:'בדיקת החיבור נכשלה: ', scriptBlockedHe:'הדפדפן חסם טעינת סקריפט מ־Google. נסה לכבות VPN/AdBlock/Tracking Protection או לפתוח ב־Chrome/Safari. אפשר גם ללחוץ "פתח בדיקה" ולראות אם הכתובת עובדת.'
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.20', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.22', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
-    levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
+    levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', eraser:'Eraser', eraserActive:'Eraser on', eraserTitle:'Toggle local eraser', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
     syncTitle:'Google Sheets Sync', syncDescription:'Paste your Google Apps Script Web App URL here. Without a URL, progress is saved only on this device.',
     saveUrl:'Save URL', ready:'Ready.', qa:'Internal QA check', install:'Install app',
@@ -37,8 +37,8 @@ const I18N = {
     promptRead:'Read the word and write the meaning + tone in English', promptMeaningWrite:'Write the following word in Thai', promptRoman:'Write Thai from the romanization', promptTone:'What is the tone / tone pattern?',
     writeHint:'Write on the whiteboard, then reveal the answer', answerThai:'Thai', roman:'Romanization', meaning:'English', tone:'Tone', selected:'Selected', afterAnswer:'Now you can clear, rewrite correctly, then mark correct / wrong.', clickThaiLetters:'Tap a Thai letter/sign in the answer to see a short note.',
     soundQuestion:'What sound does this sign make?', nameQuestion:'What is the Thai name of this sign?', symbolQuestion:'Which sign matches this name?', boardWordQuestion:'Which board word belongs to this sign?', shortcutQuestion:'What does this sign do?',
-    sound:'Sound', signName:'Sign name', boardWord:'Board word', note:'Note', emoji:'Emoji', shortcutAnswer:'shortens a vowel', userLabel:'Username', userPlaceholder:'e.g. rif', initUserOk:'User sheet created/found ✅', initUserErr:'User init error: ', saveProgress:'Save progress', loadProgress:'Load progress', promptVowelWrite:'Write the answer on the board from the vowel board', level6McqKicker:'Question 1 of 2 — understanding', level6WriteKicker:'Question 2 of 2 — writing', level6Choose:'Choose one answer. After choosing, a writing question about the same topic will open.', level12Choose:'Choose one answer. After choosing, a writing task about the same sign/letter will open.', level12WriteIntro:'Now write the sign/letter or board word from the same item.', level6WriteLocked:'Choose a multiple-choice answer first to unlock the writing task.', level6Correct:'Correct', level6Wrong:'Not correct', level6WriteIntro:'Now use the same sign/consonant and write the requested word.', vowelAnswer:'Vowel-board answer', thaiName:'Thai name', localName:'English explanation', writingRule:'Writing rule', example:'Example', consonantName:'Consonant name', theme:'Theme',
-    syncSaved:'Sync URL saved.', uploadOk:'Cloud upload succeeded ✅', uploadSent:'Cloud upload was sent ✅', downloadOk:'Cloud download succeeded ✅', uploadErr:'Upload error: ', downloadErr:'Download error: '
+    sound:'Sound', signName:'Sign name', boardWord:'Board word', note:'Note', emoji:'Emoji', shortcutAnswer:'shortens a vowel', userLabel:'Username', userPlaceholder:'e.g. rif', initUserOk:'User sheet created/found ✅', initUserErr:'User init error: ', saveProgress:'Save progress', loadProgress:'Load progress', testSync:'Test connection', openSyncTest:'Open test', promptVowelWrite:'Write the answer on the board from the vowel board', level6McqKicker:'Question 1 of 2 — understanding', level6WriteKicker:'Question 2 of 2 — writing', level6Choose:'Choose one answer. After choosing, a writing question about the same topic will open.', level12Choose:'Choose one answer. After choosing, a writing task about the same sign/letter will open.', level12WriteIntro:'Now write the sign/letter or board word from the same item.', level6WriteLocked:'Choose a multiple-choice answer first to unlock the writing task.', level6Correct:'Correct', level6Wrong:'Not correct', level6WriteIntro:'Now use the same sign/consonant and write the requested word.', vowelAnswer:'Vowel-board answer', thaiName:'Thai name', localName:'English explanation', writingRule:'Writing rule', example:'Example', consonantName:'Consonant name', theme:'Theme',
+    syncSaved:'Sync URL saved.', uploadOk:'Cloud upload succeeded ✅', uploadSent:'Cloud upload was sent ✅', downloadOk:'Cloud download succeeded ✅', uploadErr:'Upload error: ', downloadErr:'Download error: ', syncTestOk:'Google Apps Script connection works ✅', syncTestErr:'Connection test failed: ', scriptBlockedHe:'The browser blocked loading a Google script. Try disabling VPN/AdBlock/Tracking Protection or open in Chrome/Safari. You can also click “Open test” to verify the URL.'
   }
 };
 function lang(){ return state && state.lang ? state.lang : 'he'; }
@@ -990,6 +990,7 @@ let selectedVowelAnswer = null;
 let level6McqAnswered = false;
 let drawing = false;
 let lastPoint = null;
+let eraserMode = false;
 
 const el = id => document.getElementById(id);
 const canvas = el('writeCanvas');
@@ -1069,6 +1070,8 @@ function setupModes(){
 function setupEvents(){
   el('newQuestionBtn').addEventListener('click', newQuestion);
   el('clearBtn').addEventListener('click', clearCanvas);
+  const eraserBtn = el('eraserToggleBtn');
+  if(eraserBtn) eraserBtn.addEventListener('click', toggleEraserMode);
   el('showAnswerBtn').addEventListener('click', showAnswer);
   el('correctBtn').addEventListener('click', ()=>mark(true));
   el('wrongBtn').addEventListener('click', ()=>mark(false));
@@ -1077,6 +1080,8 @@ function setupEvents(){
   el('saveSyncUrlBtn').addEventListener('click', saveSyncUrl);
   el('syncUploadBtn').addEventListener('click', syncUpload);
   el('syncDownloadBtn').addEventListener('click', syncDownload);
+  if(el('syncTestBtn')) el('syncTestBtn').addEventListener('click', syncTest);
+  if(el('openSyncTestBtn')) el('openSyncTestBtn').addEventListener('click', openSyncTest);
   el('langToggle').addEventListener('click', toggleLanguage);
   el('themeToggle').addEventListener('click', cycleTheme);
   el('userIdInput').addEventListener('keydown', e => { if(e.key === 'Enter'){ e.preventDefault(); initUserSheet(); } });
@@ -1120,6 +1125,7 @@ function applyLanguage(){
   el('modeLabelText').textContent = t('modeLabel');
   el('newQuestionBtn').textContent = t('newQuestion');
   el('clearBtn').textContent = t('clear');
+  updateEraserButton();
   el('showAnswerBtn').textContent = t('showAnswer');
   el('correctBtn').textContent = t('correct');
   el('wrongBtn').textContent = t('wrong');
@@ -1134,6 +1140,8 @@ function applyLanguage(){
   el('saveSyncUrlBtn').textContent = t('saveUrl');
   el('syncUploadBtn').textContent = t('saveProgress');
   el('syncDownloadBtn').textContent = t('loadProgress');
+  if(el('syncTestBtn')) el('syncTestBtn').textContent = t('testSync');
+  if(el('openSyncTestBtn')) el('openSyncTestBtn').textContent = t('openSyncTest');
   el('qaSummary').textContent = t('qa');
   if(el('syncStatus').textContent === 'מוכן.' || el('syncStatus').textContent === 'Ready.') el('syncStatus').textContent = t('ready');
   setupLevels();
@@ -1361,8 +1369,11 @@ function renderQuestion(){
   renderStudyCard(current);
   const canvasWrap = document.querySelector('.canvas-wrap');
   if(canvasWrap) canvasWrap.hidden = ((mode === 'level6_pair' || mode === 'level12_pair') && !level6McqAnswered);
-  el('clearBtn').hidden = ((mode === 'level6_pair' || mode === 'level12_pair') && !level6McqAnswered);
-  el('showAnswerBtn').hidden = ((mode === 'level6_pair' || mode === 'level12_pair') && !level6McqAnswered);
+  const writingLocked = ((mode === 'level6_pair' || mode === 'level12_pair') && !level6McqAnswered);
+  el('clearBtn').hidden = writingLocked;
+  const eraserBtn = el('eraserToggleBtn');
+  if(eraserBtn) eraserBtn.hidden = writingLocked;
+  el('showAnswerBtn').hidden = writingLocked;
   el('toneChoices').hidden = !(mode === 'tone' || mode === 'vowel_board');
   el('toneChoices').innerHTML = '';
 
@@ -1598,6 +1609,23 @@ function updateStats(){
   el('accuracyCount').textContent = `${acc}%`;
 }
 
+
+function updateEraserButton(){
+  const btn = el('eraserToggleBtn');
+  if(!btn) return;
+  btn.classList.toggle('active', eraserMode);
+  btn.setAttribute('aria-pressed', eraserMode ? 'true' : 'false');
+  btn.setAttribute('title', t('eraserTitle'));
+  btn.setAttribute('aria-label', eraserMode ? t('eraserActive') : t('eraser'));
+  const label = btn.querySelector('.eraser-label');
+  if(label) label.textContent = eraserMode ? t('eraserActive') : t('eraser');
+  if(canvas) canvas.classList.toggle('eraser-mode', eraserMode);
+}
+function toggleEraserMode(){
+  eraserMode = !eraserMode;
+  updateEraserButton();
+}
+
 function setupCanvas(){
   function drawGuideLines(){
     const rect = canvas.getBoundingClientRect();
@@ -1635,10 +1663,9 @@ function setupCanvas(){
     }
 
     ctx.restore();
-    ctx.lineWidth = 5;
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
-    ctx.strokeStyle = '#020617';
+    applyToolStyle();
   }
 
   function resizeCanvas(){
@@ -1651,12 +1678,21 @@ function setupCanvas(){
   }
   window.addEventListener('resize', resizeCanvas);
   resizeCanvas();
+  function applyToolStyle(){
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.lineWidth = eraserMode ? 30 : 5;
+    ctx.strokeStyle = eraserMode ? '#ffffff' : '#020617';
+  }
+
   const getPoint = e => {
     const r = canvas.getBoundingClientRect();
     return {x:e.clientX-r.left,y:e.clientY-r.top};
   };
 
   const beginStroke = point => {
+    applyToolStyle();
     drawing = true;
     lastPoint = point;
     ctx.beginPath();
@@ -1664,6 +1700,7 @@ function setupCanvas(){
   };
   const moveStroke = point => {
     if(!drawing) return;
+    applyToolStyle();
     ctx.lineTo(point.x, point.y);
     ctx.stroke();
     lastPoint = point;
@@ -1726,7 +1763,7 @@ function setupCanvas(){
   window.clearCanvas = function(){ drawGuideLines(); };
 }
 function clearCanvas(){
-  if(window.__drawGuideLines){ window.__drawGuideLines(); return; }
+  if(window.__drawGuideLines){ window.__drawGuideLines(); updateEraserButton(); return; }
   const rect = canvas.getBoundingClientRect();
   ctx.fillStyle = '#ffffff';
   ctx.fillRect(0, 0, rect.width, rect.height);
@@ -1746,7 +1783,14 @@ async function initUserSheet(){
     setSyncStatus(`${t('initUserOk')} — ${json.sheetName || userId}`);
   } catch(err){ setSyncStatus(t('initUserErr') + err.message); }
 }
-function saveSyncUrl(){ state.syncUrl = el('syncUrl').value.trim() || DEFAULT_SYNC_URL; el('syncUrl').value = state.syncUrl; state.userId = cleanUserId(el('userIdInput').value || state.userId); el('userIdInput').value = state.userId; saveState(); setSyncStatus(t('syncSaved')); }
+function saveSyncUrl(){
+  state.syncUrl = normalizeSyncUrlValue(el('syncUrl').value.trim() || state.syncUrl || DEFAULT_SYNC_URL);
+  el('syncUrl').value = state.syncUrl;
+  state.userId = cleanUserId(el('userIdInput').value || state.userId);
+  el('userIdInput').value = state.userId;
+  saveState();
+  setSyncStatus(t('syncSaved'));
+}
 
 function encodePayload(obj){
   return btoa(unescape(encodeURIComponent(JSON.stringify(obj))));
@@ -1754,29 +1798,68 @@ function encodePayload(obj){
 function decodePayload(str){
   return JSON.parse(decodeURIComponent(escape(atob(str))));
 }
+function normalizeSyncUrlValue(value){
+  let url = String(value || '').trim();
+  if(!url) return '';
+  url = url.replace(/\s+/g, '');
+  url = url.replace(/\/$/, '');
+  // Users often paste the deployment URL without the final /exec. Fix that automatically.
+  if(/^https:\/\/script\.google\.com\/macros\/s\/[^/?#]+$/.test(url)) url += '/exec';
+  // /dev URLs are for the owner only; /exec is the deployed web-app URL used by students/devices.
+  url = url.replace(/\/dev(?:\?.*)?$/, '/exec');
+  return url;
+}
 function normalizedSyncUrl(){
-  const url = (state.syncUrl || el('syncUrl').value || DEFAULT_SYNC_URL || '').trim();
+  const url = normalizeSyncUrlValue(state.syncUrl || el('syncUrl').value || DEFAULT_SYNC_URL || '');
   if(!url) throw new Error('אין כתובת Apps Script');
-  if(!/^https:\/\/script\.google\.com\/macros\/s\/.+\/exec(?:\?.*)?$/.test(url)){
+  if(!/^https:\/\/script\.google\.com\/macros\/s\/[^/?#]+\/exec(?:\?.*)?$/.test(url)){
     throw new Error('כתובת הסקריפט אינה תקינה. צריך URL שמתחיל ב-script.google.com/macros/s ומסתיים ב-/exec');
   }
   return url;
 }
+function syncUrlWithParams(params){
+  const url = normalizedSyncUrl();
+  const qs = new URLSearchParams({...params, t: String(Date.now())});
+  return url + (url.includes('?') ? '&' : '?') + qs.toString();
+}
 function jsonpRequest(params, timeoutMs=12000){
   return new Promise((resolve, reject)=>{
     saveSyncUrl();
-    let url;
-    try{ url = normalizedSyncUrl(); }catch(err){ reject(err); return; }
-    const callbackName = 'thaiSyncCb_' + Date.now() + '_' + Math.floor(Math.random()*100000);
-    const script = document.createElement('script');
-    const cleanup = () => { try{ delete window[callbackName]; }catch{}; script.remove(); clearTimeout(timer); };
-    const timer = setTimeout(()=>{ cleanup(); reject(new Error('timeout')); }, timeoutMs);
-    window[callbackName] = data => { cleanup(); resolve(data); };
-    const qs = new URLSearchParams({...params, callback: callbackName, t: String(Date.now())});
-    script.src = url + (url.includes('?') ? '&' : '?') + qs.toString();
-    script.onerror = () => { cleanup(); reject(new Error('script load failed')); };
-    document.body.appendChild(script);
+    let src;
+    try{
+      const callbackName = 'thaiSyncCb_' + Date.now() + '_' + Math.floor(Math.random()*100000);
+      src = syncUrlWithParams({...params, callback: callbackName});
+      const script = document.createElement('script');
+      let callbackCalled = false;
+      const cleanup = () => { try{ delete window[callbackName]; }catch{}; script.remove(); clearTimeout(timer); };
+      const timer = setTimeout(()=>{ cleanup(); reject(new Error('timeout — Google Apps Script did not answer')); }, timeoutMs);
+      window[callbackName] = data => { callbackCalled = true; cleanup(); resolve(data); };
+      script.async = true;
+      script.referrerPolicy = 'no-referrer-when-downgrade';
+      script.src = src;
+      script.onerror = () => {
+        if(callbackCalled) return;
+        cleanup();
+        reject(new Error('script load failed — ' + t('scriptBlockedHe')));
+      };
+      document.body.appendChild(script);
+    }catch(err){ reject(err); }
   });
+}
+async function syncTest(){
+  try{
+    const json = await jsonpRequest({action:'ping', userId: cleanUserId(el('userIdInput').value || state.userId)}, 10000);
+    if(!json.ok) throw new Error(json.error || 'ping failed');
+    setSyncStatus(t('syncTestOk'));
+  }catch(err){ setSyncStatus(t('syncTestErr') + err.message); }
+}
+function openSyncTest(){
+  try{
+    saveSyncUrl();
+    const url = syncUrlWithParams({action:'ping', userId: cleanUserId(el('userIdInput').value || state.userId)});
+    window.open(url, '_blank', 'noopener,noreferrer');
+    setSyncStatus(isHebrew() ? 'נפתחה בדיקת חיבור בחלון חדש. אם אתה רואה JSON עם ok:true — הסקריפט תקין והדפדפן חסם את הקריאה מתוך האפליקציה.' : 'Opened a connection test in a new tab. If you see JSON with ok:true, the script is OK and the browser blocked the in-app request.');
+  }catch(err){ setSyncStatus(t('syncTestErr') + err.message); }
 }
 function formPostUpload(params, timeoutMs=15000){
   return new Promise((resolve, reject)=>{
