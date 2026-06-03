@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.19.0-central-bangkok-vocab-validation';
+const APP_VERSION = '1.21.0-eraser-tool';
 
 const TONES = [
   { id:'mid', he:'אמצעי', en:'mid' },
@@ -13,9 +13,9 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.20', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.21', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
-    levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
+    levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', eraser:'מחק', eraserActive:'מחק פעיל', eraserTitle:'הפעל/כבה מחק מקומי', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
     syncTitle:'סנכרון Google Sheets', syncDescription:'הדבק כאן את כתובת ה־Web App של Google Apps Script. בלי כתובת — ההתקדמות נשמרת רק במכשיר הזה.',
     saveUrl:'שמור כתובת', ready:'מוכן.', qa:'בדיקת תקינות פנימית', install:'התקנה למסך הבית',
@@ -27,9 +27,9 @@ const I18N = {
     syncSaved:'כתובת הסנכרון נשמרה.', uploadOk:'העלאה לענן הצליחה ✅', uploadSent:'העלאה לענן נשלחה בהצלחה ✅', downloadOk:'הורדה מהענן הצליחה ✅', uploadErr:'שגיאת העלאה: ', downloadErr:'שגיאת הורדה: '
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.20', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.21', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
-    levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
+    levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', eraser:'Eraser', eraserActive:'Eraser on', eraserTitle:'Toggle local eraser', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
     syncTitle:'Google Sheets Sync', syncDescription:'Paste your Google Apps Script Web App URL here. Without a URL, progress is saved only on this device.',
     saveUrl:'Save URL', ready:'Ready.', qa:'Internal QA check', install:'Install app',
@@ -990,6 +990,7 @@ let selectedVowelAnswer = null;
 let level6McqAnswered = false;
 let drawing = false;
 let lastPoint = null;
+let eraserMode = false;
 
 const el = id => document.getElementById(id);
 const canvas = el('writeCanvas');
@@ -1069,6 +1070,8 @@ function setupModes(){
 function setupEvents(){
   el('newQuestionBtn').addEventListener('click', newQuestion);
   el('clearBtn').addEventListener('click', clearCanvas);
+  const eraserBtn = el('eraserToggleBtn');
+  if(eraserBtn) eraserBtn.addEventListener('click', toggleEraserMode);
   el('showAnswerBtn').addEventListener('click', showAnswer);
   el('correctBtn').addEventListener('click', ()=>mark(true));
   el('wrongBtn').addEventListener('click', ()=>mark(false));
@@ -1120,6 +1123,7 @@ function applyLanguage(){
   el('modeLabelText').textContent = t('modeLabel');
   el('newQuestionBtn').textContent = t('newQuestion');
   el('clearBtn').textContent = t('clear');
+  updateEraserButton();
   el('showAnswerBtn').textContent = t('showAnswer');
   el('correctBtn').textContent = t('correct');
   el('wrongBtn').textContent = t('wrong');
@@ -1361,8 +1365,11 @@ function renderQuestion(){
   renderStudyCard(current);
   const canvasWrap = document.querySelector('.canvas-wrap');
   if(canvasWrap) canvasWrap.hidden = ((mode === 'level6_pair' || mode === 'level12_pair') && !level6McqAnswered);
-  el('clearBtn').hidden = ((mode === 'level6_pair' || mode === 'level12_pair') && !level6McqAnswered);
-  el('showAnswerBtn').hidden = ((mode === 'level6_pair' || mode === 'level12_pair') && !level6McqAnswered);
+  const writingLocked = ((mode === 'level6_pair' || mode === 'level12_pair') && !level6McqAnswered);
+  el('clearBtn').hidden = writingLocked;
+  const eraserBtn = el('eraserToggleBtn');
+  if(eraserBtn) eraserBtn.hidden = writingLocked;
+  el('showAnswerBtn').hidden = writingLocked;
   el('toneChoices').hidden = !(mode === 'tone' || mode === 'vowel_board');
   el('toneChoices').innerHTML = '';
 
@@ -1598,6 +1605,23 @@ function updateStats(){
   el('accuracyCount').textContent = `${acc}%`;
 }
 
+
+function updateEraserButton(){
+  const btn = el('eraserToggleBtn');
+  if(!btn) return;
+  btn.classList.toggle('active', eraserMode);
+  btn.setAttribute('aria-pressed', eraserMode ? 'true' : 'false');
+  btn.setAttribute('title', t('eraserTitle'));
+  btn.setAttribute('aria-label', eraserMode ? t('eraserActive') : t('eraser'));
+  const label = btn.querySelector('.eraser-label');
+  if(label) label.textContent = eraserMode ? t('eraserActive') : t('eraser');
+  if(canvas) canvas.classList.toggle('eraser-mode', eraserMode);
+}
+function toggleEraserMode(){
+  eraserMode = !eraserMode;
+  updateEraserButton();
+}
+
 function setupCanvas(){
   function drawGuideLines(){
     const rect = canvas.getBoundingClientRect();
@@ -1635,10 +1659,9 @@ function setupCanvas(){
     }
 
     ctx.restore();
-    ctx.lineWidth = 5;
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
-    ctx.strokeStyle = '#020617';
+    applyToolStyle();
   }
 
   function resizeCanvas(){
@@ -1651,12 +1674,21 @@ function setupCanvas(){
   }
   window.addEventListener('resize', resizeCanvas);
   resizeCanvas();
+  function applyToolStyle(){
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.lineWidth = eraserMode ? 30 : 5;
+    ctx.strokeStyle = eraserMode ? '#ffffff' : '#020617';
+  }
+
   const getPoint = e => {
     const r = canvas.getBoundingClientRect();
     return {x:e.clientX-r.left,y:e.clientY-r.top};
   };
 
   const beginStroke = point => {
+    applyToolStyle();
     drawing = true;
     lastPoint = point;
     ctx.beginPath();
@@ -1664,6 +1696,7 @@ function setupCanvas(){
   };
   const moveStroke = point => {
     if(!drawing) return;
+    applyToolStyle();
     ctx.lineTo(point.x, point.y);
     ctx.stroke();
     lastPoint = point;
@@ -1726,7 +1759,7 @@ function setupCanvas(){
   window.clearCanvas = function(){ drawGuideLines(); };
 }
 function clearCanvas(){
-  if(window.__drawGuideLines){ window.__drawGuideLines(); return; }
+  if(window.__drawGuideLines){ window.__drawGuideLines(); updateEraserButton(); return; }
   const rect = canvas.getBoundingClientRect();
   ctx.fillStyle = '#ffffff';
   ctx.fillRect(0, 0, rect.width, rect.height);

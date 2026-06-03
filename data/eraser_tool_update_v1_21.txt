@@ -1,0 +1,7 @@
+v1.21 — Local eraser tool
+- Added a toggle button next to Clear / Show Answer.
+- The button shows a pencil-eraser SVG icon.
+- First click turns eraser mode on; second click returns to pen mode.
+- Active eraser mode is darker and glowing.
+- Eraser removes only the touched stroke area on the writing canvas, not the whole canvas.
+- Works with pointer events, touch events for older iPad Safari, and mouse fallback.
