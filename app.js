@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.2-polish-tones';
+const APP_VERSION = '1.25.4-sync-clarity';
 
 const TONES = [
   { id:'mid', he:'אמצעי', en:'mid' },
@@ -13,7 +13,7 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.2', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.4', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', eraser:'מחק', eraserActive:'מחק פעיל', eraserTitle:'הפעל/כבה מחק מקומי', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
@@ -26,10 +26,10 @@ const I18N = {
     sound:'צליל', signName:'שם הסימן', boardWord:'מילת לוח', note:'הערה', emoji:'אימוג׳י', shortcutAnswer:'מקצר תנועה', userLabel:'שם משתמש', userPlaceholder:'לדוגמה: rif', initUserOk:'נוצרה/נמצאה לשונית משתמש ✅', initUserErr:'שגיאת יצירת משתמש: ', saveProgress:'שמור התקדמות', loadProgress:'טען התקדמות', testSync:'בדוק חיבור', openSyncTest:'פתח בדיקה', promptVowelWrite:'כתוב על הלוח את התשובה לפי לוח התנועות', level6McqKicker:'שאלה 1 מתוך 2 — הבנה', level6WriteKicker:'שאלה 2 מתוך 2 — כתיבה', level6Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו נושא.', level12Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו סימן/אות.', level12WriteIntro:'עכשיו כתוב את הסימן/האות או מילת הלוח מאותו פריט.', level6WriteLocked:'בחר קודם תשובה אמריקאית כדי לפתוח את שאלת הכתיבה.', level6Correct:'נכון', level6Wrong:'לא נכון', level6WriteIntro:'עכשיו השתמש באותו סימן/עיצור וכתוב את המילה המבוקשת.', vowelAnswer:'תשובת לוח', thaiName:'שם תאילנדי', localName:'הסבר בעברית', writingRule:'כלל כתיבה', example:'דוגמה', consonantName:'שם העיצור', theme:'לוק',
     syncSaved:'כתובת הסנכרון נשמרה.', uploadOk:'העלאה לענן הצליחה ✅', uploadSent:'העלאה לענן נשלחה בהצלחה ✅', downloadOk:'הורדה מהענן הצליחה ✅', uploadErr:'שגיאת העלאה: ', downloadErr:'שגיאת הורדה: ', syncTestOk:'החיבור ל־Google Apps Script עובד ✅', syncTestErr:'בדיקת החיבור נכשלה: ', scriptBlockedHe:'הדפדפן חסם טעינת סקריפט מ־Google. נסה לכבות VPN/AdBlock/Tracking Protection או לפתוח ב־Chrome/Safari. אפשר גם ללחוץ "פתח בדיקה" ולראות אם הכתובת עובדת.',
     syncWorking:'עובד...', lastSync:'סנכרון אחרון', neverSynced:'עדיין לא סונכרן', localBackup:'גיבוי מקומי', restoreBackup:'שחזר גיבוי', exportOk:'קובץ גיבוי נשמר במחשב ✅', importOk:'הגיבוי נטען בהצלחה ✅', importErr:'שגיאת שחזור גיבוי: ', importConfirm:'לטעון את הגיבוי ולהחליף את ההתקדמות הנוכחית?',
-    dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא'
+    dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא', voiceCheer:'מחווה קולית ב"צדקתי"', voiceCheerLocked:'ייפתח אחרי הסקין הראשון'
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.2', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.4', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', eraser:'Eraser', eraserActive:'Eraser on', eraserTitle:'Toggle local eraser', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
@@ -42,7 +42,7 @@ const I18N = {
     sound:'Sound', signName:'Sign name', boardWord:'Board word', note:'Note', emoji:'Emoji', shortcutAnswer:'shortens a vowel', userLabel:'Username', userPlaceholder:'e.g. rif', initUserOk:'User sheet created/found ✅', initUserErr:'User init error: ', saveProgress:'Save progress', loadProgress:'Load progress', testSync:'Test connection', openSyncTest:'Open test', promptVowelWrite:'Write the answer on the board from the vowel board', level6McqKicker:'Question 1 of 2 — understanding', level6WriteKicker:'Question 2 of 2 — writing', level6Choose:'Choose one answer. After choosing, a writing question about the same topic will open.', level12Choose:'Choose one answer. After choosing, a writing task about the same sign/letter will open.', level12WriteIntro:'Now write the sign/letter or board word from the same item.', level6WriteLocked:'Choose a multiple-choice answer first to unlock the writing task.', level6Correct:'Correct', level6Wrong:'Not correct', level6WriteIntro:'Now use the same sign/consonant and write the requested word.', vowelAnswer:'Vowel-board answer', thaiName:'Thai name', localName:'English explanation', writingRule:'Writing rule', example:'Example', consonantName:'Consonant name', theme:'Theme',
     syncSaved:'Sync URL saved.', uploadOk:'Cloud upload succeeded ✅', uploadSent:'Cloud upload was sent ✅', downloadOk:'Cloud download succeeded ✅', uploadErr:'Upload error: ', downloadErr:'Download error: ', syncTestOk:'Google Apps Script connection works ✅', syncTestErr:'Connection test failed: ', scriptBlockedHe:'The browser blocked loading a Google script. Try disabling VPN/AdBlock/Tracking Protection or open in Chrome/Safari. You can also click “Open test” to verify the URL.',
     syncWorking:'Working...', lastSync:'Last sync', neverSynced:'Not synced yet', localBackup:'Local backup', restoreBackup:'Restore backup', exportOk:'Backup file saved ✅', importOk:'Backup restored ✅', importErr:'Backup restore error: ', importConfirm:'Load this backup and replace current progress?',
-    dailyPractice:'Daily practice', dailyOn:'Daily practice active', dailyDone:'Daily practice complete', dueItems:'Due', weakItems:'Weak', strongItems:'Strong', todayGoal:'Today goal', achievements:'Achievements', penSize:'Pen size', skins:'Premium skins', coachPoints:'coach pts', nextSkin:'Next skin'
+    dailyPractice:'Daily practice', dailyOn:'Daily practice active', dailyDone:'Daily practice complete', dueItems:'Due', weakItems:'Weak', strongItems:'Strong', todayGoal:'Today goal', achievements:'Achievements', penSize:'Pen size', skins:'Premium skins', coachPoints:'coach pts', nextSkin:'Next skin', voiceCheer:'Voice cheer on correct', voiceCheerLocked:'Unlocks after first skin'
   }
 };
 function lang(){ return state && state.lang ? state.lang : 'he'; }
@@ -1011,7 +1011,7 @@ const canvas = el('writeCanvas');
 const ctx = canvas.getContext('2d');
 
 function defaultState(){
-  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:''}, achievements:{}, penSize:5, syncUrl:'', lastSync:null, lang:'he', userId:'rif', theme:'ocean' };
+  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false}, achievements:{}, penSize:5, syncUrl:'', lastSync:null, lang:'he', userId:'rif', theme:'ocean' };
 }
 
 async function disableOldServiceWorkers(){
@@ -1087,6 +1087,13 @@ function setupEvents(){
   el('newQuestionBtn').addEventListener('click', newQuestion);
   if(el('dailyPracticeBtn')) el('dailyPracticeBtn').addEventListener('click', toggleDailyPractice);
   if(el('penSizeInput')) el('penSizeInput').addEventListener('input', e => { state.penSize = Number(e.target.value) || 5; saveState(); });
+  if(el('voiceCheerToggle')) el('voiceCheerToggle').addEventListener('change', e => {
+    ensureDailyState();
+    state.coach.voiceCheer = !!e.target.checked;
+    state.coach.voiceCheerAutoEnabled = true;
+    saveState();
+    updateSkinPanel();
+  });
   el('clearBtn').addEventListener('click', clearCanvas);
   const eraserBtn = el('eraserToggleBtn');
   if(eraserBtn) eraserBtn.addEventListener('click', toggleEraserMode);
@@ -1170,6 +1177,7 @@ function applyLanguage(){
   if(el('strongItemsLabel')) el('strongItemsLabel').textContent = t('strongItems');
   if(el('penSizeLabel')) el('penSizeLabel').textContent = t('penSize');
   if(el('skinsTitle')) el('skinsTitle').textContent = t('skins');
+  if(el('voiceCheerLabel')) el('voiceCheerLabel').textContent = t('voiceCheer');
   el('syncTitle').textContent = t('syncTitle');
   el('syncDescription').textContent = t('syncDescription');
   el('userLabel').textContent = t('userLabel');
@@ -1239,6 +1247,10 @@ function isThemeUnlocked(theme){
   ensureDailyState();
   return !theme.premium || (state.coach.unlocked || []).includes(theme.id) || (state.coach.points || 0) >= (theme.points || 0);
 }
+function hasFirstPremiumSkin(){
+  ensureDailyState();
+  return THEMES.some(theme => theme.premium && isThemeUnlocked(theme));
+}
 function unlockEligibleThemes(){
   ensureDailyState();
   const before = new Set(state.coach.unlocked || []);
@@ -1262,6 +1274,33 @@ function awardDailyCoachPoints(){
   state.daily.awarded = true;
   unlockEligibleThemes();
   return points;
+}
+function selectThaiCheerVoice(){
+  if(!window.speechSynthesis || typeof window.speechSynthesis.getVoices !== 'function') return null;
+  const voices = window.speechSynthesis.getVoices();
+  return voices.find(voice => /^th\b/i.test(voice.lang) || /thai|ไทย/i.test(voice.name))
+    || voices.find(voice => /^ja\b|^ko\b/i.test(voice.lang))
+    || voices.find(voice => /^en\b/i.test(voice.lang))
+    || voices[0]
+    || null;
+}
+function playVoiceCheer(){
+  ensureDailyState();
+  if(!state.coach.voiceCheer || !hasFirstPremiumSkin()) return;
+  if(!('speechSynthesis' in window) || typeof SpeechSynthesisUtterance === 'undefined') return;
+  try{
+    window.speechSynthesis.cancel();
+    const cheer = new SpeechSynthesisUtterance('พูดมาก!');
+    cheer.lang = 'th-TH';
+    cheer.rate = 1.18;
+    cheer.pitch = 1.35;
+    cheer.volume = 0.92;
+    const voice = selectThaiCheerVoice();
+    if(voice) cheer.voice = voice;
+    window.speechSynthesis.speak(cheer);
+  }catch(err){
+    console.debug('Voice cheer unavailable', err);
+  }
 }
 function weightedPick(items){
   const recentIds = state.history.slice(-8).map(h=>h.id);
@@ -1726,6 +1765,7 @@ function mark(correct){
     if(awarded) state.achievements.dailyAward = Date.now();
   }
   updateAchievements(correct);
+  if(correct) playVoiceCheer();
   saveState(); updateStats(); newQuestion(); scrollToQuestionCard();
 }
 function updateAchievements(correct){
@@ -1795,6 +1835,18 @@ function updateSkinPanel(){
   const nextTarget = next ? (next.points || 0) : (premiumThemes[premiumThemes.length - 1]?.points || points || 1);
   const span = Math.max(1, nextTarget - previousTarget);
   const progress = next ? Math.max(0, Math.min(100, ((points - previousTarget) / span) * 100)) : 100;
+  const voiceUnlocked = hasFirstPremiumSkin();
+  const voiceControl = el('voiceCheerControl');
+  const voiceToggle = el('voiceCheerToggle');
+  if(voiceControl && voiceToggle){
+    voiceControl.hidden = !voiceUnlocked;
+    if(voiceUnlocked && !state.coach.voiceCheerAutoEnabled){
+      state.coach.voiceCheer = true;
+      state.coach.voiceCheerAutoEnabled = true;
+      saveState();
+    }
+    voiceToggle.checked = !!state.coach.voiceCheer;
+  }
   el('coachPointsBadge').textContent = next
     ? (isHebrew() ? `${points} נק׳ · עוד ${nextTarget - points}` : `${points} pts · ${nextTarget - points} left`)
     : (isHebrew() ? `${points} נק׳ · הכל פתוח` : `${points} pts · all unlocked`);
@@ -2049,6 +2101,21 @@ function encodePayload(obj){
 function decodePayload(str){
   return JSON.parse(decodeURIComponent(escape(atob(str))));
 }
+function isTrainerState(value){
+  return !!(value && typeof value === 'object' && (
+    value.stats || value.itemStats || value.history || value.daily || value.coach
+  ));
+}
+function noCloudDataMessage(userId){
+  return isHebrew()
+    ? `לא נמצאה שמירה בענן עבור המשתמש "${userId}". במכשיר הראשי לחץ קודם "שמור התקדמות", ואז במכשיר הזה ודא שאותו שם משתמש ואותה כתובת סקריפט מודבקים ולחץ "טען התקדמות".`
+    : `No cloud save was found for "${userId}". On the main device, click "Save progress" first, then use the same username and script URL here and click "Load progress".`;
+}
+function invalidCloudDataMessage(userId){
+  return isHebrew()
+    ? `נמצאה בענן שורה עבור "${userId}", אבל היא לא נראית כמו שמירת Thai Trainer. נסה ללחוץ "שמור התקדמות" מהמכשיר הראשי ואז לטעון שוב.`
+    : `A cloud row was found for "${userId}", but it does not look like Thai Trainer progress. Save progress from the main device, then load again.`;
+}
 function normalizeSyncUrlValue(value){
   let url = String(value || '').trim();
   if(!url) return '';
@@ -2216,11 +2283,11 @@ async function syncDownload(){
       json = await iframeBridgeDownload({userId});
     }
     if(!json.ok) throw new Error(json.error || 'sync failed');
-    if(json.data){
-      const cloudState = decodePayload(json.data);
-      state = {...defaultState(),...cloudState, syncUrl:state.syncUrl, lang:state.lang, userId: cleanUserId(el('userIdInput').value || state.userId)};
-      saveState(); updateStats(); newQuestion();
-    }
+    if(!json.data) throw new Error(noCloudDataMessage(userId));
+    const cloudState = decodePayload(json.data);
+    if(!isTrainerState(cloudState)) throw new Error(invalidCloudDataMessage(userId));
+    state = {...defaultState(),...cloudState, syncUrl:state.syncUrl, lang:state.lang, userId: cleanUserId(el('userIdInput').value || state.userId)};
+    saveState(); updateStats(); newQuestion();
     state.lastSync = Date.now(); saveState(); updateSyncHealth();
     setSyncStatus(t('downloadOk'), 'ok');
   } catch(err){ setSyncStatus(t('downloadErr')+err.message+(isHebrew()?' — אם זה עובד בחלון פרטי, הדפדפן חוסם טעינת סקריפט של Google.':' — if it works in a private window, the browser is blocking the Google script.'), 'error'); }

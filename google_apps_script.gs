@@ -61,9 +61,32 @@ function registerUser_(userId, sheetName) {
 function latestPayload_(sh) {
   const values = sh.getDataRange().getValues();
   for (let i = values.length - 1; i >= 1; i--) {
-    if (values[i][1]) return { updatedAt: values[i][0] || null, data: values[i][1] || null };
+    if (values[i][1] && isTrainerStatePayload_(values[i][1])) return { updatedAt: values[i][0] || null, data: values[i][1] || null };
   }
   return { updatedAt: null, data: null };
+}
+
+function isTrainerStatePayload_(payload) {
+  const text = decodePayloadText_(payload);
+  if (!text) return false;
+  try {
+    const obj = JSON.parse(text);
+    return !!(obj && typeof obj === 'object' && (obj.stats || obj.itemStats || obj.history || obj.daily || obj.coach));
+  } catch (err) {
+    return false;
+  }
+}
+
+function decodePayloadText_(payload) {
+  try {
+    return Utilities.newBlob(Utilities.base64DecodeWebSafe(String(payload))).getDataAsString('UTF-8');
+  } catch (err) {
+    try {
+      return Utilities.newBlob(Utilities.base64Decode(String(payload))).getDataAsString('UTF-8');
+    } catch (fallbackErr) {
+      return '';
+    }
+  }
 }
 
 function handle_(params) {
