@@ -1,0 +1,284 @@
+﻿id,level,thai,roman,hebrew,english,tone,source,cleaned,syllables,detector_tones,new_tone,method
+apkg_001,4,แต่เช้า,dtae-chao,לפנות בוקר / מוקדם בבוקר,early morning / at dawn,not_drilled,apkg_almog5,แต่เช้า,แต่|เช้า,l|h,low-high,word_tokenize_then_detector_consensus
+apkg_002,4,ตอนเช้า,dton-chao,בבוקר,in the morning,not_drilled,apkg_almog5,ตอนเช้า,ตอน|เช้า,m|h,mid-high,word_tokenize_then_detector_consensus
+apkg_003,4,ตอนสาย,dton-saai,מאוחר בבוקר,late morning,not_drilled,apkg_almog5,ตอนสาย,ตอน|สาย,m|r,mid-rising,word_tokenize_then_detector_consensus
+apkg_004,4,ตอนเที่ยง,dton-tieng,בצהריים,at noon,not_drilled,apkg_almog5,ตอนเที่ยง,ตอน|เที่ยง,m|f,mid-falling,word_tokenize_then_detector_consensus
+apkg_005,4,ตอนบ่าย,dton-baai,אחר הצהריים,in the afternoon,not_drilled,apkg_almog5,ตอนบ่าย,ตอน|บ่าย,m|l,mid-low,word_tokenize_then_detector_consensus
+apkg_006,4,ตอนเย็น,dton-yen,בערב,in the evening,not_drilled,apkg_almog5,ตอนเย็น,ตอน|เย็น,m|m,mid-mid,word_tokenize_then_detector_consensus
+apkg_007,4,ตอนเที่ยงคืน,dton-tiang-kheun,בחצות / בלילה,at midnight,not_drilled,apkg_almog5,ตอนเที่ยงคืน,ตอน|เที่ยง|คืน,m|f|m,mid-falling-mid,word_tokenize_then_detector_consensus
+apkg_008,4,ตอนดึก,dton-deug,מאוחר בלילה,late at night,not_drilled,apkg_almog5,ตอนดึก,ตอน|ดึก,m|l,mid-low,word_tokenize_then_detector_consensus
+apkg_009,4,เห็นด้วย,hen duai,להסכים / מסכים,to agree / agree,not_drilled,apkg_almog5,เห็นด้วย,เห็น|ด้วย,r|f,rising-falling,word_tokenize_then_detector_consensus
+apkg_010,4,เห็นไหม,hen mai,רואה? / אתה רואה?,Do you see?,not_drilled,apkg_almog5,เห็นไหม,เห็น|ไหม,r|r,rising-rising,word_tokenize_then_detector_consensus
+apkg_011,4,เห็นด้วยไหม,hen duai mai,האם אתה מסכים?,Do you agree?,not_drilled,apkg_almog5,เห็นด้วยไหม,เห็น|ด้วย|ไหม,r|f|r,rising-falling-rising,word_tokenize_then_detector_consensus
+apkg_012,4,ยืน,yuen,לעמוד,to stand,not_drilled,apkg_almog5,ยืน,ยืน,m,mid,word_tokenize_then_detector_consensus
+apkg_013,4,นั่ง,nung / nang,לשבת,to sit,not_drilled,apkg_almog5,นั่ง,นั่ง,f,falling,word_tokenize_then_detector_consensus
+apkg_014,4,เดิน,doen,ללכת / לצעוד,to walk,not_drilled,apkg_almog5,เดิน,เดิน,m,mid,word_tokenize_then_detector_consensus
+apkg_015,4,วิ่ง,wing,לרוץ,to run,not_drilled,apkg_almog5,วิ่ง,วิ่ง,f,falling,word_tokenize_then_detector_consensus
+apkg_016,4,ข้าม,khaam,לדלג / לחצות,to skip / to cross,not_drilled,apkg_almog5,ข้าม,ข้าม,f,falling,word_tokenize_then_detector_consensus
+apkg_017,5,ไม่ไหว,mai wai,לא יכול / לא מסוגל / לא עומד בזה,cannot / cannot handle it,not_drilled,apkg_almog5,ไม่ไหว,ไม่|หวัย,f|r,falling-rising,word_tokenize_then_detector_consensus
+apkg_018,5,ไม่ต้องห่วง,mai dtong huang,אל תדאג / אין מה לדאוג,do not worry,not_drilled,apkg_almog5,ไม่ต้องห่วง,ไม่|ต้อง|หว่ง,f|f|l,falling-falling-low,word_tokenize_then_detector_consensus
+apkg_019,5,ไม่สนใจ,mai son jai,לא מעוניין / לא אכפת,not interested / do not care,not_drilled,apkg_almog5,ไม่สนใจ,ไม่|สน|ใจ,f|r|m,falling-rising-mid,word_tokenize_then_detector_consensus
+apkg_020,5,ไม่มีอะไร,mai mee a-rai,אין כלום,there is nothing / nothing,not_drilled,apkg_almog5,ไม่มีอะไร,ไม่|มี|อะ|ไร,f|m|l|m,falling-mid-low-mid,word_tokenize_then_detector_consensus
+apkg_021,5,ไม่ต้อง,mai dtong,לא צריך / אין צורך,do not need to,not_drilled,apkg_almog5,ไม่ต้อง,ไม่|ต้อง,f|f,falling-falling,word_tokenize_then_detector_consensus
+apkg_022,5,ไม่มีปัญหา,mai mee pan-haa,אין בעיה,no problem,not_drilled,apkg_almog5,ไม่มีปัญหา,ไม่|มี|ปัน|หา,f|m|m|r,falling-mid-mid-rising,word_tokenize_then_detector_consensus
+apkg_023,5,ไม่มีทาง,mai mee taang,אין מצב / אין סיכוי,no way / impossible,not_drilled,apkg_almog5,ไม่มีทาง,ไม่|มี|ทาง,f|m|m,falling-mid-mid,word_tokenize_then_detector_consensus
+apkg_024,5,ว่าไง,waa ngai,מה קורה? / מה נשמע?,What’s up?,not_drilled,apkg_almog5,ว่าไง,ว่า|ไง,f|m,falling-mid,word_tokenize_then_detector_consensus
+apkg_025,5,ไม่เก็ทอะ,mai get a,אני לא מבין / לא קולט,I do not get it,not_drilled,apkg_almog5,ไม่เก็ทอะ,ไม่|เก็ด|อะ,f|l|l,falling-low-low,word_tokenize_then_detector_consensus
+apkg_026,5,แล้วไง,laew ngai,אז מה?,so what?,not_drilled,apkg_almog5,แล้วไง,แล้ว|ไง,h|m,high-mid,word_tokenize_then_detector_consensus
+apkg_027,5,คิดว่า,khit waa,לחשוב ש...,to think that...,not_drilled,apkg_almog5,คิดว่า,คิด|ว่า,h|f,high-falling,word_tokenize_then_detector_consensus
+apkg_028,5,พูดว่า,phuut waa,לומר ש...,to say that...,not_drilled,apkg_almog5,พูดว่า,พูด|ว่า,f|f,falling-falling,word_tokenize_then_detector_consensus
+apkg_029,5,บอกว่า,bok waa,לספר / להגיד ש...,to tell / say that...,not_drilled,apkg_almog5,บอกว่า,,,low-falling,manual_review_exception
+apkg_030,5,รู้สึกว่า,ruu seuk waa,להרגיש ש...,to feel that...,not_drilled,apkg_almog5,รู้สึกว่า,รู้|สึก|ว่า,h|l|f,high-low-falling,word_tokenize_then_detector_consensus
+apkg_031,5,เพราะว่า,phroh waa,בגלל ש... / כי,because,not_drilled,apkg_almog5,เพราะว่า,เพฺราะ|ว่า,h|f,high-falling,word_tokenize_then_detector_consensus
+apkg_032,5,ได้ยินว่า,daai yin waa,לשמוע ש...,to hear that...,not_drilled,apkg_almog5,ได้ยินว่า,ด้าย|ยิน|ว่า,f|m|f,falling-mid-falling,word_tokenize_then_detector_consensus
+uv19_0034,5,สบายดีไหม,sa-baai dii mai?,מה שלומך?,How are you?,not_drilled,"תומר 1,csv.txt",สบายดีไหม,สะ|บาย|ดี|ไหม,l|m|m|r,low-mid-mid-rising,word_tokenize_then_detector_consensus
+uv19_0035,4,สบายดี,sa-baai dii,הכל טוב / בסדר,I am fine / okay,not_drilled,"תומר 1,csv.txt",สบายดี,สะ|บาย|ดี,l|m|m,low-mid-mid,word_tokenize_then_detector_consensus
+uv19_0036,4,ไม่สบาย,mai sa-baai,לא מרגיש טוב,not feeling well,not_drilled,"תומר 1,csv.txt",ไม่สบาย,ไม่|สะ|บาย,f|l|m,falling-low-mid,word_tokenize_then_detector_consensus
+uv19_0051,5,คุณรักผม/ฉันไหม,khun rak phom/chan mai?,אתה אוהב אותי?,Do you love me?,not_drilled,"תומר 2,csv.txt",คุณรักผม ฉันไหม,,,mid-high-rising-rising-rising,manual_review_exception
+uv19_0081,3,ที่นี่,tii-nii,פה,here,not_drilled,"תומר 3,csv.txt",ที่นี่,ที่|นี่,f|f,falling-falling,word_tokenize_then_detector_consensus
+uv19_0082,3,ภาษา,paa-saa,שפה,language,not_drilled,"תומר 3,csv.txt",ภาษา,พา|สา,m|r,mid-rising,word_tokenize_then_detector_consensus
+uv19_0083,3,ประเทศ,bpra-ted,מדינה,country,not_drilled,"תומר 3,csv.txt",ประเทศ,ประ|เทด,l|f,low-falling,word_tokenize_then_detector_consensus
+uv19_0084,3,ทุกคน,tuk-kon,כולם,everyone,not_drilled,"תומר 3,csv.txt",ทุกคน,ทุก|คน,h|m,high-mid,word_tokenize_then_detector_consensus
+uv19_0085,3,อย่ารอ,yaa ror,אל תחכה,do not wait,not_drilled,"תומר 3,csv.txt",อย่ารอ,หฺย่า|รอ,l|m,low-mid,word_tokenize_then_detector_consensus
+uv19_0086,5,พอไหม,phaw mai?,זה מספיק?,Is it enough?,not_drilled,"תומר 3,csv.txt",พอไหม,พอ|ไหม,f|r,falling-rising,word_tokenize_then_detector_consensus
+uv19_0087,5,ไปไหน,bpai nai?,לאן אתה הולך?,Where are you going?,not_drilled,"תומר 3,csv.txt",ไปไหน,ไป|ใหน,m|r,mid-rising,word_tokenize_then_detector_consensus
+uv19_0088,3,ทบทวน,tobp-tuan,לחזור (על חומר),review,not_drilled,"תומר 3,csv.txt",ทบทวน,ทบ|ทวน,f|m,falling-mid,word_tokenize_then_detector_consensus
+uv19_0089,1,พี่,pii,אח/אחות מבוגר/ת,older sibling / senior,not_drilled,"תומר 3,csv.txt",พี่,พี่,f,falling,word_tokenize_then_detector_consensus
+uv19_0090,1,ลืม,leuum,לשכוח,forget,not_drilled,"תומר 3,csv.txt",ลืม,ลืม,m,mid,word_tokenize_then_detector_consensus
+uv19_0091,1,และ,laeh,ו...,and,not_drilled,"תומר 3,csv.txt",และ,และ,h,high,word_tokenize_then_detector_consensus
+uv19_0092,5,คุณพูดภาษาอะไร,kun puud paasaa a-rai?,איזו שפה אתה מדבר?,What language do you speak?,not_drilled,"תומר 3,csv.txt",คุณพูดภาษาอะไร,,,mid-falling-mid-rising-low-mid,manual_review_exception
+uv19_0093,1,เสร็จ,sed,לסיים,finish / done,not_drilled,"תומר 3,csv.txt",เสร็จ,เส็ด,l,low,word_tokenize_then_detector_consensus
+uv19_0094,1,เย็น,yen,קר,cold / evening,not_drilled,"תומר 3,csv.txt",เย็น,เย็น,m,mid,word_tokenize_then_detector_consensus
+uv19_0095,5,คุณมาจาก…,kun maa jaag (place),מאיפה אתה?,Where are you from?,not_drilled,"תומר 3,csv.txt",คุณมาจาก,คุน|มา|จาก,m|m|l,mid-mid-low,word_tokenize_then_detector_consensus
+uv19_0096,1,จาก,jaag,מ... (מקור),from,not_drilled,"תומר 3,csv.txt",จาก,จาก,l,low,word_tokenize_then_detector_consensus
+uv19_0097,4,ไหน/ที่ไหน,nai/tii nai,איפה,where,not_drilled,"תומר 3,csv.txt",ไหน ที่ไหน,,,rising-falling-rising,manual_review_exception
+uv19_0098,3,ห้องครัว,hong krua,מטבח,kitchen,not_drilled,"תומר 3,csv.txt",ห้องครัว,ข้อง|คฺรัว,f|m,falling-mid,word_tokenize_then_detector_consensus
+uv19_0099,1,ใจ,jaai,לב,heart / mind,not_drilled,"תומר 3,csv.txt",ใจ,ใจ,m,mid,word_tokenize_then_detector_consensus
+uv19_0100,3,ใจดี,jaai dii,לב טוב,kind,not_drilled,"תומר 3,csv.txt",ใจดี,ใจ|ดี,m|m,mid-mid,word_tokenize_then_detector_consensus
+uv19_0101,5,ทำไม,tam-mai?,למה?,why?,not_drilled,"תומר 3,csv.txt",ทำไม,ทำ|ไม,m|m,mid-mid,word_tokenize_then_detector_consensus
+uv19_0102,1,มาก,maag,מאוד,very / much,not_drilled,"תומר 3,csv.txt",มาก,มาก,f,falling,word_tokenize_then_detector_consensus
+uv19_0103,1,สอน,sawn,ללמד,teach,not_drilled,"תומר 3,csv.txt",สอน,สอน,r,rising,word_tokenize_then_detector_consensus
+uv19_0104,1,แพง,peang,יקר,expensive,not_drilled,"תומר 3,csv.txt",แพง,แพง,m,mid,word_tokenize_then_detector_consensus
+uv19_0105,3,ทุกอย่าง,tug-yaang,הכל,everything,not_drilled,"תומר 3,csv.txt",ทุกอย่าง,ทุก|หฺย่าง,h|l,high-low,word_tokenize_then_detector_consensus
+uv19_0106,1,แต่,dtae,אבל,but,not_drilled,"תומר 3,csv.txt",แต่,แต่,l,low,word_tokenize_then_detector_consensus
+uv19_0107,1,ตก,tok,ליפול,fall,not_drilled,"תומר 3,csv.txt",ตก,ตก,l,low,word_tokenize_then_detector_consensus
+uv19_0108,3,น้ำตก,nam-tok,מפל,waterfall,not_drilled,"תומר 3,csv.txt",น้ำตก,น้าม|ตก,h|l,high-low,word_tokenize_then_detector_consensus
+uv19_0109,1,คิด,kid,לחשוב,think,not_drilled,"תומר 3,csv.txt",คิด,คิด,h,high,word_tokenize_then_detector_consensus
+uv19_0110,5,คุณคิดอะไร,kun kid a-rai?,על מה אתה חושב?,What are you thinking?,not_drilled,"תומר 3,csv.txt",คุณคิดอะไร,คุน|คิด|อะ|ไร,m|h|l|m,mid-high-low-mid,word_tokenize_then_detector_consensus
+uv19_0111,1,ช่วย,chuai,לעזור,help,not_drilled,"תומר 3,csv.txt",ช่วย,ช่วย,f,falling,word_tokenize_then_detector_consensus
+uv19_0112,1,ต่อ,dtaw,להמשיך / להאריך,continue / extend,not_drilled,"תומר 3,csv.txt",ต่อ,ต่อ,l,low,word_tokenize_then_detector_consensus
+uv19_0113,1,หา,haa,לחפש / למצוא,look for / find,not_drilled,"תומר 3,csv.txt",หา,หา,r,rising,word_tokenize_then_detector_consensus
+uv19_0115,1,หมอ,maws,רופא,doctor,not_drilled,"תומר 3,csv.txt",หมอ,หมอ,r,rising,word_tokenize_then_detector_consensus
+uv19_0116,1,บวก,buag,פלוס,plus,not_drilled,"תומר 3,csv.txt",บวก,บวก,l,low,word_tokenize_then_detector_consensus
+uv19_0117,1,ลบ,löb,מינוס,minus,not_drilled,"תומר 3,csv.txt",ลบ,ลบ,f,falling,word_tokenize_then_detector_consensus
+uv19_0118,3,เท่ากับ,ta-gab,שווה,equals,not_drilled,"תומר 3,csv.txt",เท่ากับ,เท่า|กับ,f|l,falling-low,word_tokenize_then_detector_consensus
+uv19_0119,3,เท่า,tao,שווה / באותה מידה,equal / as much as,not_drilled,"תומר 3,csv.txt",เท่า,เท่า,f,falling,word_tokenize_then_detector_consensus
+uv19_0120,3,เท่าไร,tao-rai,כמה (מחיר),how much?,not_drilled,"תומר 3,csv.txt",เท่าไร,เท่า|ไร,f|m,falling-mid,word_tokenize_then_detector_consensus
+uv19_0121,4,แล้วแต่คุณ,laew-dtua kun,תלוי בך,up to you,not_drilled,"תומר4,csv.txt",แล้วแต่คุณ,แล้ว|แต่|คุน,h|l|m,high-low-mid,word_tokenize_then_detector_consensus
+uv19_0122,5,กี่โมง,gii mong?,איזו שעה?,what time?,not_drilled,"תומר4,csv.txt",กี่โมง,กี่|โมง,l|m,low-mid,word_tokenize_then_detector_consensus
+uv19_0123,3,ตอนนี้,dtua-ni,עכשיו,now,not_drilled,"תומר4,csv.txt",ตอนนี้,ตอน|นี้,m|h,mid-high,word_tokenize_then_detector_consensus
+uv19_0124,3,วันนี้,wan-nii,היום,today,not_drilled,"תומר4,csv.txt",วันนี้,วัน|นี้,m|h,mid-high,word_tokenize_then_detector_consensus
+uv19_0125,3,พรุ่งนี้,pru-ngii,מחר,tomorrow,not_drilled,"תומר4,csv.txt",พรุ่งนี้,พฺรุ่ง|นี้,f|h,falling-high,word_tokenize_then_detector_consensus
+uv19_0126,3,เมื่อวาน,meua-wan,אתמול,yesterday,not_drilled,"תומר4,csv.txt",เมื่อวาน,เมื่อ|วาน,f|m,falling-mid,word_tokenize_then_detector_consensus
+uv19_0127,3,ตอนเช้า,dtan-chao,בוקר,morning,not_drilled,"תומר4,csv.txt",ตอนเช้า,ตอน|เช้า,m|h,mid-high,word_tokenize_then_detector_consensus
+uv19_0128,3,ตอนเที่ยง,dtan-tiang,צהריים,noon,not_drilled,"תומר4,csv.txt",ตอนเที่ยง,ตอน|เที่ยง,m|f,mid-falling,word_tokenize_then_detector_consensus
+uv19_0129,3,ตอนเย็น,dtan-yen,ערב,evening,not_drilled,"תומר4,csv.txt",ตอนเย็น,ตอน|เย็น,m|m,mid-mid,word_tokenize_then_detector_consensus
+uv19_0130,4,ตอนกลางคืน,dtan-klang-keun,לילה,night,not_drilled,"תומר4,csv.txt",ตอนกลางคืน,,,mid-mid-mid,manual_review_exception
+uv19_0131,3,กินข้าว,gin-kaaw,לאכול (אורז/ארוחה),eat / have a meal,not_drilled,"תומר4,csv.txt",กินข้าว,กิน|ข้าว,m|f,mid-falling,word_tokenize_then_detector_consensus
+uv19_0132,1,หนึ่ง,nueng,אחד,one,not_drilled,"תומר4,csv.txt",หนึ่ง,หนึ่ง,l,low,word_tokenize_then_detector_consensus
+uv19_0133,1,สอง,song,שתיים,two,not_drilled,"תומר4,csv.txt",สอง,สอง,r,rising,word_tokenize_then_detector_consensus
+uv19_0134,1,สาม,saam,שלוש,three,not_drilled,"תומר4,csv.txt",สาม,สาม,r,rising,word_tokenize_then_detector_consensus
+uv19_0135,1,สี่,sii,ארבע,four,not_drilled,"תומר4,csv.txt",สี่,สี่,l,low,word_tokenize_then_detector_consensus
+uv19_0136,1,ห้า,haa,חמש,five,not_drilled,"תומר4,csv.txt",ห้า,ห้า,f,falling,word_tokenize_then_detector_consensus
+uv19_0137,1,หก,hok,שש,six,not_drilled,"תומר4,csv.txt",หก,หก,l,low,word_tokenize_then_detector_consensus
+uv19_0138,1,เจ็ด,jet,שבע,seven,not_drilled,"תומר4,csv.txt",เจ็ด,เจ็ด,l,low,word_tokenize_then_detector_consensus
+uv19_0139,1,แปด,bpaed,שמונה,eight,not_drilled,"תומר4,csv.txt",แปด,แปด,l,low,word_tokenize_then_detector_consensus
+uv19_0140,1,เก้า,gao,תשע,nine,not_drilled,"תומר4,csv.txt",เก้า,เก้า,f,falling,word_tokenize_then_detector_consensus
+uv19_0141,1,สิบ,sip,עשר,ten,not_drilled,"תומר4,csv.txt",สิบ,สิบ,l,low,word_tokenize_then_detector_consensus
+uv19_0142,3,สิบเอ็ด,sip-et,אחת עשרה,eleven,not_drilled,"תומר4,csv.txt",สิบเอ็ด,สิบ|เอ็ด,l|l,low-low,word_tokenize_then_detector_consensus
+uv19_0143,3,ยี่สิบ,yii-sip,עשרים,twenty,not_drilled,"תומר4,csv.txt",ยี่สิบ,ยี่|สิบ,f|l,falling-low,word_tokenize_then_detector_consensus
+uv19_0144,1,ร้อย,roi,מאה,hundred,not_drilled,"תומר4,csv.txt",ร้อย,ร้อย,h,high,word_tokenize_then_detector_consensus
+uv19_0145,1,พัน,pan,אלף,thousand,not_drilled,"תומר4,csv.txt",พัน,พัน,m,mid,word_tokenize_then_detector_consensus
+uv19_0146,1,หมื่น,meun,עשרת אלפים,ten thousand,not_drilled,"תומר4,csv.txt",หมื่น,หฺมื่น,l,low,word_tokenize_then_detector_consensus
+uv19_0147,1,แสน,san,מאה אלף,hundred thousand,not_drilled,"תומר4,csv.txt",แสน,แสน,r,rising,word_tokenize_then_detector_consensus
+uv19_0148,1,ล้าน,lan,מיליון,million,not_drilled,"תומר4,csv.txt",ล้าน,ล้าน,h,high,word_tokenize_then_detector_consensus
+uv19_0149,1,หน้า,naa,פנים / עונה / דף,face / season / page,not_drilled,"תומר4,csv.txt",หน้า,น่า,f,falling,word_tokenize_then_detector_consensus
+uv19_0150,3,หน้าร้อน,naa-rawn,העונה החמה,hot season,not_drilled,"תומר4,csv.txt",หน้าร้อน,น่า|ร้อน,f|h,falling-high,word_tokenize_then_detector_consensus
+uv19_0151,3,หน้าฝน,naa-fon,עונת הגשמים,rainy season,not_drilled,"תומר4,csv.txt",หน้าฝน,น่า|ฝน,f|r,falling-rising,word_tokenize_then_detector_consensus
+uv19_0152,3,หน้าหนาว,naa-nao,העונה הקרה,cold season,not_drilled,"תומר4,csv.txt",หน้าหนาว,น่า|หฺนาว,f|r,falling-rising,word_tokenize_then_detector_consensus
+uv19_0153,1,ใกล้,glai,קרוב (טון נמוך),near,not_drilled,"תומר4,csv.txt",ใกล้,ไกฺล้,f,falling,word_tokenize_then_detector_consensus
+uv19_0154,1,ไกล,glai,רחוק (טון גבוה),far,not_drilled,"תומר4,csv.txt",ไกล,ไกล,m,mid,word_tokenize_then_detector_consensus
+uv19_0155,1,ต้อง,dtong,חייב,must,not_drilled,"תומר4,csv.txt",ต้อง,ต้อง,f,falling,word_tokenize_then_detector_consensus
+uv19_0156,1,กลัว,glua,לפחד,afraid,not_drilled,"תומר4,csv.txt",กลัว,,,mid,manual_review_exception
+uv19_0157,3,ประมาณ,bpra-maan,בערך,about / approximately,not_drilled,"תומר4,csv.txt",ประมาณ,ประ|มาน,l|m,low-mid,word_tokenize_then_detector_consensus
+uv19_0158,1,กลับ,glap,לחזור,return,not_drilled,"תומר4,csv.txt",กลับ,,,low,manual_review_exception
+uv19_0159,3,กลับบ้าน,glap baan,לחזור הביתה,return home,not_drilled,"תומר4,csv.txt",กลับบ้าน,กลับ|บ้าน,l|f,low-falling,word_tokenize_then_detector_consensus
+uv19_0160,1,เหงื่อ,heua,זיעה,sweat,not_drilled,"תומר 5,csv.txt",เหงื่อ,เหงื่อ,l,low,word_tokenize_then_detector_consensus
+uv19_0161,3,เหงื่อออก,heua-awk,להזיע,sweat / perspire,not_drilled,"תומר 5,csv.txt",เหงื่อออก,เหงื่อ|ออก,l|l,low-low,word_tokenize_then_detector_consensus
+uv19_0162,1,เหนื่อย,nuay,עייף,tired,not_drilled,"תומר 5,csv.txt",เหนื่อย,เหนื่อย,l,low,word_tokenize_then_detector_consensus
+uv19_0163,1,หิว,hiu,רעב,hungry,not_drilled,"תומר 5,csv.txt",หิว,หิว,r,rising,word_tokenize_then_detector_consensus
+uv19_0164,3,หิวน้ำ,hiu-nam,צמא,thirsty,not_drilled,"תומר 5,csv.txt",หิวน้ำ,หิว|น้ำ,r|h,rising-high,word_tokenize_then_detector_consensus
+uv19_0165,1,อิ่ม,im,שבע (מאוכל),full from food,not_drilled,"תומר 5,csv.txt",อิ่ม,อิ่ม,l,low,word_tokenize_then_detector_consensus
+uv19_0166,1,เผ็ด,pet,חריף,spicy,not_drilled,"תומר 5,csv.txt",เผ็ด,เผ็ด,l,low,word_tokenize_then_detector_consensus
+uv19_0167,1,เค็ม,kem,מלוח,salty,not_drilled,"תומר 5,csv.txt",เค็ม,เค็ม,m,mid,word_tokenize_then_detector_consensus
+uv19_0168,1,เปรี้ยว,bpreaw,חמוץ,sour,not_drilled,"תומר 5,csv.txt",เปรี้ยว,เปฺรี้ยว,f,falling,word_tokenize_then_detector_consensus
+uv19_0169,1,ขม,kom,מר,bitter,not_drilled,"תומר 5,csv.txt",ขม,ขม,r,rising,word_tokenize_then_detector_consensus
+uv19_0170,1,มัน,man,שומני,oily / fatty,not_drilled,"תומר 5,csv.txt",มัน,มัน,m,mid,word_tokenize_then_detector_consensus
+uv19_0171,1,จืด,juad,תפל,bland,not_drilled,"תומר 5,csv.txt",จืด,จืด,l,low,word_tokenize_then_detector_consensus
+uv19_0172,3,ขยะ,ka-ya,זבל,trash,not_drilled,"תומר 5,csv.txt",ขยะ,ขะ|หฺยะ,l|l,low-low,word_tokenize_then_detector_consensus
+uv19_0173,4,ไม่เป็นไร,mai-pen-rai,לא משנה / אין בעיה,never mind / no problem,not_drilled,"תומר 5,csv.txt",ไม่เป็นไร,ไม่|เป็น|ไร,f|m|m,falling-mid-mid,word_tokenize_then_detector_consensus
+uv19_0174,3,โชคดี,chok-dee,בהצלחה,good luck,not_drilled,"תומר 5,csv.txt",โชคดี,โชก|ดี,f|m,falling-mid,word_tokenize_then_detector_consensus
+uv19_0175,3,ลาก่อน,la-gon,להתראות,goodbye,not_drilled,"תומר 5,csv.txt",ลาก่อน,ลา|ก่อน,m|l,mid-low,word_tokenize_then_detector_consensus
+uv19_0176,4,ไปก่อนนะ,pai-gon-na,אני הולך עכשיו (להתראות),I am going now / bye,not_drilled,"תומר 5,csv.txt",ไปก่อนนะ,ไป|ก่อน|นะ,m|l|h,mid-low-high,word_tokenize_then_detector_consensus
+uv19_0177,3,ไปแล้ว,bpai-leaw,כבר הלכתי / הלכתי,already went,not_drilled,"תומר 5,csv.txt",ไปแล้ว,ไป|แล้ว,m|h,mid-high,word_tokenize_then_detector_consensus
+uv19_0178,3,เจอกัน,jer-gan,נתראה,see you,not_drilled,"תומר 5,csv.txt",เจอกัน,เจ|กัน,l|m,low-mid,word_tokenize_then_detector_consensus
+uv19_0179,3,ทุกวัน,tuk-wan,כל יום,every day,not_drilled,"תומר 5,csv.txt",ทุกวัน,ทุก|วัน,h|m,high-mid,word_tokenize_then_detector_consensus
+uv19_0180,3,ทุกอย่าง,tuk-yaang,הכל,everything,not_drilled,"תומר 5,csv.txt",ทุกอย่าง,ทุก|หฺย่าง,h|l,high-low,word_tokenize_then_detector_consensus
+uv19_0181,3,บางที,bang-ti,לפעמים,sometimes,not_drilled,"תומר 5,csv.txt",บางที,บาง|ที,m|m,mid-mid,word_tokenize_then_detector_consensus
+uv19_0182,3,บางคน,bang-kon,חלק מהאנשים,some people,not_drilled,"תומר 5,csv.txt",บางคน,บาง|คน,m|m,mid-mid,word_tokenize_then_detector_consensus
+uv19_0183,3,ไม่เคย,mai-koey,אף פעם לא,never,not_drilled,"תומר 5,csv.txt",ไม่เคย,ไม่|เคย,f|m,falling-mid,word_tokenize_then_detector_consensus
+uv19_0184,1,เคย,koey,פעם / כבר עשיתי,ever,not_drilled,"תומר 5,csv.txt",เคย,เคย,m,mid,word_tokenize_then_detector_consensus
+uv19_0185,1,เบื่อ,bua,משעמם,bored,not_drilled,"תומר 5,csv.txt",เบื่อ,เบื่อ,l,low,word_tokenize_then_detector_consensus
+uv19_0186,3,ง่วงนอน,nguang-non,ישנוני,sleepy,not_drilled,"תומר 5,csv.txt",ง่วงนอน,ง่วง|นอน,f|m,falling-mid,word_tokenize_then_detector_consensus
+uv19_0187,1,สนุก,sanook,כיף,fun,not_drilled,"תומר 5,csv.txt",สนุก,สะ|หฺนุก,l|l,low-low,word_tokenize_then_detector_consensus
+uv19_0188,1,เป็น,bpen,להיות / לדעת לעשות,be / know how to,not_drilled,"תומר 5,csv.txt",เป็น,เป็น,m,mid,word_tokenize_then_detector_consensus
+uv19_0189,1,คือ,kue,זה / הוא (להגדרות),is / means,not_drilled,"תומר 5,csv.txt",คือ,คือ,m,mid,word_tokenize_then_detector_consensus
+uv19_0190,4,สวัสดี,sa-waat-dee,שלום,hello,not_drilled,"תומר 5,csv.txt",สวัสดี,สะ|หวัด|ดี,l|l|m,low-low-mid,word_tokenize_then_detector_consensus
+uv19_0191,3,ขอบคุณ,kob-kun,תודה,thank you,not_drilled,"תומר 5,csv.txt",ขอบคุณ,ขอบ|คุน,l|m,low-mid,word_tokenize_then_detector_consensus
+uv19_0192,5,ยินดีที่ได้รู้จัก,yin-dee tii dai ruu-jak,נעים להכיר,nice to meet you,not_drilled,"תומר 5,csv.txt",ยินดีที่ได้รู้จัก,ยิน|ดี|ที่|ด้าย|รู้|จัก,m|m|f|f|h|l,mid-mid-falling-falling-high-low,word_tokenize_then_detector_consensus
+uv19_0193,5,ที่ไหน,tii-nai?,איפה?,where?,not_drilled,"תומר 5,csv.txt",ที่ไหน,ที่|ไหฺน,f|r,falling-rising,word_tokenize_then_detector_consensus
+uv19_0194,5,เมื่อไร,meua-rai?,מתי?,when?,not_drilled,"תומר 5,csv.txt",เมื่อไร,เมื่อ|ไร,f|m,falling-mid,word_tokenize_then_detector_consensus
+uv19_0195,5,ยังไง,yang-ngai?,איך?,how?,not_drilled,"תומר 5,csv.txt",ยังไง,ยัง|ไง,m|m,mid-mid,word_tokenize_then_detector_consensus
+uv19_0196,3,เพราะว่า,prow-wa,בגלל ש...,because,not_drilled,"תומר 5,csv.txt",เพราะว่า,เพฺราะ|ว่า,h|f,high-falling,word_tokenize_then_detector_consensus
+uv19_0197,4,ขนมปัง,ka-nom-bpang,לחם,bread,not_drilled,"תומר 5,csv.txt",ขนมปัง,ขะ|หฺนม|ปัง,l|r|m,low-rising-mid,word_tokenize_then_detector_consensus
+uv19_0198,3,เนื้อ,neu-a,בשר / בקר,meat / beef,not_drilled,"תומר 5,csv.txt",เนื้อ,เนื้อ,h,high,word_tokenize_then_detector_consensus
+uv19_0199,1,ไก่,gai,עוף,chicken,not_drilled,"תומר 6,csv.txt",ไก่,ไก่,l,low,word_tokenize_then_detector_consensus
+uv19_0200,1,หมู,moo,חזיר,pork / pig,not_drilled,"תומר 6,csv.txt",หมู,หมู,r,rising,word_tokenize_then_detector_consensus
+uv19_0201,1,ปลา,bpaa,דג,fish,not_drilled,"תומר 6,csv.txt",ปลา,ปลา,m,mid,word_tokenize_then_detector_consensus
+uv19_0202,1,กุ้ง,goong,שרימפס,shrimp,not_drilled,"תומר 6,csv.txt",กุ้ง,กุ้ง,f,falling,word_tokenize_then_detector_consensus
+uv19_0203,1,ปู,puu,סרטן,crab,not_drilled,"תומר 6,csv.txt",ปู,ปู,m,mid,word_tokenize_then_detector_consensus
+uv19_0204,1,ไข่,kai,ביצה,egg,not_drilled,"תומר 6,csv.txt",ไข่,ไข่,l,low,word_tokenize_then_detector_consensus
+uv19_0205,3,ไข่ดาว,kai-dao,ביצת עין,fried egg,not_drilled,"תומר 6,csv.txt",ไข่ดาว,ไข่|ดาว,l|m,low-mid,word_tokenize_then_detector_consensus
+uv19_0206,3,ไข่เจียว,kai-jeaw,חביתה,omelette,not_drilled,"תומר 6,csv.txt",ไข่เจียว,ไข่|เจียว,l|m,low-mid,word_tokenize_then_detector_consensus
+uv19_0207,1,ผัก,pak,ירקות,vegetables,not_drilled,"תומר 6,csv.txt",ผัก,ผัก,l,low,word_tokenize_then_detector_consensus
+uv19_0208,4,ผลไม้,pon-la-mai,פירות,fruit,not_drilled,"תומר 6,csv.txt",ผลไม้,ผน|ละ|ไม้,r|h|h,rising-high-high,word_tokenize_then_detector_consensus
+uv19_0209,1,ส้ม,som,תפוז,orange,not_drilled,"תומר 6,csv.txt",ส้ม,ส้ม,f,falling,word_tokenize_then_detector_consensus
+uv19_0210,3,มะม่วง,ma-muang,מנגו,mango,not_drilled,"תומר 6,csv.txt",มะม่วง,มะ|ม่วง,h|f,high-falling,word_tokenize_then_detector_consensus
+uv19_0211,3,มะพร้าว,ma-prao,קוקוס,coconut,not_drilled,"תומר 6,csv.txt",มะพร้าว,มะ|พฺร้าว,h|h,high-high,word_tokenize_then_detector_consensus
+uv19_0212,1,กล้วย,gluay,בננה,banana,not_drilled,"תומר 6,csv.txt",กล้วย,กล้วย,f,falling,word_tokenize_then_detector_consensus
+uv19_0213,4,สับปะรด,sup-pa-rot,אננס,pineapple,not_drilled,"תומר 6,csv.txt",สับปะรด,สับ|ปะ|รด,l|l|f,low-low-falling,word_tokenize_then_detector_consensus
+uv19_0215,3,น้ำแข็ง,nam-kaeng,קרח,ice,not_drilled,"תומר 6,csv.txt",น้ำแข็ง,น้าม|แข็ง,h|r,high-rising,word_tokenize_then_detector_consensus
+uv19_0216,3,น้ำส้ม,nam-som,מיץ תפוזים,orange juice,not_drilled,"תומר 6,csv.txt",น้ำส้ม,น้าม|ส้ม,h|f,high-falling,word_tokenize_then_detector_consensus
+uv19_0217,3,กาแฟ,ga-fe,קפה,coffee,not_drilled,"תומר 6,csv.txt",กาแฟ,กา|แฟ,m|f,mid-falling,word_tokenize_then_detector_consensus
+uv19_0218,1,นม,nom,חלב,milk,not_drilled,"תומר 6,csv.txt",นม,นม,m,mid,word_tokenize_then_detector_consensus
+uv19_0219,1,เบียร์,beer,בירה,beer,not_drilled,"תומר 6,csv.txt",เบียร์,เบีย,m,mid,word_tokenize_then_detector_consensus
+uv19_0220,1,เหล้า,lao,אלכוהול / וויסקי,alcohol / whiskey,not_drilled,"תומר 6,csv.txt",เหล้า,เหล้า,f,falling,word_tokenize_then_detector_consensus
+uv19_0221,1,กับ,gap,עם,with,not_drilled,"תומר 6,csv.txt",กับ,กับ,l,low,word_tokenize_then_detector_consensus
+uv19_0222,1,เอา,ao,רוצה / לקחת,want / take,not_drilled,"תומר 6,csv.txt",เอา,เอา,m,mid,word_tokenize_then_detector_consensus
+uv19_0223,3,ไม่เอา,mai ao,לא רוצה,do not want,not_drilled,"תומר 6,csv.txt",ไม่เอา,ไม่|เอา,f|m,falling-mid,word_tokenize_then_detector_consensus
+uv19_0224,4,เอาอันนี้,ao-an-nii,רוצה את זה,want this one,not_drilled,"תומר 6,csv.txt",เอาอันนี้,เอา|อัน|นี้,m|l|h,mid-low-high,word_tokenize_then_detector_consensus
+uv19_0225,1,เรือ,reua,סירה,boat,not_drilled,"תומר 6,csv.txt",เรือ,เรือ,m,mid,word_tokenize_then_detector_consensus
+uv19_0226,3,เรือบิน,reua-bin,מטוס,airplane,not_drilled,"תומר 6,csv.txt",เรือบิน,เรือ|บิน,m|m,mid-mid,word_tokenize_then_detector_consensus
+uv19_0227,1,รถ,rot,מכונית,car / vehicle,not_drilled,"תומר 6,csv.txt",รถ,รด,f,falling,word_tokenize_then_detector_consensus
+uv19_0228,3,รถเมล์,rot-mae,אוטובוס,bus,not_drilled,"תומר 6,csv.txt",รถเมล์,รด|เม,f|m,falling-mid,word_tokenize_then_detector_consensus
+uv19_0229,3,รถไฟ,rot-fai,רכבת,train,not_drilled,"תומר 6,csv.txt",รถไฟ,รด|ไฟ,f|m,falling-mid,word_tokenize_then_detector_consensus
+uv19_0230,4,มอเตอร์ไซค์,mo-dtu-sai,אופנוע,motorbike,not_drilled,"תומר 6,csv.txt",มอเตอร์ไซค์,มอ|เต้อ|ไซ,m|f|m,mid-falling-mid,word_tokenize_then_detector_consensus
+uv19_0231,4,จักรยาน,jak-kra-yaan,אופניים,bicycle,not_drilled,"תומר 6,csv.txt",จักรยาน,จัก|กฺระ|ยาน,l|l|m,low-low-mid,word_tokenize_then_detector_consensus
+uv19_0232,1,เดิน,doen,ללכת ברגל,walk,not_drilled,"תומר 6,csv.txt",เดิน,เดิน,m,mid,word_tokenize_then_detector_consensus
+uv19_0233,1,วิ่ง,wing,לרוץ,run,not_drilled,"תומר 6,csv.txt",วิ่ง,วิ่ง,f,falling,word_tokenize_then_detector_consensus
+uv19_0234,1,สวย,suay,יפה,beautiful,not_drilled,"תומר 6,csv.txt",สวย,สวย,r,rising,word_tokenize_then_detector_consensus
+uv19_0235,3,น่ารัก,naa-rak,חמוד,cute,not_drilled,"תומר 6,csv.txt",น่ารัก,น่า|รัก,f|h,falling-high,word_tokenize_then_detector_consensus
+uv19_0236,1,หล่อ,lor,חתיך,handsome,not_drilled,"תומר 6,csv.txt",หล่อ,หล่อ,l,low,word_tokenize_then_detector_consensus
+uv19_0237,1,เตี้ย,dtia,נמוך,short,not_drilled,"תומר 6,csv.txt",เตี้ย,เตี้ย,f,falling,word_tokenize_then_detector_consensus
+uv19_0238,1,สูง,soong,גבוה,tall,not_drilled,"תומר 6,csv.txt",สูง,สูง,r,rising,word_tokenize_then_detector_consensus
+uv19_0239,3,อ้วน,u-an,שמן (גוף),fat / overweight,not_drilled,"תומר 7,csv.txt",อ้วน,อ้วน,f,falling,word_tokenize_then_detector_consensus
+uv19_0240,1,ผอม,pom,רזה,thin,not_drilled,"תומר 7,csv.txt",ผอม,ผอม,r,rising,word_tokenize_then_detector_consensus
+uv19_0241,1,ใหญ่,yai,גדול,big,not_drilled,"תומר 7,csv.txt",ใหญ่,ใหย่,l,low,word_tokenize_then_detector_consensus
+uv19_0242,1,เล็ก,lek,קטן,small,not_drilled,"תומר 7,csv.txt",เล็ก,เล็ก,f,falling,word_tokenize_then_detector_consensus
+uv19_0243,1,เหงา,ngao,בודד,lonely,not_drilled,"תומר 7,csv.txt",เหงา,,,rising,manual_review_exception
+uv19_0244,3,เสียใจ,sia-jai,עצוב,sad / sorry,not_drilled,"תומר 7,csv.txt",เสียใจ,เสีย|ไจ,r|m,rising-mid,word_tokenize_then_detector_consensus
+uv19_0245,3,ดีใจ,dii-jai,שמח,happy,not_drilled,"תומר 7,csv.txt",ดีใจ,ดี|ใจ,m|m,mid-mid,word_tokenize_then_detector_consensus
+uv19_0246,1,โกรธ,grote,כועס,angry,not_drilled,"תומר 7,csv.txt",โกรธ,โกฺรด,l,low,word_tokenize_then_detector_consensus
+uv19_0247,1,กลัว,glua,מפחד,afraid,not_drilled,"תומר 7,csv.txt",กลัว,,,mid,manual_review_exception
+uv19_0248,3,ตกใจ,dtok-jai,מופתע / בהלם,shocked / startled,not_drilled,"תומר 7,csv.txt",ตกใจ,ตก|ไจ,l|m,low-mid,word_tokenize_then_detector_consensus
+uv19_0249,1,งง,ngong,מבולבל,confused,not_drilled,"תומר 7,csv.txt",งง,งง,m,mid,word_tokenize_then_detector_consensus
+uv19_0250,3,มั่นใจ,man-jai,בטוח בעצמי,confident,not_drilled,"תומר 7,csv.txt",มั่นใจ,มั่น|ไจ,f|m,falling-mid,word_tokenize_then_detector_consensus
+uv19_0251,4,น่าเข้าใจ,naa-kao-jai,מובן,understandable,not_drilled,"תומר 7,csv.txt",น่าเข้าใจ,น่า|เข้า|ไจ,f|f|m,falling-falling-mid,word_tokenize_then_detector_consensus
+uv19_0252,4,ไม่เข้าใจ,mai-kao-jai,לא מבין,do not understand,not_drilled,"תומר 7,csv.txt",ไม่เข้าใจ,ไม่|เข้า|ไจ,f|f|m,falling-falling-mid,word_tokenize_then_detector_consensus
+uv19_0253,5,เข้าใจไหม,kao-jai mai?,מבין?,Do you understand?,not_drilled,"תומר 7,csv.txt",เข้าใจไหม,เข้า|ไจ|ไหม,f|m|r,falling-mid-rising,word_tokenize_then_detector_consensus
+uv19_0254,4,เข้าใจแล้ว,kao-jai leaw,הבנתי כבר,understood already,not_drilled,"תומר 7,csv.txt",เข้าใจแล้ว,เข้า|ไจ|แล้ว,f|m|h,falling-mid-high,word_tokenize_then_detector_consensus
+uv19_0255,1,รัก,rak,אוהב,love,not_drilled,"תומר 7,csv.txt",รัก,รัก,h,high,word_tokenize_then_detector_consensus
+uv19_0256,1,เกลียด,gliad,שונא,hate,not_drilled,"תומר 7,csv.txt",เกลียด,เกฺลียด,l,low,word_tokenize_then_detector_consensus
+uv19_0257,3,เห็นด้วย,hen-duai,מסכים,agree,not_drilled,"תומר 7,csv.txt",เห็นด้วย,เห็น|ด้วย,r|f,rising-falling,word_tokenize_then_detector_consensus
+uv19_0258,4,ไม่เห็นด้วย,mai-hen-duai,לא מסכים,disagree,not_drilled,"תומר 7,csv.txt",ไม่เห็นด้วย,ไม่|เห็น|ด้วย,f|r|f,falling-rising-falling,word_tokenize_then_detector_consensus
+uv19_0259,3,จริง ๆ,jing-jing,באמת,really,not_drilled,"תומר 7,csv.txt",จริง ๆ,,,mid-mid,manual_review_exception
+uv19_0260,1,ลอง,long,לנסות,try,not_drilled,"תומר 7,csv.txt",ลอง,ลอง,m,mid,word_tokenize_then_detector_consensus
+uv19_0261,1,ดู,duu,לראות / להסתכל,look / watch,not_drilled,"תומר 7,csv.txt",ดู,ดู,m,mid,word_tokenize_then_detector_consensus
+uv19_0262,1,ฟัง,fang,להקשיב,listen,not_drilled,"תומר 7,csv.txt",ฟัง,ฟัง,m,mid,word_tokenize_then_detector_consensus
+uv19_0263,1,ดม,dom,להריח,smell,not_drilled,"תומר 7,csv.txt",ดม,ดม,m,mid,word_tokenize_then_detector_consensus
+uv19_0264,1,ชิม,chim,לטעום,taste,not_drilled,"תומר 7,csv.txt",ชิม,ชิม,m,mid,word_tokenize_then_detector_consensus
+uv19_0265,1,จำ,jum,לזכור,remember,not_drilled,"תומר 7,csv.txt",จำ,จำ,m,mid,word_tokenize_then_detector_consensus
+uv19_0266,1,เคย,keey,להתרגל / פעם...,ever / used to,not_drilled,"תומר 7,csv.txt",เคย,เคย,m,mid,word_tokenize_then_detector_consensus
+uv19_0267,1,เที่ยว,teaw,לטייל / לבלות,travel / hang out,not_drilled,"תומר 7,csv.txt",เที่ยว,เที่ยว,f,falling,word_tokenize_then_detector_consensus
+uv19_0268,1,รอ,raw,לחכות,wait,not_drilled,"תומר 7,csv.txt",รอ,รอ,m,mid,word_tokenize_then_detector_consensus
+uv19_0269,1,ซื้อ,suu,לקנות,buy,not_drilled,"תומר 7,csv.txt",ซื้อ,ซื้อ,h,high,word_tokenize_then_detector_consensus
+uv19_0270,1,ขาย,kaai,למכור,sell,not_drilled,"תומר 7,csv.txt",ขาย,ขาย,r,rising,word_tokenize_then_detector_consensus
+uv19_0271,1,ให้,hai,לתת / עבור,give / for,not_drilled,"תומר 7,csv.txt",ให้,ไห้,f,falling,word_tokenize_then_detector_consensus
+uv19_0272,3,ช่วย,choo-ay,לעזור,help,not_drilled,"תומר 7,csv.txt",ช่วย,ช่วย,f,falling,word_tokenize_then_detector_consensus
+uv19_0273,1,บอก,bork,להגיד / לספר,tell,not_drilled,"תומר 7,csv.txt",บอก,บอก,l,low,word_tokenize_then_detector_consensus
+uv19_0274,1,ถาม,tam,לשאול,ask,not_drilled,"תומר 7,csv.txt",ถาม,ถาม,r,rising,word_tokenize_then_detector_consensus
+uv19_0275,1,ยิ้ม,yim,לחייך,smile,not_drilled,"תומר 7,csv.txt",ยิ้ม,ยิ้ม,h,high,word_tokenize_then_detector_consensus
+uv19_0285,3,ตื่นเต้น,dteun-dten,מתרגש,excited,not_drilled,"תומר 8,csv.txt",ตื่นเต้น,ตื่น|เต้น,l|f,low-falling,word_tokenize_then_detector_consensus
+uv19_0311,3,หมู่,muu,קבוצה / כפר / חבורה,group / village / category,not_drilled,"תומר 8,csv.txt",หมู่,หฺมู่,l,low,word_tokenize_then_detector_consensus
+uv19_0315,1,ผ้า,paa,בד / בגד,cloth / fabric / clothing,not_drilled,"תומר 8,csv.txt",ผ้า,พ่า,f,falling,word_tokenize_then_detector_consensus
+uv19_0322,2,ตื่น,dteun,להתעורר,wake up,not_drilled,"אלמוג 1,CSV.txt",ตื่น,ตื่น,l,low,word_tokenize_then_detector_consensus
+uv19_0328,3,ปลาหมึก,bpla-meuk,דיונון,squid,not_drilled,"אלמוג 1,CSV.txt",ปลาหมึก,ปฺลา|หฺมึก,m|l,mid-low,word_tokenize_then_detector_consensus
+uv19_0331,5,ยังไง,yang-ngai,איך?,how?,not_drilled,"אלמוג 1,CSV.txt",ยังไง,ยัง|ไง,m|m,mid-mid,word_tokenize_then_detector_consensus
+uv19_0340,4,แต่เช้า,dtae-chao,לפנות בוקר / מוקדם בבוקר,early in the morning,not_drilled,אלמוג 5(2).apkg,แต่เช้า,แต่|เช้า,l|h,low-high,word_tokenize_then_detector_consensus
+uv19_0341,3,ตอนเช้า,dton-chao,בבוקר,morning / in the morning,not_drilled,אלמוג 5(2).apkg,ตอนเช้า,ตอน|เช้า,m|h,mid-high,word_tokenize_then_detector_consensus
+uv19_0342,4,ตอนสาย,dton-saai,מאוחר בבוקר,late morning,not_drilled,אלמוג 5(2).apkg,ตอนสาย,ตอน|สาย,m|r,mid-rising,word_tokenize_then_detector_consensus
+uv19_0343,3,ตอนเที่ยง,dton-tiang,בצהריים,noon / midday,not_drilled,אלמוג 5(2).apkg,ตอนเที่ยง,ตอน|เที่ยง,m|f,mid-falling,word_tokenize_then_detector_consensus
+uv19_0344,3,ตอนบ่าย,dton-baai,אחר הצהריים,afternoon,not_drilled,אלמוג 5(2).apkg,ตอนบ่าย,ตอน|บ่าย,m|l,mid-low,word_tokenize_then_detector_consensus
+uv19_0345,3,ตอนเย็น,dton-yen,בערב,evening,not_drilled,אלמוג 5(2).apkg,ตอนเย็น,ตอน|เย็น,m|m,mid-mid,word_tokenize_then_detector_consensus
+uv19_0346,4,ตอนกลางคืน,dton-glaang-kheun,בלילה,night / at night,not_drilled,אלמוג 5(2).apkg,ตอนกลางคืน,,,mid-mid-mid,manual_review_exception
+uv19_0347,4,ตอนดึก,dton-deuk,מאוחר בלילה,late at night,not_drilled,אלמוג 5(2).apkg,ตอนดึก,ตอน|ดึก,m|l,mid-low,word_tokenize_then_detector_consensus
+uv19_0348,3,เห็นด้วย,hen-duai,להסכים,agree,not_drilled,אלמוג 5(2).apkg,เห็นด้วย,เห็น|ด้วย,r|f,rising-falling,word_tokenize_then_detector_consensus
+uv19_0349,5,เห็นไหม,hen mai?,רואה?,Do you see?,not_drilled,אלמוג 5(2).apkg,เห็นไหม,เห็น|ไหม,r|r,rising-rising,word_tokenize_then_detector_consensus
+uv19_0350,5,เห็นด้วยไหม,hen-duai mai?,האם אתה מסכים?,Do you agree?,not_drilled,אלמוג 5(2).apkg,เห็นด้วยไหม,เห็น|ด้วย|ไหม,r|f|r,rising-falling-rising,word_tokenize_then_detector_consensus
+uv19_0351,1,ยืน,yuen,לעמוד,stand,not_drilled,אלמוג 5(2).apkg,ยืน,ยืน,m,mid,word_tokenize_then_detector_consensus
+uv19_0352,1,นั่ง,nang,לשבת,sit,not_drilled,אלמוג 5(2).apkg,นั่ง,นั่ง,f,falling,word_tokenize_then_detector_consensus
+uv19_0353,1,เดิน,dern,ללכת,walk,not_drilled,אלמוג 5(2).apkg,เดิน,เดิน,m,mid,word_tokenize_then_detector_consensus
+uv19_0354,1,ข้าม,khaam,לדלג,cross / skip over,not_drilled,אלמוג 5(2).apkg,ข้าม,ข้าม,f,falling,word_tokenize_then_detector_consensus
+uv19_0355,4,ไม่ไหว,mai wai,לא יכול / לא מסוגל / לא עומד בזה,cannot handle it / cannot manage,not_drilled,אלמוג 5(2).apkg,ไม่ไหว,ไม่|หวัย,f|r,falling-rising,word_tokenize_then_detector_consensus
+uv19_0356,4,ไม่ต้องห่วง,mai dtong huang,אל תדאג / אין מה לדאוג,do not worry,not_drilled,אלמוג 5(2).apkg,ไม่ต้องห่วง,ไม่|ต้อง|หว่ง,f|f|l,falling-falling-low,word_tokenize_then_detector_consensus
+uv19_0357,4,ไม่สนใจ,mai son jai,לא מעוניין / לא אכפת,not interested / do not care,not_drilled,אלמוג 5(2).apkg,ไม่สนใจ,ไม่|สน|ใจ,f|r|m,falling-rising-mid,word_tokenize_then_detector_consensus
+uv19_0358,4,ไม่มีอะไร,mai mee a-rai,אין כלום,there is nothing / nothing,not_drilled,אלמוג 5(2).apkg,ไม่มีอะไร,ไม่|มี|อะ|ไร,f|m|l|m,falling-mid-low-mid,word_tokenize_then_detector_consensus
+uv19_0359,3,ไม่ต้อง,mai dtong,לא צריך / אין צורך,do not need,not_drilled,אלמוג 5(2).apkg,ไม่ต้อง,ไม่|ต้อง,f|f,falling-falling,word_tokenize_then_detector_consensus
+uv19_0360,4,ไม่มีปัญหา,mai mee pan-haa,אין בעיה,no problem,not_drilled,אלמוג 5(2).apkg,ไม่มีปัญหา,ไม่|มี|ปัน|หา,f|m|m|r,falling-mid-mid-rising,word_tokenize_then_detector_consensus
+uv19_0361,4,ไม่มีทาง,mâi mee taang,אין מצב / אין סיכוי,no way,not_drilled,אלמוג 5(2).apkg,ไม่มีทาง,ไม่|มี|ทาง,f|m|m,falling-mid-mid,word_tokenize_then_detector_consensus
+uv19_0362,5,ว่าไง,wâa ngai,מה קורה? / מה נשמע?,what’s up?,not_drilled,אלמוג 5(2).apkg,ว่าไง,ว่า|ไง,f|m,falling-mid,word_tokenize_then_detector_consensus
+uv19_0363,4,ไม่เก็ทอะ,mâi get à,אני לא מבין / לא קולט,I do not get it,not_drilled,אלמוג 5(2).apkg,ไม่เก็ทอะ,ไม่|เก็ด|อะ,f|l|l,falling-low-low,word_tokenize_then_detector_consensus
+uv19_0364,5,แล้วไง,láew ngai,אז מה?,so what?,not_drilled,אלמוג 5(2).apkg,แล้วไง,แล้ว|ไง,h|m,high-mid,word_tokenize_then_detector_consensus
+uv19_0365,3,คิดว่า,khít wâa,לחשוב ש...,think that,not_drilled,אלמוג 5(2).apkg,คิดว่า,คิด|ว่า,h|f,high-falling,word_tokenize_then_detector_consensus
+uv19_0366,3,พูดว่า,phuut waa,לומר ש...,say that...,not_drilled,אלמוג 5(2).apkg,พูดว่า,พูด|ว่า,f|f,falling-falling,word_tokenize_then_detector_consensus
+uv19_0367,3,บอกว่า,bòk wâa,לספר / להגיד ש...,tell / say that,not_drilled,אלמוג 5(2).apkg,บอกว่า,,,low-falling,manual_review_exception
+uv19_0368,4,รู้สึกว่า,rúu sèuk wâa,להרגיש ש...,feel that,not_drilled,אלמוג 5(2).apkg,รู้สึกว่า,รู้|สึก|ว่า,h|l|f,high-low-falling,word_tokenize_then_detector_consensus
+uv19_0369,3,เพราะว่า,phróh wâa,בגלל ש...,because,not_drilled,אלמוג 5(2).apkg,เพราะว่า,เพฺราะ|ว่า,h|f,high-falling,word_tokenize_then_detector_consensus
+uv19_0370,4,ได้ยินว่า,dai-yin waa,לשמוע ש...,hear that...,not_drilled,אלמוג 5(2).apkg,ได้ยินว่า,ด้าย|ยิน|ว่า,f|m|f,falling-mid-falling,word_tokenize_then_detector_consensus
+uv19_0371,3,ต้นไม้,ton mai,צמח / עץ,plant / tree,not_drilled,אלמוג 4(1).apkg,ต้นไม้,ต้น|ไม้,f|h,falling-high,word_tokenize_then_detector_consensus
+uv19_0372,1,บาง,baang,חלק מ..,some / part of,not_drilled,אלמוג 4(1).apkg,บาง,บาง,m,mid,word_tokenize_then_detector_consensus
+uv19_0373,3,ด้วยกัน,duay gan,יחדיו,together,not_drilled,אלמוג 4(1).apkg,ด้วยกัน,ด้วย|กัน,f|m,falling-mid,word_tokenize_then_detector_consensus
+uv19_0374,3,บางที,baang tii,יכול להיות,maybe / sometimes,not_drilled,אלמוג 4(1).apkg,บางที,บาง|ที,m|m,mid-mid,word_tokenize_then_detector_consensus
+uv19_0375,3,พวกเขา,phuak khao,הם,they / them,not_drilled,אלמוג 4(1).apkg,พวกเขา,พวก|เขา,f|r,falling-rising,word_tokenize_then_detector_consensus
+uv19_0376,3,บางวัน,baang wan,חלק מהימים,some days,not_drilled,אלמוג 4(1).apkg,บางวัน,บาง|วัน,m|m,mid-mid,word_tokenize_then_detector_consensus
+uv19_0377,3,ทุกที่,tug tii,בכל מקום,everywhere,not_drilled,אלמוג 4(1).apkg,ทุกที่,ทุก|ที่,h|f,high-falling,word_tokenize_then_detector_consensus
+uv19_0378,1,ออก,awk,"יציאה,החוצה",exit / out / go out,not_drilled,אלמוג 4(1).apkg,ออก,ออก,l,low,word_tokenize_then_detector_consensus
+uv19_0379,1,อุ่น,un,"חמים,חם",warm,not_drilled,אלמוג 4(1).apkg,อุ่น,อุ่น,l,low,word_tokenize_then_detector_consensus
+uv19_0380,5,ตอนผมเด็ก ๆ,dton phom dek dek,כשהייתי ילד,when I was a child,not_drilled,אלמוג 4(1).apkg,ตอนผมเด็ก ๆ,,,mid-rising-low-low,manual_review_exception
+uv19_0381,1,เข้า,khao,להיכנס / כניסה,enter / go in,not_drilled,אלמוג 4(1).apkg,เข้า,เข้า,f,falling,word_tokenize_then_detector_consensus
+uv19_0382,1,หน้า,naa,פנים / קדימה / עונה / דף,face / front / season / page,not_drilled,אלמוג 4(1).apkg,หน้า,น่า,f,falling,word_tokenize_then_detector_consensus
+uv19_0383,3,โรงพัก,rong pag,תחנת משטרה,police station,not_drilled,אלמוג 4(1).apkg,โรงพัก,โรง|พัก,m|h,mid-high,word_tokenize_then_detector_consensus
+uv19_0384,3,ไม่ได้…,mai dai+v,לא עשיתי,did not / cannot + verb,not_drilled,אלמוג 4(1).apkg,ไม่ได้,ไม่|ด้าย,f|f,falling-falling,word_tokenize_then_detector_consensus
+uv19_0385,5,ดีใจที่ได้เจอ,dii-jai tii dai jer,נחמד לראותך,nice to see you,not_drilled,אלמוג 4(1).apkg,ดีใจที่ได้เจอ,ดี|ใจ|ที่|ด้าย|เจอ,m|m|f|f|l,mid-mid-falling-falling-low,word_tokenize_then_detector_consensus
+uv19_0386,1,ผึ้ง,phueng,דבורה,bee,not_drilled,אלמוג 4(1).apkg,ผึ้ง,ผึ้ง,f,falling,word_tokenize_then_detector_consensus
+uv19_0387,3,ต่อย,dtoy,אגרוף / לעקוץ,to punch / to sting,not_drilled,אלמוג 4(1).apkg,ต่อย,ต่อย,l,low,word_tokenize_then_detector_consensus
