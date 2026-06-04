@@ -1,10 +1,10 @@
 'use strict';
 
-const APP_VERSION = '1.25.10-share-ownership-smooth-writing';
+const APP_VERSION = '1.25.11-ipad-touch-writing-fix';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
-  imprint:'kimคcode::thai-trainer::2026-06-04::v1.25.10'
+  imprint:'kimคcode::thai-trainer::2026-06-04::v1.25.11'
 });
 
 const TONES = [
@@ -18,7 +18,7 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.10', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.11', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', eraser:'מחק', eraserActive:'מחק פעיל', eraserTitle:'הפעל/כבה מחק מקומי', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
@@ -35,7 +35,7 @@ const I18N = {
     dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא', voiceCheer:'מחווה קולית ב"צדקתי"', voiceCheerLocked:'ייפתח אחרי הסקין הראשון'
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.10', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.11', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', eraser:'Eraser', eraserActive:'Eraser on', eraserTitle:'Toggle local eraser', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
@@ -2014,6 +2014,12 @@ function setupCanvas(){
     const rawPressure = typeof e.pressure === 'number' && e.pressure > 0 ? e.pressure : 0.5;
     return {x:e.clientX-r.left,y:e.clientY-r.top,pressure:rawPressure};
   };
+  const getTouchPoint = e => {
+    const touch = (e.touches && e.touches[0]) || (e.changedTouches && e.changedTouches[0]);
+    if(!touch) return null;
+    const r = canvas.getBoundingClientRect();
+    return {x: touch.clientX - r.left, y: touch.clientY - r.top, pressure:0.5};
+  };
   const distance = (a,b) => Math.hypot(a.x-b.x, a.y-b.y);
   const blendPoint = (from, to) => ({
     x: from.x + (to.x - from.x) * smoothWeight,
@@ -2053,56 +2059,69 @@ function setupCanvas(){
     smoothPoint = null;
   };
 
-  // iPad Air 1 usually runs iOS 12, which does NOT support Pointer Events.
-  // The previous canvas listened only to pointerdown/pointermove, so drawing was locked on that device.
-  // Modern browsers still use pointer events; older iOS Safari gets touch + mouse fallbacks.
+  // Older iPads can expose partial PointerEvent support but fail to deliver reliable canvas strokes.
+  // Keep touch listeners active as a real fallback, while ignoring duplicate touch events after pointer strokes.
   canvas.addEventListener('contextmenu', e => e.preventDefault());
+  let lastPointerEventAt = 0;
+  let lastTouchEventAt = 0;
   if(window.PointerEvent){
     canvas.addEventListener('pointerdown', e=>{
       if(e.pointerType === 'mouse' && e.button !== 0) return;
       e.preventDefault();
+      lastPointerEventAt = Date.now();
       if(canvas.setPointerCapture){ canvas.setPointerCapture(e.pointerId); }
       beginStroke(getPoint(e));
     });
     canvas.addEventListener('pointermove', e=>{
       if(!drawing) return;
       e.preventDefault();
+      lastPointerEventAt = Date.now();
       moveStroke(getPoint(e));
     });
     const stopPointer = e=>{
       if(!drawing) return;
       e.preventDefault();
+      lastPointerEventAt = Date.now();
       endStroke();
     };
     canvas.addEventListener('pointerup', stopPointer);
     canvas.addEventListener('pointercancel', stopPointer);
     canvas.addEventListener('pointerleave', stopPointer);
-  } else {
-    const getTouchPoint = e => {
-      const touch = (e.touches && e.touches[0]) || (e.changedTouches && e.changedTouches[0]);
-      if(!touch) return null;
-      const r = canvas.getBoundingClientRect();
-      return {x: touch.clientX - r.left, y: touch.clientY - r.top};
-    };
-    canvas.addEventListener('touchstart', e=>{
-      if(e.touches && e.touches.length > 1) return;
-      e.preventDefault();
-      const p = getTouchPoint(e);
-      if(p) beginStroke(p);
-    }, {passive:false});
-    canvas.addEventListener('touchmove', e=>{
-      if(!drawing) return;
-      e.preventDefault();
-      const p = getTouchPoint(e);
-      if(p) moveStroke(p);
-    }, {passive:false});
-    canvas.addEventListener('touchend', e=>{ e.preventDefault(); endStroke(); }, {passive:false});
-    canvas.addEventListener('touchcancel', e=>{ e.preventDefault(); endStroke(); }, {passive:false});
-
-    canvas.addEventListener('mousedown', e=>{ e.preventDefault(); beginStroke(getPoint(e)); });
-    canvas.addEventListener('mousemove', e=>{ if(!drawing) return; e.preventDefault(); moveStroke(getPoint(e)); });
-    window.addEventListener('mouseup', endStroke);
   }
+  const recentPointerEvent = () => Date.now() - lastPointerEventAt < 700;
+  const recentTouchEvent = () => Date.now() - lastTouchEventAt < 700;
+  canvas.addEventListener('touchstart', e=>{
+    if(recentPointerEvent()) return;
+    if(e.touches && e.touches.length > 1) return;
+    e.preventDefault();
+    lastTouchEventAt = Date.now();
+    const p = getTouchPoint(e);
+    if(p) beginStroke(p);
+  }, {passive:false});
+  canvas.addEventListener('touchmove', e=>{
+    if(recentPointerEvent()) return;
+    if(!drawing) return;
+    e.preventDefault();
+    lastTouchEventAt = Date.now();
+    const p = getTouchPoint(e);
+    if(p) moveStroke(p);
+  }, {passive:false});
+  canvas.addEventListener('touchend', e=>{
+    if(recentPointerEvent()) return;
+    e.preventDefault();
+    lastTouchEventAt = Date.now();
+    endStroke();
+  }, {passive:false});
+  canvas.addEventListener('touchcancel', e=>{
+    if(recentPointerEvent()) return;
+    e.preventDefault();
+    lastTouchEventAt = Date.now();
+    endStroke();
+  }, {passive:false});
+
+  canvas.addEventListener('mousedown', e=>{ if(recentTouchEvent()) return; e.preventDefault(); beginStroke(getPoint(e)); });
+  canvas.addEventListener('mousemove', e=>{ if(recentTouchEvent() || !drawing) return; e.preventDefault(); moveStroke(getPoint(e)); });
+  window.addEventListener('mouseup', endStroke);
 
   window.__drawGuideLines = drawGuideLines;
   window.clearCanvas = function(){ drawGuideLines(); };
