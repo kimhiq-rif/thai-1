@@ -1,6 +1,11 @@
 'use strict';
 
-const APP_VERSION = '1.25.8-sync-url-update';
+const APP_VERSION = '1.25.10-share-ownership-smooth-writing';
+const PROJECT_OWNER = Object.freeze({
+  company:'kimคcode',
+  product:'Thai Trainer',
+  imprint:'kimคcode::thai-trainer::2026-06-04::v1.25.10'
+});
 
 const TONES = [
   { id:'mid', he:'אמצעי', en:'mid' },
@@ -13,35 +18,35 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.8', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.10', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', eraser:'מחק', eraserActive:'מחק פעיל', eraserTitle:'הפעל/כבה מחק מקומי', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
     syncTitle:'סנכרון Google Sheets', syncDescription:'כדי לשמור או לשחזר התקדמות ממכשיר אחר, הזן את אותו שם משתמש ולחץ שמור או טען התקדמות.',
-    saveUrl:'שמור כתובת', resetSyncUrl:'שחזר כתובת ברירת מחדל', syncAdvanced:'אפשרויות מתקדמות', ready:'מוכן.', qa:'בדיקת תקינות פנימית', install:'התקן אותי',
+    saveUrl:'שמור כתובת', resetSyncUrl:'שחזר כתובת ברירת מחדל', syncAdvanced:'אפשרויות מתקדמות', ready:'מוכן.', qa:'בדיקת תקינות פנימית', install:'התקן אותי', shareApp:'שתף אפליקציה',
     level:'רמה', vowelLevel:'לוח תנועות', foundationLevel:'רמה 1.2 — יסודות אותיות ותנועות', questions:'שאלות', mixed:'מעורב', readMeaning:'תאית → עברית', meaningWrite:'עברית → כתיבה בתאית', toneMode:'תאית → טון', romanWrite:'תעתיק → כתיבה בתאית', vowelBoard:'לוח תנועות — כתיבה',
     promptRead:'קרא את המילה וכתוב בעברית את המשמעות + הטון', promptMeaningWrite:'כתוב בתאית את המילה הבאה', promptRoman:'כתוב בתאית לפי התעתיק', promptTone:'מה הטון של המילה / תבנית הטונים?',
     writeHint:'כתוב על הלוח הלבן ואז הצג תשובה', answerThai:'תאית', roman:'תעתיק', meaning:'עברית', tone:'טון', selected:'בחרת', afterAnswer:'עכשיו אפשר לנקות, לכתוב שוב נכון, ואז לסמן צדקתי / טעיתי.', clickThaiLetters:'לחץ על אות/סימן בתשובה כדי לראות מידע קצר.',
     soundQuestion:'מה הצליל של הסימן?', nameQuestion:'מה שם הסימן בתאית?', symbolQuestion:'איזה סימן מתאים לשם?', boardWordQuestion:'איזו מילת לוח שייכת לסימן?', shortcutQuestion:'מה התפקיד של הסימן?',
     sound:'צליל', signName:'שם הסימן', boardWord:'מילת לוח', note:'הערה', emoji:'אימוג׳י', shortcutAnswer:'מקצר תנועה', userLabel:'שם משתמש', userPlaceholder:'לדוגמה: rif', initUserOk:'נוצרה/נמצאה לשונית משתמש ✅', initUserErr:'שגיאת יצירת משתמש: ', saveProgress:'שמור התקדמות', loadProgress:'טען התקדמות', testSync:'בדוק חיבור', openSyncTest:'פתח בדיקה', promptVowelWrite:'כתוב על הלוח את התשובה לפי לוח התנועות', level6McqKicker:'שאלה 1 מתוך 2 — הבנה', level6WriteKicker:'שאלה 2 מתוך 2 — כתיבה', level6Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו נושא.', level12Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו סימן/אות.', level12WriteIntro:'עכשיו כתוב את הסימן/האות או מילת הלוח מאותו פריט.', level6WriteLocked:'בחר קודם תשובה אמריקאית כדי לפתוח את שאלת הכתיבה.', level6Correct:'נכון', level6Wrong:'לא נכון', level6WriteIntro:'עכשיו השתמש באותו סימן/עיצור וכתוב את המילה המבוקשת.', vowelAnswer:'תשובת לוח', thaiName:'שם תאילנדי', localName:'הסבר בעברית', writingRule:'כלל כתיבה', example:'דוגמה', consonantName:'שם העיצור', theme:'לוק',
-    syncSaved:'כתובת הסנכרון נשמרה.', syncUrlReset:'כתובת ברירת המחדל שוחזרה.', uploadOk:'ההתקדמות נשמרה בענן ✅', uploadSent:'ההתקדמות נשלחה לענן ✅', downloadOk:'ההתקדמות נטענה בהצלחה ✅', uploadErr:'שגיאת שמירה: ', downloadErr:'שגיאת טעינה: ', syncTestOk:'החיבור ל־Google Apps Script עובד ✅', syncTestErr:'בדיקת החיבור נכשלה: ', scriptBlockedHe:'הטעינה מגוגל נכשלה. האפליקציה תנסה מסלול חלופי; אם זה חוזר, לחץ "פתח בדיקה" כדי לראות את תשובת Google.',
+    syncSaved:'כתובת הסנכרון נשמרה.', syncUrlReset:'כתובת ברירת המחדל שוחזרה.', uploadOk:'ההתקדמות נשמרה בענן ✅', uploadSent:'ההתקדמות נשלחה לענן ✅', downloadOk:'ההתקדמות נטענה בהצלחה ✅', uploadErr:'שגיאת שמירה: ', downloadErr:'שגיאת טעינה: ', syncTestOk:'החיבור ל־Google Apps Script עובד ✅', syncTestErr:'בדיקת החיבור נכשלה: ', scriptBlockedHe:'הטעינה מגוגל נכשלה. האפליקציה תנסה מסלול חלופי; אם זה חוזר, לחץ "פתח בדיקה" כדי לראות את תשובת Google.', shareOk:'קישור לאפליקציה הועתק ✅', shareErr:'לא הצלחתי לשתף כרגע. אפשר להעתיק את כתובת האתר ידנית.',
     syncWorking:'עובד...', lastSync:'סנכרון אחרון', neverSynced:'עדיין לא סונכרן', localBackup:'גיבוי מקומי', restoreBackup:'שחזר גיבוי', exportOk:'קובץ גיבוי נשמר במחשב ✅', importOk:'הגיבוי נטען בהצלחה ✅', importErr:'שגיאת שחזור גיבוי: ', importConfirm:'לטעון את הגיבוי ולהחליף את ההתקדמות הנוכחית?',
     installReady:'אפשר להתקין את האפליקציה למסך הבית.', installDone:'אם הופיעה בקשת התקנה, אשר אותה בדפדפן.', installIos:'באייפון/אייפד: לחץ שיתוף ואז "הוסף למסך הבית".', installManual:'אם לא נפתחה התקנה אוטומטית, השתמש בתפריט הדפדפן ובחר Install app / Add to Home screen.',
     dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא', voiceCheer:'מחווה קולית ב"צדקתי"', voiceCheerLocked:'ייפתח אחרי הסקין הראשון'
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.8', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.10', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', eraser:'Eraser', eraserActive:'Eraser on', eraserTitle:'Toggle local eraser', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
     syncTitle:'Google Sheets Sync', syncDescription:'To save or restore progress on another device, enter the same username and click save or load progress.',
-    saveUrl:'Save URL', resetSyncUrl:'Restore default URL', syncAdvanced:'Advanced options', ready:'Ready.', qa:'Internal QA check', install:'Install me',
+    saveUrl:'Save URL', resetSyncUrl:'Restore default URL', syncAdvanced:'Advanced options', ready:'Ready.', qa:'Internal QA check', install:'Install me', shareApp:'Share app',
     level:'Level', vowelLevel:'Vowel Board', foundationLevel:'Level 1.2 — Letter & Vowel Foundation', questions:'questions', mixed:'Mixed', readMeaning:'Thai → English', meaningWrite:'English → Thai writing', toneMode:'Thai → tone', romanWrite:'Romanization → Thai writing', vowelBoard:'Vowel Board — writing',
     promptRead:'Read the word and write the meaning + tone in English', promptMeaningWrite:'Write the following word in Thai', promptRoman:'Write Thai from the romanization', promptTone:'What is the tone / tone pattern?',
     writeHint:'Write on the whiteboard, then reveal the answer', answerThai:'Thai', roman:'Romanization', meaning:'English', tone:'Tone', selected:'Selected', afterAnswer:'Now you can clear, rewrite correctly, then mark correct / wrong.', clickThaiLetters:'Tap a Thai letter/sign in the answer to see a short note.',
     soundQuestion:'What sound does this sign make?', nameQuestion:'What is the Thai name of this sign?', symbolQuestion:'Which sign matches this name?', boardWordQuestion:'Which board word belongs to this sign?', shortcutQuestion:'What does this sign do?',
     sound:'Sound', signName:'Sign name', boardWord:'Board word', note:'Note', emoji:'Emoji', shortcutAnswer:'shortens a vowel', userLabel:'Username', userPlaceholder:'e.g. rif', initUserOk:'User sheet created/found ✅', initUserErr:'User init error: ', saveProgress:'Save progress', loadProgress:'Load progress', testSync:'Test connection', openSyncTest:'Open test', promptVowelWrite:'Write the answer on the board from the vowel board', level6McqKicker:'Question 1 of 2 — understanding', level6WriteKicker:'Question 2 of 2 — writing', level6Choose:'Choose one answer. After choosing, a writing question about the same topic will open.', level12Choose:'Choose one answer. After choosing, a writing task about the same sign/letter will open.', level12WriteIntro:'Now write the sign/letter or board word from the same item.', level6WriteLocked:'Choose a multiple-choice answer first to unlock the writing task.', level6Correct:'Correct', level6Wrong:'Not correct', level6WriteIntro:'Now use the same sign/consonant and write the requested word.', vowelAnswer:'Vowel-board answer', thaiName:'Thai name', localName:'English explanation', writingRule:'Writing rule', example:'Example', consonantName:'Consonant name', theme:'Theme',
-    syncSaved:'Sync URL saved.', syncUrlReset:'Default sync URL restored.', uploadOk:'Progress saved to cloud ✅', uploadSent:'Progress was sent to cloud ✅', downloadOk:'Progress loaded successfully ✅', uploadErr:'Save error: ', downloadErr:'Load error: ', syncTestOk:'Google Apps Script connection works ✅', syncTestErr:'Connection test failed: ', scriptBlockedHe:'Google loading failed. The app will try a fallback route; if it repeats, click “Open test” to inspect the Google response.',
+    syncSaved:'Sync URL saved.', syncUrlReset:'Default sync URL restored.', uploadOk:'Progress saved to cloud ✅', uploadSent:'Progress was sent to cloud ✅', downloadOk:'Progress loaded successfully ✅', uploadErr:'Save error: ', downloadErr:'Load error: ', syncTestOk:'Google Apps Script connection works ✅', syncTestErr:'Connection test failed: ', scriptBlockedHe:'Google loading failed. The app will try a fallback route; if it repeats, click “Open test” to inspect the Google response.', shareOk:'App link copied ✅', shareErr:'Could not share right now. Copy the site address manually.',
     syncWorking:'Working...', lastSync:'Last sync', neverSynced:'Not synced yet', localBackup:'Local backup', restoreBackup:'Restore backup', exportOk:'Backup file saved ✅', importOk:'Backup restored ✅', importErr:'Backup restore error: ', importConfirm:'Load this backup and replace current progress?',
     installReady:'The app can be installed to your home screen.', installDone:'If an install prompt appeared, confirm it in the browser.', installIos:'On iPhone/iPad: tap Share, then Add to Home Screen.', installManual:'If automatic install did not open, use the browser menu and choose Install app / Add to Home screen.',
     dailyPractice:'Daily practice', dailyOn:'Daily practice active', dailyDone:'Daily practice complete', dueItems:'Due', weakItems:'Weak', strongItems:'Strong', todayGoal:'Today goal', achievements:'Achievements', penSize:'Pen size', skins:'Premium skins', coachPoints:'coach pts', nextSkin:'Next skin', voiceCheer:'Voice cheer on correct', voiceCheerLocked:'Unlocks after first skin'
@@ -1006,6 +1011,7 @@ let selectedVowelAnswer = null;
 let level6McqAnswered = false;
 let drawing = false;
 let lastPoint = null;
+let smoothPoint = null;
 let eraserMode = false;
 
 const el = id => document.getElementById(id);
@@ -1117,6 +1123,7 @@ function setupEvents(){
   el('syncUrl').addEventListener('input', updateSyncHealth);
   el('langToggle').addEventListener('click', toggleLanguage);
   el('themeToggle').addEventListener('click', cycleTheme);
+  if(el('shareAppBtn')) el('shareAppBtn').addEventListener('click', shareApp);
   el('userIdInput').addEventListener('keydown', e => { if(e.key === 'Enter'){ e.preventDefault(); initUserSheet(); } });
   el('userIdInput').addEventListener('blur', () => { const v = cleanUserId(el('userIdInput').value); if(v && v !== state.userId){ state.userId=v; saveState(); updateSyncHealth(); } });
 }
@@ -1167,6 +1174,10 @@ function applyLanguage(){
   el('mainTitle').textContent = t('title');
   el('subtitleText').textContent = t('subtitle');
   el('langToggle').textContent = t('langButton');
+  if(el('shareAppBtn')){
+    el('shareAppBtn').setAttribute('aria-label', t('shareApp'));
+    el('shareAppBtn').setAttribute('title', t('shareApp'));
+  }
   applyTheme();
   el('installBtn').textContent = t('install');
   el('levelLabel').textContent = t('levelLabel');
@@ -1236,6 +1247,34 @@ async function installApp(){
     }
   }
   setSyncStatus(isIos ? t('installIos') : t('installManual'), 'ok');
+}
+async function shareApp(){
+  const url = window.location.href.split('#')[0];
+  const title = 'Thai Trainer';
+  const text = isHebrew()
+    ? 'אפליקציית תרגול תאית'
+    : 'Thai practice app';
+  try{
+    if(navigator.share){
+      await navigator.share({title, text, url});
+      return;
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      await navigator.clipboard.writeText(url);
+      setSyncStatus(t('shareOk'), 'ok');
+      return;
+    }
+    const temp = document.createElement('input');
+    temp.value = url;
+    document.body.appendChild(temp);
+    temp.select();
+    document.execCommand('copy');
+    temp.remove();
+    setSyncStatus(t('shareOk'), 'ok');
+  }catch(err){
+    if(err && err.name === 'AbortError') return;
+    setSyncStatus(t('shareErr'), 'error');
+  }
 }
 function pickMode(){
   const selected = el('modeSelect').value;
@@ -1927,6 +1966,9 @@ function toggleEraserMode(){
 }
 
 function setupCanvas(){
+  const smoothWeight = 0.68;
+  const minPointDistance = 1.6;
+
   function drawGuideLines(){
     const rect = canvas.getBoundingClientRect();
     const w = rect.width;
@@ -1956,38 +1998,59 @@ function setupCanvas(){
   if(window.visualViewport) window.visualViewport.addEventListener('resize', scheduleResize);
   resizeCanvas();
   function applyToolStyle(){
-    const rect = canvas.getBoundingClientRect();
     ctx.globalCompositeOperation = eraserMode ? 'destination-out' : 'source-over';
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
+    ctx.miterLimit = 2;
     const penWidth = Math.max(3, Math.min(10, Number(state.penSize) || 5));
     ctx.lineWidth = eraserMode ? Math.max(24, penWidth * 6) : penWidth;
     ctx.strokeStyle = '#020617';
+    ctx.shadowColor = eraserMode ? 'transparent' : 'rgba(2, 6, 23, .10)';
+    ctx.shadowBlur = eraserMode ? 0 : 0.45;
   }
 
   const getPoint = e => {
     const r = canvas.getBoundingClientRect();
-    return {x:e.clientX-r.left,y:e.clientY-r.top};
+    const rawPressure = typeof e.pressure === 'number' && e.pressure > 0 ? e.pressure : 0.5;
+    return {x:e.clientX-r.left,y:e.clientY-r.top,pressure:rawPressure};
   };
+  const distance = (a,b) => Math.hypot(a.x-b.x, a.y-b.y);
+  const blendPoint = (from, to) => ({
+    x: from.x + (to.x - from.x) * smoothWeight,
+    y: from.y + (to.y - from.y) * smoothWeight,
+    pressure: to.pressure || from.pressure || 0.5
+  });
 
   const beginStroke = point => {
     applyToolStyle();
     drawing = true;
     lastPoint = point;
+    smoothPoint = point;
     ctx.beginPath();
     ctx.moveTo(point.x, point.y);
   };
   const moveStroke = point => {
     if(!drawing) return;
     applyToolStyle();
-    ctx.lineTo(point.x, point.y);
+    const nextPoint = smoothPoint ? blendPoint(smoothPoint, point) : point;
+    if(lastPoint && distance(lastPoint, nextPoint) < minPointDistance) return;
+    const midPoint = lastPoint
+      ? {x:(lastPoint.x + nextPoint.x) / 2, y:(lastPoint.y + nextPoint.y) / 2}
+      : nextPoint;
+    ctx.quadraticCurveTo(lastPoint.x, lastPoint.y, midPoint.x, midPoint.y);
     ctx.stroke();
-    lastPoint = point;
+    lastPoint = nextPoint;
+    smoothPoint = nextPoint;
   };
   const endStroke = () => {
     if(!drawing) return;
+    if(lastPoint){
+      ctx.lineTo(lastPoint.x, lastPoint.y);
+      ctx.stroke();
+    }
     drawing = false;
     lastPoint = null;
+    smoothPoint = null;
   };
 
   // iPad Air 1 usually runs iOS 12, which does NOT support Pointer Events.
@@ -2114,7 +2177,7 @@ function downloadTextFile(filename, text){
 }
 function exportLocalBackup(){
   try{
-    const backup = {...state, exportedAt: Date.now(), appVersion: APP_VERSION};
+    const backup = {...state, exportedAt: Date.now(), appVersion: APP_VERSION, owner: PROJECT_OWNER};
     const stamp = new Date().toISOString().slice(0,19).replace(/[:T]/g,'-');
     downloadTextFile(`thai-trainer-backup-${cleanUserId(state.userId)}-${stamp}.json`, JSON.stringify(backup, null, 2));
     setSyncStatus(t('exportOk'), 'ok');

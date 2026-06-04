@@ -8,7 +8,7 @@ html,body{margin:0;min-height:100%;background:radial-gradient(circle at top,#102
 body{padding:env(safe-area-inset-top) 14px env(safe-area-inset-bottom);min-height:100vh;min-height:-webkit-fill-available}
 button,select,input{font:inherit}
 .app{width:min(980px,100%);margin:0 auto;padding:18px 0 42px}
-.hero{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:10px 0 18px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.hero{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:10px 0 18px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.icon-button{width:56px;min-width:56px;padding:0;font-size:28px;line-height:1;display:inline-flex;align-items:center;justify-content:center}
 .eyebrow{color:var(--blue);font-weight:800;letter-spacing:.04em;margin:0 0 6px}
 h1{font-size:clamp(28px,7vw,54px);line-height:1.08;margin:0}.subtitle{margin:10px 0 0;color:var(--muted);font-size:clamp(16px,4vw,22px);line-height:1.5}
 .panel{background:linear-gradient(180deg,rgba(19,35,60,.92),rgba(13,27,47,.95));border:1px solid var(--border);border-radius:24px;padding:18px;margin:14px 0;box-shadow:var(--shadow)}
