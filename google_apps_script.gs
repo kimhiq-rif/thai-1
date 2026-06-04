@@ -1,4 +1,4 @@
-// Thai Trainer — Google Apps Script sync endpoint v1.8
+// Thai Trainer — Google Apps Script sync endpoint v1.10
 // Central spreadsheet, one tab per username.
 // Supports JSONP GET and hidden-form POST fallback.
 // Paste into Extensions -> Apps Script inside the Google Sheet.
@@ -77,6 +77,16 @@ function isTrainerStatePayload_(payload) {
   }
 }
 
+function decodePayloadObject_(payload) {
+  const text = decodePayloadText_(payload);
+  if (!text) return null;
+  try {
+    return JSON.parse(text);
+  } catch (err) {
+    return null;
+  }
+}
+
 function decodePayloadText_(payload) {
   try {
     return Utilities.newBlob(Utilities.base64DecodeWebSafe(String(payload))).getDataAsString('UTF-8');
@@ -94,7 +104,7 @@ function handle_(params) {
   const userId = cleanUserId_(params.userId || DEFAULT_USER_ID);
 
   if (action === 'ping') {
-    return { ok: true, message: 'Thai Trainer sync is working', time: new Date().toISOString() };
+    return { ok: true, message: 'Thai Trainer sync is working', version: '1.10', time: new Date().toISOString() };
   }
 
   if (action === 'inituser' || action === 'init') {
@@ -130,7 +140,7 @@ function handle_(params) {
     const res = getUserSheet_(userId, false);
     if (!res.sh) return { ok: true, userId: res.userId, sheetName: res.sheetName, updatedAt: null, data: null };
     const latest = latestPayload_(res.sh);
-    return { ok: true, userId: res.userId, sheetName: res.sheetName, updatedAt: latest.updatedAt, data: latest.data };
+    return { ok: true, userId: res.userId, sheetName: res.sheetName, updatedAt: latest.updatedAt, data: latest.data, state: latest.data ? decodePayloadObject_(latest.data) : null };
   }
 
   throw new Error('Unsupported action: ' + action);

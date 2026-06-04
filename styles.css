@@ -157,6 +157,11 @@ canvas.eraser-mode{cursor:cell}
 .sync-panel .status.is-loading{color:#cffafe;border-color:rgba(34,211,238,.46);background:linear-gradient(90deg,rgba(8,47,73,.26),rgba(34,211,238,.16),rgba(8,47,73,.26));background-size:220% 100%;animation:syncPulse 1.4s ease-in-out infinite}
 button:disabled{opacity:.58;cursor:progress;filter:saturate(.75)}
 .sync-panel .button-grid{grid-template-columns:repeat(4,minmax(0,1fr));}
+.sync-primary-actions{grid-template-columns:repeat(3,minmax(0,1fr))}
+.sync-secondary-actions{grid-template-columns:repeat(3,minmax(0,1fr))}
+.sync-advanced{margin:12px 0;border:1px solid var(--border);border-radius:16px;background:rgba(2,6,23,.22);padding:10px 12px}
+.sync-advanced summary{cursor:pointer;color:var(--muted);font-weight:900}
+.sync-advanced input{margin-top:12px}
 @keyframes syncPulse{0%{background-position:0 0}100%{background-position:220% 0}}
 @media (max-width:900px){.sync-panel .button-grid{grid-template-columns:1fr 1fr;}}
 @media (max-width:560px){.sync-panel .button-grid,.sync-health{grid-template-columns:1fr;}}

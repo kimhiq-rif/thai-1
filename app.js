@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.6-home-screen-icon';
+const APP_VERSION = '1.25.8-sync-url-update';
 
 const TONES = [
   { id:'mid', he:'אמצעי', en:'mid' },
@@ -13,35 +13,37 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.6', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.8', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', eraser:'מחק', eraserActive:'מחק פעיל', eraserTitle:'הפעל/כבה מחק מקומי', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
-    syncTitle:'סנכרון Google Sheets', syncDescription:'הדבק כאן את כתובת ה־Web App של Google Apps Script. בלי כתובת — ההתקדמות נשמרת רק במכשיר הזה.',
-    saveUrl:'שמור כתובת', ready:'מוכן.', qa:'בדיקת תקינות פנימית', install:'התקנה למסך הבית',
+    syncTitle:'סנכרון Google Sheets', syncDescription:'כדי לשמור או לשחזר התקדמות ממכשיר אחר, הזן את אותו שם משתמש ולחץ שמור או טען התקדמות.',
+    saveUrl:'שמור כתובת', resetSyncUrl:'שחזר כתובת ברירת מחדל', syncAdvanced:'אפשרויות מתקדמות', ready:'מוכן.', qa:'בדיקת תקינות פנימית', install:'התקן אותי',
     level:'רמה', vowelLevel:'לוח תנועות', foundationLevel:'רמה 1.2 — יסודות אותיות ותנועות', questions:'שאלות', mixed:'מעורב', readMeaning:'תאית → עברית', meaningWrite:'עברית → כתיבה בתאית', toneMode:'תאית → טון', romanWrite:'תעתיק → כתיבה בתאית', vowelBoard:'לוח תנועות — כתיבה',
     promptRead:'קרא את המילה וכתוב בעברית את המשמעות + הטון', promptMeaningWrite:'כתוב בתאית את המילה הבאה', promptRoman:'כתוב בתאית לפי התעתיק', promptTone:'מה הטון של המילה / תבנית הטונים?',
     writeHint:'כתוב על הלוח הלבן ואז הצג תשובה', answerThai:'תאית', roman:'תעתיק', meaning:'עברית', tone:'טון', selected:'בחרת', afterAnswer:'עכשיו אפשר לנקות, לכתוב שוב נכון, ואז לסמן צדקתי / טעיתי.', clickThaiLetters:'לחץ על אות/סימן בתשובה כדי לראות מידע קצר.',
     soundQuestion:'מה הצליל של הסימן?', nameQuestion:'מה שם הסימן בתאית?', symbolQuestion:'איזה סימן מתאים לשם?', boardWordQuestion:'איזו מילת לוח שייכת לסימן?', shortcutQuestion:'מה התפקיד של הסימן?',
     sound:'צליל', signName:'שם הסימן', boardWord:'מילת לוח', note:'הערה', emoji:'אימוג׳י', shortcutAnswer:'מקצר תנועה', userLabel:'שם משתמש', userPlaceholder:'לדוגמה: rif', initUserOk:'נוצרה/נמצאה לשונית משתמש ✅', initUserErr:'שגיאת יצירת משתמש: ', saveProgress:'שמור התקדמות', loadProgress:'טען התקדמות', testSync:'בדוק חיבור', openSyncTest:'פתח בדיקה', promptVowelWrite:'כתוב על הלוח את התשובה לפי לוח התנועות', level6McqKicker:'שאלה 1 מתוך 2 — הבנה', level6WriteKicker:'שאלה 2 מתוך 2 — כתיבה', level6Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו נושא.', level12Choose:'בחר תשובה אחת. אחרי הבחירה תיפתח שאלת כתיבה על אותו סימן/אות.', level12WriteIntro:'עכשיו כתוב את הסימן/האות או מילת הלוח מאותו פריט.', level6WriteLocked:'בחר קודם תשובה אמריקאית כדי לפתוח את שאלת הכתיבה.', level6Correct:'נכון', level6Wrong:'לא נכון', level6WriteIntro:'עכשיו השתמש באותו סימן/עיצור וכתוב את המילה המבוקשת.', vowelAnswer:'תשובת לוח', thaiName:'שם תאילנדי', localName:'הסבר בעברית', writingRule:'כלל כתיבה', example:'דוגמה', consonantName:'שם העיצור', theme:'לוק',
-    syncSaved:'כתובת הסנכרון נשמרה.', uploadOk:'העלאה לענן הצליחה ✅', uploadSent:'העלאה לענן נשלחה בהצלחה ✅', downloadOk:'הורדה מהענן הצליחה ✅', uploadErr:'שגיאת העלאה: ', downloadErr:'שגיאת הורדה: ', syncTestOk:'החיבור ל־Google Apps Script עובד ✅', syncTestErr:'בדיקת החיבור נכשלה: ', scriptBlockedHe:'הדפדפן חסם טעינת סקריפט מ־Google. נסה לכבות VPN/AdBlock/Tracking Protection או לפתוח ב־Chrome/Safari. אפשר גם ללחוץ "פתח בדיקה" ולראות אם הכתובת עובדת.',
+    syncSaved:'כתובת הסנכרון נשמרה.', syncUrlReset:'כתובת ברירת המחדל שוחזרה.', uploadOk:'ההתקדמות נשמרה בענן ✅', uploadSent:'ההתקדמות נשלחה לענן ✅', downloadOk:'ההתקדמות נטענה בהצלחה ✅', uploadErr:'שגיאת שמירה: ', downloadErr:'שגיאת טעינה: ', syncTestOk:'החיבור ל־Google Apps Script עובד ✅', syncTestErr:'בדיקת החיבור נכשלה: ', scriptBlockedHe:'הטעינה מגוגל נכשלה. האפליקציה תנסה מסלול חלופי; אם זה חוזר, לחץ "פתח בדיקה" כדי לראות את תשובת Google.',
     syncWorking:'עובד...', lastSync:'סנכרון אחרון', neverSynced:'עדיין לא סונכרן', localBackup:'גיבוי מקומי', restoreBackup:'שחזר גיבוי', exportOk:'קובץ גיבוי נשמר במחשב ✅', importOk:'הגיבוי נטען בהצלחה ✅', importErr:'שגיאת שחזור גיבוי: ', importConfirm:'לטעון את הגיבוי ולהחליף את ההתקדמות הנוכחית?',
+    installReady:'אפשר להתקין את האפליקציה למסך הבית.', installDone:'אם הופיעה בקשת התקנה, אשר אותה בדפדפן.', installIos:'באייפון/אייפד: לחץ שיתוף ואז "הוסף למסך הבית".', installManual:'אם לא נפתחה התקנה אוטומטית, השתמש בתפריט הדפדפן ובחר Install app / Add to Home screen.',
     dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא', voiceCheer:'מחווה קולית ב"צדקתי"', voiceCheerLocked:'ייפתח אחרי הסקין הראשון'
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.6', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.8', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', eraser:'Eraser', eraserActive:'Eraser on', eraserTitle:'Toggle local eraser', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
-    syncTitle:'Google Sheets Sync', syncDescription:'Paste your Google Apps Script Web App URL here. Without a URL, progress is saved only on this device.',
-    saveUrl:'Save URL', ready:'Ready.', qa:'Internal QA check', install:'Install app',
+    syncTitle:'Google Sheets Sync', syncDescription:'To save or restore progress on another device, enter the same username and click save or load progress.',
+    saveUrl:'Save URL', resetSyncUrl:'Restore default URL', syncAdvanced:'Advanced options', ready:'Ready.', qa:'Internal QA check', install:'Install me',
     level:'Level', vowelLevel:'Vowel Board', foundationLevel:'Level 1.2 — Letter & Vowel Foundation', questions:'questions', mixed:'Mixed', readMeaning:'Thai → English', meaningWrite:'English → Thai writing', toneMode:'Thai → tone', romanWrite:'Romanization → Thai writing', vowelBoard:'Vowel Board — writing',
     promptRead:'Read the word and write the meaning + tone in English', promptMeaningWrite:'Write the following word in Thai', promptRoman:'Write Thai from the romanization', promptTone:'What is the tone / tone pattern?',
     writeHint:'Write on the whiteboard, then reveal the answer', answerThai:'Thai', roman:'Romanization', meaning:'English', tone:'Tone', selected:'Selected', afterAnswer:'Now you can clear, rewrite correctly, then mark correct / wrong.', clickThaiLetters:'Tap a Thai letter/sign in the answer to see a short note.',
     soundQuestion:'What sound does this sign make?', nameQuestion:'What is the Thai name of this sign?', symbolQuestion:'Which sign matches this name?', boardWordQuestion:'Which board word belongs to this sign?', shortcutQuestion:'What does this sign do?',
     sound:'Sound', signName:'Sign name', boardWord:'Board word', note:'Note', emoji:'Emoji', shortcutAnswer:'shortens a vowel', userLabel:'Username', userPlaceholder:'e.g. rif', initUserOk:'User sheet created/found ✅', initUserErr:'User init error: ', saveProgress:'Save progress', loadProgress:'Load progress', testSync:'Test connection', openSyncTest:'Open test', promptVowelWrite:'Write the answer on the board from the vowel board', level6McqKicker:'Question 1 of 2 — understanding', level6WriteKicker:'Question 2 of 2 — writing', level6Choose:'Choose one answer. After choosing, a writing question about the same topic will open.', level12Choose:'Choose one answer. After choosing, a writing task about the same sign/letter will open.', level12WriteIntro:'Now write the sign/letter or board word from the same item.', level6WriteLocked:'Choose a multiple-choice answer first to unlock the writing task.', level6Correct:'Correct', level6Wrong:'Not correct', level6WriteIntro:'Now use the same sign/consonant and write the requested word.', vowelAnswer:'Vowel-board answer', thaiName:'Thai name', localName:'English explanation', writingRule:'Writing rule', example:'Example', consonantName:'Consonant name', theme:'Theme',
-    syncSaved:'Sync URL saved.', uploadOk:'Cloud upload succeeded ✅', uploadSent:'Cloud upload was sent ✅', downloadOk:'Cloud download succeeded ✅', uploadErr:'Upload error: ', downloadErr:'Download error: ', syncTestOk:'Google Apps Script connection works ✅', syncTestErr:'Connection test failed: ', scriptBlockedHe:'The browser blocked loading a Google script. Try disabling VPN/AdBlock/Tracking Protection or open in Chrome/Safari. You can also click “Open test” to verify the URL.',
+    syncSaved:'Sync URL saved.', syncUrlReset:'Default sync URL restored.', uploadOk:'Progress saved to cloud ✅', uploadSent:'Progress was sent to cloud ✅', downloadOk:'Progress loaded successfully ✅', uploadErr:'Save error: ', downloadErr:'Load error: ', syncTestOk:'Google Apps Script connection works ✅', syncTestErr:'Connection test failed: ', scriptBlockedHe:'Google loading failed. The app will try a fallback route; if it repeats, click “Open test” to inspect the Google response.',
     syncWorking:'Working...', lastSync:'Last sync', neverSynced:'Not synced yet', localBackup:'Local backup', restoreBackup:'Restore backup', exportOk:'Backup file saved ✅', importOk:'Backup restored ✅', importErr:'Backup restore error: ', importConfirm:'Load this backup and replace current progress?',
+    installReady:'The app can be installed to your home screen.', installDone:'If an install prompt appeared, confirm it in the browser.', installIos:'On iPhone/iPad: tap Share, then Add to Home Screen.', installManual:'If automatic install did not open, use the browser menu and choose Install app / Add to Home screen.',
     dailyPractice:'Daily practice', dailyOn:'Daily practice active', dailyDone:'Daily practice complete', dueItems:'Due', weakItems:'Weak', strongItems:'Strong', todayGoal:'Today goal', achievements:'Achievements', penSize:'Pen size', skins:'Premium skins', coachPoints:'coach pts', nextSkin:'Next skin', voiceCheer:'Voice cheer on correct', voiceCheerLocked:'Unlocks after first skin'
   }
 };
@@ -995,7 +997,7 @@ const THEMES = [
   {id:'festival', he:'Lantern Festival 🏮', en:'Lantern Festival 🏮', points:420, premium:true},
   {id:'master', he:'Thai Master Aura 🔥', en:'Thai Master Aura 🔥', points:540, premium:true}
 ];
-const DEFAULT_SYNC_URL = 'https://script.google.com/macros/s/AKfycbzbr2OfX-0WVpJqPuMgQ_ye-kUCGdyAjGvF3Mv3wCugy_n9_x36x6l6ld6oecD4F7Ru/exec';
+const DEFAULT_SYNC_URL = 'https://script.google.com/macros/s/AKfycbzGmWyS8bXJJMPzV9gMB9yQ1PYWO-IjAp0iPmSVt7Y-ZNxX2fFMXjR0UKZvIZV3ABZG/exec';
 let deferredInstallPrompt = null;
 let state = loadState();
 let current = null;
@@ -1011,7 +1013,7 @@ const canvas = el('writeCanvas');
 const ctx = canvas.getContext('2d');
 
 function defaultState(){
-  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false}, achievements:{}, penSize:5, syncUrl:'', lastSync:null, lang:'he', userId:'rif', theme:'ocean' };
+  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false}, achievements:{}, penSize:5, syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean' };
 }
 
 async function disableOldServiceWorkers(){
@@ -1038,7 +1040,8 @@ function saveState(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); 
 
 function init(){
   setupLevels(); setupModes(); setupCanvas(); setupEvents(); setupPwa(); applyTheme(); applyLanguage(); runQA();
-  if(!state.syncUrl){ state.syncUrl = DEFAULT_SYNC_URL; saveState(); }
+  // v1.25.7: keep sync simple for normal users. Old bad URLs saved in localStorage are reset to the official endpoint.
+  if(!state.syncUrl || (!state.syncUrlCustom && state.syncUrl !== DEFAULT_SYNC_URL)){ state.syncUrl = DEFAULT_SYNC_URL; state.syncUrlCustom = false; saveState(); }
   el('syncUrl').value = state.syncUrl || DEFAULT_SYNC_URL;
   el('userIdInput').value = state.userId || 'rif';
   if(el('penSizeInput')) el('penSizeInput').value = String(state.penSize || 5);
@@ -1103,6 +1106,7 @@ function setupEvents(){
   el('levelSelect').addEventListener('change', newQuestion);
   el('modeSelect').addEventListener('change', newQuestion);
   el('saveSyncUrlBtn').addEventListener('click', saveSyncUrl);
+  if(el('resetSyncUrlBtn')) el('resetSyncUrlBtn').addEventListener('click', resetSyncUrl);
   el('syncUploadBtn').addEventListener('click', syncUpload);
   el('syncDownloadBtn').addEventListener('click', syncDownload);
   if(el('syncTestBtn')) el('syncTestBtn').addEventListener('click', syncTest);
@@ -1117,8 +1121,15 @@ function setupEvents(){
   el('userIdInput').addEventListener('blur', () => { const v = cleanUserId(el('userIdInput').value); if(v && v !== state.userId){ state.userId=v; saveState(); updateSyncHealth(); } });
 }
 function setupPwa(){
-  window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredInstallPrompt=e; el('installBtn').hidden=false; });
-  el('installBtn').addEventListener('click', async()=>{ if(deferredInstallPrompt){ deferredInstallPrompt.prompt(); deferredInstallPrompt=null; el('installBtn').hidden=true; }});
+  const installBtn = el('installBtn');
+  if(!installBtn) return;
+  installBtn.hidden = false;
+  window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    deferredInstallPrompt = e;
+    setSyncStatus(t('installReady'), 'ok');
+  });
+  installBtn.addEventListener('click', installApp);
 }
 
 function currentTheme(){ return THEMES.find(x=>x.id===state.theme) || THEMES[0]; }
@@ -1178,11 +1189,13 @@ function applyLanguage(){
   if(el('penSizeLabel')) el('penSizeLabel').textContent = t('penSize');
   if(el('skinsTitle')) el('skinsTitle').textContent = t('skins');
   if(el('voiceCheerLabel')) el('voiceCheerLabel').textContent = t('voiceCheer');
+  if(el('syncAdvancedSummary')) el('syncAdvancedSummary').textContent = t('syncAdvanced');
   el('syncTitle').textContent = t('syncTitle');
   el('syncDescription').textContent = t('syncDescription');
   el('userLabel').textContent = t('userLabel');
   el('userIdInput').placeholder = t('userPlaceholder');
   el('saveSyncUrlBtn').textContent = t('saveUrl');
+  if(el('resetSyncUrlBtn')) el('resetSyncUrlBtn').textContent = t('resetSyncUrl');
   el('syncUploadBtn').textContent = t('saveProgress');
   el('syncDownloadBtn').textContent = t('loadProgress');
   if(el('syncTestBtn')) el('syncTestBtn').textContent = t('testSync');
@@ -1201,6 +1214,28 @@ function toggleLanguage(){
   state.lang = isHebrew() ? 'en' : 'he';
   saveState();
   applyLanguage();
+}
+async function installApp(){
+  const isIos = /iphone|ipad|ipod/i.test(navigator.userAgent || '');
+  const isStandalone = window.matchMedia && window.matchMedia('(display-mode: standalone)').matches;
+  const isAppleStandalone = window.navigator && window.navigator.standalone;
+  if(isStandalone || isAppleStandalone){
+    setSyncStatus(isHebrew() ? 'האפליקציה כבר פתוחה כקיצור דרך מותקן.' : 'The app is already running as an installed shortcut.', 'ok');
+    return;
+  }
+  if(deferredInstallPrompt){
+    try{
+      deferredInstallPrompt.prompt();
+      await deferredInstallPrompt.userChoice.catch(()=>null);
+      deferredInstallPrompt = null;
+      setSyncStatus(t('installDone'), 'ok');
+      return;
+    }catch(err){
+      setSyncStatus(t('installManual'), 'error');
+      return;
+    }
+  }
+  setSyncStatus(isIos ? t('installIos') : t('installManual'), 'ok');
 }
 function pickMode(){
   const selected = el('modeSelect').value;
@@ -2035,12 +2070,21 @@ async function initUserSheet(){
 }
 function saveSyncUrl(silent=false){
   state.syncUrl = normalizeSyncUrlValue(el('syncUrl').value.trim() || state.syncUrl || DEFAULT_SYNC_URL);
+  state.syncUrlCustom = state.syncUrl !== DEFAULT_SYNC_URL;
   el('syncUrl').value = state.syncUrl;
   state.userId = cleanUserId(el('userIdInput').value || state.userId);
   el('userIdInput').value = state.userId;
   saveState();
   updateSyncHealth();
   if(!silent) setSyncStatus(t('syncSaved'), 'ok');
+}
+function resetSyncUrl(){
+  state.syncUrl = DEFAULT_SYNC_URL;
+  state.syncUrlCustom = false;
+  el('syncUrl').value = DEFAULT_SYNC_URL;
+  saveState();
+  updateSyncHealth();
+  setSyncStatus(t('syncUrlReset'), 'ok');
 }
 function formatTime(ts){
   if(!ts) return t('neverSynced');
@@ -2050,12 +2094,12 @@ function formatTime(ts){
 function updateSyncHealth(){
   if(el('lastSyncValue')) el('lastSyncValue').textContent = formatTime(state.lastSync);
   if(el('syncUrlPreview')){
-    const url = normalizeSyncUrlValue(state.syncUrl || el('syncUrl')?.value || '');
+    const url = normalizeSyncUrlValue(state.syncUrl || DEFAULT_SYNC_URL);
     el('syncUrlPreview').textContent = url ? url.replace(/^https:\/\/script\.google\.com\/macros\/s\//, '.../') : (isHebrew() ? 'לא הוגדר' : 'Not set');
   }
 }
 function setSyncBusy(isBusy){
-  const ids = ['saveSyncUrlBtn','syncUploadBtn','syncDownloadBtn','syncTestBtn','openSyncTestBtn','exportBackupBtn','importBackupBtn'];
+  const ids = ['saveSyncUrlBtn','resetSyncUrlBtn','syncUploadBtn','syncDownloadBtn','syncTestBtn','openSyncTestBtn','exportBackupBtn','importBackupBtn'];
   for(const id of ids){ if(el(id)) el(id).disabled = !!isBusy; }
   if(el('syncStatus')) el('syncStatus').classList.toggle('is-loading', !!isBusy);
 }
@@ -2099,7 +2143,27 @@ function encodePayload(obj){
   return btoa(unescape(encodeURIComponent(JSON.stringify(obj))));
 }
 function decodePayload(str){
-  return JSON.parse(decodeURIComponent(escape(atob(str))));
+  if(str && typeof str === 'object') return str;
+  const raw = String(str || '').trim();
+  if(!raw) throw new Error(isHebrew() ? 'הענן החזיר שמירה ריקה.' : 'The cloud returned an empty save.');
+  if(raw.startsWith('<')) throw new Error(isHebrew() ? 'הסקריפט החזיר דף HTML במקום נתוני התקדמות. ודא שה־Apps Script נפרס כ-Web app עם גישה Anyone.' : 'The script returned HTML instead of progress data. Make sure Apps Script is deployed as a Web app with Anyone access.');
+  if(raw.startsWith('{')) return JSON.parse(raw);
+  const variants = [
+    raw,
+    raw.replace(/-/g, '+').replace(/_/g, '/'),
+  ].map(value => value + '='.repeat((4 - (value.length % 4)) % 4));
+  let lastErr = null;
+  for(const value of variants){
+    try{
+      const binary = atob(value);
+      const bytes = Uint8Array.from(binary, ch => ch.charCodeAt(0));
+      const text = new TextDecoder('utf-8').decode(bytes);
+      return JSON.parse(text);
+    }catch(err){
+      lastErr = err;
+    }
+  }
+  throw new Error((isHebrew() ? 'השמירה בענן אינה מקודדת בפורמט שהאפליקציה יודעת לקרוא: ' : 'Cloud save is not encoded in a readable format: ') + (lastErr?.message || 'decode failed'));
 }
 function isTrainerState(value){
   return !!(value && typeof value === 'object' && (
@@ -2128,7 +2192,7 @@ function normalizeSyncUrlValue(value){
   return url;
 }
 function normalizedSyncUrl(){
-  const url = normalizeSyncUrlValue(state.syncUrl || el('syncUrl').value || DEFAULT_SYNC_URL || '');
+  const url = normalizeSyncUrlValue(state.syncUrl || DEFAULT_SYNC_URL || el('syncUrl')?.value || '');
   if(!url) throw new Error('אין כתובת Apps Script');
   if(!/^https:\/\/script\.google\.com\/macros\/s\/[^/?#]+\/exec(?:\?.*)?$/.test(url)){
     throw new Error('כתובת הסקריפט אינה תקינה. צריך URL שמתחיל ב-script.google.com/macros/s ומסתיים ב-/exec');
@@ -2163,6 +2227,24 @@ function jsonpRequest(params, timeoutMs=12000){
       document.body.appendChild(script);
     }catch(err){ reject(err); }
   });
+}
+function validateSyncResponse(json){
+  if(!json || typeof json !== 'object') throw new Error(isHebrew() ? 'תשובת הסנכרון אינה אובייקט תקין.' : 'Sync response is not a valid object.');
+  if(!json.ok) throw new Error(json.error || 'sync failed');
+  return json;
+}
+async function downloadViaBestRoute(userId){
+  let firstErr = null;
+  try{
+    return validateSyncResponse(await jsonpRequest({action:'download', userId}));
+  }catch(err){
+    firstErr = err;
+  }
+  try{
+    return validateSyncResponse(await iframeBridgeDownload({userId}));
+  }catch(err){
+    throw new Error((firstErr?.message || 'primary route failed') + ' | fallback: ' + err.message);
+  }
 }
 async function syncTest(){
   try{
@@ -2276,21 +2358,20 @@ async function syncDownload(){
     setSyncBusy(true);
     setSyncStatus(t('syncWorking'), 'loading');
     const userId = cleanUserId(el('userIdInput').value || state.userId);
-    let json;
-    try{
-      json = await jsonpRequest({action:'download', userId});
-    }catch(jsonpErr){
-      json = await iframeBridgeDownload({userId});
-    }
-    if(!json.ok) throw new Error(json.error || 'sync failed');
-    if(!json.data) throw new Error(noCloudDataMessage(userId));
-    const cloudState = decodePayload(json.data);
+    state.userId = userId;
+    state.syncUrl = state.syncUrl || DEFAULT_SYNC_URL;
+    saveState();
+    let json = await downloadViaBestRoute(userId);
+    if(!json.data && !json.state) throw new Error(noCloudDataMessage(userId));
+    const cloudState = json.state && isTrainerState(json.state) ? json.state : decodePayload(json.data);
     if(!isTrainerState(cloudState)) throw new Error(invalidCloudDataMessage(userId));
-    state = {...defaultState(),...cloudState, syncUrl:state.syncUrl, lang:state.lang, userId: cleanUserId(el('userIdInput').value || state.userId)};
+    state = {...defaultState(),...cloudState, syncUrl:state.syncUrl || DEFAULT_SYNC_URL, lang:state.lang, userId};
+    el('userIdInput').value = userId;
+    el('syncUrl').value = state.syncUrl || DEFAULT_SYNC_URL;
     saveState(); updateStats(); newQuestion();
     state.lastSync = Date.now(); saveState(); updateSyncHealth();
     setSyncStatus(t('downloadOk'), 'ok');
-  } catch(err){ setSyncStatus(t('downloadErr')+err.message+(isHebrew()?' — אם זה עובד בחלון פרטי, הדפדפן חוסם טעינת סקריפט של Google.':' — if it works in a private window, the browser is blocking the Google script.'), 'error'); }
+  } catch(err){ setSyncStatus(t('downloadErr')+err.message, 'error'); }
   finally{ setSyncBusy(false); }
 }
 function setSyncStatus(msg, type='neutral'){
