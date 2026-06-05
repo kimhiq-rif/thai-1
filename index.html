@@ -8,16 +8,16 @@
   <meta name="apple-mobile-web-app-title" content="Thai Trainer" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <title>Thai Trainer — תרגול תאית</title>
-  <link rel="manifest" href="manifest.webmanifest?v=1.25.18" />
-  <link rel="icon" type="image/svg+xml" href="assets/icons/thai-trainer-icon.svg?v=1.25.18" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/thai-trainer-icon-180.png?v=1.25.18" />
-  <link rel="stylesheet" href="styles.css?v=1.25.18" />
+  <link rel="manifest" href="manifest.webmanifest?v=1.25.19" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/thai-trainer-icon.svg?v=1.25.19" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/thai-trainer-icon-180.png?v=1.25.19" />
+  <link rel="stylesheet" href="styles.css?v=1.25.19" />
 </head>
 <body>
   <main class="app" id="app">
     <header class="hero">
       <div>
-        <p class="eyebrow" id="eyebrowText">Thai Trainer 🇹🇭 · v1.25.18</p>
+        <p class="eyebrow" id="eyebrowText">Thai Trainer 🇹🇭 · v1.25.19</p>
         <h1 id="mainTitle">קריאה, כתיבה, טונים ומשמעות</h1>
         <p class="subtitle" id="subtitleText">כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.</p>
       </div>
@@ -188,6 +188,16 @@
       </details>
     </section>
   </main>
-  <script src="app.js?v=1.25.18" defer></script>
+  <div class="challenge-modal" id="dailyBonusModal" hidden>
+    <div class="challenge-dialog" role="dialog" aria-modal="true" aria-labelledby="dailyBonusModalTitle">
+      <button class="challenge-close" id="dailyBonusModalClose" type="button" aria-label="סגור">×</button>
+      <p class="pair-kicker" id="dailyBonusModalKicker">אתגר עומס</p>
+      <h2 id="dailyBonusModalTitle">צא לדרך</h2>
+      <p id="dailyBonusModalText"></p>
+      <div class="challenge-rules" id="dailyBonusModalRules"></div>
+      <button id="dailyBonusStartBtn" type="button">צא לדרך</button>
+    </div>
+  </div>
+  <script src="app.js?v=1.25.19" defer></script>
 </body>
 </html>

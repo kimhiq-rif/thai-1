@@ -1,10 +1,10 @@
 'use strict';
 
-const APP_VERSION = '1.25.18-premium-pen-bonus';
+const APP_VERSION = '1.25.19-load-challenge';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
-  imprint:'kimคcode::thai-trainer::2026-06-04::v1.25.18'
+  imprint:'kimคcode::thai-trainer::2026-06-04::v1.25.19'
 });
 
 const TONES = [
@@ -18,7 +18,7 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.18', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.19', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', eraser:'מחק', eraserActive:'מחק פעיל', eraserTitle:'הפעל/כבה מחק מקומי', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
@@ -35,7 +35,7 @@ const I18N = {
     dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא', voiceCheer:'מחווה קולית ב"צדקתי"', voiceCheerLocked:'ייפתח אחרי הסקין הראשון'
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.18', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.19', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', eraser:'Eraser', eraserActive:'Eraser on', eraserTitle:'Toggle local eraser', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
@@ -1049,8 +1049,11 @@ const VOICE_CHEER_AUDIO_SRCS = [
   'assets/audio/phuud-maak.mp4',
   'assets/audio/phuud-maak-alt.mp4'
 ];
-const DAILY_BONUS_GOAL = 10;
-const DAILY_BONUS_REWARD = 8;
+const DAILY_BONUS_TARGET = 50;
+const DAILY_BONUS_DURATION_MS = 2 * 60 * 60 * 1000;
+const DAILY_BONUS_REQUIRED_ACCURACY = 0.7;
+const DAILY_BONUS_REQUIRED_LEVEL12 = 10;
+const DAILY_BONUS_REWARD = 15;
 const THEMES = [
   {id:'ocean', he:'Ocean Calm 🌊', en:'Ocean Calm 🌊', points:0},
   {id:'notebook', he:'Thai Notebook ✍️', en:'Thai Notebook ✍️', points:0},
@@ -1078,6 +1081,8 @@ let level6McqAnswered = false;
 let level55ChatState = null;
 let voiceCheerAudio = null;
 let voiceCheerAudioIndex = 0;
+let dailyBonusModalTimer = null;
+let dailyBonusTickTimer = null;
 let drawing = false;
 let lastPoint = null;
 let smoothPoint = null;
@@ -1088,7 +1093,7 @@ const canvas = el('writeCanvas');
 const ctx = canvas.getContext('2d');
 
 function defaultState(){
-  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false,bonus:{active:false,done:0,goal:DAILY_BONUS_GOAL,reward:DAILY_BONUS_REWARD,correct:0,awarded:false}}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false}, achievements:{}, penSize:5, penMode:'regular', syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean' };
+  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false,bonus:{status:'idle',startedAt:null,durationMs:DAILY_BONUS_DURATION_MS,total:0,correct:0,level12:0,target:DAILY_BONUS_TARGET,requiredAccuracy:DAILY_BONUS_REQUIRED_ACCURACY,requiredLevel12:DAILY_BONUS_REQUIRED_LEVEL12,reward:DAILY_BONUS_REWARD,awarded:false,warned15:false,warned5:false,boostNotice:false}}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false}, achievements:{}, penSize:5, penMode:'regular', syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean' };
 }
 
 async function disableOldServiceWorkers(){
@@ -1123,6 +1128,7 @@ function init(){
   if(el('premiumPenSelect')) el('premiumPenSelect').value = state.penMode || 'regular';
   updateSyncHealth();
   updateStats(); newQuestion();
+  ensureDailyBonusTicker();
   // v1.5: do NOT register a service worker. It caused stale versions to stay alive in normal browser windows.
   // We actively unregister old workers and clear old caches once the fresh app loads.
   disableOldServiceWorkers();
@@ -1175,8 +1181,11 @@ function setupEvents(){
   });
   if(el('dailyBonusPanel')) el('dailyBonusPanel').addEventListener('click', e => {
     const btn = e.target && e.target.closest ? e.target.closest('[data-daily-bonus-action]') : null;
-    if(btn) startDailyBonusChallenge();
+    if(btn) openDailyBonusIntro();
   });
+  if(el('dailyBonusStartBtn')) el('dailyBonusStartBtn').addEventListener('click', confirmDailyBonusStart);
+  if(el('dailyBonusModalClose')) el('dailyBonusModalClose').addEventListener('click', closeDailyBonusIntro);
+  if(el('dailyBonusModal')) el('dailyBonusModal').addEventListener('click', e => { if(e.target === el('dailyBonusModal')) closeDailyBonusIntro(); });
   if(el('voiceCheerToggle')) el('voiceCheerToggle').addEventListener('change', e => {
     ensureDailyState();
     state.coach.voiceCheer = !!e.target.checked;
@@ -1382,6 +1391,9 @@ function todayKey(){ return new Date().toISOString().slice(0,10); }
 function ensureDailyState(){
   state.daily = {...defaultState().daily, ...(state.daily || {})};
   state.daily.bonus = {...defaultState().daily.bonus, ...((state.daily && state.daily.bonus) || {})};
+  if(!['idle','intro','active','success','failed'].includes(state.daily.bonus.status)){
+    state.daily.bonus = {...defaultState().daily.bonus};
+  }
   state.coach = {...defaultState().coach, ...(state.coach || {})};
   state.coach.unlocked = [...new Set([...(defaultState().coach.unlocked || []), ...((state.coach && state.coach.unlocked) || [])])];
   if(state.daily.date !== todayKey()) state.daily = {...defaultState().daily, date:todayKey()};
@@ -1428,29 +1440,159 @@ function unlockedPremiumSkinCount(){
 function hasPremiumPen(){
   return unlockedPremiumSkinCount() >= 3;
 }
-function startDailyBonusChallenge(){
+function dailyBonusAccuracy(){
+  const bonus = state.daily?.bonus || {};
+  return bonus.total ? (bonus.correct || 0) / bonus.total : 0;
+}
+function dailyBonusTimeLeft(){
   ensureDailyState();
   const bonus = state.daily.bonus;
-  if((state.daily.done || 0) < (state.daily.goal || 15) || bonus.awarded) return;
-  bonus.active = true;
-  bonus.goal = DAILY_BONUS_GOAL;
-  bonus.reward = DAILY_BONUS_REWARD;
-  bonus.done = bonus.done || 0;
-  bonus.correct = bonus.correct || 0;
+  if(bonus.status !== 'active' || !bonus.startedAt) return bonus.durationMs || DAILY_BONUS_DURATION_MS;
+  return Math.max(0, (bonus.startedAt + (bonus.durationMs || DAILY_BONUS_DURATION_MS)) - Date.now());
+}
+function formatBonusTime(ms){
+  const total = Math.max(0, Math.ceil(ms / 1000));
+  const h = Math.floor(total / 3600);
+  const m = Math.floor((total % 3600) / 60);
+  const s = total % 60;
+  if(h) return `${h}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  return `${m}:${String(s).padStart(2,'0')}`;
+}
+function isDailyBonusActive(){
+  ensureDailyState();
+  return state.daily.bonus.status === 'active';
+}
+function openDailyBonusIntro(){
+  ensureDailyState();
+  const bonus = state.daily.bonus;
+  if((state.daily.done || 0) < (state.daily.goal || 15) || bonus.awarded || bonus.status === 'failed' || bonus.status === 'success') return;
+  bonus.status = 'intro';
+  saveState();
+  const modal = el('dailyBonusModal');
+  if(!modal) return;
+  el('dailyBonusModalKicker').textContent = isHebrew() ? 'בונוס יומי' : 'Daily bonus';
+  el('dailyBonusModalTitle').textContent = isHebrew() ? 'אתגר עומס' : 'Load challenge';
+  el('dailyBonusModalText').textContent = isHebrew()
+    ? 'יש לך שעתיים לענות על 50 שאלות. צריך לעבור 70% דיוק, וחובה שלפחות 10 שאלות יהיו מרמה 1.2.'
+    : 'You have two hours to answer 50 questions. You need more than 70% accuracy, and at least 10 questions must be from Level 1.2.';
+  el('dailyBonusModalRules').innerHTML = `
+    <span>${escapeHtml(isHebrew() ? 'זמן: שעתיים' : 'Time: 2 hours')}</span>
+    <span>${escapeHtml(isHebrew() ? 'יעד: 50 שאלות' : 'Target: 50 questions')}</span>
+    <span>${escapeHtml(isHebrew() ? 'דיוק: מעל 70%' : 'Accuracy: above 70%')}</span>
+    <span>${escapeHtml(isHebrew() ? 'חובה: 10 שאלות רמה 1.2' : 'Required: 10 Level 1.2 questions')}</span>
+    <span>${escapeHtml(isHebrew() ? 'פרס: 15 נק׳ לסקין הבא' : 'Reward: 15 pts toward the next skin')}</span>`;
+  el('dailyBonusStartBtn').textContent = isHebrew() ? 'צא לדרך' : 'Start challenge';
+  modal.hidden = false;
+  clearTimeout(dailyBonusModalTimer);
+  dailyBonusModalTimer = setTimeout(closeDailyBonusIntro, 30000);
+}
+function closeDailyBonusIntro(){
+  ensureDailyState();
+  const modal = el('dailyBonusModal');
+  if(modal) modal.hidden = true;
+  clearTimeout(dailyBonusModalTimer);
+  dailyBonusModalTimer = null;
+  const bonus = state.daily.bonus;
+  if(bonus.status === 'intro') bonus.status = 'idle';
   saveState();
   updateAchievementPanel();
+}
+function confirmDailyBonusStart(){
+  ensureDailyState();
+  const bonus = state.daily.bonus;
+  if((state.daily.done || 0) < (state.daily.goal || 15) || bonus.awarded || bonus.status === 'failed' || bonus.status === 'success') return;
+  Object.assign(bonus, {
+    status:'active',
+    startedAt:Date.now(),
+    durationMs:DAILY_BONUS_DURATION_MS,
+    total:0,
+    correct:0,
+    level12:0,
+    target:DAILY_BONUS_TARGET,
+    requiredAccuracy:DAILY_BONUS_REQUIRED_ACCURACY,
+    requiredLevel12:DAILY_BONUS_REQUIRED_LEVEL12,
+    reward:DAILY_BONUS_REWARD,
+    awarded:false,
+    warned15:false,
+    warned5:false,
+    boostNotice:false
+  });
+  closeDailyBonusIntro();
+  bonus.status = 'active';
+  saveState();
+  ensureDailyBonusTicker();
+  updateAchievementPanel();
+  newQuestion();
 }
 function awardDailyBonusPoints(){
   ensureDailyState();
   const bonus = state.daily.bonus;
-  if(!bonus.active || bonus.awarded || (bonus.done || 0) < (bonus.goal || DAILY_BONUS_GOAL)) return 0;
+  if(bonus.awarded) return 0;
   const reward = bonus.reward || DAILY_BONUS_REWARD;
   state.coach.points = (state.coach.points || 0) + reward;
   bonus.awarded = true;
-  bonus.active = false;
+  bonus.status = 'success';
   state.achievements.dailyBonusAward = Date.now();
   unlockEligibleThemes();
   return reward;
+}
+function failDailyBonusChallenge(){
+  ensureDailyState();
+  const bonus = state.daily.bonus;
+  if(bonus.status !== 'active') return;
+  bonus.status = 'failed';
+  bonus.awarded = false;
+  saveState();
+  updateAchievementPanel();
+}
+function showTransientChallengeNotice(message, type='neutral'){
+  const panel = el('dailyBonusPanel');
+  if(!panel) return;
+  panel.classList.remove('notice-ok','notice-warn');
+  if(type === 'ok') panel.classList.add('notice-ok');
+  if(type === 'warn') panel.classList.add('notice-warn');
+  panel.animate([{transform:'translateY(-4px)',opacity:.72},{transform:'translateY(0)',opacity:1}], {duration:380, easing:'ease-out'});
+  setSyncStatus(message, type === 'warn' ? 'error' : 'ok');
+}
+function evaluateDailyBonusChallenge(){
+  ensureDailyState();
+  const bonus = state.daily.bonus;
+  if(bonus.status !== 'active') return;
+  const left = dailyBonusTimeLeft();
+  if(left <= 0){
+    failDailyBonusChallenge();
+    showTransientChallengeNotice(isHebrew() ? 'הזמן נגמר. האתגר חוזר לשגרה עד מחר.' : 'Time is up. Challenge returns to normal until tomorrow.', 'warn');
+    return;
+  }
+  if(left <= 15 * 60 * 1000 && !bonus.warned15){
+    bonus.warned15 = true;
+    showTransientChallengeNotice(isHebrew() ? 'התראת זמן: נשארו 15 דקות לאתגר.' : 'Time alert: 15 minutes left.', 'warn');
+  }
+  if(left <= 5 * 60 * 1000 && !bonus.warned5){
+    bonus.warned5 = true;
+    showTransientChallengeNotice(isHebrew() ? 'התראת זמן: נשארו 5 דקות.' : 'Time alert: 5 minutes left.', 'warn');
+  }
+  const acc = dailyBonusAccuracy();
+  if((bonus.total || 0) >= (bonus.target || DAILY_BONUS_TARGET) && (bonus.level12 || 0) >= (bonus.requiredLevel12 || DAILY_BONUS_REQUIRED_LEVEL12) && acc > (bonus.requiredAccuracy || DAILY_BONUS_REQUIRED_ACCURACY)){
+    const reward = awardDailyBonusPoints();
+    showTransientChallengeNotice(isHebrew() ? `האתגר הושלם. קיבלת ${reward} נק׳.` : `Challenge complete. You earned ${reward} pts.`, 'ok');
+    return;
+  }
+  if((bonus.total || 0) >= (bonus.target || DAILY_BONUS_TARGET) && acc <= (bonus.requiredAccuracy || DAILY_BONUS_REQUIRED_ACCURACY) && left > 0 && !bonus.boostNotice){
+    bonus.boostNotice = true;
+    showTransientChallengeNotice(isHebrew() ? 'ענית על 50 שאלות, אבל הדיוק עדיין נמוך. יש עוד זמן לשפר.' : 'You answered 50 questions, but accuracy is still low. Keep going while time remains.', 'warn');
+  }
+  saveState();
+}
+function ensureDailyBonusTicker(){
+  if(dailyBonusTickTimer) clearInterval(dailyBonusTickTimer);
+  dailyBonusTickTimer = setInterval(() => {
+    if(isDailyBonusActive()){
+      evaluateDailyBonusChallenge();
+      updateAchievementPanel();
+      if(current) renderQuestion();
+    }
+  }, 1000);
 }
 function unlockEligibleThemes(){
   ensureDailyState();
@@ -1587,7 +1729,9 @@ function newQuestion(){
   selectedVowelAnswer = null;
   level6McqAnswered = false;
   const levelValue = el('levelSelect').value || '1';
-  const mode = levelValue === '6' ? 'level6_pair' : levelValue === '5.5' ? 'level55_chat' : levelValue === '1.2' ? 'level12_pair' : pickMode();
+  const bonus = state.daily && state.daily.bonus;
+  const forceLevel12 = bonus && bonus.status === 'active' && (bonus.level12 || 0) < (bonus.requiredLevel12 || DAILY_BONUS_REQUIRED_LEVEL12);
+  const mode = forceLevel12 ? 'level12_pair' : levelValue === '6' ? 'level6_pair' : levelValue === '5.5' ? 'level55_chat' : levelValue === '1.2' ? 'level12_pair' : pickMode();
   if(mode === 'level12_pair'){
     current = makeLevel12PairedQuestion();
   } else if(mode === 'level55_chat'){
@@ -2001,8 +2145,8 @@ function renderQuestion(){
   const itemLevel = mode === 'level55_chat' ? '5.5' : (mode === 'vowel_board' || mode === 'vowel_write' || mode === 'level6_pair') ? '6' : (mode === 'level12_pair' ? '1.2' : String(item.level));
   el('levelBadge').textContent = itemLevel === '6' ? `${t('level')} 6 — ${t('vowelLevel')}` : itemLevel === '1.2' ? t('foundationLevel') : `${t('level')} ${itemLevel}`;
   el('modeBadge').textContent = modeLabel(mode);
-  el('progressBadge').textContent = state.daily?.bonus?.active
-    ? `${isHebrew() ? 'בונוס' : 'Bonus'}: ${state.daily.bonus.done || 0}/${state.daily.bonus.goal || DAILY_BONUS_GOAL}`
+  el('progressBadge').textContent = state.daily?.bonus?.status === 'active'
+    ? `${isHebrew() ? 'עומס' : 'Load'}: ${state.daily.bonus.total || 0}/${state.daily.bonus.target || DAILY_BONUS_TARGET} · ${formatBonusTime(dailyBonusTimeLeft())}`
     : state.daily?.active
     ? `${t('todayGoal')}: ${state.daily.done || 0}/${state.daily.goal || 15}`
     : `${state.stats.total || 0} ${t('questions')}`;
@@ -2272,11 +2416,11 @@ function mark(correct){
       correct ? state.daily.correct++ : state.daily.wrong++;
       const awarded = awardDailyCoachPoints();
       if(awarded) state.achievements.dailyAward = Date.now();
-    } else if(state.daily.bonus && state.daily.bonus.active && !state.daily.bonus.awarded){
-      state.daily.bonus.done = Math.min(state.daily.bonus.goal || DAILY_BONUS_GOAL, (state.daily.bonus.done || 0) + 1);
+    } else if(state.daily.bonus && state.daily.bonus.status === 'active'){
+      state.daily.bonus.total = (state.daily.bonus.total || 0) + 1;
       if(correct) state.daily.bonus.correct = (state.daily.bonus.correct || 0) + 1;
-      const bonusAwarded = awardDailyBonusPoints();
-      if(bonusAwarded) state.achievements.dailyBonusAward = Date.now();
+      if(mode === 'level12_pair' || String(item.level) === '1.2') state.daily.bonus.level12 = (state.daily.bonus.level12 || 0) + 1;
+      evaluateDailyBonusChallenge();
     }
   }
   const premiumJustUnlocked = !premiumBefore && hasFirstPremiumSkin();
@@ -2321,8 +2465,9 @@ function practiceCounts(){
 }
 function achievementText(){
   const a = state.achievements || {};
-  if(state.daily?.bonus?.awarded) return isHebrew() ? `בונוס יומי הושלם: +${state.daily.bonus.reward || DAILY_BONUS_REWARD} נק׳ לסקין הבא.` : `Daily bonus complete: +${state.daily.bonus.reward || DAILY_BONUS_REWARD} pts toward the next skin.`;
-  if(state.daily?.bonus?.active) return isHebrew() ? `אתגר בונוס פעיל: ${state.daily.bonus.done || 0}/${state.daily.bonus.goal || DAILY_BONUS_GOAL}` : `Bonus challenge active: ${state.daily.bonus.done || 0}/${state.daily.bonus.goal || DAILY_BONUS_GOAL}`;
+  if(state.daily?.bonus?.status === 'success') return isHebrew() ? `אתגר עומס הושלם: +${state.daily.bonus.reward || DAILY_BONUS_REWARD} נק׳ לסקין הבא.` : `Load challenge complete: +${state.daily.bonus.reward || DAILY_BONUS_REWARD} pts toward the next skin.`;
+  if(state.daily?.bonus?.status === 'active') return isHebrew() ? `אתגר עומס פעיל: ${state.daily.bonus.total || 0}/${state.daily.bonus.target || DAILY_BONUS_TARGET} · ${formatBonusTime(dailyBonusTimeLeft())}` : `Load challenge active: ${state.daily.bonus.total || 0}/${state.daily.bonus.target || DAILY_BONUS_TARGET} · ${formatBonusTime(dailyBonusTimeLeft())}`;
+  if(state.daily?.bonus?.status === 'failed') return isHebrew() ? 'אתגר עומס הסתיים. חוזרים לשגרה עד מחר.' : 'Load challenge ended. Back to normal until tomorrow.';
   if(state.daily && state.daily.done >= state.daily.goal) return t('dailyDone');
   if(a.streak10) return isHebrew() ? 'רצף 10 תשובות נכונות. יפה.' : '10-correct streak. Nice.';
   if(a.focused10) return isHebrew() ? 'אימון מדויק: 8 מתוך 10 לאחרונה.' : 'Focused run: 8 of the last 10 correct.';
@@ -2341,18 +2486,34 @@ function renderDailyBonusPanel(){
     return;
   }
   panel.hidden = false;
-  if(bonus.awarded){
-    panel.innerHTML = `<strong>${escapeHtml(isHebrew() ? 'בונוס יומי הושלם' : 'Daily bonus complete')}</strong><span>${escapeHtml(isHebrew() ? `קיבלת ${bonus.reward || DAILY_BONUS_REWARD} נק׳ להתקדמות לסקין הבא.` : `You earned ${bonus.reward || DAILY_BONUS_REWARD} pts toward the next skin.`)}</span>`;
+  const acc = Math.round(dailyBonusAccuracy() * 100);
+  if(bonus.status === 'success' || bonus.awarded){
+    panel.innerHTML = `<strong>${escapeHtml(isHebrew() ? 'אתגר עומס הושלם' : 'Load challenge complete')}</strong><span>${escapeHtml(isHebrew() ? `קיבלת ${bonus.reward || DAILY_BONUS_REWARD} נק׳ להתקדמות לסקין הבא. חוזרים לשגרה.` : `You earned ${bonus.reward || DAILY_BONUS_REWARD} pts toward the next skin. Back to normal.`)}</span>`;
     return;
   }
-  if(bonus.active){
-    panel.innerHTML = `<strong>${escapeHtml(isHebrew() ? 'אתגר עומס פעיל' : 'Load challenge active')}</strong><span>${escapeHtml(`${bonus.done || 0}/${bonus.goal || DAILY_BONUS_GOAL} · +${bonus.reward || DAILY_BONUS_REWARD}`)}</span>`;
+  if(bonus.status === 'failed'){
+    panel.innerHTML = `<strong>${escapeHtml(isHebrew() ? 'אתגר עומס הסתיים' : 'Load challenge ended')}</strong><span>${escapeHtml(isHebrew() ? 'הזמן נגמר או שהיעד לא הושלם. מחר אפשר לנסות שוב.' : 'Time expired or the target was not completed. Try again tomorrow.')}</span>`;
+    return;
+  }
+  if(bonus.status === 'active'){
+    panel.innerHTML = `
+      <div>
+        <strong>${escapeHtml(isHebrew() ? 'אתגר עומס פעיל' : 'Load challenge active')}</strong>
+        <span>${escapeHtml(isHebrew() ? `זמן שנותר: ${formatBonusTime(dailyBonusTimeLeft())}` : `Time left: ${formatBonusTime(dailyBonusTimeLeft())}`)}</span>
+      </div>
+      <div class="bonus-metrics">
+        <span>${escapeHtml(isHebrew() ? `שאלות ${bonus.total || 0}/${bonus.target || DAILY_BONUS_TARGET}` : `Questions ${bonus.total || 0}/${bonus.target || DAILY_BONUS_TARGET}`)}</span>
+        <span>${escapeHtml(isHebrew() ? `דיוק ${acc}% / מעל 70%` : `Accuracy ${acc}% / above 70%`)}</span>
+        <span>${escapeHtml(isHebrew() ? `רמה 1.2 ${bonus.level12 || 0}/${bonus.requiredLevel12 || DAILY_BONUS_REQUIRED_LEVEL12}` : `Level 1.2 ${bonus.level12 || 0}/${bonus.requiredLevel12 || DAILY_BONUS_REQUIRED_LEVEL12}`)}</span>
+      </div>`;
     return;
   }
   panel.innerHTML = `
-    <strong>${escapeHtml(isHebrew() ? 'בונוס אחרי היעד' : 'After-goal bonus')}</strong>
-    <span>${escapeHtml(isHebrew() ? `ענה על עוד ${DAILY_BONUS_GOAL} שאלות וקבל ${DAILY_BONUS_REWARD} נק׳ לסקין הבא.` : `Answer ${DAILY_BONUS_GOAL} more questions for ${DAILY_BONUS_REWARD} pts toward the next skin.`)}</span>
-    <button type="button" class="secondary" data-daily-bonus-action="start">${escapeHtml(isHebrew() ? 'התחל בונוס' : 'Start bonus')}</button>`;
+    <div>
+      <strong>${escapeHtml(isHebrew() ? 'אתגר עומס אחרי היעד' : 'After-goal load challenge')}</strong>
+      <span>${escapeHtml(isHebrew() ? `שעתיים · 50 שאלות · מעל 70% · חובה 10 שאלות רמה 1.2 · פרס ${DAILY_BONUS_REWARD} נק׳.` : `2 hours · 50 questions · above 70% · 10 Level 1.2 required · ${DAILY_BONUS_REWARD} pts reward.`)}</span>
+    </div>
+    <button type="button" class="secondary" data-daily-bonus-action="start">${escapeHtml(isHebrew() ? 'פתח אתגר' : 'Open challenge')}</button>`;
 }
 function updatePremiumPenControl(){
   const wrap = el('premiumPenControl');
