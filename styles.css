@@ -146,9 +146,9 @@ canvas{
 canvas.eraser-mode{cursor:cell}
 @media (max-width:720px){.writing-controls{grid-template-columns:1fr}.eraser-icon{width:34px;height:34px}}
 
-/* v1.25.12 - Level 5.5 guided chat board */
+/* v1.25.13 - Level 5.5 guided chat board */
 .level55-chat{display:grid;gap:14px;margin:14px 0 18px}
-.level55-toolbar{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:end}
+.level55-toolbar{display:grid;grid-template-columns:1fr 1fr auto auto;gap:12px;align-items:end}
 .level55-toolbar label{display:grid;gap:8px;color:var(--muted);font-weight:900}
 .level55-toolbar select{min-width:180px}
 .level55-score{display:grid;grid-template-columns:1fr 1fr;gap:8px}
@@ -163,6 +163,7 @@ canvas.eraser-mode{cursor:cell}
 .level55-msg.student{align-self:flex-end;background:linear-gradient(135deg,rgba(30,41,59,.82),rgba(49,46,129,.34));direction:ltr;text-align:left}
 .level55-label{display:block;color:var(--muted);font-size:13px;font-weight:900;margin-bottom:5px}
 .level55-roman{direction:ltr;text-align:left;font-weight:950;font-size:clamp(22px,5vw,34px);color:#e0f2fe}
+.level55-roman-answer{direction:ltr;text-align:left;font-weight:900;font-size:clamp(22px,5vw,34px);line-height:1.35;color:#f8fafc}
 .level55-thai{direction:ltr;text-align:left;font-family:Arial,"Noto Sans Thai",sans-serif;font-weight:900;font-size:clamp(25px,6vw,42px);line-height:1.35;color:#f8fafc}
 .level55-feedback{margin-top:10px;border-inline-start:4px solid #22c55e;background:rgba(255,255,255,.07);border-radius:12px;padding:10px 12px;color:#dbeafe}
 .level55-feedback.warn{border-inline-start-color:#f97316}
@@ -173,7 +174,7 @@ canvas.eraser-mode{cursor:cell}
 body.theme-notebook .level55-score>div,body.theme-notebook .level55-msg,body.theme-notebook .level55-form textarea,body.theme-minimal .level55-score>div,body.theme-minimal .level55-msg,body.theme-minimal .level55-form textarea{background:rgba(255,255,255,.84);color:#0f172a}
 body.theme-notebook .level55-msg.bot,body.theme-minimal .level55-msg.bot{background:#eef8ff}
 body.theme-notebook .level55-msg.student,body.theme-minimal .level55-msg.student{background:#fff}
-body.theme-notebook .level55-roman,body.theme-notebook .level55-thai,body.theme-minimal .level55-roman,body.theme-minimal .level55-thai{color:#075985;text-shadow:none}
+body.theme-notebook .level55-roman,body.theme-notebook .level55-roman-answer,body.theme-notebook .level55-thai,body.theme-minimal .level55-roman,body.theme-minimal .level55-roman-answer,body.theme-minimal .level55-thai{color:#075985;text-shadow:none}
 body.theme-notebook .level55-examples span,body.theme-minimal .level55-examples span{background:#e6f6fb;color:#075985;border-color:#bae6fd}
 body.theme-notebook .level55-feedback,body.theme-minimal .level55-feedback{background:#f8fbff;color:#172033}
 @media (max-width:720px){.level55-toolbar{grid-template-columns:1fr}.level55-score{grid-template-columns:1fr 1fr}.level55-msg{width:100%}.level55-form{grid-template-columns:1fr}.level55-form textarea{font-size:22px}}

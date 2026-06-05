@@ -1,10 +1,10 @@
 'use strict';
 
-const APP_VERSION = '1.25.12-level-5-5-chat';
+const APP_VERSION = '1.25.14-voice-cheer-fix';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
-  imprint:'kimคcode::thai-trainer::2026-06-04::v1.25.11'
+  imprint:'kimคcode::thai-trainer::2026-06-04::v1.25.14'
 });
 
 const TONES = [
@@ -18,7 +18,7 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.11', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.14', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', eraser:'מחק', eraserActive:'מחק פעיל', eraserTitle:'הפעל/כבה מחק מקומי', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
@@ -35,7 +35,7 @@ const I18N = {
     dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא', voiceCheer:'מחווה קולית ב"צדקתי"', voiceCheerLocked:'ייפתח אחרי הסקין הראשון'
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.11', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.14', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', eraser:'Eraser', eraserActive:'Eraser on', eraserTitle:'Toggle local eraser', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
@@ -1017,6 +1017,33 @@ const LEVEL55_TOPICS = {
     ]
   }
 };
+const LEVEL55_ROMAN_EXAMPLES = {
+  intro:['phom chue Dani','chan ma chak Israel','chan chop rian phasa thai'],
+  food:['chan chop phat thai','phom yak gin khao','mai phet khrap'],
+  travel:['chan yak pai Krung Thep','phom pai duai rot fai','chan phak thi rong raem']
+};
+const LEVEL55_ROMAN_ACCEPTED = {
+  name:['chue','phom chue','chan chue','dichan chue'],
+  country:['ma chak','prathet','israel','thai','yisrael'],
+  hobby:['chop','rian','gin','dern','thiao','du','fang','tham'],
+  'favorite food':['chop','ahaan','khao','phat thai','tom yam','kuai tiao','gin'],
+  'spice level':['phet','mai phet','chop','mai chop','nit noi'],
+  drink:['yak','duem','nam','cha','gaa fae','beer'],
+  destination:['yak pai','pai','krung thep','chiang mai','phuket','pattaya'],
+  transport:['rot','rot fai','khruang bin','taxi','ruea','pai duai'],
+  lodging:['phak','rong raem','ban','hostel','thi']
+};
+const LEVEL55_ROMAN_CORRECTIONS = {
+  name:'phom chue ... / chan chue ...',
+  country:'chan ma chak Israel',
+  hobby:'chan chop rian phasa thai',
+  'favorite food':'chan chop phat thai / phom chop khao',
+  'spice level':'chop phet / mai phet khrap / phet nit noi',
+  drink:'chan yak duem nam / phom yak duem gaa fae',
+  destination:'chan yak pai Krung Thep',
+  transport:'phom pai duai rot fai / chan pai duai taxi',
+  lodging:'chan phak thi rong raem'
+};
 const STORAGE_KEY = 'thaiTrainerStateV3';
 const THEMES = [
   {id:'ocean', he:'Ocean Calm 🌊', en:'Ocean Calm 🌊', points:0},
@@ -1137,6 +1164,7 @@ function setupEvents(){
     state.coach.voiceCheerAutoEnabled = true;
     saveState();
     updateSkinPanel();
+    if(state.coach.voiceCheer) playVoiceCheer({force:true});
   });
   el('clearBtn').addEventListener('click', clearCanvas);
   const eraserBtn = el('eraserToggleBtn');
@@ -1398,22 +1426,64 @@ function selectThaiCheerVoice(){
     || voices[0]
     || null;
 }
-function playVoiceCheer(){
-  ensureDailyState();
-  if(!state.coach.voiceCheer || !hasFirstPremiumSkin()) return;
-  if(!('speechSynthesis' in window) || typeof SpeechSynthesisUtterance === 'undefined') return;
+function playCheerFallbackTone(){
   try{
-    window.speechSynthesis.cancel();
-    const cheer = new SpeechSynthesisUtterance('พูดมาก!');
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if(!AudioCtx) return;
+    const audio = new AudioCtx();
+    const now = audio.currentTime;
+    const notes = [740, 988, 1175];
+    notes.forEach((freq, index) => {
+      const osc = audio.createOscillator();
+      const gain = audio.createGain();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(freq, now + index * 0.09);
+      gain.gain.setValueAtTime(0.0001, now + index * 0.09);
+      gain.gain.exponentialRampToValueAtTime(0.16, now + index * 0.09 + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + index * 0.09 + 0.16);
+      osc.connect(gain);
+      gain.connect(audio.destination);
+      osc.start(now + index * 0.09);
+      osc.stop(now + index * 0.09 + 0.18);
+    });
+    setTimeout(() => audio.close && audio.close(), 700);
+  }catch(err){
+    console.debug('Voice cheer fallback unavailable', err);
+  }
+}
+function playVoiceCheer(options = {}){
+  ensureDailyState();
+  const force = !!options.force;
+  const retry = options.retry || 0;
+  if((!force && !state.coach.voiceCheer) || !hasFirstPremiumSkin()) return;
+  if(!('speechSynthesis' in window) || typeof SpeechSynthesisUtterance === 'undefined'){
+    playCheerFallbackTone();
+    return;
+  }
+  try{
+    const synth = window.speechSynthesis;
+    const voices = typeof synth.getVoices === 'function' ? synth.getVoices() : [];
+    if(!voices.length && retry < 2){
+      const replay = () => playVoiceCheer({force, retry:retry + 1});
+      synth.onvoiceschanged = replay;
+      setTimeout(replay, 220);
+      return;
+    }
+    synth.cancel();
+    if(typeof synth.resume === 'function') synth.resume();
+    const voice = selectThaiCheerVoice();
+    const text = voice && /^th\b/i.test(voice.lang || '') ? 'พูดมาก!' : 'phuud maak!';
+    const cheer = new SpeechSynthesisUtterance(text);
     cheer.lang = 'th-TH';
     cheer.rate = 1.18;
     cheer.pitch = 1.35;
     cheer.volume = 0.92;
-    const voice = selectThaiCheerVoice();
     if(voice) cheer.voice = voice;
-    window.speechSynthesis.speak(cheer);
+    cheer.onerror = () => playCheerFallbackTone();
+    synth.speak(cheer);
   }catch(err){
     console.debug('Voice cheer unavailable', err);
+    playCheerFallbackTone();
   }
 }
 function weightedPick(items){
@@ -1625,8 +1695,10 @@ function makeVowelWritingQuestion(){
 
 function makeLevel55ChatQuestion(){
   const topic = (level55ChatState && LEVEL55_TOPICS[level55ChatState.topic]) ? level55ChatState.topic : 'intro';
+  const scriptMode = (level55ChatState && level55ChatState.scriptMode) || 'thai';
   level55ChatState = {
     topic,
+    scriptMode,
     turnIndex:0,
     mode:'thai-answer',
     understood:0,
@@ -1650,8 +1722,20 @@ function level55Text(he,en){
   return isHebrew() ? he : en;
 }
 
+function level55IsRomanMode(){
+  return level55ChatState && level55ChatState.scriptMode === 'roman';
+}
+
 function level55HasThai(text){
   return /[\u0E00-\u0E7F]/.test(text || '');
+}
+
+function level55NormalizeRoman(text){
+  return String(text || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g,' ')
+    .replace(/\s+/g,' ')
+    .trim();
 }
 
 function level55Clean(text){
@@ -1666,12 +1750,20 @@ function level55AddMessage(role, html){
 function level55AddBotQuestion(){
   const turn = level55Turn();
   level55AddMessage('bot', `
-    <span class="level55-label">Bot asks in transliteration</span>
+    <span class="level55-label">${escapeHtml(level55Text('Bot asks in transliteration', 'Bot asks in transliteration'))}</span>
     <div class="level55-roman">${escapeHtml(turn.ask)}</div>
   `);
 }
 
 function level55Understand(text, turn){
+  if(level55IsRomanMode()){
+    if(level55HasThai(text)) return {ok:false, reason:'thai-in-roman'};
+    const compact = level55NormalizeRoman(text);
+    if(!/[a-z]/.test(compact)) return {ok:false, reason:'missing-roman'};
+    const accepted = LEVEL55_ROMAN_ACCEPTED[turn.intentEn] || [];
+    const matched = accepted.some(word => compact.includes(level55NormalizeRoman(word)));
+    return matched ? {ok:true} : {ok:false, reason:'unclear-intent'};
+  }
   if(!level55HasThai(text)) return {ok:false, reason:'missing-thai'};
   const compact = text.replace(/\s/g,'');
   const matched = turn.accepted.some(word => compact.includes(String(word).replace(/\s/g,'')));
@@ -1679,7 +1771,8 @@ function level55Understand(text, turn){
 }
 
 function level55CorrectionText(turn){
-  return level55Text('צורה מומלצת: ', 'Suggested form: ') + turn.correction;
+  const correction = level55IsRomanMode() ? (LEVEL55_ROMAN_CORRECTIONS[turn.intentEn] || turn.ask) : turn.correction;
+  return level55Text('צורה מומלצת: ', 'Suggested form: ') + correction;
 }
 
 function level55Advance(){
@@ -1723,8 +1816,8 @@ function handleLevel55Submit(event){
     return;
   }
   level55AddMessage('student', `
-    <span class="level55-label">Student writes Thai</span>
-    <div class="level55-thai">${escapeHtml(text)}</div>
+    <span class="level55-label">${escapeHtml(level55IsRomanMode() ? 'Student writes transliteration' : 'Student writes Thai')}</span>
+    <div class="${level55IsRomanMode() ? 'level55-roman-answer' : 'level55-thai'}">${escapeHtml(text)}</div>
   `);
   const result = level55Understand(text, turn);
   if(result.ok){
@@ -1739,10 +1832,18 @@ function handleLevel55Submit(event){
   }
   level55ChatState.fixes += 1;
   level55ChatState.mode = 'clarify';
-  const missing = result.reason === 'missing-thai';
+  const missing = result.reason === 'missing-thai' || result.reason === 'missing-roman';
+  const wrongScript = result.reason === 'thai-in-roman';
+  const issueText = wrongScript
+    ? level55Text('במצב הזה מתרגלים תעתיק אנגלי בלבד, בלי כתב תאילנדי.', 'This mode practices English transliteration only, without Thai script.')
+    : (missing
+      ? (level55IsRomanMode()
+        ? level55Text('לא זיהיתי תעתיק אנגלי בתשובה.', 'I did not detect English transliteration in the answer.')
+        : level55Text('לא זיהיתי כתב תאילנדי בתשובה.', 'I did not detect Thai script in the answer.'))
+      : level55Text('אני לא בטוח שהבנתי את הכוונה בתשובה.', 'I am not sure I understood the intent.'));
   level55AddMessage('bot', `
     <span class="level55-label">Bot asks for clarification</span>
-    ${escapeHtml(missing ? level55Text('לא זיהיתי כתב תאילנדי בתשובה.', 'I did not detect Thai script in the answer.') : level55Text('אני לא בטוח שהבנתי את הכוונה בתשובה.', 'I am not sure I understood the intent.'))}<br>
+    ${escapeHtml(issueText)}<br>
     ${escapeHtml(level55Text('מה רצית לומר בעברית או באנגלית?', 'What did you want to say in Hebrew or English?'))}
     <div class="level55-feedback warn">${escapeHtml(level55CorrectionText(turn))}</div>
   `);
@@ -1760,10 +1861,11 @@ function handleLevel55Click(event){
 }
 
 function handleLevel55Change(event){
-  if(!event.target || event.target.id !== 'level55Topic') return;
-  const topic = event.target.value;
+  if(!event.target || (event.target.id !== 'level55Topic' && event.target.id !== 'level55ScriptMode')) return;
+  const topic = event.target.id === 'level55Topic' ? event.target.value : ((level55ChatState && level55ChatState.topic) || 'intro');
+  const scriptMode = event.target.id === 'level55ScriptMode' ? event.target.value : ((level55ChatState && level55ChatState.scriptMode) || 'thai');
   if(!LEVEL55_TOPICS[topic]) return;
-  level55ChatState = {topic};
+  level55ChatState = {topic, scriptMode: scriptMode === 'roman' ? 'roman' : 'thai'};
   makeLevel55ChatQuestion();
   renderQuestion();
 }
@@ -1782,11 +1884,16 @@ function renderLevel55Chat(q){
     const selected = key === level55ChatState.topic ? ' selected' : '';
     return `<option value="${escapeHtml(key)}"${selected}>${escapeHtml(isHebrew() ? topic.he : topic.en)}</option>`;
   }).join('');
-  const examples = level55Topic().examples.map(x => `<span>${escapeHtml(x)}</span>`).join('');
+  const scriptOptions = [
+    {value:'thai', label:level55Text('כתיבה תאית', 'Thai script')},
+    {value:'roman', label:level55Text('תעתיק בלבד', 'Transliteration only')}
+  ].map(opt => `<option value="${opt.value}"${opt.value === level55ChatState.scriptMode ? ' selected' : ''}>${escapeHtml(opt.label)}</option>`).join('');
+  const exampleList = level55IsRomanMode() ? (LEVEL55_ROMAN_EXAMPLES[level55ChatState.topic] || []) : level55Topic().examples;
+  const examples = exampleList.map(x => `<span>${escapeHtml(x)}</span>`).join('');
   const messages = level55ChatState.messages.map(msg => `<article class="level55-msg ${escapeHtml(msg.role)}">${msg.html}</article>`).join('');
   const placeholder = level55ChatState.mode === 'clarify'
     ? level55Text('הסבר בעברית או באנגלית מה רצית לומר...', 'Explain in Hebrew or English what you wanted to say...')
-    : level55Text('כתוב כאן בתאית...', 'Write Thai here...');
+    : (level55IsRomanMode() ? level55Text('כתוב כאן בתעתיק אנגלי...', 'Write English transliteration here...') : level55Text('כתוב כאן בתאית...', 'Write Thai here...'));
   const disabled = level55ChatState.mode === 'done' ? ' disabled' : '';
   box.hidden = false;
   box.innerHTML = `
@@ -1794,6 +1901,10 @@ function renderLevel55Chat(q){
       <label>
         <span>${escapeHtml(level55Text('נושא שיחה', 'Chat topic'))}</span>
         <select id="level55Topic">${topicOptions}</select>
+      </label>
+      <label>
+        <span>${escapeHtml(level55Text('מצב כתיבה', 'Writing mode'))}</span>
+        <select id="level55ScriptMode">${scriptOptions}</select>
       </label>
       <div class="level55-score">
         <div><strong>${level55ChatState.understood}</strong><span>${escapeHtml(level55Text('הבנות', 'Understood'))}</span></div>
@@ -1835,10 +1946,14 @@ function renderQuestion(){
   if(markRow) markRow.hidden = mode === 'level55_chat';
 
   if(mode === 'level55_chat'){
-    el('promptText').textContent = level55Text('רמה 5.5 - שיחת כתיבה בתאית', 'Level 5.5 - Thai writing chat');
+    el('promptText').textContent = level55IsRomanMode()
+      ? level55Text('רמה 5.5 - שיחה בתעתיק אנגלי', 'Level 5.5 - transliteration chat')
+      : level55Text('רמה 5.5 - שיחת כתיבה בתאית', 'Level 5.5 - Thai writing chat');
     el('questionText').hidden = true;
     el('questionText').textContent = '';
-    el('questionHint').textContent = level55Text('הבוט שואל בתעתיק אנגלי. התלמיד עונה בכתב תאילנדי.', 'The bot asks in transliteration. The student answers in Thai script.');
+    el('questionHint').textContent = level55IsRomanMode()
+      ? level55Text('גם הבוט וגם התלמיד עובדים בתעתיק אנגלי כדי לתרגל אוצר מילים ותחביר.', 'Bot and student both use transliteration to practice vocabulary and sentence structure.')
+      : level55Text('הבוט שואל בתעתיק אנגלי. התלמיד עונה בכתב תאילנדי.', 'The bot asks in transliteration. The student answers in Thai script.');
   } else if(mode === 'level6_pair' || mode === 'level12_pair'){
     el('promptText').textContent = mode === 'level12_pair' ? t('level12Choose') : t('level6Choose');
     el('questionText').hidden = true;
@@ -2059,6 +2174,7 @@ function scrollToQuestionCard(){
 function mark(correct){
   if(!current) return;
   const {item, mode} = current;
+  const premiumBefore = hasFirstPremiumSkin();
   state.stats.total++; correct ? state.stats.correct++ : state.stats.wrong++;
   state.stats.streak = correct ? (state.stats.streak + 1) : 0;
   const s = state.itemStats[item.id] || {correct:0,wrong:0,lastSeen:0,modes:{}};
@@ -2077,8 +2193,13 @@ function mark(correct){
     const awarded = awardDailyCoachPoints();
     if(awarded) state.achievements.dailyAward = Date.now();
   }
+  const premiumJustUnlocked = !premiumBefore && hasFirstPremiumSkin();
+  if(premiumJustUnlocked){
+    state.coach.voiceCheer = true;
+    state.coach.voiceCheerAutoEnabled = true;
+  }
   updateAchievements(correct);
-  if(correct) playVoiceCheer();
+  if(correct) playVoiceCheer({force:premiumJustUnlocked});
   saveState(); updateStats(); newQuestion(); scrollToQuestionCard();
 }
 function updateAchievements(correct){
@@ -2714,7 +2835,7 @@ function runQA(){
     lines.push(`Level ${level}: ${count} items × ${MODES.length} modes = ${variants} question variants`);
     if(count && variants < 50){ ok=false; lines.push(`ERROR: Level ${level} has fewer than 50 variants`); }
   }
-  lines.push(`Level 5.5: ${Object.keys(LEVEL55_TOPICS).length} guided chat topics`);
+  lines.push(`Level 5.5: ${Object.keys(LEVEL55_TOPICS).length} guided chat topics x 2 writing modes`);
   for(const w of WORDS){
     const required = ['id','level','thai','roman','hebrew','english','tone'];
     for(const k of required){ if(!w[k]){ ok=false; lines.push(`ERROR: missing ${k} in ${JSON.stringify(w)}`); } }
