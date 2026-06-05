@@ -1,10 +1,10 @@
 'use strict';
 
-const APP_VERSION = '1.25.14-voice-cheer-fix';
+const APP_VERSION = '1.25.16-alternating-voice-cheers';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
-  imprint:'kimคcode::thai-trainer::2026-06-04::v1.25.14'
+  imprint:'kimคcode::thai-trainer::2026-06-04::v1.25.16'
 });
 
 const TONES = [
@@ -18,7 +18,7 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.14', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.16', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', eraser:'מחק', eraserActive:'מחק פעיל', eraserTitle:'הפעל/כבה מחק מקומי', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
@@ -35,7 +35,7 @@ const I18N = {
     dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא', voiceCheer:'מחווה קולית ב"צדקתי"', voiceCheerLocked:'ייפתח אחרי הסקין הראשון'
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.14', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.16', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', eraser:'Eraser', eraserActive:'Eraser on', eraserTitle:'Toggle local eraser', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
@@ -1045,6 +1045,10 @@ const LEVEL55_ROMAN_CORRECTIONS = {
   lodging:'chan phak thi rong raem'
 };
 const STORAGE_KEY = 'thaiTrainerStateV3';
+const VOICE_CHEER_AUDIO_SRCS = [
+  'assets/audio/phuud-maak.mp4',
+  'assets/audio/phuud-maak-alt.mp4'
+];
 const THEMES = [
   {id:'ocean', he:'Ocean Calm 🌊', en:'Ocean Calm 🌊', points:0},
   {id:'notebook', he:'Thai Notebook ✍️', en:'Thai Notebook ✍️', points:0},
@@ -1070,6 +1074,8 @@ let selectedTone = null;
 let selectedVowelAnswer = null;
 let level6McqAnswered = false;
 let level55ChatState = null;
+let voiceCheerAudio = null;
+let voiceCheerAudioIndex = 0;
 let drawing = false;
 let lastPoint = null;
 let smoothPoint = null;
@@ -1456,6 +1462,23 @@ function playVoiceCheer(options = {}){
   const force = !!options.force;
   const retry = options.retry || 0;
   if((!force && !state.coach.voiceCheer) || !hasFirstPremiumSkin()) return;
+  if(!options.skipRecorded){
+    try{
+      const audioSrc = VOICE_CHEER_AUDIO_SRCS[voiceCheerAudioIndex % VOICE_CHEER_AUDIO_SRCS.length];
+      voiceCheerAudioIndex = (voiceCheerAudioIndex + 1) % VOICE_CHEER_AUDIO_SRCS.length;
+      voiceCheerAudio = new Audio(audioSrc);
+      voiceCheerAudio.volume = 0.98;
+      voiceCheerAudio.currentTime = 0;
+      voiceCheerAudio.onended = () => { voiceCheerAudio = null; };
+      const playPromise = voiceCheerAudio.play();
+      if(playPromise && typeof playPromise.catch === 'function'){
+        playPromise.catch(() => playVoiceCheer({...options, skipRecorded:true}));
+      }
+      return;
+    }catch(err){
+      console.debug('Recorded voice cheer unavailable', err);
+    }
+  }
   if(!('speechSynthesis' in window) || typeof SpeechSynthesisUtterance === 'undefined'){
     playCheerFallbackTone();
     return;
