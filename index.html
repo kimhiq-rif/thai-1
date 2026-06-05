@@ -8,16 +8,16 @@
   <meta name="apple-mobile-web-app-title" content="Thai Trainer" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <title>Thai Trainer — תרגול תאית</title>
-  <link rel="manifest" href="manifest.webmanifest?v=1.25.16" />
-  <link rel="icon" type="image/svg+xml" href="assets/icons/thai-trainer-icon.svg?v=1.25.16" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/thai-trainer-icon-180.png?v=1.25.16" />
-  <link rel="stylesheet" href="styles.css?v=1.25.16" />
+  <link rel="manifest" href="manifest.webmanifest?v=1.25.18" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/thai-trainer-icon.svg?v=1.25.18" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/thai-trainer-icon-180.png?v=1.25.18" />
+  <link rel="stylesheet" href="styles.css?v=1.25.18" />
 </head>
 <body>
   <main class="app" id="app">
     <header class="hero">
       <div>
-        <p class="eyebrow" id="eyebrowText">Thai Trainer 🇹🇭 · v1.25.16</p>
+        <p class="eyebrow" id="eyebrowText">Thai Trainer 🇹🇭 · v1.25.18</p>
         <h1 id="mainTitle">קריאה, כתיבה, טונים ומשמעות</h1>
         <p class="subtitle" id="subtitleText">כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.</p>
       </div>
@@ -90,6 +90,13 @@
         <span id="penSizeLabel">עובי עט</span>
         <input id="penSizeInput" type="range" min="3" max="10" step="1" value="5" />
       </label>
+      <label class="pen-control premium-pen-control" id="premiumPenControl" hidden>
+        <span id="premiumPenLabel">עט</span>
+        <select id="premiumPenSelect">
+          <option value="regular">רגיל</option>
+          <option value="premium">פרימיום</option>
+        </select>
+      </label>
 
       <div class="answer" id="answerBox" hidden></div>
 
@@ -117,6 +124,7 @@
         <div><span id="strongItemsLabel">חזקים</span><strong id="strongItemsCount">0</strong></div>
       </div>
       <p class="achievement-note" id="achievementNote"></p>
+      <div class="daily-bonus-panel" id="dailyBonusPanel" hidden></div>
     </section>
 
     <section class="panel skin-panel" aria-live="polite">
@@ -125,6 +133,7 @@
         <span id="coachPointsBadge">0 נק׳</span>
       </div>
       <div class="skin-progress" aria-hidden="true"><span id="skinProgressFill"></span></div>
+      <p class="skin-progress-text" id="skinProgressText"></p>
       <label class="voice-cheer" id="voiceCheerControl" hidden>
         <input id="voiceCheerToggle" type="checkbox" />
         <span id="voiceCheerLabel">מחווה קולית ב"צדקתי"</span>
@@ -179,6 +188,6 @@
       </details>
     </section>
   </main>
-  <script src="app.js?v=1.25.16" defer></script>
+  <script src="app.js?v=1.25.18" defer></script>
 </body>
 </html>

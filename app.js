@@ -1,10 +1,10 @@
 'use strict';
 
-const APP_VERSION = '1.25.16-alternating-voice-cheers';
+const APP_VERSION = '1.25.18-premium-pen-bonus';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
-  imprint:'kimคcode::thai-trainer::2026-06-04::v1.25.16'
+  imprint:'kimคcode::thai-trainer::2026-06-04::v1.25.18'
 });
 
 const TONES = [
@@ -18,7 +18,7 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.16', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.18', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', eraser:'מחק', eraserActive:'מחק פעיל', eraserTitle:'הפעל/כבה מחק מקומי', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
@@ -35,7 +35,7 @@ const I18N = {
     dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא', voiceCheer:'מחווה קולית ב"צדקתי"', voiceCheerLocked:'ייפתח אחרי הסקין הראשון'
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.16', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.18', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', eraser:'Eraser', eraserActive:'Eraser on', eraserTitle:'Toggle local eraser', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
@@ -1049,6 +1049,8 @@ const VOICE_CHEER_AUDIO_SRCS = [
   'assets/audio/phuud-maak.mp4',
   'assets/audio/phuud-maak-alt.mp4'
 ];
+const DAILY_BONUS_GOAL = 10;
+const DAILY_BONUS_REWARD = 8;
 const THEMES = [
   {id:'ocean', he:'Ocean Calm 🌊', en:'Ocean Calm 🌊', points:0},
   {id:'notebook', he:'Thai Notebook ✍️', en:'Thai Notebook ✍️', points:0},
@@ -1086,7 +1088,7 @@ const canvas = el('writeCanvas');
 const ctx = canvas.getContext('2d');
 
 function defaultState(){
-  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false}, achievements:{}, penSize:5, syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean' };
+  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false,bonus:{active:false,done:0,goal:DAILY_BONUS_GOAL,reward:DAILY_BONUS_REWARD,correct:0,awarded:false}}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false}, achievements:{}, penSize:5, penMode:'regular', syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean' };
 }
 
 async function disableOldServiceWorkers(){
@@ -1118,6 +1120,7 @@ function init(){
   el('syncUrl').value = state.syncUrl || DEFAULT_SYNC_URL;
   el('userIdInput').value = state.userId || 'rif';
   if(el('penSizeInput')) el('penSizeInput').value = String(state.penSize || 5);
+  if(el('premiumPenSelect')) el('premiumPenSelect').value = state.penMode || 'regular';
   updateSyncHealth();
   updateStats(); newQuestion();
   // v1.5: do NOT register a service worker. It caused stale versions to stay alive in normal browser windows.
@@ -1164,6 +1167,16 @@ function setupEvents(){
   el('newQuestionBtn').addEventListener('click', newQuestion);
   if(el('dailyPracticeBtn')) el('dailyPracticeBtn').addEventListener('click', toggleDailyPractice);
   if(el('penSizeInput')) el('penSizeInput').addEventListener('input', e => { state.penSize = Number(e.target.value) || 5; saveState(); });
+  if(el('premiumPenSelect')) el('premiumPenSelect').addEventListener('change', e => {
+    state.penMode = e.target.value === 'premium' && hasPremiumPen() ? 'premium' : 'regular';
+    e.target.value = state.penMode;
+    saveState();
+    updatePremiumPenControl();
+  });
+  if(el('dailyBonusPanel')) el('dailyBonusPanel').addEventListener('click', e => {
+    const btn = e.target && e.target.closest ? e.target.closest('[data-daily-bonus-action]') : null;
+    if(btn) startDailyBonusChallenge();
+  });
   if(el('voiceCheerToggle')) el('voiceCheerToggle').addEventListener('change', e => {
     ensureDailyState();
     state.coach.voiceCheer = !!e.target.checked;
@@ -1272,6 +1285,12 @@ function applyLanguage(){
   if(el('weakItemsLabel')) el('weakItemsLabel').textContent = t('weakItems');
   if(el('strongItemsLabel')) el('strongItemsLabel').textContent = t('strongItems');
   if(el('penSizeLabel')) el('penSizeLabel').textContent = t('penSize');
+  if(el('premiumPenLabel')) el('premiumPenLabel').textContent = isHebrew() ? 'עט' : 'Pen';
+  if(el('premiumPenSelect')){
+    const opts = el('premiumPenSelect').options;
+    if(opts[0]) opts[0].textContent = isHebrew() ? 'רגיל' : 'Regular';
+    if(opts[1]) opts[1].textContent = isHebrew() ? 'פרימיום' : 'Premium';
+  }
   if(el('skinsTitle')) el('skinsTitle').textContent = t('skins');
   if(el('voiceCheerLabel')) el('voiceCheerLabel').textContent = t('voiceCheer');
   if(el('syncAdvancedSummary')) el('syncAdvancedSummary').textContent = t('syncAdvanced');
@@ -1362,9 +1381,12 @@ function mastery(item){
 function todayKey(){ return new Date().toISOString().slice(0,10); }
 function ensureDailyState(){
   state.daily = {...defaultState().daily, ...(state.daily || {})};
+  state.daily.bonus = {...defaultState().daily.bonus, ...((state.daily && state.daily.bonus) || {})};
   state.coach = {...defaultState().coach, ...(state.coach || {})};
   state.coach.unlocked = [...new Set([...(defaultState().coach.unlocked || []), ...((state.coach && state.coach.unlocked) || [])])];
   if(state.daily.date !== todayKey()) state.daily = {...defaultState().daily, date:todayKey()};
+  const premiumCount = THEMES.filter(theme => theme.premium && ((state.coach.unlocked || []).includes(theme.id) || (state.coach.points || 0) >= (theme.points || 0))).length;
+  if(premiumCount < 3 && state.penMode === 'premium') state.penMode = 'regular';
 }
 function toggleDailyPractice(){
   ensureDailyState();
@@ -1398,6 +1420,37 @@ function isThemeUnlocked(theme){
 function hasFirstPremiumSkin(){
   ensureDailyState();
   return THEMES.some(theme => theme.premium && isThemeUnlocked(theme));
+}
+function unlockedPremiumSkinCount(){
+  ensureDailyState();
+  return THEMES.filter(theme => theme.premium && ((state.coach.unlocked || []).includes(theme.id) || (state.coach.points || 0) >= (theme.points || 0))).length;
+}
+function hasPremiumPen(){
+  return unlockedPremiumSkinCount() >= 3;
+}
+function startDailyBonusChallenge(){
+  ensureDailyState();
+  const bonus = state.daily.bonus;
+  if((state.daily.done || 0) < (state.daily.goal || 15) || bonus.awarded) return;
+  bonus.active = true;
+  bonus.goal = DAILY_BONUS_GOAL;
+  bonus.reward = DAILY_BONUS_REWARD;
+  bonus.done = bonus.done || 0;
+  bonus.correct = bonus.correct || 0;
+  saveState();
+  updateAchievementPanel();
+}
+function awardDailyBonusPoints(){
+  ensureDailyState();
+  const bonus = state.daily.bonus;
+  if(!bonus.active || bonus.awarded || (bonus.done || 0) < (bonus.goal || DAILY_BONUS_GOAL)) return 0;
+  const reward = bonus.reward || DAILY_BONUS_REWARD;
+  state.coach.points = (state.coach.points || 0) + reward;
+  bonus.awarded = true;
+  bonus.active = false;
+  state.achievements.dailyBonusAward = Date.now();
+  unlockEligibleThemes();
+  return reward;
 }
 function unlockEligibleThemes(){
   ensureDailyState();
@@ -1948,7 +2001,9 @@ function renderQuestion(){
   const itemLevel = mode === 'level55_chat' ? '5.5' : (mode === 'vowel_board' || mode === 'vowel_write' || mode === 'level6_pair') ? '6' : (mode === 'level12_pair' ? '1.2' : String(item.level));
   el('levelBadge').textContent = itemLevel === '6' ? `${t('level')} 6 — ${t('vowelLevel')}` : itemLevel === '1.2' ? t('foundationLevel') : `${t('level')} ${itemLevel}`;
   el('modeBadge').textContent = modeLabel(mode);
-  el('progressBadge').textContent = state.daily?.active
+  el('progressBadge').textContent = state.daily?.bonus?.active
+    ? `${isHebrew() ? 'בונוס' : 'Bonus'}: ${state.daily.bonus.done || 0}/${state.daily.bonus.goal || DAILY_BONUS_GOAL}`
+    : state.daily?.active
     ? `${t('todayGoal')}: ${state.daily.done || 0}/${state.daily.goal || 15}`
     : `${state.stats.total || 0} ${t('questions')}`;
   el('answerBox').hidden = true;
@@ -1962,6 +2017,7 @@ function renderQuestion(){
   const eraserBtn = el('eraserToggleBtn');
   if(eraserBtn) eraserBtn.hidden = mode === 'level55_chat' || writingLocked;
   if(el('penControl')) el('penControl').hidden = mode === 'level55_chat' || writingLocked;
+  if(el('premiumPenControl')) el('premiumPenControl').hidden = mode === 'level55_chat' || writingLocked || !hasPremiumPen();
   el('showAnswerBtn').hidden = mode === 'level55_chat' || writingLocked;
   el('toneChoices').hidden = mode === 'level55_chat' || !(mode === 'tone' || mode === 'vowel_board');
   el('toneChoices').innerHTML = '';
@@ -2211,10 +2267,17 @@ function mark(correct){
   if(state.history.length>250) state.history = state.history.slice(-250);
   ensureDailyState();
   if(state.daily.active){
-    state.daily.done = Math.min(state.daily.goal || 15, (state.daily.done || 0) + 1);
-    correct ? state.daily.correct++ : state.daily.wrong++;
-    const awarded = awardDailyCoachPoints();
-    if(awarded) state.achievements.dailyAward = Date.now();
+    if((state.daily.done || 0) < (state.daily.goal || 15)){
+      state.daily.done = Math.min(state.daily.goal || 15, (state.daily.done || 0) + 1);
+      correct ? state.daily.correct++ : state.daily.wrong++;
+      const awarded = awardDailyCoachPoints();
+      if(awarded) state.achievements.dailyAward = Date.now();
+    } else if(state.daily.bonus && state.daily.bonus.active && !state.daily.bonus.awarded){
+      state.daily.bonus.done = Math.min(state.daily.bonus.goal || DAILY_BONUS_GOAL, (state.daily.bonus.done || 0) + 1);
+      if(correct) state.daily.bonus.correct = (state.daily.bonus.correct || 0) + 1;
+      const bonusAwarded = awardDailyBonusPoints();
+      if(bonusAwarded) state.achievements.dailyBonusAward = Date.now();
+    }
   }
   const premiumJustUnlocked = !premiumBefore && hasFirstPremiumSkin();
   if(premiumJustUnlocked){
@@ -2258,11 +2321,48 @@ function practiceCounts(){
 }
 function achievementText(){
   const a = state.achievements || {};
+  if(state.daily?.bonus?.awarded) return isHebrew() ? `בונוס יומי הושלם: +${state.daily.bonus.reward || DAILY_BONUS_REWARD} נק׳ לסקין הבא.` : `Daily bonus complete: +${state.daily.bonus.reward || DAILY_BONUS_REWARD} pts toward the next skin.`;
+  if(state.daily?.bonus?.active) return isHebrew() ? `אתגר בונוס פעיל: ${state.daily.bonus.done || 0}/${state.daily.bonus.goal || DAILY_BONUS_GOAL}` : `Bonus challenge active: ${state.daily.bonus.done || 0}/${state.daily.bonus.goal || DAILY_BONUS_GOAL}`;
   if(state.daily && state.daily.done >= state.daily.goal) return t('dailyDone');
   if(a.streak10) return isHebrew() ? 'רצף 10 תשובות נכונות. יפה.' : '10-correct streak. Nice.';
   if(a.focused10) return isHebrew() ? 'אימון מדויק: 8 מתוך 10 לאחרונה.' : 'Focused run: 8 of the last 10 correct.';
   if(a.streak5) return isHebrew() ? 'רצף 5 תשובות נכונות.' : '5-correct streak.';
   return state.daily?.active ? t('dailyOn') : (isHebrew() ? 'התחל אימון יומי כדי לקבל תמהיל חכם יותר.' : 'Start daily practice for a smarter mix.');
+}
+function renderDailyBonusPanel(){
+  const panel = el('dailyBonusPanel');
+  if(!panel) return;
+  ensureDailyState();
+  const bonus = state.daily.bonus;
+  const dailyComplete = (state.daily.done || 0) >= (state.daily.goal || 15);
+  if(!state.daily.active || !dailyComplete){
+    panel.hidden = true;
+    panel.innerHTML = '';
+    return;
+  }
+  panel.hidden = false;
+  if(bonus.awarded){
+    panel.innerHTML = `<strong>${escapeHtml(isHebrew() ? 'בונוס יומי הושלם' : 'Daily bonus complete')}</strong><span>${escapeHtml(isHebrew() ? `קיבלת ${bonus.reward || DAILY_BONUS_REWARD} נק׳ להתקדמות לסקין הבא.` : `You earned ${bonus.reward || DAILY_BONUS_REWARD} pts toward the next skin.`)}</span>`;
+    return;
+  }
+  if(bonus.active){
+    panel.innerHTML = `<strong>${escapeHtml(isHebrew() ? 'אתגר עומס פעיל' : 'Load challenge active')}</strong><span>${escapeHtml(`${bonus.done || 0}/${bonus.goal || DAILY_BONUS_GOAL} · +${bonus.reward || DAILY_BONUS_REWARD}`)}</span>`;
+    return;
+  }
+  panel.innerHTML = `
+    <strong>${escapeHtml(isHebrew() ? 'בונוס אחרי היעד' : 'After-goal bonus')}</strong>
+    <span>${escapeHtml(isHebrew() ? `ענה על עוד ${DAILY_BONUS_GOAL} שאלות וקבל ${DAILY_BONUS_REWARD} נק׳ לסקין הבא.` : `Answer ${DAILY_BONUS_GOAL} more questions for ${DAILY_BONUS_REWARD} pts toward the next skin.`)}</span>
+    <button type="button" class="secondary" data-daily-bonus-action="start">${escapeHtml(isHebrew() ? 'התחל בונוס' : 'Start bonus')}</button>`;
+}
+function updatePremiumPenControl(){
+  const wrap = el('premiumPenControl');
+  const select = el('premiumPenSelect');
+  if(!wrap || !select) return;
+  const unlocked = hasPremiumPen();
+  wrap.hidden = !unlocked;
+  if(!unlocked) state.penMode = 'regular';
+  select.value = state.penMode === 'premium' && unlocked ? 'premium' : 'regular';
+  if(canvas) canvas.classList.toggle('premium-pen-mode', state.penMode === 'premium' && unlocked);
 }
 function updateAchievementPanel(){
   if(!el('dailyGoalBadge')) return;
@@ -2279,6 +2379,7 @@ function updateAchievementPanel(){
   el('weakItemsCount').textContent = counts.weak;
   el('strongItemsCount').textContent = counts.strong;
   el('achievementNote').textContent = achievementText();
+  renderDailyBonusPanel();
   updateSkinPanel();
 }
 function updateSkinPanel(){
@@ -2304,10 +2405,22 @@ function updateSkinPanel(){
     }
     voiceToggle.checked = !!state.coach.voiceCheer;
   }
+  updatePremiumPenControl();
   el('coachPointsBadge').textContent = next
     ? (isHebrew() ? `${points} נק׳ · עוד ${nextTarget - points}` : `${points} pts · ${nextTarget - points} left`)
     : (isHebrew() ? `${points} נק׳ · הכל פתוח` : `${points} pts · all unlocked`);
   if(el('skinProgressFill')) el('skinProgressFill').style.width = `${progress}%`;
+  if(el('skinProgressText')){
+    const percent = Math.round(progress);
+    const premiumCount = unlockedPremiumSkinCount();
+    el('skinProgressText').textContent = next
+      ? (isHebrew()
+        ? `התקדמות לפרס הבא: ${percent}% · חסרות ${Math.max(0, nextTarget - points)} נק׳. עט פרימיום נפתח אחרי 3 סקינים (${premiumCount}/3).`
+        : `Next reward progress: ${percent}% · ${Math.max(0, nextTarget - points)} pts left. Premium pen unlocks after 3 skins (${premiumCount}/3).`)
+      : (isHebrew()
+        ? `כל הפרסים נפתחו. עט פרימיום ${hasPremiumPen() ? 'פתוח' : 'נעול'}.`
+        : `All rewards unlocked. Premium pen ${hasPremiumPen() ? 'unlocked' : 'locked'}.`);
+  }
   el('skinGrid').innerHTML = premiumThemes.map(theme => {
     const unlocked = isThemeUnlocked(theme);
     const active = state.theme === theme.id;
@@ -2350,7 +2463,12 @@ function toggleEraserMode(){
 
 function setupCanvas(){
   const smoothWeight = 0.68;
+  const premiumSmoothWeight = 0.52;
   const minPointDistance = 1.6;
+  const isPremiumPenActive = () => {
+    const premiumCount = THEMES.filter(theme => theme.premium && ((state.coach.unlocked || []).includes(theme.id) || (state.coach.points || 0) >= (theme.points || 0))).length;
+    return state.penMode === 'premium' && premiumCount >= 3 && !eraserMode;
+  };
 
   function drawGuideLines(){
     const rect = canvas.getBoundingClientRect();
@@ -2380,16 +2498,16 @@ function setupCanvas(){
   window.addEventListener('orientationchange', () => setTimeout(resizeCanvas, 250));
   if(window.visualViewport) window.visualViewport.addEventListener('resize', scheduleResize);
   resizeCanvas();
-  function applyToolStyle(){
+  function applyToolStyle(dynamicWidth){
     ctx.globalCompositeOperation = eraserMode ? 'destination-out' : 'source-over';
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
     ctx.miterLimit = 2;
     const penWidth = Math.max(3, Math.min(10, Number(state.penSize) || 5));
-    ctx.lineWidth = eraserMode ? Math.max(24, penWidth * 6) : penWidth;
+    ctx.lineWidth = eraserMode ? Math.max(24, penWidth * 6) : (dynamicWidth || penWidth);
     ctx.strokeStyle = '#020617';
-    ctx.shadowColor = eraserMode ? 'transparent' : 'rgba(2, 6, 23, .10)';
-    ctx.shadowBlur = eraserMode ? 0 : 0.45;
+    ctx.shadowColor = eraserMode ? 'transparent' : (isPremiumPenActive() ? 'rgba(34, 211, 238, .28)' : 'rgba(2, 6, 23, .10)');
+    ctx.shadowBlur = eraserMode ? 0 : (isPremiumPenActive() ? 2.2 : 0.45);
   }
 
   const getPoint = e => {
@@ -2404,11 +2522,14 @@ function setupCanvas(){
     return {x: touch.clientX - r.left, y: touch.clientY - r.top, pressure:0.5};
   };
   const distance = (a,b) => Math.hypot(a.x-b.x, a.y-b.y);
-  const blendPoint = (from, to) => ({
-    x: from.x + (to.x - from.x) * smoothWeight,
-    y: from.y + (to.y - from.y) * smoothWeight,
+  const blendPoint = (from, to) => {
+    const weight = isPremiumPenActive() ? premiumSmoothWeight : smoothWeight;
+    return {
+    x: from.x + (to.x - from.x) * weight,
+    y: from.y + (to.y - from.y) * weight,
     pressure: to.pressure || from.pressure || 0.5
-  });
+  };
+  };
 
   const beginStroke = point => {
     applyToolStyle();
@@ -2422,7 +2543,13 @@ function setupCanvas(){
     if(!drawing) return;
     applyToolStyle();
     const nextPoint = smoothPoint ? blendPoint(smoothPoint, point) : point;
-    if(lastPoint && distance(lastPoint, nextPoint) < minPointDistance) return;
+    const segmentDistance = lastPoint ? distance(lastPoint, nextPoint) : 0;
+    if(lastPoint && segmentDistance < minPointDistance) return;
+    if(isPremiumPenActive()){
+      const baseWidth = Math.max(3, Math.min(10, Number(state.penSize) || 5));
+      const dynamicWidth = Math.max(baseWidth * 0.72, Math.min(baseWidth * 1.24, baseWidth + (7 - Math.min(7, segmentDistance)) * 0.22));
+      applyToolStyle(dynamicWidth);
+    }
     const midPoint = lastPoint
       ? {x:(lastPoint.x + nextPoint.x) / 2, y:(lastPoint.y + nextPoint.y) / 2}
       : nextPoint;
