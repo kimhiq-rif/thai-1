@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.11-ipad-touch-writing-fix';
+const APP_VERSION = '1.25.12-level-5-5-chat';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
@@ -984,6 +984,39 @@ function makeLevel12PairedQuestion(){
 
 const MODES = ['read_meaning','hebrew_write','tone','roman_write'];
 const MODE_OPTIONS = ['mixed','read_meaning','hebrew_write','tone','roman_write'];
+const LEVEL55_CHAT_ITEM = {id:'level55_chat', level:'5.5', thai:'', roman:'chat', hebrew:'שיחת כתיבה', english:'Writing chat', tone:'not_drilled'};
+const LEVEL55_TOPICS = {
+  intro: {
+    he:'היכרות',
+    en:'Introductions',
+    examples:['ผมชื่อดני','ฉันมาจากอิสราเอล','ฉันชอบเรียนภาษาไทย'],
+    turns:[
+      {ask:'khun chue arai?', intentHe:'שם', intentEn:'name', accepted:['ชื่อ','ผมชื่อ','ฉันชื่อ','ดิฉันชื่อ'], correction:'ผมชื่อ... / ฉันชื่อ...', next:'yin di thi dai ru chak. khun ma chak prathet arai?'},
+      {ask:'khun ma chak prathet arai?', intentHe:'מדינה', intentEn:'country', accepted:['มาจาก','ประเทศ','อิสราเอล','ยิสราเอล','ไทย'], correction:'ฉันมาจากอิสราเอล', next:'khun chop tham arai nai wan wang?'},
+      {ask:'khun chop tham arai nai wan wang?', intentHe:'תחביב', intentEn:'hobby', accepted:['ชอบ','เรียน','กิน','เดิน','เที่ยว','ดู','ฟัง'], correction:'ฉันชอบเรียนภาษาไทย', next:'di mak. rao ja fui kan ik nit na.'}
+    ]
+  },
+  food: {
+    he:'אוכל',
+    en:'Food',
+    examples:['ฉันชอบผัดไทย','ผมอยากกินข้าว','ไม่เผ็ดครับ'],
+    turns:[
+      {ask:'khun chop ahaan arai?', intentHe:'אוכל אהוב', intentEn:'favorite food', accepted:['ชอบ','อาหาร','ข้าว','ผัดไทย','ต้มยำ','ก๋วยเตี๋ยว'], correction:'ฉันชอบผัดไทย / ผมชอบข้าว', next:'khun chop phet rue mai?'},
+      {ask:'khun chop phet rue mai?', intentHe:'חריפות', intentEn:'spice level', accepted:['เผ็ด','ไม่เผ็ด','ชอบ','ไม่ชอบ','นิดหน่อย'], correction:'ชอบเผ็ด / ไม่เผ็ดครับ / เผ็ดนิดหน่อย', next:'khun yak duem nam arai?'},
+      {ask:'khun yak duem nam arai?', intentHe:'שתייה', intentEn:'drink', accepted:['อยาก','ดื่ม','น้ำ','ชา','กาแฟ','เบียร์'], correction:'ฉันอยากดื่มน้ำ / ผมอยากดื่มกาแฟ', next:'aroi mak. pai kin kan.'}
+    ]
+  },
+  travel: {
+    he:'נסיעה',
+    en:'Travel',
+    examples:['ฉันอยากไปกรุงเทพ','ผมไปด้วยรถไฟ','ฉันพักที่โรงแรม'],
+    turns:[
+      {ask:'khun yak pai thii nai?', intentHe:'יעד', intentEn:'destination', accepted:['อยากไป','ไป','กรุงเทพ','เชียงใหม่','ภูเก็ต','พัทยา'], correction:'ฉันอยากไปกรุงเทพ', next:'khun ja pai yang rai?'},
+      {ask:'khun ja pai yang rai?', intentHe:'תחבורה', intentEn:'transport', accepted:['รถ','รถไฟ','เครื่องบิน','แท็กซี่','เรือ','ไปด้วย'], correction:'ผมไปด้วยรถไฟ / ฉันไปด้วยแท็กซี่', next:'khun ja phak thii nai?'},
+      {ask:'khun ja phak thii nai?', intentHe:'לינה', intentEn:'lodging', accepted:['พัก','โรงแรม','บ้าน','โฮสเทล','ที่'], correction:'ฉันพักที่โรงแรม', next:'thiao hai sanuk na.'}
+    ]
+  }
+};
 const STORAGE_KEY = 'thaiTrainerStateV3';
 const THEMES = [
   {id:'ocean', he:'Ocean Calm 🌊', en:'Ocean Calm 🌊', points:0},
@@ -1009,6 +1042,7 @@ let current = null;
 let selectedTone = null;
 let selectedVowelAnswer = null;
 let level6McqAnswered = false;
+let level55ChatState = null;
 let drawing = false;
 let lastPoint = null;
 let smoothPoint = null;
@@ -1068,6 +1102,7 @@ function setupLevels(){
     {value:'3', label:`${t('level')} 3`},
     {value:'4', label:`${t('level')} 4`},
     {value:'5', label:`${t('level')} 5`},
+    {value:'5.5', label:`${t('level')} 5.5 - Chat Bot`},
     {value:'6', label:`${t('level')} 6 — ${t('vowelLevel')}`}
   ];
   select.innerHTML = '';
@@ -1111,6 +1146,11 @@ function setupEvents(){
   el('wrongBtn').addEventListener('click', ()=>mark(false));
   el('levelSelect').addEventListener('change', newQuestion);
   el('modeSelect').addEventListener('change', newQuestion);
+  if(el('level55Chat')){
+    el('level55Chat').addEventListener('submit', handleLevel55Submit);
+    el('level55Chat').addEventListener('click', handleLevel55Click);
+    el('level55Chat').addEventListener('change', handleLevel55Change);
+  }
   el('saveSyncUrlBtn').addEventListener('click', saveSyncUrl);
   if(el('resetSyncUrlBtn')) el('resetSyncUrlBtn').addEventListener('click', resetSyncUrl);
   el('syncUploadBtn').addEventListener('click', syncUpload);
@@ -1401,9 +1441,11 @@ function newQuestion(){
   selectedVowelAnswer = null;
   level6McqAnswered = false;
   const levelValue = el('levelSelect').value || '1';
-  const mode = levelValue === '6' ? 'level6_pair' : levelValue === '1.2' ? 'level12_pair' : pickMode();
+  const mode = levelValue === '6' ? 'level6_pair' : levelValue === '5.5' ? 'level55_chat' : levelValue === '1.2' ? 'level12_pair' : pickMode();
   if(mode === 'level12_pair'){
     current = makeLevel12PairedQuestion();
+  } else if(mode === 'level55_chat'){
+    current = makeLevel55ChatQuestion();
   } else if(mode === 'level6_pair' || mode === 'level12_pair'){
     current = makeLevel6PairedQuestion();
   } else if(mode === 'vowel_write'){
@@ -1580,9 +1622,196 @@ function makeVowelWritingQuestion(){
   else { question = isHebrew()?item.he:item.sound; expected = item.symbol; hint = isHebrew() ? 'כתוב את הסימן שמתאים לצליל' : 'Write the sign for this sound'; }
   return { item, mode:'vowel_write', qtype, prompt, question, expected, hint };
 }
+
+function makeLevel55ChatQuestion(){
+  const topic = (level55ChatState && LEVEL55_TOPICS[level55ChatState.topic]) ? level55ChatState.topic : 'intro';
+  level55ChatState = {
+    topic,
+    turnIndex:0,
+    mode:'thai-answer',
+    understood:0,
+    fixes:0,
+    messages:[]
+  };
+  level55AddBotQuestion();
+  return {item:LEVEL55_CHAT_ITEM, mode:'level55_chat'};
+}
+
+function level55Topic(){
+  return LEVEL55_TOPICS[(level55ChatState && level55ChatState.topic) || 'intro'] || LEVEL55_TOPICS.intro;
+}
+
+function level55Turn(){
+  const topic = level55Topic();
+  return topic.turns[level55ChatState.turnIndex] || topic.turns[0];
+}
+
+function level55Text(he,en){
+  return isHebrew() ? he : en;
+}
+
+function level55HasThai(text){
+  return /[\u0E00-\u0E7F]/.test(text || '');
+}
+
+function level55Clean(text){
+  return String(text || '').trim().replace(/\s+/g,' ');
+}
+
+function level55AddMessage(role, html){
+  if(!level55ChatState) return;
+  level55ChatState.messages.push({role, html});
+}
+
+function level55AddBotQuestion(){
+  const turn = level55Turn();
+  level55AddMessage('bot', `
+    <span class="level55-label">Bot asks in transliteration</span>
+    <div class="level55-roman">${escapeHtml(turn.ask)}</div>
+  `);
+}
+
+function level55Understand(text, turn){
+  if(!level55HasThai(text)) return {ok:false, reason:'missing-thai'};
+  const compact = text.replace(/\s/g,'');
+  const matched = turn.accepted.some(word => compact.includes(String(word).replace(/\s/g,'')));
+  return matched ? {ok:true} : {ok:false, reason:'unclear-intent'};
+}
+
+function level55CorrectionText(turn){
+  return level55Text('צורה מומלצת: ', 'Suggested form: ') + turn.correction;
+}
+
+function level55Advance(){
+  level55ChatState.turnIndex += 1;
+  if(level55ChatState.turnIndex >= level55Topic().turns.length){
+    level55AddMessage('bot', `
+      <span class="level55-label">Bot</span>
+      ${escapeHtml(level55Text('סיימת סבב שיחה קצר. אפשר להתחיל מחדש או להחליף נושא.', 'Short chat round complete. Start again or switch topic.'))}
+      <div class="level55-feedback">${escapeHtml(level55Text('בגרסה הבאה אפשר לחבר כאן מנוע AI מלא להבנת תשובות חופשיות יותר.', 'A future version can connect this board to a full AI engine for freer answers.'))}</div>
+    `);
+    level55ChatState.mode = 'done';
+    renderQuestion();
+    return;
+  }
+  level55ChatState.mode = 'thai-answer';
+  level55AddBotQuestion();
+  renderQuestion();
+}
+
+function handleLevel55Submit(event){
+  if(!event.target || !event.target.matches('#level55Form')) return;
+  event.preventDefault();
+  if(!current || current.mode !== 'level55_chat' || !level55ChatState || level55ChatState.mode === 'done') return;
+  const input = el('level55Input');
+  const text = level55Clean(input ? input.value : '');
+  if(!text) return;
+  input.value = '';
+  const turn = level55Turn();
+  if(level55ChatState.mode === 'clarify'){
+    level55AddMessage('student', `
+      <span class="level55-label">Student explains intent</span>
+      ${escapeHtml(text)}
+    `);
+    level55AddMessage('bot', `
+      <span class="level55-label">Bot correction</span>
+      ${escapeHtml(level55Text('לפי ההסבר שלך, כדאי לכתוב כך:', 'Based on your explanation, write it like this:'))}
+      <div class="level55-feedback">${escapeHtml(level55CorrectionText(turn))}</div>
+      ${escapeHtml(level55Text('נמשיך בשיחה.', 'Let us continue.'))}
+    `);
+    level55Advance();
+    return;
+  }
+  level55AddMessage('student', `
+    <span class="level55-label">Student writes Thai</span>
+    <div class="level55-thai">${escapeHtml(text)}</div>
+  `);
+  const result = level55Understand(text, turn);
+  if(result.ok){
+    level55ChatState.understood += 1;
+    level55AddMessage('bot', `
+      <span class="level55-label">Bot understood</span>
+      ${escapeHtml(level55Text('הבנתי את הכוונה. נמשיך.', 'I understood the intent. Continue.'))}
+      <div class="level55-feedback">${escapeHtml(level55CorrectionText(turn))}</div>
+    `);
+    level55Advance();
+    return;
+  }
+  level55ChatState.fixes += 1;
+  level55ChatState.mode = 'clarify';
+  const missing = result.reason === 'missing-thai';
+  level55AddMessage('bot', `
+    <span class="level55-label">Bot asks for clarification</span>
+    ${escapeHtml(missing ? level55Text('לא זיהיתי כתב תאילנדי בתשובה.', 'I did not detect Thai script in the answer.') : level55Text('אני לא בטוח שהבנתי את הכוונה בתשובה.', 'I am not sure I understood the intent.'))}<br>
+    ${escapeHtml(level55Text('מה רצית לומר בעברית או באנגלית?', 'What did you want to say in Hebrew or English?'))}
+    <div class="level55-feedback warn">${escapeHtml(level55CorrectionText(turn))}</div>
+  `);
+  renderQuestion();
+}
+
+function handleLevel55Click(event){
+  const btn = event.target && event.target.closest ? event.target.closest('[data-level55-action]') : null;
+  if(!btn) return;
+  const action = btn.getAttribute('data-level55-action');
+  if(action === 'restart'){
+    makeLevel55ChatQuestion();
+    renderQuestion();
+  }
+}
+
+function handleLevel55Change(event){
+  if(!event.target || event.target.id !== 'level55Topic') return;
+  const topic = event.target.value;
+  if(!LEVEL55_TOPICS[topic]) return;
+  level55ChatState = {topic};
+  makeLevel55ChatQuestion();
+  renderQuestion();
+}
+
+function renderLevel55Chat(q){
+  const box = el('level55Chat');
+  if(!box) return;
+  if(!q || q.mode !== 'level55_chat'){
+    box.hidden = true;
+    box.innerHTML = '';
+    return;
+  }
+  if(!level55ChatState) makeLevel55ChatQuestion();
+  const topicOptions = Object.keys(LEVEL55_TOPICS).map(key => {
+    const topic = LEVEL55_TOPICS[key];
+    const selected = key === level55ChatState.topic ? ' selected' : '';
+    return `<option value="${escapeHtml(key)}"${selected}>${escapeHtml(isHebrew() ? topic.he : topic.en)}</option>`;
+  }).join('');
+  const examples = level55Topic().examples.map(x => `<span>${escapeHtml(x)}</span>`).join('');
+  const messages = level55ChatState.messages.map(msg => `<article class="level55-msg ${escapeHtml(msg.role)}">${msg.html}</article>`).join('');
+  const placeholder = level55ChatState.mode === 'clarify'
+    ? level55Text('הסבר בעברית או באנגלית מה רצית לומר...', 'Explain in Hebrew or English what you wanted to say...')
+    : level55Text('כתוב כאן בתאית...', 'Write Thai here...');
+  const disabled = level55ChatState.mode === 'done' ? ' disabled' : '';
+  box.hidden = false;
+  box.innerHTML = `
+    <div class="level55-toolbar">
+      <label>
+        <span>${escapeHtml(level55Text('נושא שיחה', 'Chat topic'))}</span>
+        <select id="level55Topic">${topicOptions}</select>
+      </label>
+      <div class="level55-score">
+        <div><strong>${level55ChatState.understood}</strong><span>${escapeHtml(level55Text('הבנות', 'Understood'))}</span></div>
+        <div><strong>${level55ChatState.fixes}</strong><span>${escapeHtml(level55Text('תיקונים', 'Fixes'))}</span></div>
+      </div>
+      <button class="secondary" type="button" data-level55-action="restart">${escapeHtml(level55Text('התחל מחדש', 'Restart'))}</button>
+    </div>
+    <div class="level55-examples">${examples}</div>
+    <div class="level55-thread">${messages}</div>
+    <form id="level55Form" class="level55-form">
+      <textarea id="level55Input" placeholder="${escapeHtml(placeholder)}"${disabled}></textarea>
+      <button type="submit"${disabled}>${escapeHtml(level55Text('שלח', 'Send'))}</button>
+    </form>
+  `;
+}
 function renderQuestion(){
   const {item, mode} = current;
-  const itemLevel = (mode === 'vowel_board' || mode === 'vowel_write' || mode === 'level6_pair') ? '6' : (mode === 'level12_pair' ? '1.2' : String(item.level));
+  const itemLevel = mode === 'level55_chat' ? '5.5' : (mode === 'vowel_board' || mode === 'vowel_write' || mode === 'level6_pair') ? '6' : (mode === 'level12_pair' ? '1.2' : String(item.level));
   el('levelBadge').textContent = itemLevel === '6' ? `${t('level')} 6 — ${t('vowelLevel')}` : itemLevel === '1.2' ? t('foundationLevel') : `${t('level')} ${itemLevel}`;
   el('modeBadge').textContent = modeLabel(mode);
   el('progressBadge').textContent = state.daily?.active
@@ -1590,19 +1819,27 @@ function renderQuestion(){
     : `${state.stats.total || 0} ${t('questions')}`;
   el('answerBox').hidden = true;
   renderLevel6Pair(current);
+  renderLevel55Chat(current);
   renderStudyCard(current);
   const canvasWrap = document.querySelector('.canvas-wrap');
-  if(canvasWrap) canvasWrap.hidden = ((mode === 'level6_pair' || mode === 'level12_pair') && !level6McqAnswered);
+  if(canvasWrap) canvasWrap.hidden = mode === 'level55_chat' || ((mode === 'level6_pair' || mode === 'level12_pair') && !level6McqAnswered);
   const writingLocked = ((mode === 'level6_pair' || mode === 'level12_pair') && !level6McqAnswered);
-  el('clearBtn').hidden = writingLocked;
+  el('clearBtn').hidden = mode === 'level55_chat' || writingLocked;
   const eraserBtn = el('eraserToggleBtn');
-  if(eraserBtn) eraserBtn.hidden = writingLocked;
-  if(el('penControl')) el('penControl').hidden = writingLocked;
-  el('showAnswerBtn').hidden = writingLocked;
-  el('toneChoices').hidden = !(mode === 'tone' || mode === 'vowel_board');
+  if(eraserBtn) eraserBtn.hidden = mode === 'level55_chat' || writingLocked;
+  if(el('penControl')) el('penControl').hidden = mode === 'level55_chat' || writingLocked;
+  el('showAnswerBtn').hidden = mode === 'level55_chat' || writingLocked;
+  el('toneChoices').hidden = mode === 'level55_chat' || !(mode === 'tone' || mode === 'vowel_board');
   el('toneChoices').innerHTML = '';
+  const markRow = document.querySelector('.mark-row');
+  if(markRow) markRow.hidden = mode === 'level55_chat';
 
-  if(mode === 'level6_pair' || mode === 'level12_pair'){
+  if(mode === 'level55_chat'){
+    el('promptText').textContent = level55Text('רמה 5.5 - שיחת כתיבה בתאית', 'Level 5.5 - Thai writing chat');
+    el('questionText').hidden = true;
+    el('questionText').textContent = '';
+    el('questionHint').textContent = level55Text('הבוט שואל בתעתיק אנגלי. התלמיד עונה בכתב תאילנדי.', 'The bot asks in transliteration. The student answers in Thai script.');
+  } else if(mode === 'level6_pair' || mode === 'level12_pair'){
     el('promptText').textContent = mode === 'level12_pair' ? t('level12Choose') : t('level6Choose');
     el('questionText').hidden = true;
     el('questionText').textContent = '';
@@ -1611,7 +1848,9 @@ function renderQuestion(){
     el('questionText').hidden = false;
   }
 
-  if(mode === 'vowel_write'){
+  if(mode === 'level55_chat'){
+    return;
+  } else if(mode === 'vowel_write'){
     el('promptText').textContent = current.prompt;
     el('questionText').textContent = current.question;
     el('questionHint').textContent = current.hint || t('writeHint');
@@ -1748,7 +1987,7 @@ function makeToneDistractors(tone){
 }
 function toneToHeb(tone){ return tone.split('-').map(part => { const found = TONES.find(tt=>tt.id===part)||{}; return isHebrew() ? (found.he || part) : (found.en || part); }).join(isHebrew() ? '־' : '-'); }
 function modeLabel(mode){
-  return {read_meaning:t('readMeaning'),hebrew_write:t('meaningWrite'),tone:t('toneMode'),roman_write:t('romanWrite'),vowel_board:t('vowelBoard'),vowel_write:t('vowelBoard'),level6_pair:t('vowelBoard'),level12_pair:t('foundationLevel')}[mode] || t('mixed');
+  return {read_meaning:t('readMeaning'),hebrew_write:t('meaningWrite'),tone:t('toneMode'),roman_write:t('romanWrite'),vowel_board:t('vowelBoard'),vowel_write:t('vowelBoard'),level55_chat:'Chat Bot',level6_pair:t('vowelBoard'),level12_pair:t('foundationLevel')}[mode] || t('mixed');
 }
 function showAnswer(){
   const {item, mode} = current;
@@ -2475,6 +2714,7 @@ function runQA(){
     lines.push(`Level ${level}: ${count} items × ${MODES.length} modes = ${variants} question variants`);
     if(count && variants < 50){ ok=false; lines.push(`ERROR: Level ${level} has fewer than 50 variants`); }
   }
+  lines.push(`Level 5.5: ${Object.keys(LEVEL55_TOPICS).length} guided chat topics`);
   for(const w of WORDS){
     const required = ['id','level','thai','roman','hebrew','english','tone'];
     for(const k of required){ if(!w[k]){ ok=false; lines.push(`ERROR: missing ${k} in ${JSON.stringify(w)}`); } }
