@@ -83,6 +83,26 @@ const WORDS = [
   {id:'l1_013',level:1,thai:'นอน',roman:'non',hebrew:'לישון',english:'to sleep',tone:'mid'},
   {id:'l1_014',level:1,thai:'โรง',roman:'roong',hebrew:'מבנה / אולם / מקום',english:'building / hall / place',tone:'mid'},
   {id:'l1_015',level:1,thai:'ลม',roman:'lom',hebrew:'רוח / אוויר',english:'wind / air',tone:'mid'},
+  {id:'l1_016',level:1,cefr:'A1',thai:'พ่อ',roman:'phaw',hebrew:'אבא',english:'father',tone:'falling'},
+  {id:'l1_017',level:1,cefr:'A1',thai:'แม่',roman:'mae',hebrew:'אמא',english:'mother',tone:'falling'},
+  {id:'l1_018',level:1,cefr:'A1',thai:'เนื้อ',roman:'nuea',hebrew:'בשר',english:'meat',tone:'falling'},
+  {id:'l1_019',level:1,cefr:'A1',thai:'ไก่',roman:'gai',hebrew:'תרנגול / עוף',english:'chicken',tone:'low'},
+  {id:'l1_020',level:1,cefr:'A1',thai:'แมว',roman:'maew',hebrew:'חתול',english:'cat',tone:'rising'},
+  {id:'l1_021',level:1,cefr:'A1',thai:'เล่น',roman:'len',hebrew:'לשחק',english:'to play',tone:'falling'},
+  {id:'l1_022',level:1,cefr:'A1',thai:'หิว',roman:'hiw',hebrew:'רעב',english:'hungry',tone:'rising'},
+  {id:'l1_023',level:1,cefr:'A1',thai:'ร้อน',roman:'rawn',hebrew:'חם',english:'hot',tone:'high'},
+  {id:'l1_024',level:1,cefr:'A1',thai:'หนาว',roman:'naao',hebrew:'קר',english:'cold',tone:'rising'},
+  {id:'l1_025',level:1,cefr:'A1',thai:'ดื่ม',roman:'duem',hebrew:'לשתות',english:'to drink',tone:'low'},
+  {id:'l1_026',level:1,cefr:'A1',thai:'ชอบ',roman:'chawp',hebrew:'לחבב / לאהוב',english:'to like',tone:'falling'},
+  {id:'l1_027',level:1,cefr:'A1',thai:'ใหญ่',roman:'yai',hebrew:'גדול',english:'big',tone:'low'},
+  {id:'l1_028',level:1,cefr:'A1',thai:'เล็ก',roman:'lek',hebrew:'קטן',english:'small',tone:'high'},
+  {id:'l1_029',level:1,cefr:'A1',thai:'เร็ว',roman:'reo',hebrew:'מהיר',english:'fast',tone:'high'},
+  {id:'l1_030',level:1,cefr:'A1',thai:'ช้า',roman:'chaa',hebrew:'איטי',english:'slow',tone:'high'},
+  {id:'l1_031',level:1,cefr:'A1',thai:'ตื่น',roman:'dtuen',hebrew:'להתעורר',english:'to wake up',tone:'low'},
+  {id:'l1_032',level:1,cefr:'A1',thai:'หมวก',roman:'muak',hebrew:'כובע',english:'hat',tone:'low'},
+  {id:'l1_033',level:1,cefr:'A1',thai:'สวย',roman:'suay',hebrew:'יפה',english:'beautiful',tone:'rising'},
+  {id:'l1_034',level:1,cefr:'A1',thai:'เพื่อน',roman:'phuean',hebrew:'חבר',english:'friend',tone:'falling'},
+  {id:'l1_035',level:1,cefr:'A1',thai:'หมู',roman:'muu',hebrew:'חזיר',english:'pig',tone:'rising'},
 
   // Level 2 — dead syllables and common nouns
   {id:'l2_001',level:2,thai:'ปาก',roman:'bpaak',hebrew:'פה',english:'mouth',tone:'low'},
@@ -100,6 +120,26 @@ const WORDS = [
   {id:'l2_013',level:2,thai:'นก',roman:'nok',hebrew:'ציפור',english:'bird',tone:'high'},
   {id:'l2_014',level:2,thai:'รถ',roman:'rot',hebrew:'רכב / אוטו',english:'car / vehicle',tone:'high'},
   {id:'l2_015',level:2,thai:'มด',roman:'mot',hebrew:'נמלה',english:'ant',tone:'high'},
+  {id:'l2_016',level:2,cefr:'A2',thai:'เงิน',roman:'ngern',hebrew:'כסף',english:'money',tone:'mid'},
+  {id:'l2_017',level:2,cefr:'A2',thai:'ไข่',roman:'khai',hebrew:'ביצה',english:'egg',tone:'low'},
+  {id:'l2_018',level:2,cefr:'A2',thai:'นม',roman:'nom',hebrew:'חלב',english:'milk',tone:'mid'},
+  {id:'l2_019',level:2,cefr:'A2',thai:'หมอ',roman:'maw',hebrew:'רופא',english:'doctor',tone:'rising'},
+  {id:'l2_020',level:2,cefr:'A2',thai:'ครู',roman:'khruu',hebrew:'מורה',english:'teacher',tone:'mid'},
+  {id:'l2_021',level:2,cefr:'A2',thai:'ปี',roman:'bpii',hebrew:'שנה',english:'year',tone:'mid'},
+  {id:'l2_022',level:2,cefr:'A2',thai:'วัน',roman:'wan',hebrew:'יום',english:'day',tone:'mid'},
+  {id:'l2_023',level:2,cefr:'A2',thai:'เดือน',roman:'duean',hebrew:'חודש',english:'month',tone:'mid'},
+  {id:'l2_024',level:2,cefr:'A2',thai:'ฝน',roman:'fon',hebrew:'גשם',english:'rain',tone:'rising'},
+  {id:'l2_025',level:2,cefr:'A2',thai:'ดาว',roman:'daao',hebrew:'כוכב',english:'star',tone:'mid'},
+  {id:'l2_026',level:2,cefr:'A2',thai:'ไฟ',roman:'fai',hebrew:'אש / אור',english:'fire / light',tone:'mid'},
+  {id:'l2_027',level:2,cefr:'A2',thai:'เมือง',roman:'mueang',hebrew:'עיר',english:'city',tone:'mid'},
+  {id:'l2_028',level:2,cefr:'A2',thai:'ห้อง',roman:'hawng',hebrew:'חדר',english:'room',tone:'falling'},
+  {id:'l2_029',level:2,cefr:'A2',thai:'ร้าน',roman:'raan',hebrew:'חנות',english:'shop',tone:'high'},
+  {id:'l2_030',level:2,cefr:'A2',thai:'เสื้อ',roman:'suea',hebrew:'חולצה',english:'shirt',tone:'falling'},
+  {id:'l2_031',level:2,cefr:'A2',thai:'ขาย',roman:'khaai',hebrew:'למכור',english:'to sell',tone:'rising'},
+  {id:'l2_032',level:2,cefr:'A2',thai:'ทำงาน',roman:'tham ngaan',hebrew:'לעבוד',english:'to work',tone:'mid-mid'},
+  {id:'l2_033',level:2,cefr:'A2',thai:'ร้องเพลง',roman:'rawng phleng',hebrew:'לשיר',english:'to sing',tone:'high-mid'},
+  {id:'l2_034',level:2,cefr:'A2',thai:'ขับรถ',roman:'khap rot',hebrew:'לנהוג',english:'to drive',tone:'low-high'},
+  {id:'l2_035',level:2,cefr:'A2',thai:'ว่ายน้ำ',roman:'waai naam',hebrew:'לשחות',english:'to swim',tone:'falling-high'},
 
   // Level 3 — tone marks and confusion pairs
   {id:'l3_001',level:3,thai:'อ่าน',roman:'aan',hebrew:'לקרוא',english:'to read',tone:'low'},
@@ -117,6 +157,26 @@ const WORDS = [
   {id:'l3_013',level:3,thai:'ม้า',roman:'maa',hebrew:'סוס',english:'horse',tone:'high'},
   {id:'l3_014',level:3,thai:'ซื้อ',roman:'sue',hebrew:'לקנות',english:'to buy',tone:'high'},
   {id:'l3_015',level:3,thai:'รู้',roman:'ruu',hebrew:'לדעת',english:'to know',tone:'high'},
+  {id:'l3_016',level:3,cefr:'B1',thai:'เวลา',roman:'wee laa',hebrew:'זמן',english:'time',tone:'mid-mid'},
+  {id:'l3_017',level:3,cefr:'B1',thai:'ปัญหา',roman:'bpan haa',hebrew:'בעיה',english:'problem',tone:'mid-rising'},
+  {id:'l3_018',level:3,cefr:'B1',thai:'อากาศ',roman:'aa gaat',hebrew:'מזג אוויר',english:'weather',tone:'mid-low'},
+  {id:'l3_019',level:3,cefr:'B1',thai:'อารมณ์',roman:'aa rom',hebrew:'מצב רוח / רגש',english:'mood / emotion',tone:'mid-mid'},
+  {id:'l3_020',level:3,cefr:'B1',thai:'ประเทศ',roman:'bpra theet',hebrew:'מדינה',english:'country',tone:'low-falling'},
+  {id:'l3_021',level:3,cefr:'B1',thai:'ภาษา',roman:'phaa saa',hebrew:'שפה',english:'language',tone:'mid-rising'},
+  {id:'l3_022',level:3,cefr:'B1',thai:'เพราะ',roman:'phraw',hebrew:'כי / בגלל',english:'because',tone:'high'},
+  {id:'l3_023',level:3,cefr:'B1',thai:'ถ้า',roman:'thaa',hebrew:'אם',english:'if',tone:'falling'},
+  {id:'l3_024',level:3,cefr:'B1',thai:'ต้อง',roman:'dtawng',hebrew:'חייב / צריך',english:'must / have to',tone:'falling'},
+  {id:'l3_025',level:3,cefr:'B1',thai:'อาจ',roman:'aat',hebrew:'אולי / עשוי',english:'may / might',tone:'low'},
+  {id:'l3_026',level:3,cefr:'B1',thai:'ควร',roman:'khuan',hebrew:'כדאי / צריך',english:'should',tone:'mid'},
+  {id:'l3_027',level:3,cefr:'B1',thai:'เชื่อ',roman:'chuea',hebrew:'להאמין',english:'to believe',tone:'falling'},
+  {id:'l3_028',level:3,cefr:'B1',thai:'จำ',roman:'jam',hebrew:'לזכור',english:'to remember',tone:'mid'},
+  {id:'l3_029',level:3,cefr:'B1',thai:'ลืม',roman:'luem',hebrew:'לשכוח',english:'to forget',tone:'mid'},
+  {id:'l3_030',level:3,cefr:'B1',thai:'คิด',roman:'khit',hebrew:'לחשוב',english:'to think',tone:'high'},
+  {id:'l3_031',level:3,cefr:'B1',thai:'รู้สึก',roman:'ruu suek',hebrew:'להרגיש',english:'to feel',tone:'high-low'},
+  {id:'l3_032',level:3,cefr:'B1',thai:'หวัง',roman:'wang',hebrew:'לקוות',english:'to hope',tone:'rising'},
+  {id:'l3_033',level:3,cefr:'B1',thai:'สนใจ',roman:'son jai',hebrew:'להתעניין',english:'to be interested',tone:'rising-mid'},
+  {id:'l3_034',level:3,cefr:'B1',thai:'เกี่ยวกับ',roman:'giao gap',hebrew:'בקשר ל / על',english:'about / regarding',tone:'low-low'},
+  {id:'l3_035',level:3,cefr:'B1',thai:'เพื่อ',roman:'phuea',hebrew:'כדי / בשביל',english:'in order to / for',tone:'falling'},
 
   // Level 4 — common two-syllable vocabulary
   {id:'l4_001',level:4,thai:'พูดเล่น',roman:'phut len',hebrew:'סתם צוחק / אומר בצחוק',english:'just joking / saying jokingly',tone:'falling-mid'},
@@ -134,6 +194,26 @@ const WORDS = [
   {id:'l4_013',level:4,thai:'เมื่อวาน',roman:'muea waan',hebrew:'אתמול',english:'yesterday',tone:'falling-mid'},
   {id:'l4_014',level:4,thai:'ภาษาไทย',roman:'phaa saa thai',hebrew:'השפה התאילנדית',english:'Thai language',tone:'mid-rising-mid'},
   {id:'l4_015',level:4,thai:'เข้าใจ',roman:'khao jai',hebrew:'להבין',english:'to understand',tone:'falling-mid'},
+  {id:'l4_016',level:4,cefr:'B2',thai:'สังคม',roman:'sang khom',hebrew:'חברה',english:'society',tone:'rising-mid'},
+  {id:'l4_017',level:4,cefr:'B2',thai:'การเมือง',roman:'gaan mueang',hebrew:'פוליטיקה',english:'politics',tone:'mid-mid'},
+  {id:'l4_018',level:4,cefr:'B2',thai:'โอกาส',roman:'oo gaat',hebrew:'הזדמנות',english:'opportunity',tone:'mid-low'},
+  {id:'l4_019',level:4,cefr:'B2',thai:'ความหมาย',roman:'khwaam maai',hebrew:'משמעות',english:'meaning',tone:'mid-rising'},
+  {id:'l4_020',level:4,cefr:'B2',thai:'เหตุผล',roman:'heet phon',hebrew:'סיבה / היגיון',english:'reason',tone:'low-rising'},
+  {id:'l4_021',level:4,cefr:'B2',thai:'ตัวอย่าง',roman:'dtua yaang',hebrew:'דוגמה',english:'example',tone:'mid-low'},
+  {id:'l4_022',level:4,cefr:'B2',thai:'ความจริง',roman:'khwaam jing',hebrew:'אמת',english:'truth',tone:'mid-mid'},
+  {id:'l4_023',level:4,cefr:'B2',thai:'อนาคต',roman:'a naa khot',hebrew:'עתיד',english:'future',tone:'low-mid-high'},
+  {id:'l4_024',level:4,cefr:'B2',thai:'อดีต',roman:'a deet',hebrew:'עבר',english:'past',tone:'low-low'},
+  {id:'l4_025',level:4,cefr:'B2',thai:'สำคัญ',roman:'sam khan',hebrew:'חשוב',english:'important',tone:'rising-mid'},
+  {id:'l4_026',level:4,cefr:'B2',thai:'ปลอดภัย',roman:'bplawt phai',hebrew:'בטוח',english:'safe',tone:'low-mid'},
+  {id:'l4_027',level:4,cefr:'B2',thai:'อันตราย',roman:'an ta raai',hebrew:'מסוכן',english:'dangerous',tone:'mid-low-mid'},
+  {id:'l4_028',level:4,cefr:'B2',thai:'จำเป็น',roman:'jam bpen',hebrew:'הכרחי / נחוץ',english:'necessary',tone:'mid-mid'},
+  {id:'l4_029',level:4,cefr:'B2',thai:'เปลี่ยนแปลง',roman:'bplian bplaeng',hebrew:'לשנות / להשתנות',english:'to change',tone:'low-mid'},
+  {id:'l4_030',level:4,cefr:'B2',thai:'พัฒนา',roman:'phat tha naa',hebrew:'לפתח',english:'to develop',tone:'high-high-mid'},
+  {id:'l4_031',level:4,cefr:'B2',thai:'เปรียบเทียบ',roman:'bpriap thiap',hebrew:'להשוות',english:'to compare',tone:'low-falling'},
+  {id:'l4_032',level:4,cefr:'B2',thai:'สิ่งแวดล้อม',roman:'sing waet lawm',hebrew:'סביבה',english:'environment',tone:'low-falling-high'},
+  {id:'l4_033',level:4,cefr:'B2',thai:'วัฒนธรรม',roman:'wat tha tham',hebrew:'תרבות',english:'culture',tone:'high-high-mid'},
+  {id:'l4_034',level:4,cefr:'B2',thai:'รับผิดชอบ',roman:'rap phit chawp',hebrew:'אחראי / לקחת אחריות',english:'responsible',tone:'high-low-falling'},
+  {id:'l4_035',level:4,cefr:'B2',thai:'ปัจจุบัน',roman:'bpat ju ban',hebrew:'הווה / כיום',english:'present (time)',tone:'low-low-mid'},
 
   // Level 5 — short useful chunks
   {id:'l5_001',level:5,thai:'ผมเข้าใจ',roman:'phom khao jai',hebrew:'אני מבין',english:'I understand',tone:'rising-falling-mid'},
@@ -1053,7 +1133,7 @@ const DAILY_BONUS_TARGET = 50;
 const DAILY_BONUS_DURATION_MS = 2 * 60 * 60 * 1000;
 const DAILY_BONUS_REQUIRED_ACCURACY = 0.7;
 const DAILY_BONUS_REQUIRED_LEVEL12 = 10;
-const DAILY_BONUS_REWARD = 15;
+const DAILY_BONUS_REWARD = 25;
 const THEMES = [
   {id:'ocean', he:'Ocean Calm 🌊', en:'Ocean Calm 🌊', points:0},
   {id:'notebook', he:'Thai Notebook ✍️', en:'Thai Notebook ✍️', points:0},
@@ -1300,6 +1380,9 @@ function applyLanguage(){
     if(opts[0]) opts[0].textContent = isHebrew() ? 'רגיל' : 'Regular';
     if(opts[1]) opts[1].textContent = isHebrew() ? 'פרימיום' : 'Premium';
   }
+  if(el('premiumPenHint')) el('premiumPenHint').textContent = isHebrew()
+    ? 'עט פרימיום: קו רך יותר, עובי משתנה לפי מהירות הכתיבה, והילה כחולה סביב הדיו.'
+    : 'Premium pen: smoother line, width that varies with writing speed, and a blue glow around the ink.';
   if(el('skinsTitle')) el('skinsTitle').textContent = t('skins');
   if(el('voiceCheerLabel')) el('voiceCheerLabel').textContent = t('voiceCheer');
   if(el('syncAdvancedSummary')) el('syncAdvancedSummary').textContent = t('syncAdvanced');
@@ -1480,7 +1563,7 @@ function openDailyBonusIntro(){
     <span>${escapeHtml(isHebrew() ? 'יעד: 50 שאלות' : 'Target: 50 questions')}</span>
     <span>${escapeHtml(isHebrew() ? 'דיוק: מעל 70%' : 'Accuracy: above 70%')}</span>
     <span>${escapeHtml(isHebrew() ? 'חובה: 10 שאלות רמה 1.2' : 'Required: 10 Level 1.2 questions')}</span>
-    <span>${escapeHtml(isHebrew() ? 'פרס: 15 נק׳ לסקין הבא' : 'Reward: 15 pts toward the next skin')}</span>`;
+    <span>${escapeHtml(isHebrew() ? `פרס: ${DAILY_BONUS_REWARD} נק׳ לסקין הבא` : `Reward: ${DAILY_BONUS_REWARD} pts toward the next skin`)}</span>`;
   el('dailyBonusStartBtn').textContent = isHebrew() ? 'צא לדרך' : 'Start challenge';
   modal.hidden = false;
   clearTimeout(dailyBonusModalTimer);
