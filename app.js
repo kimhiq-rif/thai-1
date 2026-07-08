@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.20-answer-box-timer-fix';
+const APP_VERSION = '1.25.21-juice';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
@@ -1200,7 +1200,7 @@ function challengeDurationText(cfg){
   return isHebrew() ? `${mins} דק׳` : `${mins} min`;
 }
 function defaultState(){
-  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false,bonus:{status:'idle',startedAt:null,durationMs:DAILY_BONUS_DURATION_MS,total:0,correct:0,level12:0,target:DAILY_BONUS_TARGET,requiredAccuracy:DAILY_BONUS_REQUIRED_ACCURACY,requiredLevel12:DAILY_BONUS_REQUIRED_LEVEL12,reward:DAILY_BONUS_REWARD,awarded:false,warned15:false,warned5:false,boostNotice:false},completed:{}}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false,tokens:{hint:0,freeze:0,boost:0},exams:{}}, achievements:{}, penSize:5, penMode:'regular', syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean' };
+  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false,bonus:{status:'idle',startedAt:null,durationMs:DAILY_BONUS_DURATION_MS,total:0,correct:0,level12:0,target:DAILY_BONUS_TARGET,requiredAccuracy:DAILY_BONUS_REQUIRED_ACCURACY,requiredLevel12:DAILY_BONUS_REQUIRED_LEVEL12,reward:DAILY_BONUS_REWARD,awarded:false,warned15:false,warned5:false,boostNotice:false},completed:{}}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false,tokens:{hint:0,freeze:0,boost:0},exams:{}}, achievements:{}, penSize:5, penMode:'regular', syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean', prefs:{sfx:true} };
 }
 
 async function disableOldServiceWorkers(){
@@ -1234,6 +1234,11 @@ function init(){
   if(el('penSizeInput')) el('penSizeInput').value = String(state.penSize || 5);
   if(el('premiumPenSelect')) el('premiumPenSelect').value = state.penMode || 'regular';
   updateSyncHealth();
+  // M2: celebration/juice overlay + sound preference.
+  if(!state.prefs || typeof state.prefs !== 'object') state.prefs = {sfx:true};
+  if(typeof state.prefs.sfx !== 'boolean') state.prefs.sfx = true;
+  if(typeof Juice !== 'undefined'){ Juice.init({medallion:'assets/medallion.png?v=1.25.21'}); Juice.setSound(state.prefs.sfx); }
+  if(el('sfxToggle')) el('sfxToggle').checked = state.prefs.sfx;
   updateStats(); newQuestion();
   ensureDailyBonusTicker();
   // v1.5: do NOT register a service worker. It caused stale versions to stay alive in normal browser windows.
@@ -1300,6 +1305,12 @@ function setupEvents(){
     saveState();
     updateSkinPanel();
     if(state.coach.voiceCheer) playVoiceCheer({force:true});
+  });
+  if(el('sfxToggle')) el('sfxToggle').addEventListener('change', e => {
+    if(!state.prefs || typeof state.prefs !== 'object') state.prefs = {sfx:true};
+    state.prefs.sfx = !!e.target.checked;
+    if(typeof Juice !== 'undefined'){ Juice.setSound(state.prefs.sfx); if(state.prefs.sfx) Juice.correct(document.querySelector('.question-card')); }
+    saveState();
   });
   el('clearBtn').addEventListener('click', clearCanvas);
   const eraserBtn = el('eraserToggleBtn');
@@ -1741,6 +1752,7 @@ function evaluateDailyBonusChallenge(){
     const tokens = tokenDeltaSummary(bonus.tokensAwarded);
     const base = isHebrew() ? `האתגר הושלם. קיבלת ${reward} נק׳.` : `Challenge complete. You earned ${reward} pts.`;
     showTransientChallengeNotice(tokens ? `${base} ${isHebrew() ? 'ועוד' : 'plus'} ${tokens}` : base, 'ok');
+    if(typeof Juice !== 'undefined') Juice.win();
     updateSkinPanel();
     return;
   }
@@ -2615,6 +2627,7 @@ function mark(correct){
   }
   updateAchievements(correct);
   if(correct) playVoiceCheer({force:premiumJustUnlocked});
+  if(correct && typeof Juice !== 'undefined') Juice.correct(document.querySelector('.question-card'));
   saveState(); updateStats(); newQuestion(); scrollToQuestionCard();
 }
 function updateAchievements(correct){
