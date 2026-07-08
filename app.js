@@ -1172,6 +1172,12 @@ const el = id => document.getElementById(id);
 const canvas = el('writeCanvas');
 const ctx = canvas.getContext('2d');
 
+// M1: functional reward tokens earned from load challenges.
+const TOKEN_META = {
+  hint:  {emoji:'💡', he:'רמז',        en:'Hint'},
+  freeze:{emoji:'❄️', he:'הקפאת רצף',  en:'Freeze'},
+  boost: {emoji:'⚡', he:'בוסט',        en:'Boost'},
+};
 function defaultState(){
   return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false,bonus:{status:'idle',startedAt:null,durationMs:DAILY_BONUS_DURATION_MS,total:0,correct:0,level12:0,target:DAILY_BONUS_TARGET,requiredAccuracy:DAILY_BONUS_REQUIRED_ACCURACY,requiredLevel12:DAILY_BONUS_REQUIRED_LEVEL12,reward:DAILY_BONUS_REWARD,awarded:false,warned15:false,warned5:false,boostNotice:false}}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false,tokens:{hint:0,freeze:0,boost:0},exams:{}}, achievements:{}, penSize:5, penMode:'regular', syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean' };
 }
@@ -1624,8 +1630,24 @@ function awardDailyBonusPoints(){
   bonus.awarded = true;
   bonus.status = 'success';
   state.achievements.dailyBonusAward = Date.now();
+  // M1: reward the skill with functional tokens (in addition to the points).
+  bonus.tokensAwarded = awardChallengeTokens(bonus);
   unlockEligibleThemes();
   return reward;
+}
+// M1: grant load-challenge tokens into the wallet; returns the delta for UI.
+function awardChallengeTokens(bonus){
+  const delta = (typeof RewardsCore !== 'undefined') ? RewardsCore.computeChallengeTokens(bonus) : {hint:1,freeze:0,boost:0};
+  if(typeof RewardsCore !== 'undefined') state.coach.tokens = RewardsCore.addTokens(state.coach.tokens, delta);
+  return delta;
+}
+// Short human summary of a token delta, e.g. "💡 רמז ×1 · ❄️ הקפאת רצף ×1".
+function tokenDeltaSummary(delta){
+  if(!delta) return '';
+  return Object.keys(TOKEN_META)
+    .filter(k => (delta[k] || 0) > 0)
+    .map(k => `${TOKEN_META[k].emoji} ${isHebrew() ? TOKEN_META[k].he : TOKEN_META[k].en} ×${delta[k]}`)
+    .join(' · ');
 }
 function failDailyBonusChallenge(){
   ensureDailyState();
@@ -1666,7 +1688,10 @@ function evaluateDailyBonusChallenge(){
   const acc = dailyBonusAccuracy();
   if((bonus.total || 0) >= (bonus.target || DAILY_BONUS_TARGET) && (bonus.level12 || 0) >= (bonus.requiredLevel12 || DAILY_BONUS_REQUIRED_LEVEL12) && acc > (bonus.requiredAccuracy || DAILY_BONUS_REQUIRED_ACCURACY)){
     const reward = awardDailyBonusPoints();
-    showTransientChallengeNotice(isHebrew() ? `האתגר הושלם. קיבלת ${reward} נק׳.` : `Challenge complete. You earned ${reward} pts.`, 'ok');
+    const tokens = tokenDeltaSummary(bonus.tokensAwarded);
+    const base = isHebrew() ? `האתגר הושלם. קיבלת ${reward} נק׳.` : `Challenge complete. You earned ${reward} pts.`;
+    showTransientChallengeNotice(tokens ? `${base} ${isHebrew() ? 'ועוד' : 'plus'} ${tokens}` : base, 'ok');
+    updateSkinPanel();
     return;
   }
   if((bonus.total || 0) >= (bonus.target || DAILY_BONUS_TARGET) && acc <= (bonus.requiredAccuracy || DAILY_BONUS_REQUIRED_ACCURACY) && left > 0 && !bonus.boostNotice){
@@ -2639,6 +2664,18 @@ function updateAchievementPanel(){
   renderDailyBonusPanel();
   updateSkinPanel();
 }
+// M1: render the reward-token wallet (hidden until the first token is earned).
+function renderTokenWallet(){
+  const wrap = el('tokenWallet');
+  if(!wrap) return;
+  const tokens = (state.coach && state.coach.tokens) || {hint:0,freeze:0,boost:0};
+  const total = Object.keys(TOKEN_META).reduce((s,k)=>s+(tokens[k]||0),0);
+  wrap.hidden = total === 0;
+  wrap.innerHTML = Object.keys(TOKEN_META).map(k => {
+    const name = isHebrew() ? TOKEN_META[k].he : TOKEN_META[k].en;
+    return `<span class="token-chip" title="${name}">${TOKEN_META[k].emoji} ${name} <b>${tokens[k] || 0}</b></span>`;
+  }).join('');
+}
 function updateSkinPanel(){
   if(!el('skinGrid')) return;
   ensureDailyState();
@@ -2663,6 +2700,7 @@ function updateSkinPanel(){
     voiceToggle.checked = !!state.coach.voiceCheer;
   }
   updatePremiumPenControl();
+  renderTokenWallet();
   el('coachPointsBadge').textContent = next
     ? (isHebrew() ? `${points} נק׳ · עוד ${nextTarget - points}` : `${points} pts · ${nextTarget - points} left`)
     : (isHebrew() ? `${points} נק׳ · הכל פתוח` : `${points} pts · all unlocked`);

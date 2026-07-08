@@ -40,3 +40,28 @@ test('mergeTokens does not mutate its input', () => {
   RC.mergeTokens(input);
   eq(input, { hint: 1 }, 'input untouched');
 });
+
+test('computeChallengeTokens: completion always grants a hint token', () => {
+  eq(RC.computeChallengeTokens({ total: 50, correct: 30 }), { hint: 1, freeze: 0, boost: 0 });
+});
+
+test('computeChallengeTokens: 90%+ accuracy grants a freeze token', () => {
+  eq(RC.computeChallengeTokens({ total: 50, correct: 45 }), { hint: 1, freeze: 1, boost: 0 });
+  eq(RC.computeChallengeTokens({ total: 50, correct: 44 }), { hint: 1, freeze: 0, boost: 0 }, '88% is below threshold');
+});
+
+test('computeChallengeTokens: a flawless run grants a boost token', () => {
+  eq(RC.computeChallengeTokens({ total: 50, correct: 50 }), { hint: 1, freeze: 1, boost: 1 });
+});
+
+test('computeChallengeTokens: empty/garbage bonus is safe', () => {
+  eq(RC.computeChallengeTokens(undefined), { hint: 1, freeze: 0, boost: 0 });
+  eq(RC.computeChallengeTokens({ total: 0, correct: 0 }), { hint: 1, freeze: 0, boost: 0 }, 'no divide-by-zero');
+});
+
+test('addTokens: sums maps without mutating inputs', () => {
+  const a = { hint: 2, freeze: 1, boost: 0 };
+  const b = { hint: 1, freeze: 0, boost: 3 };
+  eq(RC.addTokens(a, b), { hint: 3, freeze: 1, boost: 3 });
+  eq(a, { hint: 2, freeze: 1, boost: 0 }, 'input a untouched');
+});
