@@ -65,3 +65,37 @@ test('addTokens: sums maps without mutating inputs', () => {
   eq(RC.addTokens(a, b), { hint: 3, freeze: 1, boost: 3 });
   eq(a, { hint: 2, freeze: 1, boost: 0 }, 'input a untouched');
 });
+
+test('CHALLENGES registry has load and sprint with the agreed params', () => {
+  eq(RC.CHALLENGES.load.target, 50);
+  eq(RC.CHALLENGES.load.requiredAccuracy, 0.7);
+  eq(RC.CHALLENGES.load.reward, 25);
+  eq(RC.CHALLENGES.sprint.target, 30);
+  eq(RC.CHALLENGES.sprint.requiredAccuracy, 0.6);
+  eq(RC.CHALLENGES.sprint.reward, 20);
+  eq(RC.CHALLENGES.sprint.requiredLevel, '3');
+});
+
+test('answerCountsToward: load counts any level, sprint only level 3', () => {
+  ok(RC.answerCountsToward(RC.CHALLENGES.load, 1), 'load counts level 1');
+  ok(RC.answerCountsToward(RC.CHALLENGES.load, '1.2'), 'load counts level 1.2');
+  ok(RC.answerCountsToward(RC.CHALLENGES.sprint, 3), 'sprint counts level 3 (number)');
+  ok(RC.answerCountsToward(RC.CHALLENGES.sprint, '3'), 'sprint counts level 3 (string)');
+  ok(!RC.answerCountsToward(RC.CHALLENGES.sprint, 2), 'sprint ignores level 2');
+  ok(!RC.answerCountsToward(RC.CHALLENGES.sprint, 4), 'sprint ignores level 4');
+});
+
+test('isChallengeWon: load needs target + accuracy + level12', () => {
+  const base = { ...RC.CHALLENGES.load };
+  ok(RC.isChallengeWon({ ...base, total: 50, correct: 40, level12: 10 }), '80% + 10x1.2 wins');
+  ok(!RC.isChallengeWon({ ...base, total: 50, correct: 40, level12: 9 }), 'missing 1.2 quota fails');
+  ok(!RC.isChallengeWon({ ...base, total: 49, correct: 45, level12: 10 }), 'below target fails');
+  ok(!RC.isChallengeWon({ ...base, total: 50, correct: 35, level12: 10 }), '70% is not > 70%');
+});
+
+test('isChallengeWon: sprint needs only target + accuracy (no level12)', () => {
+  const base = { ...RC.CHALLENGES.sprint };
+  ok(RC.isChallengeWon({ ...base, total: 30, correct: 19 }), '63% of 30 wins');
+  ok(!RC.isChallengeWon({ ...base, total: 30, correct: 18 }), '60% is not > 60%');
+  ok(!RC.isChallengeWon({ ...base, total: 29, correct: 29 }), 'below target fails');
+});

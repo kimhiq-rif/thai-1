@@ -284,3 +284,8 @@ body.theme-master::before{background-image:url("data:image/svg+xml,%3Csvg xmlns=
 .token-wallet{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}
 .token-chip{display:inline-flex;align-items:center;gap:4px;font-size:13px;line-height:1;padding:5px 9px;border-radius:999px;background:rgba(30,58,138,.08);border:1px solid rgba(30,58,138,.16);color:inherit}
 .token-chip b{font-weight:700}
+
+/* M1b: daily-challenge chooser rows */
+.challenge-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:6px 0}
+.challenge-row > div{display:flex;flex-direction:column;gap:2px}
+.challenge-row.done{opacity:.6}
