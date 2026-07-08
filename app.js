@@ -1173,7 +1173,7 @@ const canvas = el('writeCanvas');
 const ctx = canvas.getContext('2d');
 
 function defaultState(){
-  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false,bonus:{status:'idle',startedAt:null,durationMs:DAILY_BONUS_DURATION_MS,total:0,correct:0,level12:0,target:DAILY_BONUS_TARGET,requiredAccuracy:DAILY_BONUS_REQUIRED_ACCURACY,requiredLevel12:DAILY_BONUS_REQUIRED_LEVEL12,reward:DAILY_BONUS_REWARD,awarded:false,warned15:false,warned5:false,boostNotice:false}}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false}, achievements:{}, penSize:5, penMode:'regular', syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean' };
+  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false,bonus:{status:'idle',startedAt:null,durationMs:DAILY_BONUS_DURATION_MS,total:0,correct:0,level12:0,target:DAILY_BONUS_TARGET,requiredAccuracy:DAILY_BONUS_REQUIRED_ACCURACY,requiredLevel12:DAILY_BONUS_REQUIRED_LEVEL12,reward:DAILY_BONUS_REWARD,awarded:false,warned15:false,warned5:false,boostNotice:false}}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false,tokens:{hint:0,freeze:0,boost:0},exams:{}}, achievements:{}, penSize:5, penMode:'regular', syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean' };
 }
 
 async function disableOldServiceWorkers(){
@@ -1479,6 +1479,9 @@ function ensureDailyState(){
   }
   state.coach = {...defaultState().coach, ...(state.coach || {})};
   state.coach.unlocked = [...new Set([...(defaultState().coach.unlocked || []), ...((state.coach && state.coach.unlocked) || [])])];
+  // Backward-compatible defaults for reward fields added after V3 saves (M0).
+  state.coach.tokens = (typeof RewardsCore !== 'undefined') ? RewardsCore.mergeTokens(state.coach.tokens) : {hint:0,freeze:0,boost:0, ...(state.coach.tokens || {})};
+  if(!state.coach.exams || typeof state.coach.exams !== 'object') state.coach.exams = {};
   if(state.daily.date !== todayKey()) state.daily = {...defaultState().daily, date:todayKey()};
   const premiumCount = THEMES.filter(theme => theme.premium && ((state.coach.unlocked || []).includes(theme.id) || (state.coach.points || 0) >= (theme.points || 0))).length;
   if(premiumCount < 3 && state.penMode === 'premium') state.penMode = 'regular';
@@ -1520,8 +1523,13 @@ function unlockedPremiumSkinCount(){
   ensureDailyState();
   return THEMES.filter(theme => theme.premium && ((state.coach.unlocked || []).includes(theme.id) || (state.coach.points || 0) >= (theme.points || 0))).length;
 }
+// Generic tier gate for functional rewards: unlocked once >= N premium skins.
+function hasTierReward(tier){
+  const count = unlockedPremiumSkinCount();
+  return (typeof RewardsCore !== 'undefined') ? RewardsCore.hasTierUnlock(count, tier) : count >= tier;
+}
 function hasPremiumPen(){
-  return unlockedPremiumSkinCount() >= 3;
+  return hasTierReward((typeof RewardsCore !== 'undefined') ? RewardsCore.TIER.premiumPen : 3);
 }
 function dailyBonusAccuracy(){
   const bonus = state.daily?.bonus || {};
