@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.21-juice';
+const APP_VERSION = '1.25.22-rewards-alphabet';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
