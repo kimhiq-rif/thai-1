@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.22-rewards-alphabet';
+const APP_VERSION = '1.25.23-ink-replay';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
@@ -1256,6 +1256,9 @@ let dailyBonusModalTimer = null;
 let dailyBonusTickTimer = null;
 let drawing = false;
 let lastPoint = null;
+// M4: capture strokes (CSS coords) for Ink Replay + GIF export.
+let capturedStrokes = [];
+let currentStroke = null;
 let smoothPoint = null;
 let eraserMode = false;
 
@@ -1404,6 +1407,8 @@ function setupEvents(){
     saveState();
   });
   if(el('inkJudgeBtn')) el('inkJudgeBtn').addEventListener('click', judgeInk);
+  if(el('inkReplayBtn')) el('inkReplayBtn').addEventListener('click', replayInk);
+  if(el('inkGifBtn')) el('inkGifBtn').addEventListener('click', exportInkGif);
   el('clearBtn').addEventListener('click', clearCanvas);
   const eraserBtn = el('eraserToggleBtn');
   if(eraserBtn) eraserBtn.addEventListener('click', toggleEraserMode);
@@ -2447,6 +2452,7 @@ function renderQuestion(){
   if(el('penControl')) el('penControl').hidden = mode === 'level55_chat' || writingLocked;
   if(el('premiumPenControl')) el('premiumPenControl').hidden = mode === 'level55_chat' || writingLocked || !hasPremiumPen();
   updateInkJudge(mode, writingLocked);
+  updateInkReplay();
   el('showAnswerBtn').hidden = mode === 'level55_chat' || writingLocked;
   el('toneChoices').hidden = mode === 'level55_chat' || !(mode === 'tone' || mode === 'vowel_board');
   el('toneChoices').innerHTML = '';
@@ -2921,6 +2927,91 @@ function updateInkJudge(mode, writingLocked){
   const r = el('inkJudgeResult'); if(r) r.innerHTML = '';
   const gc = el('inkGhost'); if(gc) gc.classList.remove('show');
 }
+// ---- M4: Ink Replay — replay your own handwriting + export a GIF ----
+function inkReplayUnlocked(){ return hasTierReward((typeof RewardsCore !== 'undefined') ? RewardsCore.TIER.inkReplay : 8); }
+function totalCapturedPoints(){ return capturedStrokes.reduce((s,st) => s + st.length, 0); }
+function drawStrokesUpTo(g, upto, lineWidth){
+  g.lineCap = 'round'; g.lineJoin = 'round'; g.strokeStyle = '#0b1220'; g.lineWidth = lineWidth || 5;
+  let count = 0;
+  for(const st of capturedStrokes){
+    if(count >= upto) break;
+    g.beginPath();
+    for(let i=0;i<st.length;i++){
+      if(count >= upto) break;
+      const p = st[i];
+      if(i === 0) g.moveTo(p.x, p.y); else g.lineTo(p.x, p.y);
+      count++;
+    }
+    g.stroke();
+  }
+}
+function currentTargetGlyphCanvas(){
+  const target = current && current.item && current.item.thai;
+  if(!target) return null;
+  const rect = canvas.getBoundingClientRect();
+  return renderTargetGlyph(target, Math.round(rect.width), Math.round(rect.height));
+}
+function replayInk(){
+  if(!inkReplayUnlocked() || !capturedStrokes.length) return;
+  const gc = el('inkGhost'); if(!gc) return;
+  const rect = canvas.getBoundingClientRect();
+  const ratio = Math.max(1, window.devicePixelRatio || 1);
+  gc.width = Math.round(rect.width*ratio); gc.height = Math.round(rect.height*ratio);
+  gc.style.width = rect.width+'px'; gc.style.height = rect.height+'px';
+  const g = gc.getContext('2d'); g.setTransform(ratio,0,0,ratio,0,0);
+  const glyph = currentTargetGlyphCanvas();
+  const total = totalCapturedPoints();
+  const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  gc.classList.add('show');
+  const paint = (upto) => {
+    g.clearRect(0,0,rect.width,rect.height);
+    if(glyph){ g.globalAlpha = 0.16; g.drawImage(glyph, 0,0, rect.width, rect.height); g.globalAlpha = 1; }
+    drawStrokesUpTo(g, upto, 5);
+  };
+  if(reduced){ paint(total); setTimeout(() => gc.classList.remove('show'), 1400); return; }
+  const durationMs = 1800, start = performance.now();
+  function frame(now){
+    const t = Math.min(1, (now - start) / durationMs);
+    paint(Math.ceil(t * total));
+    if(t < 1) requestAnimationFrame(frame);
+    else setTimeout(() => gc.classList.remove('show'), 900);
+  }
+  requestAnimationFrame(frame);
+}
+function exportInkGif(){
+  if(!inkReplayUnlocked() || !capturedStrokes.length || typeof GIFEncoder === 'undefined') return;
+  const rect = canvas.getBoundingClientRect();
+  const gw = 260, gh = Math.max(80, Math.round(gw * rect.height / Math.max(1, rect.width)));
+  const scale = gw / Math.max(1, rect.width);
+  const off = document.createElement('canvas'); off.width = gw; off.height = gh;
+  const o = off.getContext('2d');
+  const glyph = currentTargetGlyphCanvas();
+  const palette = [[247,251,255],[11,18,32],[224,169,59],[150,163,178],[240,216,160],[90,100,120]];
+  const enc = GIFEncoder(gw, gh, palette);
+  const total = totalCapturedPoints(), frames = 24;
+  for(let f=1; f<=frames; f++){
+    const p = f / frames;
+    o.setTransform(1,0,0,1,0,0);
+    o.fillStyle = '#f7fbff'; o.fillRect(0,0,gw,gh);
+    if(glyph){ o.globalAlpha = 0.16; o.drawImage(glyph, 0,0, gw, gh); o.globalAlpha = 1; }
+    o.setTransform(scale,0,0,scale,0,0);
+    drawStrokesUpTo(o, Math.ceil(p * total), 6);
+    o.setTransform(1,0,0,1,0,0);
+    enc.addFrame(o.getImageData(0,0,gw,gh).data, 70);
+  }
+  const blob = new Blob([enc.finish()], {type:'image/gif'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href = url; a.download = 'thai-writing.gif';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 5000);
+  if(typeof Juice !== 'undefined') Juice.correct(document.querySelector('.question-card'));
+}
+function updateInkReplay(){
+  const box = el('inkReplay'); if(!box) return;
+  const wrap = document.querySelector('.canvas-wrap');
+  const canWrite = wrap && !wrap.hidden;
+  box.hidden = !(canWrite && inkReplayUnlocked() && capturedStrokes.length > 0);
+}
 // M1: render the reward-token wallet (hidden until the first token is earned).
 function renderTokenWallet(){
   const wrap = el('tokenWallet');
@@ -3090,6 +3181,7 @@ function setupCanvas(){
     smoothPoint = point;
     ctx.beginPath();
     ctx.moveTo(point.x, point.y);
+    currentStroke = eraserMode ? null : [{x:point.x, y:point.y}];   // M4: capture ink strokes only
   };
   const moveStroke = point => {
     if(!drawing) return;
@@ -3109,6 +3201,7 @@ function setupCanvas(){
     ctx.stroke();
     lastPoint = nextPoint;
     smoothPoint = nextPoint;
+    if(currentStroke) currentStroke.push({x:nextPoint.x, y:nextPoint.y});   // M4
   };
   const endStroke = () => {
     if(!drawing) return;
@@ -3119,6 +3212,9 @@ function setupCanvas(){
     drawing = false;
     lastPoint = null;
     smoothPoint = null;
+    if(currentStroke && currentStroke.length > 1) capturedStrokes.push(currentStroke);   // M4
+    currentStroke = null;
+    if(typeof updateInkReplay === 'function') updateInkReplay();
   };
 
   // Older iPads can expose partial PointerEvent support but fail to deliver reliable canvas strokes.
@@ -3186,9 +3282,11 @@ function setupCanvas(){
   window.addEventListener('mouseup', endStroke);
 
   window.__drawGuideLines = drawGuideLines;
-  window.clearCanvas = function(){ drawGuideLines(); };
+  window.clearCanvas = function(){ drawGuideLines(); capturedStrokes = []; if(typeof updateInkReplay === 'function') updateInkReplay(); };
 }
 function clearCanvas(){
+  capturedStrokes = [];
+  if(typeof updateInkReplay === 'function') updateInkReplay();
   if(window.__drawGuideLines){ window.__drawGuideLines(); updateEraserButton(); return; }
   const rect = canvas.getBoundingClientRect();
   ctx.clearRect(0, 0, rect.width, rect.height);
