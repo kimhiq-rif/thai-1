@@ -289,3 +289,20 @@ body.theme-master::before{background-image:url("data:image/svg+xml,%3Csvg xmlns=
 .challenge-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:6px 0}
 .challenge-row > div{display:flex;flex-direction:column;gap:2px}
 .challenge-row.done{opacity:.6}
+
+/* M3: Ink Judge */
+.ink-ghost{position:absolute;left:0;top:0;pointer-events:none;z-index:1;opacity:0;transition:opacity .35s ease}
+.ink-ghost.show{opacity:1}
+.ink-judge{display:flex;flex-direction:column;align-items:center;gap:10px;margin:12px 0}
+.ink-judge .ink-judge-btn{background:linear-gradient(135deg,#E0A93B,#FF6A00);color:#fff;border:1px solid transparent;font-weight:800;letter-spacing:.02em}
+.ink-judge-result{display:flex;align-items:center;gap:12px}
+.ink-judge-result:empty{display:none}
+.ink-judge-result .ink-score{font-size:30px;font-weight:900;line-height:1;color:var(--ink-c,#B4801e)}
+.ink-judge-result .ink-meta{display:flex;flex-direction:column;gap:2px;text-align:start}
+.ink-judge-result .ink-label{font-weight:800}
+.ink-judge-result .ink-sub{font-size:12px;opacity:.72;font-weight:600}
+.ink-judge-result.ink-great{--ink-c:#B4801e}
+.ink-judge-result.ink-good{--ink-c:#15803d}
+.ink-judge-result.ink-fair{--ink-c:#c2410c}
+.ink-judge-result.ink-low{--ink-c:#b91c1c}
+.ink-empty{font-size:13px;color:var(--muted,#657083);font-weight:600}

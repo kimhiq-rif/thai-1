@@ -58,6 +58,7 @@
 
       <div class="canvas-wrap">
         <canvas id="writeCanvas" width="900" height="360" aria-label="אזור כתיבה חופשית"></canvas>
+        <canvas id="inkGhost" class="ink-ghost" aria-hidden="true"></canvas>
       </div>
 
       <div class="button-grid writing-controls">
@@ -85,6 +86,10 @@
           <span class="eraser-label">מחק</span>
         </button>
         <button id="showAnswerBtn">הצג תשובה</button>
+      </div>
+      <div class="ink-judge" id="inkJudge" hidden>
+        <button class="secondary ink-judge-btn" id="inkJudgeBtn" type="button">שפוט את הכתב ✦</button>
+        <div class="ink-judge-result" id="inkJudgeResult" aria-live="polite"></div>
       </div>
       <label class="pen-control" id="penControl">
         <span id="penSizeLabel">עובי עט</span>

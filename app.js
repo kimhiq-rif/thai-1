@@ -1312,6 +1312,7 @@ function setupEvents(){
     if(typeof Juice !== 'undefined'){ Juice.setSound(state.prefs.sfx); if(state.prefs.sfx) Juice.correct(document.querySelector('.question-card')); }
     saveState();
   });
+  if(el('inkJudgeBtn')) el('inkJudgeBtn').addEventListener('click', judgeInk);
   el('clearBtn').addEventListener('click', clearCanvas);
   const eraserBtn = el('eraserToggleBtn');
   if(eraserBtn) eraserBtn.addEventListener('click', toggleEraserMode);
@@ -2354,6 +2355,7 @@ function renderQuestion(){
   if(eraserBtn) eraserBtn.hidden = mode === 'level55_chat' || writingLocked;
   if(el('penControl')) el('penControl').hidden = mode === 'level55_chat' || writingLocked;
   if(el('premiumPenControl')) el('premiumPenControl').hidden = mode === 'level55_chat' || writingLocked || !hasPremiumPen();
+  updateInkJudge(mode, writingLocked);
   el('showAnswerBtn').hidden = mode === 'level55_chat' || writingLocked;
   el('toneChoices').hidden = mode === 'level55_chat' || !(mode === 'tone' || mode === 'vowel_board');
   el('toneChoices').innerHTML = '';
@@ -2749,6 +2751,84 @@ function updateAchievementPanel(){
   el('achievementNote').textContent = achievementText();
   renderDailyBonusPanel();
   updateSkinPanel();
+}
+// ---- M3: Ink Judge — score the learner's handwriting vs the target glyph ----
+const INK_N = 48;                 // comparison grid resolution
+const INK_FONT = '"Noto Sans Thai","Leelawadee UI","Tahoma",sans-serif';
+let inkGhostTimer = null;
+function inkJudgeUnlocked(){ return hasTierReward((typeof RewardsCore !== 'undefined') ? RewardsCore.TIER.inkJudge : 5); }
+function rasterCanvasToGrid(src, N){
+  const off = document.createElement('canvas'); off.width = N; off.height = N;
+  const o = off.getContext('2d'); o.clearRect(0,0,N,N);
+  o.drawImage(src, 0,0, N, N);
+  const d = o.getImageData(0,0,N,N).data, g = new Uint8Array(N*N);
+  for(let i=0;i<N*N;i++) g[i] = d[i*4+3] > 24 ? 1 : 0;
+  return g;
+}
+function renderTargetGlyph(text, w, h){
+  const off = document.createElement('canvas'); off.width = Math.max(8,w); off.height = Math.max(8,h);
+  const o = off.getContext('2d');
+  o.fillStyle = '#000'; o.textAlign = 'center'; o.textBaseline = 'middle';
+  let fs = Math.floor(h * 0.7); o.font = `700 ${fs}px ${INK_FONT}`;
+  const maxW = w * 0.82, m = o.measureText(text).width;
+  if(m > maxW && m > 0){ fs = Math.max(12, Math.floor(fs * maxW / m)); o.font = `700 ${fs}px ${INK_FONT}`; }
+  o.fillText(text, w/2, h/2);
+  return off;
+}
+function judgeInk(){
+  if(!inkJudgeUnlocked()) return;
+  const target = current && current.item && current.item.thai;
+  if(!target){ return; }
+  const rect = canvas.getBoundingClientRect();
+  const userGrid = rasterCanvasToGrid(canvas, INK_N);
+  const glyphCanvas = renderTargetGlyph(target, Math.round(rect.width), Math.round(rect.height));
+  const targetGrid = rasterCanvasToGrid(glyphCanvas, INK_N);
+  const res = RewardsCore.inkScore(userGrid, targetGrid, INK_N, 3);
+  renderInkJudgeResult(res, target);
+  if(!res.empty) showInkGhost(glyphCanvas, res);
+}
+function renderInkJudgeResult(res, target){
+  const box = el('inkJudgeResult'); if(!box) return;
+  if(res.empty){
+    box.className = 'ink-judge-result';
+    box.innerHTML = `<span class="ink-empty">${escapeHtml(isHebrew() ? 'כתוב את האות קודם, ואז שפוט.' : 'Write the letter first, then judge.')}</span>`;
+    return;
+  }
+  const v = RewardsCore.inkVerdict(res.score);
+  const labels = isHebrew()
+    ? {great:'מעולה! הכתב מדויק', good:'יפה מאוד', fair:'לא רע — כדאי לתרגל', low:'ננסה שוב? עקוב אחרי הצורה'}
+    : {great:'Excellent! Crisp writing', good:'Nicely done', fair:'Not bad — keep practicing', low:'Try again — follow the shape'};
+  box.className = 'ink-judge-result ink-' + v;
+  box.innerHTML =
+    `<span class="ink-score">${res.score}%</span>` +
+    `<span class="ink-meta"><span class="ink-label">${escapeHtml(labels[v])}</span>` +
+    `<span class="ink-sub">${escapeHtml(isHebrew() ? `כיסוי ${Math.round(res.recall*100)}% · דיוק ${Math.round(res.precision*100)}%` : `coverage ${Math.round(res.recall*100)}% · precision ${Math.round(res.precision*100)}%`)}</span></span>`;
+}
+function showInkGhost(glyphCanvas, res){
+  const gc = el('inkGhost'); if(!gc) return;
+  const rect = canvas.getBoundingClientRect();
+  const ratio = Math.max(1, window.devicePixelRatio || 1);
+  gc.width = Math.round(rect.width*ratio); gc.height = Math.round(rect.height*ratio);
+  gc.style.width = rect.width+'px'; gc.style.height = rect.height+'px';
+  const g = gc.getContext('2d'); g.setTransform(ratio,0,0,ratio,0,0);
+  g.clearRect(0,0,rect.width,rect.height);
+  g.globalAlpha = 0.30; g.drawImage(glyphCanvas, 0,0, rect.width, rect.height);
+  g.globalCompositeOperation = 'source-in';
+  g.fillStyle = res.score >= 65 ? '#E0A93B' : '#F97316';
+  g.fillRect(0,0,rect.width,rect.height);
+  g.globalCompositeOperation = 'source-over'; g.globalAlpha = 1;
+  gc.classList.add('show');
+  clearTimeout(inkGhostTimer);
+  inkGhostTimer = setTimeout(() => gc.classList.remove('show'), 1900);
+}
+function updateInkJudge(mode, writingLocked){
+  const box = el('inkJudge'); if(!box) return;
+  const target = current && current.item && current.item.thai;
+  const canWrite = mode !== 'level55_chat' && !writingLocked;
+  const show = canWrite && inkJudgeUnlocked() && !!target;
+  box.hidden = !show;
+  const r = el('inkJudgeResult'); if(r) r.innerHTML = '';
+  const gc = el('inkGhost'); if(gc) gc.classList.remove('show');
 }
 // M1: render the reward-token wallet (hidden until the first token is earned).
 function renderTokenWallet(){

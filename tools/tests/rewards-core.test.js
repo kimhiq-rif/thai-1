@@ -99,3 +99,57 @@ test('isChallengeWon: sprint needs only target + accuracy (no level12)', () => {
   ok(!RC.isChallengeWon({ ...base, total: 30, correct: 18 }), '60% is not > 60%');
   ok(!RC.isChallengeWon({ ...base, total: 29, correct: 29 }), 'below target fails');
 });
+
+test('inkScore: perfect overlap scores 100', () => {
+  const g = [0,1,1,0, 1,1,1,1, 0,1,1,0];
+  eq(RC.inkScore(g, g), { precision: 1, recall: 1, score: 100, empty: false });
+});
+
+test('inkScore: empty ink is flagged and scores 0', () => {
+  const target = [1,1,0,0];
+  const r = RC.inkScore([0,0,0,0], target);
+  eq(r.score, 0); ok(r.empty, 'empty flag set');
+});
+
+test('inkScore: partial coverage lands between 0 and 100', () => {
+  const target = [1,1,1,1, 0,0,0,0];   // top half
+  const user   = [1,1,0,0, 0,0,1,1];   // half-on, half-off
+  const r = RC.inkScore(user, target);
+  ok(r.score > 0 && r.score < 100, 'partial score, got ' + r.score);
+  eq(r.precision, 0.5, 'half your ink was on target');
+  eq(r.recall, 0.5, 'you covered half the target');
+});
+
+test('inkScore: scribble everywhere has low precision', () => {
+  const target = [1,0,0,0, 0,0,0,0];
+  const user   = [1,1,1,1, 1,1,1,1];   // covers all
+  const r = RC.inkScore(user, target);
+  eq(r.recall, 1, 'covered the whole target');
+  ok(r.precision < 0.2, 'but most ink was off-target');
+  ok(r.score < 40, 'low overall, got ' + r.score);
+});
+
+test('inkScore: tolerance gives near-miss ink partial credit', () => {
+  // 5x5: target is a vertical bar in column 2; user drew it one column off (column 3).
+  const N = 5;
+  const target = new Uint8Array(N*N), user = new Uint8Array(N*N);
+  for(let y=0;y<N;y++){ target[y*N+2]=1; user[y*N+3]=1; }
+  const strict = RC.inkScore(user, target, N, 0);
+  const tol1 = RC.inkScore(user, target, N, 1);
+  eq(strict.score, 0, 'no overlap without tolerance');
+  ok(tol1.score > 80, 'one-cell miss is nearly full credit with tol=1, got ' + tol1.score);
+});
+
+test('dilate: expands set cells by radius', () => {
+  const N = 5; const m = new Uint8Array(N*N); m[2*N+2] = 1; // center
+  const d = RC.dilate(m, N, 1);
+  let count = 0; for(let i=0;i<d.length;i++) count += d[i];
+  eq(count, 9, '3x3 block around center');
+});
+
+test('inkVerdict: bands', () => {
+  eq(RC.inkVerdict(92), 'great');
+  eq(RC.inkVerdict(70), 'good');
+  eq(RC.inkVerdict(50), 'fair');
+  eq(RC.inkVerdict(20), 'low');
+});
