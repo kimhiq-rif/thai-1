@@ -311,3 +311,10 @@ body.theme-master::before{background-image:url("data:image/svg+xml,%3Csvg xmlns=
 .ink-replay{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:10px 0}
 .ink-replay .ink-replay-btn{background:linear-gradient(135deg,#6C5CE7,#1E3A8A);color:#fff;border:1px solid transparent;font-weight:800}
 .ink-replay .ink-gif-btn{background:linear-gradient(135deg,#06B6D4,#1E3A8A);color:#fff;border:1px solid transparent;font-weight:800}
+
+/* M5: character dex */
+.dex-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(34px,1fr));gap:6px;margin:10px 0}
+.dex-cell{display:flex;align-items:center;justify-content:center;aspect-ratio:1;border-radius:8px;font-size:20px;font-weight:800;border:1px solid var(--border,rgba(148,163,184,.4));line-height:1}
+.dex-new{opacity:.28}
+.dex-seen{color:#c2410c;background:rgba(245,158,11,.14)}
+.dex-mastered{color:#fff;background:linear-gradient(135deg,#E0A93B,#B4801e);border-color:transparent}
