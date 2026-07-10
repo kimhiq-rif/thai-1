@@ -153,3 +153,31 @@ test('inkVerdict: bands', () => {
   eq(RC.inkVerdict(50), 'fair');
   eq(RC.inkVerdict(20), 'low');
 });
+
+test('openMysteryBox: guaranteed floor — always a real reward', () => {
+  for(let i=0;i<50;i++){
+    const r = RC.openMysteryBox(() => i/50);
+    ok(r && (r.type === 'points' || r.type === 'token'), 'real reward at r=' + (i/50));
+    if(r.type === 'points') ok(r.amount >= 5, 'points floor >= 5');
+  }
+  // extremes never break
+  ok(RC.openMysteryBox(() => 0).type, 'r=0 ok');
+  ok(RC.openMysteryBox(() => 0.9999).type, 'r~1 ok');
+});
+
+test('openMysteryBox: weighting maps low rand to common small prize', () => {
+  eq(RC.openMysteryBox(() => 0), { type: 'points', amount: 5 });
+});
+
+test('dexItemStatus: new / seen / mastered', () => {
+  eq(RC.dexItemStatus(undefined), 'new');
+  eq(RC.dexItemStatus({ correct: 0, wrong: 0 }), 'new');
+  eq(RC.dexItemStatus({ correct: 1, wrong: 2 }), 'seen', 'net negative but attempted');
+  eq(RC.dexItemStatus({ correct: 4, wrong: 0 }), 'mastered');
+  eq(RC.dexItemStatus({ correct: 3, wrong: 0 }, 3), 'mastered', 'threshold inclusive');
+});
+
+test('dexProgress: counts mastered ids', () => {
+  const stats = { a: { correct: 5, wrong: 0 }, b: { correct: 1, wrong: 0 }, c: { correct: 4, wrong: 0 } };
+  eq(RC.dexProgress(stats, ['a','b','c','d'], 3), { mastered: 2, total: 4 });
+});

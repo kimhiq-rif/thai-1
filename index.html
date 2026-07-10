@@ -11,13 +11,13 @@
   <link rel="manifest" href="manifest.webmanifest?v=1.25.20" />
   <link rel="icon" type="image/svg+xml" href="assets/icons/thai-trainer-icon.svg?v=1.25.20" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/thai-trainer-icon-180.png?v=1.25.20" />
-  <link rel="stylesheet" href="styles.css?v=1.25.23" />
+  <link rel="stylesheet" href="styles.css?v=1.25.24" />
 </head>
 <body>
   <main class="app" id="app">
     <header class="hero">
       <div>
-        <p class="eyebrow" id="eyebrowText">Thai Trainer 🇹🇭 · v1.25.23</p>
+        <p class="eyebrow" id="eyebrowText">Thai Trainer 🇹🇭 · v1.25.24</p>
         <h1 id="mainTitle">קריאה, כתיבה, טונים ומשמעות</h1>
         <p class="subtitle" id="subtitleText">כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.</p>
       </div>
@@ -157,6 +157,15 @@
       <p class="achievement-note" id="nextSkinNote"></p>
     </section>
 
+    <section class="panel dex-panel" aria-live="polite">
+      <div class="achievement-head">
+        <h2 id="dexTitle">דקס אותיות</h2>
+        <span id="dexBadge">0/44</span>
+      </div>
+      <div class="dex-grid" id="dexGrid"></div>
+      <p class="achievement-note" id="dexNote">שלוט באות (תרגול רמה 1.2) והיא תיצבע זהב. השלם את כל 44 העיצורים → בונוס!</p>
+    </section>
+
     <section class="panel sync-panel">
       <h2 id="syncTitle">סנכרון Google Sheets</h2>
       <p id="syncDescription">כדי לשמור או לשחזר התקדמות ממכשיר אחר, הזן את אותו שם משתמש ולחץ שמור או טען התקדמות.</p>
@@ -213,9 +222,9 @@
       <button id="dailyBonusStartBtn" type="button">צא לדרך</button>
     </div>
   </div>
-  <script src="lib/rewards-core.js?v=1.25.23" defer></script>
-  <script src="lib/juice.js?v=1.25.23" defer></script>
-  <script src="lib/gif-encoder.js?v=1.25.23" defer></script>
-  <script src="app.js?v=1.25.23" defer></script>
+  <script src="lib/rewards-core.js?v=1.25.24" defer></script>
+  <script src="lib/juice.js?v=1.25.24" defer></script>
+  <script src="lib/gif-encoder.js?v=1.25.24" defer></script>
+  <script src="app.js?v=1.25.24" defer></script>
 </body>
 </html>

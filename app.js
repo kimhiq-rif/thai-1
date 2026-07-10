@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.23-ink-replay';
+const APP_VERSION = '1.25.24-mystery-dex';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
@@ -1294,7 +1294,7 @@ function challengeDurationText(cfg){
   return isHebrew() ? `${mins} דק׳` : `${mins} min`;
 }
 function defaultState(){
-  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false,bonus:{status:'idle',startedAt:null,durationMs:DAILY_BONUS_DURATION_MS,total:0,correct:0,level12:0,target:DAILY_BONUS_TARGET,requiredAccuracy:DAILY_BONUS_REQUIRED_ACCURACY,requiredLevel12:DAILY_BONUS_REQUIRED_LEVEL12,reward:DAILY_BONUS_REWARD,awarded:false,warned15:false,warned5:false,boostNotice:false},completed:{}}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false,tokens:{hint:0,freeze:0,boost:0},exams:{}}, achievements:{}, penSize:5, penMode:'regular', syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean', prefs:{sfx:true} };
+  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false,bonus:{status:'idle',startedAt:null,durationMs:DAILY_BONUS_DURATION_MS,total:0,correct:0,level12:0,target:DAILY_BONUS_TARGET,requiredAccuracy:DAILY_BONUS_REQUIRED_ACCURACY,requiredLevel12:DAILY_BONUS_REQUIRED_LEVEL12,reward:DAILY_BONUS_REWARD,awarded:false,warned15:false,warned5:false,boostNotice:false},completed:{}}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false,tokens:{hint:0,freeze:0,boost:0},exams:{},dexClaimed:false}, achievements:{}, penSize:5, penMode:'regular', syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean', prefs:{sfx:true} };
 }
 
 async function disableOldServiceWorkers(){
@@ -1794,6 +1794,22 @@ function awardChallengeTokens(bonus){
   if(typeof RewardsCore !== 'undefined') state.coach.tokens = RewardsCore.addTokens(state.coach.tokens, delta);
   return delta;
 }
+// M5: open a mystery box (guaranteed floor), apply the reward, return its label.
+function awardMysteryBox(){
+  if(typeof RewardsCore === 'undefined') return '';
+  const r = RewardsCore.openMysteryBox();
+  if(r.type === 'points'){
+    state.coach.points = (state.coach.points || 0) + r.amount;
+    unlockEligibleThemes();
+    return isHebrew() ? `🎁 תיבה מסתורית: +${r.amount} נק׳` : `🎁 Mystery box: +${r.amount} pts`;
+  }
+  if(r.type === 'token'){
+    state.coach.tokens = RewardsCore.addTokens(state.coach.tokens, {[r.token]:1});
+    const m = TOKEN_META[r.token];
+    return isHebrew() ? `🎁 תיבה מסתורית: ${m.emoji} ${m.he}` : `🎁 Mystery box: ${m.emoji} ${m.en}`;
+  }
+  return '';
+}
 // Short human summary of a token delta, e.g. "💡 רמז ×1 · ❄️ הקפאת רצף ×1".
 function tokenDeltaSummary(delta){
   if(!delta) return '';
@@ -1847,10 +1863,14 @@ function evaluateDailyBonusChallenge(){
   if(won){
     const reward = awardDailyBonusPoints();
     const tokens = tokenDeltaSummary(bonus.tokensAwarded);
+    const mystery = awardMysteryBox();   // M5: guaranteed-floor variable reward
     const base = isHebrew() ? `האתגר הושלם. קיבלת ${reward} נק׳.` : `Challenge complete. You earned ${reward} pts.`;
-    showTransientChallengeNotice(tokens ? `${base} ${isHebrew() ? 'ועוד' : 'plus'} ${tokens}` : base, 'ok');
+    let msg = tokens ? `${base} ${isHebrew() ? 'ועוד' : 'plus'} ${tokens}` : base;
+    if(mystery) msg += ` · ${mystery}`;
+    showTransientChallengeNotice(msg, 'ok');
     if(typeof Juice !== 'undefined') Juice.win();
     updateSkinPanel();
+    renderDex();
     return;
   }
   if((bonus.total || 0) >= (bonus.target || DAILY_BONUS_TARGET) && acc <= (bonus.requiredAccuracy || DAILY_BONUS_REQUIRED_ACCURACY) && left > 0 && !bonus.boostNotice){
@@ -2748,6 +2768,29 @@ function updateStats(){
   el('accuracyCount').textContent = `${acc}%`;
   updateAchievementPanel();
   updateSkinPanel();
+  renderDex();
+}
+// M5: character dex — consonant mastery grid + set-completion bonus.
+const DEX_THRESHOLD = 3;
+function renderDex(){
+  const grid = el('dexGrid'); if(!grid || typeof RewardsCore === 'undefined') return;
+  ensureDailyState();
+  const cons = BOARD_ITEMS.filter(x => x.kind === 'consonant');
+  const ids = cons.map(c => c.id);
+  const prog = RewardsCore.dexProgress(state.itemStats, ids, DEX_THRESHOLD);
+  if(prog.total > 0 && prog.mastered >= prog.total && !state.coach.dexClaimed){
+    state.coach.dexClaimed = true;
+    state.coach.points = (state.coach.points || 0) + 50;
+    unlockEligibleThemes();
+    saveState();
+    showTransientChallengeNotice(isHebrew() ? '🏆 השלמת את כל 44 העיצורים! +50 נק׳' : '🏆 All 44 consonants mastered! +50 pts', 'ok');
+    if(typeof Juice !== 'undefined') Juice.win();
+  }
+  const badge = el('dexBadge'); if(badge) badge.textContent = `${prog.mastered}/${prog.total}`;
+  grid.innerHTML = cons.map(c => {
+    const st = RewardsCore.dexItemStatus(state.itemStats && state.itemStats[c.id], DEX_THRESHOLD);
+    return `<span class="dex-cell dex-${st}" title="${escapeHtml(c.name)}">${escapeHtml(c.symbol)}</span>`;
+  }).join('');
 }
 function practiceCounts(){
   const all = [...WORDS, ...BOARD_ITEMS];
