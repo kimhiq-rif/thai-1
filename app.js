@@ -1351,7 +1351,7 @@ function setupLevels(){
     {value:'4', label:`${t('level')} 4`},
     {value:'5', label:`${t('level')} 5`},
     {value:'5.5', label:`${t('level')} 5.5 - Chat Bot`},
-    {value:'6', label:`${t('level')} 6 — ${t('vowelLevel')}`}
+    {value:'6', label:`${t('level')} 6`}
   ];
   select.innerHTML = '';
   for(const lvl of levels){
@@ -2036,7 +2036,8 @@ function newQuestion(){
     if(bonus.requiredLevel){ effectiveLevel = String(bonus.requiredLevel); }
     else if((bonus.requiredLevel12 || 0) > 0 && (bonus.level12 || 0) < bonus.requiredLevel12){ forceLevel12 = true; }
   }
-  const mode = forceLevel12 ? 'level12_pair' : effectiveLevel === '6' ? 'level6_pair' : effectiveLevel === '5.5' ? 'level55_chat' : effectiveLevel === '1.2' ? 'level12_pair' : pickMode();
+  // M6: Level 6 is now a regular (hardest) vocab level — vowel-board content lives in Level 1.2.
+  const mode = forceLevel12 ? 'level12_pair' : effectiveLevel === '5.5' ? 'level55_chat' : effectiveLevel === '1.2' ? 'level12_pair' : pickMode();
   if(mode === 'level12_pair'){
     current = makeLevel12PairedQuestion();
   } else if(mode === 'level55_chat'){
@@ -2456,8 +2457,8 @@ function updateQuestionProgressBadge(){
 }
 function renderQuestion(){
   const {item, mode} = current;
-  const itemLevel = mode === 'level55_chat' ? '5.5' : (mode === 'vowel_board' || mode === 'vowel_write' || mode === 'level6_pair') ? '6' : (mode === 'level12_pair' ? '1.2' : String(item.level));
-  el('levelBadge').textContent = itemLevel === '6' ? `${t('level')} 6 — ${t('vowelLevel')}` : itemLevel === '1.2' ? t('foundationLevel') : `${t('level')} ${itemLevel}`;
+  const itemLevel = mode === 'level55_chat' ? '5.5' : (mode === 'vowel_board' || mode === 'vowel_write' || mode === 'level6_pair') ? '1.2' : (mode === 'level12_pair' ? '1.2' : String(item.level));
+  el('levelBadge').textContent = itemLevel === '1.2' ? t('foundationLevel') : `${t('level')} ${itemLevel}`;
   el('modeBadge').textContent = modeLabel(mode);
   updateQuestionProgressBadge();
   el('answerBox').hidden = true;
