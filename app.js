@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.25-vocab-tone-fixes';
+const APP_VERSION = '1.25.26-dex-info';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
@@ -694,18 +694,18 @@ const VOWELS = [
 
 
 const CONSONANTS = [
-  {kind:'consonant',id:'c_gor_gai',symbol:'ก',name:'กอ ไก่',localHe:'עיצור g/k — go gai',localEn:'g/k consonant — go gai',sound:'g / k',he:'g / k',boardWord:'ไก่',boardMeaningHe:'תרנגולת',boardMeaningEn:'chicken',emoji:'🐔',writingHe:'Middle class. משמש כ־g/k בתחילת הברה וכ־k בסוף.',writingEn:'Middle class. g/k at the start; k at the end.',noteHe:'מהעיצורים הבסיסיים ביותר.',noteEn:'One of the core consonants.'},
-  {kind:'consonant',id:'c_jor_jaan',symbol:'จ',name:'จอ จาน',localHe:'עיצור j — jo jaan',localEn:'j consonant — jo jaan',sound:'j',he:'j',boardWord:'จาน',boardMeaningHe:'צלחת',boardMeaningEn:'plate',emoji:'🍽️',writingHe:'Middle class. בתחילת הברה j; בסוף נשמע t.',writingEn:'Middle class. j at the start; t at the end.',noteHe:'จาน = צלחת.',noteEn:'จาน = plate.'},
-  {kind:'consonant',id:'c_dor_dek',symbol:'ด',name:'ดอ เด็ก',localHe:'עיצור d — do dek',localEn:'d consonant — do dek',sound:'d',he:'d',boardWord:'เด็ก',boardMeaningHe:'ילד',boardMeaningEn:'child',emoji:'🧒',writingHe:'Middle class. d בתחילה; t בסוף.',writingEn:'Middle class. d initially; t finally.',noteHe:'דוגמה: ดู = לראות.',noteEn:'Example: ดู = to look.'},
-  {kind:'consonant',id:'c_tor_tao',symbol:'ต',name:'ตอ เต่า',localHe:'עיצור dt/t — dto dtao',localEn:'dt/t consonant — dto dtao',sound:'dt / t',he:'dt / t',boardWord:'เต่า',boardMeaningHe:'צב',boardMeaningEn:'turtle',emoji:'🐢',writingHe:'Middle class. צליל לא מנושף dt/t.',writingEn:'Middle class. Unaspirated dt/t sound.',noteHe:'ตาย = למות.',noteEn:'ตาย = to die.'},
-  {kind:'consonant',id:'c_bor_baimai',symbol:'บ',name:'บอ ใบไม้',localHe:'עיצור b — bo baimai',localEn:'b consonant — bo baimai',sound:'b',he:'b',boardWord:'ใบไม้',boardMeaningHe:'עלה',boardMeaningEn:'leaf',emoji:'🍃',writingHe:'Middle class. b בתחילה; p בסוף.',writingEn:'Middle class. b initially; p finally.',noteHe:'บ้าน מתחיל ב־บ.',noteEn:'บ้าน starts with บ.'},
-  {kind:'consonant',id:'c_bpor_bplaa',symbol:'ป',name:'ปอ ปลา',localHe:'עיצור bp/p — bpo bplaa',localEn:'bp/p consonant — bpo bplaa',sound:'bp / p',he:'bp / p',boardWord:'ปลา',boardMeaningHe:'דג',boardMeaningEn:'fish',emoji:'🐟',writingHe:'Middle class. p לא מנושף / bp.',writingEn:'Middle class. Unaspirated p / bp.',noteHe:'ไป = ללכת.',noteEn:'ไป = to go.'},
-  {kind:'consonant',id:'c_o_ang',symbol:'อ',name:'ออ อ่าง',localHe:'עיצור נשא / o aang',localEn:'silent carrier / o aang',sound:'silent carrier / ɔɔ',he:'עיצור נשא / ɔɔ',boardWord:'อ่าง',boardMeaningHe:'אגן / כיור / גיגית',boardMeaningEn:'basin / tub',emoji:'🛁',writingHe:'יכול לשמש עיצור נשא בתחילת מילה, וגם חלק מתנועת ɔɔ ארוכה.',writingEn:'Can be a silent vowel carrier at the start, and can also mark long ɔɔ.',noteHe:'חשוב מאוד במילים שמתחילות בתנועה.',noteEn:'Very important for vowel-initial words.'},
-  {kind:'consonant',id:'c_ngo_nguu',symbol:'ง',name:'งอ งู',localHe:'עיצור ng — ngo nguu',localEn:'ng consonant — ngo nguu',sound:'ng',he:'ng',boardWord:'งู',boardMeaningHe:'נחש',boardMeaningEn:'snake',emoji:'🐍',writingHe:'יכול להופיע בתחילת הברה או כסוף ng.',writingEn:'Can appear initially or as final ng.',noteHe:'งาน = עבודה.',noteEn:'งาน = work.'},
-  {kind:'consonant',id:'c_yo_yak',symbol:'ย',name:'ยอ ยักษ์',localHe:'עיצור y — yo yaak',localEn:'y consonant — yo yak',sound:'y',he:'y',boardWord:'ยักษ์',boardMeaningHe:'ענק / מפלצת',boardMeaningEn:'giant / ogre',emoji:'👹',writingHe:'y בתחילה או סוף y.',writingEn:'y initially or final y.',noteHe:'ตาย מסתיים ב־ย.',noteEn:'ตาย ends with ย.'},
-  {kind:'consonant',id:'c_wo_waen',symbol:'ว',name:'วอ แหวน',localHe:'עיצור w — wo waen',localEn:'w consonant — wo waen',sound:'w',he:'w',boardWord:'แหวน',boardMeaningHe:'טבעת',boardMeaningEn:'ring',emoji:'💍',writingHe:'w בתחילה או סוף w; משתתף גם בתנועות ua.',writingEn:'w initially or final w; also part of ua vowels.',noteHe:'อ้วน משתמש ב־ว.',noteEn:'อ้วน uses ว.'},
-  {kind:'consonant',id:'c_mo_maa',symbol:'ม',name:'มอ ม้า',localHe:'עיצור m — mo maa',localEn:'m consonant — mo maa',sound:'m',he:'m',boardWord:'ม้า',boardMeaningHe:'סוס',boardMeaningEn:'horse',emoji:'🐴',writingHe:'m בתחילה או סוף m.',writingEn:'m initially or final m.',noteHe:'ตาม מסתיים ב־ม.',noteEn:'ตาม ends with ม.'},
-  {kind:'consonant',id:'c_no_nuu',symbol:'น',name:'นอ หนู',localHe:'עיצור n — no nuu',localEn:'n consonant — no nuu',sound:'n',he:'n',boardWord:'หนู',boardMeaningHe:'עכבר / אני הקטן',boardMeaningEn:'mouse / little me',emoji:'🐭',writingHe:'n בתחילה או סוף n.',writingEn:'n initially or final n.',noteHe:'นอน = לישון.',noteEn:'นอน = to sleep.'},
+  {kind:'consonant',cls:'mid',id:'c_gor_gai',symbol:'ก',name:'กอ ไก่',localHe:'עיצור g/k — go gai',localEn:'g/k consonant — go gai',sound:'g / k',he:'g / k',boardWord:'ไก่',boardMeaningHe:'תרנגולת',boardMeaningEn:'chicken',emoji:'🐔',writingHe:'Middle class. משמש כ־g/k בתחילת הברה וכ־k בסוף.',writingEn:'Middle class. g/k at the start; k at the end.',noteHe:'מהעיצורים הבסיסיים ביותר.',noteEn:'One of the core consonants.'},
+  {kind:'consonant',cls:'mid',id:'c_jor_jaan',symbol:'จ',name:'จอ จาน',localHe:'עיצור j — jo jaan',localEn:'j consonant — jo jaan',sound:'j',he:'j',boardWord:'จาน',boardMeaningHe:'צלחת',boardMeaningEn:'plate',emoji:'🍽️',writingHe:'Middle class. בתחילת הברה j; בסוף נשמע t.',writingEn:'Middle class. j at the start; t at the end.',noteHe:'จาน = צלחת.',noteEn:'จาน = plate.'},
+  {kind:'consonant',cls:'mid',id:'c_dor_dek',symbol:'ด',name:'ดอ เด็ก',localHe:'עיצור d — do dek',localEn:'d consonant — do dek',sound:'d',he:'d',boardWord:'เด็ก',boardMeaningHe:'ילד',boardMeaningEn:'child',emoji:'🧒',writingHe:'Middle class. d בתחילה; t בסוף.',writingEn:'Middle class. d initially; t finally.',noteHe:'דוגמה: ดู = לראות.',noteEn:'Example: ดู = to look.'},
+  {kind:'consonant',cls:'mid',id:'c_tor_tao',symbol:'ต',name:'ตอ เต่า',localHe:'עיצור dt/t — dto dtao',localEn:'dt/t consonant — dto dtao',sound:'dt / t',he:'dt / t',boardWord:'เต่า',boardMeaningHe:'צב',boardMeaningEn:'turtle',emoji:'🐢',writingHe:'Middle class. צליל לא מנושף dt/t.',writingEn:'Middle class. Unaspirated dt/t sound.',noteHe:'ตาย = למות.',noteEn:'ตาย = to die.'},
+  {kind:'consonant',cls:'mid',id:'c_bor_baimai',symbol:'บ',name:'บอ ใบไม้',localHe:'עיצור b — bo baimai',localEn:'b consonant — bo baimai',sound:'b',he:'b',boardWord:'ใบไม้',boardMeaningHe:'עלה',boardMeaningEn:'leaf',emoji:'🍃',writingHe:'Middle class. b בתחילה; p בסוף.',writingEn:'Middle class. b initially; p finally.',noteHe:'บ้าน מתחיל ב־บ.',noteEn:'บ้าน starts with บ.'},
+  {kind:'consonant',cls:'mid',id:'c_bpor_bplaa',symbol:'ป',name:'ปอ ปลา',localHe:'עיצור bp/p — bpo bplaa',localEn:'bp/p consonant — bpo bplaa',sound:'bp / p',he:'bp / p',boardWord:'ปลา',boardMeaningHe:'דג',boardMeaningEn:'fish',emoji:'🐟',writingHe:'Middle class. p לא מנושף / bp.',writingEn:'Middle class. Unaspirated p / bp.',noteHe:'ไป = ללכת.',noteEn:'ไป = to go.'},
+  {kind:'consonant',cls:'mid',id:'c_o_ang',symbol:'อ',name:'ออ อ่าง',localHe:'עיצור נשא / o aang',localEn:'silent carrier / o aang',sound:'silent carrier / ɔɔ',he:'עיצור נשא / ɔɔ',boardWord:'อ่าง',boardMeaningHe:'אגן / כיור / גיגית',boardMeaningEn:'basin / tub',emoji:'🛁',writingHe:'יכול לשמש עיצור נשא בתחילת מילה, וגם חלק מתנועת ɔɔ ארוכה.',writingEn:'Can be a silent vowel carrier at the start, and can also mark long ɔɔ.',noteHe:'חשוב מאוד במילים שמתחילות בתנועה.',noteEn:'Very important for vowel-initial words.'},
+  {kind:'consonant',cls:'low',id:'c_ngo_nguu',symbol:'ง',name:'งอ งู',localHe:'עיצור ng — ngo nguu',localEn:'ng consonant — ngo nguu',sound:'ng',he:'ng',boardWord:'งู',boardMeaningHe:'נחש',boardMeaningEn:'snake',emoji:'🐍',writingHe:'יכול להופיע בתחילת הברה או כסוף ng.',writingEn:'Can appear initially or as final ng.',noteHe:'งาน = עבודה.',noteEn:'งาน = work.'},
+  {kind:'consonant',cls:'low',id:'c_yo_yak',symbol:'ย',name:'ยอ ยักษ์',localHe:'עיצור y — yo yaak',localEn:'y consonant — yo yak',sound:'y',he:'y',boardWord:'ยักษ์',boardMeaningHe:'ענק / מפלצת',boardMeaningEn:'giant / ogre',emoji:'👹',writingHe:'y בתחילה או סוף y.',writingEn:'y initially or final y.',noteHe:'ตาย מסתיים ב־ย.',noteEn:'ตาย ends with ย.'},
+  {kind:'consonant',cls:'low',id:'c_wo_waen',symbol:'ว',name:'วอ แหวน',localHe:'עיצור w — wo waen',localEn:'w consonant — wo waen',sound:'w',he:'w',boardWord:'แหวน',boardMeaningHe:'טבעת',boardMeaningEn:'ring',emoji:'💍',writingHe:'w בתחילה או סוף w; משתתף גם בתנועות ua.',writingEn:'w initially or final w; also part of ua vowels.',noteHe:'อ้วน משתמש ב־ว.',noteEn:'อ้วน uses ว.'},
+  {kind:'consonant',cls:'low',id:'c_mo_maa',symbol:'ม',name:'มอ ม้า',localHe:'עיצור m — mo maa',localEn:'m consonant — mo maa',sound:'m',he:'m',boardWord:'ม้า',boardMeaningHe:'סוס',boardMeaningEn:'horse',emoji:'🐴',writingHe:'m בתחילה או סוף m.',writingEn:'m initially or final m.',noteHe:'ตาม מסתיים ב־ม.',noteEn:'ตาม ends with ม.'},
+  {kind:'consonant',cls:'low',id:'c_no_nuu',symbol:'น',name:'นอ หนู',localHe:'עיצור n — no nuu',localEn:'n consonant — no nuu',sound:'n',he:'n',boardWord:'หนู',boardMeaningHe:'עכבר / אני הקטן',boardMeaningEn:'mouse / little me',emoji:'🐭',writingHe:'n בתחילה או סוף n.',writingEn:'n initially or final n.',noteHe:'นอน = לישון.',noteEn:'นอน = to sleep.'},
   {kind:'consonant',cls:'mid',id:'c_dor_chada',symbol:'ฎ',name:'ฎอ ชฎา',localHe:'עיצור d — do chada',localEn:'d consonant — do chada',sound:'d',he:'d',boardWord:'ชฎา',boardMeaningHe:'כתר ריקוד תאי',boardMeaningEn:'Thai dance crown',emoji:'👑',writingHe:'מחלקה אמצעית. d בתחילה, t בסוף. נדיר יחסית.',writingEn:'Middle class. d initially, t finally. Fairly rare.',noteHe:'תאום נדיר של ด.',noteEn:'Rare twin of ด.'},
   {kind:'consonant',cls:'mid',id:'c_tor_bpatak',symbol:'ฏ',name:'ฏอ ปฏัก',localHe:'עיצור dt/t — dto bpatak',localEn:'dt/t consonant — dto bpatak',sound:'dt / t',he:'dt / t',boardWord:'ปฏัก',boardMeaningHe:'מַלְמָד (מוט דרבון)',boardMeaningEn:'goad / cattle prod',emoji:'🔱',writingHe:'מחלקה אמצעית. dt/t לא מנושף. נדיר.',writingEn:'Middle class. Unaspirated dt/t. Rare.',noteHe:'תאום נדיר של ต.',noteEn:'Rare twin of ต.'},
   {kind:'consonant',cls:'high',id:'c_khor_khai',symbol:'ข',name:'ขอ ไข่',localHe:'עיצור kh — kho khai',localEn:'kh consonant — kho khai',sound:'kh',he:'kh',boardWord:'ไข่',boardMeaningHe:'ביצה',boardMeaningEn:'egg',emoji:'🥚',writingHe:'מחלקה גבוהה. kh מנושף.',writingEn:'High class. Aspirated kh.',noteHe:'תאום גבוה של ค.',noteEn:'High twin of ค.'},
@@ -1409,6 +1409,7 @@ function setupEvents(){
   if(el('inkJudgeBtn')) el('inkJudgeBtn').addEventListener('click', judgeInk);
   if(el('inkReplayBtn')) el('inkReplayBtn').addEventListener('click', replayInk);
   if(el('inkGifBtn')) el('inkGifBtn').addEventListener('click', exportInkGif);
+  setupDexInteractions();
   el('clearBtn').addEventListener('click', clearCanvas);
   const eraserBtn = el('eraserToggleBtn');
   if(eraserBtn) eraserBtn.addEventListener('click', toggleEraserMode);
@@ -2789,8 +2790,75 @@ function renderDex(){
   const badge = el('dexBadge'); if(badge) badge.textContent = `${prog.mastered}/${prog.total}`;
   grid.innerHTML = cons.map(c => {
     const st = RewardsCore.dexItemStatus(state.itemStats && state.itemStats[c.id], DEX_THRESHOLD);
-    return `<span class="dex-cell dex-${st}" title="${escapeHtml(c.name)}">${escapeHtml(c.symbol)}</span>`;
+    return `<span class="dex-cell dex-${st}" data-dex-id="${escapeHtml(c.id)}" title="${escapeHtml(c.name)}">${escapeHtml(c.symbol)}</span>`;
   }).join('');
+}
+// M5b: vowel dex — same board data, no mastery colouring.
+function renderVowelDex(){
+  const grid = el('vowelDexGrid'); if(!grid) return;
+  const vows = BOARD_ITEMS.filter(x => x.kind === 'vowel');
+  grid.innerHTML = vows.map(v =>
+    `<span class="dex-cell dex-vowel" data-dex-id="${escapeHtml(v.id)}" title="${escapeHtml(v.name)}">${escapeHtml(v.symbol)}</span>`
+  ).join('');
+}
+// M5b: hold-to-show info card for a board item (consonant or vowel).
+const CLS_LABEL = { high:{he:'מחלקה גבוהה',en:'High class'}, mid:{he:'מחלקה אמצעית',en:'Mid class'}, low:{he:'מחלקה נמוכה',en:'Low class'} };
+function dexInfoHtml(item){
+  const he = isHebrew();
+  const name = `${item.symbol} · ${thaiNameWithRoman(item)}`;
+  const rows = [];
+  if(item.kind === 'consonant'){
+    const c = CLS_LABEL[item.cls] ? (he ? CLS_LABEL[item.cls].he : CLS_LABEL[item.cls].en) : (he ? 'מחלקה לא ידועה' : 'Unknown class');
+    rows.push([he ? 'מחלקה' : 'Class', c]);
+    rows.push([he ? 'תכונות מיוחדות' : 'Special', (he ? item.noteHe : item.noteEn) || (he ? '—' : '—')]);
+  } else {
+    rows.push([he ? 'איך מתפקדת' : 'How it works', (he ? item.writingHe : item.writingEn) || '—']);
+    rows.push([he ? 'תכונות מיוחדות' : 'Special', (he ? item.noteHe : item.noteEn) || '—']);
+  }
+  return `<div class="dex-pop-name">${escapeHtml(item.emoji || '')} ${escapeHtml(name)}</div>` +
+    rows.map(r => `<div class="dex-pop-row"><b>${escapeHtml(r[0])}:</b> ${escapeHtml(r[1])}</div>`).join('');
+}
+function showDexPopup(id, anchor){
+  const pop = el('dexPopup'); if(!pop) return;
+  const item = BOARD_ITEMS.find(x => x.id === id); if(!item) return;
+  pop.innerHTML = dexInfoHtml(item);
+  pop.hidden = false;
+  // position above the pressed cell, clamped to the viewport
+  const r = anchor.getBoundingClientRect();
+  const pw = Math.min(300, window.innerWidth - 16);
+  pop.style.width = pw + 'px';
+  let left = r.left + r.width/2 - pw/2;
+  left = Math.max(8, Math.min(left, window.innerWidth - pw - 8));
+  pop.style.left = left + 'px';
+  const ph = pop.offsetHeight;
+  let top = r.top - ph - 10;
+  if(top < 8) top = r.bottom + 10;   // flip below if no room above
+  pop.style.top = top + 'px';
+}
+function hideDexPopup(){ const pop = el('dexPopup'); if(pop) pop.hidden = true; }
+function setupDexInteractions(){
+  const panel = document.querySelector('.dex-panel'); if(!panel) return;
+  // hold-to-show (pointer covers mouse + touch)
+  panel.addEventListener('pointerdown', e => {
+    const cell = e.target.closest && e.target.closest('.dex-cell[data-dex-id]');
+    if(!cell) return;
+    e.preventDefault();
+    showDexPopup(cell.getAttribute('data-dex-id'), cell);
+  });
+  const release = () => hideDexPopup();
+  window.addEventListener('pointerup', release);
+  window.addEventListener('pointercancel', release);
+  panel.addEventListener('pointerleave', release);
+  panel.addEventListener('contextmenu', e => { if(e.target.closest && e.target.closest('.dex-cell')) e.preventDefault(); });
+  // vowel dex drawer toggle
+  const toggle = el('vowelDexToggle');
+  if(toggle) toggle.addEventListener('click', () => {
+    const drawer = el('vowelDexDrawer'); if(!drawer) return;
+    const open = drawer.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    const chev = toggle.querySelector('.dex-chev'); if(chev) chev.textContent = open ? '▲' : '▼';
+    if(open) renderVowelDex();
+  });
 }
 function practiceCounts(){
   const all = [...WORDS, ...BOARD_ITEMS];
