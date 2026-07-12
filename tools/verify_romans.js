@@ -1,0 +1,15 @@
+const fs = require('fs');
+const s = fs.readFileSync('app.js', 'utf8');
+const start = s.indexOf('const WORDS = [');
+const body = s.slice(start, s.indexOf('\n];', start));
+const romanRe = /roman:['"]([^'"]*)['"]/g;
+let m, all = [];
+while ((m = romanRe.exec(body))) all.push(m[1]);
+const digitRe = /[0-9¹²³⁴⁵]/;
+const diacriticRe = /[àáâǎāèéêěēìíîǐīòóôǒōùúûǔūỳýŷ]/i;
+const withDigits = all.filter(r => digitRe.test(r));
+const withDiacritics = all.filter(r => diacriticRe.test(r));
+console.log('total romans:', all.length);
+console.log('with ASCII/superscript digits:', withDigits.length, withDigits.slice(0,10));
+console.log('with diacritic tone marks:', withDiacritics.length);
+console.log('sample diacritic romans:', withDiacritics.slice(0, 8));
