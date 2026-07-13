@@ -116,6 +116,30 @@
       </div>
     </section>
 
+    <section class="panel dex-panel" aria-live="polite">
+      <div class="achievement-head">
+        <h2 id="dexTitle">דקס אותיות</h2>
+        <span id="dexBadge">0/44</span>
+      </div>
+      <div class="dex-grid" id="dexGrid"></div>
+      <p class="achievement-note" id="dexNote">שלוט באות (תרגול רמה 1.2) והיא תיצבע זהב. השלם את כל 44 העיצורים → בונוס! לחיצה ארוכה על אות = מידע.</p>
+      <button type="button" class="vowel-dex-toggle" id="vowelDexToggle" aria-expanded="false" aria-controls="vowelDexDrawer">
+        <span>דקס התנועות</span><span class="dex-chev" aria-hidden="true">▼</span>
+      </button>
+      <div class="vowel-dex-drawer" id="vowelDexDrawer">
+        <div class="dex-grid" id="vowelDexGrid"></div>
+        <p class="achievement-note">לחיצה ארוכה על תנועה = שם, איך מתפקדת, ותכונות מיוחדות.</p>
+      </div>
+      <button type="button" class="vowel-dex-toggle" id="toneDexToggle" aria-expanded="false" aria-controls="toneDexDrawer">
+        <span id="toneDexToggleLabel">דקס חוקי הטונים</span><span class="dex-chev" aria-hidden="true">▼</span>
+      </button>
+      <div class="vowel-dex-drawer" id="toneDexDrawer">
+        <div class="tone-dex-body" id="toneDexBody"></div>
+        <p class="achievement-note" id="toneDexNote">חוקי הטון של תאית בנגקוקית: מחלקת העיצור, הברה חיה/מתה, סימני טון וחריגי דיבור.</p>
+      </div>
+    </section>
+    <div class="dex-popup" id="dexPopup" role="tooltip" hidden></div>
+
     <section class="panel stats-grid">
       <div><strong id="correctCount">0</strong><span id="correctLabel">נכונות</span></div>
       <div><strong id="wrongCount">0</strong><span id="wrongLabel">טעויות</span></div>
@@ -156,30 +180,6 @@
       <div class="skin-grid" id="skinGrid"></div>
       <p class="achievement-note" id="nextSkinNote"></p>
     </section>
-
-    <section class="panel dex-panel" aria-live="polite">
-      <div class="achievement-head">
-        <h2 id="dexTitle">דקס אותיות</h2>
-        <span id="dexBadge">0/44</span>
-      </div>
-      <div class="dex-grid" id="dexGrid"></div>
-      <p class="achievement-note" id="dexNote">שלוט באות (תרגול רמה 1.2) והיא תיצבע זהב. השלם את כל 44 העיצורים → בונוס! לחיצה ארוכה על אות = מידע.</p>
-      <button type="button" class="vowel-dex-toggle" id="vowelDexToggle" aria-expanded="false" aria-controls="vowelDexDrawer">
-        <span>דקס התנועות</span><span class="dex-chev" aria-hidden="true">▼</span>
-      </button>
-      <div class="vowel-dex-drawer" id="vowelDexDrawer">
-        <div class="dex-grid" id="vowelDexGrid"></div>
-        <p class="achievement-note">לחיצה ארוכה על תנועה = שם, איך מתפקדת, ותכונות מיוחדות.</p>
-      </div>
-      <button type="button" class="vowel-dex-toggle" id="toneDexToggle" aria-expanded="false" aria-controls="toneDexDrawer">
-        <span id="toneDexToggleLabel">דקס חוקי הטונים</span><span class="dex-chev" aria-hidden="true">▼</span>
-      </button>
-      <div class="vowel-dex-drawer" id="toneDexDrawer">
-        <div class="tone-dex-body" id="toneDexBody"></div>
-        <p class="achievement-note" id="toneDexNote">חוקי הטון של תאית בנגקוקית: מחלקת העיצור, הברה חיה/מתה, סימני טון וחריגי דיבור.</p>
-      </div>
-    </section>
-    <div class="dex-popup" id="dexPopup" role="tooltip" hidden></div>
 
     <section class="panel sync-panel">
       <h2 id="syncTitle">סנכרון Google Sheets</h2>
