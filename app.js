@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.26-dex-info';
+const APP_VERSION = '1.25.27-tone-dex';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
@@ -18,7 +18,7 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.20', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.27', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', eraser:'מחק', eraserActive:'מחק פעיל', eraserTitle:'הפעל/כבה מחק מקומי', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
@@ -35,7 +35,7 @@ const I18N = {
     dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא', voiceCheer:'מחווה קולית ב"צדקתי"', voiceCheerLocked:'ייפתח אחרי הסקין הראשון'
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.20', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.27', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', eraser:'Eraser', eraserActive:'Eraser on', eraserTitle:'Toggle local eraser', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
@@ -987,38 +987,38 @@ const CONSONANTS = [
   {kind:'consonant',cls:'low',id:'c_wo_waen',symbol:'ว',name:'วอ แหวน',localHe:'עיצור w — wo waen',localEn:'w consonant — wo waen',sound:'w',he:'w',boardWord:'แหวน',boardMeaningHe:'טבעת',boardMeaningEn:'ring',emoji:'💍',writingHe:'w בתחילה או סוף w; משתתף גם בתנועות ua.',writingEn:'w initially or final w; also part of ua vowels.',noteHe:'อ้วน משתמש ב־ว.',noteEn:'อ้วน uses ว.'},
   {kind:'consonant',cls:'low',id:'c_mo_maa',symbol:'ม',name:'มอ ม้า',localHe:'עיצור m — mo maa',localEn:'m consonant — mo maa',sound:'m',he:'m',boardWord:'ม้า',boardMeaningHe:'סוס',boardMeaningEn:'horse',emoji:'🐴',writingHe:'m בתחילה או סוף m.',writingEn:'m initially or final m.',noteHe:'ตาม מסתיים ב־ม.',noteEn:'ตาม ends with ม.'},
   {kind:'consonant',cls:'low',id:'c_no_nuu',symbol:'น',name:'นอ หนู',localHe:'עיצור n — no nuu',localEn:'n consonant — no nuu',sound:'n',he:'n',boardWord:'หนู',boardMeaningHe:'עכבר / אני הקטן',boardMeaningEn:'mouse / little me',emoji:'🐭',writingHe:'n בתחילה או סוף n.',writingEn:'n initially or final n.',noteHe:'นอน = לישון.',noteEn:'นอน = to sleep.'},
-  {kind:'consonant',cls:'mid',id:'c_dor_chada',symbol:'ฎ',name:'ฎอ ชฎา',localHe:'עיצור d — do chada',localEn:'d consonant — do chada',sound:'d',he:'d',boardWord:'ชฎา',boardMeaningHe:'כתר ריקוד תאי',boardMeaningEn:'Thai dance crown',emoji:'👑',writingHe:'מחלקה אמצעית. d בתחילה, t בסוף. נדיר יחסית.',writingEn:'Middle class. d initially, t finally. Fairly rare.',noteHe:'תאום נדיר של ด.',noteEn:'Rare twin of ด.'},
-  {kind:'consonant',cls:'mid',id:'c_tor_bpatak',symbol:'ฏ',name:'ฏอ ปฏัก',localHe:'עיצור dt/t — dto bpatak',localEn:'dt/t consonant — dto bpatak',sound:'dt / t',he:'dt / t',boardWord:'ปฏัก',boardMeaningHe:'מַלְמָד (מוט דרבון)',boardMeaningEn:'goad / cattle prod',emoji:'🔱',writingHe:'מחלקה אמצעית. dt/t לא מנושף. נדיר.',writingEn:'Middle class. Unaspirated dt/t. Rare.',noteHe:'תאום נדיר של ต.',noteEn:'Rare twin of ต.'},
-  {kind:'consonant',cls:'high',id:'c_khor_khai',symbol:'ข',name:'ขอ ไข่',localHe:'עיצור kh — kho khai',localEn:'kh consonant — kho khai',sound:'kh',he:'kh',boardWord:'ไข่',boardMeaningHe:'ביצה',boardMeaningEn:'egg',emoji:'🥚',writingHe:'מחלקה גבוהה. kh מנושף.',writingEn:'High class. Aspirated kh.',noteHe:'תאום גבוה של ค.',noteEn:'High twin of ค.'},
-  {kind:'consonant',cls:'high',id:'c_khor_khuat',symbol:'ฃ',name:'ฃอ ขวด',localHe:'עיצור kh — kho khuat (מיושן)',localEn:'kh consonant — kho khuat (obsolete)',sound:'kh',he:'kh',boardWord:'ขวด',boardMeaningHe:'בקבוק',boardMeaningEn:'bottle',emoji:'🍾',writingHe:'מחלקה גבוהה. אות מיושנת שאינה בשימוש כיום.',writingEn:'High class. Obsolete letter, no longer used.',noteHe:'הוחלפה ב־ข.',noteEn:'Replaced by ข.'},
-  {kind:'consonant',cls:'high',id:'c_chor_ching',symbol:'ฉ',name:'ฉอ ฉิ่ง',localHe:'עיצור ch — cho ching',localEn:'ch consonant — cho ching',sound:'ch',he:'ch',boardWord:'ฉิ่ง',boardMeaningHe:'מצלתיים קטנים',boardMeaningEn:'small cymbals',emoji:'🥁',writingHe:'מחלקה גבוהה. ch מנושף.',writingEn:'High class. Aspirated ch.',noteHe:'תאום גבוה של ช.',noteEn:'High twin of ช.'},
-  {kind:'consonant',cls:'high',id:'c_thor_than',symbol:'ฐ',name:'ฐอ ฐาน',localHe:'עיצור th — tho than',localEn:'th consonant — tho than',sound:'th',he:'th',boardWord:'ฐาน',boardMeaningHe:'בסיס / כַּן',boardMeaningEn:'base / pedestal',emoji:'🏛️',writingHe:'מחלקה גבוהה. th מנושף.',writingEn:'High class. Aspirated th.',noteHe:'תאום גבוה מסוג th.',noteEn:'High-class th.'},
-  {kind:'consonant',cls:'high',id:'c_thor_thung',symbol:'ถ',name:'ถอ ถุง',localHe:'עיצור th — tho thung',localEn:'th consonant — tho thung',sound:'th',he:'th',boardWord:'ถุง',boardMeaningHe:'שקית',boardMeaningEn:'bag',emoji:'🛍️',writingHe:'מחלקה גבוהה. th מנושף.',writingEn:'High class. Aspirated th.',noteHe:'ถุง = שקית.',noteEn:'ถุง = bag.'},
+  {kind:'consonant',cls:'mid',id:'c_dor_chada',symbol:'ฎ',name:'ฎอ ชฎา',nameRoman:'do cha-daa',localHe:'עיצור d — do chada',localEn:'d consonant — do chada',sound:'d',he:'d',boardWord:'ชฎา',boardMeaningHe:'כתר ריקוד תאי',boardMeaningEn:'Thai dance crown',emoji:'👑',writingHe:'מחלקה אמצעית. d בתחילה, t בסוף. נדיר יחסית.',writingEn:'Middle class. d initially, t finally. Fairly rare.',noteHe:'תאום נדיר של ด.',noteEn:'Rare twin of ด.'},
+  {kind:'consonant',cls:'mid',id:'c_tor_bpatak',symbol:'ฏ',name:'ฏอ ปฏัก',nameRoman:'dto bpa-dtak',localHe:'עיצור dt/t — dto bpatak',localEn:'dt/t consonant — dto bpatak',sound:'dt / t',he:'dt / t',boardWord:'ปฏัก',boardMeaningHe:'מַלְמָד (מוט דרבון)',boardMeaningEn:'goad / cattle prod',emoji:'🔱',writingHe:'מחלקה אמצעית. dt/t לא מנושף. נדיר.',writingEn:'Middle class. Unaspirated dt/t. Rare.',noteHe:'תאום נדיר של ต.',noteEn:'Rare twin of ต.'},
+  {kind:'consonant',cls:'high',id:'c_khor_khai',symbol:'ข',name:'ขอ ไข่',nameRoman:'kho khai',localHe:'עיצור kh — kho khai',localEn:'kh consonant — kho khai',sound:'kh',he:'kh',boardWord:'ไข่',boardMeaningHe:'ביצה',boardMeaningEn:'egg',emoji:'🥚',writingHe:'מחלקה גבוהה. kh מנושף.',writingEn:'High class. Aspirated kh.',noteHe:'תאום גבוה של ค.',noteEn:'High twin of ค.'},
+  {kind:'consonant',cls:'high',id:'c_khor_khuat',symbol:'ฃ',name:'ฃอ ขวด',nameRoman:'kho khuat',localHe:'עיצור kh — kho khuat (מיושן)',localEn:'kh consonant — kho khuat (obsolete)',sound:'kh',he:'kh',boardWord:'ขวด',boardMeaningHe:'בקבוק',boardMeaningEn:'bottle',emoji:'🍾',writingHe:'מחלקה גבוהה. אות מיושנת שאינה בשימוש כיום.',writingEn:'High class. Obsolete letter, no longer used.',noteHe:'הוחלפה ב־ข.',noteEn:'Replaced by ข.'},
+  {kind:'consonant',cls:'high',id:'c_chor_ching',symbol:'ฉ',name:'ฉอ ฉิ่ง',nameRoman:'cho ching',localHe:'עיצור ch — cho ching',localEn:'ch consonant — cho ching',sound:'ch',he:'ch',boardWord:'ฉิ่ง',boardMeaningHe:'מצלתיים קטנים',boardMeaningEn:'small cymbals',emoji:'🥁',writingHe:'מחלקה גבוהה. ch מנושף.',writingEn:'High class. Aspirated ch.',noteHe:'תאום גבוה של ช.',noteEn:'High twin of ช.'},
+  {kind:'consonant',cls:'high',id:'c_thor_than',symbol:'ฐ',name:'ฐอ ฐาน',nameRoman:'tho thaan',localHe:'עיצור th — tho than',localEn:'th consonant — tho than',sound:'th',he:'th',boardWord:'ฐาน',boardMeaningHe:'בסיס / כַּן',boardMeaningEn:'base / pedestal',emoji:'🏛️',writingHe:'מחלקה גבוהה. th מנושף.',writingEn:'High class. Aspirated th.',noteHe:'תאום גבוה מסוג th.',noteEn:'High-class th.'},
+  {kind:'consonant',cls:'high',id:'c_thor_thung',symbol:'ถ',name:'ถอ ถุง',nameRoman:'tho thung',localHe:'עיצור th — tho thung',localEn:'th consonant — tho thung',sound:'th',he:'th',boardWord:'ถุง',boardMeaningHe:'שקית',boardMeaningEn:'bag',emoji:'🛍️',writingHe:'מחלקה גבוהה. th מנושף.',writingEn:'High class. Aspirated th.',noteHe:'ถุง = שקית.',noteEn:'ถุง = bag.'},
   {kind:'consonant',cls:'high',id:'c_phor_phueng',symbol:'ผ',name:'ผอ ผึ้ง',localHe:'עיצור ph — pho phueng',localEn:'ph consonant — pho phueng',sound:'ph',he:'ph',boardWord:'ผึ้ง',boardMeaningHe:'דבורה',boardMeaningEn:'bee',emoji:'🐝',writingHe:'מחלקה גבוהה. ph מנושף (לא f).',writingEn:'High class. Aspirated ph (not f).',noteHe:'תאום גבוה של พ.',noteEn:'High twin of พ.'},
-  {kind:'consonant',cls:'high',id:'c_for_faa',symbol:'ฝ',name:'ฝอ ฝา',localHe:'עיצור f — fo faa',localEn:'f consonant — fo faa',sound:'f',he:'f',boardWord:'ฝา',boardMeaningHe:'מכסה',boardMeaningEn:'lid',emoji:'🫙',writingHe:'מחלקה גבוהה. צליל f.',writingEn:'High class. f sound.',noteHe:'תאום גבוה של ฟ.',noteEn:'High twin of ฟ.'},
-  {kind:'consonant',cls:'high',id:'c_sor_saalaa',symbol:'ศ',name:'ศอ ศาลา',localHe:'עיצור s — so saalaa',localEn:'s consonant — so saalaa',sound:'s',he:'s',boardWord:'ศาลา',boardMeaningHe:'ביתן / סוכה',boardMeaningEn:'pavilion',emoji:'🛖',writingHe:'מחלקה גבוהה. צליל s.',writingEn:'High class. s sound.',noteHe:'משמש במילים ממקור סנסקריט.',noteEn:'Used in Sanskrit-origin words.'},
-  {kind:'consonant',cls:'high',id:'c_sor_ruesi',symbol:'ษ',name:'ษอ ฤๅษี',localHe:'עיצור s — so ruesi',localEn:'s consonant — so ruesi',sound:'s',he:'s',boardWord:'ฤๅษี',boardMeaningHe:'נזיר מתבודד',boardMeaningEn:'hermit',emoji:'🧘',writingHe:'מחלקה גבוהה. צליל s.',writingEn:'High class. s sound.',noteHe:'משמש במילים ממקור סנסקריט.',noteEn:'Used in Sanskrit-origin words.'},
-  {kind:'consonant',cls:'high',id:'c_sor_suea',symbol:'ส',name:'สอ เสือ',localHe:'עיצור s — so suea',localEn:'s consonant — so suea',sound:'s',he:'s',boardWord:'เสือ',boardMeaningHe:'נמר',boardMeaningEn:'tiger',emoji:'🐯',writingHe:'מחלקה גבוהה. צליל s הנפוץ ביותר.',writingEn:'High class. The most common s.',noteHe:'เสือ = נמר.',noteEn:'เสือ = tiger.'},
-  {kind:'consonant',cls:'high',id:'c_hor_hiip',symbol:'ห',name:'หอ หีบ',localHe:'עיצור h — ho hiip',localEn:'h consonant — ho hiip',sound:'h',he:'h',boardWord:'หีบ',boardMeaningHe:'תיבה / ארגז',boardMeaningEn:'chest / box',emoji:'🧰',writingHe:'מחלקה גבוהה. גם משמש כ־ห นำ שמשנה טון.',writingEn:'High class. Also used as leading ห that changes tone.',noteHe:'ห นำ: לרוב לא נהגית אך משפיעה על הטון.',noteEn:'Leading ห: usually silent but sets the tone.'},
+  {kind:'consonant',cls:'high',id:'c_for_faa',symbol:'ฝ',name:'ฝอ ฝา',nameRoman:'fo faa',localHe:'עיצור f — fo faa',localEn:'f consonant — fo faa',sound:'f',he:'f',boardWord:'ฝา',boardMeaningHe:'מכסה',boardMeaningEn:'lid',emoji:'🫙',writingHe:'מחלקה גבוהה. צליל f.',writingEn:'High class. f sound.',noteHe:'תאום גבוה של ฟ.',noteEn:'High twin of ฟ.'},
+  {kind:'consonant',cls:'high',id:'c_sor_saalaa',symbol:'ศ',name:'ศอ ศาลา',nameRoman:'so saa-laa',localHe:'עיצור s — so saalaa',localEn:'s consonant — so saalaa',sound:'s',he:'s',boardWord:'ศาลา',boardMeaningHe:'ביתן / סוכה',boardMeaningEn:'pavilion',emoji:'🛖',writingHe:'מחלקה גבוהה. צליל s.',writingEn:'High class. s sound.',noteHe:'משמש במילים ממקור סנסקריט.',noteEn:'Used in Sanskrit-origin words.'},
+  {kind:'consonant',cls:'high',id:'c_sor_ruesi',symbol:'ษ',name:'ษอ ฤๅษี',nameRoman:'so rue-sii',localHe:'עיצור s — so ruesi',localEn:'s consonant — so ruesi',sound:'s',he:'s',boardWord:'ฤๅษี',boardMeaningHe:'נזיר מתבודד',boardMeaningEn:'hermit',emoji:'🧘',writingHe:'מחלקה גבוהה. צליל s.',writingEn:'High class. s sound.',noteHe:'משמש במילים ממקור סנסקריט.',noteEn:'Used in Sanskrit-origin words.'},
+  {kind:'consonant',cls:'high',id:'c_sor_suea',symbol:'ส',name:'สอ เสือ',nameRoman:'so suea',localHe:'עיצור s — so suea',localEn:'s consonant — so suea',sound:'s',he:'s',boardWord:'เสือ',boardMeaningHe:'נמר',boardMeaningEn:'tiger',emoji:'🐯',writingHe:'מחלקה גבוהה. צליל s הנפוץ ביותר.',writingEn:'High class. The most common s.',noteHe:'เสือ = נמר.',noteEn:'เสือ = tiger.'},
+  {kind:'consonant',cls:'high',id:'c_hor_hiip',symbol:'ห',name:'หอ หีบ',nameRoman:'ho hiip',localHe:'עיצור h — ho hiip',localEn:'h consonant — ho hiip',sound:'h',he:'h',boardWord:'หีบ',boardMeaningHe:'תיבה / ארגז',boardMeaningEn:'chest / box',emoji:'🧰',writingHe:'מחלקה גבוהה. גם משמש כ־ห นำ שמשנה טון.',writingEn:'High class. Also used as leading ห that changes tone.',noteHe:'ห นำ: לרוב לא נהגית אך משפיעה על הטון.',noteEn:'Leading ห: usually silent but sets the tone.'},
   {kind:'consonant',cls:'low',id:'c_khor_khwai',symbol:'ค',name:'คอ ควาย',localHe:'עיצור kh — kho khwai',localEn:'kh consonant — kho khwai',sound:'kh',he:'kh',boardWord:'ควาย',boardMeaningHe:'תאו',boardMeaningEn:'buffalo',emoji:'🐃',writingHe:'מחלקה נמוכה. kh מנושף.',writingEn:'Low class. Aspirated kh.',noteHe:'תאום נמוך של ข.',noteEn:'Low twin of ข.'},
-  {kind:'consonant',cls:'low',id:'c_khor_khon',symbol:'ฅ',name:'ฅอ คน',localHe:'עיצור kh — kho khon (מיושן)',localEn:'kh consonant — kho khon (obsolete)',sound:'kh',he:'kh',boardWord:'คน',boardMeaningHe:'אדם',boardMeaningEn:'person',emoji:'🧑',writingHe:'מחלקה נמוכה. אות מיושנת שאינה בשימוש כיום.',writingEn:'Low class. Obsolete letter, no longer used.',noteHe:'הוחלפה ב־ค.',noteEn:'Replaced by ค.'},
-  {kind:'consonant',cls:'low',id:'c_khor_rakhang',symbol:'ฆ',name:'ฆอ ระฆัง',localHe:'עיצור kh — kho rakhang',localEn:'kh consonant — kho rakhang',sound:'kh',he:'kh',boardWord:'ระฆัง',boardMeaningHe:'פעמון',boardMeaningEn:'bell',emoji:'🔔',writingHe:'מחלקה נמוכה. kh מנושף. נדיר.',writingEn:'Low class. Aspirated kh. Rare.',noteHe:'תאום נמוך נדיר מסוג kh.',noteEn:'Rare low-class kh.'},
+  {kind:'consonant',cls:'low',id:'c_khor_khon',symbol:'ฅ',name:'ฅอ คน',nameRoman:'kho khon',localHe:'עיצור kh — kho khon (מיושן)',localEn:'kh consonant — kho khon (obsolete)',sound:'kh',he:'kh',boardWord:'คน',boardMeaningHe:'אדם',boardMeaningEn:'person',emoji:'🧑',writingHe:'מחלקה נמוכה. אות מיושנת שאינה בשימוש כיום.',writingEn:'Low class. Obsolete letter, no longer used.',noteHe:'הוחלפה ב־ค.',noteEn:'Replaced by ค.'},
+  {kind:'consonant',cls:'low',id:'c_khor_rakhang',symbol:'ฆ',name:'ฆอ ระฆัง',nameRoman:'kho ra-khang',localHe:'עיצור kh — kho rakhang',localEn:'kh consonant — kho rakhang',sound:'kh',he:'kh',boardWord:'ระฆัง',boardMeaningHe:'פעמון',boardMeaningEn:'bell',emoji:'🔔',writingHe:'מחלקה נמוכה. kh מנושף. נדיר.',writingEn:'Low class. Aspirated kh. Rare.',noteHe:'תאום נמוך נדיר מסוג kh.',noteEn:'Rare low-class kh.'},
   {kind:'consonant',cls:'low',id:'c_chor_chang',symbol:'ช',name:'ชอ ช้าง',localHe:'עיצור ch — cho chang',localEn:'ch consonant — cho chang',sound:'ch',he:'ch',boardWord:'ช้าง',boardMeaningHe:'פיל',boardMeaningEn:'elephant',emoji:'🐘',writingHe:'מחלקה נמוכה. ch מנושף.',writingEn:'Low class. Aspirated ch.',noteHe:'תאום נמוך של ฉ.',noteEn:'Low twin of ฉ.'},
   {kind:'consonant',cls:'low',id:'c_sor_soo',symbol:'ซ',name:'ซอ โซ่',localHe:'עיצור s — so soo',localEn:'s consonant — so soo',sound:'s',he:'s',boardWord:'โซ่',boardMeaningHe:'שרשרת',boardMeaningEn:'chain',emoji:'⛓️',writingHe:'מחלקה נמוכה. צליל s.',writingEn:'Low class. s sound.',noteHe:'תאום נמוך של ส.',noteEn:'Low twin of ส.'},
-  {kind:'consonant',cls:'low',id:'c_chor_choe',symbol:'ฌ',name:'ฌอ เฌอ',localHe:'עיצור ch — cho choe',localEn:'ch consonant — cho choe',sound:'ch',he:'ch',boardWord:'เฌอ',boardMeaningHe:'עץ (לשון גבוהה)',boardMeaningEn:'tree (poetic)',emoji:'🌳',writingHe:'מחלקה נמוכה. ch מנושף. נדיר.',writingEn:'Low class. Aspirated ch. Rare.',noteHe:'נדיר מאוד בשימוש.',noteEn:'Very rare in use.'},
+  {kind:'consonant',cls:'low',id:'c_chor_choe',symbol:'ฌ',name:'ฌอ เฌอ',nameRoman:'cho choe',localHe:'עיצור ch — cho choe',localEn:'ch consonant — cho choe',sound:'ch',he:'ch',boardWord:'เฌอ',boardMeaningHe:'עץ (לשון גבוהה)',boardMeaningEn:'tree (poetic)',emoji:'🌳',writingHe:'מחלקה נמוכה. ch מנושף. נדיר.',writingEn:'Low class. Aspirated ch. Rare.',noteHe:'נדיר מאוד בשימוש.',noteEn:'Very rare in use.'},
   {kind:'consonant',cls:'low',id:'c_yor_ying',symbol:'ญ',name:'ญอ หญิง',localHe:'עיצור y — yo ying',localEn:'y consonant — yo ying',sound:'y',he:'y',boardWord:'หญิง',boardMeaningHe:'אישה',boardMeaningEn:'woman',emoji:'👩',writingHe:'מחלקה נמוכה. y בתחילה; n בסוף הברה.',writingEn:'Low class. y initially; n as a final.',noteHe:'תאום נמוך מסוג y.',noteEn:'Low-class y.'},
-  {kind:'consonant',cls:'low',id:'c_thor_monthoo',symbol:'ฑ',name:'ฑอ มณโฑ',localHe:'עיצור th — tho monthoo',localEn:'th consonant — tho monthoo',sound:'th',he:'th',boardWord:'มณโฑ',boardMeaningHe:'מונתו (דמות ברמאקיאן)',boardMeaningEn:'Montho (Ramakien figure)',emoji:'👸',writingHe:'מחלקה נמוכה. לרוב th, לעיתים d במילים מסוימות.',writingEn:'Low class. Usually th, sometimes d in some words.',noteHe:'נדיר.',noteEn:'Rare.'},
-  {kind:'consonant',cls:'low',id:'c_thor_phuthao',symbol:'ฒ',name:'ฒอ ผู้เฒ่า',localHe:'עיצור th — tho phuthao',localEn:'th consonant — tho phuthao',sound:'th',he:'th',boardWord:'ผู้เฒ่า',boardMeaningHe:'זקן / ישיש',boardMeaningEn:'elder',emoji:'👴',writingHe:'מחלקה נמוכה. th מנושף. נדיר.',writingEn:'Low class. Aspirated th. Rare.',noteHe:'נדיר בשימוש.',noteEn:'Rare in use.'},
-  {kind:'consonant',cls:'low',id:'c_nor_nen',symbol:'ณ',name:'ณอ เณร',localHe:'עיצור n — no nen',localEn:'n consonant — no nen',sound:'n',he:'n',boardWord:'เณร',boardMeaningHe:'נזיר צעיר',boardMeaningEn:'novice monk',emoji:'🧎',writingHe:'מחלקה נמוכה. צליל n. משמש במילים ממקור סנסקריט.',writingEn:'Low class. n sound. Used in Sanskrit-origin words.',noteHe:'תאום נמוך של น.',noteEn:'Low twin of น.'},
+  {kind:'consonant',cls:'low',id:'c_thor_monthoo',symbol:'ฑ',name:'ฑอ มณโฑ',nameRoman:'tho mon-tho',localHe:'עיצור th — tho monthoo',localEn:'th consonant — tho monthoo',sound:'th',he:'th',boardWord:'มณโฑ',boardMeaningHe:'מונתו (דמות ברמאקיאן)',boardMeaningEn:'Montho (Ramakien figure)',emoji:'👸',writingHe:'מחלקה נמוכה. לרוב th, לעיתים d במילים מסוימות.',writingEn:'Low class. Usually th, sometimes d in some words.',noteHe:'נדיר.',noteEn:'Rare.'},
+  {kind:'consonant',cls:'low',id:'c_thor_phuthao',symbol:'ฒ',name:'ฒอ ผู้เฒ่า',nameRoman:'tho phuu-thao',localHe:'עיצור th — tho phuthao',localEn:'th consonant — tho phuthao',sound:'th',he:'th',boardWord:'ผู้เฒ่า',boardMeaningHe:'זקן / ישיש',boardMeaningEn:'elder',emoji:'👴',writingHe:'מחלקה נמוכה. th מנושף. נדיר.',writingEn:'Low class. Aspirated th. Rare.',noteHe:'נדיר בשימוש.',noteEn:'Rare in use.'},
+  {kind:'consonant',cls:'low',id:'c_nor_nen',symbol:'ณ',name:'ณอ เณร',nameRoman:'no nen',localHe:'עיצור n — no nen',localEn:'n consonant — no nen',sound:'n',he:'n',boardWord:'เณร',boardMeaningHe:'נזיר צעיר',boardMeaningEn:'novice monk',emoji:'🧎',writingHe:'מחלקה נמוכה. צליל n. משמש במילים ממקור סנסקריט.',writingEn:'Low class. n sound. Used in Sanskrit-origin words.',noteHe:'תאום נמוך של น.',noteEn:'Low twin of น.'},
   {kind:'consonant',cls:'low',id:'c_thor_thahan',symbol:'ท',name:'ทอ ทหาร',localHe:'עיצור th — tho thahan',localEn:'th consonant — tho thahan',sound:'th',he:'th',boardWord:'ทหาร',boardMeaningHe:'חייל',boardMeaningEn:'soldier',emoji:'💂',writingHe:'מחלקה נמוכה. th מנושף הנפוץ ביותר.',writingEn:'Low class. The most common aspirated th.',noteHe:'ทหาร = חייל.',noteEn:'ทหาร = soldier.'},
-  {kind:'consonant',cls:'low',id:'c_thor_thong',symbol:'ธ',name:'ธอ ธง',localHe:'עיצור th — tho thong',localEn:'th consonant — tho thong',sound:'th',he:'th',boardWord:'ธง',boardMeaningHe:'דגל',boardMeaningEn:'flag',emoji:'🚩',writingHe:'מחלקה נמוכה. th מנושף.',writingEn:'Low class. Aspirated th.',noteHe:'ธง = דגל.',noteEn:'ธง = flag.'},
+  {kind:'consonant',cls:'low',id:'c_thor_thong',symbol:'ธ',name:'ธอ ธง',nameRoman:'tho thong',localHe:'עיצור th — tho thong',localEn:'th consonant — tho thong',sound:'th',he:'th',boardWord:'ธง',boardMeaningHe:'דגל',boardMeaningEn:'flag',emoji:'🚩',writingHe:'מחלקה נמוכה. th מנושף.',writingEn:'Low class. Aspirated th.',noteHe:'ธง = דגל.',noteEn:'ธง = flag.'},
   {kind:'consonant',cls:'low',id:'c_phor_phaan',symbol:'พ',name:'พอ พาน',localHe:'עיצור ph — pho phaan',localEn:'ph consonant — pho phaan',sound:'ph',he:'ph',boardWord:'พาน',boardMeaningHe:'מגש טקסי',boardMeaningEn:'ceremonial tray',emoji:'🍽️',writingHe:'מחלקה נמוכה. ph מנושף (לא f).',writingEn:'Low class. Aspirated ph (not f).',noteHe:'תאום נמוך של ผ.',noteEn:'Low twin of ผ.'},
   {kind:'consonant',cls:'low',id:'c_for_fan',symbol:'ฟ',name:'ฟอ ฟัน',localHe:'עיצור f — fo fan',localEn:'f consonant — fo fan',sound:'f',he:'f',boardWord:'ฟัน',boardMeaningHe:'שן',boardMeaningEn:'tooth',emoji:'🦷',writingHe:'מחלקה נמוכה. צליל f.',writingEn:'Low class. f sound.',noteHe:'תאום נמוך של ฝ.',noteEn:'Low twin of ฝ.'},
-  {kind:'consonant',cls:'low',id:'c_phor_samphao',symbol:'ภ',name:'ภอ สำเภา',localHe:'עיצור ph — pho samphao',localEn:'ph consonant — pho samphao',sound:'ph',he:'ph',boardWord:'สำเภา',boardMeaningHe:'ספינת מפרש',boardMeaningEn:'junk sailboat',emoji:'⛵',writingHe:'מחלקה נמוכה. ph מנושף.',writingEn:'Low class. Aspirated ph.',noteHe:'תאום נמוך מסוג ph.',noteEn:'Low-class ph.'},
+  {kind:'consonant',cls:'low',id:'c_phor_samphao',symbol:'ภ',name:'ภอ สำเภา',nameRoman:'pho sam-phao',localHe:'עיצור ph — pho samphao',localEn:'ph consonant — pho samphao',sound:'ph',he:'ph',boardWord:'สำเภา',boardMeaningHe:'ספינת מפרש',boardMeaningEn:'junk sailboat',emoji:'⛵',writingHe:'מחלקה נמוכה. ph מנושף.',writingEn:'Low class. Aspirated ph.',noteHe:'תאום נמוך מסוג ph.',noteEn:'Low-class ph.'},
   {kind:'consonant',cls:'low',id:'c_ror_ruea',symbol:'ร',name:'รอ เรือ',localHe:'עיצור r — ro ruea',localEn:'r consonant — ro ruea',sound:'r',he:'r',boardWord:'เรือ',boardMeaningHe:'סירה',boardMeaningEn:'boat',emoji:'🚤',writingHe:'מחלקה נמוכה. r מתגלגל; בסוף הברה נשמע n.',writingEn:'Low class. Rolled r; sounds like n as a final.',noteHe:'เรือ = סירה.',noteEn:'เรือ = boat.'},
   {kind:'consonant',cls:'low',id:'c_lor_ling',symbol:'ล',name:'ลอ ลิง',localHe:'עיצור l — lo ling',localEn:'l consonant — lo ling',sound:'l',he:'l',boardWord:'ลิง',boardMeaningHe:'קוף',boardMeaningEn:'monkey',emoji:'🐒',writingHe:'מחלקה נמוכה. l בתחילה; n בסוף הברה.',writingEn:'Low class. l initially; n as a final.',noteHe:'ลิง = קוף.',noteEn:'ลิง = monkey.'},
-  {kind:'consonant',cls:'low',id:'c_lor_chulaa',symbol:'ฬ',name:'ฬอ จุฬา',localHe:'עיצור l — lo chulaa',localEn:'l consonant — lo chulaa',sound:'l',he:'l',boardWord:'จุฬา',boardMeaningHe:'עפיפון מסורתי',boardMeaningEn:'traditional kite',emoji:'🪁',writingHe:'מחלקה נמוכה. צליל l. נדיר.',writingEn:'Low class. l sound. Rare.',noteHe:'תאום נמוך נדיר של ล.',noteEn:'Rare low twin of ล.'},
-  {kind:'consonant',cls:'low',id:'c_hor_nokhuuk',symbol:'ฮ',name:'ฮอ นกฮูก',localHe:'עיצור h — ho nokhuuk',localEn:'h consonant — ho nokhuuk',sound:'h',he:'h',boardWord:'นกฮูก',boardMeaningHe:'ינשוף',boardMeaningEn:'owl',emoji:'🦉',writingHe:'מחלקה נמוכה. צליל h.',writingEn:'Low class. h sound.',noteHe:'תאום נמוך של ห.',noteEn:'Low twin of ห.'}
+  {kind:'consonant',cls:'low',id:'c_lor_chulaa',symbol:'ฬ',name:'ฬอ จุฬา',nameRoman:'lo ju-laa',localHe:'עיצור l — lo chulaa',localEn:'l consonant — lo chulaa',sound:'l',he:'l',boardWord:'จุฬา',boardMeaningHe:'עפיפון מסורתי',boardMeaningEn:'traditional kite',emoji:'🪁',writingHe:'מחלקה נמוכה. צליל l. נדיר.',writingEn:'Low class. l sound. Rare.',noteHe:'תאום נמוך נדיר של ล.',noteEn:'Rare low twin of ล.'},
+  {kind:'consonant',cls:'low',id:'c_hor_nokhuuk',symbol:'ฮ',name:'ฮอ นกฮูก',nameRoman:'ho nok-huuk',localHe:'עיצור h — ho nokhuuk',localEn:'h consonant — ho nokhuuk',sound:'h',he:'h',boardWord:'นกฮูก',boardMeaningHe:'ינשוף',boardMeaningEn:'owl',emoji:'🦉',writingHe:'מחלקה נמוכה. צליל h.',writingEn:'Low class. h sound.',noteHe:'תאום נמוך של ห.',noteEn:'Low twin of ห.'}
 ];
 const BOARD_ITEMS = VOWELS.concat(CONSONANTS);
 
@@ -1817,6 +1817,11 @@ function applyLanguage(){
   if(el('importBackupBtn')) el('importBackupBtn').textContent = t('restoreBackup');
   if(el('lastSyncLabel')) el('lastSyncLabel').textContent = t('lastSync');
   updateSyncHealth();
+  if(el('toneDexToggleLabel')) el('toneDexToggleLabel').textContent = isHebrew() ? 'דקס חוקי הטונים' : 'Tone Rules Dex';
+  if(el('toneDexNote')) el('toneDexNote').textContent = isHebrew()
+    ? 'חוקי הטון של תאית בנגקוקית: מחלקת העיצור, הברה חיה/מתה, סימני טון וחריגי דיבור.'
+    : 'Bangkok Thai tone rules: consonant class, live/dead syllables, tone marks, and spoken exceptions.';
+  if(el('toneDexDrawer') && el('toneDexDrawer').classList.contains('open')) renderToneDex();
   el('qaSummary').textContent = t('qa');
   if(el('syncStatus').textContent === 'מוכן.' || el('syncStatus').textContent === 'Ready.') el('syncStatus').textContent = t('ready');
   setupLevels();
@@ -3083,6 +3088,98 @@ function renderVowelDex(){
     `<span class="dex-cell dex-vowel" data-dex-id="${escapeHtml(v.id)}" title="${escapeHtml(v.name)}">${escapeHtml(v.symbol)}</span>`
   ).join('');
 }
+// M5c: Tone Rules Dex — bilingual reference for how consonant class, live/dead
+// syllables, tone marks, class-hijacking and Bangkok-spoken exceptions set the tone.
+const TONE_LBL = {
+  mid:    {he:'אמצעי',  en:'mid',     mark:'สามัญ (Saman)'},
+  low:    {he:'נמוך',   en:'low',     mark:'เอก (Ek)'},
+  falling:{he:'יורד',   en:'falling', mark:'โท (Tho)'},
+  high:   {he:'גבוה',   en:'high',    mark:'ตรี (Tri)'},
+  rising: {he:'עולה',   en:'rising',  mark:'จัตวา (Chattawa)'},
+};
+function toneName(k){ const x = TONE_LBL[k]; return `${isHebrew() ? x.he : x.en} · ${x.mark}`; }
+const TONE_DEX = [
+  { group:{he:'סוג ההברה', en:'Syllable type'}, cards:[
+    { title:{he:'הברה חיה', en:'Live syllable'}, rules:[
+      {when:{he:'מסתיימת בתנועה ארוכה או בעיצור סונורנטי', en:'Ends in a long vowel or a sonorant final'},
+       note:{he:'עיצורים סופיים: n · m · ng · y · w', en:'Final consonants: n · m · ng · y · w'}} ] },
+    { title:{he:'הברה מתה', en:'Dead syllable'}, rules:[
+      {when:{he:'מסתיימת בעיצור סותם (p · t · k), או בתנועה קצרה בלי עיצור סופי', en:'Ends in a stop (p · t · k), or a short vowel with no final'},
+       note:{he:'תנועה קצרה בלי סוף = עצירה גלוטלית → נחשבת מתה', en:'Short vowel + no final = glottal stop → counts as dead'}} ] },
+  ]},
+  { group:{he:'חוקי בסיס — בלי סימני טון', en:'Base rules — no tone marks'}, cards:[
+    { title:{he:'מחלקה אמצעית', en:'Mid class'}, rules:[
+      {when:{he:'הברה חיה', en:'Live'}, then:'mid'},
+      {when:{he:'הברה מתה (קצרה/ארוכה)', en:'Dead (short/long)'}, then:'low'} ] },
+    { title:{he:'מחלקה גבוהה', en:'High class'}, rules:[
+      {when:{he:'הברה חיה', en:'Live'}, then:'rising'},
+      {when:{he:'הברה מתה (קצרה/ארוכה)', en:'Dead (short/long)'}, then:'low'} ] },
+    { title:{he:'מחלקה נמוכה', en:'Low class'}, rules:[
+      {when:{he:'הברה חיה', en:'Live'}, then:'mid'},
+      {when:{he:'הברה מתה קצרה', en:'Dead + short vowel'}, then:'high'},
+      {when:{he:'הברה מתה ארוכה', en:'Dead + long vowel'}, then:'falling'} ],
+      examples:[{thai:'ลบ', roman:'lop', he:'למחוק / חיסור', en:'erase / subtract'}] },
+  ]},
+  { group:{he:'סימני טון — דורסים את חוקי הבסיס', en:'Tone marks — override the base rules'}, cards:[
+    { title:{he:'מחלקה אמצעית וגבוהה', en:'Mid & high class'}, rules:[
+      {when:{he:'מאי אק (่)', en:'Mai ek (่)'}, then:'low'},
+      {when:{he:'מאי טהו (้)', en:'Mai tho (้)'}, then:'falling'} ],
+      examples:[{thai:'บ่อย', roman:'boi', he:'לעתים קרובות', en:'often'}] },
+    { title:{he:'מחלקה נמוכה', en:'Low class'}, rules:[
+      {when:{he:'מאי אק (่)', en:'Mai ek (่)'}, then:'falling'},
+      {when:{he:'מאי טהו (้)', en:'Mai tho (้)'}, then:'high'} ] },
+  ]},
+  { group:{he:'חטיפת מחלקה', en:'Class hijacking'}, cards:[
+    { title:{he:'ห מובילה אילמת', en:'Silent ห lead'}, rules:[
+      {when:{he:'ห אילמת לפני עיצור יחיד ממחלקה נמוכה', en:'Silent ห before a single low-class consonant'},
+       note:{he:'כל ההברה עוברת לחוקי מחלקה גבוהה', en:'The whole syllable follows High-class rules'}} ],
+      examples:[{thai:'ไหว้', roman:'wai', he:'להצדיע / להשתחוות (וואי)', en:'to wai / greet'}] },
+    { title:{he:'อ מובילה אילמת', en:'Silent อ lead'}, rules:[
+      {when:{he:'อ אילמת לפני ย', en:'Silent อ before ย'},
+       note:{he:'ההברה עוברת לחוקי מחלקה אמצעית', en:'The syllable follows Mid-class rules'}} ],
+      examples:[
+        {thai:'อย่า', roman:'yaa', he:'אל (שלילה)', en:"don't"},
+        {thai:'อยาก', roman:'yaak', he:'לרצות', en:'to want'},
+        {thai:'อยู่', roman:'yuu', he:'להיות (במקום)', en:'to be at'},
+        {thai:'อย่าง', roman:'yaang', he:'סוג / אופן', en:'kind / manner'} ],
+      note:{he:'חל רק על ארבע המילים האלה.', en:'Applies only to these four words.'} },
+  ]},
+  { group:{he:'חריגים בדיבור בנגקוקי', en:'Bangkok spoken exceptions'}, cards:[
+    { title:{he:'และ — "ו / וגם"', en:'และ — "and"'}, rules:[
+      {when:{he:'לפי החוק: מתה קצרה → גבוה', en:'By rule: short dead → high'},
+       note:{he:'בדיבור בנגקוק: אמצעי — התנועה מתארכת', en:'Bangkok speech: mid — the vowel elongates'}} ],
+      examples:[{thai:'และ', roman:'lae', he:'ו / וגם', en:'and'}] },
+    { title:{he:'ไหม — מילת שאלה', en:'ไหม — question particle'}, rules:[
+      {when:{he:'לפי החוק: ห מובילה + חיה → עולה', en:'By rule: ho-hip lead + live → rising'},
+       note:{he:'בדיבור: גבוה — נכתב לרוב มั้ย', en:'Speech: high — often written มั้ย'}} ],
+      examples:[{thai:'ไหม', roman:'mai', he:'מילת שאלה (כן/לא)', en:'yes/no question particle'}] },
+    { title:{he:'ย אילמת בסוף (การันต์ ์)', en:'Silent final ย (karan ์)'}, rules:[
+      {when:{he:'ย סופית עם סימן การัน (์)', en:'Final ย carrying a karan mark (์)'},
+       note:{he:'מתעלמים מה־ย; הטון נקבע לפי העיצור שלפניה', en:'The ย is ignored; tone comes from the preceding consonant'}} ],
+      examples:[{thai:'แพทย์', roman:'phaet', he:'רופא', en:'doctor / physician'}] },
+  ]},
+];
+function renderToneDex(){
+  const box = el('toneDexBody'); if(!box) return;
+  const he = isHebrew();
+  box.innerHTML = TONE_DEX.map(section => {
+    const cards = section.cards.map(card => {
+      const rules = card.rules.map(r => {
+        const then = r.then
+          ? `<span class="tone-then tone-${r.then}">${escapeHtml(toneName(r.then))}</span>`
+          : `<span class="tone-note">${escapeHtml(he ? r.note.he : r.note.en)}</span>`;
+        const when = `<span class="tone-when">${escapeHtml(he ? r.when.he : r.when.en)}</span>`;
+        return `<div class="tone-rule">${when}<span class="tone-arrow">→</span>${then}</div>`;
+      }).join('');
+      const ex = (card.examples || []).map(e =>
+        `<div class="tone-ex">${escapeHtml(e.thai)} <span class="tone-ex-rom">(${escapeHtml(e.roman)})</span> — ${escapeHtml(he ? e.he : e.en)}</div>`
+      ).join('');
+      const note = card.note ? `<div class="tone-cardnote">${escapeHtml(he ? card.note.he : card.note.en)}</div>` : '';
+      return `<div class="tone-card"><div class="tone-card-title">${escapeHtml(he ? card.title.he : card.title.en)}</div>${rules}${ex}${note}</div>`;
+    }).join('');
+    return `<div class="tone-group">${escapeHtml(he ? section.group.he : section.group.en)}</div><div class="tone-cards">${cards}</div>`;
+  }).join('');
+}
 // M5b: hold-to-show info card for a board item (consonant or vowel).
 const CLS_LABEL = { high:{he:'מחלקה גבוהה',en:'High class'}, mid:{he:'מחלקה אמצעית',en:'Mid class'}, low:{he:'מחלקה נמוכה',en:'Low class'} };
 function dexInfoHtml(item){
@@ -3140,6 +3237,14 @@ function setupDexInteractions(){
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     const chev = toggle.querySelector('.dex-chev'); if(chev) chev.textContent = open ? '▲' : '▼';
     if(open) renderVowelDex();
+  });
+  const toneToggle = el('toneDexToggle');
+  if(toneToggle) toneToggle.addEventListener('click', () => {
+    const drawer = el('toneDexDrawer'); if(!drawer) return;
+    const open = drawer.classList.toggle('open');
+    toneToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    const chev = toneToggle.querySelector('.dex-chev'); if(chev) chev.textContent = open ? '▲' : '▼';
+    if(open) renderToneDex();
   });
 }
 function practiceCounts(){
