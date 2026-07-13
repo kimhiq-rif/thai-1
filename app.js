@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.28-skins-m1';
+const APP_VERSION = '1.25.29-skins-m2';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
@@ -1750,7 +1750,10 @@ function currentThemeJuice(){
   const profiles = {
     royal:{palette:['#f9d976','#d49b22','#fff3b0','#7f1d1d'],accent:'#f9d976',sound:'royal'},
     cyber:{palette:['#22d3ee','#38bdf8','#2563eb','#39ff88'],accent:'#22d3ee',sound:'cyber'},
-    midnight:{palette:['#a5b4fc','#818cf8','#e0e7ff','#fbbf24'],accent:'#a5b4fc',sound:'midnight'}
+    midnight:{palette:['#a5b4fc','#818cf8','#e0e7ff','#fbbf24'],accent:'#a5b4fc',sound:'midnight'},
+    coral:{palette:['#67e8f9','#2dd4bf','#fb7185','#f97316'],accent:'#67e8f9',sound:'coral'},
+    festival:{palette:['#fbbf24','#fb7185','#f97316','#fff7ed'],accent:'#fbbf24',sound:'festival'},
+    master:{palette:['#f97316','#ef4444','#facc15','#fff7ed'],accent:'#f97316',sound:'master'}
   };
   const id = currentTheme().id;
   const profile = profiles[id];
@@ -1778,7 +1781,7 @@ function applyTheme(){
   const meta = document.querySelector('meta[name="theme-color"]');
   if(meta){
     const colors = {ocean:'#07111f',notebook:'#f3efe6',neon:'#080014',minimal:'#edf7ff',island:'#062f3a',lotus:'#180f2e',sakura:'#2a1022',mango:'#241706',rainforest:'#06261d',royal:'#1f1604',cyber:'#03051f',midnight:'#050812',coral:'#042832',festival:'#220b13',master:'#17020b'};
-    const lightColors = {royal:'#f7edcf',cyber:'#e7f8fc',midnight:'#eef0ff'};
+    const lightColors = {royal:'#f7edcf',cyber:'#e7f8fc',midnight:'#eef0ff',coral:'#e6fbfb',festival:'#fff3df',master:'#fff0df'};
     const lightColor = state.prefs.skinMode === 'light' ? lightColors[activeTheme.id] : null;
     meta.setAttribute('content', lightColor || colors[activeTheme.id] || '#07111f');
   }
