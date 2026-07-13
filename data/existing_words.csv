@@ -74,6 +74,7 @@
 เปรี้ยว,bpreaw,falling,חמוץ,sour,1
 แปด,bpaed,low,שמונה,eight,1
 ไป,bpai,mid,ללכת / לנסוע,to go,1
+ผม,pom,rising,שיער,Hair,1
 ผอม,pom,rising,רזה,thin,1
 ผัด,pad,low,מוקפץ,stir-fried,1
 ผ้า,paa,falling,בד / בגד,cloth / fabric / clothing,1
@@ -152,40 +153,75 @@
 อิ่ม,im,low,שבע (מאוכל),full from food,1
 อุ่น,un,low,"חמים,חם",warm,1
 เอา,ao,mid,רוצה / לקחת,want / take,1
+กระจก,gra-jok,mid-low,מראה,Mirror,2
 กัน,gan(),mid,אחד את השני / ביחד,each other / together,2
+การสอบ,gaan-sop,mid-low,בחינה / מבחן,Exam,2
 ขับรถ,khap rot,low-high,לנהוג,to drive,2
 ขาย,khaai,rising,למכור,to sell,2
 ไข่,khai,low,ביצה,egg,2
 ครู,khruu,mid,מורה,teacher,2
+คำตอบ,kam-dtop,mid-low,תשובה,Answer,2
 คืน,kheun,mid,לילה,night,2
+แคบ,kaep,falling,צר,Narrow,2
 ใคร,khrai(),mid,מי (או מי זה),who,2
 เงิน,ngern,mid,כסף,money,2
+เงินสด,ngern-sot,mid-low,מזומן,Cash,2
 จด,jot,low,לרשום / לכתוב הערה,to note down,2
+จับ,jap,low,לתפוס,Capture,2
+ชั้นเรียน,chan-rian,high-mid,כיתה,Class,2
 ชั่วโมง,chua-mong,falling-mid,שעה,hour,2
+ชายหาด,chaai-haat,mid-low,חוף,Beach,2
 ดาว,daao,mid,כוכב,star,2
 เด็ก,dek,low,ילד,child,2
 เดือน,duean,mid,חודש,month,2
+ตกลง,dtok-long,low-mid,להסכים,Agree,2
+ตั๋ว,dtua,rising,כרטיס,Ticket,2
+ต่างกัน,dtaang-gan,low-mid,שונה / נבדל,Different,2
+ต่ำ,dtam,low,נמוך,Low,2
+แตก,dtaek,low,להישבר,Break,2
 ถูก,thuuk,low,זול/נכון,cheap/correct,2
+ถูกต้อง,took-dtong,low-falling,נכון,Correct,2
 ทำงาน,tham ngaan,mid-mid,לעבוד,to work,2
+โทร,toh,mid,להתקשר,Call,2
 นก,nok,high,ציפור,bird,2
 นม,nom,mid,חלב,milk,2
+นักท่องเที่ยว,nak-tong-tiaao,high-falling-falling,תייר,Tourist,2
 น้ำ,naam,high,מים,water,2
+น้ำหอม,naam-hom,high-rising,בושם,Perfume,2
+เนื้อวัว,neua-wua,high-mid,בשר בקר,Beef,2
 บอก,bawk,low,להגיד / לספר,to tell / to say,2
 ปาก,bpaak,low,פה,mouth,2
 ปิด,bpit,low,לסגור / כבוי,to close / off,2
 ปี,bpii,mid,שנה,year,2
 เปิด,bpert,low,לפתוח / פתוח,to open / on,2
 ผัก,phak,low,ירק,vegetable,2
+ผ้าเช็ดตัว,paa-chet-dtua,falling-high-mid,מגבת,Towel,2
+ผู้ใหญ่,poo-yai,falling-low,מבוגר,Adult,2
 ฝน,fon,rising,גשם,rain,2
+พิเศษ,pi-seht,high-low,מיוחד,Extraordinary,2
 ไฟ,fai,mid,אש / אור,fire / light,2
 มด,mot,high,נמלה,ant,2
 เมือง,mueang,mid,עיר,city,2
+ยา,yaa,mid,תרופה,Medicine,2
+ยาก,yaak,falling,קשה,Difficult,2
+ยืม,yeum,mid,ללוות,Borrow,2
 รถ,rot,high,רכב / אוטו,car / vehicle,2
+รถบัส,rot-bat,high-high,אוטובוס,Bus,2
 ร้องเพลง,rawng phleng,high-mid,לשיר,to sing,2
+ระหว่าง,ra-waang,high-low,בין (משהו למשהו),Between,2
 รัก,rak,high,לאהוב,to love,2
 ร้าน,raan,high,חנות,shop,2
+เริ่ม,rerm,falling,להתחיל,Begin,2
+เรียก,riak,falling,לקרוא,Call,2
+เรียนรู้,rian-roo,mid-high,ללמוד,Learn,2
+โรงแรม,rong-raem,mid-mid,מלון,Hotel,2
+เลือก,leuak,falling,לבחור,Choose,2
 วัน,wan,mid,יום,day,2
+วันหยุด,wan-yut,mid-low,חופש / יום מנוחה,Vacation,2
 ว่ายน้ำ,waai naam,falling-high,לשחות,to swim,2
+สนามบิน,sa-naam-bin,low-rising-mid,נמל תעופה,Airport,2
+สบู่,sa-boo,low-low,סבון,Soap,2
+สะดวก,sa-duak,low-low,נוח,Convenient,2
 เสื้อ,suea,falling,חולצה,shirt,2
 หก,hok,low,שש,six,2
 หมด,mod(),low,הכל נגמר / אזל,finished / used up,2
@@ -196,37 +232,65 @@
 อยาก,yaak,low,לרצות,to want,2
 ออก,awk,low,לצאת,to exit,2
 อาบ,aap,low,להתרחץ,to bathe,2
+อาบน้ำ,aap-naam,low-high,להתקלח,Shower,2
 อีก,iig(),low,שוב (Again),again / more,2
 กลับบ้าน,glap baan,low-falling,לחזור הביתה,return home,3
 กังวล,gang-won,mid-mid,"מודאג, חרד","worried, anxious",3
 กับข้าว,kap-kaao,low-falling,אוכל (שאוכלים עם אורז),food eaten with rice,3
 กาแฟ,ga-fe,mid-mid,קפה,coffee,3
+การขอโทษ,gaan-kor-toht,mid-rising-falling,התנצלות,Apology,3
+การแข่งขัน,gaan-kaeng-kan,mid-low-rising,תחרות,Competition,3
+การตัดสินใจ,gaan-dtat-sin-jai,mid-low-rising-mid,החלטה,Decision,3
+การศึกษา,gaan-seuk-saa,mid-low-rising,חינוך / השכלה,Education,3
+การสนทนา,gaan-son-ta-naa,mid-rising-high-mid,שיחה,Conversation,3
+การออกเดินทาง,gaan-ook-dern-taang,mid-low-mid-mid,עזיבה / יציאה לדרך,Departure,3
 เก่า,gao,low,ישן,old,3
 เกี่ยวกับ,giao gap,low-low,בקשר ל / על,about / regarding,3
 ขนม,kha-num,low-rising,חטיף,snack,3
 ขยะ,ka-ya,low-low,זבל,trash,3
 ข่าว,khao,low,חדשות,news,3
 ข้าว,khao,falling,אורז,rice,3
+ขึ้นอยู่กับ,keun-yoo-gap,falling-low-low,תלוי ב,Depend,3
+เข้าถึง,khao-teung,falling-rising,גישה / להגיע ל-,Access,3
 ไข่เจียว,kai-jeaw,low-mid,חביתה,omelette,3
 ไข่ดาว,kai-dao,low-mid,ביצת עין,fried egg,3
+ค้นพบ,kon-pop,high-high,לגלות,Discover,3
 ควร,khuan,mid,כדאי / צריך,should,3
+ความกลัว,kwaam-glua,mid-mid,פחד,Fear,3
+ความงาม,kwaam-ngaam,mid-mid,יופי,Beauty,3
+ความตาย,kwaam-dtaai,mid-mid,מוות,Death,3
+ความผิดพลาด,kwaam-pit-plaat,mid-low-falling,טעות / שגיאה,Mistake,3
+คำนวณ,kam-nuan,mid-mid,לחשב,Calculate,3
 คิด,khit,high,לחשוב,to think,3
+คุ้นเคย,kun-koey,high-mid,מוכר / רגיל,Familiar,3
+เครื่องสำอาง,kreuang-sam-aang,falling-rising-mid,איפור / קוסמטיקה,Makeup,3
+โฆษณา,koht-sa-naa,falling-low-mid,פרסומת,Advertisement,3
 ง่วงนอน,nguang-non,falling-mid,ישנוני,sleepy,3
+จบการศึกษา,jop-gaan-seuk-saa,low-mid-low-rising,לסיים לימודים,Graduate,3
 จริง ๆ,jing-jing,mid-mid,באמת,really,3
 จอง,jorng,mid,להזמין מראש,"to book, to reserve",3
+จัดการ,jat-gaan,low-mid,לנהל / לטפל,Manage,3
+จ้าง,jaang,falling,לשכור (עובד),Hire,3
+จ้างงาน,jaang-ngaan,falling-mid,העסקה,Employ,3
 จำ,jam,mid,לזכור,to remember,3
 เจ้าของ,jao-kawng,falling-rising,הבעלים,owner,3
+แจ้ง,jaeng,falling,להודיע,Inform,3
+ใจกว้าง,jai-gwaang,mid-falling,נדיב,Generous,3
 ใจดี,jaai dii,mid-mid,לב טוב,kind,3
+ใจร้อน,jai-ron,mid-high,חסר סבלנות / פזיז,Impatient,3
+ชนิด,cha-nit,high-high,סוג,Genre,3
 ชาวเผ่า,chaao-pao,mid-low,אנשי שבט,tribal people,3
 ชื่อจริง,cheuu-jing,falling-mid,שם אמיתי,real name,3
 ชื่อเล่น,cheuu-len,falling-falling,כינוי,nickname,3
 เช่นกัน,chen-gan,falling-mid,אותו הדבר / גם אני,same / likewise,3
 เชื่อ,chuea,falling,להאמין,to believe,3
 โชคดี,chok-dee,falling-mid,בהצלחה,good luck,3
+ซ่อมแซม,som-saem,falling-mid,לתקן,Fix,3
 ซื้อ,sue,high,לקנות,to buy,3
 ด้วยกัน,duay gan,falling-mid,יחדיו,together,3
 ดีใจ,dii-jai,mid-mid,שמח,happy,3
 ได้,dai,falling,יכול / קיבל / אפשר,can / got / may,3
+ได้รับ,daai-rap,falling-high,לקבל / לזכות,Gain,3
 ตกใจ,dtok-jai,low-mid,מופתע / בהלם,shocked / startled,3
 ต้นไม้,ton mai,falling-high,צמח / עץ,plant / tree,3
 ตลาดนัด,dtalard-nat,low-high,שוק,market,3
@@ -234,11 +298,19 @@
 ตอนนี้,dtawn-nii,mid-high,עכשיו,now,3
 ต่อไป,dtor-bpai,low-mid,הבא,next,3
 ต่อย,dtoy,low,אגרוף / לעקוץ,to punch / to sting,3
+ตัดสิน,dtat-sin,low-rising,לשפוט / להכריע,Judge,3
+ตัวเลือก,dtua-leuak,mid-falling,בחירה / אפשרות,Choice,3
+ตาบอด,dtaa-boot,mid-low,עיוור,Blind,3
 ตีหมา,dtii maa,mid-rising,להרביץ לכלב,hit a dog,3
 ตื่นเต้น,dteun-dten,low-falling,מתרגש,excited,3
+ถอยหลัง,toi-lang,rising-rising,אחורה,Backwards,3
 ถ้า,thaa,falling,אם,if,3
 ทบทวน,tobp-tuan,high-mid,לחזור (על חומר),review,3
+ทำให้แน่ใจ,tam-hai-nae-jai,mid-falling-falling-mid,לוודא,Ensure,3
+ทำอันตราย,tam-an-dta-raai,mid-mid-low-mid,להזיק,Harm,3
+ทิศทาง,tit-taang,high-mid,כיוון,Direction,3
 ที่นี่,tii-nii,falling-falling,פה,here,3
+ที่พัก,tee-pak,falling-high,מקום לינה,Accommodation,3
 ทุกคน,tuk-kon,high-mid,כולם,everyone,3
 ทุกที่,tug tii,high-falling,בכל מקום,everywhere,3
 ทุกวัน,tuk-wan,high-mid,כל יום,every day,3
@@ -246,6 +318,9 @@
 เท่า,tao,falling,שווה / באותה מידה,equal / as much as,3
 เท่ากับ,ta-gab,falling-low,שווה,equals,3
 เท่าไร,tao-rai,falling-mid,כמה (מחיר),how much?,3
+แท้,tae,high,אמיתי / מקורי,Authentic,3
+ธรรมชาติ,tam-ma-chaat,mid-high-falling,טבע,Nature,3
+นักกีฬา,nak-gii-laa,high-mid-mid,ספורטאי,Athlete,3
 นักเรียน,nag-rian,high-mid,סטודנט / תלמיד,student,3
 น่า,naa,falling,ראוי ל־ / נראה כ־,worth / likely / seems,3
 นาที,naa-tii,mid,דקה,minute,3
@@ -253,34 +328,51 @@
 น้ำแข็ง,nam-kaeng,high-rising,קרח,ice,3
 น้ำตก,nam-tok,high-low,מפל,waterfall,3
 น้ำตาล,nam dtaan,high-mid,סוכר,sugar,3
+น้ำท่วม,naam-tuam,high-falling,שיטפון / הצפה,Flood,3
 น้ำมัน,nam-man(-),high-mid,שמן / דלק,oil / fuel,3
 น้ำส้ม,nam-som,high-falling,מיץ תפוזים,orange juice,3
 นิดหน่อย,nit-noi,high-low,קצת,a little,3
 แน่ใจ,nae-jai,falling-mid,"בטוח, משוכנע","sure, certain",3
 แนะนำ,nae-nam,high-mid,"להמליץ, להציג","to recommend, to introduce",3
+บรรยากาศ,ban-yaa-gaat,mid-mid-low,אווירה,Atmosphere,3
+บัญชี,ban-chee,mid-mid,חשבון,Account,3
+บันทึก,ban-teuk,mid-high,יומן / רישום,Journal,3
 บางคน,bang-kon,mid-mid,חלק מהאנשים,some people,3
 บางที,bang-ti,mid-mid,לפעמים,sometimes,3
 บางวัน,baang wan,mid-mid,חלק מהימים,some days,3
 บ้าน,baan,falling,בית,house / home,3
+ประกาศ,bpra-gaat,low-low,להכריז,Announce,3
 ประเทศ,bpra theet,low-falling,מדינה,country,3
+ประเภท,bpra-peht,low-falling,סוג / קטגוריה,Genre,3
 ประมาณ,bpra-maan,low-mid,בערך,about / approximately,3
+ประโยชน์,bpra-yoht,low-low,תועלת / יתרון,Benefit,3
+ปรับปรุง,bprap-bprung,low-mid,לשפר,Enhance,3
+ปรากฏ,bpraa-got,mid-low,להופיע,Appear,3
+ปล่อย,bploi,low,לשחרר / להשיק,Launch,3
 ปลาหมึก,bpla-meuk,mid-low,דיונון,squid,3
 ปัญหา,bpan haa,mid-rising,בעיה,problem,3
 ป่า,bpaa,low,יער,forest,3
 ปากกา,bpaag-gaa,low-mid,עט,pen,3
+เป็นของ,bpen-kong,mid-rising,שייך ל,Belong,3
+โปรด,bproht,low,אנא,Please,3
 ไปเที่ยว,bpai-tiao(-),mid-falling,לטייל / להסתובב בכיף,go out / travel for fun,3
 ไปแล้ว,bpai-leaw,mid-high,כבר הלכתי / הלכתי,already went,3
+ผิวหนัง,piu-nang,rising-rising,עור (של גוף),Skin,3
 ผู้ชาย,puu-chaai,falling-mid,גבר / זכר,man / male,3
 ผู้หญิง,puu-ying,falling-rising,אישה / נקבה,woman / female,3
 ฝึก,feuk,low,"להתאמן, לתרגל","to practice, to train",3
+พรม,prom,mid,שטיח,Carpet,3
+พร้อมใช้งาน,prom-chai-ngaan,high-high-mid,זמין / מוכן לשימוש,Available,3
 พวกเขา,phuak khao,falling-rising,הם,they / them,3
 พ่อแม่,poh-mae,falling-falling,הורים,parents,3
 พักผ่อน,pag-pawn(-),high-low,לנוח,rest,3
+เพดาน,peh-daan,mid-mid,תקרה,Ceiling,3
 เพราะ,phraw,high,כי / בגלל,because,3
 เพื่อ,phuea,falling,כדי / בשביל,in order to / for,3
 ภาษา,phaa saa,mid-rising,שפה,language,3
 ภูเขา,puu-kao,mid-rising,הר,mountain,3
 ภูมิใจ,pum-jai,mid-mid,גאה,proud,3
+มหาสมุทร,ma-haa-sa-mut,high-rising-low-low,אוקיינוס,Ocean,3
 มะพร้าว,ma-prao,high-high,קוקוס,coconut,3
 มะม่วง,ma-muang,high-falling,מנגו,mango,3
 มั่นใจ,man-jai,falling-mid,בטוח בעצמי,confident,3
@@ -297,26 +389,37 @@
 รถไฟ,rot-fai,high-mid,רכבת,train,3
 รถเมล์,rot-mae,high-mid,אוטובוס,bus,3
 ร้องไห้,rong-hai,high-falling,לבכות,cry,3
+ระมัดระวัง,ra-mat-ra-wang,high-high-high-mid,זהיר,Careful,3
 รักษา,rak-saa,high-rising,"לרפא, לטפל","to treat, to cure",3
 รำคาญ,ram-kaan,mid-mid,מעצבן,annoyed / annoying,3
 รู้,ruu,high,לדעת,to know,3
 รู้จัก,ruu-jag,high-low,להכיר (אנשים/מקומות),know / be acquainted with,3
 รู้สึก,ruu suek,high-low,להרגיש,to feel,3
+เร่งรีบ,reng-reep,falling-falling,למהר,Hurry,3
 เรือบิน,reua-bin,mid-mid,מטוס,airplane,3
 โรงพัก,rong pag,mid-high,תחנת משטרה,police station,3
 โรงเรียน,rong-rian,mid-mid,בית ספר,school,3
+ล้มเหลว,lom-leo,high-rising,להיכשל,Fail,3
 ลาก่อน,la-gon,mid-low,להתראות,goodbye,3
+ลำบาก,lam-baak,mid-low,קשה / מסובך,Difficult,3
 ลืม,luem,mid,לשכוח,to forget,3
+ลูกจ้าง,look-jaang,falling-falling,שכיר / עובד,Employee,3
+แลกเปลี่ยน,laek-bplian,falling-low,להחליף,Exchange,3
 วันเกิด,wan-geut(-),mid-low,יום הולדת,birthday,3
 เวลา,wee laa,mid-mid,זמן,time,3
 สงสัย,song-sai,rising-rising,"לתהות, לחשוד","to wonder, to suspect",3
+ส่งเสียงดัง,song-siang-dang,low-rising-mid,להרעיש,Loud,3
 สนใจ,son jai,rising-mid,להתעניין,to be interested,3
 สมอง,sa-mawng,low-rising,מוח,brain,3
 สมัคร,sa-mak,low-low,"להירשם, להגיש מועמדות","to apply, to sign up",3
+สะดวกสบาย,sa-duak-sa-baai,low-low-low-mid,נוח / נעים,Comfortable,3
+สามารถ,saa-maat,rising-falling,מסוגל / יכול,Able,3
 สิบเอ็ด,sip-et,low-low,אחת עשרה,eleven,3
+เสนอ,sa-ner,low-rising,להציע,Offer,3
 เสียใจ,sia-jai,rising-mid,עצוב,sad / sorry,3
 เสียดาย,sia-daai,rising-mid,חבל / בזבוז,what a pity / waste,3
 หน้าต่าง,naa-dtang,falling-low,חלון,window,3
+หน้าที่,naa-tee,falling-falling,תפקיד / חובה,Duty,3
 หน้าฝน,naa-fon,falling-rising,עונת הגשמים,rainy season,3
 หน้าร้อน,naa-rawn,falling-high,העונה החמה,hot season,3
 หน้าหนาว,naa-nao,falling-rising,העונה הקרה,cold season,3
@@ -329,6 +432,7 @@
 เหงื่อออก,ngeua-awk,low-low,להזיע,sweat / perspire,3
 ให้,hai,falling,לתת / בשביל,to give / for,3
 ใหม่,mai,low,חדש,new,3
+อย่างง่ายดาย,yaang-ngaai-daai,low-falling-mid,בקלות,Easily,3
 อย่ารอ,yaa ror,low-mid,אל תחכה,do not wait,3
 อร่อย,a-roi,mid-low,טעים,delicious,3
 อ้วน,u-an,falling,שמן (גוף),fat / overweight,3
@@ -338,8 +442,19 @@
 อ่าน,aan,low,לקרוא,to read,3
 อารมณ์,aa rom,mid-mid,מצב רוח / רגש,mood / emotion,3
 อิจฉา,it-chaa,low-rising,לקנא,envy / jealous,3
+กล่าวโทษ,glaao-toht,low-falling,להאשים,Blame,4
+การเฉลิมฉลอง,gaan-cha-lerm-cha-long,mid-low-rising-low-rising,חגיגה,Celebration,4
+การตัดสิน,gaan-dtat-sin,mid-low-rising,החלטה / שפיטה,Judgement,4
+การติดเชื้อ,gaan-dtit-cheua,mid-low-high,זיהום,Infection,4
+การแนบ,gaan-naep,mid-falling,קובץ מצורף / צירוף,Attachment,4
+การผจญภัย,gaan-pa-jon-pai,mid-low-mid-mid,הרפתקה,Adventure,4
 การเมือง,gaan mueang,mid-mid,פוליטיקה,politics,4
+การยืนยัน,gaan-yeun-yan,mid-mid-mid,אישור / אימות,Affirmation,4
+การสื่อสาร,gaan-seu-saan,mid-low-rising,תקשורת,Communication,4
+การสู้รบ,gaan-soo-rop,mid-falling-high,קרב / לחימה,Battle,4
+การันตี,gaa-ran-dtee,mid-mid-mid,אחריות / להבטיח,Guarantee,4
 ขนมปัง,ka-nom-bpang,low-rising-mid,לחם,bread,4
+ข้อโต้แย้ง,kor-dtoh-yaeng,falling-falling-high,טיעון / ויכוח,Argument,4
 ข้อมูล,khor-muun,falling-mid,"מידע, נתונים","information, data",4
 ข้าม,khaam,falling,לדלג / לחצות,to skip / to cross,4
 ข้าวเหนียวมะม่วง,kaaw-niaw ma-muang,falling-rising-high-falling,סטיקי רייס מנגו,mango sticky rice,4
@@ -348,7 +463,14 @@
 แข็งแรง,khaeng-raeng,rising-mid,"חזק, בריא","strong, healthy",4
 ความคิดเห็น,khwaam-khit-hen,mid-high-rising,דעה,opinion,4
 ความจริง,khwaam jing,mid-mid,אמת,truth,4
+ความจุ,kwaam-ju,mid-low,קיבולת,Capacity,4
+ความท้าทาย,kwaam-taa-taai,mid-high-mid,אתגר,Challenge,4
+ความบันเทิง,kwaam-ban-terng,mid-mid-mid,בידור,Amusement,4
+ความพยายาม,kwaam-pa-yaa-yaam,mid-high-mid-mid,מאמץ,Effort,4
 ความรู้สึก,khwaam-ruu-seuk,mid-high-low,"הרגשה, תחושה",feeling,4
+ความสงบ,kwaam-sa-ngop,mid-low-low,שלווה / רוגע,Calm,4
+ความสมดุล,kwaam-som-dun,mid-rising-mid,איזון,Balance,4
+ความสยองขวัญ,kwaam-sa-yong-kwan,mid-low-rising-rising,אימה,Horror,4
 ความหมาย,khwaam maai,mid-rising,משמעות,meaning,4
 ความอดทน,kwaam-od-ton(--),mid-low-mid,סבלנות,patience,4
 เครียด,khriat,falling,"לחוץ, במתח",stressed,4
@@ -356,8 +478,18 @@
 จักรยาน,jak-kra-yaan,low-low-mid,אופניים,bicycle,4
 จำเป็น,jam bpen,mid-mid,הכרחי / נחוץ,necessary,4
 ฉันชื่อ…,chan cheuu (name),rising-falling,השם שלי הוא...,My name is… (female),4
+เฉลิมฉลอง,cha-lerm-cha-long,low-rising-low-rising,לחגוג,Celebrate,4
+ชายแดน,chaai-daen,mid-mid,גבול,Border,4
+ชื่นชม,cheun-chom,falling-mid,להעריץ / לשבח,Admire,4
+เชื่อมโยง,cheuam-yong,falling-mid,לקשר,Associate,4
+ดั้งเดิม,dang-derm,falling-mid,מקורי / מסורתי,Original,4
 ดังนั้น,dang-nan,mid-high,"לפיכך, אם כך","therefore, thus",4
+ดึงดูด,deung-doot,mid-low,למשוך (תשומת לב),Attract,4
+ดูดซึม,doot-seum,low-mid,לספוג,Absorb,4
 เดิน,doen,mid,ללכת / לצעוד,to walk,4
+โดยทันทีทันใด,dooy-tan-tee-tan-dai,mid-mid-mid-mid-mid,באופן מיידי,Immediately,4
+โดยประมาณ,dooy-bpra-maan,mid-low-mid,בערך,Approximate,4
+ต้นฉบับ,dton-cha-bap,falling-low-low,מקור (טקסט),Original,4
 ตอนกลางคืน,dtawn-klang-keun,mid-mid-mid,לילה,night,4
 ตอนเช้า,dton-chao,mid-high,בבוקר,in the morning,4
 ตอนดึก,dton-deug,mid-low,מאוחר בלילה,late at night,4
@@ -366,22 +498,30 @@
 ตอนบ่าย,dton-baai,mid-low,אחר הצהריים,in the afternoon,4
 ตอนเย็น,dton-yen,mid-mid,בערב,in the evening,4
 ตอนสาย,dton-saai,mid-rising,מאוחר בבוקר,late morning,4
+ต่อรอง,dtor-rong,low-mid,להתמקח,Bargain,4
 ตัดสินใจ,dtat-sin-jai,low-rising-mid,להחליט,to decide,4
+ตัวตน,dtua-dton,mid-mid,זהות / עצמי,Identity,4
 ตัวอย่าง,dtua yaang,mid-low,דוגמה,example,4
 ต่างประเทศ,dtaang-bpra-theet,low-low-falling,חוץ לארץ,"abroad, foreign country",4
 แตกต่าง,dtaek-dtaang,low-low,"שונה, להיבדל","different, to differ",4
 แต่เช้า,dtae-chao,low-high,לפנות בוקר / מוקדם בבוקר,early morning / at dawn,4
+ถูกกฎหมาย,took-got-maai,low-low-rising,חוקי,Legal,4
+ที่เป็นประโยชน์,tee-bpen-bpra-yoht,falling-mid-low-low,מועיל,Advantageous,4
 เที่ยวบิน,thiao-bin,falling-mid,טיסה,flight,4
 นั่ง,nung / nang,falling,לשבת,to sit,4
 น่าเข้าใจ,naa-kao-jai,falling-falling-mid,מובן,understandable,4
 นานๆ ที,naan naan thii,mid-mid-mid,פעם ב... / לעיתים רחוקות,once in a while,4
 นามสกุล,naam-sa-kun,mid-low-mid,שם משפחה,surname,4
 น่าสงสาร,naa-song-saan,falling-rising-rising,מסכן,pitiful / poor thing,4
+น่าหลงใหล,naa-long-lai,falling-rising-rising,מרתק,Fascinating,4
+น่าอับอาย,naa-ap-aai,falling-low-mid,מביך,Embarrassing,4
 ในหลวง,nai-lu-ang,mid-rising,המלך,king,4
+บรรลุ,ban-lu,mid-high,להשיג,Attain,4
 บ่อยๆ,boi boi,low-low,לעיתים קרובות,often,4
 บางครั้ง,baang krang,mid-high,לפעמים,sometimes,4
 ปกติ,bpok ga dti,low-low-low,בדרך כלל / רגיל,usually / normal,4
 ประชุม,bpra-chum,low-mid,"ישיבה, להתכנס","meeting, to meet",4
+ประพฤติตัว,bpra-preut-dtua,low-high-mid,להתנהג,Behave,4
 ประสบการณ์,bpra-sop-gaan,low-low-mid,ניסיון,experience,4
 ปลอดภัย,bplawt phai,low-mid,בטוח,safe,4
 ปัจจุบัน,bpat ju ban,low-low-mid,הווה / כיום,present (time),4
@@ -395,40 +535,67 @@
 ผมอยู่…,pom yuu (place),rising-low,אני גר ב...,I live/stay in…,4
 ผลไม้,pon-la-mai,rising-high-high,פירות,fruit,4
 ผิดหวัง,phit-wang,low-rising,מאוכזב,disappointed,4
+แผ่นดินไหว,paen-din-wai,low-mid-rising,רעידת אדמה,Earthquake,4
 แผนที่,phaen-thee,rising-falling,מפה,map,4
+ฝุ่นผง,fun-pong,low-rising,אבק,Dust,4
+พนัน,pa-nan,high-mid,להמר,Bet,4
 พยายาม,pha-yaa-yaam,high-mid-mid,"להשתדל, לנסות","to try, to make an effort",4
 พระเจ้าอยู่หัว,pra-jao-yuu-hua,high-falling-low-rising,המלך (תואר רשמי),king (formal title),4
 พรุ่งนี้,phrung nii,falling-high,מחר,tomorrow,4
+พฤติกรรม,preut-dti-gam,high-low-mid,התנהגות,Behavior,4
 พัฒนา,phat tha naa,high-high-mid,לפתח,to develop,4
+พาดหัวข่าว,paat-hua-kaao,falling-rising-low,כותרת (בחדשות),Headline,4
+พิธีการ,pi-tee-gaan,high-mid-mid,טקס,Ceremony,4
 พูดเล่น,phut len,falling-falling,סתם צוחק / אומר בצחוק,just joking / saying jokingly,4
 เพราะฉะนั้น,phror-cha-nan,high-low-high,"לכן, משום כך",therefore,4
 ภาษาไทย,phaa saa thai,mid-rising-mid,השפה התאילנדית,Thai language,4
 มอเตอร์ไซค์,mo-dtu-sai,mid-falling-mid,אופנוע,motorbike,4
+มะเร็ง,ma-reng,high-mid,סרטן (מחלה),Cancer,4
+มารยาท,maa-ra-yaat,mid-high-falling,נימוסים,Manner,4
+มุ่งมั่น,mung-man,falling-falling,נחוש / ממוקד,Concentrate,4
 เมื่อวาน,muea waan,falling-mid,אתמול,yesterday,4
+แม่นยำ,maen-yam,falling-mid,מדויק,Accurate,4
 ไม่ค่อย,mai khoi,falling-falling,לא כל כך / לא לעיתים קרובות,not really / not often,4
 ไม่เคย,mai koei,falling-mid,אף פעם לא,never,4
+ไม่ระบุชื่อ,mai-ra-bu-cheu,falling-high-low-falling,אנונימי,Anonymous,4
 ไม่สบาย,mai sa-baai,falling-low-mid,לא מרגיש טוב,not feeling well,4
 ไม่เห็นด้วย,mai-hen-duai,falling-rising-falling,לא מסכים,disagree,4
 ยกเลิก,yok-lerk,high-falling,לבטל,to cancel,4
 ยังไม่รู้,yang mai ruu,mid-falling-high,עדיין לא יודע,do not know yet,4
+ยินยอม,yin-yom,mid-mid,להסכים / לאשר,Grant,4
+ยืดหยุ่น,yeut-yun,falling-low,גמיש,Flexible,4
 ยืน,yuen,mid,לעמוד,to stand,4
+ยุติธรรม,yut-dti-tam,high-low-mid,הוגן / צודק,Fair,4
+รวบรวม,ruap-ruam,falling-mid,לאסוף / לקבץ,Gather,4
+ร้องเรียน,rong-rian,high-mid,להתלונן,Complain,4
+รับประกัน,rap-bpra-gan,high-low-mid,להבטיח / אחריות,Guarantee,4
 รับผิดชอบ,rap phit chawp,high-low-falling,אחראי / לקחת אחריות,responsible,4
+รับมือ,rap-meu,high-mid,להתמודד עם / לטפל ב-,Handle,4
 ร้านอาหาร,raan-aa-haan,falling-mid-rising,מסעדה,restaurant,4
+แรงงาน,raeng-ngaan,mid-mid,כוח אדם / פועלים,Labor,4
 ล้อเล่น,law len,high-falling,מתבדח / עובד עליך,joking / teasing,4
+ละทิ้ง,la-ting,high-high,לנטוש,Abandon,4
+ลังเล,lang-leh,mid-mid,להסס,Hesitate,4
 แล้วแต่คุณ,laew-dtae kun,high-low-mid,תלוי בך,up to you,4
 วัฒนธรรม,wat tha na tham,high-high-mid,תרבות,culture,4
 วันนี้,wan nii,mid-high,היום,today,4
+วัสดุ,wat-sa-du,high-low-low,חומר,Material,4
 วิ่ง,wing,falling,לרוץ,to run,4
 สบายดี,sa-baai dii,low-mid-mid,הכל טוב / בסדר,I am fine / okay,4
+สภาพแวดล้อม,sa-paap-waet-lom,low-falling-falling-high,סביבה,Environment,4
 สมองไม่ทำงาน,sa-mawng mai tam-ngaan,low-rising-falling-mid-mid,המוח לא עובד,brain not working,4
 สมาชิก,sa-ma-chik(--),low-mid-high,חבר (במועדון / קבוצה),member,4
+สะสม,sa-som,low-rising,לצבור,Accumulate,4
 สังคม,sang khom,rising-mid,חברה,society,4
 สับปะรด,sup-pa-rot,low-low-high,אננס,pineapple,4
 สำคัญ,sam khan,rising-mid,חשוב,important,4
 สิ่งแวดล้อม,sing waet lawm,low-falling-high,סביבה,environment,4
 สุขภาพ,suk-kha-phaap,low-low-falling,בריאות,health,4
+สูญหาย,soon-haai,rising-rising,אבוד / נעדר,Lost,4
 เส้นทาง,sen-thaang,falling-mid,"מסלול, נתיב","route, path",4
 เสมอๆ,sa mer sa mer,low-rising-low-rising,תמיד,always,4
+เสริม,serm,rising,לחזק / להוסיף,Enhance,4
+หนี้สิน,nee-sin,falling-rising,חובות,Debt,4
 หยอก,yawk,low,להקניט בצחוק / שובבות,to tease playfully,4
 เหตุผล,heet phon,low-rising,סיבה / היגיון,reason,4
 เห็นด้วย,hen duai,rising-falling,להסכים / מסכים,to agree / agree,4
@@ -439,17 +606,33 @@
 อธิบาย,a-thi-baai,low-high-mid,להסביר,to explain,4
 อนาคต,a naa khot,low-mid-high,עתיד,future,4
 ออกกำลังกาย,ork-gam-lang-gaai,low-mid-mid-mid,להתעמל,to exercise,4
+อ่อนโยน,on-yohn,low-mid,עדין,Gentle,4
+อ้อนวอน,on-won,falling-mid,להתחנן,Beg,4
 อันตราย,an ta raai,mid-low-mid,מסוכן,dangerous,4
+อารมณ์ขัน,aa-rom-kan,mid-mid-rising,חוש הומור,Humor,4
 อาหารทะเล,aa-haan-ta-lay(()---),mid-rising-high-mid,פירות ים,seafood,4
+อึดอัด,eut-at,low-low,לא נוח / מעיק,Awkward,4
 เอาอันนี้,ao-an-nii,mid-mid-high,רוצה את זה,want this one,4
 โอกาส,oo gaat,mid-low,הזדמנות,opportunity,4
+การตระหนัก,gaan-dtra-nak,mid-low-low,מודעות,Awareness,5
+การนับถือ,gaan-nap-teu,mid-high-rising,הערכה / כבוד,Appreciation,5
+การนำมาใช้,gaan-nam-maa-chai,mid-mid-mid-high,אימוץ / שימוש,Adoption,5
+การเน้นย้ำ,gaan-nen-yam,mid-high-high,דגש,Emphasis,5
+การบริหาร,gaan-bor-ri-haan,mid-low-high-rising,מנהל / ניהול,Administration,5
+การประมูล,gaan-bpra-moon,mid-low-mid,מכירה פומבית,Auction,5
 กินข้าว,gin khao,mid-falling,לאכול / לאכול אורז,to eat / eat rice,5
 กินอะไร,gin a-rai?,mid-mid-mid,מה אתה אוכל?,What are you eating?,5
 กี่โมง,gii mong?,low-mid,איזו שעה?,what time?,5
+เกษตรกรรม,ga-seht-dtra-gam,low-low-low-mid,חקלאות,Agriculture,5
 แก้ไข,gae-khai,falling-rising,לתקן,"to fix, to correct",5
 ขอโทษ,kho thot,rising-falling,סליחה,sorry,5
 ขอบคุณ,khop khun,low-mid,תודה,thank you,5
+ข้อมูลเชิงลึก,kor-moon-cherng-leuk,falling-mid-mid-high,תובנה / מידע מעמיק,Insight,5
 เข้าใจไหม,kao-jai mai?,falling-mid-rising,מבין?,Do you understand?,5
+ความแม่นยำ,kwaam-maen-yam,mid-falling-mid,דיוק,Accuracy,5
+ความยุติธรรม,kwaam-yut-dti-tam,mid-high-low-mid,צדק,Justice,5
+ความศรัทธา,kwaam-sat-taa,mid-low-mid,אמונה,Faith,5
+คาดการณ์,kaat-gaan,falling-mid,לחזות / לצפות,Anticipate,5
 คิดว่า,khit waa,high-falling,לחשוב ש...,to think that...,5
 คุณคิดอะไร,kun kid a-rai?,mid-high-low-mid,על מה אתה חושב?,What are you thinking?,5
 คุณชื่ออะไร,kun cheuu a-rai?,mid-falling-mid,מה השם שלך?,What is your name?,5
@@ -460,23 +643,39 @@
 เจอกัน,jer gan,mid-mid,נתראה,see you,5
 ชัดเจน,chat-jen,high-mid,ברור,"clear, obvious",5
 ใช่ไหม,chai mai?,falling-rising,נכון?,right? / correct?,5
+ดาราศาสตร์,daa-raa-saat,mid-mid-low,אסטרונומיה,Astronomy,5
 ดีใจที่ได้เจอ,dii-jai tii dai jer,mid-mid-falling-falling-mid,נחמד לראותך,nice to see you,5
 ดื่มน้ำ,duem naam,low-high,לשתות מים,to drink water,5
 ได้ยินว่า,daai yin waa,falling-mid-falling,לשמוע ש...,to hear that...,5
 ตอนผมเด็ก ๆ,dton phom dek dek,mid-rising-low-low,כשהייתי ילד,when I was a child,5
+ถกเถียง,tok-tiang,low-rising,להתווכח / לדון,Debate,5
+ทะเยอทะยาน,ta-yer-ta-yaan,high-mid-high-mid,שאפתן,Ambitious,5
 ทำไม,tam-mai?,mid-mid,למה?,why?,5
 ที่ไหน,tii-nai?,falling-rising,איפה?,where?,5
+นามธรรม,naam-ma-tam,mid-high-mid,מופשט,Abstract,5
+บรรณาธิการ,ban-naa-ti-gaan,mid-mid-high-mid,עורך (טקסט),Editor,5
+บอกเป็นนัย,bok-bpen-nai,low-mid-mid,לרמוז,Imply,5
 บอกว่า,bok waa,low-falling,לספר / להגיד ש...,to tell / say that...,5
+บำรุงรักษา,bam-rung-rak-saa,mid-mid-low-rising,לתחזק,Maintain,5
 ปฏิเสธ,bpa-dti-seet,low-low-low,"לסרב, להכחיש","to refuse, to deny",5
+ประทาน,bpra-taan,low-mid,להעניק (רשמי/מלוכה),Grant,5
 ไปไหน,bpai nai,mid-rising,לאן הולכים?,Where are you going?,5
 ผมเข้าใจ,phom khao jai,rising-falling-mid,אני מבין,I understand,5
 ผ่าตัด,phaa-dtat,low-low,"ניתוח, לנתח","surgery, to operate",5
+ผู้บริหาร,poo-bor-ri-haan,falling-low-high-rising,מנהל בכיר,Administrator,5
+ผู้สนับสนุน,poo-sa-nap-sa-nun,falling-low-high-low-rising,תומך,Advocate,5
+ผู้อพยพ,poo-op-pa-yop,falling-low-high-high,מהגר / פליט,Immigrant,5
+พฤติกรรมรุนแรง,preut-dti-gam-run-raeng,high-low-mid-mid-mid,התנהגות אלימה,Aggression,5
 พอไหม,phaw mai?,mid-rising,זה מספיק?,Is it enough?,5
 พูดช้าๆ,phut chaa chaa,falling-high-high,דבר/י לאט,Speak slowly,5
 พูดไทยได้ไหม,puud Thai dai mai?,falling-mid-falling-rising,אתה יכול לדבר תאילנדית?,Can you speak Thai?,5
 พูดว่า,phuut waa,falling-falling,לומר ש...,to say that...,5
 พูดอีกที,phut iik thii,falling-low-mid,תגיד/י שוב פעם,Say it again,5
 เพราะว่า,phroh waa,high-falling,בגלל ש... / כי,because,5
+เพิกเฉย,perk-choey,falling-rising,להתעלם,Ignore,5
+ภาวะแพ้,paa-wa-paae,mid-high-high,אלרגיה,Allergy,5
+มีประสิทธิภาพ,mee-bpra-sit-ti-paap,mid-low-low-high-falling,יעיל,Effective,5
+เมินเฉย,mern-choey,mid-rising,להתעלם (בהפגנתיות),Ignore,5
 เมื่อไร,meua-rai?,falling-mid,מתי?,when?,5
 ไม่เก็ทอะ,mai get a,falling-low-low,אני לא מבין / לא קולט,I do not get it,5
 ไม่เข้าใจ,mai khao jai,falling-falling-mid,לא מבין,I do not understand,5
@@ -491,19 +690,28 @@
 ยอมรับ,yorm-rap,mid-high,"לקבל, להודות ב-","to accept, to admit",5
 ยังไง,yang-ngai?,mid-mid,איך?,how?,5
 ยินดีที่ได้รู้จัก,yin-dee tii dai ruu-jak,mid-mid-falling-falling-high-low,נעים להכיר,nice to meet you,5
+ยืนกราน,yeun-graan,mid-mid,להתעקש / לטעון בתוקף,Assert,5
+รัฐมนตรี,rat-ta-mon-dtree,high-low-mid-mid,שר (בממשלה),Minister,5
 ราคาเท่าไหร่,raa khaa thao rai,mid-mid-falling-low,כמה זה עולה?,How much is it?,5
 รู้สึกว่า,ruu seuk waa,high-low-falling,להרגיש ש...,to feel that...,5
 รู้ไหม,ruu mai?,high-rising,אתה יודע?,Do you know?,5
 เรียกว่าอะไร,riag waa a-rai,falling-mid-mid,איך קוראים ל...?,What is it called?,5
+ลงคะแนนเลือก,long-ka-naen-leuak,mid-high-mid-falling,להצביע,Ballot,5
 ลาออก,laa-ork,mid-low,להתפטר,"to resign, to quit",5
+เลินเล่อ,lern-ler,mid-falling,רשלני,Careless,5
 แล้วไง,laew ngai,high-mid,אז מה?,so what?,5
 ว่าไง,waa ngai,falling-mid,מה קורה? / מה נשמע?,What’s up?,5
 สบายดีไหม,sa-baai dii mai?,low-mid-mid-rising,מה שלומך?,How are you?,5
 สวัสดี,sa wat dii,low-low-mid,שלום,hello,5
 สาเหตุ,saa-heet,rising-low,"גורם, סיבה",cause,5
+ให้ความสำคัญ,hai-kwaam-sam-kan,falling-mid-rising-mid,לתת חשיבות / להדגיש,Emphasize,5
+อภิปราย,a-pi-bpraai,low-high-mid,לדון / לנהל דיון,Debate,5
+อย่างแม่นยำ,yaang-maen-yam,low-falling-mid,במדויק,Accurately,5
 อร่อยมาก,a roi maak,low-low-falling,טעים מאוד,very delicious,5
 อะไร,a-rai,mid,מה?,what,5
+อัตลักษณ์,at-dta-lak,low-low-low,זהות,Identity,5
 อันนี้อะไร,an nii a rai,mid-high-low-mid,מה זה?,What is this?,5
+อุดมคติ,u-dom-ka-dti,low-mid-high-low,אידיאל,Ideal,5
 ความสามารถ,khwaam-saa-maat,mid-rising-falling,"יכולת, כישרון","ability, capability",6
 ความสำเร็จ,khwaam-sam-ret,mid-rising-low,הצלחה,success,6
 โครงการ,khroong-gaan,mid-mid,"פרויקט, תוכנית","project, program",6
@@ -515,7 +723,9 @@
 ประทับใจ,bpra-thap-jai,low-high-mid,"מתרשם, מוקסם",impressed,6
 ปรับตัว,bprap-dtua,low-mid,להסתגל,to adapt,6
 ผลกระทบ,phon-gra-thop,rising-low-high,"השפעה, השלכה","impact, effect",6
+พหุนาม,pa-hu-naam,high-low-mid,אלגברה (פולינום),Algebra,6
 เศรษฐกิจ,seet-tha-git,low-low-low,כלכלה,economy,6
 สัมภาษณ์,sam-phaat,rising-falling,"ראיון, לראיין","interview, to interview",6
 เหมาะสม,mor-som,low-rising,"מתאים, הולם","appropriate, suitable",6
 อย่างไรก็ตาม,yaang-rai-gor-dtaam,low-mid-falling-mid,"אולם, עם זאת","however, nevertheless",6
+อัตชีวประวัติ,at-dta-chee-wa-bpra-wat,low-low-mid-high-low-low,אוטוביוגרפיה,Autobiography,6
