@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.27-tone-dex';
+const APP_VERSION = '1.25.28-skins-m1';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
@@ -1535,6 +1535,7 @@ let voiceCheerAudio = null;
 let voiceCheerAudioIndex = 0;
 let dailyBonusModalTimer = null;
 let dailyBonusTickTimer = null;
+let lastFxTheme = null;
 let drawing = false;
 let lastPoint = null;
 // M4: capture strokes (CSS coords) for Ink Replay + GIF export.
@@ -1575,7 +1576,7 @@ function challengeDurationText(cfg){
   return isHebrew() ? `${mins} דק׳` : `${mins} min`;
 }
 function defaultState(){
-  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false,bonus:{status:'idle',startedAt:null,durationMs:DAILY_BONUS_DURATION_MS,total:0,correct:0,level12:0,target:DAILY_BONUS_TARGET,requiredAccuracy:DAILY_BONUS_REQUIRED_ACCURACY,requiredLevel12:DAILY_BONUS_REQUIRED_LEVEL12,reward:DAILY_BONUS_REWARD,awarded:false,warned15:false,warned5:false,boostNotice:false},completed:{}}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false,tokens:{hint:0,freeze:0,boost:0},exams:{},dexClaimed:false}, achievements:{}, penSize:5, penMode:'regular', syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean', prefs:{sfx:true} };
+  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false,bonus:{status:'idle',startedAt:null,durationMs:DAILY_BONUS_DURATION_MS,total:0,correct:0,level12:0,target:DAILY_BONUS_TARGET,requiredAccuracy:DAILY_BONUS_REQUIRED_ACCURACY,requiredLevel12:DAILY_BONUS_REQUIRED_LEVEL12,reward:DAILY_BONUS_REWARD,awarded:false,warned15:false,warned5:false,boostNotice:false},completed:{}}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false,tokens:{hint:0,freeze:0,boost:0},exams:{},dexClaimed:false}, achievements:{}, penSize:5, penMode:'regular', syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean', prefs:{sfx:true,skinMode:'dark'} };
 }
 
 async function disableOldServiceWorkers(){
@@ -1595,7 +1596,11 @@ async function disableOldServiceWorkers(){
 }
 
 function loadState(){
-  try { return { ...defaultState(), ...(JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}) }; }
+  try {
+    const defaults = defaultState();
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+    return { ...defaults, ...saved, prefs:{...defaults.prefs, ...(saved.prefs || {})} };
+  }
   catch { return defaultState(); }
 }
 function saveState(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
@@ -1610,10 +1615,12 @@ function init(){
   if(el('premiumPenSelect')) el('premiumPenSelect').value = state.penMode || 'regular';
   updateSyncHealth();
   // M2: celebration/juice overlay + sound preference.
-  if(!state.prefs || typeof state.prefs !== 'object') state.prefs = {sfx:true};
+  if(!state.prefs || typeof state.prefs !== 'object') state.prefs = {sfx:true,skinMode:'dark'};
   if(typeof state.prefs.sfx !== 'boolean') state.prefs.sfx = true;
+  if(state.prefs.skinMode !== 'light') state.prefs.skinMode = 'dark';
   if(typeof Juice !== 'undefined'){ Juice.init({medallion:'assets/medallion.png?v=1.25.21'}); Juice.setSound(state.prefs.sfx); }
   if(el('sfxToggle')) el('sfxToggle').checked = state.prefs.sfx;
+  if(el('skinModeToggle')) el('skinModeToggle').checked = state.prefs.skinMode === 'light';
   updateStats(); newQuestion();
   ensureDailyBonusTicker();
   // v1.5: do NOT register a service worker. It caused stale versions to stay alive in normal browser windows.
@@ -1682,10 +1689,16 @@ function setupEvents(){
     if(state.coach.voiceCheer) playVoiceCheer({force:true});
   });
   if(el('sfxToggle')) el('sfxToggle').addEventListener('change', e => {
-    if(!state.prefs || typeof state.prefs !== 'object') state.prefs = {sfx:true};
+    if(!state.prefs || typeof state.prefs !== 'object') state.prefs = {sfx:true,skinMode:'dark'};
     state.prefs.sfx = !!e.target.checked;
-    if(typeof Juice !== 'undefined'){ Juice.setSound(state.prefs.sfx); if(state.prefs.sfx) Juice.correct(document.querySelector('.question-card')); }
+    if(typeof Juice !== 'undefined'){ Juice.setSound(state.prefs.sfx); if(state.prefs.sfx) Juice.correct(document.querySelector('.question-card'), currentThemeJuice()); }
     saveState();
+  });
+  if(el('skinModeToggle')) el('skinModeToggle').addEventListener('change', e => {
+    if(!state.prefs || typeof state.prefs !== 'object') state.prefs = {sfx:true,skinMode:'dark'};
+    state.prefs.skinMode = e.target.checked ? 'light' : 'dark';
+    saveState();
+    applyTheme();
   });
   if(el('inkJudgeBtn')) el('inkJudgeBtn').addEventListener('click', judgeInk);
   if(el('inkReplayBtn')) el('inkReplayBtn').addEventListener('click', replayInk);
@@ -1733,6 +1746,16 @@ function setupPwa(){
 }
 
 function currentTheme(){ return THEMES.find(x=>x.id===state.theme) || THEMES[0]; }
+function currentThemeJuice(){
+  const profiles = {
+    royal:{palette:['#f9d976','#d49b22','#fff3b0','#7f1d1d'],accent:'#f9d976',sound:'royal'},
+    cyber:{palette:['#22d3ee','#38bdf8','#2563eb','#39ff88'],accent:'#22d3ee',sound:'cyber'},
+    midnight:{palette:['#a5b4fc','#818cf8','#e0e7ff','#fbbf24'],accent:'#a5b4fc',sound:'midnight'}
+  };
+  const id = currentTheme().id;
+  const profile = profiles[id];
+  return profile ? {...profile,id,character:`assets/skins/${id}/character.webp`} : null;
+}
 function applyTheme(){
   unlockEligibleThemes();
   const theme = currentTheme();
@@ -1741,14 +1764,32 @@ function applyTheme(){
     saveState();
   }
   const activeTheme = currentTheme();
+  if(!state.prefs || typeof state.prefs !== 'object') state.prefs = {sfx:true,skinMode:'dark'};
+  if(state.prefs.skinMode !== 'light') state.prefs.skinMode = 'dark';
   document.body.classList.remove(...THEMES.map(x=>'theme-'+x.id));
   document.body.classList.add('theme-'+activeTheme.id);
+  document.body.classList.toggle('mode-light', state.prefs.skinMode === 'light');
+  if(el('skinModeToggle')) el('skinModeToggle').checked = state.prefs.skinMode === 'light';
+  if(el('skinModeLabel')) el('skinModeLabel').textContent = isHebrew()
+    ? (state.prefs.skinMode === 'light' ? 'מצב מואר פעיל' : 'מצב מוחשך פעיל')
+    : (state.prefs.skinMode === 'light' ? 'Light skin mode' : 'Dark skin mode');
   const b = el('themeToggle');
   if(b) b.textContent = isHebrew() ? activeTheme.he : activeTheme.en;
   const meta = document.querySelector('meta[name="theme-color"]');
   if(meta){
     const colors = {ocean:'#07111f',notebook:'#f3efe6',neon:'#080014',minimal:'#edf7ff',island:'#062f3a',lotus:'#180f2e',sakura:'#2a1022',mango:'#241706',rainforest:'#06261d',royal:'#1f1604',cyber:'#03051f',midnight:'#050812',coral:'#042832',festival:'#220b13',master:'#17020b'};
-    meta.setAttribute('content', colors[activeTheme.id] || '#07111f');
+    const lightColors = {royal:'#f7edcf',cyber:'#e7f8fc',midnight:'#eef0ff'};
+    const lightColor = state.prefs.skinMode === 'light' ? lightColors[activeTheme.id] : null;
+    meta.setAttribute('content', lightColor || colors[activeTheme.id] || '#07111f');
+  }
+  if(typeof SkinsFX !== 'undefined'){
+    const skinChanged = activeTheme.id !== lastFxTheme;
+    lastFxTheme = activeTheme.id;
+    if(skinChanged){
+      if(typeof SkinsFX.stop === 'function') SkinsFX.stop();
+      if(typeof SkinsFX.ambient === 'function') SkinsFX.ambient(activeTheme.id);
+      if(typeof SkinsFX.enter === 'function') SkinsFX.enter(activeTheme.id);
+    }
   }
 }
 function cycleTheme(){
@@ -2155,7 +2196,7 @@ function evaluateDailyBonusChallenge(){
     let msg = tokens ? `${base} ${isHebrew() ? 'ועוד' : 'plus'} ${tokens}` : base;
     if(mystery) msg += ` · ${mystery}`;
     showTransientChallengeNotice(msg, 'ok');
-    if(typeof Juice !== 'undefined') Juice.win();
+    if(typeof Juice !== 'undefined') Juice.win(currentThemeJuice());
     updateSkinPanel();
     renderDex();
     return;
@@ -3034,7 +3075,7 @@ function mark(correct){
   }
   updateAchievements(correct);
   if(correct) playVoiceCheer({force:premiumJustUnlocked});
-  if(correct && typeof Juice !== 'undefined') Juice.correct(document.querySelector('.question-card'));
+  if(correct && typeof Juice !== 'undefined') Juice.correct(document.querySelector('.question-card'), currentThemeJuice());
   saveState(); updateStats(); newQuestion(); scrollToQuestionCard();
 }
 function updateAchievements(correct){
@@ -3072,7 +3113,7 @@ function renderDex(){
     unlockEligibleThemes();
     saveState();
     showTransientChallengeNotice(isHebrew() ? '🏆 השלמת את כל 44 העיצורים! +50 נק׳' : '🏆 All 44 consonants mastered! +50 pts', 'ok');
-    if(typeof Juice !== 'undefined') Juice.win();
+    if(typeof Juice !== 'undefined') Juice.win(currentThemeJuice());
   }
   const badge = el('dexBadge'); if(badge) badge.textContent = `${prog.mastered}/${prog.total}`;
   grid.innerHTML = cons.map(c => {
@@ -3502,7 +3543,7 @@ function exportInkGif(){
   const a = document.createElement('a'); a.href = url; a.download = 'thai-writing.gif';
   document.body.appendChild(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 5000);
-  if(typeof Juice !== 'undefined') Juice.correct(document.querySelector('.question-card'));
+  if(typeof Juice !== 'undefined') Juice.correct(document.querySelector('.question-card'), currentThemeJuice());
 }
 function updateInkReplay(){
   const box = el('inkReplay'); if(!box) return;
