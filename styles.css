@@ -433,3 +433,38 @@ body.theme-master::before{background-image:url("data:image/svg+xml,%3Csvg xmlns=
 .tone-ex{font-size:13px;margin-top:6px;opacity:.95}
 .tone-ex-rom{opacity:.65}
 .tone-cardnote{font-size:12px;opacity:.7;margin-top:6px;font-style:italic}
+
+/* v1.26 — Progress Map ("the journey"). Overlay that appears on a progress
+   event and slides the traveler forward. Node art faces are placeholders that
+   Blender temple renders drop into later (class .pm-art), so structure is
+   final and art is a swap, not a rebuild. */
+.journey-btn{width:100%;margin:0 0 12px;padding:10px 12px;border-radius:12px;border:1px solid var(--border);
+  background:rgba(2,6,23,.26);color:var(--text);font-weight:900;font-size:15px;cursor:pointer;
+  box-shadow:none;transition:border-color .15s,transform .08s}
+.journey-btn:hover{border-color:var(--orange)}
+.journey-btn:active{transform:scale(.98)}
+.pm-overlay{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:16px;
+  background:rgba(2,6,23,.6);backdrop-filter:blur(8px);animation:challengeFade .22s ease-out}
+.pm-overlay[hidden]{display:none}
+.pm-card{position:relative;width:min(440px,100%);border:1px solid var(--border);border-radius:24px;
+  padding:16px 16px 14px;background:linear-gradient(180deg,rgba(15,23,42,.94),rgba(8,13,29,.97));
+  box-shadow:0 28px 80px rgba(0,0,0,.5);animation:challengeRise .3s ease-out;color:var(--text)}
+.pm-card-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.pm-hud{display:flex;flex-direction:column;align-items:center;background:var(--panel2);
+  border:1px solid var(--border);border-radius:14px;padding:4px 12px;min-width:66px}
+.pm-hud b{font-size:22px;font-weight:900;line-height:1;color:var(--orange);font-variant-numeric:tabular-nums}
+.pm-hud small{font-size:10px;color:var(--muted);margin-top:2px}
+.pm-next{flex:1;font-size:13px;color:var(--muted);font-weight:800;line-height:1.35}
+.pm-close{position:absolute;top:8px;left:8px;width:38px;height:38px;min-height:38px;padding:0;border-radius:999px;
+  background:rgba(2,6,23,.4);border:1px solid var(--border);color:var(--text);font-size:18px;line-height:1;cursor:pointer;box-shadow:none}
+.pm-viewport{position:relative;height:min(56vh,440px);border-radius:16px;overflow:hidden;border:1px solid var(--border);
+  background:radial-gradient(120% 80% at 50% 100%,rgba(120,90,220,.16),transparent 60%),rgba(2,6,23,.34)}
+.pm-viewport svg{display:block;width:100%;height:100%}
+.pm-fog{position:absolute;left:0;right:0;height:56px;pointer-events:none;z-index:2}
+.pm-fog-t{top:0;background:linear-gradient(to bottom,rgba(8,13,29,.95),transparent)}
+.pm-fog-b{bottom:0;background:linear-gradient(to top,rgba(8,13,29,.95),transparent)}
+.pm-continue{width:100%;margin-top:12px;padding:12px;border-radius:14px;border:1px solid var(--orange);
+  background:linear-gradient(90deg,var(--blue),var(--orange));color:#0b1020;font-weight:900;font-size:16px;cursor:pointer;box-shadow:none}
+.pm-node-name{font-size:11px;font-weight:800;fill:var(--text)}
+.pm-node-sub{font-size:8.5px;font-weight:700;fill:var(--muted)}
+@keyframes pmPulse{0%,100%{stroke-width:2.5}50%{stroke-width:5}}

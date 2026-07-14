@@ -1680,6 +1680,7 @@ function setupEvents(){
   if(el('dailyBonusStartBtn')) el('dailyBonusStartBtn').addEventListener('click', confirmDailyBonusStart);
   if(el('dailyBonusModalClose')) el('dailyBonusModalClose').addEventListener('click', closeDailyBonusIntro);
   if(el('dailyBonusModal')) el('dailyBonusModal').addEventListener('click', e => { if(e.target === el('dailyBonusModal')) closeDailyBonusIntro(); });
+  if(el('viewJourneyBtn')) el('viewJourneyBtn').addEventListener('click', () => openProgressMap((state.coach && state.coach.points) || 0, (state.coach && state.coach.points) || 0, {manual:true}));
   if(el('voiceCheerToggle')) el('voiceCheerToggle').addEventListener('change', e => {
     ensureDailyState();
     state.coach.voiceCheer = !!e.target.checked;
@@ -2192,9 +2193,11 @@ function evaluateDailyBonusChallenge(){
     ? RewardsCore.isChallengeWon(bonus)
     : ((bonus.total || 0) >= (bonus.target || DAILY_BONUS_TARGET) && (bonus.level12 || 0) >= (bonus.requiredLevel12 || DAILY_BONUS_REQUIRED_LEVEL12) && acc > (bonus.requiredAccuracy || DAILY_BONUS_REQUIRED_ACCURACY));
   if(won){
+    const pmOld = (state.coach.points) || 0;
     const reward = awardDailyBonusPoints();
     const tokens = tokenDeltaSummary(bonus.tokensAwarded);
     const mystery = awardMysteryBox();   // M5: guaranteed-floor variable reward
+    const pmNew = (state.coach.points) || 0;
     const base = isHebrew() ? `האתגר הושלם. קיבלת ${reward} נק׳.` : `Challenge complete. You earned ${reward} pts.`;
     let msg = tokens ? `${base} ${isHebrew() ? 'ועוד' : 'plus'} ${tokens}` : base;
     if(mystery) msg += ` · ${mystery}`;
@@ -2202,6 +2205,8 @@ function evaluateDailyBonusChallenge(){
     if(typeof Juice !== 'undefined') Juice.win(currentThemeJuice());
     updateSkinPanel();
     renderDex();
+    // v1.26: the journey overlay always headlines a challenge/box win.
+    openProgressMap(pmOld, pmNew, {reason:'challenge'});
     return;
   }
   if((bonus.total || 0) >= (bonus.target || DAILY_BONUS_TARGET) && acc <= (bonus.requiredAccuracy || DAILY_BONUS_REQUIRED_ACCURACY) && left > 0 && !bonus.boostNotice){
@@ -2239,10 +2244,13 @@ function awardDailyCoachPoints(){
   if(acc >= 0.8) points += 4;
   if(acc >= 1) points += 6;
   if((state.stats.streak || 0) >= 10) points += 3;
+  const pmOld = state.coach.points || 0;
   state.coach.points = (state.coach.points || 0) + points;
   state.coach.lastAwardDate = todayKey();
   state.daily.awarded = true;
   unlockEligibleThemes();
+  // v1.26: only surface the journey when this award crosses a station.
+  maybeShowProgressMap(pmOld, state.coach.points || 0);
   return points;
 }
 function selectThaiCheerVoice(){
@@ -3112,11 +3120,13 @@ function renderDex(){
   const prog = RewardsCore.dexProgress(state.itemStats, ids, DEX_THRESHOLD);
   if(prog.total > 0 && prog.mastered >= prog.total && !state.coach.dexClaimed){
     state.coach.dexClaimed = true;
+    const pmOld = state.coach.points || 0;
     state.coach.points = (state.coach.points || 0) + 50;
     unlockEligibleThemes();
     saveState();
     showTransientChallengeNotice(isHebrew() ? '🏆 השלמת את כל 44 העיצורים! +50 נק׳' : '🏆 All 44 consonants mastered! +50 pts', 'ok');
     if(typeof Juice !== 'undefined') Juice.win(currentThemeJuice());
+    maybeShowProgressMap(pmOld, state.coach.points || 0);
   }
   const badge = el('dexBadge'); if(badge) badge.textContent = `${prog.mastered}/${prog.total}`;
   grid.innerHTML = cons.map(c => {
@@ -4194,6 +4204,220 @@ function runQA(){
   lines.push(`Board level: ${BOARD_ITEMS.length} signs/consonants × writing question types`);
   lines.unshift(ok ? 'QA PASS' : 'QA FAILED');
   el('qaOutput').textContent = lines.join('\n');
+}
+
+/* ===================================================================
+ * v1.26 — Progress Map ("the journey")
+ * An overlay that appears on a progress event and slides the traveler
+ * forward along a winding path of stations. Stations = the premium skins,
+ * placed at their exact coach-point thresholds (from THEMES). Position =
+ * state.coach.points. NOT a page — it pops, animates, and is dismissed.
+ *
+ * Art note: each station medallion carries an empty <image class="pm-art">
+ * slot. Blender temple renders drop into that href later (Stage A) with no
+ * structural change — the medallion/Roman-numeral is a neutral placeholder,
+ * not the final identity.
+ * =================================================================== */
+const PM_COLORS = {
+  ocean:'#94a3b8', lotus:'#ec4899', sakura:'#f472b6', mango:'#f59e0b',
+  rainforest:'#22c55e', royal:'#eab308', cyber:'#06b6d4', midnight:'#6366f1',
+  coral:'#fb7185', festival:'#ef4444', master:'#f97316'
+};
+const PM_ROMAN = ['⌂','I','II','III','IV','V','VI','VII','VIII','IX','X'];
+const PM_NS = 'http://www.w3.org/2000/svg';
+const PM_VIEWH = 420, PM_WORLDH = 1560, PM_CX = 150;
+let pmDom = null, pmLaidOut = false, pmPathLen = 0, pmRAF = 0, pmMax = 540;
+
+// Stations: the village (0) + every premium skin, in threshold order.
+function pmNodes(){
+  const village = { id:'ocean', he:'הכפר', en:'Village', points:0 };
+  const premium = THEMES.filter(t => t.premium)
+    .map(t => ({ id:t.id, he:(t.he||'').replace(/\s*[\p{Emoji}️]+\s*$/u,''), en:(t.en||'').replace(/\s*[\p{Emoji}️]+\s*$/u,''), points:t.points }))
+    .sort((a,b) => a.points - b.points);
+  return [village, ...premium];
+}
+
+function pmBuildDom(){
+  if(pmDom) return pmDom;
+  const ov = document.createElement('div');
+  ov.className = 'pm-overlay';
+  ov.setAttribute('hidden','');
+  ov.innerHTML =
+    '<div class="pm-card" role="dialog" aria-modal="true" aria-label="'+(isHebrew()?'מפת המסע':'The journey')+'">'
+    + '<button type="button" class="pm-close" aria-label="'+(isHebrew()?'סגור':'Close')+'">✕</button>'
+    + '<div class="pm-card-head">'
+    +   '<div class="pm-hud"><b id="pmPtsVal">0</b><small>'+(isHebrew()?'נק׳ מאמן':'coach pts')+'</small></div>'
+    +   '<div class="pm-next" id="pmNextVal"></div>'
+    + '</div>'
+    + '<div class="pm-viewport">'
+    +   '<svg id="pmSvg" viewBox="0 0 300 420" preserveAspectRatio="xMidYMid meet" aria-hidden="true">'
+    +     '<defs><filter id="pmGlow" x="-60%" y="-60%" width="220%" height="220%">'
+    +       '<feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>'
+    +     '</filter></defs><g id="pmCam"></g></svg>'
+    +   '<div class="pm-fog pm-fog-t"></div><div class="pm-fog pm-fog-b"></div>'
+    + '</div>'
+    + '<button type="button" class="pm-continue">'+(isHebrew()?'המשך':'Continue')+'</button>'
+    + '</div>';
+  document.body.appendChild(ov);
+  ov.querySelector('.pm-close').addEventListener('click', pmClose);
+  ov.querySelector('.pm-continue').addEventListener('click', pmClose);
+  ov.addEventListener('click', e => { if(e.target === ov) pmClose(); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape' && !ov.hasAttribute('hidden')) pmClose(); });
+  pmDom = { ov, cam: ov.querySelector('#pmCam'), pts: ov.querySelector('#pmPtsVal'), next: ov.querySelector('#pmNextVal') };
+  return pmDom;
+}
+
+// Build the path + station groups once, in world coordinates. Needs the SVG
+// visible (getTotalLength/getPointAtLength), so we call this on first open.
+function pmLayout(){
+  const cam = pmDom.cam;
+  cam.innerHTML = '';
+  const nodes = pmNodes();
+  pmMax = nodes[nodes.length - 1].points || 540;
+  const yB = PM_WORLDH - 70, yT = 70, amp = 88, waves = 5, steps = 220;
+  let d = '';
+  for(let i = 0; i <= steps; i++){
+    const f = i / steps, y = yB - f * (yB - yT), x = PM_CX + Math.sin(f * Math.PI * waves) * amp * (0.55 + 0.45 * f);
+    d += (i ? 'L' : 'M') + x.toFixed(1) + ' ' + y.toFixed(1) + ' ';
+  }
+  const back = document.createElementNS(PM_NS, 'path');
+  back.setAttribute('d', d); back.setAttribute('fill', 'none');
+  back.setAttribute('stroke', 'var(--border)'); back.setAttribute('stroke-width', '16');
+  back.setAttribute('stroke-linecap', 'round'); back.setAttribute('opacity', '.5');
+  cam.appendChild(back);
+  const done = document.createElementNS(PM_NS, 'path');
+  done.setAttribute('d', d); done.setAttribute('fill', 'none');
+  done.setAttribute('stroke', 'var(--orange)'); done.setAttribute('stroke-width', '7');
+  done.setAttribute('stroke-linecap', 'round');
+  cam.appendChild(done);
+  pmPathLen = back.getTotalLength();
+  done.style.strokeDasharray = pmPathLen;
+  pmDom.back = back; pmDom.done = done;
+
+  pmDom.nodeEls = nodes.map((n, i) => {
+    const pt = back.getPointAtLength((n.points / pmMax) * pmPathLen);
+    n.x = pt.x; n.y = pt.y; n.color = PM_COLORS[n.id] || '#94a3b8';
+    const g = document.createElementNS(PM_NS, 'g');
+    g.setAttribute('transform', 'translate(' + pt.x + ',' + pt.y + ')');
+    const halo = document.createElementNS(PM_NS, 'circle');
+    halo.setAttribute('r', '20'); halo.setAttribute('fill', n.color); halo.setAttribute('opacity', '0');
+    const ring = document.createElementNS(PM_NS, 'circle');
+    ring.setAttribute('r', '17'); ring.setAttribute('fill', 'var(--panel2)');
+    ring.setAttribute('stroke', n.color); ring.setAttribute('stroke-width', '2.5');
+    // Art slot — Blender temple render drops in here later (href set in Stage A).
+    const art = document.createElementNS(PM_NS, 'image');
+    art.setAttribute('class', 'pm-art'); art.setAttribute('x', '-15'); art.setAttribute('y', '-15');
+    art.setAttribute('width', '30'); art.setAttribute('height', '30');
+    const mark = document.createElementNS(PM_NS, 'text');
+    mark.setAttribute('text-anchor', 'middle'); mark.setAttribute('dy', '5'); mark.setAttribute('font-size', '13');
+    mark.setAttribute('font-weight', '900'); mark.textContent = PM_ROMAN[i] || '';
+    const name = document.createElementNS(PM_NS, 'text');
+    name.setAttribute('class', 'pm-node-name'); name.setAttribute('text-anchor', 'middle'); name.setAttribute('y', '35');
+    const sub = document.createElementNS(PM_NS, 'text');
+    sub.setAttribute('class', 'pm-node-sub'); sub.setAttribute('text-anchor', 'middle'); sub.setAttribute('y', '46');
+    g.appendChild(halo); g.appendChild(ring); g.appendChild(art); g.appendChild(mark); g.appendChild(name); g.appendChild(sub);
+    cam.appendChild(g);
+    return { n, g, halo, ring, mark, name, sub };
+  });
+
+  const trav = document.createElementNS(PM_NS, 'g');
+  const td = document.createElementNS(PM_NS, 'circle');
+  td.setAttribute('r', '11'); td.setAttribute('fill', 'var(--text)'); td.setAttribute('stroke', 'var(--orange)'); td.setAttribute('stroke-width', '3');
+  const ti = document.createElementNS(PM_NS, 'circle');
+  ti.setAttribute('r', '4'); ti.setAttribute('fill', 'var(--orange)');
+  trav.appendChild(td); trav.appendChild(ti);
+  cam.appendChild(trav);
+  pmDom.trav = trav; pmDom.nodes = nodes;
+  pmLaidOut = true;
+}
+
+function pmNextIdx(p){
+  const nodes = pmDom.nodes;
+  for(let i = 0; i < nodes.length; i++){ if(nodes[i].points > p) return i; }
+  return nodes.length;
+}
+
+function pmRender(p){
+  const frac = Math.max(0, Math.min(1, p / pmMax)), len = frac * pmPathLen;
+  const pt = pmDom.back.getPointAtLength(len);
+  pmDom.trav.setAttribute('transform', 'translate(' + pt.x + ',' + pt.y + ')');
+  pmDom.done.style.strokeDashoffset = pmPathLen - len;
+  const camY = Math.max(0, Math.min(PM_WORLDH - PM_VIEWH, pt.y - PM_VIEWH * 0.52));
+  pmDom.cam.setAttribute('transform', 'translate(0,' + (-camY) + ')');
+  const ni = pmNextIdx(p);
+  pmDom.nodeEls.forEach((e, i) => {
+    const passed = e.n.points <= p, isNext = (i === ni), beyond = i > ni;
+    e.ring.setAttribute('fill', passed ? e.n.color : 'var(--panel2)');
+    e.ring.setAttribute('r', isNext ? '19' : '17');
+    e.ring.style.animation = isNext ? 'pmPulse 1.4s ease-in-out infinite' : 'none';
+    e.mark.textContent = beyond ? '?' : (PM_ROMAN[i] || '');
+    e.mark.setAttribute('fill', passed ? '#0b1020' : 'var(--text)');
+    e.g.setAttribute('opacity', beyond ? (i > ni + 1 ? '0.3' : '0.6') : '1');
+    e.g.style.filter = (passed || isNext) ? 'url(#pmGlow)' : 'none';
+    e.halo.setAttribute('opacity', passed ? '0.16' : '0');
+    e.name.textContent = beyond ? '' : (isHebrew() ? e.n.he : e.n.en);
+    e.sub.textContent = beyond ? '? ? ?' : (passed ? (isHebrew() ? '✓ נפתח' : '✓ open') : (e.n.points + (isHebrew() ? ' נק׳' : 'pts')));
+  });
+}
+
+function pmUpdHud(p){
+  pmDom.pts.textContent = Math.round(p);
+  const ni = pmNextIdx(p), nx = pmDom.nodes[ni];
+  pmDom.next.textContent = nx
+    ? (isHebrew() ? 'התחנה הבאה: ' + nx.he + ' · עוד ' + (nx.points - Math.round(p)) : 'Next: ' + nx.en + ' · ' + (nx.points - Math.round(p)) + ' to go')
+    : (isHebrew() ? 'הגעת לרמת המאסטר 🔥' : 'Master reached 🔥');
+}
+
+function pmBurst(idx){
+  const e = pmDom.nodeEls[idx]; if(!e) return;
+  e.halo.style.transition = 'none'; e.halo.setAttribute('r', '20'); e.halo.setAttribute('opacity', '0.55');
+  requestAnimationFrame(() => {
+    e.halo.style.transition = 'r .6s ease-out, opacity .6s ease-out';
+    e.halo.setAttribute('r', '42'); e.halo.setAttribute('opacity', '0');
+  });
+}
+
+function pmAnimate(oldP, newP){
+  if(pmRAF) cancelAnimationFrame(pmRAF);
+  const crossings = pmDom.nodes.map((n, i) => i).filter(i => pmDom.nodes[i].points > oldP && pmDom.nodes[i].points <= newP);
+  if(newP <= oldP){ pmRender(newP); pmUpdHud(newP); return; }
+  const dur = Math.min(1700, 650 + (newP - oldP) * 14);
+  let t0 = null, fired = 0;
+  const step = ts => {
+    if(!t0) t0 = ts;
+    const k = Math.min(1, (ts - t0) / dur);
+    const e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+    const cur = oldP + (newP - oldP) * e;
+    pmRender(cur); pmUpdHud(cur);
+    while(fired < crossings.length && cur >= pmDom.nodes[crossings[fired]].points){ pmBurst(crossings[fired]); fired++; if(typeof Juice !== 'undefined' && Juice.pop) Juice.pop(); }
+    if(k < 1) pmRAF = requestAnimationFrame(step);
+    else { pmRAF = 0; pmRender(newP); pmUpdHud(newP); }
+  };
+  pmRAF = requestAnimationFrame(step);
+}
+
+// Public: show the overlay and animate oldP -> newP. Manual open (from the
+// coach panel) passes oldP === newP for a static "where am I" view.
+function openProgressMap(oldP, newP, opts){
+  opts = opts || {};
+  pmBuildDom();
+  pmDom.ov.setAttribute('dir', isHebrew() ? 'rtl' : 'ltr');
+  pmDom.ov.removeAttribute('hidden');
+  if(!pmLaidOut) pmLayout(); else { pmMax = pmDom.nodes[pmDom.nodes.length - 1].points || 540; }
+  pmRender(oldP); pmUpdHud(oldP);
+  requestAnimationFrame(() => pmAnimate(oldP, newP));
+}
+
+// Crossing-only gate: surface the journey only when a point gain moves the
+// traveler past at least one station (avoids popping on tiny gains).
+function maybeShowProgressMap(oldP, newP){
+  if(pmNodes().some(n => n.points > oldP && n.points <= newP)) openProgressMap(oldP, newP, {reason:'cross'});
+}
+
+function pmClose(){
+  if(!pmDom) return;
+  if(pmRAF){ cancelAnimationFrame(pmRAF); pmRAF = 0; }
+  pmDom.ov.setAttribute('hidden', '');
 }
 
 document.addEventListener('DOMContentLoaded', init);
