@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.30-skins-m3';
+const APP_VERSION = '1.25.31-srs';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
@@ -1972,10 +1972,14 @@ function itemMemory(item){
 }
 function updateSchedule(item, correct){
   const s = state.itemStats[item.id] || {correct:0,wrong:0,lastSeen:0,modes:{}};
-  const prevBox = s.box || 0;
-  s.box = correct ? Math.min(5, prevBox + 1) : 0;
-  const minutes = correct ? [20, 120, 720, 1440, 4320, 10080][s.box] : 8;
-  s.dueAt = Date.now() + minutes * 60 * 1000;
+  if(typeof SRS !== 'undefined'){
+    Object.assign(s, SRS.schedule(s, correct ? SRS.RATINGS.GOOD : SRS.RATINGS.AGAIN, Date.now()));
+  }else{
+    const prevBox = s.box || 0;
+    s.box = correct ? Math.min(5, prevBox + 1) : 0;
+    const minutes = correct ? [20, 120, 720, 1440, 4320, 10080][s.box] : 8;
+    s.dueAt = Date.now() + minutes * 60 * 1000;
+  }
   return s;
 }
 function isThemeUnlocked(theme){
@@ -2333,7 +2337,13 @@ function playVoiceCheer(options = {}){
 }
 function weightedPick(items){
   const recentIds = state.history.slice(-8).map(h=>h.id);
-  const pool = items.map(item => {
+  let candidates = items;
+  if(state.daily && state.daily.active){
+    const dueReviews = items.filter(item => { const mem=itemMemory(item); return mem.attempts > 0 && mem.due; });
+    const unseen = items.filter(item => itemMemory(item).attempts === 0);
+    candidates = dueReviews.length ? dueReviews : unseen.length ? unseen : items;
+  }
+  const pool = candidates.map(item => {
     let weight = 10 - mastery(item);
     const mem = itemMemory(item);
     if(mem.due) weight += 5;
