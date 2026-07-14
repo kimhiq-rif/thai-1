@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.29-skins-m2';
+const APP_VERSION = '1.25.30-skins-m3';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
