@@ -3700,9 +3700,16 @@ function setupCanvas(){
     ctx.miterLimit = 2;
     const penWidth = Math.max(3, Math.min(10, Number(state.penSize) || 5));
     ctx.lineWidth = eraserMode ? Math.max(24, penWidth * 6) : (dynamicWidth || penWidth);
-    ctx.strokeStyle = '#020617';
-    ctx.shadowColor = eraserMode ? 'transparent' : (isPremiumPenActive() ? 'rgba(34, 211, 238, .28)' : 'rgba(2, 6, 23, .10)');
-    ctx.shadowBlur = eraserMode ? 0 : (isPremiumPenActive() ? 2.2 : 0.45);
+    // Premium pen ink is per-skin. Royal Gold writes in glowing gold; other
+    // premium skins keep the default (dark ink + subtle cyan glow).
+    const premiumInk = !eraserMode && isPremiumPenActive();
+    const royalPen = premiumInk && state.theme === 'royal';
+    ctx.strokeStyle = royalPen ? '#F7C948' : '#020617';
+    ctx.shadowColor = eraserMode ? 'transparent'
+      : royalPen ? 'rgba(255, 176, 40, .6)'
+      : premiumInk ? 'rgba(34, 211, 238, .28)'
+      : 'rgba(2, 6, 23, .10)';
+    ctx.shadowBlur = eraserMode ? 0 : (royalPen ? 6 : (premiumInk ? 2.2 : 0.45));
   }
 
   const getPoint = e => {
