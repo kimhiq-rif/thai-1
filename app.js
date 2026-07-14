@@ -1576,7 +1576,7 @@ function challengeDurationText(cfg){
   return isHebrew() ? `${mins} דק׳` : `${mins} min`;
 }
 function defaultState(){
-  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false,bonus:{status:'idle',startedAt:null,durationMs:DAILY_BONUS_DURATION_MS,total:0,correct:0,level12:0,target:DAILY_BONUS_TARGET,requiredAccuracy:DAILY_BONUS_REQUIRED_ACCURACY,requiredLevel12:DAILY_BONUS_REQUIRED_LEVEL12,reward:DAILY_BONUS_REWARD,awarded:false,warned15:false,warned5:false,boostNotice:false},completed:{}}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false,tokens:{hint:0,freeze:0,boost:0},exams:{},dexClaimed:false}, achievements:{}, penSize:5, penMode:'regular', syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean', prefs:{sfx:true,skinMode:'dark'} };
+  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false,bonus:{status:'idle',startedAt:null,durationMs:DAILY_BONUS_DURATION_MS,total:0,correct:0,level12:0,target:DAILY_BONUS_TARGET,requiredAccuracy:DAILY_BONUS_REQUIRED_ACCURACY,requiredLevel12:DAILY_BONUS_REQUIRED_LEVEL12,reward:DAILY_BONUS_REWARD,awarded:false,warned15:false,warned5:false,boostNotice:false},completed:{}}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false,tokens:{hint:0,freeze:0,boost:0},exams:{},dexClaimed:false}, achievements:{}, penSize:5, penMode:'regular', inputMode:'write', syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean', prefs:{sfx:true,skinMode:'dark'} };
 }
 
 async function disableOldServiceWorkers(){
@@ -1681,6 +1681,7 @@ function setupEvents(){
   if(el('dailyBonusModalClose')) el('dailyBonusModalClose').addEventListener('click', closeDailyBonusIntro);
   if(el('dailyBonusModal')) el('dailyBonusModal').addEventListener('click', e => { if(e.target === el('dailyBonusModal')) closeDailyBonusIntro(); });
   if(el('viewJourneyBtn')) el('viewJourneyBtn').addEventListener('click', () => openProgressMap((state.coach && state.coach.points) || 0, (state.coach && state.coach.points) || 0, {manual:true}));
+  document.querySelectorAll('.input-mode-btn').forEach(function(b){ b.addEventListener('click', function(){ setInputMode(b.getAttribute('data-input-mode')); }); });
   if(el('voiceCheerToggle')) el('voiceCheerToggle').addEventListener('change', e => {
     ensureDailyState();
     state.coach.voiceCheer = !!e.target.checked;
@@ -1953,6 +1954,7 @@ function ensureDailyState(){
   if(state.daily.date !== todayKey()) state.daily = {...defaultState().daily, date:todayKey()};
   const premiumCount = THEMES.filter(theme => theme.premium && ((state.coach.unlocked || []).includes(theme.id) || (state.coach.points || 0) >= (theme.points || 0))).length;
   if(premiumCount < 3 && state.penMode === 'premium') state.penMode = 'regular';
+  if(state.inputMode !== 'type' && state.inputMode !== 'write') state.inputMode = 'write';
 }
 function toggleDailyPractice(){
   ensureDailyState();
@@ -2803,17 +2805,30 @@ function renderQuestion(){
   renderLevel6Pair(current);
   renderLevel55Chat(current);
   renderStudyCard(current);
-  const canvasWrap = document.querySelector('.canvas-wrap');
-  if(canvasWrap) canvasWrap.hidden = mode === 'level55_chat' || ((mode === 'level6_pair' || mode === 'level12_pair') && !level6McqAnswered);
   const writingLocked = ((mode === 'level6_pair' || mode === 'level12_pair') && !level6McqAnswered);
-  el('clearBtn').hidden = mode === 'level55_chat' || writingLocked;
+  const canvasHidden = mode === 'level55_chat' || writingLocked;   // writing area not usable in this mode
+  const typeMode = (state.inputMode || 'write') === 'type';
+  const useKeyboard = typeMode && !canvasHidden;                   // keyboard board replaces the canvas
+  const canvasWrap = document.querySelector('.canvas-wrap');
+  if(canvasWrap) canvasWrap.hidden = canvasHidden || useKeyboard;
+  if(el('keyboardBoard')) el('keyboardBoard').hidden = !useKeyboard;
+  const modeToggle = el('inputModeToggle');
+  if(modeToggle){
+    modeToggle.hidden = canvasHidden;
+    modeToggle.querySelectorAll('.input-mode-btn').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-input-mode') === (typeMode ? 'type' : 'write'));
+    });
+  }
+  if(useKeyboard) resetKeyboardBoard();
+  el('clearBtn').hidden = canvasHidden || useKeyboard;
   const eraserBtn = el('eraserToggleBtn');
-  if(eraserBtn) eraserBtn.hidden = mode === 'level55_chat' || writingLocked;
-  if(el('penControl')) el('penControl').hidden = mode === 'level55_chat' || writingLocked;
-  if(el('premiumPenControl')) el('premiumPenControl').hidden = mode === 'level55_chat' || writingLocked || !hasPremiumPen();
-  updateInkJudge(mode, writingLocked);
+  if(eraserBtn) eraserBtn.hidden = canvasHidden || useKeyboard;
+  if(el('penControl')) el('penControl').hidden = canvasHidden || useKeyboard;
+  if(el('premiumPenControl')) el('premiumPenControl').hidden = canvasHidden || useKeyboard || !hasPremiumPen();
+  updateInkJudge(mode, writingLocked || useKeyboard);
   updateInkReplay();
-  el('showAnswerBtn').hidden = mode === 'level55_chat' || writingLocked;
+  if(useKeyboard && el('inkReplay')) el('inkReplay').hidden = true;
+  el('showAnswerBtn').hidden = canvasHidden;
   el('toneChoices').hidden = mode === 'level55_chat' || !(mode === 'tone' || mode === 'vowel_board');
   el('toneChoices').innerHTML = '';
   const markRow = document.querySelector('.mark-row');
@@ -4425,6 +4440,97 @@ function pmClose(){
   if(!pmDom) return;
   if(pmRAF){ cancelAnimationFrame(pmRAF); pmRAF = 0; }
   pmDom.ov.setAttribute('hidden', '');
+}
+
+/* ===================================================================
+ * v1.26 — Keyboard board (type mode)
+ * A keyboard alternative to the handwriting canvas: an on-screen Thai
+ * keyboard (also accepts the device's physical keyboard) whose consonant
+ * keys are coloured by tone class read from BOARD_ITEMS.cls (high/mid/low),
+ * with vowels & signs monochrome. Same flow: assemble the answer, then the
+ * existing Show-answer / correct-wrong buttons. Toggle is manual + persisted.
+ * =================================================================== */
+const KB_COMBINING = new Set(['ั','ิ','ี','ึ','ื','ุ','ู','็','่','้','๊','๋','์','ฺ']);
+const KB_VOWELS = ['ะ','ั','า','ำ','ิ','ี','ึ','ื','ุ','ู','เ','แ','โ','ใ','ไ','ฤ','ๅ','ๆ','ฯ'];
+const KB_SIGNS = ['่','้','๊','๋','็','์','ฺ'];
+let kbBuiltLang = null;
+
+function kbConsonants(){
+  const board = (typeof BOARD_ITEMS !== 'undefined' ? BOARD_ITEMS : []);
+  return board.filter(x => x.kind === 'consonant' && x.symbol)
+    .map(x => ({ ch:x.symbol, cls:(x.cls === 'high' || x.cls === 'mid' || x.cls === 'low') ? x.cls : 'low' }))
+    .sort((a,b) => a.ch.charCodeAt(0) - b.ch.charCodeAt(0));   // standard Thai alphabetical order
+}
+
+function buildKeyboardBoard(){
+  const host = el('keyboardBoard'); if(!host) return;
+  if(kbBuiltLang === lang() && host.firstChild) return;   // rebuild only on first use / language change
+  function keyHtml(ch, clsName){
+    const disp = KB_COMBINING.has(ch) ? ('◌' + ch) : ch;
+    return '<button type="button" class="kb-key' + (clsName ? ' ' + clsName : '') + '" data-ch="' + ch + '">' + disp + '</button>';
+  }
+  const cons = kbConsonants();
+  host.innerHTML =
+    '<div class="kb-field" id="kbInput" contenteditable="true" dir="ltr" spellcheck="false" data-placeholder="' + (isHebrew() ? 'הקלד כאן…' : 'Type here…') + '" aria-label="' + (isHebrew() ? 'שדה תשובה' : 'Answer field') + '"></div>'
+    + '<div class="kb-check" id="kbCheck" aria-live="polite"></div>'
+    + '<div class="kb-board">'
+    +   '<div class="kb-sec"><div class="kb-sechead"><span class="kb-sectitle">' + (isHebrew() ? 'עיצורים' : 'Consonants') + '</span>'
+    +     '<span class="kb-legend"><span class="kb-lg high">' + (isHebrew() ? 'גבוה' : 'high') + '</span><span class="kb-lg mid">' + (isHebrew() ? 'אמצע' : 'mid') + '</span><span class="kb-lg low">' + (isHebrew() ? 'נמוך' : 'low') + '</span></span></div>'
+    +     '<div class="kb-keys">' + cons.map(function(k){ return keyHtml(k.ch, 'c-' + k.cls); }).join('') + '</div></div>'
+    +   '<div class="kb-sec"><div class="kb-sechead"><span class="kb-sectitle">' + (isHebrew() ? 'תנועות' : 'Vowels') + '</span></div>'
+    +     '<div class="kb-keys">' + KB_VOWELS.map(function(ch){ return keyHtml(ch, ''); }).join('') + '</div></div>'
+    +   '<div class="kb-sec"><div class="kb-sechead"><span class="kb-sectitle">' + (isHebrew() ? 'סימנים וטונים' : 'Signs & tones') + '</span></div>'
+    +     '<div class="kb-keys">' + KB_SIGNS.map(function(ch){ return keyHtml(ch, ''); }).join('') + '</div></div>'
+    + '</div>'
+    + '<div class="kb-ctrl">'
+    +   '<button type="button" class="kb-c" data-kb-act="space">␣ ' + (isHebrew() ? 'רווח' : 'space') + '</button>'
+    +   '<button type="button" class="kb-c" data-kb-act="back">⌫ ' + (isHebrew() ? 'מחק' : 'back') + '</button>'
+    +   '<button type="button" class="kb-c" data-kb-act="clear">' + (isHebrew() ? 'נקה' : 'clear') + '</button>'
+    + '</div>';
+  const field = el('kbInput');
+  host.querySelectorAll('.kb-key').forEach(function(b){ b.addEventListener('click', function(){ kbInsert(b.getAttribute('data-ch')); }); });
+  host.querySelectorAll('[data-kb-act]').forEach(function(b){ b.addEventListener('click', function(){
+    const a = b.getAttribute('data-kb-act'); field.focus();
+    if(a === 'space') field.textContent += ' ';
+    else if(a === 'back') field.textContent = field.textContent.slice(0, -1);
+    else if(a === 'clear') field.textContent = '';
+    kbCheck();
+  }); });
+  field.addEventListener('input', kbCheck);   // physical-keyboard typing also checks
+  kbBuiltLang = lang();
+}
+
+function kbInsert(ch){
+  const field = el('kbInput'); if(!field) return;
+  field.focus();
+  field.textContent += ch;
+  try{ const r = document.createRange(); r.selectNodeContents(field); r.collapse(false); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }catch(e){}
+  kbCheck();
+}
+
+function kbNormalize(s){ return (s || '').replace(/\s+/g, '').trim(); }
+
+function kbCheck(){
+  const field = el('kbInput'); const out = el('kbCheck'); if(!field || !out) return;
+  const target = current && current.item && current.item.thai;
+  const typed = kbNormalize(field.textContent);
+  if(target && typed && typed === kbNormalize(target)){
+    out.textContent = isHebrew() ? '✓ נכון!' : '✓ Correct!'; out.className = 'kb-check ok';
+  } else {
+    out.textContent = ''; out.className = 'kb-check';   // stay quiet until exact; self-mark still available
+  }
+}
+
+function resetKeyboardBoard(){
+  buildKeyboardBoard();
+  const field = el('kbInput'); if(field) field.textContent = '';
+  const out = el('kbCheck'); if(out){ out.textContent = ''; out.className = 'kb-check'; }
+}
+
+function setInputMode(mode){
+  state.inputMode = (mode === 'type') ? 'type' : 'write';
+  saveState();
+  if(typeof current !== 'undefined' && current) renderQuestion();
 }
 
 document.addEventListener('DOMContentLoaded', init);

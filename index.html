@@ -56,10 +56,15 @@
 
       <div id="toneChoices" class="choices" hidden></div>
 
+      <div class="input-mode-toggle" id="inputModeToggle" hidden role="group" aria-label="מצב קלט">
+        <button type="button" class="input-mode-btn" data-input-mode="write">✍️ <span>כתיבה ביד</span></button>
+        <button type="button" class="input-mode-btn" data-input-mode="type">⌨️ <span>מקלדת</span></button>
+      </div>
       <div class="canvas-wrap">
         <canvas id="writeCanvas" width="900" height="360" aria-label="אזור כתיבה חופשית"></canvas>
         <canvas id="inkGhost" class="ink-ghost" aria-hidden="true"></canvas>
       </div>
+      <div class="keyboard-board" id="keyboardBoard" hidden></div>
 
       <div class="button-grid writing-controls">
         <button class="secondary" id="clearBtn">נקה כתיבה</button>
