@@ -32,7 +32,12 @@ const I18N = {
     syncSaved:'כתובת הסנכרון נשמרה.', syncUrlReset:'כתובת ברירת המחדל שוחזרה.', uploadOk:'ההתקדמות נשמרה בענן ✅', uploadSent:'ההתקדמות נשלחה לענן ✅', downloadOk:'ההתקדמות נטענה בהצלחה ✅', uploadErr:'שגיאת שמירה: ', downloadErr:'שגיאת טעינה: ', syncTestOk:'החיבור ל־Google Apps Script עובד ✅', syncTestErr:'בדיקת החיבור נכשלה: ', scriptBlockedHe:'הטעינה מגוגל נכשלה. האפליקציה תנסה מסלול חלופי; אם זה חוזר, לחץ "פתח בדיקה" כדי לראות את תשובת Google.', shareOk:'קישור לאפליקציה הועתק ✅', shareErr:'לא הצלחתי לשתף כרגע. אפשר להעתיק את כתובת האתר ידנית.',
     syncWorking:'עובד...', lastSync:'סנכרון אחרון', neverSynced:'עדיין לא סונכרן', localBackup:'גיבוי מקומי', restoreBackup:'שחזר גיבוי', exportOk:'קובץ גיבוי נשמר במחשב ✅', importOk:'הגיבוי נטען בהצלחה ✅', importErr:'שגיאת שחזור גיבוי: ', importConfirm:'לטעון את הגיבוי ולהחליף את ההתקדמות הנוכחית?',
     installReady:'אפשר להתקין את האפליקציה למסך הבית.', installDone:'אם הופיעה בקשת התקנה, אשר אותה בדפדפן.', installIos:'באייפון/אייפד: לחץ שיתוף ואז "הוסף למסך הבית".', installManual:'אם לא נפתחה התקנה אוטומטית, השתמש בתפריט הדפדפן ובחר Install app / Add to Home screen.',
-    dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא', voiceCheer:'מחווה קולית ב"צדקתי"', voiceCheerLocked:'ייפתח אחרי הסקין הראשון'
+    dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא', voiceCheer:'מחווה קולית ב"צדקתי"', voiceCheerLocked:'ייפתח אחרי הסקין הראשון',
+    docTitle:'Thai Trainer — תרגול תאית', controlsAria:'בקרות תרגול', levelSelectAria:'בחר רמת קושי', modeSelectAria:'בחר מצב שאלה', canvasAria:'אזור כתיבה חופשית', close:'סגור',
+    inputModeAria:'מצב קלט', inputModeWrite:'כתיבה ביד', inputModeType:'מקלדת', inkJudge:'שפוט את הכתב ✦', inkReplay:'שחזר את הכתב ▶', inkGif:'שמור GIF ⤓',
+    dexTitle:'דקס אותיות', dexNote:'שלוט באות (תרגול רמה 1.2) והיא תיצבע זהב. השלם את כל 44 העיצורים → בונוס! לחיצה ארוכה על אות = מידע.',
+    vowelDexToggle:'דקס התנועות', vowelDexNote:'לחיצה ארוכה על תנועה = שם, איך מתפקדת, ותכונות מיוחדות.',
+    viewJourney:'צפה במסע 🗺️', sfx:'אפקטי צליל וחגיגה', boardWordLine:'מילת לוח', syncNoUrl:'אין כתובת Apps Script', syncBadUrl:'כתובת הסקריפט אינה תקינה. צריך URL שמתחיל ב-script.google.com/macros/s ומסתיים ב-/exec'
   },
   en: {
     langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.27', title:'Reading, writing, tones and meaning',
@@ -49,7 +54,12 @@ const I18N = {
     syncSaved:'Sync URL saved.', syncUrlReset:'Default sync URL restored.', uploadOk:'Progress saved to cloud ✅', uploadSent:'Progress was sent to cloud ✅', downloadOk:'Progress loaded successfully ✅', uploadErr:'Save error: ', downloadErr:'Load error: ', syncTestOk:'Google Apps Script connection works ✅', syncTestErr:'Connection test failed: ', scriptBlockedHe:'Google loading failed. The app will try a fallback route; if it repeats, click “Open test” to inspect the Google response.', shareOk:'App link copied ✅', shareErr:'Could not share right now. Copy the site address manually.',
     syncWorking:'Working...', lastSync:'Last sync', neverSynced:'Not synced yet', localBackup:'Local backup', restoreBackup:'Restore backup', exportOk:'Backup file saved ✅', importOk:'Backup restored ✅', importErr:'Backup restore error: ', importConfirm:'Load this backup and replace current progress?',
     installReady:'The app can be installed to your home screen.', installDone:'If an install prompt appeared, confirm it in the browser.', installIos:'On iPhone/iPad: tap Share, then Add to Home Screen.', installManual:'If automatic install did not open, use the browser menu and choose Install app / Add to Home screen.',
-    dailyPractice:'Daily practice', dailyOn:'Daily practice active', dailyDone:'Daily practice complete', dueItems:'Due', weakItems:'Weak', strongItems:'Strong', todayGoal:'Today goal', achievements:'Achievements', penSize:'Pen size', skins:'Premium skins', coachPoints:'coach pts', nextSkin:'Next skin', voiceCheer:'Voice cheer on correct', voiceCheerLocked:'Unlocks after first skin'
+    dailyPractice:'Daily practice', dailyOn:'Daily practice active', dailyDone:'Daily practice complete', dueItems:'Due', weakItems:'Weak', strongItems:'Strong', todayGoal:'Today goal', achievements:'Achievements', penSize:'Pen size', skins:'Premium skins', coachPoints:'coach pts', nextSkin:'Next skin', voiceCheer:'Voice cheer on correct', voiceCheerLocked:'Unlocks after first skin',
+    docTitle:'Thai Trainer — Thai practice', controlsAria:'Practice controls', levelSelectAria:'Choose difficulty level', modeSelectAria:'Choose question mode', canvasAria:'Free writing area', close:'Close',
+    inputModeAria:'Input mode', inputModeWrite:'Handwrite', inputModeType:'Keyboard', inkJudge:'Judge my writing ✦', inkReplay:'Replay writing ▶', inkGif:'Save GIF ⤓',
+    dexTitle:'Letter Dex', dexNote:'Master a letter (Level 1.2 practice) and it turns gold. Complete all 44 consonants → bonus! Long-press a letter for info.',
+    vowelDexToggle:'Vowel Dex', vowelDexNote:'Long-press a vowel for its name, how it works, and special traits.',
+    viewJourney:'View the journey 🗺️', sfx:'Sound & celebration effects', boardWordLine:'Board word', syncNoUrl:'No Apps Script URL set', syncBadUrl:'The script URL is invalid. It must start with script.google.com/macros/s and end with /exec'
   }
 };
 function lang(){ return state && state.lang ? state.lang : 'he'; }
@@ -1114,8 +1124,8 @@ function thaiCharInfoHtml(ch){
     const x = THAI_CONSONANT_INFO[ch];
     const usage = isHebrew() ? (x.usageHe || '') : (x.usageEn || '');
     const boardLine = isHebrew()
-      ? `מילת לוח: ${x.word} (${x.wordRoman}) — ${x.he} / ${x.en}`
-      : `Board word: ${x.word} (${x.wordRoman}) — ${x.en} / ${x.he}`;
+      ? `${t('boardWordLine')}: ${x.word} (${x.wordRoman}) — ${x.he} / ${x.en}`
+      : `${t('boardWordLine')}: ${x.word} (${x.wordRoman}) — ${x.en}`;
     if(isHebrew()){
       return `<div><b>${escapeHtml(ch)} — ${escapeHtml(x.name)} <span dir="ltr">(${escapeHtml(x.romanName)})</span></b></div><div>${escapeHtml(boardLine)}</div><div>קבוצה: ${escapeHtml(consonantClassLabel(x.cls))}</div><div>תחילה: <span dir="ltr">${escapeHtml(x.initial)}</span> · סוף: <span dir="ltr">${escapeHtml(x.final)}</span></div><div>${escapeHtml(finalKindLabel(x.finalKind))}</div>${usage ? `<div class="char-note">${escapeHtml(usage)}</div>` : ''}`;
     }
@@ -1809,6 +1819,7 @@ function applyLanguage(){
   document.documentElement.lang = lang();
   document.documentElement.dir = isHebrew() ? 'rtl' : 'ltr';
   document.body.classList.toggle('lang-en', !isHebrew());
+  document.title = t('docTitle');
   el('eyebrowText').textContent = t('eyebrow');
   el('mainTitle').textContent = t('title');
   el('subtitleText').textContent = t('subtitle');
@@ -1819,12 +1830,22 @@ function applyLanguage(){
   }
   applyTheme();
   el('installBtn').textContent = t('install');
+  if(el('controlsPanel')) el('controlsPanel').setAttribute('aria-label', t('controlsAria'));
   el('levelLabel').textContent = t('levelLabel');
+  el('levelSelect').setAttribute('aria-label', t('levelSelectAria'));
   el('modeLabelText').textContent = t('modeLabel');
+  el('modeSelect').setAttribute('aria-label', t('modeSelectAria'));
   el('newQuestionBtn').textContent = t('newQuestion');
   if(el('dailyPracticeBtn')) el('dailyPracticeBtn').textContent = state.daily?.active ? t('dailyOn') : t('dailyPractice');
   el('clearBtn').textContent = t('clear');
   updateEraserButton();
+  if(el('inputModeToggle')) el('inputModeToggle').setAttribute('aria-label', t('inputModeAria'));
+  if(el('inputModeWriteLabel')) el('inputModeWriteLabel').textContent = t('inputModeWrite');
+  if(el('inputModeTypeLabel')) el('inputModeTypeLabel').textContent = t('inputModeType');
+  if(el('writeCanvas')) el('writeCanvas').setAttribute('aria-label', t('canvasAria'));
+  if(el('inkJudgeBtn')) el('inkJudgeBtn').textContent = t('inkJudge');
+  if(el('inkReplayBtn')) el('inkReplayBtn').textContent = t('inkReplay');
+  if(el('inkGifBtn')) el('inkGifBtn').textContent = t('inkGif');
   el('showAnswerBtn').textContent = t('showAnswer');
   el('correctBtn').textContent = t('correct');
   el('wrongBtn').textContent = t('wrong');
@@ -1846,8 +1867,15 @@ function applyLanguage(){
   if(el('premiumPenHint')) el('premiumPenHint').textContent = isHebrew()
     ? 'עט פרימיום: קו רך יותר, עובי משתנה לפי מהירות הכתיבה, והילה כחולה סביב הדיו.'
     : 'Premium pen: smoother line, width that varies with writing speed, and a blue glow around the ink.';
+  if(el('dexTitle')) el('dexTitle').textContent = t('dexTitle');
+  if(el('dexNote')) el('dexNote').textContent = t('dexNote');
+  if(el('vowelDexToggleLabel')) el('vowelDexToggleLabel').textContent = t('vowelDexToggle');
+  if(el('vowelDexNote')) el('vowelDexNote').textContent = t('vowelDexNote');
   if(el('skinsTitle')) el('skinsTitle').textContent = t('skins');
+  if(el('viewJourneyBtn')) el('viewJourneyBtn').textContent = t('viewJourney');
   if(el('voiceCheerLabel')) el('voiceCheerLabel').textContent = t('voiceCheer');
+  if(el('sfxLabel')) el('sfxLabel').textContent = t('sfx');
+  if(el('dailyBonusModalClose')) el('dailyBonusModalClose').setAttribute('aria-label', t('close'));
   if(el('syncAdvancedSummary')) el('syncAdvancedSummary').textContent = t('syncAdvanced');
   el('syncTitle').textContent = t('syncTitle');
   el('syncDescription').textContent = t('syncDescription');
@@ -1872,6 +1900,7 @@ function applyLanguage(){
   if(el('syncStatus').textContent === 'מוכן.' || el('syncStatus').textContent === 'Ready.') el('syncStatus').textContent = t('ready');
   setupLevels();
   setupModes();
+  updateAchievementPanel();   // skin grid, token wallet and coach badge bake the language in at render time
   if(current) renderQuestion();
 }
 function toggleLanguage(){
@@ -2974,7 +3003,7 @@ function renderToneChoices(item){
   const toneParts = item.tone.split('-');
   let options;
   if(toneParts.length === 1){
-    options = TONES.map(tt=>({id:tt.id, label: isHebrew() ? `${tt.he} (${tt.en})` : `${tt.en} (${tt.he})`}));
+    options = TONES.map(tt=>({id:tt.id, label: isHebrew() ? `${tt.he} (${tt.en})` : tt.en}));
   } else {
     options = [item.tone, ...makeToneDistractors(item.tone)].map(t=>({id:t,label:toneToHeb(t)}));
     options.sort(()=>Math.random()-0.5);
@@ -4009,9 +4038,9 @@ function normalizeSyncUrlValue(value){
 }
 function normalizedSyncUrl(){
   const url = normalizeSyncUrlValue(state.syncUrl || DEFAULT_SYNC_URL || el('syncUrl')?.value || '');
-  if(!url) throw new Error('אין כתובת Apps Script');
+  if(!url) throw new Error(t('syncNoUrl'));
   if(!/^https:\/\/script\.google\.com\/macros\/s\/[^/?#]+\/exec(?:\?.*)?$/.test(url)){
-    throw new Error('כתובת הסקריפט אינה תקינה. צריך URL שמתחיל ב-script.google.com/macros/s ומסתיים ב-/exec');
+    throw new Error(t('syncBadUrl'));
   }
   return url;
 }
@@ -4467,7 +4496,7 @@ function buildKeyboardBoard(){
   if(kbBuiltLang === lang() && host.firstChild) return;   // rebuild only on first use / language change
   function keyHtml(ch, clsName){
     const disp = KB_COMBINING.has(ch) ? ('◌' + ch) : ch;
-    return '<button type="button" class="kb-key' + (clsName ? ' ' + clsName : '') + '" data-ch="' + ch + '">' + disp + '</button>';
+    return '<button type="button" class="kb-key' + (clsName ? ' ' + clsName : '') + '" data-ch="' + ch + '"><span class="kb-glyph">' + disp + '</span></button>';
   }
   const cons = kbConsonants();
   host.innerHTML =
