@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.30-skins-m3';
+const APP_VERSION = '1.25.34';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
@@ -18,7 +18,7 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.27', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', eraser:'מחק', eraserActive:'מחק פעיל', eraserTitle:'הפעל/כבה מחק מקומי', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
@@ -40,7 +40,7 @@ const I18N = {
     viewJourney:'צפה במסע 🗺️', sfx:'אפקטי צליל וחגיגה', boardWordLine:'מילת לוח', syncNoUrl:'אין כתובת Apps Script', syncBadUrl:'כתובת הסקריפט אינה תקינה. צריך URL שמתחיל ב-script.google.com/macros/s ומסתיים ב-/exec'
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.27', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', eraser:'Eraser', eraserActive:'Eraser on', eraserTitle:'Toggle local eraser', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
@@ -1820,7 +1820,7 @@ function applyLanguage(){
   document.documentElement.dir = isHebrew() ? 'rtl' : 'ltr';
   document.body.classList.toggle('lang-en', !isHebrew());
   document.title = t('docTitle');
-  el('eyebrowText').textContent = t('eyebrow');
+  el('eyebrowText').textContent = 'Thai Trainer 🇹🇭 · v' + APP_VERSION;   // same in both languages; APP_VERSION is the only version to bump
   el('mainTitle').textContent = t('title');
   el('subtitleText').textContent = t('subtitle');
   el('langToggle').textContent = t('langButton');
