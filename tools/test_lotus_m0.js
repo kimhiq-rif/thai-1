@@ -12,7 +12,7 @@ const html = read('index.html');
 assert.match(app, /lotus:\s*\{[\s\S]*?sound:'lotus'/, 'Lotus must have its own success sound profile');
 assert.match(app, /lotus:\s*'#[0-9a-f]{6}'/i, 'Lotus must define a light-mode surface color');
 assert.match(app, /function animateDexDrawer\(drawer\)/, 'Dex opening animation hook must exist');
-assert.match(app, /currentTheme\(\)\.id !== 'lotus'/, 'Dex animation must be scoped to Lotus during M0');
+assert.match(app, /\^\(island\|lotus\|sakura\|mango\|rainforest\|royal\)\$/, 'Dex animation must cover only approved skins 5–10');
 assert.match(fx, /function enterLotus\(\)/, 'Lotus entrance must exist');
 assert.match(fx, /themeId === 'lotus'/, 'Lotus must be routed through SkinsFX');
 assert.match(fx, /skin-ambient-'\+themeId/, 'Theme-specific ambient layers must exist');
@@ -28,9 +28,9 @@ assert.match(css, /\.skin-fx-layer\{[^}]*pointer-events:none/, 'Entrance layers 
 assert.match(css, /prefers-reduced-motion:reduce/, 'Reduced motion must be supported');
 assert.match(css, /lotusDexCell/, 'Lotus Dex cells must animate on opening');
 
-const versionRefs = html.match(/\?v=1\.25\.34/g) || [];
-assert.strictEqual(versionRefs.length, 6, 'All CSS/JS cache-busting references must use v1.25.34');
-assert.match(html, /Thai Trainer[^<]*v1\.25\.34/, 'Visible version label must use v1.25.34');
+const versionRefs = html.match(/\?v=1\.25\.35/g) || [];
+assert.strictEqual(versionRefs.length, 6, 'All CSS/JS cache-busting references must use v1.25.35');
+assert.match(html, /Thai Trainer[^<]*v1\.25\.35/, 'Visible version label must use v1.25.35');
 for (const file of ['assets/skins/lotus/character.webp', 'assets/skins/lotus/character-512.webp']) {
   assert.ok(fs.existsSync(file), `${file} must exist`);
   assert.ok(fs.statSync(file).size < 300 * 1024, `${file} must stay below 300KB`);

@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.34-gaming-m0';
+const APP_VERSION = '1.25.35-gaming-m1';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
@@ -18,7 +18,7 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.34', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.35', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', eraser:'מחק', eraserActive:'מחק פעיל', eraserTitle:'הפעל/כבה מחק מקומי', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
@@ -35,7 +35,7 @@ const I18N = {
     dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא', voiceCheer:'מחווה קולית ב"צדקתי"', voiceCheerLocked:'ייפתח אחרי הסקין הראשון'
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.34', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.35', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', eraser:'Eraser', eraserActive:'Eraser on', eraserTitle:'Toggle local eraser', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
@@ -1750,7 +1750,11 @@ function setupPwa(){
 function currentTheme(){ return THEMES.find(x=>x.id===state.theme) || THEMES[0]; }
 function currentThemeJuice(){
   const profiles = {
+    island:{palette:['#5eead4','#2dd4bf','#fef3c7','#fb923c'],accent:'#5eead4',sound:'island'},
     lotus:{palette:['#f0abfc','#e879f9','#f9a8d4','#fef3c7'],accent:'#e879f9',sound:'lotus'},
+    sakura:{palette:['#fda4af','#fb7185','#fecdd3','#881337'],accent:'#fb7185',sound:'sakura'},
+    mango:{palette:['#fbbf24','#fb923c','#fef3c7','#84cc16'],accent:'#fbbf24',sound:'mango'},
+    rainforest:{palette:['#86efac','#2dd4bf','#bef264','#facc15'],accent:'#86efac',sound:'rainforest'},
     royal:{palette:['#f9d976','#d49b22','#fff3b0','#7f1d1d'],accent:'#f9d976',sound:'royal'},
     cyber:{palette:['#22d3ee','#38bdf8','#2563eb','#39ff88'],accent:'#22d3ee',sound:'cyber'},
     midnight:{palette:['#a5b4fc','#818cf8','#e0e7ff','#fbbf24'],accent:'#a5b4fc',sound:'midnight'},
@@ -1784,7 +1788,7 @@ function applyTheme(){
   const meta = document.querySelector('meta[name="theme-color"]');
   if(meta){
     const colors = {ocean:'#07111f',notebook:'#f3efe6',neon:'#080014',minimal:'#edf7ff',island:'#062f3a',lotus:'#180f2e',sakura:'#2a1022',mango:'#241706',rainforest:'#06261d',royal:'#1f1604',cyber:'#03051f',midnight:'#050812',coral:'#042832',festival:'#220b13',master:'#17020b'};
-    const lightColors = {lotus:'#fbf3ff',royal:'#f7edcf',cyber:'#e7f8fc',midnight:'#eef0ff',coral:'#e6fbfb',festival:'#fff3df',master:'#fff0df'};
+    const lightColors = {island:'#effcf9',lotus:'#fbf3ff',sakura:'#fff1f4',mango:'#fff8df',rainforest:'#edf9ef',royal:'#f7edcf',cyber:'#e7f8fc',midnight:'#eef0ff',coral:'#e6fbfb',festival:'#fff3df',master:'#fff0df'};
     const lightColor = state.prefs.skinMode === 'light' ? lightColors[activeTheme.id] : null;
     meta.setAttribute('content', lightColor || colors[activeTheme.id] || '#07111f');
   }
@@ -3286,10 +3290,12 @@ function showDexPopup(id, anchor){
 }
 function hideDexPopup(){ const pop = el('dexPopup'); if(pop) pop.hidden = true; }
 function animateDexDrawer(drawer){
-  if(!drawer || currentTheme().id !== 'lotus') return;
+  const themeId = currentTheme().id;
+  if(!drawer || !/^(island|lotus|sakura|mango|rainforest|royal)$/.test(themeId)) return;
   const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(reduced) return;
   drawer.classList.remove('dex-awaken');
+  drawer.setAttribute('data-dex-skin', themeId);
   drawer.querySelectorAll('.dex-cell,.tone-card').forEach((cell,index) => {
     cell.style.setProperty('--dex-delay', `${Math.min(index, 36) * 12}ms`);
   });
