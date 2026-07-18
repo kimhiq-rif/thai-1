@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.35-gaming-m1';
+const APP_VERSION = '1.25.36-mobile-keyboard';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
@@ -18,7 +18,7 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.35', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.36', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', eraser:'מחק', eraserActive:'מחק פעיל', eraserTitle:'הפעל/כבה מחק מקומי', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
@@ -35,7 +35,7 @@ const I18N = {
     dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא', voiceCheer:'מחווה קולית ב"צדקתי"', voiceCheerLocked:'ייפתח אחרי הסקין הראשון'
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.35', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.36', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', eraser:'Eraser', eraserActive:'Eraser on', eraserTitle:'Toggle local eraser', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
@@ -4487,8 +4487,13 @@ function buildKeyboardBoard(){
   const host = el('keyboardBoard'); if(!host) return;
   if(kbBuiltLang === lang() && host.firstChild) return;   // rebuild only on first use / language change
   function keyHtml(ch, clsName){
-    const disp = KB_COMBINING.has(ch) ? ('◌' + ch) : ch;
-    return '<button type="button" class="kb-key' + (clsName ? ' ' + clsName : '') + '" data-ch="' + ch + '">' + disp + '</button>';
+    const combining = KB_COMBINING.has(ch);
+    const disp = combining ? ('◌' + ch) : ch;
+    const item = BOARD_ITEMS.find(x => x.symbol === ch);
+    const label = item
+      ? `${item.name || ch} — ${isHebrew() ? (item.localHe || item.he || '') : (item.localEn || item.sound || '')}`
+      : ch;
+    return '<button type="button" dir="ltr" class="kb-key' + (combining ? ' is-combining' : '') + (clsName ? ' ' + clsName : '') + '" data-ch="' + escapeHtml(ch) + '" aria-label="' + escapeHtml(label) + '" title="' + escapeHtml(label) + '"><span class="kb-glyph" aria-hidden="true">' + escapeHtml(disp) + '</span></button>';
   }
   const cons = kbConsonants();
   host.innerHTML =
