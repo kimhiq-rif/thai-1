@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.34';
+const APP_VERSION = '1.25.35';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
@@ -1533,7 +1533,11 @@ const THEMES = [
   {id:'festival', he:'Lantern Festival 🏮', en:'Lantern Festival 🏮', points:420, premium:true},
   {id:'master', he:'Thai Master Aura 🔥', en:'Thai Master Aura 🔥', points:540, premium:true}
 ];
-const DEFAULT_SYNC_URL = 'https://script.google.com/macros/s/AKfycbzGmWyS8bXJJMPzV9gMB9yQ1PYWO-IjAp0iPmSVt7Y-ZNxX2fFMXjR0UKZvIZV3ABZG/exec';
+const DEFAULT_SYNC_URL = 'https://script.google.com/macros/s/AKfycbzYtqebOW77JYzd8OEHzDFzxscn6P8F-kTJIKfzEYS9B-Xz2lmcPYoAMhlmIfEzji8/exec';
+// The pre-gzip deployment (v1.10). It rejects compressed payloads, so any device
+// still pointing at it — even one that saved it as a "custom" URL — is force-migrated
+// to DEFAULT_SYNC_URL on load (see init) so uploads reach the v1.11+ endpoint.
+const RETIRED_SYNC_URLS = ['https://script.google.com/macros/s/AKfycbzGmWyS8bXJJMPzV9gMB9yQ1PYWO-IjAp0iPmSVt7Y-ZNxX2fFMXjR0UKZvIZV3ABZG/exec'];
 let deferredInstallPrompt = null;
 let state = loadState();
 let current = null;
@@ -1617,6 +1621,8 @@ function saveState(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); 
 
 function init(){
   setupLevels(); setupModes(); setupCanvas(); setupEvents(); setupPwa(); applyTheme(); applyLanguage(); runQA();
+  // v1.25.35: force-migrate off the retired pre-gzip deployment even if saved as custom.
+  if(state.syncUrl && RETIRED_SYNC_URLS.includes(state.syncUrl.replace(/\/$/, ''))){ state.syncUrl = DEFAULT_SYNC_URL; state.syncUrlCustom = false; saveState(); }
   // v1.25.7: keep sync simple for normal users. Old bad URLs saved in localStorage are reset to the official endpoint.
   if(!state.syncUrl || (!state.syncUrlCustom && state.syncUrl !== DEFAULT_SYNC_URL)){ state.syncUrl = DEFAULT_SYNC_URL; state.syncUrlCustom = false; saveState(); }
   el('syncUrl').value = state.syncUrl || DEFAULT_SYNC_URL;
@@ -3984,31 +3990,61 @@ async function importLocalBackup(event){
   }catch(err){ setSyncStatus(t('importErr') + err.message, 'error'); }
 }
 
-function encodePayload(obj){
-  return btoa(unescape(encodeURIComponent(JSON.stringify(obj))));
+function bytesToBase64(bytes){
+  let bin = '';
+  const chunk = 0x8000;   // build the binary string in chunks so large states don't overflow the call stack
+  for(let i=0; i<bytes.length; i+=chunk){
+    bin += String.fromCharCode.apply(null, bytes.subarray(i, i+chunk));
+  }
+  return btoa(bin);
 }
-function decodePayload(str){
+function base64ToBytes(b64){
+  const norm = b64.replace(/-/g, '+').replace(/_/g, '/');
+  const padded = norm + '='.repeat((4 - (norm.length % 4)) % 4);
+  const bin = atob(padded);
+  const bytes = new Uint8Array(bin.length);
+  for(let i=0; i<bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return bytes;
+}
+function gzipSupported(){
+  return typeof CompressionStream !== 'undefined' && typeof DecompressionStream !== 'undefined';
+}
+async function gzipStringToBase64(str){
+  const input = new TextEncoder().encode(str);
+  const stream = new Blob([input]).stream().pipeThrough(new CompressionStream('gzip'));
+  const buf = await new Response(stream).arrayBuffer();
+  return bytesToBase64(new Uint8Array(buf));
+}
+async function gunzipBytesToString(bytes){
+  const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'));
+  return await new Response(stream).text();
+}
+// Payload = base64(gzip(JSON)) where supported, else base64(UTF-8 JSON). A full
+// state's plain base64 (~97KB) exceeds the 50000-char Sheets cell limit and gets
+// rejected; gzip brings it to ~14KB. The server (v1.11+) stores either form.
+async function encodePayload(obj){
+  const json = JSON.stringify(obj);
+  if(gzipSupported()){
+    try{ return await gzipStringToBase64(json); }
+    catch(err){ /* fall through to uncompressed */ }
+  }
+  return btoa(unescape(encodeURIComponent(json)));
+}
+async function decodePayload(str){
   if(str && typeof str === 'object') return str;
   const raw = String(str || '').trim();
   if(!raw) throw new Error(isHebrew() ? 'הענן החזיר שמירה ריקה.' : 'The cloud returned an empty save.');
   if(raw.startsWith('<')) throw new Error(isHebrew() ? 'הסקריפט החזיר דף HTML במקום נתוני התקדמות. ודא שה־Apps Script נפרס כ-Web app עם גישה Anyone.' : 'The script returned HTML instead of progress data. Make sure Apps Script is deployed as a Web app with Anyone access.');
   if(raw.startsWith('{')) return JSON.parse(raw);
-  const variants = [
-    raw,
-    raw.replace(/-/g, '+').replace(/_/g, '/'),
-  ].map(value => value + '='.repeat((4 - (value.length % 4)) % 4));
-  let lastErr = null;
-  for(const value of variants){
-    try{
-      const binary = atob(value);
-      const bytes = Uint8Array.from(binary, ch => ch.charCodeAt(0));
-      const text = new TextDecoder('utf-8').decode(bytes);
-      return JSON.parse(text);
-    }catch(err){
-      lastErr = err;
-    }
+  let bytes;
+  try{ bytes = base64ToBytes(raw); }
+  catch(err){ throw new Error((isHebrew() ? 'השמירה בענן אינה מקודדת בפורמט שהאפליקציה יודעת לקרוא: ' : 'Cloud save is not encoded in a readable format: ') + (err?.message || 'decode failed')); }
+  // gzip streams start with 0x1f 0x8b → decompress; otherwise it's legacy plain UTF-8 JSON.
+  if(bytes.length >= 2 && bytes[0] === 0x1f && bytes[1] === 0x8b){
+    if(!gzipSupported()) throw new Error(isHebrew() ? 'השמירה דחוסה אך הדפדפן לא תומך בפענוח. עדכן את הדפדפן ונסה שוב.' : 'The save is compressed but this browser cannot decompress it. Please update the browser and try again.');
+    return JSON.parse(await gunzipBytesToString(bytes));
   }
-  throw new Error((isHebrew() ? 'השמירה בענן אינה מקודדת בפורמט שהאפליקציה יודעת לקרוא: ' : 'Cloud save is not encoded in a readable format: ') + (lastErr?.message || 'decode failed'));
+  return JSON.parse(new TextDecoder('utf-8').decode(bytes));
 }
 function isTrainerState(value){
   return !!(value && typeof value === 'object' && (
@@ -4177,22 +4213,61 @@ function iframeBridgeDownload(params, timeoutMs=15000){
     iframe.src = url;
   });
 }
+function stateRichness(s){
+  return {
+    total: (s && s.stats && s.stats.total) || 0,
+    points: (s && s.coach && s.coach.points) || 0,
+    skins: (s && s.coach && Array.isArray(s.coach.unlocked)) ? s.coach.unlocked.length : 0,
+    items: (s && s.itemStats) ? Object.keys(s.itemStats).length : 0,
+  };
+}
+// "Richer" = cloud leads on at least one headline metric and local leads on none —
+// i.e. the local save looks like a subset/behind the cloud. Ambiguous cases (each
+// ahead on something) pass through without nagging.
+function cloudIsRicher(cloud, local){
+  const c = stateRichness(cloud), l = stateRichness(local);
+  const cloudAhead = c.total > l.total || c.points > l.points || c.skins > l.skins || c.items > l.items;
+  const localAhead = l.total > c.total || l.points > c.points || l.skins > c.skins || l.items > c.items;
+  return cloudAhead && !localAhead;
+}
+function overwriteWarnMsg(cloud, local){
+  const c = stateRichness(cloud), l = stateRichness(local);
+  return isHebrew()
+    ? `שים לב: בענן יש התקדמות גדולה יותר מהמכשיר הזה.\n\nענן: ${c.total} שאלות · ${c.points} נק׳ · ${c.skins} סקינים\nמכשיר זה: ${l.total} שאלות · ${l.points} נק׳ · ${l.skins} סקינים\n\nלהעלות בכל זאת ולדרוס את שמירת הענן?`
+    : `Heads up: the cloud has more progress than this device.\n\nCloud: ${c.total} questions · ${c.points} pts · ${c.skins} skins\nThis device: ${l.total} questions · ${l.points} pts · ${l.skins} skins\n\nUpload anyway and overwrite the cloud save?`;
+}
 async function syncUpload(){
   try{
     setSyncBusy(true);
     setSyncStatus(t('syncWorking'), 'loading');
+    const uid = cleanUserId(el('userIdInput').value || state.userId);
+    // Overwrite guard: never silently clobber a richer cloud save with a thinner
+    // local one — a fresh browser or thin device could otherwise wipe real progress
+    // in a single click (exactly how armon's cloud kept losing to a default state).
+    try{
+      const existing = await downloadViaBestRoute(uid);
+      const cloud = existing && (existing.state && isTrainerState(existing.state)
+        ? existing.state
+        : (existing.data ? await decodePayload(existing.data) : null));
+      if(cloud && isTrainerState(cloud) && cloudIsRicher(cloud, state)){
+        if(!confirm(overwriteWarnMsg(cloud, state))){
+          setSyncStatus(isHebrew() ? 'השמירה בוטלה — הענן לא שונה.' : 'Save cancelled — cloud unchanged.', 'neutral');
+          return;
+        }
+      }
+    }catch(guardErr){ /* cannot read the cloud to compare — proceed with the save */ }
     const safeState = {...state, lastSync: Date.now()};
-    const data = encodePayload(safeState);
+    const data = await encodePayload(safeState);
     // First try JSONP, because it gives a real success/error response.
     try{
-      const json = await jsonpRequest({action:'upload', userId: cleanUserId(el('userIdInput').value || state.userId), data});
+      const json = await jsonpRequest({action:'upload', userId: uid, data});
       if(!json.ok) throw new Error(json.error || 'sync failed');
       state.lastSync = Date.now(); saveState(); updateSyncHealth(); setSyncStatus(t('uploadOk'), 'ok');
       return;
     }catch(jsonpErr){
       // Some browsers/extensions block script.googleusercontent.com as a script.
       // Fallback: submit a hidden form POST. It avoids CORS and usually bypasses script blockers.
-      await formPostUpload({action:'upload', userId: cleanUserId(el('userIdInput').value || state.userId), data});
+      await formPostUpload({action:'upload', userId: uid, data});
       state.lastSync = Date.now(); saveState(); updateSyncHealth(); setSyncStatus(t('uploadSent'), 'ok');
     }
   } catch(err){ setSyncStatus(t('uploadErr')+err.message, 'error'); }
@@ -4208,7 +4283,7 @@ async function syncDownload(){
     saveState();
     let json = await downloadViaBestRoute(userId);
     if(!json.data && !json.state) throw new Error(noCloudDataMessage(userId));
-    const cloudState = json.state && isTrainerState(json.state) ? json.state : decodePayload(json.data);
+    const cloudState = json.state && isTrainerState(json.state) ? json.state : await decodePayload(json.data);
     if(!isTrainerState(cloudState)) throw new Error(invalidCloudDataMessage(userId));
     state = {...defaultState(),...cloudState, syncUrl:state.syncUrl || DEFAULT_SYNC_URL, lang:state.lang, userId};
     el('userIdInput').value = userId;
