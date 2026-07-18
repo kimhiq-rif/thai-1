@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.37-mobile-keyboard-v2';
+const APP_VERSION = '1.25.38';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
@@ -18,7 +18,7 @@ const TONES = [
 
 const I18N = {
   he: {
-    langButton:'English', eyebrow:'Thai Trainer 🇹🇭 · v1.25.37', title:'קריאה, כתיבה, טונים ומשמעות',
+    langButton:'English', title:'קריאה, כתיבה, טונים ומשמעות',
     subtitle:'כותבים לבד, מציגים תשובה, מתקנים אם צריך, ואז מסמנים צדקתי / טעיתי.',
     levelLabel:'רמת קושי', modeLabel:'מצב שאלה', newQuestion:'שאלה חדשה', clear:'נקה כתיבה', eraser:'מחק', eraserActive:'מחק פעיל', eraserTitle:'הפעל/כבה מחק מקומי', showAnswer:'הצג תשובה', correct:'צדקתי', wrong:'טעיתי',
     correctStat:'נכונות', wrongStat:'טעויות', streakStat:'רצף', accuracyStat:'דיוק',
@@ -32,10 +32,15 @@ const I18N = {
     syncSaved:'כתובת הסנכרון נשמרה.', syncUrlReset:'כתובת ברירת המחדל שוחזרה.', uploadOk:'ההתקדמות נשמרה בענן ✅', uploadSent:'ההתקדמות נשלחה לענן ✅', downloadOk:'ההתקדמות נטענה בהצלחה ✅', uploadErr:'שגיאת שמירה: ', downloadErr:'שגיאת טעינה: ', syncTestOk:'החיבור ל־Google Apps Script עובד ✅', syncTestErr:'בדיקת החיבור נכשלה: ', scriptBlockedHe:'הטעינה מגוגל נכשלה. האפליקציה תנסה מסלול חלופי; אם זה חוזר, לחץ "פתח בדיקה" כדי לראות את תשובת Google.', shareOk:'קישור לאפליקציה הועתק ✅', shareErr:'לא הצלחתי לשתף כרגע. אפשר להעתיק את כתובת האתר ידנית.',
     syncWorking:'עובד...', lastSync:'סנכרון אחרון', neverSynced:'עדיין לא סונכרן', localBackup:'גיבוי מקומי', restoreBackup:'שחזר גיבוי', exportOk:'קובץ גיבוי נשמר במחשב ✅', importOk:'הגיבוי נטען בהצלחה ✅', importErr:'שגיאת שחזור גיבוי: ', importConfirm:'לטעון את הגיבוי ולהחליף את ההתקדמות הנוכחית?',
     installReady:'אפשר להתקין את האפליקציה למסך הבית.', installDone:'אם הופיעה בקשת התקנה, אשר אותה בדפדפן.', installIos:'באייפון/אייפד: לחץ שיתוף ואז "הוסף למסך הבית".', installManual:'אם לא נפתחה התקנה אוטומטית, השתמש בתפריט הדפדפן ובחר Install app / Add to Home screen.',
-    dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא', voiceCheer:'מחווה קולית ב"צדקתי"', voiceCheerLocked:'ייפתח אחרי הסקין הראשון'
+    dailyPractice:'אימון יומי', dailyOn:'אימון יומי פעיל', dailyDone:'האימון היומי הושלם', dueItems:'לחזרה', weakItems:'חלשים', strongItems:'חזקים', todayGoal:'יעד היום', achievements:'הישגים', penSize:'עובי עט', skins:'סקינים פרימיום', coachPoints:'נק׳ מאמן', nextSkin:'הסקין הבא', voiceCheer:'מחווה קולית ב"צדקתי"', voiceCheerLocked:'ייפתח אחרי הסקין הראשון',
+    docTitle:'Thai Trainer — תרגול תאית', controlsAria:'בקרות תרגול', levelSelectAria:'בחר רמת קושי', modeSelectAria:'בחר מצב שאלה', canvasAria:'אזור כתיבה חופשית', close:'סגור',
+    inputModeAria:'מצב קלט', inputModeWrite:'כתיבה ביד', inputModeType:'מקלדת', inkJudge:'שפוט את הכתב ✦', inkReplay:'שחזר את הכתב ▶', inkGif:'שמור GIF ⤓',
+    dexTitle:'דקס אותיות', dexNote:'שלוט באות (תרגול רמה 1.2) והיא תיצבע זהב. השלם את כל 44 העיצורים → בונוס! לחיצה ארוכה על אות = מידע.',
+    vowelDexToggle:'דקס התנועות', vowelDexNote:'לחיצה ארוכה על תנועה = שם, איך מתפקדת, ותכונות מיוחדות.',
+    viewJourney:'צפה במסע 🗺️', sfx:'אפקטי צליל וחגיגה', boardWordLine:'מילת לוח', syncNoUrl:'אין כתובת Apps Script', syncBadUrl:'כתובת הסקריפט אינה תקינה. צריך URL שמתחיל ב-script.google.com/macros/s ומסתיים ב-/exec'
   },
   en: {
-    langButton:'עברית', eyebrow:'Thai Trainer 🇹🇭 · v1.25.37', title:'Reading, writing, tones and meaning',
+    langButton:'עברית', title:'Reading, writing, tones and meaning',
     subtitle:'Write it yourself, reveal the answer, fix it if needed, then mark correct / wrong.',
     levelLabel:'Difficulty level', modeLabel:'Question mode', newQuestion:'New question', clear:'Clear writing', eraser:'Eraser', eraserActive:'Eraser on', eraserTitle:'Toggle local eraser', showAnswer:'Show answer', correct:'I got it right', wrong:'I got it wrong',
     correctStat:'Correct', wrongStat:'Wrong', streakStat:'Streak', accuracyStat:'Accuracy',
@@ -49,7 +54,12 @@ const I18N = {
     syncSaved:'Sync URL saved.', syncUrlReset:'Default sync URL restored.', uploadOk:'Progress saved to cloud ✅', uploadSent:'Progress was sent to cloud ✅', downloadOk:'Progress loaded successfully ✅', uploadErr:'Save error: ', downloadErr:'Load error: ', syncTestOk:'Google Apps Script connection works ✅', syncTestErr:'Connection test failed: ', scriptBlockedHe:'Google loading failed. The app will try a fallback route; if it repeats, click “Open test” to inspect the Google response.', shareOk:'App link copied ✅', shareErr:'Could not share right now. Copy the site address manually.',
     syncWorking:'Working...', lastSync:'Last sync', neverSynced:'Not synced yet', localBackup:'Local backup', restoreBackup:'Restore backup', exportOk:'Backup file saved ✅', importOk:'Backup restored ✅', importErr:'Backup restore error: ', importConfirm:'Load this backup and replace current progress?',
     installReady:'The app can be installed to your home screen.', installDone:'If an install prompt appeared, confirm it in the browser.', installIos:'On iPhone/iPad: tap Share, then Add to Home Screen.', installManual:'If automatic install did not open, use the browser menu and choose Install app / Add to Home screen.',
-    dailyPractice:'Daily practice', dailyOn:'Daily practice active', dailyDone:'Daily practice complete', dueItems:'Due', weakItems:'Weak', strongItems:'Strong', todayGoal:'Today goal', achievements:'Achievements', penSize:'Pen size', skins:'Premium skins', coachPoints:'coach pts', nextSkin:'Next skin', voiceCheer:'Voice cheer on correct', voiceCheerLocked:'Unlocks after first skin'
+    dailyPractice:'Daily practice', dailyOn:'Daily practice active', dailyDone:'Daily practice complete', dueItems:'Due', weakItems:'Weak', strongItems:'Strong', todayGoal:'Today goal', achievements:'Achievements', penSize:'Pen size', skins:'Premium skins', coachPoints:'coach pts', nextSkin:'Next skin', voiceCheer:'Voice cheer on correct', voiceCheerLocked:'Unlocks after first skin',
+    docTitle:'Thai Trainer — Thai practice', controlsAria:'Practice controls', levelSelectAria:'Choose difficulty level', modeSelectAria:'Choose question mode', canvasAria:'Free writing area', close:'Close',
+    inputModeAria:'Input mode', inputModeWrite:'Handwrite', inputModeType:'Keyboard', inkJudge:'Judge my writing ✦', inkReplay:'Replay writing ▶', inkGif:'Save GIF ⤓',
+    dexTitle:'Letter Dex', dexNote:'Master a letter (Level 1.2 practice) and it turns gold. Complete all 44 consonants → bonus! Long-press a letter for info.',
+    vowelDexToggle:'Vowel Dex', vowelDexNote:'Long-press a vowel for its name, how it works, and special traits.',
+    viewJourney:'View the journey 🗺️', sfx:'Sound & celebration effects', boardWordLine:'Board word', syncNoUrl:'No Apps Script URL set', syncBadUrl:'The script URL is invalid. It must start with script.google.com/macros/s and end with /exec'
   }
 };
 function lang(){ return state && state.lang ? state.lang : 'he'; }
@@ -1114,8 +1124,8 @@ function thaiCharInfoHtml(ch){
     const x = THAI_CONSONANT_INFO[ch];
     const usage = isHebrew() ? (x.usageHe || '') : (x.usageEn || '');
     const boardLine = isHebrew()
-      ? `מילת לוח: ${x.word} (${x.wordRoman}) — ${x.he} / ${x.en}`
-      : `Board word: ${x.word} (${x.wordRoman}) — ${x.en} / ${x.he}`;
+      ? `${t('boardWordLine')}: ${x.word} (${x.wordRoman}) — ${x.he} / ${x.en}`
+      : `${t('boardWordLine')}: ${x.word} (${x.wordRoman}) — ${x.en}`;
     if(isHebrew()){
       return `<div><b>${escapeHtml(ch)} — ${escapeHtml(x.name)} <span dir="ltr">(${escapeHtml(x.romanName)})</span></b></div><div>${escapeHtml(boardLine)}</div><div>קבוצה: ${escapeHtml(consonantClassLabel(x.cls))}</div><div>תחילה: <span dir="ltr">${escapeHtml(x.initial)}</span> · סוף: <span dir="ltr">${escapeHtml(x.final)}</span></div><div>${escapeHtml(finalKindLabel(x.finalKind))}</div>${usage ? `<div class="char-note">${escapeHtml(usage)}</div>` : ''}`;
     }
@@ -1523,7 +1533,11 @@ const THEMES = [
   {id:'festival', he:'Lantern Festival 🏮', en:'Lantern Festival 🏮', points:420, premium:true},
   {id:'master', he:'Thai Master Aura 🔥', en:'Thai Master Aura 🔥', points:540, premium:true}
 ];
-const DEFAULT_SYNC_URL = 'https://script.google.com/macros/s/AKfycbzGmWyS8bXJJMPzV9gMB9yQ1PYWO-IjAp0iPmSVt7Y-ZNxX2fFMXjR0UKZvIZV3ABZG/exec';
+const DEFAULT_SYNC_URL = 'https://script.google.com/macros/s/AKfycbzYtqebOW77JYzd8OEHzDFzxscn6P8F-kTJIKfzEYS9B-Xz2lmcPYoAMhlmIfEzji8/exec';
+// The pre-gzip deployment (v1.10). It rejects compressed payloads, so any device
+// still pointing at it — even one that saved it as a "custom" URL — is force-migrated
+// to DEFAULT_SYNC_URL on load (see init) so uploads reach the v1.11+ endpoint.
+const RETIRED_SYNC_URLS = ['https://script.google.com/macros/s/AKfycbzGmWyS8bXJJMPzV9gMB9yQ1PYWO-IjAp0iPmSVt7Y-ZNxX2fFMXjR0UKZvIZV3ABZG/exec'];
 let deferredInstallPrompt = null;
 let state = loadState();
 let current = null;
@@ -1607,6 +1621,8 @@ function saveState(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); 
 
 function init(){
   setupLevels(); setupModes(); setupCanvas(); setupEvents(); setupPwa(); applyTheme(); applyLanguage(); runQA();
+  // v1.25.35: force-migrate off the retired pre-gzip deployment even if saved as custom.
+  if(state.syncUrl && RETIRED_SYNC_URLS.includes(state.syncUrl.replace(/\/$/, ''))){ state.syncUrl = DEFAULT_SYNC_URL; state.syncUrlCustom = false; saveState(); }
   // v1.25.7: keep sync simple for normal users. Old bad URLs saved in localStorage are reset to the official endpoint.
   if(!state.syncUrl || (!state.syncUrlCustom && state.syncUrl !== DEFAULT_SYNC_URL)){ state.syncUrl = DEFAULT_SYNC_URL; state.syncUrlCustom = false; saveState(); }
   el('syncUrl').value = state.syncUrl || DEFAULT_SYNC_URL;
@@ -1814,7 +1830,8 @@ function applyLanguage(){
   document.documentElement.lang = lang();
   document.documentElement.dir = isHebrew() ? 'rtl' : 'ltr';
   document.body.classList.toggle('lang-en', !isHebrew());
-  el('eyebrowText').textContent = t('eyebrow');
+  document.title = t('docTitle');
+  el('eyebrowText').textContent = 'Thai Trainer 🇹🇭 · v' + APP_VERSION;   // same in both languages; APP_VERSION is the only version to bump
   el('mainTitle').textContent = t('title');
   el('subtitleText').textContent = t('subtitle');
   el('langToggle').textContent = t('langButton');
@@ -1824,12 +1841,22 @@ function applyLanguage(){
   }
   applyTheme();
   el('installBtn').textContent = t('install');
+  if(el('controlsPanel')) el('controlsPanel').setAttribute('aria-label', t('controlsAria'));
   el('levelLabel').textContent = t('levelLabel');
+  el('levelSelect').setAttribute('aria-label', t('levelSelectAria'));
   el('modeLabelText').textContent = t('modeLabel');
+  el('modeSelect').setAttribute('aria-label', t('modeSelectAria'));
   el('newQuestionBtn').textContent = t('newQuestion');
   if(el('dailyPracticeBtn')) el('dailyPracticeBtn').textContent = state.daily?.active ? t('dailyOn') : t('dailyPractice');
   el('clearBtn').textContent = t('clear');
   updateEraserButton();
+  if(el('inputModeToggle')) el('inputModeToggle').setAttribute('aria-label', t('inputModeAria'));
+  if(el('inputModeWriteLabel')) el('inputModeWriteLabel').textContent = t('inputModeWrite');
+  if(el('inputModeTypeLabel')) el('inputModeTypeLabel').textContent = t('inputModeType');
+  if(el('writeCanvas')) el('writeCanvas').setAttribute('aria-label', t('canvasAria'));
+  if(el('inkJudgeBtn')) el('inkJudgeBtn').textContent = t('inkJudge');
+  if(el('inkReplayBtn')) el('inkReplayBtn').textContent = t('inkReplay');
+  if(el('inkGifBtn')) el('inkGifBtn').textContent = t('inkGif');
   el('showAnswerBtn').textContent = t('showAnswer');
   el('correctBtn').textContent = t('correct');
   el('wrongBtn').textContent = t('wrong');
@@ -1851,8 +1878,15 @@ function applyLanguage(){
   if(el('premiumPenHint')) el('premiumPenHint').textContent = isHebrew()
     ? 'עט פרימיום: קו רך יותר, עובי משתנה לפי מהירות הכתיבה, והילה כחולה סביב הדיו.'
     : 'Premium pen: smoother line, width that varies with writing speed, and a blue glow around the ink.';
+  if(el('dexTitle')) el('dexTitle').textContent = t('dexTitle');
+  if(el('dexNote')) el('dexNote').textContent = t('dexNote');
+  if(el('vowelDexToggleLabel')) el('vowelDexToggleLabel').textContent = t('vowelDexToggle');
+  if(el('vowelDexNote')) el('vowelDexNote').textContent = t('vowelDexNote');
   if(el('skinsTitle')) el('skinsTitle').textContent = t('skins');
+  if(el('viewJourneyBtn')) el('viewJourneyBtn').textContent = t('viewJourney');
   if(el('voiceCheerLabel')) el('voiceCheerLabel').textContent = t('voiceCheer');
+  if(el('sfxLabel')) el('sfxLabel').textContent = t('sfx');
+  if(el('dailyBonusModalClose')) el('dailyBonusModalClose').setAttribute('aria-label', t('close'));
   if(el('syncAdvancedSummary')) el('syncAdvancedSummary').textContent = t('syncAdvanced');
   el('syncTitle').textContent = t('syncTitle');
   el('syncDescription').textContent = t('syncDescription');
@@ -1877,6 +1911,7 @@ function applyLanguage(){
   if(el('syncStatus').textContent === 'מוכן.' || el('syncStatus').textContent === 'Ready.') el('syncStatus').textContent = t('ready');
   setupLevels();
   setupModes();
+  updateAchievementPanel();   // skin grid, token wallet and coach badge bake the language in at render time
   if(current) renderQuestion();
 }
 function toggleLanguage(){
@@ -2979,7 +3014,7 @@ function renderToneChoices(item){
   const toneParts = item.tone.split('-');
   let options;
   if(toneParts.length === 1){
-    options = TONES.map(tt=>({id:tt.id, label: isHebrew() ? `${tt.he} (${tt.en})` : `${tt.en} (${tt.he})`}));
+    options = TONES.map(tt=>({id:tt.id, label: isHebrew() ? `${tt.he} (${tt.en})` : tt.en}));
   } else {
     options = [item.tone, ...makeToneDistractors(item.tone)].map(t=>({id:t,label:toneToHeb(t)}));
     options.sort(()=>Math.random()-0.5);
@@ -3976,31 +4011,61 @@ async function importLocalBackup(event){
   }catch(err){ setSyncStatus(t('importErr') + err.message, 'error'); }
 }
 
-function encodePayload(obj){
-  return btoa(unescape(encodeURIComponent(JSON.stringify(obj))));
+function bytesToBase64(bytes){
+  let bin = '';
+  const chunk = 0x8000;   // build the binary string in chunks so large states don't overflow the call stack
+  for(let i=0; i<bytes.length; i+=chunk){
+    bin += String.fromCharCode.apply(null, bytes.subarray(i, i+chunk));
+  }
+  return btoa(bin);
 }
-function decodePayload(str){
+function base64ToBytes(b64){
+  const norm = b64.replace(/-/g, '+').replace(/_/g, '/');
+  const padded = norm + '='.repeat((4 - (norm.length % 4)) % 4);
+  const bin = atob(padded);
+  const bytes = new Uint8Array(bin.length);
+  for(let i=0; i<bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return bytes;
+}
+function gzipSupported(){
+  return typeof CompressionStream !== 'undefined' && typeof DecompressionStream !== 'undefined';
+}
+async function gzipStringToBase64(str){
+  const input = new TextEncoder().encode(str);
+  const stream = new Blob([input]).stream().pipeThrough(new CompressionStream('gzip'));
+  const buf = await new Response(stream).arrayBuffer();
+  return bytesToBase64(new Uint8Array(buf));
+}
+async function gunzipBytesToString(bytes){
+  const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'));
+  return await new Response(stream).text();
+}
+// Payload = base64(gzip(JSON)) where supported, else base64(UTF-8 JSON). A full
+// state's plain base64 (~97KB) exceeds the 50000-char Sheets cell limit and gets
+// rejected; gzip brings it to ~14KB. The server (v1.11+) stores either form.
+async function encodePayload(obj){
+  const json = JSON.stringify(obj);
+  if(gzipSupported()){
+    try{ return await gzipStringToBase64(json); }
+    catch(err){ /* fall through to uncompressed */ }
+  }
+  return btoa(unescape(encodeURIComponent(json)));
+}
+async function decodePayload(str){
   if(str && typeof str === 'object') return str;
   const raw = String(str || '').trim();
   if(!raw) throw new Error(isHebrew() ? 'הענן החזיר שמירה ריקה.' : 'The cloud returned an empty save.');
   if(raw.startsWith('<')) throw new Error(isHebrew() ? 'הסקריפט החזיר דף HTML במקום נתוני התקדמות. ודא שה־Apps Script נפרס כ-Web app עם גישה Anyone.' : 'The script returned HTML instead of progress data. Make sure Apps Script is deployed as a Web app with Anyone access.');
   if(raw.startsWith('{')) return JSON.parse(raw);
-  const variants = [
-    raw,
-    raw.replace(/-/g, '+').replace(/_/g, '/'),
-  ].map(value => value + '='.repeat((4 - (value.length % 4)) % 4));
-  let lastErr = null;
-  for(const value of variants){
-    try{
-      const binary = atob(value);
-      const bytes = Uint8Array.from(binary, ch => ch.charCodeAt(0));
-      const text = new TextDecoder('utf-8').decode(bytes);
-      return JSON.parse(text);
-    }catch(err){
-      lastErr = err;
-    }
+  let bytes;
+  try{ bytes = base64ToBytes(raw); }
+  catch(err){ throw new Error((isHebrew() ? 'השמירה בענן אינה מקודדת בפורמט שהאפליקציה יודעת לקרוא: ' : 'Cloud save is not encoded in a readable format: ') + (err?.message || 'decode failed')); }
+  // gzip streams start with 0x1f 0x8b → decompress; otherwise it's legacy plain UTF-8 JSON.
+  if(bytes.length >= 2 && bytes[0] === 0x1f && bytes[1] === 0x8b){
+    if(!gzipSupported()) throw new Error(isHebrew() ? 'השמירה דחוסה אך הדפדפן לא תומך בפענוח. עדכן את הדפדפן ונסה שוב.' : 'The save is compressed but this browser cannot decompress it. Please update the browser and try again.');
+    return JSON.parse(await gunzipBytesToString(bytes));
   }
-  throw new Error((isHebrew() ? 'השמירה בענן אינה מקודדת בפורמט שהאפליקציה יודעת לקרוא: ' : 'Cloud save is not encoded in a readable format: ') + (lastErr?.message || 'decode failed'));
+  return JSON.parse(new TextDecoder('utf-8').decode(bytes));
 }
 function isTrainerState(value){
   return !!(value && typeof value === 'object' && (
@@ -4030,9 +4095,9 @@ function normalizeSyncUrlValue(value){
 }
 function normalizedSyncUrl(){
   const url = normalizeSyncUrlValue(state.syncUrl || DEFAULT_SYNC_URL || el('syncUrl')?.value || '');
-  if(!url) throw new Error('אין כתובת Apps Script');
+  if(!url) throw new Error(t('syncNoUrl'));
   if(!/^https:\/\/script\.google\.com\/macros\/s\/[^/?#]+\/exec(?:\?.*)?$/.test(url)){
-    throw new Error('כתובת הסקריפט אינה תקינה. צריך URL שמתחיל ב-script.google.com/macros/s ומסתיים ב-/exec');
+    throw new Error(t('syncBadUrl'));
   }
   return url;
 }
@@ -4169,22 +4234,61 @@ function iframeBridgeDownload(params, timeoutMs=15000){
     iframe.src = url;
   });
 }
+function stateRichness(s){
+  return {
+    total: (s && s.stats && s.stats.total) || 0,
+    points: (s && s.coach && s.coach.points) || 0,
+    skins: (s && s.coach && Array.isArray(s.coach.unlocked)) ? s.coach.unlocked.length : 0,
+    items: (s && s.itemStats) ? Object.keys(s.itemStats).length : 0,
+  };
+}
+// "Richer" = cloud leads on at least one headline metric and local leads on none —
+// i.e. the local save looks like a subset/behind the cloud. Ambiguous cases (each
+// ahead on something) pass through without nagging.
+function cloudIsRicher(cloud, local){
+  const c = stateRichness(cloud), l = stateRichness(local);
+  const cloudAhead = c.total > l.total || c.points > l.points || c.skins > l.skins || c.items > l.items;
+  const localAhead = l.total > c.total || l.points > c.points || l.skins > c.skins || l.items > c.items;
+  return cloudAhead && !localAhead;
+}
+function overwriteWarnMsg(cloud, local){
+  const c = stateRichness(cloud), l = stateRichness(local);
+  return isHebrew()
+    ? `שים לב: בענן יש התקדמות גדולה יותר מהמכשיר הזה.\n\nענן: ${c.total} שאלות · ${c.points} נק׳ · ${c.skins} סקינים\nמכשיר זה: ${l.total} שאלות · ${l.points} נק׳ · ${l.skins} סקינים\n\nלהעלות בכל זאת ולדרוס את שמירת הענן?`
+    : `Heads up: the cloud has more progress than this device.\n\nCloud: ${c.total} questions · ${c.points} pts · ${c.skins} skins\nThis device: ${l.total} questions · ${l.points} pts · ${l.skins} skins\n\nUpload anyway and overwrite the cloud save?`;
+}
 async function syncUpload(){
   try{
     setSyncBusy(true);
     setSyncStatus(t('syncWorking'), 'loading');
+    const uid = cleanUserId(el('userIdInput').value || state.userId);
+    // Overwrite guard: never silently clobber a richer cloud save with a thinner
+    // local one — a fresh browser or thin device could otherwise wipe real progress
+    // in a single click (exactly how armon's cloud kept losing to a default state).
+    try{
+      const existing = await downloadViaBestRoute(uid);
+      const cloud = existing && (existing.state && isTrainerState(existing.state)
+        ? existing.state
+        : (existing.data ? await decodePayload(existing.data) : null));
+      if(cloud && isTrainerState(cloud) && cloudIsRicher(cloud, state)){
+        if(!confirm(overwriteWarnMsg(cloud, state))){
+          setSyncStatus(isHebrew() ? 'השמירה בוטלה — הענן לא שונה.' : 'Save cancelled — cloud unchanged.', 'neutral');
+          return;
+        }
+      }
+    }catch(guardErr){ /* cannot read the cloud to compare — proceed with the save */ }
     const safeState = {...state, lastSync: Date.now()};
-    const data = encodePayload(safeState);
+    const data = await encodePayload(safeState);
     // First try JSONP, because it gives a real success/error response.
     try{
-      const json = await jsonpRequest({action:'upload', userId: cleanUserId(el('userIdInput').value || state.userId), data});
+      const json = await jsonpRequest({action:'upload', userId: uid, data});
       if(!json.ok) throw new Error(json.error || 'sync failed');
       state.lastSync = Date.now(); saveState(); updateSyncHealth(); setSyncStatus(t('uploadOk'), 'ok');
       return;
     }catch(jsonpErr){
       // Some browsers/extensions block script.googleusercontent.com as a script.
       // Fallback: submit a hidden form POST. It avoids CORS and usually bypasses script blockers.
-      await formPostUpload({action:'upload', userId: cleanUserId(el('userIdInput').value || state.userId), data});
+      await formPostUpload({action:'upload', userId: uid, data});
       state.lastSync = Date.now(); saveState(); updateSyncHealth(); setSyncStatus(t('uploadSent'), 'ok');
     }
   } catch(err){ setSyncStatus(t('uploadErr')+err.message, 'error'); }
@@ -4200,7 +4304,7 @@ async function syncDownload(){
     saveState();
     let json = await downloadViaBestRoute(userId);
     if(!json.data && !json.state) throw new Error(noCloudDataMessage(userId));
-    const cloudState = json.state && isTrainerState(json.state) ? json.state : decodePayload(json.data);
+    const cloudState = json.state && isTrainerState(json.state) ? json.state : await decodePayload(json.data);
     if(!isTrainerState(cloudState)) throw new Error(invalidCloudDataMessage(userId));
     state = {...defaultState(),...cloudState, syncUrl:state.syncUrl || DEFAULT_SYNC_URL, lang:state.lang, userId};
     el('userIdInput').value = userId;

@@ -1,4 +1,8 @@
-// Thai Trainer — Google Apps Script sync endpoint v1.10
+// Thai Trainer — Google Apps Script sync endpoint v1.11
+// v1.11: accept gzip-compressed payloads (client compresses large states that
+//        would otherwise exceed the 50000-char/cell Sheets limit). Backward
+//        compatible — legacy plain-JSON payloads still load. Deploy this BEFORE
+//        shipping the compressing client.
 // Central spreadsheet, one tab per username.
 // Supports JSONP GET and hidden-form POST fallback.
 // Paste into Extensions -> Apps Script inside the Google Sheet.
@@ -66,7 +70,29 @@ function latestPayload_(sh) {
   return { updatedAt: null, data: null };
 }
 
+function payloadBytes_(payload) {
+  try {
+    return Utilities.base64Decode(String(payload));
+  } catch (err) {
+    try {
+      return Utilities.base64DecodeWebSafe(String(payload));
+    } catch (fallbackErr) {
+      return null;
+    }
+  }
+}
+
+// A gzip stream starts with magic bytes 0x1f 0x8b. The client compresses large
+// states (a full state's plain base64 exceeds the 50000-char Sheets cell limit),
+// so we accept a gzip payload as valid without JSON-parsing it here — the client
+// decompresses on download. Legacy plain-JSON payloads still validate below.
+function isGzipPayload_(payload) {
+  const b = payloadBytes_(payload);
+  return !!(b && b.length >= 2 && (b[0] & 0xff) === 0x1f && (b[1] & 0xff) === 0x8b);
+}
+
 function isTrainerStatePayload_(payload) {
+  if (isGzipPayload_(payload)) return true;
   const text = decodePayloadText_(payload);
   if (!text) return false;
   try {
@@ -104,7 +130,7 @@ function handle_(params) {
   const userId = cleanUserId_(params.userId || DEFAULT_USER_ID);
 
   if (action === 'ping') {
-    return { ok: true, message: 'Thai Trainer sync is working', version: '1.10', time: new Date().toISOString() };
+    return { ok: true, message: 'Thai Trainer sync is working', version: '1.11', time: new Date().toISOString() };
   }
 
   if (action === 'inituser' || action === 'init') {
