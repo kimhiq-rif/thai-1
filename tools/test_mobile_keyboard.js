@@ -13,9 +13,11 @@ assert.match(app, /aria-label="' \+ escapeHtml\(label\)/, 'Every key needs an ac
 assert.match(app, /title="' \+ escapeHtml\(label\)/, 'Every key needs a visible desktop tooltip');
 assert.match(css, /\.kb-key\{[^}]*unicode-bidi:isolate/, 'Keyboard glyph direction must be isolated');
 assert.match(css, /\.kb-key\.is-combining\{font-size:40px/, 'Combining marks need a smaller desktop size');
-assert.match(css, /max-width:520px[\s\S]*?\.kb-key\.is-combining\{font-size:34px/, 'Combining marks need a mobile-safe size');
+assert.match(css, /max-width:520px[\s\S]*?grid-template-columns:repeat\(5,minmax\(0,1fr\)\)/, 'All mobile widths need five columns');
+assert.match(css, /max-width:520px[\s\S]*?\.kb-key\.is-combining\{font-size:28px/, 'Combining marks need a mobile-safe size');
+assert.match(css, /\.kb-key\.is-combining \.kb-glyph\{[^}]*transform:scaleX\(\.68\)/, 'Combining glyphs need cross-platform horizontal containment');
+assert.match(css, /max-width:520px[\s\S]*?\.kb-key\.is-combining \.kb-glyph\{transform:scaleX\(\.72\)/, 'Mobile combining glyphs need a readable contained scale');
 assert.match(css, /\.kb-key\{height:76px/, 'Desktop targets must exceed 44px');
 assert.match(css, /\.kb-key\{height:66px/, 'Mobile targets must exceed 44px');
-assert.match(css, /max-width:390px[\s\S]*repeat\(5,minmax\(0,1fr\)\)/, 'Narrow phones must use five columns for legibility');
-assert.strictEqual((html.match(/\?v=1\.25\.36/g) || []).length, 6);
+assert.strictEqual((html.match(/\?v=1\.25\.37/g) || []).length, 6);
 console.log('mobile keyboard contract: OK');
