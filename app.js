@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '1.25.38';
+const APP_VERSION = '1.25.39';
 const PROJECT_OWNER = Object.freeze({
   company:'kimคcode',
   product:'Thai Trainer',
@@ -1514,7 +1514,10 @@ const VOICE_CHEER_AUDIO_SRCS = [
 const DAILY_BONUS_TARGET = 50;
 const DAILY_BONUS_DURATION_MS = 2 * 60 * 60 * 1000;
 const DAILY_BONUS_REQUIRED_ACCURACY = 0.7;
-const DAILY_BONUS_REQUIRED_LEVEL12 = 10;
+// v1.25.39: retired for the load challenge (it forced the first 10 questions to
+// Level 1.2, ignoring the learner's chosen level). Kept as the idle default so
+// old saved snapshots keep merging cleanly.
+const DAILY_BONUS_REQUIRED_LEVEL12 = 0;
 const DAILY_BONUS_REWARD = 25;
 const THEMES = [
   {id:'ocean', he:'Ocean Calm 🌊', en:'Ocean Calm 🌊', points:0},
@@ -1577,7 +1580,7 @@ function challengeConfig(type){
   const reg = (typeof RewardsCore !== 'undefined') ? RewardsCore.CHALLENGES : null;
   if(reg && reg[type]) return reg[type];
   if(reg && reg.load) return reg.load;
-  return {id:'load', target:DAILY_BONUS_TARGET, requiredAccuracy:DAILY_BONUS_REQUIRED_ACCURACY, durationMs:DAILY_BONUS_DURATION_MS, reward:DAILY_BONUS_REWARD, requiredLevel12:DAILY_BONUS_REQUIRED_LEVEL12, requiredLevel:null};
+  return {id:'load', target:DAILY_BONUS_TARGET, requiredAccuracy:DAILY_BONUS_REQUIRED_ACCURACY, durationMs:DAILY_BONUS_DURATION_MS, reward:DAILY_BONUS_REWARD, requiredLevel12:0, requiredLevel:null};
 }
 function challengeLabel(type){ const l = CHALLENGE_LABELS[type] || CHALLENGE_LABELS.load; return isHebrew() ? l.he : l.en; }
 function challengeDurationText(cfg){
@@ -1590,7 +1593,7 @@ function challengeDurationText(cfg){
   return isHebrew() ? `${mins} דק׳` : `${mins} min`;
 }
 function defaultState(){
-  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false,bonus:{status:'idle',startedAt:null,durationMs:DAILY_BONUS_DURATION_MS,total:0,correct:0,level12:0,target:DAILY_BONUS_TARGET,requiredAccuracy:DAILY_BONUS_REQUIRED_ACCURACY,requiredLevel12:DAILY_BONUS_REQUIRED_LEVEL12,reward:DAILY_BONUS_REWARD,awarded:false,warned15:false,warned5:false,boostNotice:false},completed:{}}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false,tokens:{hint:0,freeze:0,boost:0},exams:{},dexClaimed:false}, achievements:{}, penSize:5, penMode:'regular', inputMode:'write', syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean', prefs:{sfx:true,skinMode:'dark'} };
+  return { stats:{correct:0,wrong:0,streak:0,total:0}, itemStats:{}, history:[], daily:{date:'',active:false,done:0,goal:15,correct:0,wrong:0,awarded:false,bonus:{status:'idle',startedAt:null,durationMs:DAILY_BONUS_DURATION_MS,total:0,correct:0,level12:0,target:DAILY_BONUS_TARGET,requiredAccuracy:DAILY_BONUS_REQUIRED_ACCURACY,requiredLevel12:DAILY_BONUS_REQUIRED_LEVEL12,reward:DAILY_BONUS_REWARD,awarded:false,warned15:false,warned5:false,boostNotice:false},completed:{}}, coach:{points:0,unlocked:['ocean','notebook','neon','minimal','island'],lastAwardDate:'',voiceCheer:false,voiceCheerAutoEnabled:false,tokens:{hint:0,freeze:0,boost:0},exams:{},dexClaimed:false}, achievements:{}, level:'1', mode:'mixed', penSize:5, penMode:'regular', inputMode:'write', syncUrl:'', syncUrlCustom:false, lastSync:null, lang:'he', userId:'rif', theme:'ocean', prefs:{sfx:true,skinMode:'dark'} };
 }
 
 async function disableOldServiceWorkers(){
@@ -1644,19 +1647,32 @@ function init(){
   disableOldServiceWorkers();
 }
 
+// The level list, shared by the main picker and the challenge picker.
+//   countsAnswers:false — Level 5.5 (chat bot) never calls mark(), so answers
+//   there cannot advance the daily goal or a challenge. Keep it out of any
+//   picker that gates a counted target.
+function levelOptions(){
+  return [
+    {value:'1', label:`${t('level')} 1`, countsAnswers:true},
+    {value:'1.2', label:t('foundationLevel'), countsAnswers:true},
+    {value:'2', label:`${t('level')} 2`, countsAnswers:true},
+    {value:'3', label:`${t('level')} 3`, countsAnswers:true},
+    {value:'4', label:`${t('level')} 4`, countsAnswers:true},
+    {value:'5', label:`${t('level')} 5`, countsAnswers:true},
+    {value:'5.5', label:`${t('level')} 5.5 - Chat Bot`, countsAnswers:false},
+    {value:'6', label:`${t('level')} 6`, countsAnswers:true}
+  ];
+}
+function levelLabel(value){
+  const found = levelOptions().find(l => l.value === String(value));
+  return found ? found.label : `${t('level')} ${value}`;
+}
 function setupLevels(){
   const select = el('levelSelect');
-  const currentValue = select.value || '1';
-  const levels = [
-    {value:'1', label:`${t('level')} 1`},
-    {value:'1.2', label:t('foundationLevel')},
-    {value:'2', label:`${t('level')} 2`},
-    {value:'3', label:`${t('level')} 3`},
-    {value:'4', label:`${t('level')} 4`},
-    {value:'5', label:`${t('level')} 5`},
-    {value:'5.5', label:`${t('level')} 5.5 - Chat Bot`},
-    {value:'6', label:`${t('level')} 6`}
-  ];
+  // v1.25.39: the chosen level is part of the saved state, so it survives a
+  // reload / PWA relaunch instead of silently snapping back to Level 1.
+  const currentValue = (state && state.level) || select.value || '1';
+  const levels = levelOptions();
   select.innerHTML = '';
   for(const lvl of levels){
     const o = document.createElement('option');
@@ -1665,10 +1681,11 @@ function setupLevels(){
     select.appendChild(o);
   }
   select.value = [...select.options].some(o=>o.value===currentValue) ? currentValue : '1';
+  if(state) state.level = select.value;
 }
 function setupModes(){
   const select = el('modeSelect');
-  const currentValue = select.value || 'mixed';
+  const currentValue = (state && state.mode) || select.value || 'mixed';
   select.innerHTML = '';
   const labels = {mixed:t('mixed'), read_meaning:t('readMeaning'), hebrew_write:t('meaningWrite'), tone:t('toneMode'), roman_write:t('romanWrite'), vowel_board:t('vowelBoard'),vowel_write:t('vowelBoard')};
   for(const value of MODE_OPTIONS){
@@ -1678,6 +1695,7 @@ function setupModes(){
     select.appendChild(o);
   }
   select.value = MODE_OPTIONS.includes(currentValue) ? currentValue : 'mixed';
+  if(state) state.mode = select.value;
 }
 function setupEvents(){
   el('newQuestionBtn').addEventListener('click', newQuestion);
@@ -1728,8 +1746,8 @@ function setupEvents(){
   el('showAnswerBtn').addEventListener('click', showAnswer);
   el('correctBtn').addEventListener('click', ()=>mark(true));
   el('wrongBtn').addEventListener('click', ()=>mark(false));
-  el('levelSelect').addEventListener('change', newQuestion);
-  el('modeSelect').addEventListener('change', newQuestion);
+  el('levelSelect').addEventListener('change', e => { state.level = e.target.value || '1'; saveState(); newQuestion(); });
+  el('modeSelect').addEventListener('change', e => { state.mode = e.target.value || 'mixed'; saveState(); newQuestion(); });
   if(el('level55Chat')){
     el('level55Chat').addEventListener('submit', handleLevel55Submit);
     el('level55Chat').addEventListener('click', handleLevel55Click);
@@ -2063,6 +2081,41 @@ function isDailyBonusActive(){
   ensureDailyState();
   return state.daily.bonus.status === 'active';
 }
+// v1.25.39: level picker inside the challenge modal. Only the load challenge
+// gets one — the sprint is defined as a Level-3 drill. Level 5.5 is excluded
+// because its chat answers never reach mark(), so they cannot count.
+function setupChallengeLevelPicker(type){
+  const wrap = el('dailyBonusLevelWrap');
+  const select = el('dailyBonusLevelSelect');
+  if(!wrap || !select) return;
+  const cfg = challengeConfig(type);
+  if(cfg.requiredLevel){ wrap.hidden = true; select.innerHTML = ''; return; }
+  const label = el('dailyBonusLevelLabel');
+  if(label) label.textContent = isHebrew() ? 'רמת האתגר' : 'Challenge level';
+  select.setAttribute('aria-label', isHebrew() ? 'בחר את רמת האתגר' : 'Choose the challenge level');
+  const options = levelOptions().filter(l => l.countsAnswers);
+  const preferred = el('levelSelect') ? el('levelSelect').value : (state.level || '1');
+  select.innerHTML = '';
+  for(const lvl of options){
+    const o = document.createElement('option');
+    o.value = lvl.value;
+    o.textContent = lvl.label;
+    select.appendChild(o);
+  }
+  select.value = options.some(l => l.value === preferred) ? preferred : '1';
+  wrap.hidden = false;
+}
+// The level a starting challenge should run at: the modal pick when the
+// challenge has no fixed level, otherwise the challenge's own requirement.
+function chosenChallengeLevel(cfg){
+  if(cfg.requiredLevel) return String(cfg.requiredLevel);
+  const select = el('dailyBonusLevelSelect');
+  const picked = select && select.value ? select.value : '';
+  const valid = levelOptions().filter(l => l.countsAnswers).some(l => l.value === picked);
+  if(valid) return picked;
+  const fallback = el('levelSelect') ? el('levelSelect').value : (state.level || '1');
+  return levelOptions().filter(l => l.countsAnswers).some(l => l.value === fallback) ? fallback : '1';
+}
 function openDailyBonusIntro(type){
   ensureDailyState();
   type = (type === 'sprint') ? 'sprint' : 'load';
@@ -2085,17 +2138,19 @@ function openDailyBonusIntro(type){
         ? `ספרינט קצר: ${timeStr} ל־${cfg.target} שאלות מרמה 3 בלבד, מעל ${accPct}% דיוק.`
         : `Short sprint: ${timeStr} for ${cfg.target} Level-3 questions, above ${accPct}% accuracy.`)
     : (isHebrew()
-        ? `יש לך ${timeStr} לענות על ${cfg.target} שאלות. צריך לעבור ${accPct}% דיוק, וחובה שלפחות ${cfg.requiredLevel12} שאלות יהיו מרמה 1.2.`
-        : `You have ${timeStr} to answer ${cfg.target} questions. You need more than ${accPct}% accuracy, and at least ${cfg.requiredLevel12} must be from Level 1.2.`);
+        ? `יש לך ${timeStr} לענות על ${cfg.target} שאלות ברמה שתבחר כאן, מעל ${accPct}% דיוק.`
+        : `You have ${timeStr} to answer ${cfg.target} questions at the level you pick here, above ${accPct}% accuracy.`);
   const rules = [
     isHebrew() ? `זמן: ${timeStr}` : `Time: ${timeStr}`,
     isHebrew() ? `יעד: ${cfg.target} שאלות` : `Target: ${cfg.target} questions`,
     isHebrew() ? `דיוק: מעל ${accPct}%` : `Accuracy: above ${accPct}%`,
   ];
-  if(cfg.requiredLevel12 > 0) rules.push(isHebrew() ? `חובה: ${cfg.requiredLevel12} שאלות רמה 1.2` : `Required: ${cfg.requiredLevel12} Level 1.2 questions`);
   if(cfg.requiredLevel) rules.push(isHebrew() ? `כל השאלות מרמה ${cfg.requiredLevel}` : `All questions from Level ${cfg.requiredLevel}`);
   rules.push(isHebrew() ? `פרס: ${cfg.reward} נק׳ לסקין הבא` : `Reward: ${cfg.reward} pts toward the next skin`);
   el('dailyBonusModalRules').innerHTML = rules.map(r => `<span>${escapeHtml(r)}</span>`).join('');
+  // v1.25.39: the load challenge runs at a level YOU choose (it used to force
+  // Level 1.2 for its first 10 questions). The sprint stays locked to Level 3.
+  setupChallengeLevelPicker(type);
   el('dailyBonusStartBtn').textContent = isHebrew() ? 'צא לדרך' : 'Start challenge';
   modal.hidden = false;
   clearTimeout(dailyBonusModalTimer);
@@ -2120,6 +2175,10 @@ function confirmDailyBonusStart(){
   if((state.daily.done || 0) < (state.daily.goal || 15)) return;
   if(state.daily.completed && state.daily.completed[type]) return; // already used today
   if(bonus.status === 'active') return; // one challenge at a time
+  // v1.25.39: the challenge locks onto one level for its whole run — the one
+  // picked in the modal (load) or the challenge's own fixed level (sprint).
+  // That replaces the old "first 10 questions are forced to Level 1.2" rule.
+  const runLevel = chosenChallengeLevel(cfg);
   Object.assign(bonus, {
     type,
     status:'active',
@@ -2130,8 +2189,8 @@ function confirmDailyBonusStart(){
     level12:0,
     target:cfg.target,
     requiredAccuracy:cfg.requiredAccuracy,
-    requiredLevel12:cfg.requiredLevel12,
-    requiredLevel:cfg.requiredLevel || null,
+    requiredLevel12:0,
+    requiredLevel:runLevel,
     reward:cfg.reward,
     awarded:false,
     warned15:false,
@@ -2233,7 +2292,7 @@ function evaluateDailyBonusChallenge(){
   const acc = dailyBonusAccuracy();
   const won = (typeof RewardsCore !== 'undefined')
     ? RewardsCore.isChallengeWon(bonus)
-    : ((bonus.total || 0) >= (bonus.target || DAILY_BONUS_TARGET) && (bonus.level12 || 0) >= (bonus.requiredLevel12 || DAILY_BONUS_REQUIRED_LEVEL12) && acc > (bonus.requiredAccuracy || DAILY_BONUS_REQUIRED_ACCURACY));
+    : ((bonus.total || 0) >= (bonus.target || DAILY_BONUS_TARGET) && (bonus.level12 || 0) >= (Number(bonus.requiredLevel12) || 0) && acc > (bonus.requiredAccuracy || DAILY_BONUS_REQUIRED_ACCURACY));
   if(won){
     const pmOld = (state.coach.points) || 0;
     const reward = awardDailyBonusPoints();
@@ -2408,8 +2467,11 @@ function newQuestion(){
   const levelValue = el('levelSelect').value || '1';
   const bonus = state.daily && state.daily.bonus;
   const active = bonus && bonus.status === 'active';
-  // M1b: an active challenge can steer the question pool.
-  //   sprint -> force its requiredLevel (e.g. '3'); load -> force 1.2 until quota.
+  // M1b: an active challenge steers the question pool to the level it locked in
+  // at start (v1.25.39: chosen by the learner for load, fixed '3' for sprint).
+  // The 1.2-quota branch below is only reachable by a challenge that was already
+  // running when the app updated — its saved win condition still needs those 10,
+  // so it keeps forcing them until that challenge ends.
   let effectiveLevel = levelValue;
   let forceLevel12 = false;
   if(active){
@@ -3125,7 +3187,11 @@ function mark(correct){
     } else if(state.daily.bonus && state.daily.bonus.status === 'active'){
       const b = state.daily.bonus;
       // M1b: only answers matching the challenge's level rule count toward its target.
-      const counts = (typeof RewardsCore !== 'undefined') ? RewardsCore.answerCountsToward(b, item.level) : true;
+      // Level-1.2 items are board glyphs (VOWELS/CONSONANTS) with no `level`
+      // field, so derive it from the question mode — otherwise a 1.2 challenge
+      // could never advance.
+      const answerLevel = (mode === 'level12_pair') ? '1.2' : item.level;
+      const counts = (typeof RewardsCore !== 'undefined') ? RewardsCore.answerCountsToward(b, answerLevel) : true;
       if(counts){
         b.total = (b.total || 0) + 1;
         if(correct) b.correct = (b.correct || 0) + 1;
@@ -3416,7 +3482,7 @@ function renderDailyBonusPanel(){
       isHebrew() ? `דיוק ${acc}% / מעל ${accPct}%` : `Accuracy ${acc}% / above ${accPct}%`,
     ];
     if((bonus.requiredLevel12 || 0) > 0) metrics.push(isHebrew() ? `רמה 1.2 ${bonus.level12 || 0}/${bonus.requiredLevel12}` : `Level 1.2 ${bonus.level12 || 0}/${bonus.requiredLevel12}`);
-    if(bonus.requiredLevel) metrics.push(isHebrew() ? `רמה ${bonus.requiredLevel} בלבד` : `Level ${bonus.requiredLevel} only`);
+    if(bonus.requiredLevel) metrics.push(isHebrew() ? `${levelLabel(bonus.requiredLevel)} בלבד` : `${levelLabel(bonus.requiredLevel)} only`);
     panel.innerHTML = `
       <div>
         <strong>${escapeHtml(isHebrew() ? `${challengeLabel(bonus.type)} פעיל` : `${challengeLabel(bonus.type)} active`)}</strong>
@@ -3437,7 +3503,7 @@ function renderDailyBonusPanel(){
     const accPct = Math.round((cfg.requiredAccuracy || 0) * 100);
     const lvl = cfg.requiredLevel
       ? (isHebrew() ? `רמה ${cfg.requiredLevel}` : `Level ${cfg.requiredLevel}`)
-      : (isHebrew() ? `חובה ${cfg.requiredLevel12} ברמה 1.2` : `${cfg.requiredLevel12} at Level 1.2`);
+      : (isHebrew() ? 'רמה לבחירתך' : 'Level of your choice');
     const desc = `${challengeDurationText(cfg)} · ${cfg.target} ${isHebrew() ? 'שאלות' : 'q'} · ${isHebrew() ? 'מעל' : '>'} ${accPct}% · ${lvl} · ${cfg.reward} ${isHebrew() ? 'נק׳' : 'pts'}`;
     return `<div class="challenge-row"><div><strong>${escapeHtml(label)}</strong><span>${escapeHtml(desc)}</span></div>
       <button type="button" class="secondary" data-daily-bonus-action="start" data-challenge="${type}">${escapeHtml(isHebrew() ? 'פתח' : 'Open')}</button></div>`;
