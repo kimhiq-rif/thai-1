@@ -74,6 +74,10 @@ test('CHALLENGES registry has load and sprint with the agreed params', () => {
   eq(RC.CHALLENGES.sprint.requiredAccuracy, 0.6);
   eq(RC.CHALLENGES.sprint.reward, 20);
   eq(RC.CHALLENGES.sprint.requiredLevel, '3');
+  // v1.25.39: load has no fixed level (the learner picks it at start) and no
+  // forced Level-1.2 quota.
+  eq(RC.CHALLENGES.load.requiredLevel, null);
+  eq(RC.CHALLENGES.load.requiredLevel12, 0);
 });
 
 test('answerCountsToward: load counts any level, sprint only level 3', () => {
@@ -85,12 +89,25 @@ test('answerCountsToward: load counts any level, sprint only level 3', () => {
   ok(!RC.answerCountsToward(RC.CHALLENGES.sprint, 4), 'sprint ignores level 4');
 });
 
-test('isChallengeWon: load needs target + accuracy + level12', () => {
+test('isChallengeWon: load needs target + accuracy', () => {
   const base = { ...RC.CHALLENGES.load };
-  ok(RC.isChallengeWon({ ...base, total: 50, correct: 40, level12: 10 }), '80% + 10x1.2 wins');
-  ok(!RC.isChallengeWon({ ...base, total: 50, correct: 40, level12: 9 }), 'missing 1.2 quota fails');
-  ok(!RC.isChallengeWon({ ...base, total: 49, correct: 45, level12: 10 }), 'below target fails');
-  ok(!RC.isChallengeWon({ ...base, total: 50, correct: 35, level12: 10 }), '70% is not > 70%');
+  ok(RC.isChallengeWon({ ...base, total: 50, correct: 40 }), '80% of 50 wins');
+  ok(!RC.isChallengeWon({ ...base, total: 49, correct: 45 }), 'below target fails');
+  ok(!RC.isChallengeWon({ ...base, total: 50, correct: 35 }), '70% is not > 70%');
+});
+
+test('isChallengeWon: a level12 quota still gates the win when a challenge sets one', () => {
+  const quota = { ...RC.CHALLENGES.load, requiredLevel12: 10 };
+  ok(RC.isChallengeWon({ ...quota, total: 50, correct: 40, level12: 10 }), 'quota met wins');
+  ok(!RC.isChallengeWon({ ...quota, total: 50, correct: 40, level12: 9 }), 'missing quota fails');
+});
+
+test('answerCountsToward: a picked level restricts a load run to that level', () => {
+  // The live snapshot carries the level chosen when the challenge started.
+  const run = { ...RC.CHALLENGES.load, requiredLevel: '1.2' };
+  ok(RC.answerCountsToward(run, '1.2'), 'chosen level counts');
+  ok(!RC.answerCountsToward(run, '1'), 'other levels do not count');
+  ok(!RC.answerCountsToward(run, undefined), 'a missing level does not count');
 });
 
 test('isChallengeWon: sprint needs only target + accuracy (no level12)', () => {
