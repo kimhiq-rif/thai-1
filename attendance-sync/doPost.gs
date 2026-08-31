@@ -13,9 +13,22 @@
 //   * Object -> single live punch: appends one row and sends the alert email.
 
 function doGet(e) {
-  // Exists so opening the URL in a browser confirms which version is live.
-  return ContentService.createTextOutput("doGet OK - deployment is live")
-    .setMimeType(ContentService.MimeType.TEXT);
+  // Opening the URL in a browser reports which spreadsheet doPost actually
+  // writes to. getActiveSpreadsheet() resolves to whatever this project is
+  // bound to, which is not necessarily the file someone happens to be looking
+  // at, and rows landing in a second copy is indistinguishable from rows never
+  // being written at all.
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getActiveSheet();
+  var info = {
+    "status": "deployment is live",
+    "spreadsheetName": ss.getName(),
+    "spreadsheetUrl": ss.getUrl(),
+    "sheetTab": sheet.getName(),
+    "rowsInTab": sheet.getLastRow()
+  };
+  return ContentService.createTextOutput(JSON.stringify(info, null, 2))
+    .setMimeType(ContentService.MimeType.JSON);
 }
 
 function doPost(e) {
