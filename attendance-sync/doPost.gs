@@ -1,10 +1,22 @@
 // Google Apps Script Web App endpoint for the ZK Teco attendance clock sync.
-// Paste this into the Sheet's Apps Script project, then:
-//   Deploy -> Manage deployments -> edit (pencil) -> Version: New version -> Deploy
 //
-// Two modes:
-//   * Array payload  -> historical bulk import: one batched write, no emails.
-//   * Object payload -> single live punch: appends one row and sends the alert email.
+// Paste this over everything in the Apps Script project, then deploy:
+//   Deploy -> New deployment -> Web app
+//   Execute as:      Me
+//   Who has access:  Anyone      <-- NOT "Anyone with Google account".
+//                                    Python sends no Google credentials, so
+//                                    anything stricter bounces it with a 404
+//                                    before doPost ever runs.
+//
+// doPost handles two payload shapes:
+//   * Array  -> historical bulk import: one batched write, no emails.
+//   * Object -> single live punch: appends one row and sends the alert email.
+
+function doGet(e) {
+  // Exists so opening the URL in a browser confirms which version is live.
+  return ContentService.createTextOutput("doGet OK - deployment is live")
+    .setMimeType(ContentService.MimeType.TEXT);
+}
 
 function doPost(e) {
   try {

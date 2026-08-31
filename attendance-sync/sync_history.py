@@ -1,9 +1,16 @@
+import os
 import requests
 from datetime import datetime, time
 from zk import ZK
 
+# The Web App URL lives in weburl.txt next to this script, so swapping in a new
+# deployment never means editing code:
+#     Set-Content weburl.txt "https://script.google.com/macros/s/..../exec"
+URL_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "weburl.txt")
+with open(URL_FILE) as f:
+    GOOGLE_WEB_APP_URL = f.read().strip()
+
 zk = ZK('192.168.1.201', port=4370, timeout=5)
-GOOGLE_WEB_APP_URL = "https://script.google.com/macros/s/AKfycby8LXQTrhXMI41UpWCkkTvidcvtkcMB6a1czkuESKXsAhaEoQQtT53m9qIcwoja78HBvw/exec"
 
 ENTRY_START = time(7, 0)
 ENTRY_END = time(8, 0)
@@ -27,6 +34,28 @@ def post_with_redirect(url, chunk):
         resp = requests.post(redirect_url, json=chunk, timeout=30)
     resp.raise_for_status()
     return resp
+
+print("Web App URL in use:")
+print("  " + GOOGLE_WEB_APP_URL)
+
+# Send one tiny record first: no point pulling 5,008 punches off the clock only
+# to have every batch bounce off a misconfigured deployment.
+print("Testing the endpoint with a single record...")
+probe = [{"name": "CONNECTION TEST", "id": "0",
+          "timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+          "status": "TEST - delete this row"}]
+try:
+    test_resp = post_with_redirect(GOOGLE_WEB_APP_URL, probe)
+    print("Endpoint OK. Response: " + test_resp.text[:200])
+except requests.exceptions.RequestException as test_err:
+    print("Endpoint test FAILED: {}".format(test_err))
+    print("")
+    print("The clock was not contacted. Fix the Web App deployment first:")
+    print("  Deploy -> New deployment -> Web app")
+    print("  Execute as: Me")
+    print("  Who has access: Anyone      <-- not 'Anyone with Google account'")
+    print("Then put the new URL in weburl.txt and run this again.")
+    raise SystemExit(1)
 
 try:
     print("Connecting to attendance clock...")
@@ -64,7 +93,7 @@ try:
         except requests.exceptions.RequestException as req_err:
             print(f"Batch starting at record {i} failed: {req_err}")
 
-    print("All historical logs successfully synced to Google Sheets!")
+    print(f"Done. {sent}/{total} records synced to Google Sheets.")
 
 except Exception as e:
     print(f"Error: {e}")
