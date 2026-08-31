@@ -27,12 +27,16 @@ def check_time_status(timestamp):
     else:
         return "ALERT: Irregular Time Punch!", True
 
-def post_with_redirect(url, chunk):
-    resp = requests.post(url, json=chunk, timeout=30, allow_redirects=False)
-    if resp.status_code in (301, 302, 303, 307, 308):
-        redirect_url = resp.headers.get('Location')
-        resp = requests.post(redirect_url, json=chunk, timeout=30)
+def post_to_sheet(url, chunk):
+    # /exec answers a POST with a 302 to a googleusercontent "echo" URL that
+    # carries the response body. doPost has already run by then, and that echo
+    # URL only serves GET (a second POST to it earns a 405), so let requests
+    # follow the redirect the normal way and just read what comes back.
+    resp = requests.post(url, json=chunk, timeout=30)
     resp.raise_for_status()
+    if "success" not in resp.text:
+        raise requests.exceptions.RequestException(
+            "unexpected response: " + resp.text[:200])
     return resp
 
 print("Web App URL in use:")
@@ -45,7 +49,7 @@ probe = [{"name": "CONNECTION TEST", "id": "0",
           "timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
           "status": "TEST - delete this row"}]
 try:
-    test_resp = post_with_redirect(GOOGLE_WEB_APP_URL, probe)
+    test_resp = post_to_sheet(GOOGLE_WEB_APP_URL, probe)
     print("Endpoint OK. Response: " + test_resp.text[:200])
 except requests.exceptions.RequestException as test_err:
     print("Endpoint test FAILED: {}".format(test_err))
@@ -87,7 +91,7 @@ try:
     for i in range(0, total, BATCH_SIZE):
         chunk = payloads[i:i + BATCH_SIZE]
         try:
-            post_with_redirect(GOOGLE_WEB_APP_URL, chunk)
+            post_to_sheet(GOOGLE_WEB_APP_URL, chunk)
             sent += len(chunk)
             print(f"Synced {sent}/{total} records...")
         except requests.exceptions.RequestException as req_err:

@@ -42,11 +42,11 @@ and because the old `doPost` sent an email per record it would also blow past Gm
 quota (100/day on a consumer account). Records now go up 300 at a time, and the batch branch in
 `doPost` writes them with a single `setValues()` call and sends no email.
 
-**2. `requests` silently downgraded POST to GET.** Apps Script answers `/exec` with a 302 redirect.
-Following a 302, `requests` converts POST to GET, so the Web App invoked `doGet` — which did not
-exist — and returned "Script function not found: doGet". `post_with_redirect()` sends the first
-request with `allow_redirects=False` and re-POSTs to the `Location` URL itself, keeping the method
-intact.
+**2. The 302 from `/exec` must be followed as a GET, not re-POSTed.** Apps Script answers a POST
+with a redirect to a googleusercontent "echo" URL holding the response body — `doPost` has already
+run at that point. Re-POSTing to that URL earns a 405 Method Not Allowed, so `post_to_sheet()`
+lets `requests` follow the redirect normally and then checks the body for `success`, since a
+redirect that lands somewhere unexpected otherwise looks like a clean 200.
 
 **3. A deployment that requires a Google account 404s anonymous callers.** A browser session signed
 in as the owner reaches the script while Python, sending no credentials, is bounced before `doPost`
