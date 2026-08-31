@@ -70,7 +70,9 @@ sending them, on the assumption `sync_history.py` already imported them.
 To start it at logon:
 
 1. Press Win+R, type `shell:startup`, press Enter.
-2. Right-drag `start_monitor.bat` into that folder and choose "Create shortcuts here".
+2. Put `start_monitor.bat` in that folder — either right-drag it there and choose "Create shortcuts
+   here", or just copy the file itself. A copy has no scripts beside it, so the batch file falls
+   back to `%USERPROFILE%\Documents\pyzk` when `attendance_service.py` is not next to it.
 
 The service window then opens automatically at every logon. Closing the window stops it.
 
