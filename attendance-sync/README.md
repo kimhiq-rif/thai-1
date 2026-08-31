@@ -8,8 +8,10 @@ into a Google Sheet through an Apps Script Web App.
 | File | Where it runs |
 | --- | --- |
 | `sync_history.py` | Windows PC on the clock's LAN — one-off historical import of all stored punches |
+| `live_monitor.py` | Same PC — runs for the whole shift, pushing each punch as it happens |
+| `test_email.py` | Same PC — sends one fake punch to prove the Gmail alert path works |
 | `doPost.gs` | The Sheet's Apps Script project — the Web App endpoint |
-| `weburl.txt` | Created locally next to the script; holds the Web App URL |
+| `weburl.txt` | Created locally next to the scripts; holds the Web App URL |
 
 ## Requirements
 
@@ -34,6 +36,22 @@ python sync_history.py
 
 The script prints the URL it is using, sends one `CONNECTION TEST` row, and only touches the clock
 once that row lands. Delete the test row from the Sheet afterwards.
+
+## Emails
+
+Only the single-record path in `doPost` sends mail, so alerts arrive from `live_monitor.py` and
+never from the bulk import — 5,008 imported punches would otherwise mean 5,008 emails against a
+quota of 100/day on a consumer Gmail account.
+
+Prove the path works before a shift depends on it:
+
+```powershell
+python test_email.py
+```
+
+That writes one row and should deliver one email. If the response is not `success`, the body names
+the cause; an authorization error means the Gmail scope was never granted — open the Apps Script
+editor, select `doPost`, press Run once, accept the prompt, then redeploy.
 
 ## Row order
 
