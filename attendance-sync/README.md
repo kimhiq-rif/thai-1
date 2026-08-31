@@ -74,6 +74,20 @@ To start it at logon:
 
 The service window then opens automatically at every logon. Closing the window stops it.
 
+## Daily summary tab
+
+The log holds one row per punch, so once rows are sorted by time a day's exits cluster together
+above that day's entries and the pairing is invisible. `buildDailySummary()` collapses the log into
+one row per employee per day — first punch as Entry, last as Exit, plus hours and a punch count —
+and writes it to a `Daily` tab.
+
+Run it from the Sheet: **Attendance → Rebuild daily summary** (the menu appears after a reload,
+since `onOpen` only runs when the file is opened).
+
+Punches stamped outside 2020–next year are left out and counted in a note beside the header. A
+clock that has lost its date writes them in 2119 or 2035, and sorted newest-first they would
+otherwise sit on top of every real day.
+
 ## Row order
 
 The Sheet reads newest-first. `sync_history.py` sorts the punches descending before sending them,

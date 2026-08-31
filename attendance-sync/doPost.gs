@@ -76,3 +76,139 @@ function doPost(e) {
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
+
+
+// ---------------------------------------------------------------------------
+// Daily summary
+// ---------------------------------------------------------------------------
+// The log holds one row per punch, so a day's entries and exits sit in
+// separate clusters once the rows are sorted by time. buildDailySummary()
+// collapses them into one row per employee per day, with the first punch as
+// the entry and the last as the exit.
+
+var LOG_TAB = 'Sheet1';
+var SUMMARY_TAB = 'Daily';
+
+function onOpen() {
+  SpreadsheetApp.getUi()
+    .createMenu('Attendance')
+    .addItem('Rebuild daily summary', 'buildDailySummary')
+    .addToUi();
+}
+
+function parsePunchDate_(value) {
+  if (value instanceof Date) {
+    return value;
+  }
+  var text = String(value || '').trim();
+  if (!text) {
+    return null;
+  }
+  // "2026-08-31 17:30:48" - build the date explicitly rather than leaving it
+  // to Date.parse, whose handling of that shape varies.
+  var m = text.match(/^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2}):(\d{2})/);
+  if (m) {
+    return new Date(+m[1], +m[2] - 1, +m[3], +m[4], +m[5], +m[6]);
+  }
+  var d = new Date(text);
+  return isNaN(d.getTime()) ? null : d;
+}
+
+function dateKey_(d) {
+  return Utilities.formatDate(d, Session.getScriptTimeZone(), 'yyyy-MM-dd');
+}
+
+function buildDailySummary() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var log = ss.getSheetByName(LOG_TAB);
+  if (!log) {
+    throw new Error('No tab named ' + LOG_TAB);
+  }
+
+  var values = log.getDataRange().getValues();  // timestamp, id, name, status
+  var earliest = new Date(2020, 0, 1);
+  var latest = new Date();
+  latest.setDate(latest.getDate() + 1);
+
+  var days = {};
+  var skipped = 0;
+
+  for (var i = 0; i < values.length; i++) {
+    var when = parsePunchDate_(values[i][0]);
+    if (!when) {
+      continue;
+    }
+    // A clock that lost its date stamps punches in 2119 or 2035; those would
+    // otherwise sort to the top and bury the real days.
+    if (when < earliest || when > latest) {
+      skipped++;
+      continue;
+    }
+
+    var id = String(values[i][1]);
+    var name = String(values[i][2]);
+    if (name === 'EMAIL TEST' || name === 'CONNECTION TEST') {
+      continue;
+    }
+
+    var key = dateKey_(when) + '|' + id;
+    var day = days[key];
+    if (!day) {
+      day = days[key] = {
+        date: dateKey_(when), id: id, name: name,
+        first: when, last: when, count: 0
+      };
+    }
+    if (when < day.first) { day.first = when; }
+    if (when > day.last) { day.last = when; }
+    day.count++;
+  }
+
+  var rows = [];
+  for (var k in days) {
+    var d = days[k];
+    var single = d.count < 2;
+    var hours = single ? '' :
+      Math.round(((d.last - d.first) / 3600000) * 100) / 100;
+    rows.push([
+      d.date,
+      d.name,
+      d.id,
+      Utilities.formatDate(d.first, Session.getScriptTimeZone(), 'HH:mm:ss'),
+      single ? '' : Utilities.formatDate(d.last, Session.getScriptTimeZone(), 'HH:mm:ss'),
+      hours,
+      d.count,
+      single ? 'Only one punch - no exit recorded' : ''
+    ]);
+  }
+
+  // Newest day first, and within a day keep employees together by name.
+  rows.sort(function (a, b) {
+    if (a[0] !== b[0]) { return a[0] < b[0] ? 1 : -1; }
+    return a[1] < b[1] ? -1 : (a[1] > b[1] ? 1 : 0);
+  });
+
+  var out = ss.getSheetByName(SUMMARY_TAB);
+  if (!out) {
+    out = ss.insertSheet(SUMMARY_TAB);
+  }
+  out.clear();
+
+  var header = ['Date', 'Employee', 'ID', 'Entry', 'Exit', 'Hours', 'Punches', 'Note'];
+  out.getRange(1, 1, 1, header.length).setValues([header]).setFontWeight('bold');
+  if (rows.length > 0) {
+    out.getRange(2, 1, rows.length, header.length).setValues(rows);
+  }
+  out.setFrozenRows(1);
+  out.autoResizeColumns(1, header.length);
+
+  var note = skipped > 0
+    ? skipped + ' punch row(s) skipped: timestamp outside 2020-' + (latest.getFullYear()) +
+      ' (check the clock date)'
+    : '';
+  out.getRange(1, header.length + 2).setValue(note);
+
+  SpreadsheetApp.getActiveSpreadsheet().toast(
+    rows.length + ' day rows built' + (skipped ? ', ' + skipped + ' skipped' : ''),
+    'Daily summary', 5);
+}
