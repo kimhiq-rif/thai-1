@@ -9,6 +9,8 @@ into a Google Sheet through an Apps Script Web App.
 | --- | --- |
 | `sync_history.py` | Windows PC on the clock's LAN — one-off historical import of all stored punches |
 | `live_monitor.py` | Same PC — runs for the whole shift, pushing each punch as it happens |
+| `attendance_service.py` | Same PC — the unattended version: listens only during LISTEN_WINDOWS, sleeps between them, catches up on what it missed |
+| `start_monitor.bat` | Launches the service and restarts it if it exits; shortcut this into `shell:startup` |
 | `test_email.py` | Same PC — sends one fake punch to prove the Gmail alert path works |
 | `doPost.gs` | The Sheet's Apps Script project — the Web App endpoint |
 | `weburl.txt` | Created locally next to the scripts; holds the Web App URL |
@@ -52,6 +54,25 @@ python test_email.py
 That writes one row and should deliver one email. If the response is not `success`, the body names
 the cause; an authorization error means the Gmail scope was never granted — open the Apps Script
 editor, select `doPost`, press Run once, accept the prompt, then redeploy.
+
+## Running unattended
+
+`attendance_service.py` is the version to leave running. It listens only inside `LISTEN_WINDOWS`
+(06:30-10:00 and 15:00-19:00 by default) and sleeps in between, so the clock connection is not held
+open all day.
+
+Sleeping does not mean losing punches. When a window opens, the service reads the day's punches off
+the clock and sends any it has not already recorded in `seen.txt`. Those go up the batch path, which
+writes the rows without mailing: an alert hours late is noise, and a backlog of them could spend the
+whole daily Gmail quota at once. On its very first run it records the day's existing punches without
+sending them, on the assumption `sync_history.py` already imported them.
+
+To start it at logon:
+
+1. Press Win+R, type `shell:startup`, press Enter.
+2. Right-drag `start_monitor.bat` into that folder and choose "Create shortcuts here".
+
+The service window then opens automatically at every logon. Closing the window stops it.
 
 ## Row order
 
