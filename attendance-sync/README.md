@@ -35,6 +35,12 @@ python sync_history.py
 The script prints the URL it is using, sends one `CONNECTION TEST` row, and only touches the clock
 once that row lands. Delete the test row from the Sheet afterwards.
 
+## Row order
+
+The Sheet reads newest-first. `sync_history.py` sorts the punches descending before sending them,
+and `doPost` puts a live punch in at row 1 rather than appending it, so new punches keep landing
+above the imported history instead of underneath the oldest row.
+
 ## Three defects this version fixes
 
 **1. Records were sent one HTTP request at a time.** 5,008 separate requests to Apps Script is slow,

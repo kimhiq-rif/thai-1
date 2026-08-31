@@ -41,7 +41,11 @@ function doPost(e) {
     var timestamp = data.timestamp;
     var status = data.status;
 
-    sheet.appendRow([timestamp, empId, empName, status]);
+    // Goes in at the top, not the bottom: the historical import writes newest
+    // first, and appending live punches underneath would bury them below the
+    // oldest rows in the sheet.
+    sheet.insertRowBefore(1);
+    sheet.getRange(1, 1, 1, 4).setValues([[timestamp, empId, empName, status]]);
 
     var emailTo = "wirasakmanclash@gmail.com,info@stellabungalows.com";
     var subject = "Attendance Update: " + empName;

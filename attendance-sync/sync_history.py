@@ -86,6 +86,9 @@ try:
             "timestamp": punch_time_str, "status": final_status
         })
 
+    # Newest punch first, so the Sheet reads top-down from most to least recent.
+    payloads.sort(key=lambda r: r["timestamp"], reverse=True)
+
     total = len(payloads)
     sent = 0
     for i in range(0, total, BATCH_SIZE):
