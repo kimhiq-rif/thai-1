@@ -12,6 +12,10 @@
 //   * Array  -> historical bulk import: one batched write, no emails.
 //   * Object -> single live punch: appends one row and sends the alert email.
 
+// Who the live-punch alerts go to. Kept up here so doGet can report it: an
+// address with a typo in it fails silently from the script's side.
+var ALERT_RECIPIENTS = "wirasakmanclash@gmail.com,info@stellabungalows.com";
+
 function doGet(e) {
   // Opening the URL in a browser reports which spreadsheet doPost actually
   // writes to. getActiveSpreadsheet() resolves to whatever this project is
@@ -25,7 +29,14 @@ function doGet(e) {
     "spreadsheetName": ss.getName(),
     "spreadsheetUrl": ss.getUrl(),
     "sheetTab": sheet.getName(),
-    "rowsInTab": sheet.getLastRow()
+    "rowsInTab": sheet.getLastRow(),
+    // Rows land before the mail is sent, so a row in the sheet says nothing
+    // about whether its alert went out. These three do: a quota of 0 is why
+    // sending throws, and the other two catch mail that is being sent
+    // correctly to the wrong place, or from an account nobody is watching.
+    "remainingEmailQuota": MailApp.getRemainingDailyQuota(),
+    "alertsSentFrom": Session.getEffectiveUser().getEmail(),
+    "alertsSentTo": ALERT_RECIPIENTS
   };
   return ContentService.createTextOutput(JSON.stringify(info, null, 2))
     .setMimeType(ContentService.MimeType.JSON);
@@ -60,7 +71,7 @@ function doPost(e) {
     sheet.insertRowBefore(1);
     sheet.getRange(1, 1, 1, 4).setValues([[timestamp, empId, empName, status]]);
 
-    var emailTo = "wirasakmanclash@gmail.com,info@stellabungalows.com";
+    var emailTo = ALERT_RECIPIENTS;
     var subject = "Attendance Update: " + empName;
     var body = "A new attendance punch was received in the system:\n\n" +
       "Employee Name: " + empName + "\n" +

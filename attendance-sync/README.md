@@ -57,6 +57,13 @@ That writes one row and should deliver one email. If the response is not `succes
 the cause; an authorization error means the Gmail scope was never granted — open the Apps Script
 editor, select `doPost`, press Run once, accept the prompt, then redeploy.
 
+A row in the sheet proves nothing about its alert: `doPost` writes the row before it sends, so mail
+can fail on a punch that logged perfectly. When alerts stop arriving, open the deployment URL in a
+browser — `doGet` reports `remainingEmailQuota` (0 is why sending throws), `alertsSentFrom` (the
+account the mail leaves from, which is where bounces land) and `alertsSentTo` (the addresses as the
+deployed code actually has them, typo included). Apps Script → **Executions** then shows the error
+text for any `doPost` that failed.
+
 ## Running unattended
 
 `attendance_service.py` is the version to leave running. It listens only inside `LISTEN_WINDOWS`
