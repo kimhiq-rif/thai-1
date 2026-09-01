@@ -12,6 +12,8 @@ into a Google Sheet through an Apps Script Web App.
 | `attendance_service.py` | Same PC — the unattended version: listens only during LISTEN_WINDOWS, sleeps between them, catches up on what it missed |
 | `start_monitor.bat` | Launches the service and restarts it if it exits; shortcut this into `shell:startup` |
 | `test_email.py` | Same PC — sends one fake punch to prove the Gmail alert path works |
+| `clock_diagnostics.py` | Same PC — reads the device's own clock and compares it to the PC's |
+| `clock_set_time.py` | Same PC — corrects the device clock from the PC's (asks before writing) |
 | `doPost.gs` | The Sheet's Apps Script project — the Web App endpoint |
 | `weburl.txt` | Created locally next to the scripts; holds the Web App URL |
 
@@ -89,6 +91,24 @@ since `onOpen` only runs when the file is opened).
 Punches stamped outside 2020–next year are left out and counted in a note beside the header. A
 clock that has lost its date writes them in 2119 or 2035, and sorted newest-first they would
 otherwise sit on top of every real day.
+
+## Impossible punch dates
+
+Rows have arrived stamped 2027, 2035 and 2119. They are not corrupted in transit: the device
+records them that way, so its own clock is wrong when it writes them. Confirm with:
+
+```powershell
+python clock_diagnostics.py
+```
+
+which prints the device time beside the PC time. If they disagree, `python clock_set_time.py`
+corrects the device. A correction that does not hold means the RTC backup battery is flat, and
+setting the time only lasts until the next power cycle.
+
+Note which rows are affected before assuming it is only historical. Live punches insert at row 1
+and push earlier ones down, so the physical row order is arrival order reversed — a bad-date row
+sitting above a correctly dated one arrived *after* it, and the clock is getting the date wrong
+right now rather than having done so once in the past.
 
 ## Row order
 
