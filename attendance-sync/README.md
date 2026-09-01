@@ -10,7 +10,8 @@ into a Google Sheet through an Apps Script Web App.
 | `sync_history.py` | Windows PC on the clock's LAN — one-off historical import of all stored punches |
 | `live_monitor.py` | Same PC — runs for the whole shift, pushing each punch as it happens |
 | `attendance_service.py` | Same PC — the unattended version: listens only during LISTEN_WINDOWS, sleeps between them, catches up on what it missed |
-| `start_monitor.bat` | Launches the service and restarts it if it exits; shortcut this into `shell:startup` |
+| `start_monitor.bat` | Launches the service and restarts it if it exits |
+| `install_autostart.ps1` | Registers the scheduled task that runs the batch file at 07:00 daily |
 | `test_email.py` | Same PC — sends one fake punch to prove the Gmail alert path works |
 | `clock_diagnostics.py` | Same PC — reads the device's own clock and compares it to the PC's |
 | `clock_set_time.py` | Same PC — corrects the device clock from the PC's (asks before writing) |
@@ -81,14 +82,25 @@ Two files track what has been sent, in two formats: `seen.txt` here, and `seen` 
 `<id>_<timestamp>`) written by `sync_history.py`. The service reads both, so a punch one of them
 uploaded is not uploaded again by the other.
 
-To start it at logon:
+To start it at 07:00 every morning, from the folder the scripts are in:
 
-1. Press Win+R, type `shell:startup`, press Enter.
-2. Put `start_monitor.bat` in that folder — either right-drag it there and choose "Create shortcuts
-   here", or just copy the file itself. A copy has no scripts beside it, so the batch file falls
-   back to `%USERPROFILE%\Documents\pyzk` when `attendance_service.py` is not next to it.
+```powershell
+powershell -ExecutionPolicy Bypass -File install_autostart.ps1
+```
 
-The service window then opens automatically at every logon. Closing the window stops it.
+That registers a scheduled task rather than a Startup-folder shortcut: a logon trigger misses a
+machine that is already awake at 07:00 and re-fires on every mid-day logon. `StartWhenAvailable` is
+set, so a PC switched on at 08:30 still starts the service instead of skipping the day.
+
+```powershell
+Get-ScheduledTask -TaskName 'Attendance Service'      # check
+Start-ScheduledTask -TaskName 'Attendance Service'    # run it now
+Unregister-ScheduledTask -TaskName 'Attendance Service' -Confirm:$false   # remove
+```
+
+`start_monitor.bat` looks for `attendance_service.py` beside itself first, then in
+`Documents\REAPER Media\stella\pyzc` and `Documents\pyzk`, so it works from wherever it is
+launched. Closing the service window stops it until the next morning.
 
 ## Daily summary tab
 
@@ -153,6 +165,19 @@ An employee with a single punch is reported as `(no exit recorded)` rather than 
 one punch means the pair is missing, not that they left the moment they arrived.
 
 `?action=report` only ever mails `REPORT_RECIPIENTS`, so a leaked URL cannot be aimed at anyone else.
+
+## Service notice
+
+`sendServiceNotice()` sends today's times with an apology for an outage, in English and then Thai,
+to `REPORT_RECIPIENTS`. It is a menu item and `?action=notice`, deliberately not scheduled: it is
+about one specific day.
+
+Both halves print the same rendered table, so the two languages cannot drift apart. The Thai half
+dates in the Buddhist era, matching what Windows displays on these machines.
+
+**Bring the sheet up to date before sending it.** The report reads the sheet, not the clock, so
+punches the listener missed are absent — and an apology mail that reports everyone as having never
+left is worse than none. `python sync_history.py` pulls whatever the device still holds first.
 
 ## Row order
 

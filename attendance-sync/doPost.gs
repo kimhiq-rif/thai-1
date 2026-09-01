@@ -29,6 +29,11 @@ function doGet(e) {
     return ContentService.createTextOutput(JSON.stringify(sent, null, 2))
       .setMimeType(ContentService.MimeType.JSON);
   }
+  if (e && e.parameter && e.parameter.action === 'notice') {
+    var notice = sendServiceNotice();
+    return ContentService.createTextOutput(JSON.stringify(notice, null, 2))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
 
   // Opening the URL with no parameters reports which spreadsheet doPost actually
   // writes to. getActiveSpreadsheet() resolves to whatever this project is
@@ -119,6 +124,8 @@ function onOpen() {
     .addItem('Rebuild daily summary', 'buildDailySummary')
     .addItem('Email today\'s report now', 'sendDailyReport')
     .addItem('Schedule daily report (19:00)', 'createDailyReportTrigger')
+    .addSeparator()
+    .addItem('Send service notice (EN + TH)', 'sendServiceNotice')
     .addToUi();
 }
 
@@ -374,4 +381,114 @@ function createDailyReportTrigger() {
     .create();
   SpreadsheetApp.getActiveSpreadsheet().toast(
     'Daily report scheduled for ~19:00 every day.', 'Attendance', 5);
+}
+
+
+// ---------------------------------------------------------------------------
+// One-off service notice
+// ---------------------------------------------------------------------------
+// Today's summary with an apology for the outage, in English and Thai. Sent by
+// hand from the menu, not on a schedule - it is about one specific day.
+
+function thaiDate_(d) {
+  // Thai dates are written in the Buddhist era, 543 years ahead of the
+  // Gregorian one, and Windows here is already displaying dates that way.
+  var months = ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน',
+                'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'];
+  return d.getDate() + ' ' + months[d.getMonth()] + ' ' + (d.getFullYear() + 543);
+}
+
+function englishDate_(d) {
+  var months = ['January', 'February', 'March', 'April', 'May', 'June',
+                'July', 'August', 'September', 'October', 'November', 'December'];
+  return d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+}
+
+function sendServiceNotice() {
+  var today = new Date();
+  var tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+
+  var data = todaysRows_(today);
+  var tz = Session.getScriptTimeZone();
+
+  var employees = [];
+  for (var k in data.byEmployee) {
+    employees.push(data.byEmployee[k]);
+  }
+  employees.sort(function (a, b) {
+    return a.name < b.name ? -1 : (a.name > b.name ? 1 : 0);
+  });
+
+  // Built once and used in both halves of the mail: the times are the same
+  // figures either way, and re-formatting them twice invites them to disagree.
+  var table = [];
+  if (employees.length === 0) {
+    table.push('  (no punches recorded)');
+  } else {
+    for (var i = 0; i < employees.length; i++) {
+      var e = employees[i];
+      var single = e.count < 2;
+      var entry = Utilities.formatDate(e.first, tz, 'HH:mm');
+      var exit = single ? '--:--' : Utilities.formatDate(e.last, tz, 'HH:mm');
+      var hours = single ? '--' :
+        (Math.round(((e.last - e.first) / 3600000) * 100) / 100) + 'h';
+      table.push('  ' + e.name + '  |  in ' + entry + '  |  out ' + exit + '  |  ' + hours);
+    }
+  }
+  var tableText = table.join('\n');
+
+  var english = [
+    'ATTENDANCE REPORT - ' + englishDate_(today),
+    '',
+    'Dear all,',
+    '',
+    'Below is the attendance record for today.',
+    '',
+    tableText,
+    '',
+    'Please accept our apologies: the attendance system did not work correctly',
+    'today. Some punches were not reported by email as they should have been.',
+    'The cause has been found and corrected.',
+    '',
+    'From tomorrow, ' + englishDate_(tomorrow) + ', the system is expected to run',
+    'normally again: every punch will be recorded automatically and the alerts',
+    'will be sent as configured.',
+    '',
+    'Thank you for your understanding.'
+  ].join('\n');
+
+  var thai = [
+    'รายงานเวลาเข้า-ออกงาน - ' + thaiDate_(today),
+    '',
+    'เรียน ทุกท่าน',
+    '',
+    'ด้านล่างนี้คือบันทึกเวลาเข้า-ออกงานของวันนี้',
+    '',
+    tableText,
+    '',
+    'เราต้องขออภัยเป็นอย่างยิ่ง ระบบบันทึกเวลาทำงานวันนี้ทำงานไม่ถูกต้อง',
+    'ทำให้การบันทึกเวลาบางรายการไม่ได้ถูกแจ้งเตือนทางอีเมลตามที่ควรจะเป็น',
+    'เราได้ตรวจพบสาเหตุและแก้ไขเรียบร้อยแล้ว',
+    '',
+    'ตั้งแต่พรุ่งนี้ วันที่ ' + thaiDate_(tomorrow) + ' ระบบจะกลับมาทำงานตามปกติ',
+    'ทุกการบันทึกเวลาจะถูกบันทึกโดยอัตโนมัติ และการแจ้งเตือนจะถูกส่งตามที่ตั้งค่าไว้',
+    '',
+    'ขอบคุณสำหรับความเข้าใจ'
+  ].join('\n');
+
+  var separator = '\n\n' + new Array(60).join('-') + '\n\n';
+  var body = english + separator + thai;
+  var subject = 'Attendance report ' + englishDate_(today) +
+                ' / รายงานเวลาเข้า-ออกงาน';
+
+  GmailApp.sendEmail(REPORT_RECIPIENTS, subject, body);
+
+  return {
+    "result": "service notice sent",
+    "date": Utilities.formatDate(today, tz, 'yyyy-MM-dd'),
+    "employees": employees.length,
+    "sentTo": REPORT_RECIPIENTS,
+    "remainingEmailQuota": MailApp.getRemainingDailyQuota()
+  };
 }
