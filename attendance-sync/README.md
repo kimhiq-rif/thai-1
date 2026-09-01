@@ -68,7 +68,7 @@ text for any `doPost` that failed.
 ## Running unattended
 
 `attendance_service.py` is the version to leave running. It listens only inside `LISTEN_WINDOWS`
-(06:30-10:00 and 15:00-19:00 by default) and sleeps in between, so the clock connection is not held
+(07:30-10:00 and 15:00-19:00 by default) and sleeps in between, so the clock connection is not held
 open all day.
 
 Sleeping does not mean losing punches. When a window opens, the service reads the day's punches off

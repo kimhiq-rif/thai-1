@@ -41,7 +41,7 @@ CLOCK_PORT = 4370
 
 # When to listen. Add or edit pairs freely; they are (start, end) local time.
 LISTEN_WINDOWS = [
-    (time(6, 30), time(10, 0)),
+    (time(7, 30), time(10, 0)),
     (time(15, 0), time(19, 0)),
 ]
 
