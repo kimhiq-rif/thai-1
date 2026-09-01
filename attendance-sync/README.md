@@ -64,10 +64,15 @@ editor, select `doPost`, press Run once, accept the prompt, then redeploy.
 open all day.
 
 Sleeping does not mean losing punches. When a window opens, the service reads the day's punches off
-the clock and sends any it has not already recorded in `seen.txt`. Those go up the batch path, which
-writes the rows without mailing: an alert hours late is noise, and a backlog of them could spend the
-whole daily Gmail quota at once. On its very first run it records the day's existing punches without
-sending them, on the assumption `sync_history.py` already imported them.
+the clock and sends any it has not already recorded. Up to `MAX_CATCHUP_EMAILS` of them go up one at
+a time, each mailing its alert; a backlog larger than that goes up the silent batch path instead,
+since dozens of alerts at once are unreadable and would eat the 100/day Gmail quota. On its very
+first run it records the day's existing punches without sending them, on the assumption
+`sync_history.py` already imported them.
+
+Two files track what has been sent, in two formats: `seen.txt` here, and `seen` (a JSON list of
+`<id>_<timestamp>`) written by `sync_history.py`. The service reads both, so a punch one of them
+uploaded is not uploaded again by the other.
 
 To start it at logon:
 
@@ -95,20 +100,30 @@ otherwise sit on top of every real day.
 ## Impossible punch dates
 
 Rows have arrived stamped 2027, 2035 and 2119. They are not corrupted in transit: the device
-records them that way, so its own clock is wrong when it writes them. Confirm with:
+records them that way, so its own clock is wrong when it writes them.
 
-```powershell
-python clock_diagnostics.py
-```
+This is live, not historical. Because a live punch inserts at row 1 and pushes earlier ones down,
+physical row order is arrival order reversed — and on 2026-09-01 the sheet reads, top to bottom:
+2024-06-19, 2119, 2119, 2035, 2035, 2027, then 08:08, 08:04, 08:01, 07:58. The device stamped four
+punches correctly that morning and then six garbage dates immediately after, so its clock broke
+between one punch and the next.
 
-which prints the device time beside the PC time. If they disagree, `python clock_set_time.py`
-corrects the device. A correction that does not hold means the RTC backup battery is flat, and
-setting the time only lasts until the next power cycle.
+`attendance_service.py` handles both halves of that:
 
-Note which rows are affected before assuming it is only historical. Live punches insert at row 1
-and push earlier ones down, so the physical row order is arrival order reversed — a bad-date row
-sitting above a correctly dated one arrived *after* it, and the clock is getting the date wrong
-right now rather than having done so once in the past.
+- **Keeps the device clock right.** It compares the device time to this PC's when a window opens
+  and every `CLOCK_CHECK_MINUTES` while listening, and corrects drift over `MAX_DRIFT_SECONDS`.
+  Every check that finds drift is appended to `clock_corrections.log`.
+- **Refuses to record an impossible date.** A punch dated outside `PLAUSIBLE_YEARS` is written with
+  this PC's time instead, with the reported date kept in the status column, so the row is usable
+  and the substitution is visible rather than silent.
+
+The PC's own clock is the reference, so it has to be right — Windows keeps it on NTP by default.
+
+`clock_diagnostics.py` answers the same question by hand, and `clock_set_time.py` corrects the
+device on demand.
+
+**A log filling up with corrections means the RTC backup battery is flat.** Software correction
+only holds until the next power cut; the battery is the actual repair.
 
 ## Row order
 
