@@ -22,12 +22,16 @@ print("Connected.\n")
 try:
     pc_now = datetime.now()
     device_time = conn.get_time()
-    drift = device_time - pc_now
+    # In seconds, not as a timedelta: Python renders a small negative one as
+    # "-1 day, 23:59:46", which reads like the device is a day out when it is
+    # thirteen seconds behind.
+    drift = (device_time - pc_now).total_seconds()
 
     print("PC time:      {}".format(pc_now.strftime('%Y-%m-%d %H:%M:%S')))
     print("Device time:  {}".format(device_time.strftime('%Y-%m-%d %H:%M:%S')))
-    print("Difference:   {}".format(drift))
-    if abs(drift.total_seconds()) > 120:
+    print("Difference:   {:+.1f} seconds ({})".format(
+        drift, "device is behind" if drift < 0 else "device is ahead"))
+    if abs(drift) > 120:
         print("")
         print("*** The device clock is wrong. This is a hardware problem on")
         print("*** the clock (commonly a dying RTC/backup battery), not the")

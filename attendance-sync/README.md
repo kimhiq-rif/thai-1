@@ -132,6 +132,12 @@ device on demand.
 **A log filling up with corrections means the RTC backup battery is flat.** Software correction
 only holds until the next power cut; the battery is the actual repair.
 
+Measured on the device (ZKTeco K50/ID, firmware 6.60 of Sep 2019, serial CQU2231261864): on
+2026-09-01 at 20:12 it was 13.9 seconds behind the PC — correct. The bad dates are therefore not
+steady drift the periodic check would catch, but momentary jumps between one punch and the next,
+which is why the substitution matters more than the correction: the clock reads fine whenever you
+ask it, and lies only on the punch itself.
+
 ## End-of-day report
 
 `sendDailyReport()` mails one summary per day to `REPORT_RECIPIENTS`: entry, exit, hours and punch
