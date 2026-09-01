@@ -16,8 +16,21 @@
 // address with a typo in it fails silently from the script's side.
 var ALERT_RECIPIENTS = "wirasakmanclash@gmail.com,info@stellabungalows.com";
 
+// Who gets the end-of-day summary. Separate from ALERT_RECIPIENTS so the daily
+// report and the per-punch alerts can go to different people.
+var REPORT_RECIPIENTS = "rifpnima@gmail.com,wirasakmanclash@gmail.com,info@stellabungalows.com";
+
 function doGet(e) {
-  // Opening the URL in a browser reports which spreadsheet doPost actually
+  // ?action=report sends the day's summary now, for checking it before
+  // tomorrow's trigger fires. It only ever mails REPORT_RECIPIENTS, so a URL
+  // that leaks cannot be pointed at anyone else.
+  if (e && e.parameter && e.parameter.action === 'report') {
+    var sent = sendDailyReport();
+    return ContentService.createTextOutput(JSON.stringify(sent, null, 2))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // Opening the URL with no parameters reports which spreadsheet doPost actually
   // writes to. getActiveSpreadsheet() resolves to whatever this project is
   // bound to, which is not necessarily the file someone happens to be looking
   // at, and rows landing in a second copy is indistinguishable from rows never
@@ -104,6 +117,8 @@ function onOpen() {
   SpreadsheetApp.getUi()
     .createMenu('Attendance')
     .addItem('Rebuild daily summary', 'buildDailySummary')
+    .addItem('Email today\'s report now', 'sendDailyReport')
+    .addItem('Schedule daily report (19:00)', 'createDailyReportTrigger')
     .addToUi();
 }
 
@@ -222,4 +237,141 @@ function buildDailySummary() {
   SpreadsheetApp.getActiveSpreadsheet().toast(
     rows.length + ' day rows built' + (skipped ? ', ' + skipped + ' skipped' : ''),
     'Daily summary', 5);
+}
+
+
+// ---------------------------------------------------------------------------
+// End-of-day report
+// ---------------------------------------------------------------------------
+
+function todaysRows_(targetDate) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var log = ss.getSheetByName(LOG_TAB);
+  var values = log.getDataRange().getValues();
+  var wanted = Utilities.formatDate(targetDate, Session.getScriptTimeZone(), 'yyyy-MM-dd');
+
+  var byEmployee = {};
+  var flagged = [];
+
+  for (var i = 0; i < values.length; i++) {
+    var when = parsePunchDate_(values[i][0]);
+    if (!when) {
+      continue;
+    }
+    var name = String(values[i][2]);
+    if (name === 'EMAIL TEST' || name === 'CONNECTION TEST') {
+      continue;
+    }
+    if (dateKey_(when) !== wanted) {
+      continue;
+    }
+
+    // The service rewrites an impossible date to the time it arrived and keeps
+    // what the device claimed in the status, so those rows are still today's.
+    var status = String(values[i][3]);
+    if (status.indexOf('device clock was wrong') !== -1) {
+      flagged.push(name + ' at ' + Utilities.formatDate(
+        when, Session.getScriptTimeZone(), 'HH:mm:ss') + ' - ' + status);
+    }
+
+    var key = String(values[i][1]);
+    var emp = byEmployee[key];
+    if (!emp) {
+      emp = byEmployee[key] = {
+        name: name, id: key, first: when, last: when, count: 0
+      };
+    }
+    if (when < emp.first) { emp.first = when; }
+    if (when > emp.last) { emp.last = when; }
+    emp.count++;
+  }
+
+  return { byEmployee: byEmployee, flagged: flagged, dateLabel: wanted };
+}
+
+function sendDailyReport(targetDate) {
+  var day = targetDate || new Date();
+  var data = todaysRows_(day);
+  var tz = Session.getScriptTimeZone();
+
+  var employees = [];
+  for (var k in data.byEmployee) {
+    employees.push(data.byEmployee[k]);
+  }
+  employees.sort(function (a, b) {
+    return a.name < b.name ? -1 : (a.name > b.name ? 1 : 0);
+  });
+
+  var lines = [];
+  lines.push('Attendance summary for ' + data.dateLabel);
+  lines.push('');
+
+  if (employees.length === 0) {
+    lines.push('No punches recorded today.');
+  } else {
+    for (var i = 0; i < employees.length; i++) {
+      var e = employees[i];
+      var entry = Utilities.formatDate(e.first, tz, 'HH:mm:ss');
+      // One punch means an entry with nothing to pair it to, not a zero-hour
+      // shift, so report it as missing rather than printing entry == exit.
+      var single = e.count < 2;
+      var exit = single ? '(no exit recorded)' : Utilities.formatDate(e.last, tz, 'HH:mm:ss');
+      var hours = single ? '-' :
+        (Math.round(((e.last - e.first) / 3600000) * 100) / 100) + 'h';
+
+      lines.push(e.name + ' (id ' + e.id + ')');
+      lines.push('    Entry:   ' + entry);
+      lines.push('    Exit:    ' + exit);
+      lines.push('    Hours:   ' + hours);
+      lines.push('    Punches: ' + e.count);
+      lines.push('');
+    }
+  }
+
+  if (data.flagged.length > 0) {
+    lines.push('---');
+    lines.push('The clock reported an impossible date on ' + data.flagged.length +
+               ' punch(es) today. They were recorded at the time they arrived:');
+    for (var j = 0; j < data.flagged.length; j++) {
+      lines.push('  ' + data.flagged[j]);
+    }
+    lines.push('');
+    lines.push('Repeated occurrences mean the clock\'s backup battery needs replacing.');
+    lines.push('');
+  }
+
+  lines.push('---');
+  lines.push('Sheet: ' + SpreadsheetApp.getActiveSpreadsheet().getUrl());
+
+  var body = lines.join('\n');
+  var subject = 'Attendance summary ' + data.dateLabel +
+                ' (' + employees.length + ' employee(s))';
+
+  GmailApp.sendEmail(REPORT_RECIPIENTS, subject, body);
+
+  return {
+    "result": "report sent",
+    "date": data.dateLabel,
+    "employees": employees.length,
+    "flaggedPunches": data.flagged.length,
+    "sentTo": REPORT_RECIPIENTS,
+    "remainingEmailQuota": MailApp.getRemainingDailyQuota()
+  };
+}
+
+function createDailyReportTrigger() {
+  // Installing twice would mail the report twice, so clear ours out first.
+  var existing = ScriptApp.getProjectTriggers();
+  for (var i = 0; i < existing.length; i++) {
+    if (existing[i].getHandlerFunction() === 'sendDailyReport') {
+      ScriptApp.deleteTrigger(existing[i]);
+    }
+  }
+  ScriptApp.newTrigger('sendDailyReport')
+    .timeBased()
+    .atHour(19)
+    .everyDays(1)
+    .create();
+  SpreadsheetApp.getActiveSpreadsheet().toast(
+    'Daily report scheduled for ~19:00 every day.', 'Attendance', 5);
 }

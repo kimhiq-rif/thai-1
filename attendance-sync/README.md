@@ -132,6 +132,22 @@ device on demand.
 **A log filling up with corrections means the RTC backup battery is flat.** Software correction
 only holds until the next power cut; the battery is the actual repair.
 
+## End-of-day report
+
+`sendDailyReport()` mails one summary per day to `REPORT_RECIPIENTS`: entry, exit, hours and punch
+count per employee, plus a section listing any punch the clock dated impossibly. It reads the sheet
+rather than the device, so it runs on Google's servers and does not care whether the PC is on.
+
+- **Send it now:** Attendance → *Email today's report now*, or open the deployment URL with
+  `?action=report`.
+- **Schedule it:** Attendance → *Schedule daily report (19:00)*. Installing twice would send the
+  report twice, so it clears its own trigger before adding one.
+
+An employee with a single punch is reported as `(no exit recorded)` rather than a zero-hour shift —
+one punch means the pair is missing, not that they left the moment they arrived.
+
+`?action=report` only ever mails `REPORT_RECIPIENTS`, so a leaked URL cannot be aimed at anyone else.
+
 ## Row order
 
 The Sheet reads newest-first. `sync_history.py` sorts the punches descending before sending them,
