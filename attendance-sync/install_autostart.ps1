@@ -46,11 +46,29 @@ if (Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue) {
 Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $trigger -Settings $settings `
     -Description "Starts the ZK attendance listener each morning." | Out-Null
 
+# WakeToRun does nothing unless wake timers are enabled in the power scheme,
+# and it fails silently when they are not - the machine simply sleeps through
+# 07:00 with a task that looked correctly registered.
+try {
+    powercfg /setacvalueindex SCHEME_CURRENT SUB_SLEEP RTCWAKE 1 2>&1 | Out-Null
+    powercfg /setdcvalueindex SCHEME_CURRENT SUB_SLEEP RTCWAKE 1 2>&1 | Out-Null
+    powercfg /setactive SCHEME_CURRENT 2>&1 | Out-Null
+    Write-Host "Wake timers enabled in the current power scheme." -ForegroundColor Green
+} catch {
+    Write-Host "Could not enable wake timers automatically: $_" -ForegroundColor Yellow
+    Write-Host "Run this script as Administrator, or enable them by hand:"
+    Write-Host "  Control Panel > Power Options > Change plan settings >"
+    Write-Host "  Change advanced power settings > Sleep > Allow wake timers > Enable"
+}
+
 Write-Host ""
 Write-Host "Registered '$taskName': runs $bat daily at 07:00." -ForegroundColor Green
 Write-Host "The task is set to wake the PC from sleep. A PC that is fully shut"
-Write-Host "down cannot be woken this way - leave it sleeping, not off.
+Write-Host "down cannot be woken this way - leave it sleeping, not off."
 Write-Host ""
 Write-Host "Check it:    Get-ScheduledTask -TaskName '$taskName'"
 Write-Host "Test it now: Start-ScheduledTask -TaskName '$taskName'"
 Write-Host "Remove it:   Unregister-ScheduledTask -TaskName '$taskName' -Confirm:`$false"
+Write-Host ""
+Write-Host "Confirm the wake is actually armed - this must list the task:"
+Write-Host "  powercfg /waketimers"
