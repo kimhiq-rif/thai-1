@@ -13,6 +13,8 @@ into a Google Sheet through an Apps Script Web App.
 | `start_monitor.bat` | Launches the service and restarts it if it exits |
 | `install_autostart.ps1` | Registers the scheduled task that runs the batch file at 07:00 daily |
 | `test_email.py` | Same PC — sends one fake punch to prove the Gmail alert path works |
+| `drill_test.py` | Same PC — a timed, verbose listening run for rehearsing the chain by hand |
+| `install_drill.ps1` | Schedules a one-off drill: wake the PC at a given time, listen, stop |
 | `clock_diagnostics.py` | Same PC — reads the device's own clock and compares it to the PC's |
 | `clock_set_time.py` | Same PC — corrects the device clock from the PC's (asks before writing) |
 | `doPost.gs` | The Sheet's Apps Script project — the Web App endpoint |
@@ -118,6 +120,29 @@ Unregister-ScheduledTask -TaskName 'Attendance Service' -Confirm:$false   # remo
 `start_monitor.bat` looks for `attendance_service.py` beside itself first, then in
 `Documents\REAPER Media\stella\pyzc` and `Documents\pyzk`, so it works from wherever it is
 launched. Closing the service window stops it until the next morning.
+
+## Rehearsing it
+
+```powershell
+powershell -ExecutionPolicy Bypass -File install_drill.ps1 -At "10:00" -Minutes 10 -SleepAfter
+```
+
+Wakes the PC at 10:00, listens for ten minutes while someone punches, then sleeps it again. The
+trigger is one-off, so nothing is left behind changing how the next morning behaves.
+
+It runs `drill_test.py`, not the service, for one reason: the service listens only inside
+`LISTEN_WINDOWS`, and 10:01 is outside them. Rehearsing with the service would wake the machine,
+find it out of hours, and put it straight back to sleep having proved nothing. `drill_test.py`
+ignores the windows and listens for a fixed span instead, which also means the production
+configuration is never edited and there is nothing to remember to change back.
+
+**Close any window already running `attendance_service.py` first.** Two listeners on one clock
+conflict over the same connection.
+
+The punch is a real punch: it lands in the Sheet as a real row and mails a real alert. That is the
+point — the drill proves the whole chain — but the row is data, not a test artifact, so leave it.
+
+Output goes to `drill_log.txt` as well as the console, so a run can be read after the window closes.
 
 ## Daily summary tab
 
