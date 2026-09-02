@@ -7,7 +7,7 @@ into a Google Sheet through an Apps Script Web App.
 
 | File | Where it runs |
 | --- | --- |
-| `sync_history.py` | Windows PC on the clock's LAN — one-off historical import of all stored punches |
+| `sync_history.py` | Windows PC on the clock's LAN — imports whatever the Sheet has not seen: the original bulk history, and since then the recovery path for punches missed while the listener was down |
 | `live_monitor.py` | Same PC — runs for the whole shift, pushing each punch as it happens |
 | `attendance_service.py` | Same PC — the unattended version: listens only during LISTEN_WINDOWS, sleeps between them, catches up on what it missed |
 | `start_monitor.bat` | Launches the service and restarts it if it exits |
@@ -44,9 +44,13 @@ once that row lands. Delete the test row from the Sheet afterwards.
 
 ## Emails
 
-Only the single-record path in `doPost` sends mail, so alerts arrive from `live_monitor.py` and
-never from the bulk import — 5,008 imported punches would otherwise mean 5,008 emails against a
-quota of 100/day on a consumer Gmail account.
+`doPost` mails one alert per punch sent as a single object, and writes silently when sent a list.
+Both `sync_history.py` and the service's catch-up choose between them by volume: at or under their
+email limit each punch goes up on its own and alerts; above it they switch to the silent list.
+
+That limit is the whole reason the split exists. The first import was 5,008 records — 5,008 emails
+against a quota of 100/day — while a recovery run after a missed morning is three or four punches
+that should alert exactly like live ones do.
 
 Prove the path works before a shift depends on it:
 
@@ -81,6 +85,10 @@ first run it records the day's existing punches without sending them, on the ass
 Two files track what has been sent, in two formats: `seen.txt` here, and `seen` (a JSON list of
 `<id>_<timestamp>`) written by `sync_history.py`. The service reads both, so a punch one of them
 uploaded is not uploaded again by the other.
+
+That matters more than it sounds. Run `sync_history.py` and then start the service, and a version
+that reads only its own file treats the punches the other just uploaded as missed — duplicate rows
+and duplicate alerts for the same punch.
 
 To start it at 07:00 every morning, from the folder the scripts are in:
 
