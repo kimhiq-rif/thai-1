@@ -144,6 +144,28 @@ point — the drill proves the whole chain — but the row is data, not a test a
 
 Output goes to `drill_log.txt` as well as the console, so a run can be read after the window closes.
 
+## Time zones
+
+Four components each carry their own, and they do not have to agree:
+
+| Component | Where it comes from |
+| --- | --- |
+| Windows PC | Windows time zone setting — every Python timestamp is `datetime.now()` |
+| ZK clock | its own RTC |
+| Apps Script project | Project Settings → Time zone |
+| Google Sheet | File → Settings → Time zone |
+
+The last two default to the account's location, not the site's. Everything that groups punches into
+a day — the daily summary, the report, the watcher expiry — reads `Session.getScriptTimeZone()`, so
+a script on Jerusalem time files an early-morning Bangkok punch under the previous day and nothing
+in the output looks wrong.
+
+`doGet` reports `scriptTimeZone`, `spreadsheetTimeZone`, `scriptLocalTime` and `bangkokTime`
+side by side; `clock_diagnostics.py` reports the PC's and says plainly if it is not UTC+7.
+
+Fix a mismatched script: Apps Script → ⚙ Project Settings → Time zone → **(GMT+07:00) Bangkok**,
+then redeploy. Fix the sheet: File → Settings → Time zone → Bangkok.
+
 ## Daily summary tab
 
 The log holds one row per punch, so once rows are sorted by time a day's exits cluster together

@@ -76,7 +76,18 @@ function doGet(e) {
     "alertsSentFrom": Session.getEffectiveUser().getEmail(),
     "alertsSentTo": alertRecipients_(),
     "alertWatcherUntil": ALERT_WATCHER_UNTIL,
-    "reportsSentTo": REPORT_RECIPIENTS
+    "reportsSentTo": REPORT_RECIPIENTS,
+    // The script and the spreadsheet carry separate time zone settings, and
+    // neither follows the clock on the wall in Thailand by default. Everything
+    // that groups punches into a day - the daily summary, the report, the
+    // watcher expiry - reads the script's, so a mismatch quietly files an
+    // early-morning punch under the previous day.
+    "scriptTimeZone": Session.getScriptTimeZone(),
+    "spreadsheetTimeZone": ss.getSpreadsheetTimeZone(),
+    "scriptLocalTime": Utilities.formatDate(
+        new Date(), Session.getScriptTimeZone(), 'yyyy-MM-dd HH:mm:ss'),
+    "bangkokTime": Utilities.formatDate(
+        new Date(), 'Asia/Bangkok', 'yyyy-MM-dd HH:mm:ss')
   };
   return ContentService.createTextOutput(JSON.stringify(info, null, 2))
     .setMimeType(ContentService.MimeType.JSON);

@@ -7,6 +7,7 @@ RTC (almost certainly its backup battery) rather than anything in this
 pipeline - the fix is on the clock itself, via set_time() below or its own
 menu, not in the Python or Apps Script.
 """
+import time as time_module
 from datetime import datetime
 from zk import ZK
 
@@ -27,6 +28,17 @@ try:
     # thirteen seconds behind.
     drift = (device_time - pc_now).total_seconds()
 
+    # Every Python timestamp here comes from datetime.now(), which is the PC's
+    # local time. If Windows is not on Bangkok time, every punch this machine
+    # uploads carries the wrong hour.
+    offset = -time_module.timezone / 3600
+    if time_module.daylight and time_module.localtime().tm_isdst:
+        offset = -time_module.altzone / 3600
+    print("PC time zone: {} (UTC{:+g})".format(
+        time_module.localtime().tm_zone if hasattr(time_module.localtime(), 'tm_zone')
+        else time_module.tzname[0], offset))
+    if abs(offset - 7) > 0.01:
+        print("  *** Not UTC+7. Thailand is UTC+7 - check Windows time zone. ***")
     print("PC time:      {}".format(pc_now.strftime('%Y-%m-%d %H:%M:%S')))
     print("Device time:  {}".format(device_time.strftime('%Y-%m-%d %H:%M:%S')))
     print("Difference:   {:+.1f} seconds ({})".format(
