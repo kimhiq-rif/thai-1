@@ -14,7 +14,7 @@
 
 // Who the live-punch alerts go to. Kept up here so doGet can report it: an
 // address with a typo in it fails silently from the script's side.
-var ALERT_RECIPIENTS = "wirasakmanclash@gmail.com,info@stellabungalows.com";
+var ALERT_RECIPIENTS = "rifpnima@gmail.com,wirasakmanclash@gmail.com,info@stellabungalows.com";
 
 // Who gets the end-of-day summary. Separate from ALERT_RECIPIENTS so the daily
 // report and the per-punch alerts can go to different people.
@@ -32,6 +32,11 @@ function doGet(e) {
   if (e && e.parameter && e.parameter.action === 'notice') {
     var notice = sendServiceNotice();
     return ContentService.createTextOutput(JSON.stringify(notice, null, 2))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+  if (e && e.parameter && e.parameter.action === 'dedupe') {
+    var deduped = removeDuplicateRows();
+    return ContentService.createTextOutput(JSON.stringify(deduped, null, 2))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -126,6 +131,8 @@ function onOpen() {
     .addItem('Schedule daily report (19:00)', 'createDailyReportTrigger')
     .addSeparator()
     .addItem('Send service notice (EN + TH)', 'sendServiceNotice')
+    .addSeparator()
+    .addItem('Remove duplicate rows', 'removeDuplicateRows')
     .addToUi();
 }
 
@@ -490,5 +497,83 @@ function sendServiceNotice() {
     "employees": employees.length,
     "sentTo": REPORT_RECIPIENTS,
     "remainingEmailQuota": MailApp.getRemainingDailyQuota()
+  };
+}
+
+
+// ---------------------------------------------------------------------------
+// Duplicate removal
+// ---------------------------------------------------------------------------
+// A punch is identified by its timestamp and employee id: nobody punches twice
+// in the same second. Duplicates arise when two uploaders disagree about what
+// has already been sent - sync_history.py keeps its record in `seen`, the
+// service in `seen.txt` - and the same punch goes up twice.
+//
+// The first occurrence is kept. Rows are rewritten in one pass rather than
+// deleted one at a time, which on five thousand rows is the difference between
+// seconds and minutes.
+
+var BACKUP_TAB = 'Sheet1_backup';
+
+function removeDuplicateRows() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName(LOG_TAB);
+  if (!sheet) {
+    throw new Error('No tab named ' + LOG_TAB);
+  }
+
+  var values = sheet.getDataRange().getValues();
+  var kept = [];
+  var seen = {};
+  var removed = 0;
+
+  for (var i = 0; i < values.length; i++) {
+    var row = values[i];
+    if (row[0] === '' && row[1] === '' && row[2] === '') {
+      continue;  // trailing blanks the export pads the sheet with
+    }
+    // Dates come back as Date objects and strings depending on how the row was
+    // written, so normalise before comparing or the same punch keys twice.
+    var stamp = (row[0] instanceof Date)
+      ? Utilities.formatDate(row[0], Session.getScriptTimeZone(), 'yyyy-MM-dd HH:mm:ss')
+      : String(row[0]).trim();
+    var key = stamp + '|' + String(row[1]).trim();
+
+    if (seen[key]) {
+      removed++;
+      continue;
+    }
+    seen[key] = true;
+    kept.push(row);
+  }
+
+  if (removed === 0) {
+    SpreadsheetApp.getActiveSpreadsheet().toast(
+      'No duplicates found in ' + kept.length + ' rows.', 'Attendance', 5);
+    return { "result": "no duplicates", "rows": kept.length, "removed": 0 };
+  }
+
+  // This rewrites the only copy of the attendance record, so keep the previous
+  // state on a backup tab. One rolling backup: the point is undo, not history.
+  var old = ss.getSheetByName(BACKUP_TAB);
+  if (old) {
+    ss.deleteSheet(old);
+  }
+  sheet.copyTo(ss).setName(BACKUP_TAB);
+
+  sheet.clearContents();
+  if (kept.length > 0) {
+    sheet.getRange(1, 1, kept.length, kept[0].length).setValues(kept);
+  }
+
+  SpreadsheetApp.getActiveSpreadsheet().toast(
+    'Removed ' + removed + ' duplicate row(s). ' + kept.length + ' remain. ' +
+    'Previous state saved to ' + BACKUP_TAB + '.', 'Attendance', 8);
+
+  return {
+    "result": "duplicates removed",
+    "removed": removed,
+    "rowsRemaining": kept.length,
+    "backupTab": BACKUP_TAB
   };
 }

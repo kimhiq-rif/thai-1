@@ -187,6 +187,20 @@ dates in the Buddhist era, matching what Windows displays on these machines.
 punches the listener missed are absent — and an apology mail that reports everyone as having never
 left is worse than none. `python sync_history.py` pulls whatever the device still holds first.
 
+## Removing duplicates
+
+The same punch reaches the Sheet twice when two uploaders disagree about what has already been
+sent — `sync_history.py` keeps its record in `seen`, the service in `seen.txt`. They are easy to
+miss: the service inserts at row 1 while a batch appends at the bottom, so the two copies of one
+punch sit five thousand rows apart.
+
+**Attendance → Remove duplicate rows**, or `?action=dedupe`. A punch is keyed on timestamp and
+employee id — nobody punches twice in the same second — and the first occurrence is the one kept.
+Trailing blank rows go too.
+
+It rewrites the only copy of the attendance record, so it first copies the tab to `Sheet1_backup`,
+replacing any previous backup. One rolling copy: the point is undo, not history.
+
 ## Row order
 
 The Sheet reads newest-first. `sync_history.py` sorts the punches descending before sending them,
