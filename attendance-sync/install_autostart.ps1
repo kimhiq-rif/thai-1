@@ -24,8 +24,14 @@ $taskName = "Attendance Service"
 
 $action = New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c `"$bat`"" -WorkingDirectory $scriptDir
 $trigger = New-ScheduledTaskTrigger -Daily -At 7am
+# WakeToRun pulls the machine out of sleep at 07:00. It cannot do anything for
+# a machine that is fully shut down - only the BIOS can wake that - so if the PC
+# is switched off overnight it has to be left sleeping instead, or turned on by
+# hand. StartWhenAvailable then covers a late start: a PC woken at 08:30 runs
+# the task on the way up rather than skipping the day.
 $settings = New-ScheduledTaskSettingsSet `
     -StartWhenAvailable `
+    -WakeToRun `
     -AllowStartIfOnBatteries `
     -DontStopIfGoingOnBatteries `
     -ExecutionTimeLimit ([TimeSpan]::Zero)
@@ -42,6 +48,8 @@ Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $trigger -Se
 
 Write-Host ""
 Write-Host "Registered '$taskName': runs $bat daily at 07:00." -ForegroundColor Green
+Write-Host "The task is set to wake the PC from sleep. A PC that is fully shut"
+Write-Host "down cannot be woken this way - leave it sleeping, not off.
 Write-Host ""
 Write-Host "Check it:    Get-ScheduledTask -TaskName '$taskName'"
 Write-Host "Test it now: Start-ScheduledTask -TaskName '$taskName'"
