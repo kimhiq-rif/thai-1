@@ -14,11 +14,26 @@
 
 // Who the live-punch alerts go to. Kept up here so doGet can report it: an
 // address with a typo in it fails silently from the script's side.
-var ALERT_RECIPIENTS = "rifpnima@gmail.com,wirasakmanclash@gmail.com,info@stellabungalows.com";
+var ALERT_RECIPIENTS = "wirasakmanclash@gmail.com,info@stellabungalows.com";
 
-// Who gets the end-of-day summary. Separate from ALERT_RECIPIENTS so the daily
-// report and the per-punch alerts can go to different people.
-var REPORT_RECIPIENTS = "rifpnima@gmail.com,wirasakmanclash@gmail.com,info@stellabungalows.com";
+// A watcher copied on every alert while the system is being proven, until this
+// date inclusive, after which they drop off on their own. Expiring it here
+// rather than leaving it to be remembered: watching is temporary by intent,
+// and an address nobody removes is an address that stops being read.
+var ALERT_WATCHER = "rifpnima@gmail.com";
+var ALERT_WATCHER_UNTIL = "2026-09-09";   // yyyy-MM-dd
+
+// Who gets the end-of-day summary. Separate from the alerts so the two can go
+// to different people.
+var REPORT_RECIPIENTS = "rifpnima@gmail.com";
+
+function alertRecipients_() {
+  // yyyy-MM-dd compares correctly as text, so no date parsing is needed.
+  var today = Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'yyyy-MM-dd');
+  return (today <= ALERT_WATCHER_UNTIL)
+    ? ALERT_WATCHER + "," + ALERT_RECIPIENTS
+    : ALERT_RECIPIENTS;
+}
 
 function doGet(e) {
   // ?action=report sends the day's summary now, for checking it before
@@ -59,7 +74,9 @@ function doGet(e) {
     // correctly to the wrong place, or from an account nobody is watching.
     "remainingEmailQuota": MailApp.getRemainingDailyQuota(),
     "alertsSentFrom": Session.getEffectiveUser().getEmail(),
-    "alertsSentTo": ALERT_RECIPIENTS
+    "alertsSentTo": alertRecipients_(),
+    "alertWatcherUntil": ALERT_WATCHER_UNTIL,
+    "reportsSentTo": REPORT_RECIPIENTS
   };
   return ContentService.createTextOutput(JSON.stringify(info, null, 2))
     .setMimeType(ContentService.MimeType.JSON);
@@ -94,7 +111,7 @@ function doPost(e) {
     sheet.insertRowBefore(1);
     sheet.getRange(1, 1, 1, 4).setValues([[timestamp, empId, empName, status]]);
 
-    var emailTo = ALERT_RECIPIENTS;
+    var emailTo = alertRecipients_();
     var subject = "Attendance Update: " + empName;
     var body = "A new attendance punch was received in the system:\n\n" +
       "Employee Name: " + empName + "\n" +

@@ -44,6 +44,15 @@ once that row lands. Delete the test row from the Sheet afterwards.
 
 ## Emails
 
+Two audiences, set separately at the top of `doPost.gs`:
+
+- **`ALERT_RECIPIENTS`** — one mail per punch, as it happens.
+- **`REPORT_RECIPIENTS`** — the end-of-day summary.
+
+`ALERT_WATCHER` is copied on every alert until `ALERT_WATCHER_UNTIL` inclusive, then drops off by
+itself. Watching a new system is temporary by intent, and an address that has to be removed by hand
+is one that stays on the list long after anyone reads it. Extend the date to keep watching.
+
 `doPost` mails one alert per punch sent as a single object, and writes silently when sent a list.
 Both `sync_history.py` and the service's catch-up choose between them by volume: at or under their
 email limit each punch goes up on its own and alerts; above it they switch to the silent list.
