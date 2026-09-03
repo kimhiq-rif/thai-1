@@ -23,7 +23,20 @@ if (-not (Test-Path $bat)) {
 $taskName = "Attendance Service"
 
 $action = New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c `"$bat`"" -WorkingDirectory $scriptDir
-$trigger = New-ScheduledTaskTrigger -Daily -At 7am
+
+# One trigger per listening window, because the service cannot wake the machine
+# it is running on. Between windows it sits in a sleep loop, and an idle PC
+# suspends it there: on 2026-09-03 the 07:00 wake carried the morning, then the
+# machine slept at about 10:15 and nothing existed to wake it at 15:00, so the
+# afternoon was lost with the service apparently running the whole time.
+#
+# The afternoon trigger exists mainly to wake the hardware. If the service is
+# already up, MultipleInstances IgnoreNew leaves it alone; if it died, this
+# starts it again.
+$triggers = @(
+    (New-ScheduledTaskTrigger -Daily -At 7am),
+    (New-ScheduledTaskTrigger -Daily -At 2:55pm)
+)
 # WakeToRun pulls the machine out of sleep at 07:00. It cannot do anything for
 # a machine that is fully shut down - only the BIOS can wake that - so if the PC
 # is switched off overnight it has to be left sleeping instead, or turned on by
@@ -34,6 +47,7 @@ $settings = New-ScheduledTaskSettingsSet `
     -WakeToRun `
     -AllowStartIfOnBatteries `
     -DontStopIfGoingOnBatteries `
+    -MultipleInstances IgnoreNew `
     -ExecutionTimeLimit ([TimeSpan]::Zero)
 
 # Re-registering rather than adding: running this twice should leave one task,
@@ -43,8 +57,8 @@ if (Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue) {
     Unregister-ScheduledTask -TaskName $taskName -Confirm:$false
 }
 
-Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $trigger -Settings $settings `
-    -Description "Starts the ZK attendance listener each morning." | Out-Null
+Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $triggers -Settings $settings `
+    -Description "Wakes the PC and runs the ZK attendance listener." | Out-Null
 
 # WakeToRun does nothing unless wake timers are enabled in the power scheme,
 # and it fails silently when they are not - the machine simply sleeps through
@@ -62,7 +76,8 @@ try {
 }
 
 Write-Host ""
-Write-Host "Registered '$taskName': runs $bat daily at 07:00." -ForegroundColor Green
+Write-Host "Registered '$taskName': wakes the PC at 07:00 and 14:55 daily." -ForegroundColor Green
+Write-Host "One trigger per listening window - the service cannot wake the PC itself."
 Write-Host "The task is set to wake the PC from sleep. A PC that is fully shut"
 Write-Host "down cannot be woken this way - leave it sleeping, not off."
 Write-Host ""

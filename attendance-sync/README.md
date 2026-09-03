@@ -86,8 +86,10 @@ text for any `doPost` that failed.
 (07:30-10:00 and 15:00-19:00 by default) and sleeps in between, so the clock connection is not held
 open all day.
 
-Sleeping does not mean losing punches. When a window opens, the service reads the day's punches off
-the clock and sends any it has not already recorded. Up to `MAX_CATCHUP_EMAILS` of them go up one at
+Sleeping does not mean losing punches. When a window opens, the service reads the last
+`CATCHUP_DAYS` of punches off the clock and sends any it has not already recorded. Three days, not
+one: a PC asleep from Friday evening to Monday morning would otherwise leave the weekend with no run
+that ever considers it. Up to `MAX_CATCHUP_EMAILS` of them go up one at
 a time, each mailing its alert; a backlog larger than that goes up the silent batch path instead,
 since dozens of alerts at once are unreadable and would eat the 100/day Gmail quota. On its very
 first run it records the day's existing punches without sending them, on the assumption
@@ -101,7 +103,23 @@ That matters more than it sounds. Run `sync_history.py` and then start the servi
 that reads only its own file treats the punches the other just uploaded as missed — duplicate rows
 and duplicate alerts for the same punch.
 
-To start it at 07:00 every morning, from the folder the scripts are in:
+### Waking the machine
+
+The service cannot wake the PC it runs on. Between windows it sits in a sleep loop, and an idle
+machine suspends it there — so a wake has to come from Windows, once per listening window.
+
+That is what went wrong on 2026-09-03: the 07:00 wake carried the morning, the machine slept around
+10:15, and nothing existed to wake it at 15:00. The afternoon was lost while the service looked, by
+every local sign, to be running.
+
+`install_autostart.ps1` therefore registers two daily triggers, 07:00 and 14:55, both `WakeToRun`.
+The afternoon one exists mainly to wake the hardware; `MultipleInstances IgnoreNew` means it leaves
+a running service alone and only starts one if it died.
+
+Inside a window the service holds sleep off itself, via `SetThreadExecutionState`, so an idle PC
+cannot suspend it mid-shift and swallow punches it was listening for.
+
+To install both triggers, from the folder the scripts are in:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File install_autostart.ps1

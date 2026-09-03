@@ -19,6 +19,7 @@ replacing - setting the time in software only holds until the next power cut.
 A punch that still arrives with an impossible date is written with this PC's
 time instead, flagged so nobody reads it as a real 2119 punch.
 """
+import ctypes
 import json
 import os
 import time as time_module
@@ -54,6 +55,28 @@ EXIT_END = time(17, 30)
 # How often live_capture wakes up so the service can notice a window closing.
 CAPTURE_TIMEOUT = 30
 SEEN_RETENTION_DAYS = 7
+
+# How far back a catch-up looks. Only today is not enough: a PC asleep from
+# Friday evening to Monday morning would leave the weekend's punches with no
+# run that ever considers them.
+CATCHUP_DAYS = 3
+
+# Windows sleeps an idle PC out from under a listening window, and a suspended
+# process hears nothing. These ask it not to, for as long as a window is open.
+ES_CONTINUOUS = 0x80000000
+ES_SYSTEM_REQUIRED = 0x00000001
+
+
+def keep_awake(on):
+    """Hold sleep off while listening, and let it resume afterwards."""
+    if os.name != 'nt':
+        return
+    try:
+        flags = ES_CONTINUOUS | ES_SYSTEM_REQUIRED if on else ES_CONTINUOUS
+        ctypes.windll.kernel32.SetThreadExecutionState(flags)
+    except Exception as e:
+        print("Could not change the sleep setting: {}".format(e))
+
 
 # Clock watchdog.
 CLOCK_CHECK_MINUTES = 15      # how often to re-check the device clock
@@ -207,17 +230,17 @@ def post(payload):
 
 
 def catch_up(conn, user_map, seen):
-    """Send today's punches that the service missed while it was asleep."""
-    today = datetime.now().date()
-    todays = [r for r in conn.get_attendance() if r.timestamp.date() == today]
+    """Send recent punches the service missed while it was not listening."""
+    cutoff = (datetime.now() - timedelta(days=CATCHUP_DAYS)).date()
+    todays = [r for r in conn.get_attendance() if r.timestamp.date() >= cutoff]
 
     if seen is None:
-        # First ever run: assume the history import already covered today, and
+        # First ever run: assume the history import already covered these, and
         # record the keys rather than posting them all a second time.
         seen = {punch_key(r.user_id, r.timestamp.strftime('%Y-%m-%d %H:%M:%S'))
                 for r in todays}
         save_seen(seen)
-        print("First run: {} punches from today marked as already imported."
+        print("First run: {} recent punches marked as already imported."
               .format(len(seen)))
         return seen
 
@@ -252,6 +275,7 @@ def run_window(zk):
     conn = None
     try:
         print("Window open. Connecting to attendance clock...")
+        keep_awake(True)
         conn = zk.connect()
         print("Connected.")
 
@@ -290,6 +314,7 @@ def run_window(zk):
             except requests.exceptions.RequestException as err:
                 print("    -> failed to reach Google: {}".format(err))
     finally:
+        keep_awake(False)
         if conn:
             try:
                 conn.disconnect()
