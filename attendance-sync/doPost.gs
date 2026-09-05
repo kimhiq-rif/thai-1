@@ -12,8 +12,15 @@
 //   * Array  -> historical bulk import: one batched write, no emails.
 //   * Object -> single live punch: appends one row and sends the alert email.
 
-// Who the live-punch alerts go to. Kept up here so doGet can report it: an
-// address with a typo in it fails silently from the script's side.
+// One mail per punch is only bearable while a new system is being watched.
+// Past that it is a mail every few minutes all shift, which is read for a week
+// and filtered thereafter - so the monthly summary is the standing report and
+// the per-punch alerts are off.
+var SEND_PUNCH_ALERTS = false;
+
+// Who the live-punch alerts go to, when SEND_PUNCH_ALERTS is on. Kept up here
+// so doGet can report it: an address with a typo in it fails silently from the
+// script's side.
 var ALERT_RECIPIENTS = "wirasakmanclash@gmail.com,info@stellabungalows.com";
 
 // A watcher copied on every alert while the system is being proven, until this
@@ -26,6 +33,15 @@ var ALERT_WATCHER_UNTIL = "2026-09-09";   // yyyy-MM-dd
 // Who gets the end-of-day summary. Separate from the alerts so the two can go
 // to different people.
 var REPORT_RECIPIENTS = "rifpnima@gmail.com";
+
+// Who gets the monthly summary - the standing report now that per-punch mail
+// is off.
+var MONTHLY_RECIPIENTS = "rifpnima@gmail.com";
+
+// How column A displays. The cells hold real Date values, so this is only a
+// number format: changing what doPost writes instead would break
+// parsePunchDate_ and every dedupe key derived from it.
+var DATE_FORMAT = 'dd-mm-yyyy HH:mm:ss';
 
 function alertRecipients_() {
   // yyyy-MM-dd compares correctly as text, so no date parsing is needed.
@@ -47,6 +63,16 @@ function doGet(e) {
   if (e && e.parameter && e.parameter.action === 'notice') {
     var notice = sendServiceNotice();
     return ContentService.createTextOutput(JSON.stringify(notice, null, 2))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+  if (e && e.parameter && e.parameter.action === 'monthly') {
+    var monthly = sendMonthlyReport();
+    return ContentService.createTextOutput(JSON.stringify(monthly, null, 2))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+  if (e && e.parameter && e.parameter.action === 'dateformat') {
+    var fmt = applyDateFormat();
+    return ContentService.createTextOutput(JSON.stringify(fmt, null, 2))
       .setMimeType(ContentService.MimeType.JSON);
   }
   if (e && e.parameter && e.parameter.action === 'dedupe') {
@@ -74,7 +100,9 @@ function doGet(e) {
     // correctly to the wrong place, or from an account nobody is watching.
     "remainingEmailQuota": MailApp.getRemainingDailyQuota(),
     "alertsSentFrom": Session.getEffectiveUser().getEmail(),
-    "alertsSentTo": alertRecipients_(),
+    "punchAlertsEnabled": SEND_PUNCH_ALERTS,
+    "alertsSentTo": SEND_PUNCH_ALERTS ? alertRecipients_() : "(per-punch alerts are off)",
+    "monthlyReportTo": MONTHLY_RECIPIENTS,
     "alertWatcherUntil": ALERT_WATCHER_UNTIL,
     "reportsSentTo": REPORT_RECIPIENTS,
     // The script and the spreadsheet carry separate time zone settings, and
@@ -122,13 +150,14 @@ function doPost(e) {
     sheet.insertRowBefore(1);
     sheet.getRange(1, 1, 1, 4).setValues([[timestamp, empId, empName, status]]);
 
-    var emailTo = alertRecipients_();
-    var subject = "Attendance Update: " + empName;
-    var body = "A new attendance punch was received in the system:\n\n" +
-      "Employee Name: " + empName + "\n" +
-      "Punch Time: " + timestamp + "\n" +
-      "Status: " + status;
-    GmailApp.sendEmail(emailTo, subject, body);
+    if (SEND_PUNCH_ALERTS) {
+      var subject = "Attendance Update: " + empName;
+      var body = "A new attendance punch was received in the system:\n\n" +
+        "Employee Name: " + empName + "\n" +
+        "Punch Time: " + timestamp + "\n" +
+        "Status: " + status;
+      GmailApp.sendEmail(alertRecipients_(), subject, body);
+    }
 
     return ContentService.createTextOutput(JSON.stringify({ "result": "success" }))
       .setMimeType(ContentService.MimeType.JSON);
@@ -161,6 +190,10 @@ function onOpen() {
     .addItem('Send service notice (EN + TH)', 'sendServiceNotice')
     .addSeparator()
     .addItem('Remove duplicate rows', 'removeDuplicateRows')
+    .addItem('Fix date display (dd-mm-yyyy)', 'applyDateFormat')
+    .addSeparator()
+    .addItem('Email last month\'s summary now', 'sendMonthlyReport')
+    .addItem('Schedule monthly summary (1st, 08:00)', 'createMonthlyReportTrigger')
     .addToUi();
 }
 
@@ -604,4 +637,206 @@ function removeDuplicateRows() {
     "rowsRemaining": kept.length,
     "backupTab": BACKUP_TAB
   };
+}
+
+
+// ---------------------------------------------------------------------------
+// Date display
+// ---------------------------------------------------------------------------
+
+function applyDateFormat() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName(LOG_TAB);
+  if (!sheet) {
+    throw new Error('No tab named ' + LOG_TAB);
+  }
+  // The whole column, not just the rows in use, so rows written later display
+  // the same way without anyone re-running this.
+  sheet.getRange(1, 1, sheet.getMaxRows(), 1).setNumberFormat(DATE_FORMAT);
+  ss.toast('Column A now displays as ' + DATE_FORMAT + '.', 'Attendance', 5);
+  return { "result": "date format applied", "format": DATE_FORMAT };
+}
+
+
+// ---------------------------------------------------------------------------
+// Monthly summary
+// ---------------------------------------------------------------------------
+// One mail a month covering the month just ended: per employee, the days
+// worked, hours, and the things worth querying before payroll - days with no
+// exit recorded, and punches the clock dated impossibly.
+
+function monthKey_(d) {
+  return Utilities.formatDate(d, Session.getScriptTimeZone(), 'yyyy-MM');
+}
+
+function monthName_(d) {
+  return Utilities.formatDate(d, Session.getScriptTimeZone(), 'MMMM yyyy');
+}
+
+function collectMonth_(target) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var log = ss.getSheetByName(LOG_TAB);
+  var values = log.getDataRange().getValues();
+  var wanted = monthKey_(target);
+
+  var earliest = new Date(2020, 0, 1);
+  var latest = new Date();
+  latest.setDate(latest.getDate() + 1);
+
+  var byEmployee = {};
+  var flagged = 0;
+
+  for (var i = 0; i < values.length; i++) {
+    var when = parsePunchDate_(values[i][0]);
+    if (!when || when < earliest || when > latest) {
+      continue;
+    }
+    var name = String(values[i][2]);
+    if (name === 'EMAIL TEST' || name === 'CONNECTION TEST') {
+      continue;
+    }
+    if (monthKey_(when) !== wanted) {
+      continue;
+    }
+    if (String(values[i][3]).indexOf('device clock was wrong') !== -1) {
+      flagged++;
+    }
+
+    var id = String(values[i][1]);
+    var emp = byEmployee[id];
+    if (!emp) {
+      emp = byEmployee[id] = { id: id, name: name, days: {} };
+    }
+    // Group into days first: hours for a day are its first punch to its last,
+    // so a midday break does not read as two separate shifts.
+    var day = dateKey_(when);
+    var d = emp.days[day];
+    if (!d) {
+      d = emp.days[day] = { first: when, last: when, count: 0 };
+    }
+    if (when < d.first) { d.first = when; }
+    if (when > d.last) { d.last = when; }
+    d.count++;
+  }
+
+  return { byEmployee: byEmployee, flagged: flagged, monthLabel: monthName_(target) };
+}
+
+function sendMonthlyReport(targetMonth) {
+  // Default to the month just ended, which is what a report sent on the 1st is
+  // reporting on.
+  var target = targetMonth;
+  if (!target) {
+    target = new Date();
+    target.setDate(1);
+    target.setDate(0);   // last day of the previous month
+  }
+
+  var data = collectMonth_(target);
+  var tz = Session.getScriptTimeZone();
+
+  var employees = [];
+  for (var k in data.byEmployee) {
+    var emp = data.byEmployee[k];
+    var daysWorked = 0, totalHours = 0, noExit = 0, firstDay = null, lastDay = null;
+
+    for (var day in emp.days) {
+      var d = emp.days[day];
+      daysWorked++;
+      if (d.count < 2) {
+        noExit++;      // a lone punch is a missing pair, not a zero-hour day
+      } else {
+        totalHours += (d.last - d.first) / 3600000;
+      }
+      if (firstDay === null || day < firstDay) { firstDay = day; }
+      if (lastDay === null || day > lastDay) { lastDay = day; }
+    }
+
+    employees.push({
+      name: emp.name, id: emp.id, daysWorked: daysWorked,
+      totalHours: Math.round(totalHours * 100) / 100,
+      noExit: noExit, firstDay: firstDay, lastDay: lastDay
+    });
+  }
+
+  employees.sort(function (a, b) {
+    return a.name < b.name ? -1 : (a.name > b.name ? 1 : 0);
+  });
+
+  var lines = [];
+  lines.push('ATTENDANCE SUMMARY - ' + data.monthLabel);
+  lines.push('');
+
+  if (employees.length === 0) {
+    lines.push('No punches recorded this month.');
+  } else {
+    var totalDays = 0, grandHours = 0, totalNoExit = 0;
+    for (var i = 0; i < employees.length; i++) {
+      var e = employees[i];
+      totalDays += e.daysWorked;
+      grandHours += e.totalHours;
+      totalNoExit += e.noExit;
+
+      lines.push(e.name + ' (id ' + e.id + ')');
+      lines.push('    Days worked : ' + e.daysWorked);
+      lines.push('    Total hours : ' + e.totalHours + 'h');
+      if (e.daysWorked > 0) {
+        lines.push('    Average day : ' +
+          (Math.round((e.totalHours / Math.max(1, e.daysWorked - e.noExit)) * 100) / 100) + 'h');
+      }
+      if (e.noExit > 0) {
+        lines.push('    NO EXIT on  : ' + e.noExit + ' day(s) - hours not counted for those');
+      }
+      lines.push('    First / last: ' + e.firstDay + '  ..  ' + e.lastDay);
+      lines.push('');
+    }
+
+    lines.push('---');
+    lines.push('Employees: ' + employees.length +
+               '   Days: ' + totalDays +
+               '   Hours: ' + (Math.round(grandHours * 100) / 100) + 'h');
+    if (totalNoExit > 0) {
+      lines.push('Days with no exit recorded: ' + totalNoExit +
+                 ' - worth checking before payroll.');
+    }
+  }
+
+  if (data.flagged > 0) {
+    lines.push('');
+    lines.push('The clock reported an impossible date on ' + data.flagged +
+               ' punch(es) this month; those were recorded at the time they');
+    lines.push('arrived. Recurring occurrences mean its backup battery needs replacing.');
+  }
+
+  lines.push('');
+  lines.push('Sheet: ' + SpreadsheetApp.getActiveSpreadsheet().getUrl());
+
+  var subject = 'Attendance summary - ' + data.monthLabel;
+  GmailApp.sendEmail(MONTHLY_RECIPIENTS, subject, lines.join('\n'));
+
+  return {
+    "result": "monthly report sent",
+    "month": data.monthLabel,
+    "employees": employees.length,
+    "flaggedPunches": data.flagged,
+    "sentTo": MONTHLY_RECIPIENTS,
+    "remainingEmailQuota": MailApp.getRemainingDailyQuota()
+  };
+}
+
+function createMonthlyReportTrigger() {
+  var existing = ScriptApp.getProjectTriggers();
+  for (var i = 0; i < existing.length; i++) {
+    if (existing[i].getHandlerFunction() === 'sendMonthlyReport') {
+      ScriptApp.deleteTrigger(existing[i]);
+    }
+  }
+  // The 1st at 08:00, reporting the month that just ended.
+  ScriptApp.newTrigger('sendMonthlyReport')
+    .timeBased()
+    .onMonthDay(1)
+    .atHour(8)
+    .create();
+  SpreadsheetApp.getActiveSpreadsheet().toast(
+    'Monthly report scheduled for the 1st of each month, ~08:00.', 'Attendance', 6);
 }

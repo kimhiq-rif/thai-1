@@ -46,10 +46,15 @@ once that row lands. Delete the test row from the Sheet afterwards.
 
 ## Emails
 
-Two audiences, set separately at the top of `doPost.gs`:
+`SEND_PUNCH_ALERTS` is **off**. One mail per punch is bearable while a new system is being watched;
+as a standing arrangement it is a mail every few minutes all shift, read for a week and filtered
+after. The monthly summary is the standing report instead.
 
-- **`ALERT_RECIPIENTS`** — one mail per punch, as it happens.
-- **`REPORT_RECIPIENTS`** — the end-of-day summary.
+Three audiences, set separately at the top of `doPost.gs`:
+
+- **`MONTHLY_RECIPIENTS`** — the monthly summary. This is the one that runs.
+- **`REPORT_RECIPIENTS`** — an end-of-day summary, on demand.
+- **`ALERT_RECIPIENTS`** — one mail per punch, only while `SEND_PUNCH_ALERTS` is on.
 
 `ALERT_WATCHER` is copied on every alert until `ALERT_WATCHER_UNTIL` inclusive, then drops off by
 itself. Watching a new system is temporary by intent, and an address that has to be removed by hand
@@ -183,6 +188,30 @@ side by side; `clock_diagnostics.py` reports the PC's and says plainly if it is 
 
 Fix a mismatched script: Apps Script → ⚙ Project Settings → Time zone → **(GMT+07:00) Bangkok**,
 then redeploy. Fix the sheet: File → Settings → Time zone → Bangkok.
+
+## Monthly summary
+
+The standing report: one mail on the 1st covering the month that just ended, per employee — days
+worked, total hours, average day, and the two things worth querying before payroll.
+
+- **Send it now:** Attendance → *Email last month's summary now*, or `?action=monthly`.
+- **Schedule it:** Attendance → *Schedule monthly summary (1st, 08:00)*.
+
+Hours for a day are its first punch to its last, so a midday break does not read as two shifts. A
+day with a single punch is a missing pair, not a zero-hour day: its hours are left out and it is
+counted under `NO EXIT`, and the average is over days that actually have both punches rather than
+being diluted by the incomplete ones. Punches the clock dated impossibly are counted at the end.
+
+Verified against the imported history — August 2026 renders as 4 employees, 101 days, 924.79 hours.
+
+## Date display
+
+Column A holds real Date values, so how it reads is a number format and nothing more. Attendance →
+*Fix date display (dd-mm-yyyy)*, or `?action=dateformat`, applies `DATE_FORMAT` to the whole column,
+so rows written later come out the same way without re-running it.
+
+Changing what `doPost` writes instead would break `parsePunchDate_` and every dedupe key derived
+from it, which is why this is a formatting change rather than a data one.
 
 ## Daily summary tab
 
