@@ -65,6 +65,11 @@ function doGet(e) {
     return ContentService.createTextOutput(JSON.stringify(notice, null, 2))
       .setMimeType(ContentService.MimeType.JSON);
   }
+  if (e && e.parameter && e.parameter.action === 'mailoff') {
+    var off = disableScheduledMail();
+    return ContentService.createTextOutput(JSON.stringify(off, null, 2))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
   if (e && e.parameter && e.parameter.action === 'monthly') {
     var monthly = sendMonthlyReport();
     return ContentService.createTextOutput(JSON.stringify(monthly, null, 2))
@@ -101,6 +106,8 @@ function doGet(e) {
     "remainingEmailQuota": MailApp.getRemainingDailyQuota(),
     "alertsSentFrom": Session.getEffectiveUser().getEmail(),
     "punchAlertsEnabled": SEND_PUNCH_ALERTS,
+    // Nothing here sends mail on a schedule unless it appears in this list.
+    "scheduledMail": listMailTriggers_(),
     "alertsSentTo": SEND_PUNCH_ALERTS ? alertRecipients_() : "(per-punch alerts are off)",
     "monthlyReportTo": MONTHLY_RECIPIENTS,
     "alertWatcherUntil": ALERT_WATCHER_UNTIL,
@@ -194,6 +201,8 @@ function onOpen() {
     .addSeparator()
     .addItem('Email last month\'s summary now', 'sendMonthlyReport')
     .addItem('Schedule monthly summary (1st, 08:00)', 'createMonthlyReportTrigger')
+    .addSeparator()
+    .addItem('Turn OFF all scheduled mail', 'disableScheduledMail')
     .addToUi();
 }
 
@@ -839,4 +848,51 @@ function createMonthlyReportTrigger() {
     .create();
   SpreadsheetApp.getActiveSpreadsheet().toast(
     'Monthly report scheduled for the 1st of each month, ~08:00.', 'Attendance', 6);
+}
+
+
+// ---------------------------------------------------------------------------
+// Scheduled mail: what is armed, and how to disarm it
+// ---------------------------------------------------------------------------
+// "No mail is being sent" is a claim worth checking rather than assuming. A
+// trigger installed once keeps firing long after whoever installed it has
+// forgotten, so this reports what is actually armed and turns it off in one
+// action.
+
+var MAIL_FUNCTIONS = ['sendDailyReport', 'sendMonthlyReport'];
+
+function listMailTriggers_() {
+  var found = [];
+  var triggers = ScriptApp.getProjectTriggers();
+  for (var i = 0; i < triggers.length; i++) {
+    if (MAIL_FUNCTIONS.indexOf(triggers[i].getHandlerFunction()) !== -1) {
+      found.push(triggers[i].getHandlerFunction());
+    }
+  }
+  return found;
+}
+
+function disableScheduledMail() {
+  var removed = [];
+  var triggers = ScriptApp.getProjectTriggers();
+  for (var i = 0; i < triggers.length; i++) {
+    if (MAIL_FUNCTIONS.indexOf(triggers[i].getHandlerFunction()) !== -1) {
+      removed.push(triggers[i].getHandlerFunction());
+      ScriptApp.deleteTrigger(triggers[i]);
+    }
+  }
+
+  var message = removed.length > 0
+    ? 'Removed ' + removed.length + ' scheduled mail trigger(s): ' + removed.join(', ')
+    : 'No scheduled mail was installed. Nothing to remove.';
+  SpreadsheetApp.getActiveSpreadsheet().toast(message, 'Attendance', 8);
+
+  return {
+    "result": "scheduled mail disabled",
+    "removed": removed,
+    "punchAlertsEnabled": SEND_PUNCH_ALERTS,
+    // Nothing here sends mail on a schedule unless it appears in this list.
+    "scheduledMail": listMailTriggers_(),
+    "remainingScheduledMail": listMailTriggers_()
+  };
 }

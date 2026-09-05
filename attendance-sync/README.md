@@ -189,13 +189,26 @@ side by side; `clock_diagnostics.py` reports the PC's and says plainly if it is 
 Fix a mismatched script: Apps Script → ⚙ Project Settings → Time zone → **(GMT+07:00) Bangkok**,
 then redeploy. Fix the sheet: File → Settings → Time zone → Bangkok.
 
+## Turning mail off, and proving it is off
+
+`SEND_PUNCH_ALERTS = false` stops the per-punch mail. Scheduled mail is separate: a trigger
+installed once keeps firing long after whoever installed it has forgotten, and no amount of reading
+the source shows whether one exists.
+
+`doGet` therefore reports `scheduledMail` — nothing here sends on a schedule unless it appears in
+that list. Attendance → *Turn OFF all scheduled mail*, or `?action=mailoff`, removes every one and
+reports what it removed; it leaves `onOpen` alone and is safe to run on a project that is already
+clean.
+
 ## Monthly summary
 
 The standing report: one mail on the 1st covering the month that just ended, per employee — days
 worked, total hours, average day, and the two things worth querying before payroll.
 
-- **Send it now:** Attendance → *Email last month's summary now*, or `?action=monthly`.
-- **Schedule it:** Attendance → *Schedule monthly summary (1st, 08:00)*.
+- **Send it now:** Attendance → *Email last month's summary now*, or `?action=monthly`. Goes only to
+  `MONTHLY_RECIPIENTS`, so a trial run reaches nobody else.
+- **Schedule it:** Attendance → *Schedule monthly summary (1st, 08:00)*. Built but deliberately not
+  installed — it sends nothing until someone chooses this.
 
 Hours for a day are its first punch to its last, so a midday break does not read as two shifts. A
 day with a single punch is a missing pair, not a zero-hour day: its hours are left out and it is
