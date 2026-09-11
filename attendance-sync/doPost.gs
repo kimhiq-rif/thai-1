@@ -21,7 +21,12 @@ var SEND_PUNCH_ALERTS = false;
 // Who the live-punch alerts go to, when SEND_PUNCH_ALERTS is on. Kept up here
 // so doGet can report it: an address with a typo in it fails silently from the
 // script's side.
-var ALERT_RECIPIENTS = "wirasakmanclash@gmail.com,info@stellabungalows.com";
+//
+// info@stellabungalows.com removed 2026-09-10 at the owner's request. Note that
+// SEND_PUNCH_ALERTS is off regardless, so nobody on this list is receiving
+// anything: if mail is still arriving, an older version is still deployed and
+// the recipient list is not what is sending it.
+var ALERT_RECIPIENTS = "wirasakmanclash@gmail.com";
 
 // A watcher copied on every alert while the system is being proven, until this
 // date inclusive, after which they drop off on their own. Expiring it here
