@@ -90,6 +90,14 @@ function doGet(e) {
     return ContentService.createTextOutput(JSON.stringify(deduped, null, 2))
       .setMimeType(ContentService.MimeType.JSON);
   }
+  // Answers "where did the spreadsheet go" without needing to find it first.
+  if (e && e.parameter && e.parameter.action === 'locate') {
+    var found = (e.parameter.untrash === 'yes')
+      ? untrashSpreadsheet()
+      : locateSpreadsheet();
+    return ContentService.createTextOutput(JSON.stringify(found, null, 2))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
 
   // Opening the URL with no parameters reports which spreadsheet doPost actually
   // writes to. getActiveSpreadsheet() resolves to whatever this project is
@@ -899,5 +907,73 @@ function disableScheduledMail() {
     // Nothing here sends mail on a schedule unless it appears in this list.
     "scheduledMail": listMailTriggers_(),
     "remainingScheduledMail": listMailTriggers_()
+  };
+}
+
+
+// ---------------------------------------------------------------------------
+// Finding the spreadsheet again
+// ---------------------------------------------------------------------------
+// A spreadsheet that has vanished from Drive's list and from Drive search has
+// usually not been destroyed: it has been moved, trashed, or is owned by a
+// Google account other than the one doing the looking. This script is bound to
+// the file, so it can still name it and link to it when no amount of searching
+// in the Drive UI can. That makes ?action=locate the one diagnostic that
+// distinguishes "I cannot find it" from "it is gone".
+//
+// Everything down to and including url/id needs no permission beyond what the
+// script already has. The DriveApp half - owner, trashed, containing folders -
+// needs the Drive scope, so it is wrapped: if that authorisation was never
+// granted the call still returns the link instead of failing outright.
+function locateSpreadsheet() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var out = {
+    "name": ss.getName(),
+    "url": ss.getUrl(),
+    "id": ss.getId(),
+    // The account the script runs as. If this is not the account you are
+    // signed in to in the browser, that alone explains an empty Drive search:
+    // the file is sitting in someone else's Drive.
+    "scriptRunsAs": Session.getEffectiveUser().getEmail(),
+    "tabs": ss.getSheets().map(function (s) {
+      return s.getName() + " (" + s.getLastRow() + " rows)";
+    })
+  };
+
+  try {
+    var file = DriveApp.getFileById(ss.getId());
+    out.owner = file.getOwner() ? file.getOwner().getEmail() : "(no owner reported)";
+    out.inTrash = file.isTrashed();
+    var folders = file.getParents();
+    var names = [];
+    while (folders.hasNext()) names.push(folders.next().getName());
+    out.folders = names.length ? names : ["(My Drive, no folder)"];
+    out.viewers = file.getViewers().map(function (u) { return u.getEmail(); });
+    out.editors = file.getEditors().map(function (u) { return u.getEmail(); });
+    if (out.inTrash) {
+      out.note = "The file is IN THE TRASH. Open the url above and use " +
+        "'Restore', or re-run this with ?action=locate&untrash=yes";
+    }
+  } catch (err) {
+    out.driveLookup = "unavailable (" + err.message + ") - the url above is " +
+      "still correct and still opens the file";
+  }
+  return out;
+}
+
+// Deliberately a separate parameter rather than part of locate: restoring a
+// file is a change, and a diagnostic that silently changes things is one you
+// stop trusting to tell you the truth.
+function untrashSpreadsheet() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var file = DriveApp.getFileById(ss.getId());
+  var was = file.isTrashed();
+  if (was) file.setTrashed(false);
+  return {
+    "name": ss.getName(),
+    "url": ss.getUrl(),
+    "wasInTrash": was,
+    "inTrashNow": file.isTrashed(),
+    "result": was ? "restored from trash" : "was not in the trash, nothing to do"
   };
 }

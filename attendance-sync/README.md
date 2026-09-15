@@ -340,3 +340,28 @@ redirect that lands somewhere unexpected otherwise looks like a clean 200.
 in as the owner reaches the script while Python, sending no credentials, is bounced before `doPost`
 runs — the request never even appears in the Apps Script execution log. "Who has access" must be
 **Anyone**.
+
+## The spreadsheet has disappeared from Drive
+
+A missing spreadsheet is almost never a deleted one. The three ordinary causes are that it was
+moved to another folder, that it was trashed, or that it belongs to a different Google account
+from the one the browser is signed in to — and the third is invisible from the Drive UI, because
+Drive search only ever searches the account you are in.
+
+The script is bound to the file, so it can name and link it even when nothing in Drive can find
+it. Open the `/exec` URL with **no parameters**, or with `?action=locate`:
+
+    https://script.google.com/macros/s/.../exec?action=locate
+
+`url` is a direct link that works regardless of folder, and `scriptRunsAs` is the account that
+owns the file. If `scriptRunsAs` is not the account you are searching from, that is the answer:
+sign in as that account, or have it share the file.
+
+`?action=locate` additionally reports `owner`, `inTrash` and `folders` — those need the Drive
+authorisation, and if it was never granted the call still returns the link rather than failing.
+`?action=locate&untrash=yes` restores the file if `inTrash` is true. Restoring is a separate
+parameter on purpose: a diagnostic that quietly changes things is one you stop believing.
+
+If `?action=locate` returns rows in `tabs`, the data is intact — every row is still there and
+nothing needs re-syncing. And if the Python service on the PC is still posting without errors,
+that alone proves the file exists, because `doPost` writes into it on every punch.
