@@ -46,9 +46,15 @@ once that row lands. Delete the test row from the Sheet afterwards.
 
 ## Emails
 
-`SEND_PUNCH_ALERTS` is **off**. One mail per punch is bearable while a new system is being watched;
-as a standing arrangement it is a mail every few minutes all shift, read for a week and filtered
-after. The monthly summary is the standing report instead.
+`SEND_PUNCH_ALERTS` is **on** (since 2026-09-15): the manager wants punches as they happen rather
+than a month later. The monthly summary still runs alongside it.
+
+The constraint to watch is Gmail's quota — 100 sends a day on a consumer account, one per alert. A
+shift of ten staff punching in and out is twenty, so ordinary days are not close. The failure mode
+is a catch-up after the PC has been off, where a whole backlog would try to mail at once; that is
+capped by `MAX_CATCHUP_EMAILS` in `attendance_service.py`, above which the backlog is written
+silently. `?action=locate` and the no-parameter URL both report `remainingEmailQuota`, which is the
+only reliable way to tell a quota wall from a delivery problem.
 
 Three audiences, set separately at the top of `doPost.gs`:
 
@@ -191,7 +197,7 @@ then redeploy. Fix the sheet: File → Settings → Time zone → Bangkok.
 
 ## Turning mail off, and proving it is off
 
-`SEND_PUNCH_ALERTS = false` stops the per-punch mail. Scheduled mail is separate: a trigger
+Setting `SEND_PUNCH_ALERTS = false` stops the per-punch mail. Scheduled mail is separate: a trigger
 installed once keeps firing long after whoever installed it has forgotten, and no amount of reading
 the source shows whether one exists.
 

@@ -12,20 +12,26 @@
 //   * Array  -> historical bulk import: one batched write, no emails.
 //   * Object -> single live punch: appends one row and sends the alert email.
 
-// One mail per punch is only bearable while a new system is being watched.
-// Past that it is a mail every few minutes all shift, which is read for a week
-// and filtered thereafter - so the monthly summary is the standing report and
-// the per-punch alerts are off.
-var SEND_PUNCH_ALERTS = false;
+// One mail per punch. Turned back on 2026-09-15 at the owner's request, having
+// been off since the monthly summary replaced it: the manager wants to see
+// punches as they happen rather than a month later.
+//
+// The cost of this switch is Gmail's daily send quota - 100 mails a day on a
+// consumer account, and every alert spends one. A shift of ten staff punching
+// in and out is twenty, which is comfortable; the danger is a catch-up after
+// the PC has been off, where a backlog of punches would try to mail all at
+// once. attendance_service.py caps that at MAX_CATCHUP_EMAILS and posts the
+// remainder silently, so a backlog cannot exhaust the quota and take the
+// day's real alerts down with it.
+var SEND_PUNCH_ALERTS = true;
 
 // Who the live-punch alerts go to, when SEND_PUNCH_ALERTS is on. Kept up here
 // so doGet can report it: an address with a typo in it fails silently from the
 // script's side.
 //
-// info@stellabungalows.com removed 2026-09-10 at the owner's request. Note that
-// SEND_PUNCH_ALERTS is off regardless, so nobody on this list is receiving
-// anything: if mail is still arriving, an older version is still deployed and
-// the recipient list is not what is sending it.
+// info@stellabungalows.com removed 2026-09-10 at the owner's request, and stays
+// removed: this list is live again, so an address added back here starts
+// receiving mail immediately.
 var ALERT_RECIPIENTS = "wirasakmanclash@gmail.com";
 
 // A watcher copied on every alert while the system is being proven, until this
