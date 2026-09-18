@@ -275,8 +275,9 @@ def catch_up(conn, user_map, seen):
     payloads.sort(key=lambda r: r["timestamp"], reverse=True)
 
     if len(payloads) <= MAX_CATCHUP_EMAILS:
-        print("Catching up on {} punch(es) missed while asleep (one email each)..."
-              .format(len(missed)))
+        print("Catching up on {} punch(es) missed while asleep{}..."
+              .format(len(missed),
+                      " (one email each)" if SEND_EMAILS else ""))
         for payload in payloads:
             post(payload)  # a dict takes the single path: row + email
     else:
