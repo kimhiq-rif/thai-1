@@ -327,8 +327,12 @@ def run_window(zk):
             print("[{}] {} - {}".format(
                 payload["timestamp"], payload["name"], payload["status"]))
             try:
-                post(payload)  # a dict takes the single path: row + email
-                print("    -> row written, email sent")
+                post(payload)
+                # Say which path it actually took. Printing "email sent"
+                # regardless of SEND_EMAILS would report mail that was never
+                # sent, and this console is the only place anyone watches.
+                print("    -> row written, email sent" if SEND_EMAILS
+                      else "    -> row written (emails are OFF)")
                 seen.add(punch_key(payload["id"], payload["timestamp"]))
                 save_seen(seen)
             except requests.exceptions.RequestException as err:
@@ -350,6 +354,10 @@ def main():
     print("Listening windows: " + ", ".join(
         "{}-{}".format(s.strftime('%H:%M'), e.strftime('%H:%M'))
         for s, e in LISTEN_WINDOWS))
+    # State that is easy to forget and expensive to be wrong about, said once
+    # at startup where it cannot be missed.
+    print("Alert emails: " + ("ON" if SEND_EMAILS
+                              else "OFF (rows still written to the Sheet)"))
     print("Leave this window open. Ctrl+C stops the service.")
     print("")
 

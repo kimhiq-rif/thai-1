@@ -23,47 +23,54 @@ $raw = "https://raw.githubusercontent.com/kimhiq-rif/thai-1/claude/attendance-cl
 Write-Host ""
 Write-Host "Looking for the running service file ..." -ForegroundColor Cyan
 
-$searchRoots = @((Join-Path $env:USERPROFILE "Documents"), $env:USERPROFILE)
-$target = $null
-foreach ($root in $searchRoots) {
-    if (-not (Test-Path $root)) { continue }
-    $target = Get-ChildItem -Path $root -Filter "attendance_service.py" -Recurse -ErrorAction SilentlyContinue |
-              Select-Object -First 1
-    if ($target) { break }
-}
+# Every copy, not the first one found. This project has had several installs
+# on one PC and six python.exe processes running against one clock at once;
+# patching one copy and leaving another still mailing would look exactly like
+# the fix having failed.
+$targets = Get-ChildItem -Path $env:USERPROFILE -Filter "attendance_service.py" -Recurse -ErrorAction SilentlyContinue |
+           Where-Object { $_.FullName -notlike "*.backup" }
 
-if (-not $target) {
+if (-not $targets) {
     Write-Host "attendance_service.py not found under $env:USERPROFILE" -ForegroundColor Red
     Write-Host "Wrong PC, or the folder is on another drive."
     exit 1
 }
 
-$path = $target.FullName
-Write-Host ("Found: " + $path) -ForegroundColor Green
-
-# Keep the file that is actually running before replacing it. If anything here
-# is wrong, the backup is the way back.
-$backup = $path + ".backup"
-Copy-Item $path $backup -Force
-Write-Host ("Backed up to: " + $backup) -ForegroundColor DarkGray
-
-Write-Host "Downloading the current version ..." -ForegroundColor Cyan
-Invoke-WebRequest -Uri ($raw + "?v=" + (Get-Random)) -OutFile $path
+Write-Host ("Found " + @($targets).Count + " copy/copies:") -ForegroundColor Green
+foreach ($t in $targets) { Write-Host ("   " + $t.FullName) }
+if (@($targets).Count -gt 1) {
+    Write-Host ""
+    Write-Host "More than one copy exists. All of them will be changed, because" -ForegroundColor Yellow
+    Write-Host "there is no way to tell from here which one is running." -ForegroundColor Yellow
+}
 
 $from = if ($Undo) { "SEND_EMAILS = False" } else { "SEND_EMAILS = True" }
 $to   = if ($Undo) { "SEND_EMAILS = True"  } else { "SEND_EMAILS = False" }
 
-$text = Get-Content $path -Raw
-if ($text -notmatch [regex]::Escape($from)) {
-    Write-Host "Could not find '$from' in the file - nothing changed." -ForegroundColor Red
-    Write-Host "Restoring the backup."
-    Copy-Item $backup $path -Force
+Write-Host ""
+Write-Host "Downloading the current version ..." -ForegroundColor Cyan
+$fresh = Join-Path $env:TEMP "attendance_service.fresh.py"
+Invoke-WebRequest -Uri ($raw + "?v=" + (Get-Random)) -OutFile $fresh
+
+$source = Get-Content $fresh -Raw
+if ($source -notmatch [regex]::Escape($from)) {
+    Write-Host "The downloaded file does not contain '$from'." -ForegroundColor Red
+    Write-Host "Nothing has been changed."
     exit 1
 }
+$patched = $source -replace [regex]::Escape($from), $to
 
-# -Raw read and a plain write keeps the file's line endings and encoding as
-# Python expects them; Set-Content default encoding has mangled this file before.
-[System.IO.File]::WriteAllText($path, ($text -replace [regex]::Escape($from), $to))
+foreach ($t in $targets) {
+    $path = $t.FullName
+    # Keep the file that is actually running before replacing it. If anything
+    # here is wrong, the backup is the way back.
+    Copy-Item $path ($path + ".backup") -Force
+    # WriteAllText rather than Set-Content, whose default encoding has mangled
+    # this file before.
+    [System.IO.File]::WriteAllText($path, $patched)
+    Write-Host ("Updated: " + $path) -ForegroundColor Green
+}
+Remove-Item $fresh -Force -ErrorAction SilentlyContinue
 
 Write-Host ""
 Write-Host "=======================================================" -ForegroundColor Yellow
