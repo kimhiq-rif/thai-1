@@ -34,6 +34,42 @@ var SEND_PUNCH_ALERTS = true;
 // receiving mail immediately.
 var ALERT_RECIPIENTS = "wirasakmanclash@gmail.com";
 
+// A hard block, checked at the moment of sending rather than trusted to the
+// lists above. Any address here is stripped from every recipient list in this
+// file - alerts, daily report, monthly report, service notices - so it cannot
+// be put back by editing a list, and a send aimed only at a blocked address is
+// abandoned instead of going out.
+//
+// This exists because an address removed from a list kept receiving mail. A
+// list is a statement of intent; this is the enforcement.
+var NEVER_MAIL = "info@stellabungalows.com";
+
+// Returns the recipient string with every blocked address removed, or "" if
+// nothing is left. Callers must treat "" as "do not send".
+function allowedRecipients_(recipients) {
+  var blocked = NEVER_MAIL.split(",").map(function (a) {
+    return a.trim().toLowerCase();
+  }).filter(function (a) { return a.length > 0; });
+
+  return String(recipients || "")
+    .split(",")
+    .map(function (a) { return a.trim(); })
+    .filter(function (a) {
+      return a.length > 0 && blocked.indexOf(a.toLowerCase()) === -1;
+    })
+    .join(",");
+}
+
+// Every send in this file goes through here. Nothing calls GmailApp.sendEmail
+// directly any more: one chokepoint is the only way a blocklist stays true as
+// the file grows.
+function sendMail_(recipients, subject, body) {
+  var to = allowedRecipients_(recipients);
+  if (!to) return false;
+  GmailApp.sendEmail(to, subject, body);
+  return true;
+}
+
 // A watcher copied on every alert while the system is being proven, until this
 // date inclusive, after which they drop off on their own. Expiring it here
 // rather than leaving it to be remembered: watching is temporary by intent,
@@ -127,7 +163,9 @@ function doGet(e) {
     "punchAlertsEnabled": SEND_PUNCH_ALERTS,
     // Nothing here sends mail on a schedule unless it appears in this list.
     "scheduledMail": listMailTriggers_(),
-    "alertsSentTo": SEND_PUNCH_ALERTS ? alertRecipients_() : "(per-punch alerts are off)",
+    "alertsSentTo": SEND_PUNCH_ALERTS ? allowedRecipients_(alertRecipients_()) : "(per-punch alerts are off)",
+    // Proof the block is live in the DEPLOYED version, not just in the editor.
+    "neverMailed": NEVER_MAIL,
     "monthlyReportTo": MONTHLY_RECIPIENTS,
     "alertWatcherUntil": ALERT_WATCHER_UNTIL,
     "reportsSentTo": REPORT_RECIPIENTS,
@@ -182,7 +220,7 @@ function doPost(e) {
         "Employee Name: " + empName + "\n" +
         "Punch Time: " + timestamp + "\n" +
         "Status: " + status;
-      GmailApp.sendEmail(alertRecipients_(), subject, body);
+      sendMail_(alertRecipients_(), subject, body);
     }
 
     return ContentService.createTextOutput(JSON.stringify({ "result": "success" }))
@@ -450,7 +488,7 @@ function sendDailyReport(targetDate) {
   var subject = 'Attendance summary ' + data.dateLabel +
                 ' (' + employees.length + ' employee(s))';
 
-  GmailApp.sendEmail(REPORT_RECIPIENTS, subject, body);
+  sendMail_(REPORT_RECIPIENTS, subject, body);
 
   return {
     "result": "report sent",
@@ -578,7 +616,7 @@ function sendServiceNotice() {
   var subject = 'Attendance report ' + englishDate_(today) +
                 ' / รายงานเวลาเข้า-ออกงาน';
 
-  GmailApp.sendEmail(REPORT_RECIPIENTS, subject, body);
+  sendMail_(REPORT_RECIPIENTS, subject, body);
 
   return {
     "result": "service notice sent",
@@ -840,7 +878,7 @@ function sendMonthlyReport(targetMonth) {
   lines.push('Sheet: ' + SpreadsheetApp.getActiveSpreadsheet().getUrl());
 
   var subject = 'Attendance summary - ' + data.monthLabel;
-  GmailApp.sendEmail(MONTHLY_RECIPIENTS, subject, lines.join('\n'));
+  sendMail_(MONTHLY_RECIPIENTS, subject, lines.join('\n'));
 
   return {
     "result": "monthly report sent",
