@@ -235,13 +235,38 @@ def build_payload(user_map, user_id, punch_time):
     }
 
 
+class AlreadyWritten(Exception):
+    """The row reached the Sheet but the reply did not reach us.
+
+    /exec answers a POST with a redirect to a one-shot URL on
+    script.googleusercontent.com that carries the response body. doPost has
+    already run and written the row by the time that redirect is issued, so a
+    failure to fetch the body says nothing about whether the write happened -
+    it did.
+
+    Treating that as a plain failure is what filled the Sheet with duplicates:
+    the punch was never recorded as sent, so the next catch-up posted it again,
+    and the second copy landed beside a first copy that was there all along.
+    """
+
+
 def post(payload):
     # A dict is what makes the script consider sending mail. Wrapping it in a
     # list here takes the batch path instead, which writes the same row and has
     # no mail in it, in any version of the script.
     if not SEND_EMAILS and isinstance(payload, dict):
         payload = [payload]
+
     resp = requests.post(GOOGLE_WEB_APP_URL, json=payload, timeout=60)
+
+    # resp.history is non-empty only once Google has redirected us, which it
+    # does after doPost returns. An error on the redirected request is
+    # therefore an error reading the answer, not an error doing the work.
+    if resp.status_code >= 400 and resp.history:
+        raise AlreadyWritten(
+            "{} reading the reply from {} - the row was written"
+            .format(resp.status_code, resp.url.split('?')[0]))
+
     resp.raise_for_status()
     if "success" not in resp.text:
         raise requests.exceptions.RequestException(
@@ -279,12 +304,21 @@ def catch_up(conn, user_map, seen):
               .format(len(missed),
                       " (one email each)" if SEND_EMAILS else ""))
         for payload in payloads:
-            post(payload)  # a dict takes the single path: row + email
+            # AlreadyWritten means the row landed, so it is not a reason to
+            # abandon the rest of the backlog.
+            try:
+                post(payload)  # a dict takes the single path: row + email
+            except AlreadyWritten as err:
+                print("  {} - row written; reply unreadable ({})"
+                      .format(payload["timestamp"], err))
     else:
         print("Catching up on {} punch(es) missed while asleep. That is over the "
               "{}-email limit, so these are written without mail."
               .format(len(missed), MAX_CATCHUP_EMAILS))
-        post(payloads)  # a list takes the batch path: rows written, no mail
+        try:
+            post(payloads)  # a list takes the batch path: rows written, no mail
+        except AlreadyWritten as err:
+            print("  Rows written; reply unreadable ({})".format(err))
     for r in missed:
         seen.add(punch_key(r.user_id, r.timestamp.strftime('%Y-%m-%d %H:%M:%S')))
     save_seen(seen)
@@ -334,10 +368,15 @@ def run_window(zk):
                 # sent, and this console is the only place anyone watches.
                 print("    -> row written, email sent" if SEND_EMAILS
                       else "    -> row written (emails are OFF)")
-                seen.add(punch_key(payload["id"], payload["timestamp"]))
-                save_seen(seen)
+            except AlreadyWritten as err:
+                # Recorded as sent, deliberately. Retrying would duplicate a
+                # row that is already in the Sheet.
+                print("    -> row written; reply unreadable ({})".format(err))
             except requests.exceptions.RequestException as err:
                 print("    -> failed to reach Google: {}".format(err))
+                continue
+            seen.add(punch_key(payload["id"], payload["timestamp"]))
+            save_seen(seen)
     finally:
         keep_awake(False)
         if conn:
