@@ -46,15 +46,18 @@ once that row lands. Delete the test row from the Sheet afterwards.
 
 ## Emails
 
-`SEND_PUNCH_ALERTS` is **on** (since 2026-09-15): the manager wants punches as they happen rather
-than a month later. The monthly summary still runs alongside it.
+`SEND_PUNCH_ALERTS` is **off**, and the monthly summary is the only mail that goes to anyone but
+the owner. Per-punch alerts were turned off on 2026-09-18 after mail kept reaching an address that
+appears on no list in the file, which no amount of editing the lists could stop.
 
-The constraint to watch is Gmail's quota — 100 sends a day on a consumer account, one per alert. A
-shift of ten staff punching in and out is twenty, so ordinary days are not close. The failure mode
-is a catch-up after the PC has been off, where a whole backlog would try to mail at once; that is
-capped by `MAX_CATCHUP_EMAILS` in `attendance_service.py`, above which the backlog is written
-silently. `?action=locate` and the no-parameter URL both report `remainingEmailQuota`, which is the
-only reliable way to tell a quota wall from a delivery problem.
+Two mechanisms hold it off, on purpose. `SEND_PUNCH_ALERTS = false` here, and `SEND_EMAILS = False`
+in `attendance_service.py`, which posts each punch as a one-item batch so the script is never asked
+to mail in the first place. The second holds whatever version is deployed, which is what matters
+when a deploy has not taken.
+
+`NEVER_MAIL` is a blocklist enforced inside `sendMail_`, through which every send in the file goes.
+An address there is stripped from every recipient list, and a send left with no allowed recipient is
+abandoned. Putting the address back into a list does nothing -- that is the point.
 
 Three audiences, set separately at the top of `doPost.gs`:
 

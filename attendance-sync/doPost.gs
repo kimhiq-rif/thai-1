@@ -12,18 +12,16 @@
 //   * Array  -> historical bulk import: one batched write, no emails.
 //   * Object -> single live punch: appends one row and sends the alert email.
 
-// One mail per punch. Turned back on 2026-09-15 at the owner's request, having
-// been off since the monthly summary replaced it: the manager wants to see
-// punches as they happen rather than a month later.
+// Off again from 2026-09-18, and this time for good rather than pending a
+// decision: a punch alert was reaching an address that is not on any list in
+// this file and could not be got rid of by editing one. The monthly summary is
+// the standing report, and it goes out on a trigger rather than in response to
+// anything the clock does.
 //
-// The cost of this switch is Gmail's daily send quota - 100 mails a day on a
-// consumer account, and every alert spends one. A shift of ten staff punching
-// in and out is twenty, which is comfortable; the danger is a catch-up after
-// the PC has been off, where a backlog of punches would try to mail all at
-// once. attendance_service.py caps that at MAX_CATCHUP_EMAILS and posts the
-// remainder silently, so a backlog cannot exhaust the quota and take the
-// day's real alerts down with it.
-var SEND_PUNCH_ALERTS = true;
+// attendance_service.py carries SEND_EMAILS = False as well. That is the belt
+// to this file's braces: it stops mail at the PC, before Google is asked to
+// send anything, so it holds whatever version happens to be deployed here.
+var SEND_PUNCH_ALERTS = false;
 
 // Who the live-punch alerts go to, when SEND_PUNCH_ALERTS is on. Kept up here
 // so doGet can report it: an address with a typo in it fails silently from the
@@ -81,9 +79,10 @@ var ALERT_WATCHER_UNTIL = "2026-09-09";   // yyyy-MM-dd
 // to different people.
 var REPORT_RECIPIENTS = "rifpnima@gmail.com";
 
-// Who gets the monthly summary - the standing report now that per-punch mail
-// is off.
-var MONTHLY_RECIPIENTS = "rifpnima@gmail.com";
+// Who gets the monthly summary - the standing report, and now the only mail
+// this system sends to anyone but the owner. Wirasak was to have had a mail per
+// punch; one summary a month is what replaces it.
+var MONTHLY_RECIPIENTS = "rifpnima@gmail.com,wirasakmanclash@gmail.com";
 
 // How column A displays. The cells hold real Date values, so this is only a
 // number format: changing what doPost writes instead would break
