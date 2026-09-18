@@ -88,6 +88,21 @@ PLAUSIBLE_YEARS = (2020, 2100)  # a punch dated outside this is the RTC talking
 # the backlog goes up the silent batch path instead.
 MAX_CATCHUP_EMAILS = 15
 
+# The emergency stop for alert mail, and the only one that does not depend on
+# which version of the Apps Script is deployed.
+#
+# doPost branches on the payload shape: a dict is a live punch and may send an
+# alert, a list is a batch and never does. That branch has been in every
+# deployed version since the 5,008-record import went up it, so posting lists
+# cannot produce mail no matter how old the running script is. Editing the
+# recipient list, by contrast, only takes effect once a new version is actually
+# deployed - which is exactly the step that keeps not happening.
+#
+# Set False and every punch is posted as a one-item list: rows still land, no
+# mail is sent by anyone. The one visible difference is placement - the batch
+# path appends at the bottom of the sheet, the live path inserts at the top.
+SEND_EMAILS = True
+
 with open(URL_FILE) as f:
     GOOGLE_WEB_APP_URL = f.read().strip()
 
@@ -221,6 +236,11 @@ def build_payload(user_map, user_id, punch_time):
 
 
 def post(payload):
+    # A dict is what makes the script consider sending mail. Wrapping it in a
+    # list here takes the batch path instead, which writes the same row and has
+    # no mail in it, in any version of the script.
+    if not SEND_EMAILS and isinstance(payload, dict):
+        payload = [payload]
     resp = requests.post(GOOGLE_WEB_APP_URL, json=payload, timeout=60)
     resp.raise_for_status()
     if "success" not in resp.text:
